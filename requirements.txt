@@ -1,0 +1,6 @@
+# Required — the compiler reads topic YAML files with this:
+PyYAML>=6.0
+
+# Optional — only for tools/generate_mock_icons.py (regenerating the PWA icons).
+# Uncomment if you need it:
+# Pillow>=10.0

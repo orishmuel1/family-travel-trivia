@@ -1,0 +1,483 @@
+id: us_presidents_complete
+title: US Presidents
+description: >
+  A historic journey through the leaders of the United States, from the founding of the nation to modern times. 
+  Discover the unique lives, crucial moments, and lasting impact of the figures who have held the highest office 
+  in the land. Perfect for the whole family to learn about leadership, history, and the evolution of American democracy.
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      A complete chronological look at every single individual who has served as President of the United States. 
+      Read these fascinating, personal, and historic snapshots aloud to discover the unique stories behind all 
+      the commanders-in-chief before testing your knowledge in the trivia round.
+    cards:
+      - title: George Washington
+        points:
+          - "George Washington was the only US president to be unanimously elected by the Electoral College."
+          - "He is the only president who did not live in Washington, D.C., as it was still being built during his terms."
+          - "Contrary to popular myth, his famous false teeth were made of hippopotamus ivory and bone, not wood."
+          - "He established the two-term tradition by voluntarily stepping down from power in 1797."
+      - title: John Adams
+        points:
+          - "John Adams was the first president to reside in the Executive Mansion, which later became known as the White House."
+          - "He was the principal author of the Massachusetts Constitution, which is the world's oldest functioning written constitution."
+          - "He died on July 4, 1826, the exact same day as his close friend and political rival Thomas Jefferson."
+          - "Adams defended the British soldiers involved in the Boston Massacre in court to ensure a fair trial."
+      - title: Thomas Jefferson
+        points:
+          - "Thomas Jefferson was a talented polymath who spoke six languages and invented a specialized wheel cipher for secret codes."
+          - "He doubled the size of the United States in 1803 by finalizing the Louisiana Purchase from France."
+          - "He kept two grizzly bear cubs in a cage on the White House lawn, which were gifted to him by an explorer."
+          - "Jefferson personally designed his famous Virginia home, Monticello, and founded the University of Virginia."
+      - title: James Madison
+        points:
+          - "James Madison was the shortest US president in history, standing at 5 feet 4 inches and weighing around 100 pounds."
+          - "He is widely hailed as the 'Father of the Constitution' for his pivotal role in drafting the document and the Bill of Rights."
+          - "He was one of the three main authors of the Federalist Papers, which argued for the ratification of the Constitution."
+          - "During the War of 1812, he became the only sitting president to face active enemy fire on an American battlefield."
+      - title: James Monroe
+        points:
+          - "James Monroe's presidency was dubbed the 'Era of Good Feelings' due to a strong sense of national purpose and political unity."
+          - "He introduced the Monroe Doctrine, warning European nations that further colonization in the Americas would not be tolerated."
+          - "He was the last president of the Revolutionary War generation and the last of the famous Virginia Dynasty."
+          - "The capital city of Liberia, Monrovia, was named in his honor due to his support for the colonization society."
+      - title: John Quincy Adams
+        points:
+          - "John Quincy Adams was the son of the second president, John Adams, making them the first father-son presidential duo."
+          - "He regularly exercised by skinny-dipping in the Potomac River early in the morning during his presidency."
+          - "After his presidency, he served in the House of Representatives for 17 years, fighting fiercely against slavery."
+          - "He successfully defended the captured African captives of the Amistad ship before the US Supreme Court."
+      - title: Andrew Jackson
+        points:
+          - "Andrew Jackson was the first president born in a log cabin and the first to survive an assassination attempt."
+          - "He taught his pet parrot how to curse, and the bird reportedly had to be removed from Jackson's funeral for swearing."
+          - "He was a notorious duelist who participated in over 100 duels throughout his life to defend his honor."
+          - "He completely paid off the national debt in 1835, which is the only time in US history this has occurred."
+      - title: Martin Van Buren
+        points:
+          - "Martin Van Buren was the first president born a US citizen, as all previous presidents were originally British subjects."
+          - "His native language was Dutch, making him the only US president who spoke English as a second language."
+          - "His hometown nickname 'Old Kinderhook' led to the creation of the popular expression 'O.K.' and its universal usage."
+          - "He declined to annex Texas during his term to avoid expanding slavery and sparking a war with Mexico."
+      - title: William Henry Harrison
+        points:
+          - "William Henry Harrison served the shortest term of any US president, passing away just 32 days after taking office."
+          - "He delivered the longest inaugural address in history, speaking for 1 hour and 45 minutes in a freezing storm without a coat."
+          - "He was the first president to die while in office, which triggered a brief constitutional crisis over succession."
+          - "Before his political career, he gained national fame as a military general at the Battle of Tippecanoe."
+      - title: John Tyler
+        points:
+          - "John Tyler was the first vice president to ascend to the presidency due to the death of his predecessor."
+          - "He was completely expelled from his own political party, the Whigs, while serving as president due to his policy vetoes."
+          - "He fathered 15 children, which is more than any other president in United States history."
+          - "He bypassed Congress to officially annex the Republic of Texas into the United States via a joint resolution."
+      - title: James K. Polk
+        points:
+          - "James K. Polk was an extremely hardworking leader who achieved every single major campaign goal he set for his single term."
+          - "He vastly expanded the nation's borders to the Pacific Ocean by securing the Oregon Territory and winning the Mexican-American War."
+          - "He oversaw the opening of the US Naval Academy and the formal establishment of the Smithsonian Institution."
+          - "True to his campaign promise to serve only four years, he did not run for reelection and died three months after leaving office."
+      - title: Zachary Taylor
+        points:
+          - "Zachary Taylor spent 40 years as a career military officer and rose to fame as a hero of the Mexican-American War."
+          - "He had never voted in a presidential election before running for the office himself as the Whig Party nominee."
+          - "His beloved warhorse, Old Whitey, lived on the White House lawn and was frequently greeted by tourists."
+          - "He died suddenly in office in 1850 after consuming a large quantity of cherries and milk at a July 4th celebration."
+      - title: Millard Fillmore
+        points:
+          - "Millard Fillmore was the last member of the Whig Party to ever occupy the White House."
+          - "He signed the controversial Compromise of 1850, which temporarily delayed the Civil War but deepened regional divisions."
+          - "He and his wife Abigail established the very first permanent library inside the White House."
+          - "He sent Commodore Matthew Perry to Japan, successfully opening the isolated island nation to western trade."
+      - title: Franklin Pierce
+        points:
+          - "Franklin Pierce was a popular, charming politician who was nicknamed 'Handsome Frank' by his supporters."
+          - "He memorized his entire 3,300-word inaugural address and delivered it completely without notes or a script."
+          - "He completed the Gadsden Purchase in 1853, buying parts of modern-day Arizona and New Mexico from Mexico."
+          - "His presidency was derailed by his support for the Kansas-Nebraska Act, which sparked violent clashes over slavery."
+      - title: James Buchanan
+        points:
+          - "James Buchanan remains the only US president in history to never marry, serving his term as a lifelong bachelor."
+          - "His niece, Harriet Lane, acted as the official hostess of the White House, coining the term 'First Lady'."
+          - "He was a highly experienced diplomat who previously served as Secretary of State and Minister to Great Britain."
+          - "His inability to handle the secession crisis allowed the nation to fracture into the Civil War as his term ended."
+      - title: Abraham Lincoln
+        points:
+          - "Abraham Lincoln was the tallest US president in history, standing at 6 feet 4 inches without his famous stovepipe hat."
+          - "Before entering politics, he was an elite competitive wrestler and is enshrined in the National Wrestling Hall of Fame."
+          - "He was the first president born outside of the original thirteen colonies, growing up in a log cabin in Kentucky."
+          - "Lincoln was an avid animal lover who allowed his pet cats to eat directly from the White House dinner table."
+      - title: Andrew Johnson
+        points:
+          - "Andrew Johnson was a professional tailor before entering politics and famously made his own custom suits as president."
+          - "He was the first president to be impeached by the House of Representatives, escaping removal from office by a single Senate vote."
+          - "His administration finalized the purchase of Alaska from Russia in 1867, which critics mocked as 'Seward's Folly'."
+          - "He did not attend the inauguration of his successor, Ulysses S. Grant, due to intense personal and political bitterness."
+      - title: Ulysses S. Grant
+        points:
+          - "Ulysses S. Grant's birth name was Hiram Ulysses Grant, but a clerical error at West Point permanently changed it to U.S. Grant."
+          - "He was arrested by a Washington police officer during his presidency for speeding in his horse-drawn carriage."
+          - "He established Yellowstone National Park in 1872, creating the world's very first designated national park."
+          - "He wrote a critically acclaimed personal memoir while dying of cancer to secure financial stability for his family."
+      - title: Rutherford B. Hayes
+        points:
+          - "Rutherford B. Hayes won the most fiercely disputed election in US history, decided by a special congressional commission."
+          - "He was the first president to use a telephone in the White House, and his personal phone number was simply the number 1."
+          - "He officially banned alcohol and gambling from the White House, earning his wife the nickname 'Lemonade Lucy'."
+          - "He voluntarily kept his campaign promise to serve only one term, stepping down from office in 1881."
+      - title: James A. Garfield
+        points:
+          - "James A. Garfield was a brilliant mathematician who developed an original geometric proof of the Pythagorean theorem."
+          - "He was ambidextrous and could simultaneously write Latin with one hand and Greek with the other."
+          - "He was shot by an assassin only four months into his presidency and died 11 weeks later due to unsanitary medical care."
+          - "He was the first sitting member of the House of Representatives to be directly elected to the presidency."
+      - title: Chester A. Arthur
+        points:
+          - "Chester A. Arthur was a legendary dandy who owned over 80 pairs of pants and changed outfits multiple times a day."
+          - "He refused to move into the White House until he redecorated it, auctioning off 24 wagonloads of historic old furniture."
+          - "Surprising his critics, he passed the Pendleton Act to eliminate political corruption and create the modern Civil Service system."
+          - "He secretly suffered from a fatal kidney ailment throughout his presidency and kept it hidden from the public."
+      - title: Grover Cleveland
+        points:
+          - "Grover Cleveland is the only president to serve two non-consecutive terms, counting as both the 22nd and 24th president."
+          - "He is the only president who was married inside the White House, wedding Frances Folsom in the Blue Room."
+          - "Before entering politics, he worked as a county sheriff and personally performed the duties of a public executioner."
+          - "He secretly underwent a successful surgical operation on a yacht to remove a cancerous tumor from his jaw."
+      - title: Benjamin Harrison
+        points:
+          - "Benjamin Harrison was the grandson of the 9th president, William Henry Harrison, creating a unique family legacy."
+          - "He was the first president to have electricity installed in the White House, but he was too terrified of shocks to touch the switches."
+          - "He substantially increased the size of the US Navy and signed the historic Sherman Antitrust Act into law."
+          - "During his administration, six new states were admitted to the Union, more than under any other single president."
+      - title: William McKinley
+        points:
+          - "William McKinley was the first president to use a telephone for political campaigning and the first to appear on motion picture film."
+          - "He wore a red carnation on his lapel at all times as a good luck charm, giving it away to a young girl moments before being shot."
+          - "He led the nation to a swift victory in the Spanish-American War, establishing the US as a global power."
+          - "His image was placed on the rare $500 bill, which was officially discontinued by the Federal Reserve in 1969."
+      - title: Theodore Roosevelt
+        points:
+          - "Theodore Roosevelt was the youngest person to become president, taking office at age 42 after McKinley's assassination."
+          - "He was the first American to win a Nobel Peace Prize, awarded for mediating the end of the Russo-Japanese War."
+          - "The famous 'Teddy Bear' toy was invented and named in his honor after he refused to shoot a captured bear cub."
+          - "He survived an assassination attempt in 1912 and finished his 90-minute speech with a bullet lodged in his chest."
+      - title: William Howard Taft
+        points:
+          - "William Howard Taft is the only person in history to serve as both President and Chief Justice of the Supreme Court."
+          - "He started the enduring American sports tradition of the president throwing out the ceremonial first pitch at a baseball game."
+          - "He was the heaviest president, weighing over 330 pounds, and had a custom, extra-large bathtub installed in the White House."
+          - "He completely owned the last presidential cow, Pauline Wayne, who grazed freely on the White House lawn."
+      - title: Woodrow Wilson
+        points:
+          - "Woodrow Wilson was a highly accomplished academic and remains the only US president to hold a PhD degree."
+          - "He led the nation through World War I and championed the creation of the League of Nations to preserve global peace."
+          - "He suffered a debilitating stroke in 1919, after which his wife Edith secretly managed many presidential duties."
+          - "He officially designated Mother's Day as a national holiday in 1914 to be celebrated on the second Sunday in May."
+      - title: Warren G. Harding
+        points:
+          - "Warren G. Harding was the first president to give a speech over the radio and the first to drive an automobile to his inauguration."
+          - "He was an avid poker player who once gambled away an entire set of historic White House china in a single hand."
+          - "He hired the first full-time presidential speechwriter to assist him with his public addresses."
+          - "He died suddenly of a heart attack in San Francisco during a national speaking tour in 1923."
+      - title: Calvin Coolidge
+        points:
+          - "Calvin Coolidge was nicknamed 'Silent Cal' for his famously quiet, stoic personality and concise speaking style."
+          - "He kept an extensive exotic pet zoo at the White House, which included a live pygmy hippo named Billy and a raccoon named Rebecca."
+          - "He signed the Indian Citizenship Act of 1924, granting full citizenship rights to all Native Americans born in the US."
+          - "He is the only US president to have been born on the Fourth of July, arriving in Vermont in 1872."
+      - title: Herbert Hoover
+        points:
+          - "Herbert Hoover was a self-made millionaire engineer who spent decades organizing massive global humanitarian food relief programs."
+          - "He and his wife Lou Henry spoke fluent Mandarin Chinese in the White House to prevent staff from overhearing private conversations."
+          - "He signed the congressional act that officially made 'The Star-Spangled Banner' the national anthem of the United States."
+          - "The monumental Hoover Dam on the Colorado River was named in honor of his extensive engineering and political efforts."
+      - title: Franklin D. Roosevelt
+        points:
+          - "Franklin D. Roosevelt was the only president elected to four terms, serving through the Great Depression and World War II."
+          - "He used the relatively new medium of radio to connect with the public through 30 casual 'Fireside Chats'."
+          - "Paralyzed from the waist down by polio in 1921, he went to great lengths to hide his wheelchair use from the public."
+          - "He directed the construction of the secret White House underground bunker, which later evolved into the Situation Room."
+      - title: Harry S. Truman
+        points:
+          - "Harry S. Truman did not actually have a middle name; his parents gave him the standalone initial 'S' to honor both of his grandfathers."
+          - "He made the monumental decision to drop atomic bombs on Japan, effectively ending World War II in August 1945."
+          - "He famously kept a sign on his desk that read 'The Buck Stops Here' to show he took full responsibility for all decisions."
+          - "His surprising 1848 election victory resulted in a famous, incorrect newspaper headline reading 'Dewey Defeats Truman'."
+      - title: Dwight D. Eisenhower
+        points:
+          - "Dwight D. Eisenhower was a five-star general who served as the Supreme Commander of Allied Forces in Europe during World War II."
+          - "He authorized the creation of the Interstate Highway System, completely transforming American travel and commerce."
+          - "He signed the legislation that created NASA and officially added the phrase 'Under God' to the Pledge of Allegiance."
+          - "He was the first president to fly in a helicopter and the first to be barred by law from running for a third term."
+      - title: John F. Kennedy
+        points:
+          - "John F. Kennedy was the youngest individual ever elected president, winning the 1960 election at the age of 43."
+          - "He was the first Boy Scout to become president and won a Pulitzer Prize for his biographical book 'Profiles in Courage'."
+          - "During World War II, his Navy torpedo boat PT-109 was sunk, and he saved his crew by swimming for hours to an island."
+          - "He famously launched the Apollo program by declaring the US would land a man on the moon before the 1960s ended."
+      - title: Lyndon B. Johnson
+        points:
+          - "Lyndon B. Johnson was sworn in as president aboard Air Force One following the tragic assassination of John F. Kennedy."
+          - "He passed the historic Civil Rights Act of 1964 and the Voting Rights Act of 1965 to dismantle legal segregation."
+          - "He used an intimidating physical presence and intense persuasion style known as 'The LBJ Treatment' to pass laws."
+          - "He created the massive Medicare and Medicaid programs to provide healthcare for elderly and low-income Americans."
+      - title: Richard Nixon
+        points:
+          - "Richard Nixon remains the only president in United States history to resign from office, stepping down during the Watergate scandal."
+          - "He made a historic trip to communist China in 1972, ending decades of diplomatic isolation between the two nations."
+          - "He established the Environmental Protection Agency (EPA) and signed the Clean Air Act into law."
+          - "He spoke directly via telephone to astronauts Neil Armstrong and Buzz Aldrin while they were walking on the moon."
+      - title: Gerald Ford
+        points:
+          - "Gerald Ford is the only person to serve as both vice president and president without being elected to either office by voters."
+          - "He was a star college football player for the University of Michigan and turned down professional offers from the NFL."
+          - "He generated intense national controversy by granting a full presidential pardon to Richard Nixon for the Watergate scandal."
+          - "He survived two different assassination attempts within a single three-week span in California in 1975."
+      - title: Jimmy Carter
+        points:
+          - "Jimmy Carter worked as a successful peanut farmer and a naval nuclear engineer before entering politics."
+          - "He successfully mediated the landmark 1978 Camp David Accords, establishing a historic peace treaty between Egypt and Israel."
+          - "He lived the longest life of any US president in history, dedicating his decades after office to building homes for charity."
+          - "He became the first former president to win the Nobel Peace Prize after leaving the White House for his global diplomacy."
+      - title: Ronald Reagan
+        points:
+          - "Ronald Reagan worked as a successful Hollywood actor and appeared in over 50 films before transitioning into politics."
+          - "He survived an assassination attempt in 1981, famously joking to his surgeons, 'I hope you are all Republicans.'"
+          - "To help break his addiction to smoking pipes, Reagan consumed over 300,000 Jelly Belly jelly beans during his presidency."
+          - "At age 73, he became the oldest person at the time to be inaugurated for a second presidential term."
+      - title: George H.W. Bush
+        points:
+          - "George H.W. Bush was a decorated World War II Navy pilot who survived being shot down over the Pacific Ocean by enemy forces."
+          - "He served as the Director of the Central Intelligence Agency (CIA) and Ambassador to the United Nations before his presidency."
+          - "He successfully led a global military coalition to victory in the 1991 Gulf War, liberating the nation of Kuwait."
+          - "He signed the landmark Americans with Disabilities Act of 1990, protecting millions from discrimination."
+      - title: Bill Clinton
+        points:
+          - "Bill Clinton was the first baby boomer president and was famously elected at the young age of 46."
+          - "He played the saxophone on national television during his campaign, a move that revolutionized modern political media."
+          - "His administration achieved the first federal budget surplus in decades, balancing the national budget for multiple consecutive years."
+          - "He became the second president to be impeached by the House, but was ultimately acquitted by the Senate."
+      - title: George W. Bush
+        points:
+          - "George W. Bush was the son of the 41st president, making them only the second father-son pair to hold the office."
+          - "He led the United States in its response to the September 11 terrorist attacks, establishing the Department of Homeland Security."
+          - "Before entering politics, he owned the Texas Rangers professional baseball team and ran an oil exploration company."
+          - "He delivered a famous speech via a megaphone at Ground Zero, uniting the country in the days following the 9/11 attacks."
+      - title: Barack Obama
+        points:
+          - "Barack Obama was the first African American president of the United States and the first born in Hawaii."
+          - "He won a Grammy Award for Best Spoken Word Album for the audio versions of his books before entering the White House."
+          - "An avid comic book collector, his favorite characters growing up were Spider-Man and Conan the Barbarian."
+          - "He was awarded the Nobel Peace Prize in 2009 for his extraordinary efforts to strengthen international diplomacy."
+      - title: Donald Trump
+        points:
+          - "Donald Trump was the first person elected president without any prior political experience or military service."
+          - "He built a global real estate empire and hosted the highly successful reality television show 'The Apprentice'."
+          - "He established the US Space Force, creating the first completely new branch of the US Armed Forces since 1947."
+          - "He appointed three conservative Supreme Court Justices during his single term, reshaping the federal judiciary."
+      - title: Joe Biden
+        points:
+          - "Joe Biden served as a US Senator for Delaware for 36 years and as Vice President for 8 years before winning the presidency."
+          - "He overcame a severe childhood stutter by practicing reciting poetry alone in front of a mirror for hours."
+          - "He was the oldest person to be inaugurated as president, taking the oath of office at the age of 78."
+          - "He signed the monumental Infrastructure Investment and Jobs Act to upgrade American roads, bridges, and public transit."
+    trivia:
+      - type: multiple_choice
+        question: "Which president spoke English as a second language, having grown up speaking Dutch?"
+        options: ["Martin Van Buren", "Rutherford B. Hayes", "Herbert Hoover", "Lou Henry"]
+        correct: 0
+      - type: multiple_choice
+        question: "Who was the shortest president in US history, standing at just 5 feet 4 inches?"
+        options: ["John Quincy Adams", "James Madison", "Benjamin Harrison", "Harry S. Truman"]
+        correct: 1
+      - type: single_qa
+        question: "Which president was an elite wrestler before his political career?"
+        answer: "Abraham Lincoln"
+      - type: single_qa
+        question: "Who is the only person to serve as both US President and Chief Justice of the Supreme Court?"
+        answer: "William Howard Taft"
+      - type: multiple_choice
+        question: "Which president was too terrified of electrical shocks to touch the newly installed light switches?"
+        options: ["Chester A. Arthur", "Benjamin Harrison", "William McKinley", "Warren G. Harding"]
+        correct: 1
+      - type: single_qa
+        question: "Which president taught his pet parrot how to curse?"
+        answer: "Andrew Jackson"
+      - type: single_qa
+        question: "Who was the only president to be unanimously elected by the Electoral College?"
+        answer: "George Washington"
+      - type: multiple_choice
+        question: "Which president survived a shooting in 1912 and still delivered a 90-minute speech with a bullet in his chest?"
+        options: ["Andrew Jackson", "Theodore Roosevelt", "Ronald Reagan", "Gerald Ford"]
+        correct: 1
+
+  - id: wars_and_conflict
+    title: Wars and Conflict
+    description: >
+      A deep dive into how these historical leaders managed massive military crises, international battles, 
+      and defining moments of wartime strategy. Learn how their decisions on the battlefield and in the war room 
+      forever shifted the course of global history.
+    cards:
+      - title: George Washington
+        points:
+          - "Before his presidency, Washington served as the Commander-in-Chief of the Continental Army during the American Revolutionary War."
+          - "His brilliant surprise crossing of the icy Delaware River on Christmas night 1776 led to a crucial victory at Trenton."
+          - "He managed a devastating smallpox outbreak among his troops by ordering an early, secret form of mass inoculation."
+          - "He famously resigned his military commission after the war, ensuring civilian control over the newly formed government."
+      - title: Thomas Jefferson
+        points:
+          - "Jefferson authorized the First Barbary War in 1801, marking the first time American forces fought on foreign seas and shores."
+          - "He refused to pay extortion fees to North African pirates who were actively hijacking American merchant shipping."
+          - "He utilized the newly founded US Navy and Marine Corps to successfully blockade enemy ports in the Mediterranean Sea."
+          - "The famous lyrics 'to the shores of Tripoli' in the Marine Corps Hymn celebrate the final victory achieved during his term."
+      - title: Abraham Lincoln
+        points:
+          - "Lincoln successfully led the United States through the American Civil War, the nation's bloodiest and greatest domestic crisis."
+          - "He issued the Emancipation Proclamation in 1863 as a vital military measure, freeing enslaved people in Confederate states."
+          - "He cycle-searched through numerous military generals before appointing Ulysses S. Grant to command all Union armies."
+          - "His short, powerful Gettysburg Address redefined the war's purpose as a defense of human equality and freedom."
+      - title: Theodore Roosevelt
+        points:
+          - "Roosevelt achieved national fame during the Spanish-American War by leading the volunteer cavalry regiment known as the 'Rough Riders'."
+          - "He led a legendary, victorious uphill charge during the battle of San Juan Hill in Cuba in 1898."
+          - "He is the only US president to receive the Medal of Honor, which was awarded posthumously in 2001 for his wartime bravery."
+          - "As president, he modernized the US Navy and sent his 'Great White Fleet' battleships on a peaceful cruise around the world to show American strength."
+      - title: Franklin D. Roosevelt
+        points:
+          - "FDR led the United States into World War II following the surprise Japanese military attack on Pearl Harbor on December 7, 1941."
+          - "He famously termed the Pearl Harbor bombing 'a date which will live in infamy' during his historic address to Congress."
+          - "He worked closely with Allied leaders Winston Churchill and Joseph Stalin to orchestrate the global strategy against the Axis powers."
+          - "He secretly authorized the Manhattan Project, the top-secret scientific program that successfully developed the first atomic weapons."
+      - title: John F. Kennedy
+        points:
+          - "Kennedy navigated the 1962 Cuban Missile Crisis, widely considered the closest the world has ever come to an all-out nuclear war."
+          - "Instead of launching an immediate airstrike, he ordered a strategic naval 'quarantine' or blockade around the island of Cuba."
+          - "He established a direct telephone 'hotline' between Washington and Moscow to prevent accidental military escalations in the future."
+          - "He authorized the ill-fated Bay of Pigs invasion in 1961, an unsuccessful secret attempt to overthrow the Cuban government."
+      - title: Ronald Reagan
+        points:
+          - "Reagan implemented a grand strategy to escalate the Cold War, aggressively increasing US military spending to pressure the Soviet Union."
+          - "He famously labeled the Soviet Union as an 'evil empire' during a high-profile public speech in 1983."
+          - "He championed the Strategic Defense Initiative, a space-based anti-missile shield project nicknamed 'Star Wars' by the media."
+          - "In 1987, he delivered a speech at the Berlin Wall, directly challenging Soviet leader Mikhail Gorbachev to 'tear down this wall!'"
+      - title: Barack Obama
+        points:
+          - "Obama authorized the highly secret 2011 Navy SEAL raid in Pakistan that resulted in the death of terrorist leader Osama bin Laden."
+          - "He significantly expanded the strategic use of unmanned aerial drone strikes against militant targets in the Middle East."
+          - "He successfully fulfilled a campaign promise by drawing down and ending major US combat operations in the Iraq War."
+          - "He ordered a massive surge of 30,000 additional US troops into Afghanistan to combat rising Taliban insurgencies."
+    trivia:
+      - type: multiple_choice
+        question: "Which president led the 'Rough Riders' cavalry unit during the Spanish-American War?"
+        options: ["Abraham Lincoln", "Theodore Roosevelt", "Franklin D. Roosevelt", "John F. Kennedy"]
+        correct: 1
+      - type: multiple_choice
+        question: "During which historical crisis did John F. Kennedy order a naval 'quarantine' of an island nation?"
+        options: ["World War II", "The Korean War", "The Cuban Missile Crisis", "The Vietnam War"]
+        correct: 2
+      - type: single_qa
+        question: "Which historic document did Abraham Lincoln issue in 1863 to free enslaved individuals in rebellious territory?"
+        answer: "The Emancipation Proclamation"
+      - type: single_qa
+        question: "On Christmas night 1776, George Washington led his troops across which icy river for a surprise attack?"
+        answer: "The Delaware River"
+      - type: multiple_choice
+        question: "Which president secretly authorized the Manhattan Project to develop atomic weapons?"
+        options: ["Theodore Roosevelt", "Franklin D. Roosevelt", "John F. Kennedy", "Ronald Reagan"]
+        correct: 1
+      - type: single_qa
+        question: "What nickname was given to Ronald Reagan's high-tech Strategic Defense Initiative?"
+        answer: "Star Wars"
+      - type: single_qa
+        question: "Which president ordered the successful military raid that eliminated Osama bin Laden?"
+        answer: "Barack Obama"
+      - type: multiple_choice
+        question: "The First Barbary War fought against North African pirates was authorized by which US president?"
+        options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Theodore Roosevelt"]
+        correct: 1
+
+  - id: lasting_legacy
+    title: Lasting Legacy
+    description: >
+      An exploration of the enduring monuments, political institutions, systemic laws, and physical landscapes 
+      that remain today because of these leaders. See how their actions molded the physical and cultural map of 
+      modern America.
+    cards:
+      - title: George Washington
+        points:
+          - "Washington's likeness is immortalized in stone on Mount Rushmore and features prominently on both the US quarter and the one-dollar bill."
+          - "The nation's capital city, an entire state, 31 counties, and dozens of universities are directly named in his honor."
+          - "He established the traditional cabinet system, appointing original heads of departments to advise the chief executive."
+          - "His farewell address set a lasting precedent warning America against permanent foreign alliances and political parties."
+      - title: Thomas Jefferson
+        points:
+          - "Jefferson authored the Declaration of Independence, framing the founding ideals of American freedom and human rights."
+          - "His massive personal library of over 6,000 books was sold to the government to rebuild the Library of Congress after a fire."
+          - "He is sculpted on Mount Rushmore and his image has been featured on the US nickel coin since 1938."
+          - "His collection of historic artifacts from the Lewis and Clark expedition helped establish early American natural sciences."
+      - title: Abraham Lincoln
+        points:
+          - "Lincoln is commemorated at the Lincoln Memorial in Washington, D.C., the historic site of many famous civil rights speeches."
+          - "He signed the 1862 Homestead Act, which allowed millions of citizens to claim free land in the American West."
+          - "He officially established Thanksgiving as a national annual holiday in 1863 to help unite a fractured country."
+          - "His face is depicted on the US penny and the five-dollar bill, as well as carved into South Dakota's Mount Rushmore."
+      - title: Theodore Roosevelt
+        points:
+          - "Roosevelt created the United States Forest Service and signed the Antiquities Act to protect massive tracts of wilderness."
+          - "He established 150 national forests, 51 federal bird reserves, and 5 national parks, protecting roughly 230 million acres."
+          - "He fiercely broke up corporate monopolies, earning the enduring historical nickname of the 'Trust Buster'."
+          - "His monumental impact on American development earned him a place alongside Washington, Jefferson, and Lincoln on Mount Rushmore."
+      - title: Franklin D. Roosevelt
+        points:
+          - "FDR established the Social Security system in 1935, creating a lasting financial safety net for retired American workers."
+          - "He created the Securities and Exchange Commission (SEC) to monitor the stock market and protect everyday investors."
+          - "His New Deal programs built thousands of American roads, bridges, public schools, and massive dams that are still used today."
+          - "His legacy is honored on the US dime coin, recognizing his work founding the March of Dimes organization to combat polio."
+      - title: John F. Kennedy
+        points:
+          - "Kennedy established the Peace Corps in 1961, sending thousands of American volunteers abroad to assist developing nations."
+          - "The nation's primary space center in Florida, Cape Canaveral, was renamed the Kennedy Space Center shortly after his death."
+          - "He proposed the sweeping civil rights legislation that eventually became the historic Civil Rights Act of 1964."
+          - "An eternal flame burns continuously at his gravesite in Arlington National Cemetery, visited by millions every year."
+      - title: Ronald Reagan
+        points:
+          - "Reagan popularized supply-side economics, a policy framework heavily centered on deregulation and tax cuts known as 'Reaganomics'."
+          - "He appointed Sandra Day O'Connor in 1981, making her the first woman to ever serve on the Supreme Court."
+          - "Washington National Airport was officially renamed Ronald Reagan Washington National Airport in his honor in 1998."
+          - "His political style permanently shifted the modern Republican Party toward a philosophy of limited government intervention."
+      - title: Barack Obama
+        points:
+          - "Obama signed the landmark 2010 Patient Protection and Affordable Care Act, universally known as 'Obamacare'."
+          - "He nominated Sonia Sotomayor, who became the first Hispanic Justice to serve on the US Supreme Court."
+          - "He signed the historic Obergefell v. Hodges brief supporting the federal legalization of same-sex marriage nationwide."
+          - "He authorized the dynamic American Recovery and Reinvestment Act to successfully reboot the economy after the 2008 financial crisis."
+    trivia:
+      - type: multiple_choice
+        question: "Which of these presidents is NOT featured on Mount Rushmore?"
+        options: ["George Washington", "Thomas Jefferson", "Theodore Roosevelt", "Franklin D. Roosevelt"]
+        correct: 3
+      - type: multiple_choice
+        question: "Who was the first female Supreme Court Justice, appointed by Ronald Reagan?"
+        options: ["Ruth Bader Ginsburg", "Sandra Day O'Connor", "Sonia Sotomayor", "Elena Kagan"]
+        correct: 1
+      - type: single_qa
+        question: "Which president officially established Thanksgiving as a national holiday during the Civil War?"
+        answer: "Abraham Lincoln"
+      - type: single_qa
+        question: "Which president's personal book collection helped rebuild the Library of Congress?"
+        answer: "Thomas Jefferson"
+      - type: multiple_choice
+        question: "Which iconic international volunteer organization was established by John F. Kennedy in 1961?"
+        options: ["The Red Cross", "The Peace Corps", "AmeriCorps", "United Nations Children's Fund"]
+        correct: 1
+      - type: single_qa
+        question: "What is the common name for the Patient Protection and Affordable Care Act signed into law in 2010?"
+        answer: "Obamacare"
+      - type: single_qa
+        question: "Which president is honored on the US dime coin due to his work fighting polio?"
+        answer: "Franklin D. Roosevelt"
+      - type: multiple_choice
+        question: "Which president was known as the 'Trust Buster' for breaking up corporate monopolies?"
+        options: ["George Washington", "Abraham Lincoln", "Theodore Roosevelt", "Ronald Reagan"]
+        correct: 2

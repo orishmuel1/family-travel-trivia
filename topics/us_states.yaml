@@ -1,0 +1,516 @@
+id: us_states
+title: US States
+description: Facts and trivia about the United States, ordered from the largest state by land area to the smallest.
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: Interesting facts about each US state, ordered by land area.
+    cards:
+      - title: Alaska
+        points:
+          - "Alaska is the largest US state, covering more than 663,000 square miles."
+          - "It was purchased from Russia in 1867 and became a state in 1959."
+          - "Denali, North America's tallest mountain, is located in Alaska."
+          - "Alaska has more coastline than all the other US states combined."
+          - "Juneau is the only US state capital that cannot be reached by road."
+
+      - title: Texas
+        points:
+          - "Texas is the second-largest state in both land area and population."
+          - "It was an independent republic from 1836 until joining the United States in 1845."
+          - "Houston is home to NASA's Johnson Space Center."
+          - "The Alamo in San Antonio is one of America's most famous historic sites."
+          - "Texas produces more wind power than any other US state."
+
+      - title: California
+        points:
+          - "California is the most populous US state."
+          - "Silicon Valley is a global center for technology and innovation."
+          - "Hollywood is the world's best-known film production district."
+          - "Death Valley contains the lowest point in North America."
+          - "Mount Whitney is the tallest mountain in the contiguous United States."
+
+      - title: Montana
+        points:
+          - "Montana is known as Big Sky Country."
+          - "Glacier National Park contains hundreds of lakes and glaciers."
+          - "Part of Yellowstone National Park extends into Montana."
+          - "Montana has one of the lowest population densities in the United States."
+          - "The state is home to abundant wildlife including grizzly bears and bison."
+
+      - title: New Mexico
+        points:
+          - "Santa Fe is the oldest state capital in the United States."
+          - "White Sands National Park features brilliant white gypsum dunes."
+          - "The state has strong Native American and Hispanic cultural influences."
+          - "Los Alamos played a key role in the Manhattan Project."
+          - "New Mexico is nicknamed the Land of Enchantment."
+
+      - title: Arizona
+        points:
+          - "Grand Canyon National Park attracts millions of visitors every year."
+          - "Arizona became the 48th state in 1912."
+          - "The Sonoran Desert is home to the giant saguaro cactus."
+          - "Meteor Crater is one of the world's best-preserved impact craters."
+          - "Phoenix is one of the fastest-growing major cities in the United States."
+
+      - title: Nevada
+        points:
+          - "Las Vegas is one of the world's most famous entertainment cities."
+          - "Most of Nevada is covered by desert landscapes."
+          - "Lake Tahoe sits on the California-Nevada border."
+          - "Nevada is known as the Silver State because of its mining history."
+          - "Area 51, a highly secretive military site, is located in southern Nevada."
+
+      - title: Colorado
+        points:
+          - "Colorado has the highest average elevation of any US state."
+          - "The Rocky Mountains dominate much of the state's landscape."
+          - "Denver is known as the Mile High City because its elevation is about one mile above sea level."
+          - "Pikes Peak inspired the song 'America the Beautiful.'"
+          - "Colorado has four national parks."
+
+      - title: Oregon
+        points:
+          - "Crater Lake is the deepest lake in the United States."
+          - "The Oregon Trail ended in the fertile Willamette Valley."
+          - "The state has no statewide sales tax."
+          - "Oregon's Pacific coastline is entirely public land."
+          - "Portland is famous for bicycles, bridges, and coffee culture."
+
+      - title: Wyoming
+        points:
+          - "Yellowstone became the world's first national park in 1872."
+          - "Devils Tower was America's first National Monument."
+          - "Wyoming was the first state to grant women the right to vote."
+          - "Grand Teton National Park contains some of North America's most dramatic mountains."
+          - "Wyoming has the smallest population of any US state."
+
+      - title: Michigan
+        points:
+          - "Michigan is made up of two peninsulas connected by the Mackinac Bridge."
+          - "It borders four of the five Great Lakes."
+          - "Detroit became the birthplace of the modern automobile industry."
+          - "Michigan has the longest freshwater coastline in the United States."
+          - "The state has more than 11,000 inland lakes."
+
+      - title: Minnesota
+        points:
+          - "Minnesota is known as the Land of 10,000 Lakes."
+          - "The Mississippi River begins at Lake Itasca."
+          - "The Twin Cities are Minneapolis and Saint Paul."
+          - "The Mall of America is one of the largest shopping malls in the country."
+          - "Minnesota experiences some of the coldest winters in the continental United States."
+
+      - title: Utah
+        points:
+          - "Utah is home to the Mighty Five national parks."
+          - "Arches National Park contains more than 2,000 natural stone arches."
+          - "The Great Salt Lake is the largest saltwater lake in the Western Hemisphere."
+          - "Salt Lake City hosted the 2002 Winter Olympics."
+          - "Utah's red rock landscapes are famous around the world."
+
+      - title: Idaho
+        points:
+          - "Idaho produces more potatoes than any other US state."
+          - "Hells Canyon is deeper than the Grand Canyon."
+          - "More than half of Idaho is public land."
+          - "Boise is the state's capital and largest city."
+          - "The state offers excellent opportunities for hiking, skiing, and rafting."
+
+      - title: Kansas
+        points:
+          - "Kansas is known as the Sunflower State."
+          - "The state is one of the nation's largest wheat producers."
+          - "Kansas lies near the geographic center of the contiguous United States."
+          - "The story of 'The Wizard of Oz' begins in Kansas."
+          - "The Flint Hills preserve one of the world's largest remaining tallgrass prairies."
+
+      - title: Nebraska
+        points:
+          - "Nebraska has the only single-house state legislature in the United States."
+          - "The state is a leading producer of corn and beef."
+          - "Chimney Rock guided pioneers traveling west."
+          - "Sandhill cranes gather in huge numbers along the Platte River each spring."
+          - "Lincoln is the capital while Omaha is the largest city."
+
+      - title: South Dakota
+        points:
+          - "Mount Rushmore National Memorial features the faces of four US presidents."
+          - "Badlands National Park contains colorful rock formations and fossils."
+          - "The Crazy Horse Memorial is one of the world's largest mountain carvings."
+          - "The Black Hills are sacred to many Native American tribes."
+          - "South Dakota is famous for its annual Sturgis Motorcycle Rally."
+      - title: Washington
+        points:
+          - "Washington is the nation's leading producer of apples."
+          - "Seattle is home to major technology companies and the Space Needle."
+          - "Mount Rainier is an active volcano rising more than 14,000 feet."
+          - "Olympic National Park contains mountains, rainforest, and Pacific coastline."
+          - "The state borders Canada and the Pacific Ocean."
+
+      - title: North Dakota
+        points:
+          - "Theodore Roosevelt National Park protects colorful badlands and bison."
+          - "North Dakota is a leading producer of wheat, sunflowers, and canola."
+          - "The Bakken oil fields have made the state a major energy producer."
+          - "Bismarck is the state capital."
+          - "North Dakota became a state in 1889."
+
+      - title: Oklahoma
+        points:
+          - "Oklahoma has one of the largest Native American populations in the United States."
+          - "Route 66 crosses more miles in Oklahoma than in any other state."
+          - "The Land Run of 1889 helped settle much of the territory."
+          - "Oklahoma experiences some of the world's most frequent tornadoes."
+          - "The state capital is Oklahoma City."
+
+      - title: Missouri
+        points:
+          - "The Gateway Arch in St. Louis is the tallest monument in the United States."
+          - "The Missouri and Mississippi Rivers meet near St. Louis."
+          - "Mark Twain grew up in Hannibal."
+          - "Branson is famous for live entertainment."
+          - "Missouri is known as the Show-Me State."
+
+      - title: Florida
+        points:
+          - "Florida has the longest coastline in the contiguous United States."
+          - "Everglades National Park protects a unique subtropical ecosystem."
+          - "The Kennedy Space Center is where many NASA missions have launched."
+          - "Florida is one of the world's most popular tourist destinations."
+          - "The state is the nation's largest producer of oranges."
+
+      - title: Wisconsin
+        points:
+          - "Wisconsin is America's leading cheese-producing state."
+          - "The Green Bay Packers are one of the NFL's oldest franchises."
+          - "Milwaukee has a long brewing tradition."
+          - "The state borders Lakes Michigan and Superior."
+          - "Door County is famous for cherries and scenic shoreline."
+
+      - title: Georgia
+        points:
+          - "Atlanta is one of the largest cities in the southeastern United States."
+          - "Georgia is nicknamed the Peach State."
+          - "Martin Luther King Jr. was born in Atlanta."
+          - "Savannah is famous for its historic squares."
+          - "The world's busiest airport is located in Atlanta."
+
+      - title: Illinois
+        points:
+          - "Chicago is the third-largest city in the United States."
+          - "The Willis Tower was once the world's tallest building."
+          - "Route 66 begins in downtown Chicago."
+          - "Illinois is known as the Land of Lincoln."
+          - "The first McDonald's franchise opened in Des Plaines."
+
+      - title: Iowa
+        points:
+          - "Iowa is one of America's leading corn-producing states."
+          - "The Iowa State Fair is one of the country's largest agricultural fairs."
+          - "The Iowa caucuses traditionally begin the presidential election season."
+          - "Des Moines is the capital and largest city."
+          - "The state's fertile farmland is part of the Corn Belt."
+
+      - title: New York
+        points:
+          - "New York City is the largest city in the United States."
+          - "The Statue of Liberty welcomed millions of immigrants."
+          - "Niagara Falls is one of North America's most famous waterfalls."
+          - "The Adirondack Park is larger than Yellowstone, Yosemite, Glacier, Grand Canyon, and Great Smoky Mountains National Parks combined."
+          - "Albany is the state capital."
+
+      - title: North Carolina
+        points:
+          - "The Wright brothers made the first successful powered flight at Kitty Hawk."
+          - "Research Triangle Park is a major center for science and technology."
+          - "The Great Smoky Mountains extend into western North Carolina."
+          - "North Carolina produces more sweet potatoes than any other state."
+          - "The Cape Hatteras Lighthouse is America's tallest brick lighthouse."
+
+      - title: Arkansas
+        points:
+          - "Crater of Diamonds State Park lets visitors keep any diamonds they find."
+          - "Hot Springs National Park protects natural thermal springs."
+          - "Arkansas is nicknamed the Natural State."
+          - "The Buffalo National River was America's first national river."
+          - "Little Rock is the state capital."
+
+      - title: Alabama
+        points:
+          - "The first 911 emergency call was made in Haleyville in 1968."
+          - "NASA's Marshall Space Flight Center in Huntsville helped develop the Saturn V rocket."
+          - "Montgomery was the first capital of the Confederate States."
+          - "Alabama is known as the Yellowhammer State."
+          - "The USS Alabama battleship is now a museum."
+
+      - title: Louisiana
+        points:
+          - "New Orleans is famous for Mardi Gras celebrations."
+          - "Jazz music was born in New Orleans."
+          - "Louisiana is the only state divided into parishes instead of counties."
+          - "The state has extensive wetlands known as bayous."
+          - "The Mississippi River has shaped Louisiana's history and economy."
+
+      - title: Mississippi
+        points:
+          - "The Mississippi River forms the state's western border."
+          - "The state is considered the birthplace of the blues."
+          - "Jackson is the capital and largest city."
+          - "Magnolia is the state flower."
+          - "Mississippi became the 20th state in 1817."
+
+      - title: Pennsylvania
+        points:
+          - "The Declaration of Independence was signed in Philadelphia."
+          - "The Liberty Bell is one of America's best-known symbols."
+          - "The Battle of Gettysburg was a turning point in the Civil War."
+          - "Hershey is known as the Chocolate Capital of the United States."
+          - "Pennsylvania was one of the original thirteen colonies."
+
+      - title: Ohio
+        points:
+          - "Ohio is known as the Buckeye State."
+          - "The Rock and Roll Hall of Fame is located in Cleveland."
+          - "Several US presidents were born in Ohio."
+          - "The Wright brothers were from Dayton."
+          - "Cedar Point is one of the world's most famous amusement parks."
+      - title: Virginia
+        points:
+          - "Jamestown was the first permanent English settlement in North America."
+          - "Virginia is known as the birthplace of eight US presidents."
+          - "Shenandoah National Park protects part of the Blue Ridge Mountains."
+          - "Arlington National Cemetery is located in Virginia."
+          - "The state played a major role in the American Revolution and Civil War."
+
+      - title: Tennessee
+        points:
+          - "Nashville is known as Music City because of its country music industry."
+          - "Memphis is famous for blues music and the birthplace of rock and roll."
+          - "Great Smoky Mountains National Park is the most visited national park in the United States."
+          - "The Grand Ole Opry has been broadcasting from Nashville for decades."
+          - "The state is known for whiskey production."
+
+      - title: Kentucky
+        points:
+          - "The Kentucky Derby is one of the world's most famous horse races."
+          - "Mammoth Cave is the longest known cave system in the world."
+          - "Kentucky is famous for bourbon production."
+          - "The state is known for thoroughbred horse farms."
+          - "Frankfort is the state capital."
+
+      - title: Indiana
+        points:
+          - "The Indianapolis 500 is one of the world's most famous auto races."
+          - "Indiana is known as the Hoosier State."
+          - "The state has a strong basketball tradition."
+          - "The first professional baseball game was played in Fort Wayne."
+          - "Indianapolis is both the state capital and largest city."
+
+      - title: Maine
+        points:
+          - "Maine is the easternmost state in the United States."
+          - "The state is famous for lobster fishing."
+          - "Acadia National Park protects mountains, forests, and coastline."
+          - "Maine has the largest forest area of any New England state."
+          - "Augusta is the state capital."
+
+      - title: South Carolina
+        points:
+          - "Fort Sumter was where the first shots of the Civil War were fired."
+          - "Charleston is famous for its historic architecture and harbor."
+          - "Myrtle Beach is one of the state's most popular vacation destinations."
+          - "The state is nicknamed the Palmetto State."
+          - "South Carolina was the first state to secede from the Union in 1860."
+
+      - title: West Virginia
+        points:
+          - "West Virginia became a separate state during the Civil War in 1863."
+          - "The New River Gorge is famous for outdoor adventures."
+          - "The state is known as the Mountain State."
+          - "Charleston is the capital."
+          - "Coal mining has played an important role in the state's history."
+
+      - title: Maryland
+        points:
+          - "Maryland surrounds much of the Chesapeake Bay."
+          - "The state is famous for blue crabs."
+          - "The US Naval Academy is located in Annapolis."
+          - "Baltimore is known for its Inner Harbor."
+          - "Maryland is nicknamed America in Miniature because of its varied landscapes."
+
+      - title: Hawaii
+        points:
+          - "Hawaii is the only US state made entirely of islands."
+          - "It became the 50th state in 1959."
+          - "Mauna Kea is taller than Mount Everest when measured from its ocean base."
+          - "Hawaii Volcanoes National Park contains active volcanoes."
+          - "The state is the only place in the United States where coffee is commercially grown."
+
+      - title: Massachusetts
+        points:
+          - "The Pilgrims arrived at Plymouth in 1620."
+          - "Boston played a major role in the American Revolution."
+          - "Harvard University is the oldest university in the United States."
+          - "The Boston Tea Party helped spark the American Revolution."
+          - "Cape Cod is a famous coastal vacation area."
+
+      - title: Vermont
+        points:
+          - "Vermont is famous for maple syrup production."
+          - "The Green Mountains give the state its name."
+          - "Vermont was once an independent republic."
+          - "Montpelier is the smallest US state capital by population."
+          - "The state is known for farms, forests, and outdoor recreation."
+
+      - title: New Hampshire
+        points:
+          - "New Hampshire's motto is 'Live Free or Die.'"
+          - "Mount Washington is famous for extreme weather conditions."
+          - "The state was one of the original thirteen colonies."
+          - "New Hampshire holds the first presidential primary in many election cycles."
+          - "The White Mountains attract hikers and visitors."
+
+      - title: New Jersey
+        points:
+          - "New Jersey is one of the most densely populated US states."
+          - "Thomas Edison developed many inventions in New Jersey."
+          - "Atlantic City is famous for its boardwalk."
+          - "Princeton University is located in the state."
+          - "The state shares the Statue of Liberty with New York."
+
+      - title: Connecticut
+        points:
+          - "Connecticut was one of the original thirteen colonies."
+          - "Yale University is located in New Haven."
+          - "The state is known as the Constitution State."
+          - "The first hamburger is often credited to a restaurant in New Haven."
+          - "Mystic Seaport preserves America's maritime history."
+
+      - title: Delaware
+        points:
+          - "Delaware was the first state to ratify the US Constitution."
+          - "It is the second-smallest state by area."
+          - "The state has no sales tax."
+          - "Dover is the capital."
+          - "Delaware is known as the First State."
+
+      - title: Rhode Island
+        points:
+          - "Rhode Island is the smallest US state by area."
+          - "It was one of the original thirteen colonies."
+          - "Newport is famous for historic mansions and sailing."
+          - "Providence is the state capital."
+          - "The state has a long Atlantic Ocean coastline."
+
+    trivia:
+      - type: multiple_choice
+        question: "Which US state is the largest by land area?"
+        options: ["Texas", "Alaska", "California", "Montana"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state contains the Grand Canyon?"
+        options: ["Arizona", "Nevada", "Utah", "Colorado"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state is known as the Sunshine State?"
+        options: ["California", "Florida", "Hawaii", "Arizona"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state is home to Mount Rushmore?"
+        options: ["Wyoming", "South Dakota", "Montana", "Colorado"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state was the first to join the United States after the original thirteen colonies?"
+        options: ["Vermont", "Kentucky", "Tennessee", "Maine"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state is famous for Hollywood?"
+        options: ["California", "New York", "Georgia", "Florida"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state is known as the Land of 10,000 Lakes?"
+        options: ["Michigan", "Minnesota", "Wisconsin", "Maine"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state has Las Vegas?"
+        options: ["Nevada", "Arizona", "California", "Utah"]
+        correct: 0
+
+      - type: single_qa
+        question: "What is the smallest US state by area?"
+        answer: "Rhode Island"
+
+      - type: single_qa
+        question: "Which state was the first to ratify the US Constitution?"
+        answer: "Delaware"
+
+      - type: single_qa
+        question: "Which state contains Yellowstone National Park?"
+        answer: "Wyoming"
+
+      - type: single_qa
+        question: "Which state is famous for the Kentucky Derby?"
+        answer: "Kentucky"
+
+      - type: single_qa
+        question: "Which state is home to the Space Needle?"
+        answer: "Washington"
+
+      - type: single_qa
+        question: "Which state is famous for lobster fishing?"
+        answer: "Maine"
+
+      - type: multiple_choice
+        question: "Which state has the city of Nashville?"
+        options: ["Tennessee", "Kentucky", "Georgia", "Alabama"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state is famous for cheese production?"
+        options: ["Wisconsin", "Iowa", "Ohio", "Illinois"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state is home to the Kennedy Space Center?"
+        options: ["Texas", "Florida", "California", "Virginia"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state contains the city of Chicago?"
+        options: ["Illinois", "Indiana", "Michigan", "Ohio"]
+        correct: 0
+
+      - type: multiple_choice
+        question: "Which state has the oldest national park in the world?"
+        options: ["Montana", "Wyoming", "Colorado", "Utah"]
+        correct: 1
+
+      - type: multiple_choice
+        question: "Which state is called the Peach State?"
+        options: ["Georgia", "South Carolina", "Alabama", "Florida"]
+        correct: 0
+
+      - type: single_qa
+        question: "What is the capital of California?"
+        answer: "Sacramento"
+
+      - type: single_qa
+        question: "Which state is home to the Great Smoky Mountains National Park?"
+        answer: "Tennessee"
+
+      - type: single_qa
+        question: "Which state has the city of Boston?"
+        answer: "Massachusetts"
+
+      - type: single_qa
+        question: "Which state is famous for potatoes?"
+        answer: "Idaho"

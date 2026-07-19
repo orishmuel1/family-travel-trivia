@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="daylight">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Family Travel Trivia</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Travel Trivia">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <style>
+        /* ===================== THEME PALETTES ===================== */
+        :root, :root[data-theme="daylight"] {
+            --bg: #f4f6fb; --grad1: rgba(99,102,241,0.10); --grad2: rgba(168,85,247,0.10);
+            --header-bg: rgba(255,255,255,0.9);
+            --card: #ffffff; --card-border: rgba(15,23,42,0.08);
+            --text: #1e293b; --muted: #64748b;
+            --primary: #6366f1; --primary-2: #a855f7;
+            --success: #059669; --error: #e11d48;
+            --surface: rgba(15,23,42,0.02); --surface-border: rgba(15,23,42,0.10);
+            --shadow: 0 8px 24px rgba(15,23,42,0.08);
+        }
+        :root[data-theme="sunrise"] {
+            --bg: #fff7ed; --grad1: rgba(249,115,22,0.12); --grad2: rgba(45,212,191,0.12);
+            --header-bg: rgba(255,247,237,0.9);
+            --card: #fffdf9; --card-border: rgba(120,53,15,0.10);
+            --text: #431407; --muted: #9a6b52;
+            --primary: #f97316; --primary-2: #fb7185;
+            --success: #059669; --error: #e11d48;
+            --surface: rgba(120,53,15,0.03); --surface-border: rgba(120,53,15,0.12);
+            --shadow: 0 8px 24px rgba(120,53,15,0.10);
+        }
+        :root[data-theme="sky"] {
+            --bg: #eef6ff; --grad1: rgba(37,99,235,0.10); --grad2: rgba(6,182,212,0.12);
+            --header-bg: rgba(238,246,255,0.9);
+            --card: #ffffff; --card-border: rgba(12,42,77,0.08);
+            --text: #0c2a4d; --muted: #5b7a9e;
+            --primary: #2563eb; --primary-2: #06b6d4;
+            --success: #059669; --error: #e11d48;
+            --surface: rgba(12,42,77,0.02); --surface-border: rgba(12,42,77,0.10);
+            --shadow: 0 8px 24px rgba(12,42,77,0.08);
+        }
+        :root[data-theme="meadow"] {
+            --bg: #f0fdf4; --grad1: rgba(22,163,74,0.10); --grad2: rgba(132,204,22,0.12);
+            --header-bg: rgba(240,253,244,0.9);
+            --card: #ffffff; --card-border: rgba(20,50,31,0.08);
+            --text: #14321f; --muted: #4b7358;
+            --primary: #16a34a; --primary-2: #65a30d;
+            --success: #059669; --error: #e11d48;
+            --surface: rgba(20,50,31,0.02); --surface-border: rgba(20,50,31,0.10);
+            --shadow: 0 8px 24px rgba(20,50,31,0.08);
+        }
+        :root[data-theme="midnight"] {
+            --bg: #0f172a; --grad1: rgba(99,102,241,0.15); --grad2: rgba(139,92,246,0.15);
+            --header-bg: rgba(15,23,42,0.85);
+            --card: rgba(30,41,59,0.7); --card-border: rgba(255,255,255,0.06);
+            --text: #f8fafc; --muted: #94a3b8;
+            --primary: #6366f1; --primary-2: #c084fc;
+            --success: #10b981; --error: #f43f5e;
+            --surface: rgba(255,255,255,0.02); --surface-border: rgba(255,255,255,0.10);
+            --shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(at 0% 0%, var(--grad1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, var(--grad2) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 48px;
+            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--header-bg); backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 16px 20px; padding-top: calc(16px + env(safe-area-inset-top));
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+        .header-title { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.025em; }
+        .header-title span {
+            background: linear-gradient(to right, var(--primary), var(--primary-2));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .menu-btn {
+            position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+            margin-top: calc(env(safe-area-inset-top) / 2);
+            background: var(--surface); border: 1px solid var(--surface-border);
+            color: var(--text); width: 42px; height: 42px; border-radius: 11px;
+            font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        .menu-btn:hover { background: var(--card); }
+
+        .menu-panel {
+            position: sticky; top: 0; z-index: 90;
+            max-width: 650px; margin: 0 auto; padding: 0 18px;
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+        }
+        .menu-panel.open { max-height: 480px; }
+        .menu-inner {
+            background: var(--card); border: 1px solid var(--card-border);
+            border-radius: 16px; margin-top: 12px; padding: 16px; box-shadow: var(--shadow);
+        }
+        .menu-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 6px 2px 10px; }
+        .theme-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .theme-chip {
+            border: 2px solid transparent; border-radius: 11px; padding: 8px 12px; cursor: pointer;
+            font-size: 0.85rem; font-weight: 600; font-family: inherit; color: #fff;
+            display: flex; align-items: center; gap: 7px;
+        }
+        .theme-chip.active { border-color: var(--text); }
+        .swatch { width: 14px; height: 14px; border-radius: 4px; background: #fff; opacity: 0.9; }
+        .menu-item {
+            display: flex; align-items: center; gap: 10px; width: 100%;
+            background: var(--surface); border: 1px solid var(--surface-border); color: var(--text);
+            padding: 12px 14px; border-radius: 11px; font-size: 0.95rem; font-family: inherit;
+            cursor: pointer; margin-top: 8px; text-align: left;
+        }
+        .menu-item:hover { background: var(--bg); }
+
+        main { max-width: 650px; margin: 20px auto; padding: 0 18px; }
+
+        .view { display: none; animation: fadeIn 0.35s ease-out forwards; }
+        .view.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Home controls */
+        .home-controls { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+        .search-input, .sort-select {
+            background: var(--card); border: 1px solid var(--surface-border); color: var(--text);
+            border-radius: 12px; padding: 12px 14px; font-size: 0.95rem; font-family: inherit; outline: none;
+        }
+        .search-input { flex: 1 1 200px; }
+        .search-input:focus, .sort-select:focus { border-color: var(--primary); }
+        .sort-select { cursor: pointer; }
+
+        .card {
+            background: var(--card); backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border); border-radius: 18px; padding: 22px;
+            margin-bottom: 16px; box-shadow: var(--shadow);
+        }
+        .card-head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+        .card-title { font-size: 1.22rem; font-weight: 700; margin-bottom: 6px; }
+        .card-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+
+        .badge { font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
+        .badge-done { background: color-mix(in srgb, var(--success) 18%, transparent); color: var(--success); }
+        .badge-partial { background: color-mix(in srgb, var(--primary) 18%, transparent); color: var(--primary); }
+        .badge-new { background: var(--surface); color: var(--muted); }
+
+        .btn {
+            background-color: var(--primary); color: #fff; border: none;
+            padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 0.98rem;
+            font-family: inherit; cursor: pointer;
+            transition: filter 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .btn:active { transform: translateY(1px); }
+        .btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+        .btn-full { width: 100%; }
+        .btn-ghost { background: var(--surface); border: 1px solid var(--surface-border); color: var(--text); }
+        .btn-ghost:hover { background: var(--bg); filter: none; }
+        .btn-success { background-color: var(--success); }
+        .btn-danger { background-color: var(--error); }
+        .btn-back { margin-bottom: 18px; }
+        .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn-row .btn { flex: 1; }
+
+        .narrative { color: var(--muted); font-size: 1rem; margin-bottom: 18px; border-inline-start: 3px solid var(--primary); padding-inline-start: 15px; }
+        .points-title, .section-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        .point-item { position: relative; padding-inline-start: 24px; margin-bottom: 12px; font-size: 0.98rem; }
+        .point-item::before { content: "\2726"; position: absolute; inset-inline-start: 0; color: var(--primary); font-weight: bold; }
+        .subcard { border-inline-start: 4px solid var(--primary); padding: 18px 20px; }
+        .subcard-title { font-size: 1.08rem; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+
+        .quiz-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.85rem; color: var(--muted); }
+        .quiz-scope { font-weight: 600; color: var(--primary); }
+        .progress-track { height: 8px; background: var(--surface); border: 1px solid var(--surface-border); border-radius: 99px; overflow: hidden; margin-bottom: 22px; }
+        .progress-fill { height: 100%; background: linear-gradient(to right, var(--primary), var(--primary-2)); border-radius: 99px; transition: width 0.35s ease; }
+        .quiz-question { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+
+        .option-btn {
+            display: block; width: 100%; background: var(--surface); border: 1px solid var(--surface-border);
+            color: var(--text); padding: 15px; margin: 9px 0; border-radius: 12px;
+            text-align: start; font-size: 0.98rem; font-family: inherit; cursor: pointer; transition: all 0.2s ease;
+        }
+        .option-btn:hover:not(:disabled) { border-color: var(--primary); transform: translateX(4px); }
+        .option-btn:disabled { cursor: default; }
+        .option-btn.correct { background: color-mix(in srgb, var(--success) 16%, transparent); border-color: var(--success); font-weight: 600; }
+        .option-btn.incorrect { background: color-mix(in srgb, var(--error) 16%, transparent); border-color: var(--error); }
+
+        .reveal-box { margin: 6px 0 18px; padding: 16px; border-radius: 12px; background: color-mix(in srgb, var(--success) 12%, transparent); border: 1px solid color-mix(in srgb, var(--success) 40%, transparent); font-size: 1.05rem; }
+        .reveal-box .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: block; margin-bottom: 4px; }
+        .reveal-box .answer { font-weight: 700; color: var(--success); }
+        .self-grade-q { text-align: center; color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+
+        .summary-score { text-align: center; padding: 10px 0 4px; }
+        .summary-score .big { font-size: 3rem; font-weight: 800; color: var(--primary); display: block; line-height: 1.1; }
+        .summary-score .msg { font-size: 1.1rem; margin-top: 8px; }
+
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+        .stat-box { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 14px; padding: 16px; text-align: center; }
+        .stat-box .n { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .stat-box .l { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+        .prog-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--surface-border); font-size: 0.95rem; }
+        .prog-row:last-child { border-bottom: none; }
+
+        .empty { text-align: center; color: var(--muted); padding: 30px 10px; }
+        .error-card { border-color: var(--error); text-align: center; }
+
+        @media (max-width: 480px) { .btn-row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="menu-btn" class="menu-btn" aria-label="Menu">&#9776;</button>
+        <div class="header-title">Family <span>Travel Trivia</span></div>
+    </header>
+
+    <div id="menu-panel" class="menu-panel">
+        <div class="menu-inner">
+            <div class="menu-label">Appearance</div>
+            <div id="theme-chips" class="theme-chips"></div>
+            <button class="menu-item" id="menu-stats">📊 <span>Statistics</span></button>
+            <button class="menu-item" id="menu-reset">↺ <span>Reset progress</span></button>
+        </div>
+    </div>
+
+    <main>
+        <div id="view-home" class="view active"></div>
+        <div id="view-topic" class="view"></div>
+        <div id="view-learning" class="view"></div>
+        <div id="view-quiz" class="view"></div>
+        <div id="view-summary" class="view"></div>
+        <div id="view-stats" class="view"></div>
+    </main>
+
+    <script>
+        "use strict";
+
+        let appData = null;
+
+        // ============================ THEMES ============================
+        const THEMES = [
+            { id: 'daylight', name: 'Daylight', color: '#6366f1' },
+            { id: 'sunrise',  name: 'Sunrise',  color: '#f97316' },
+            { id: 'sky',      name: 'Sky',      color: '#2563eb' },
+            { id: 'meadow',   name: 'Meadow',   color: '#16a34a' },
+            { id: 'midnight', name: 'Midnight', color: '#0f172a' },
+        ];
+        function applyTheme(id) {
+            document.documentElement.setAttribute('data-theme', id);
+            localStorage.setItem('trivia_theme', id);
+            const meta = document.querySelector('meta[name="theme-color"]');
+            const t = THEMES.find(x => x.id === id);
+            if (meta && t) meta.setAttribute('content', t.color);
+            renderThemeChips();
+        }
+        function renderThemeChips() {
+            const cur = localStorage.getItem('trivia_theme') || 'daylight';
+            const box = document.getElementById('theme-chips');
+            box.innerHTML = '';
+            THEMES.forEach(t => {
+                const chip = el('button', { class: 'theme-chip' + (t.id === cur ? ' active' : '') });
+                chip.style.background = t.color;
+                chip.appendChild(el('span', { class: 'swatch' }));
+                chip.appendChild(el('span', { text: t.name }));
+                chip.onclick = () => applyTheme(t.id);
+                box.appendChild(chip);
+            });
+        }
+
+        // ============================ STATS / PROGRESS (local only) ============================
+        const stats = {
+            explored: new Set(JSON.parse(localStorage.getItem('trivia_explored') || '[]')),
+            completedCats: new Set(JSON.parse(localStorage.getItem('trivia_completed') || '[]')), // "tid|cid"
+            correct: parseInt(localStorage.getItem('trivia_correct') || '0', 10),
+            answered: parseInt(localStorage.getItem('trivia_answered') || '0', 10),
+            save() {
+                localStorage.setItem('trivia_explored', JSON.stringify([...this.explored]));
+                localStorage.setItem('trivia_completed', JSON.stringify([...this.completedCats]));
+                localStorage.setItem('trivia_correct', String(this.correct));
+                localStorage.setItem('trivia_answered', String(this.answered));
+            },
+            markExplored(id) { this.explored.add(id); this.save(); },
+            markCatDone(tid, cid) { this.completedCats.add(tid + '|' + cid); this.save(); },
+            recordAnswer(ok) { this.answered++; if (ok) this.correct++; this.save(); },
+            reset() {
+                this.explored.clear(); this.completedCats.clear(); this.correct = 0; this.answered = 0; this.save();
+            }
+        };
+        // Topic progress helpers
+        function topicProgress(topic) {
+            const cats = topic.categories || [];
+            const done = cats.filter(c => stats.completedCats.has(topic.id + '|' + c.id)).length;
+            return { done, total: cats.length };
+        }
+
+        // ============================ DOM HELPERS ============================
+        function show(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+            closeMenu();
+            window.scrollTo(0, 0);
+        }
+        function el(tag, opts = {}) {
+            const node = document.createElement(tag);
+            if (opts.class) node.className = opts.class;
+            if (opts.text != null) node.textContent = opts.text;
+            if (opts.html != null) node.innerHTML = opts.html;
+            if (opts.onclick) node.onclick = opts.onclick;
+            if (opts.attrs) for (const [k, v] of Object.entries(opts.attrs)) node.setAttribute(k, v);
+            return node;
+        }
+
+        // Detect right-to-left scripts (Hebrew, Arabic, ...) so a whole topic flips direction.
+        function isRTL(s) {
+            s = String(s || '');
+            for (let i = 0; i < s.length; i++) {
+                const c = s.charCodeAt(i);
+                if (c >= 0x0590 && c <= 0x07FF) return true;   // Hebrew, Arabic, Syriac, Thaana ...
+            }
+            return false;
+        }
+        function topicDir(topic) { return topic && isRTL((topic.title || '') + ' ' + (topic.description || '')) ? 'rtl' : 'ltr'; }
+
+        // ============================ MENU ============================
+        function toggleMenu() { document.getElementById('menu-panel').classList.toggle('open'); }
+        function closeMenu() { document.getElementById('menu-panel').classList.remove('open'); }
+
+        // ============================ HOME ============================
+        let homeSort = localStorage.getItem('trivia_sort') || 'title';
+        let homeQuery = '';
+
+        function renderHome() {
+            const root = document.getElementById('view-home');
+            root.innerHTML = '';
+            if (!appData || !appData.topics || !appData.topics.length) {
+                root.appendChild(el('div', { class: 'card error-card', html: '⚠️ <strong>No topics loaded.</strong>' }));
+                show('view-home');
+                return;
+            }
+
+            // Controls
+            const controls = el('div', { class: 'home-controls' });
+            const search = el('input', { class: 'search-input', attrs: {
+                type: 'text', placeholder: '🔍 Search topics…', list: 'topic-suggestions', value: homeQuery } });
+            search.oninput = () => { homeQuery = search.value; renderTopicList(); };
+            const datalist = el('datalist', { attrs: { id: 'topic-suggestions' } });
+            appData.topics.forEach(t => datalist.appendChild(el('option', { attrs: { value: t.title } })));
+            const sort = el('select', { class: 'sort-select' });
+            [['title', 'A–Z'], ['newest', 'Newest'], ['oldest', 'Oldest'], ['progress', 'Unfinished first']]
+                .forEach(([v, label]) => {
+                    const o = el('option', { text: label, attrs: { value: v } });
+                    if (v === homeSort) o.selected = true;
+                    sort.appendChild(o);
+                });
+            sort.onchange = () => { homeSort = sort.value; localStorage.setItem('trivia_sort', homeSort); renderTopicList(); };
+            controls.appendChild(search); controls.appendChild(datalist); controls.appendChild(sort);
+            root.appendChild(controls);
+
+            root.appendChild(el('div', { attrs: { id: 'topic-list' } }));
+            renderTopicList();
+            show('view-home');
+        }
+
+        function sortedFilteredTopics() {
+            let list = appData.topics.map((t, i) => ({ t, i }));
+            const q = homeQuery.trim().toLowerCase();
+            if (q) {
+                list = list.filter(({ t }) =>
+                    t.title.toLowerCase().includes(q) ||
+                    (t.categories || []).some(c => (c.title || '').toLowerCase().includes(q)));
+            }
+            const cmp = {
+                title: (a, b) => a.t.title.localeCompare(b.t.title),
+                newest: (a, b) => String(b.t.created || '').localeCompare(String(a.t.created || '')),
+                oldest: (a, b) => String(a.t.created || '').localeCompare(String(b.t.created || '')),
+                progress: (a, b) => {
+                    const pa = topicProgress(a.t), pb = topicProgress(b.t);
+                    const da = pa.total && pa.done >= pa.total ? 1 : 0;
+                    const db = pb.total && pb.done >= pb.total ? 1 : 0;
+                    return da - db || a.t.title.localeCompare(b.t.title);
+                }
+            }[homeSort] || (() => 0);
+            return list.sort(cmp);
+        }
+
+        function progressBadge(topic) {
+            const { done, total } = topicProgress(topic);
+            if (total && done >= total) return el('span', { class: 'badge badge-done', text: '✓ Done' });
+            if (done > 0) return el('span', { class: 'badge badge-partial', text: `${done}/${total}` });
+            return el('span', { class: 'badge badge-new', text: 'New' });
+        }
+
+        function renderTopicList() {
+            const container = document.getElementById('topic-list');
+            if (!container) return;
+            container.innerHTML = '';
+            const list = sortedFilteredTopics();
+            if (!list.length) {
+                container.appendChild(el('div', { class: 'empty', text: 'No topics match your search.' }));
+                return;
+            }
+            list.forEach(({ t: topic, i: tIdx }) => {
+                const card = el('div', { class: 'card' });
+                card.setAttribute('dir', topicDir(topic));
+                const headRow = el('div', { class: 'card-head-row' });
+                headRow.appendChild(el('h3', { class: 'card-title', text: topic.title }));
+                headRow.appendChild(progressBadge(topic));
+                card.appendChild(headRow);
+                card.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
+                card.appendChild(el('button', { class: 'btn', text: 'Explore →', onclick: () => openTopic(tIdx) }));
+                container.appendChild(card);
+            });
+        }
+
+        // ============================ TOPIC ============================
+        function openTopic(tIdx) {
+            const topic = appData.topics[tIdx];
+            stats.markExplored(topic.id);
+            const root = document.getElementById('view-topic');
+            root.innerHTML = '';
+            root.setAttribute('dir', topicDir(topic));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← All Topics', onclick: renderHome }));
+
+            const head = el('div', { class: 'card' });
+            head.appendChild(el('h2', { class: 'card-title', text: topic.title }));
+            head.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
+            const totalQ = (topic.categories || []).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
+            if (totalQ > 0)
+                head.appendChild(el('button', { class: 'btn btn-full', text: `🏆 Quiz the whole topic (${totalQ} questions)`, onclick: () => beginQuiz(tIdx, null) }));
+            root.appendChild(head);
+
+            root.appendChild(el('h3', { class: 'section-title', html: '📚 Categories' }));
+            (topic.categories || []).forEach((cat, cIdx) => {
+                const card = el('div', { class: 'card' });
+                const headRow = el('div', { class: 'card-head-row' });
+                headRow.appendChild(el('h3', { class: 'card-title', text: cat.title }));
+                if (stats.completedCats.has(topic.id + '|' + cat.id))
+                    headRow.appendChild(el('span', { class: 'badge badge-done', text: '✓' }));
+                card.appendChild(headRow);
+                if (cat.description) card.appendChild(el('p', { class: 'card-desc', text: cat.description }));
+                card.appendChild(el('button', { class: 'btn', text: 'Learn →', onclick: () => openLearning(tIdx, cIdx) }));
+                root.appendChild(card);
+            });
+            show('view-topic');
+        }
+
+        // ============================ LEARNING ============================
+        function openLearning(tIdx, cIdx) {
+            const topic = appData.topics[tIdx];
+            const cat = topic.categories[cIdx];
+            const root = document.getElementById('view-learning');
+            root.innerHTML = '';
+            root.setAttribute('dir', topicDir(topic));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: `← ${topic.title}`, onclick: () => openTopic(tIdx) }));
+
+            const hasCards = Array.isArray(cat.cards) && cat.cards.length > 0;
+
+            const head = el('div', { class: 'card' });
+            head.appendChild(el('h2', { class: 'card-title', text: cat.title }));
+            if (cat.description) head.appendChild(el('p', { class: 'narrative', text: cat.description }));
+            if (!hasCards) {
+                head.appendChild(el('h3', { class: 'points-title', html: '💡 Key Learning Points' }));
+                (cat.points || []).forEach(pt => head.appendChild(el('div', { class: 'point-item', text: pt })));
+            }
+            root.appendChild(head);
+
+            if (hasCards) {
+                cat.cards.forEach(sc => {
+                    const sub = el('div', { class: 'card subcard' });
+                    sub.appendChild(el('h3', { class: 'subcard-title', text: sc.title }));
+                    (sc.points || []).forEach(pt => sub.appendChild(el('div', { class: 'point-item', text: pt })));
+                    root.appendChild(sub);
+                });
+            }
+
+            if (cat.trivia && cat.trivia.length)
+                root.appendChild(el('button', { class: 'btn btn-full', text: `❓ Start Trivia (${cat.trivia.length} questions) →`, onclick: () => beginQuiz(tIdx, cIdx) }));
+            show('view-learning');
+        }
+
+        // ============================ QUIZ ============================
+        let quiz = null;
+        function collectQuestions(tIdx, cIdx) {
+            const topic = appData.topics[tIdx];
+            const cats = (cIdx == null) ? topic.categories : [topic.categories[cIdx]];
+            const list = [];
+            cats.forEach(cat => (cat.trivia || []).forEach(t => list.push({ q: t, catTitle: cat.title })));
+            return list;
+        }
+        function shuffle(arr) {
+            const a = arr.slice();
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+        function beginQuiz(tIdx, cIdx) {
+            const pool = collectQuestions(tIdx, cIdx);
+            if (pool.length <= 5) { startQuiz(tIdx, cIdx, pool.length); return; }
+            renderQuizSetup(tIdx, cIdx, pool.length);
+        }
+        function renderQuizSetup(tIdx, cIdx, total) {
+            const root = document.getElementById('view-quiz');
+            root.innerHTML = '';
+            root.setAttribute('dir', topicDir(appData.topics[tIdx]));
+            const backTo = (cIdx == null) ? () => openTopic(tIdx) : () => openLearning(tIdx, cIdx);
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← Back', onclick: backTo }));
+            const card = el('div', { class: 'card' });
+            card.appendChild(el('h2', { class: 'card-title', text: 'Quiz length' }));
+            card.appendChild(el('p', { class: 'card-desc', text: `This round has ${total} questions. How many would you like? (Shorter picks are chosen at random.)` }));
+            const opts = [5, 10, 20].filter(n => n < total);
+            opts.push(total);
+            opts.forEach(n => {
+                const label = (n === total) ? `All ${total} questions` : `${n} questions`;
+                const b = el('button', { class: 'btn btn-full', text: label, onclick: () => startQuiz(tIdx, cIdx, n) });
+                b.style.marginBottom = '10px';
+                card.appendChild(b);
+            });
+            root.appendChild(card);
+            show('view-quiz');
+        }
+        function startQuiz(tIdx, cIdx, limit) {
+            let pool = collectQuestions(tIdx, cIdx);
+            if (limit && limit < pool.length) pool = shuffle(pool).slice(0, limit);
+            quiz = { tIdx, cIdx, limit: limit || pool.length, questions: pool, i: 0, score: 0, scope: (cIdx == null ? 'topic' : 'category') };
+            renderQuestion();
+            show('view-quiz');
+        }
+        function renderQuestion() {
+            const root = document.getElementById('view-quiz');
+            root.innerHTML = '';
+            root.setAttribute('dir', topicDir(appData.topics[quiz.tIdx]));
+            const total = quiz.questions.length;
+            const item = quiz.questions[quiz.i];
+            const t = item.q;
+            const topic = appData.topics[quiz.tIdx];
+            const scopeLabel = quiz.scope === 'topic' ? topic.title : (item.catTitle || topic.title);
+
+            const bar = el('div', { class: 'quiz-topbar' });
+            bar.appendChild(el('span', { class: 'quiz-scope', text: scopeLabel }));
+            bar.appendChild(el('span', { text: `Question ${quiz.i + 1} of ${total}  •  Score ${quiz.score}` }));
+            root.appendChild(bar);
+
+            const track = el('div', { class: 'progress-track' });
+            track.appendChild(el('div', { class: 'progress-fill', attrs: { style: `width:${(quiz.i / total) * 100}%` } }));
+            root.appendChild(track);
+
+            const card = el('div', { class: 'card' });
+            card.appendChild(el('p', { class: 'quiz-question', text: t.question }));
+            if (t.type === 'single_qa') renderQA(card, t); else renderMC(card, t);
+            root.appendChild(card);
+        }
+        function nextButton(card) {
+            const last = quiz.i >= quiz.questions.length - 1;
+            const btn = el('button', { class: 'btn btn-full', text: last ? 'See Results →' : 'Next Question →',
+                onclick: () => { if (last) renderSummary(); else { quiz.i++; renderQuestion(); } } });
+            btn.style.marginTop = '18px';
+            card.appendChild(btn);
+        }
+        function renderMC(card, t) {
+            const wrap = el('div');
+            let answered = false;
+            (t.options || []).forEach((opt, oIdx) => {
+                const b = el('button', { class: 'option-btn', text: opt });
+                b.onclick = () => {
+                    if (answered) return;
+                    answered = true;
+                    const ok = (oIdx === t.correct);
+                    [...wrap.children].forEach((child, idx) => {
+                        child.disabled = true;
+                        if (idx === t.correct) child.classList.add('correct');
+                        else if (idx === oIdx) child.classList.add('incorrect');
+                    });
+                    if (ok) quiz.score++;
+                    stats.recordAnswer(ok);
+                    nextButton(card);
+                };
+                wrap.appendChild(b);
+            });
+            card.appendChild(wrap);
+        }
+        function renderQA(card, t) {
+            const revealBtn = el('button', { class: 'btn btn-full', text: '👁️ Reveal Answer' });
+            revealBtn.onclick = () => {
+                revealBtn.remove();
+                const box = el('div', { class: 'reveal-box' });
+                box.appendChild(el('span', { class: 'label', text: 'Answer' }));
+                box.appendChild(el('span', { class: 'answer', text: t.answer }));
+                card.appendChild(box);
+                card.appendChild(el('p', { class: 'self-grade-q', text: 'Did you get it right?' }));
+                const row = el('div', { class: 'btn-row' });
+                const grade = (ok) => {
+                    if (ok) quiz.score++;
+                    stats.recordAnswer(ok);
+                    row.remove();
+                    const q = card.querySelector('.self-grade-q'); if (q) q.remove();
+                    nextButton(card);
+                };
+                row.appendChild(el('button', { class: 'btn btn-success', text: '✓ Got it', onclick: () => grade(true) }));
+                row.appendChild(el('button', { class: 'btn btn-danger', text: '✗ Missed', onclick: () => grade(false) }));
+                card.appendChild(row);
+            };
+            card.appendChild(revealBtn);
+        }
+        function renderSummary() {
+            // Mark completion
+            const topic = appData.topics[quiz.tIdx];
+            if (quiz.scope === 'category') stats.markCatDone(topic.id, topic.categories[quiz.cIdx].id);
+            else (topic.categories || []).forEach(c => stats.markCatDone(topic.id, c.id));
+
+            const root = document.getElementById('view-summary');
+            root.innerHTML = '';
+            root.setAttribute('dir', topicDir(topic));
+            const total = quiz.questions.length, score = quiz.score, pct = total ? score / total : 0;
+            let emoji = '🌟', msg = 'Perfect!';
+            if (pct < 1) { emoji = '🎉'; msg = 'Great job!'; }
+            if (pct < 0.7) { emoji = '👍'; msg = 'Nice effort!'; }
+            if (pct < 0.4) { emoji = '📚'; msg = 'Keep learning!'; }
+
+            const card = el('div', { class: 'card' });
+            const s = el('div', { class: 'summary-score' });
+            s.appendChild(el('span', { class: 'big', text: `${score}/${total}` }));
+            s.appendChild(el('div', { class: 'msg', text: `${emoji} ${msg}` }));
+            card.appendChild(s);
+            root.appendChild(card);
+
+            const row = el('div', { class: 'btn-row' });
+            row.appendChild(el('button', { class: 'btn btn-ghost', text: '↻ Try Again', onclick: () => startQuiz(quiz.tIdx, quiz.cIdx, quiz.limit) }));
+            if (quiz.scope === 'category')
+                row.appendChild(el('button', { class: 'btn', text: '← Back to Learning', onclick: () => openLearning(quiz.tIdx, quiz.cIdx) }));
+            else
+                row.appendChild(el('button', { class: 'btn', text: '← Back to Topic', onclick: () => openTopic(quiz.tIdx) }));
+            root.appendChild(row);
+            show('view-summary');
+        }
+
+        // ============================ STATISTICS ============================
+        function renderStats() {
+            const root = document.getElementById('view-stats');
+            root.innerHTML = '';
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← Back', onclick: renderHome }));
+
+            const acc = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
+            const grid = el('div', { class: 'stat-grid' });
+            [['Topics Explored', stats.explored.size], ['Questions Answered', stats.answered],
+             ['Correct Answers', stats.correct], ['Accuracy', acc + '%']].forEach(([l, n]) => {
+                const box = el('div', { class: 'stat-box' });
+                box.appendChild(el('div', { class: 'n', text: String(n) }));
+                box.appendChild(el('div', { class: 'l', text: l }));
+                grid.appendChild(box);
+            });
+            const card = el('div', { class: 'card' });
+            card.appendChild(el('h2', { class: 'card-title', text: 'Your Statistics' }));
+            card.appendChild(grid);
+            root.appendChild(card);
+
+            if (appData && appData.topics) {
+                const prog = el('div', { class: 'card' });
+                prog.appendChild(el('h3', { class: 'section-title', html: '📈 Topic Progress' }));
+                appData.topics.forEach(topic => {
+                    const { done, total } = topicProgress(topic);
+                    const row = el('div', { class: 'prog-row' });
+                    row.appendChild(el('span', { text: topic.title }));
+                    row.appendChild(el('span', { text: total ? `${done}/${total} categories` : '—', attrs: { style: 'color:var(--muted)' } }));
+                    prog.appendChild(row);
+                });
+                root.appendChild(prog);
+            }
+            show('view-stats');
+        }
+
+        // ============================ DATA LOADING ============================
+        const DB_NAME = 'FamilyTriviaDB', DB_VERSION = 1, STORE = 'app_data', KEY = 'trivia_json';
+        function openDB() {
+            return new Promise((resolve, reject) => {
+                const r = indexedDB.open(DB_NAME, DB_VERSION);
+                r.onupgradeneeded = (e) => { const db = e.target.result; if (!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE); };
+                r.onsuccess = (e) => resolve(e.target.result);
+                r.onerror = (e) => reject(e.target.error);
+            });
+        }
+        function idbGet(db) { return new Promise((res, rej) => { const t = db.transaction(STORE, 'readonly').objectStore(STORE).get(KEY); t.onsuccess = (e) => res(e.target.result); t.onerror = (e) => rej(e.target.error); }); }
+        function idbPut(db, d) { return new Promise((res, rej) => { const t = db.transaction(STORE, 'readwrite').objectStore(STORE).put(d, KEY); t.onsuccess = () => res(); t.onerror = (e) => rej(e.target.error); }); }
+
+        async function loadDatabase() {
+            let db = null;
+            try { db = await openDB(); } catch (e) { console.warn('IndexedDB unavailable:', e); }
+            try {
+                const res = await fetch('data.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                appData = await res.json();
+                if (db) { try { await idbPut(db, appData); } catch (e) { console.warn('cache write failed', e); } }
+            } catch (netErr) {
+                console.warn('Network load failed, trying offline cache...', netErr);
+                if (db) { try { appData = await idbGet(db); } catch (e) { console.error('IndexedDB read failed', e); } }
+            }
+            if (appData && appData.topics) renderHome();
+            else document.getElementById('view-home').innerHTML =
+                '<div class="card error-card">⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia, then it works offline.</div>';
+        }
+
+        // ============================ INIT ============================
+        applyTheme(localStorage.getItem('trivia_theme') || 'daylight');
+        document.getElementById('menu-btn').onclick = toggleMenu;
+        document.getElementById('menu-stats').onclick = renderStats;
+        document.getElementById('menu-reset').onclick = () => {
+            if (confirm('Reset all your local progress and statistics on this device?')) { stats.reset(); closeMenu(); renderHome(); }
+        };
+
+        window.addEventListener('DOMContentLoaded', loadDatabase);
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered', reg.scope))
+                    .catch(err => console.error('SW registration failed', err));
+            });
+        }
+    </script>
+</body>
+</html>

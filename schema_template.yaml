@@ -1,0 +1,51 @@
+# ==============================================================================
+# FAMILY TRAVEL TRIVIA - TOPIC SCHEMA TEMPLATE
+# ==============================================================================
+# Canonical structure for any file under topics/ (YAML preferred, .json also works).
+# A category holds EITHER "cards" (subcategories) OR a flat "points" list.
+# Use prompt_blueprint.md to generate real topics; this file is the reference.
+# ==============================================================================
+
+id: topic_slug                     # unique lowercase snake_case slug
+title: "Topic Display Name"        # friendly display name
+description: "One-sentence overview of the whole topic."
+
+categories:
+
+  # ---- CARD-STYLE category (a theme with one card per subcategory) ----
+  - id: important_facts            # the default first category
+    title: "Important Facts"
+    description: "One-sentence intro to this category (read first)."   # optional
+    cards:                         # one card per subcategory / item
+      - title: "Subcategory A"     # e.g. a state, park, planet, person
+        points:                    # 1-6 bullet facts (aim for 2-4)
+          - "A short, true, self-contained fact."
+          - "Another interesting fact."
+      - title: "Subcategory B"
+        points:
+          - "A fact about subcategory B."
+          - "Another fact about subcategory B."
+    trivia:                        # 1+ questions for this category (theme-level)
+      - type: multiple_choice
+        question: "A question drawing on the cards above?"
+        options:
+          - "Correct answer"
+          - "Plausible distractor"
+          - "Plausible distractor"
+          - "Plausible distractor"
+        correct: 0                 # 0-based index of the correct option (0-3)
+      - type: single_qa
+        question: "A direct question?"
+        answer: "The exact answer"
+
+  # ---- FLAT category (a single subject, no subcategories) ----
+  - id: flat_example
+    title: "Flat Category"
+    description: "Narrative paragraph read before the facts."   # optional
+    points:                        # 2-5 facts (used INSTEAD of cards)
+      - "Fact one."
+      - "Fact two."
+    trivia:
+      - type: single_qa
+        question: "A direct question?"
+        answer: "The exact answer"
