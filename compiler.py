@@ -48,6 +48,7 @@ CREATED_LEDGER = os.path.join(TOPICS_DIR, ".created.json")
 VALID_TRIVIA_TYPES = ("multiple_choice", "single_qa")
 MIN_POINTS, MAX_POINTS = 2, 5           # flat category points
 CARD_MIN_POINTS, CARD_MAX_POINTS = 1, 6  # per-card (subcategory) bullets
+VALID_AUDIENCE = ("family", "adult")
 
 
 # ---------------------------------------------------------------------------------
@@ -111,6 +112,11 @@ def slugify(value):
     s = re.sub(r"[^a-z0-9_]", "", s)
     s = re.sub(r"_+", "_", s).strip("_")
     return s
+
+
+def is_rtl(value):
+    """True if the text contains right-to-left characters (Hebrew, Arabic, ...)."""
+    return any(0x0590 <= ord(c) <= 0x07FF for c in str(value or ""))
 
 
 # ---------------------------------------------------------------------------------
@@ -318,6 +324,24 @@ def validate_topic(path, data):
         issues.append(Issue("error", tloc, "topic is missing a 'description'.",
                             "Add a one-sentence overview of the topic."))
 
+    # --- optional metadata: lang (inferred if absent), audience ---
+    lang = data.get("lang")
+    if isinstance(lang, str) and lang.strip():
+        data["lang"] = lang.strip().lower()
+    else:
+        data["lang"] = "he" if is_rtl((data.get("title") or "") + " " + (data.get("description") or "")) else "en"
+
+    aud = data.get("audience")
+    if isinstance(aud, str) and aud.strip():
+        a = aud.strip().lower()
+        if a not in VALID_AUDIENCE:
+            issues.append(Issue("error", tloc, f"invalid 'audience' value '{aud}'.",
+                                "Use 'family' or 'adult'."))
+        else:
+            data["audience"] = a
+    else:
+        data["audience"] = "family"
+
     # --- categories ---
     categories = data.get("categories")
     if not isinstance(categories, list) or not categories:
@@ -372,6 +396,16 @@ def validate_topic(path, data):
         cdesc, changed = clean_str(cat.get("description"))
         if changed:
             cat["description"] = cdesc
+
+        # optional per-category audience (overrides the topic default; else inherits it)
+        caud = cat.get("audience")
+        if isinstance(caud, str) and caud.strip():
+            a = caud.strip().lower()
+            if a not in VALID_AUDIENCE:
+                issues.append(Issue("error", cloc, f"invalid category 'audience' value '{caud}'.",
+                                    "Use 'family' or 'adult'."))
+            else:
+                cat["audience"] = a
 
         # A category holds EITHER flat 'points' OR 'cards' (subcategories). Need one.
         has_points = isinstance(cat.get("points"), list)
@@ -466,11 +500,11 @@ def _ordered(d, key_order):
 
 def canonicalize(topic):
     """Rebuild a topic dict with a clean, consistent key order for readable output."""
-    topic = _ordered(topic, ["id", "title", "description", "categories"])
+    topic = _ordered(topic, ["id", "title", "description", "lang", "audience", "categories"])
     cats = []
     for cat in topic.get("categories", []):
         if isinstance(cat, dict):
-            cat = _ordered(cat, ["id", "title", "description", "cards", "points", "trivia"])
+            cat = _ordered(cat, ["id", "title", "description", "audience", "cards", "points", "trivia"])
             if isinstance(cat.get("cards"), list):
                 cat["cards"] = [
                     _ordered(c, ["title", "points"]) if isinstance(c, dict) else c

@@ -1,9 +1,11 @@
-id: us_presidents_complete
+id: us_presidents_en
 title: US Presidents
 description: >
   A historic journey through the leaders of the United States, from the founding of the nation to modern times. 
   Discover the unique lives, crucial moments, and lasting impact of the figures who have held the highest office 
   in the land. Perfect for the whole family to learn about leadership, history, and the evolution of American democracy.
+lang: en
+audience: family
 categories:
   - id: important_facts
     title: Important Facts
@@ -399,6 +401,7 @@ categories:
 
   - id: lasting_legacy
     title: Lasting Legacy
+    audience: adult
     description: >
       An exploration of the enduring monuments, political institutions, systemic laws, and physical landscapes 
       that remain today because of these leaders. See how their actions molded the physical and cultural map of 

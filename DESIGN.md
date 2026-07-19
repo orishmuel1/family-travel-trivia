@@ -1,8 +1,5 @@
 # Family Travel Trivia — Design & Intent
 
-This is the source-of-truth for *why* this app exists and *how* it's meant to grow.
-If any older note conflicts with this file, this file wins.
-
 ---
 
 ## 1. Purpose
@@ -134,6 +131,18 @@ categories:
   #     trivia: [ ... ]
 ```
 
+**Optional topic metadata** (all default automatically — safe to add anytime, no migration):
+
+- `lang` — content language (`en`, `he`, …). Auto-detected from the text if omitted
+  (Hebrew → `he`, else `en`). Drives the app's **Language toggle**, which filters topics to
+  the chosen language and flips the whole UI to right-to-left for Hebrew. A topic is produced
+  in both languages as **two files** (`<slug>_en.yaml` / `<slug>_he.yaml`) — the generator
+  emits both in a single reply; IDs stay English in both.
+- `audience` — `family` (default) or `adult`, at the **topic** level and optionally per
+  **category** (a category's `audience` overrides the topic's). Drives the **Audience filter**
+  (All / Family / Adults): Family mode hides adult categories and any topic with nothing
+  family-safe, including from the whole-topic quiz.
+
 **Creation dates:** the compiler stamps each topic with a stable `created` date via a
 committed ledger (`topics/.created.json`) so the app can sort by Newest/Oldest and the
 dates stay consistent across every device.
@@ -153,7 +162,7 @@ docs/                The PWA (GitHub Pages target)
   sw.js              Service worker (offline cache; version stamped by compiler)
   manifest.json      PWA manifest
   icon-192/512.png   Launcher icons
-tools/               Helper scripts (clean, bump_version, generate_mock_icons)
+tools/               Helper scripts (generate_mock_icons — optional icon regenerator)
 ```
 
 ---

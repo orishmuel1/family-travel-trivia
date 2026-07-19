@@ -1,0 +1,233 @@
+id: israeli_prime_ministers_en
+title: Prime Ministers of Israel
+description: >
+  A historical journey through the leaders of the State of Israel, from its founding to the
+  present day. Discover the unique lives, decisive moments, and lasting impact of the people
+  who have held the nation's highest office. Perfect for the whole family to learn together
+  about leadership, history, and national challenges.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      A chronological look at every person who has served as Prime Minister of Israel. Read
+      these fascinating personal and historical snapshots together to discover the stories
+      behind each leader, before testing your knowledge in the trivia round.
+    cards:
+      - title: David Ben-Gurion
+        points:
+          - "David Ben-Gurion was Israel's first Prime Minister and the man who declared the state's establishment in 1948."
+          - "He deeply believed in 'making the desert bloom' and moved to live on Kibbutz Sde Boker in the Negev."
+          - "Born in Poland as David Grün, he took the surname Ben-Gurion after a leader of the ancient Jewish revolt against Rome."
+          - "He led the country through the War of Independence and the waves of mass immigration in its earliest years."
+      - title: Moshe Sharett
+        points:
+          - "Moshe Sharett was Israel's second Prime Minister, serving about two years between Ben-Gurion's terms."
+          - "He was the state's first Foreign Minister and is seen as the architect of Israeli diplomacy and its moderate line."
+          - "A dedicated linguist, he spoke six languages fluently and coined many new words in modern Hebrew."
+          - "His signature appears on the Declaration of Independence, and his portrait once featured on the 20-shekel banknote."
+      - title: Levi Eshkol
+        points:
+          - "Levi Eshkol served as the third Prime Minister and led the country to its decisive victory in the Six-Day War."
+          - "He championed the National Water Carrier, which connected the Sea of Galilee to the country's south."
+          - "He was known for his distinctive humor and a measured, compromise-seeking leadership style."
+          - "He was the first Israeli Prime Minister to die in office, of a heart attack in 1969."
+      - title: Golda Meir
+        points:
+          - "Golda Meir was the first and, so far, only woman to serve as Prime Minister of Israel."
+          - "Born in Ukraine, she emigrated as a youth to the United States, so she famously spoke Hebrew with an American accent."
+          - "Her leadership faced its greatest test during the Yom Kippur War of 1973, a crisis that shook the nation."
+          - "The term 'Golda's Kitchen' came from the informal meetings she held with ministers in her own kitchen."
+      - title: Yitzhak Rabin
+        points:
+          - "Yitzhak Rabin was the first Prime Minister born in the Land of Israel (in Jerusalem) and the first to rise through the IDF command."
+          - "He served two separate terms, and during the second he signed the Oslo Accords and the peace treaty with Jordan."
+          - "He won the Nobel Peace Prize in 1994 together with Shimon Peres and Yasser Arafat for the peace process."
+          - "His life ended tragically on 4 November 1995 when he was assassinated after a peace rally in Tel Aviv."
+      - title: Menachem Begin
+        points:
+          - "Menachem Begin was the first Prime Minister from the Likud party, ending 29 straight years of Labor-led rule."
+          - "He signed Israel's first peace treaty with an Arab state — the 1979 peace agreement with Egypt."
+          - "A gifted, charismatic orator, he was hugely popular, especially in Israel's working-class and peripheral communities."
+          - "He shared the Nobel Peace Prize with Egypt's Anwar Sadat, and resigned in 1983 with the famous words 'I cannot go on.'"
+      - title: Yitzhak Shamir
+        points:
+          - "Yitzhak Shamir was the seventh Prime Minister and had been a commander in the Lehi underground and a senior Mossad officer."
+          - "He was known for his stubbornness, an uncompromising 'Greater Israel' ideology, and a modest, spartan lifestyle."
+          - "During the 1991 Gulf War he kept a policy of restraint despite Iraqi Scud missiles, to preserve the international coalition."
+          - "He led the Israeli delegation to the historic Madrid Conference, which opened direct talks with Arab states."
+      - title: Shimon Peres
+        points:
+          - "Shimon Peres served as Prime Minister in two separate periods but never won a direct election for the role."
+          - "He is considered a father of Israel's defense industry and held nearly every senior public office, including President."
+          - "He led the 1985 economic stabilization plan that rescued Israel's economy from runaway hyperinflation."
+          - "A Nobel Peace laureate, he devoted his later years to promoting technological innovation."
+      - title: Benjamin Netanyahu
+        points:
+          - "Benjamin Netanyahu is the longest-serving Prime Minister in Israel's history, surpassing David Ben-Gurion."
+          - "He was the youngest person elected to the office (at 46) and the first chosen by direct election, in 1996."
+          - "Before politics he served as an officer in the elite Sayeret Matkal unit and studied at MIT in the United States."
+          - "During his tenure the historic Abraham Accords were signed, normalizing ties with the UAE, Bahrain, Morocco, and Sudan."
+      - title: Ehud Barak
+        points:
+          - "Ehud Barak entered politics after a decorated military career and is the most decorated soldier in the IDF's history."
+          - "During his short term in 2000, he led the full withdrawal of IDF forces from the security zone in southern Lebanon."
+          - "He took part in the Camp David Summit with Yasser Arafat and US President Bill Clinton, seeking a permanent settlement."
+          - "He holds advanced degrees in physics and systems analysis from Stanford University."
+      - title: Ariel Sharon
+        points:
+          - "Ariel Sharon, nicknamed 'the Bulldozer', was a famous general who led the crossing of the Suez Canal in the Yom Kippur War."
+          - "As Prime Minister he made the dramatic 2005 Disengagement decision, evacuating all Jewish settlements from the Gaza Strip."
+          - "He founded the centrist Kadima party after leaving Likud over internal opposition to his plan."
+          - "His tenure ended suddenly in January 2006 after a severe stroke left him in a coma that lasted eight years."
+      - title: Ehud Olmert
+        points:
+          - "Ehud Olmert became acting Prime Minister after Sharon's stroke and later won an election leading the Kadima party."
+          - "He led the Second Lebanon War in 2006 after two IDF soldiers were abducted on the northern border."
+          - "Under his secret direction, the Israeli Air Force destroyed Syria's nuclear reactor in 2007."
+          - "He was the first Israeli Prime Minister to serve an actual prison sentence, following corruption convictions."
+      - title: Naftali Bennett
+        points:
+          - "Naftali Bennett served as Israel's 13th Prime Minister and led the first 'rotation government', spanning an unusually broad political range."
+          - "Before public life he was a successful high-tech entrepreneur who founded and sold a cybersecurity company for millions of dollars."
+          - "He served as a team commander in Sayeret Matkal and Maglan, and was the first Prime Minister to regularly wear a kippah."
+          - "During his tenure he handled waves of the COVID-19 pandemic, favoring a 'living alongside COVID' approach without nationwide lockdowns."
+      - title: Yair Lapid
+        points:
+          - "Yair Lapid served as the 14th Prime Minister under the rotation agreement, leading the country in a transition period toward elections."
+          - "Before politics he was a journalist, author, and host of Israel's most popular prime-time news program."
+          - "During his short term he oversaw Operation Breaking Dawn in Gaza and signed the historic maritime border agreement with Lebanon."
+          - "He is the founder and chairman of the Yesh Atid party, which he established in 2012 and grew into a major political force."
+    trivia:
+      - type: multiple_choice
+        question: "Which of these prime ministers spoke Hebrew with a notable American accent, having emigrated to the US in her youth?"
+        options: ["Golda Meir", "Tzipi Livni", "Moshe Sharett", "Levi Eshkol"]
+        correct: 0
+      - type: multiple_choice
+        question: "Which prime minister helped solve Israel's water problem by building the National Water Carrier?"
+        options: ["David Ben-Gurion", "Levi Eshkol", "Yitzhak Rabin", "Menachem Begin"]
+        correct: 1
+      - type: single_qa
+        question: "Who was the first Israeli prime minister born in the Land of Israel itself?"
+        answer: "Yitzhak Rabin"
+      - type: single_qa
+        question: "Which prime minister signed Israel's first historic peace treaty with Egypt in 1979?"
+        answer: "Menachem Begin"
+      - type: single_qa
+        question: "Which prime minister kept a policy of restraint during the 1991 Gulf War when missiles fell on Israel?"
+        answer: "Yitzhak Shamir"
+      - type: single_qa
+        question: "Who holds the record as Israel's longest-serving prime minister?"
+        answer: "Benjamin Netanyahu"
+      - type: multiple_choice
+        question: "Which prime minister was a successful high-tech entrepreneur and the first to regularly wear a kippah?"
+        options: ["Ehud Barak", "Naftali Bennett", "Yair Lapid", "Ehud Olmert"]
+        correct: 1
+
+  - id: wars_and_conflict
+    title: Wars and Conflict
+    description: >
+      An in-depth look at how the nation's leaders handled enormous military crises, existential
+      wars, and fateful strategic decisions. Learn how their choices on the battlefield and in the
+      situation room reshaped the Middle East.
+    cards:
+      - title: David Ben-Gurion
+        points:
+          - "He led the young state through the 1948 War of Independence against the invasion of several Arab armies."
+          - "He made the complex, historic decision to disband the pre-state militias and forge a single national army, the IDF."
+          - "He initiated and directed the 1956 Sinai Campaign in secret coordination with Britain and France."
+          - "He shaped Israel's security doctrine, based on deterrence, early warning, and swift, decisive victory on enemy soil."
+      - title: Levi Eshkol
+        points:
+          - "He served as Prime Minister and Defense Minister during the tense 'waiting period' before the 1967 Six-Day War."
+          - "Despite heavy pressure, he delayed war until diplomatic support was secured and the air force was fully ready."
+          - "He approved the crushing pre-emptive strike that destroyed Arab air forces on the ground within hours."
+          - "Under his leadership Israel reunified Jerusalem and gained control of the West Bank, Gaza Strip, and Golan Heights."
+      - title: Golda Meir
+        points:
+          - "She led the country during the Yom Kippur War of October 1973, which began with a surprise attack by Egypt and Syria."
+          - "She made the hard choice not to launch a pre-emptive strike, so as not to lose US diplomatic and military support."
+          - "She guided the nation from the dark early days of the fighting to the turnaround and encirclement of Egypt's Third Army."
+          - "She ordered the establishment of the Agranat Commission to investigate the intelligence failure before the war."
+      - title: Menachem Begin
+        points:
+          - "In 1981 he approved Operation Opera — the air strike that destroyed Iraq's 'Osirak' nuclear reactor."
+          - "He led the country into the First Lebanon War in 1982, aiming to root out terrorist bases across the northern border."
+          - "The war in Lebanon grew complicated and costly, causing deep public turmoil in Israel."
+          - "He formulated the 'Begin Doctrine', that Israel would not let a hostile regional state obtain weapons of mass destruction."
+      - title: Yitzhak Rabin
+        points:
+          - "As Chief of Staff he commanded the IDF to victory in the Six-Day War, giving him unshakable security standing."
+          - "During his first term as Prime Minister he approved Operation Entebbe, the 1976 rescue of hostages held in Uganda."
+          - "As Defense Minister he faced the outbreak of the First Intifada in 1987."
+          - "He believed military strength was the foundation that allowed diplomatic moves from a position of power."
+      - title: Benjamin Netanyahu
+        points:
+          - "He oversaw many large-scale operations in the Gaza Strip, including Operation Pillar of Defense and Operation Protective Edge."
+          - "He waged a years-long covert and diplomatic campaign against Iran's nuclear program and its military entrenchment in Syria."
+          - "He led the country during the 'Swords of Iron' war that began after Hamas's brutal terror attack on 7 October."
+          - "He advanced the 'campaign between the wars' strategy to counter security threats beyond Israel's borders."
+    trivia:
+      - type: multiple_choice
+        question: "Which daring hostage-rescue operation in Uganda was approved by Yitzhak Rabin in his first term?"
+        options: ["Operation Focus", "Operation Entebbe", "The Sinai Campaign", "Operation Peace for Galilee"]
+        correct: 1
+      - type: multiple_choice
+        question: "Who was the prime minister that led Israel through the difficult days of the Yom Kippur War?"
+        options: ["Golda Meir", "Tzipi Livni", "Levi Eshkol", "Yitzhak Shamir"]
+        correct: 0
+      - type: single_qa
+        question: "In which war did Levi Eshkol lead Israel to a crushing victory that ended within days?"
+        answer: "The Six-Day War"
+      - type: single_qa
+        question: "Which enemy state's nuclear reactor was destroyed on Menachem Begin's orders in 1981?"
+        answer: "Iraq"
+
+  - id: lasting_legacy
+    title: Lasting Legacy
+    audience: adult
+    description: >
+      A tour of the institutions, basic laws, international agreements, and national infrastructure
+      that still exist today thanks to these leaders' work. See how their decisions shaped modern
+      Israeli society.
+    cards:
+      - title: David Ben-Gurion
+        points:
+          - "He laid the foundations of the state education system and abolished the earlier party-affiliated school streams."
+          - "Israel's main international airport (Ben Gurion Airport) and Ben-Gurion University of the Negev are named after him."
+          - "He shaped the 'status quo' arrangement on religion and state that still defines those relations in Israel today."
+          - "His push for science and research helped establish institutions that made Israel a research power."
+      - title: Menachem Begin
+        points:
+          - "He signed the Camp David Accords, establishing Israel's first formal peace with the largest Arab state, Egypt."
+          - "He enacted Basic Law: Jerusalem, anchoring the status of the unified city in Israeli law."
+          - "He directed the first secret operation to bring Ethiopian Jews to Israel (Operation Moses) via Sudan."
+          - "He launched the 'Project Renewal' program to reduce social and economic gaps in peripheral towns."
+      - title: Yitzhak Rabin
+        points:
+          - "He led the signing of the historic 1994 peace treaty with the Kingdom of Jordan, opening borders and cooperation."
+          - "He directed unprecedented budgets to transportation infrastructure — highways and interchanges linking the periphery to the center."
+          - "He enacted the National Health Insurance Law, guaranteeing medical services to every citizen regardless of means."
+          - "The anniversary of his assassination was set by law as a national memorial day for democracy and against political violence."
+      - title: Benjamin Netanyahu
+        points:
+          - "He led free-market reforms and tariff cuts that turned Israel's economy from centralized to competitive and global."
+          - "He approved building the border fence with Egypt, which halted illegal infiltration from Africa."
+          - "He pushed the development of natural gas from Mediterranean reserves, giving Israel energy independence."
+          - "He brought about the historic US recognition of Jerusalem as Israel's capital and the move of the US embassy there."
+    trivia:
+      - type: multiple_choice
+        question: "Which important social health law was enacted during Yitzhak Rabin's government?"
+        options: ["The National Health Insurance Law", "Basic Law: The Government", "The Protected Education Law", "The Economic Oversight Law"]
+        correct: 0
+      - type: multiple_choice
+        question: "Which leader is Israel's main international airport named after?"
+        options: ["David Ben-Gurion", "Menachem Begin", "Yitzhak Rabin", "Shimon Peres"]
+        correct: 0
+      - type: single_qa
+        question: "Which massive border fence built during Benjamin Netanyahu's tenure halted illegal infiltration into Israel?"
+        answer: "The fence on the Egyptian border"
+      - type: single_qa
+        question: "Which historic peace agreement was signed by Menachem Begin in 1979?"
+        answer: "The peace treaty with Egypt"

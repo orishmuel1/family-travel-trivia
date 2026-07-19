@@ -6,9 +6,13 @@
 # Use prompt_blueprint.md to generate real topics; this file is the reference.
 # ==============================================================================
 
-id: topic_slug                     # unique lowercase snake_case slug
-title: "Topic Display Name"        # friendly display name
+id: topic_slug                     # unique lowercase snake_case slug (English/Latin only)
+title: "Topic Display Name"        # friendly display name (any language)
 description: "One-sentence overview of the whole topic."
+
+# ---- Optional topic metadata (all have sensible defaults) ----
+lang: en                           # content language: en / he / ... (auto-detected if omitted)
+audience: family                   # "family" (default) or "adult"
 
 categories:
 
@@ -16,6 +20,7 @@ categories:
   - id: important_facts            # the default first category
     title: "Important Facts"
     description: "One-sentence intro to this category (read first)."   # optional
+    audience: family               # optional per-category: "family" (default) or "adult"
     cards:                         # one card per subcategory / item
       - title: "Subcategory A"     # e.g. a state, park, planet, person
         points:                    # 1-6 bullet facts (aim for 2-4)

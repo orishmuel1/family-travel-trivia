@@ -1,6 +1,8 @@
-id: us_states
+id: us_states_en
 title: US States
 description: Facts and trivia about the United States, ordered from the largest state by land area to the smallest.
+lang: en
+audience: family
 categories:
   - id: important_facts
     title: Important Facts

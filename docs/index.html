@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="daylight">
+<html lang="en" dir="ltr" data-theme="daylight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -108,13 +108,14 @@
             max-width: 650px; margin: 0 auto; padding: 0 18px;
             max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
         }
-        .menu-panel.open { max-height: 480px; }
+        .menu-panel.open { max-height: 720px; }
         .menu-inner {
             background: var(--card); border: 1px solid var(--card-border);
             border-radius: 16px; margin-top: 12px; padding: 16px; box-shadow: var(--shadow);
+            max-height: 80vh; overflow-y: auto;
         }
         .menu-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 6px 2px 10px; }
-        .theme-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .theme-chips, .opt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
         .theme-chip {
             border: 2px solid transparent; border-radius: 11px; padding: 8px 12px; cursor: pointer;
             font-size: 0.85rem; font-weight: 600; font-family: inherit; color: #fff;
@@ -122,11 +123,17 @@
         }
         .theme-chip.active { border-color: var(--text); }
         .swatch { width: 14px; height: 14px; border-radius: 4px; background: #fff; opacity: 0.9; }
+        .opt-chip {
+            border: 1px solid var(--surface-border); background: var(--surface); color: var(--text);
+            border-radius: 11px; padding: 8px 14px; cursor: pointer;
+            font-size: 0.88rem; font-weight: 600; font-family: inherit;
+        }
+        .opt-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
         .menu-item {
             display: flex; align-items: center; gap: 10px; width: 100%;
             background: var(--surface); border: 1px solid var(--surface-border); color: var(--text);
             padding: 12px 14px; border-radius: 11px; font-size: 0.95rem; font-family: inherit;
-            cursor: pointer; margin-top: 8px; text-align: left;
+            cursor: pointer; margin-top: 8px; text-align: start;
         }
         .menu-item:hover { background: var(--bg); }
 
@@ -159,6 +166,8 @@
         .badge-done { background: color-mix(in srgb, var(--success) 18%, transparent); color: var(--success); }
         .badge-partial { background: color-mix(in srgb, var(--primary) 18%, transparent); color: var(--primary); }
         .badge-new { background: var(--surface); color: var(--muted); }
+        .badge-family { background: color-mix(in srgb, var(--primary-2) 16%, transparent); color: var(--primary-2); }
+        .badge-adult { background: color-mix(in srgb, var(--error) 16%, transparent); color: var(--error); }
 
         .btn {
             background-color: var(--primary); color: #fff; border: none;
@@ -197,7 +206,7 @@
             color: var(--text); padding: 15px; margin: 9px 0; border-radius: 12px;
             text-align: start; font-size: 0.98rem; font-family: inherit; cursor: pointer; transition: all 0.2s ease;
         }
-        .option-btn:hover:not(:disabled) { border-color: var(--primary); transform: translateX(4px); }
+        .option-btn:hover:not(:disabled) { border-color: var(--primary); }
         .option-btn:disabled { cursor: default; }
         .option-btn.correct { background: color-mix(in srgb, var(--success) 16%, transparent); border-color: var(--success); font-weight: 600; }
         .option-btn.incorrect { background: color-mix(in srgb, var(--error) 16%, transparent); border-color: var(--error); }
@@ -227,15 +236,19 @@
 <body>
     <header>
         <button id="menu-btn" class="menu-btn" aria-label="Menu">&#9776;</button>
-        <div class="header-title">Family <span>Travel Trivia</span></div>
+        <div class="header-title"><span id="app-title">Family Travel Trivia</span></div>
     </header>
 
     <div id="menu-panel" class="menu-panel">
         <div class="menu-inner">
-            <div class="menu-label">Appearance</div>
+            <div class="menu-label" id="lbl-language">Language</div>
+            <div id="lang-chips" class="opt-chips"></div>
+            <div class="menu-label" id="lbl-audience">Audience</div>
+            <div id="aud-chips" class="opt-chips"></div>
+            <div class="menu-label" id="lbl-appearance">Appearance</div>
             <div id="theme-chips" class="theme-chips"></div>
-            <button class="menu-item" id="menu-stats">📊 <span>Statistics</span></button>
-            <button class="menu-item" id="menu-reset">↺ <span>Reset progress</span></button>
+            <button class="menu-item" id="menu-stats">📊 <span id="lbl-stats">Statistics</span></button>
+            <button class="menu-item" id="menu-reset">↺ <span id="lbl-reset">Reset progress</span></button>
         </div>
     </div>
 
@@ -253,6 +266,82 @@
 
         let appData = null;
 
+        // ============================ i18n ============================
+        const LANG_NAMES = { en: 'English', he: 'עברית' };
+        const I18N = {
+            en: {
+                appTitle: 'Family Travel Trivia',
+                language: 'Language', audience: 'Audience', appearance: 'Appearance',
+                statistics: 'Statistics', resetProgress: 'Reset progress',
+                search: '🔍 Search topics…',
+                sortTitle: 'A–Z', sortNewest: 'Newest', sortOldest: 'Oldest',
+                sortProgress: 'Unfinished first',
+                audAll: 'All', audFamily: 'Family', audAdults: 'Adults',
+                badgeDone: '✓ Done', badgeNew: 'New',
+                explore: 'Explore →', allTopics: '← All Topics', categories: 'Categories',
+                quizWhole: '🏆 Quiz the whole topic ({n} questions)', learn: 'Learn →',
+                keyPoints: 'Key Learning Points', startTrivia: '❓ Start Trivia ({n} questions) →',
+                quizLength: 'Quiz length',
+                quizLengthPrompt: 'This round has {n} questions. How many would you like? (Shorter picks are chosen at random.)',
+                allN: 'All {n} questions', nQuestions: '{n} questions', back: '← Back',
+                questionOf: 'Question {i} of {n}', score: 'Score {s}',
+                next: 'Next Question →', seeResults: 'See Results →',
+                reveal: '👁️ Reveal Answer', answer: 'Answer', didYouGet: 'Did you get it right?',
+                gotIt: '✓ Got it', missed: '✗ Missed',
+                tryAgain: '↻ Try Again', backToLearning: '← Back to Learning', backToTopic: '← Back to Topic',
+                perfect: 'Perfect!', greatJob: 'Great job!', niceEffort: 'Nice effort!', keepLearning: 'Keep learning!',
+                yourStats: 'Your Statistics', topicsExplored: 'Topics Explored', questionsAnswered: 'Questions Answered',
+                correctAnswers: 'Correct Answers', accuracy: 'Accuracy', topicProgress: 'Topic Progress',
+                nCategories: '{done}/{total} categories',
+                noMatch: 'No topics match your search.', noTopics: 'No topics in this language yet.',
+                offlineFail: '⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia, then it works offline.',
+                resetConfirm: 'Reset all your local progress and statistics on this device?',
+            },
+            he: {
+                appTitle: 'טריוויה לטיולים',
+                language: 'שפה', audience: 'קהל', appearance: 'מראה',
+                statistics: 'סטטיסטיקה', resetProgress: 'איפוס התקדמות',
+                search: '🔍 חיפוש נושאים…',
+                sortTitle: 'א–ת', sortNewest: 'החדשים ביותר', sortOldest: 'הישנים ביותר',
+                sortProgress: 'שלא הושלמו תחילה',
+                audAll: 'הכול', audFamily: 'משפחתי', audAdults: 'מבוגרים',
+                badgeDone: '✓ הושלם', badgeNew: 'חדש',
+                explore: 'לחקור ←', allTopics: '→ כל הנושאים', categories: 'קטגוריות',
+                quizWhole: '🏆 חידון על כל הנושא ({n} שאלות)', learn: 'ללמוד ←',
+                keyPoints: 'נקודות למידה עיקריות', startTrivia: '❓ התחלת חידון ({n} שאלות) ←',
+                quizLength: 'אורך החידון',
+                quizLengthPrompt: 'בסבב הזה יש {n} שאלות. כמה תרצו? (בחירה קצרה יותר נבחרת באקראי.)',
+                allN: 'כל {n} השאלות', nQuestions: '{n} שאלות', back: '→ חזרה',
+                questionOf: 'שאלה {i} מתוך {n}', score: 'ניקוד {s}',
+                next: 'השאלה הבאה ←', seeResults: 'לתוצאות ←',
+                reveal: '👁️ חשיפת התשובה', answer: 'תשובה', didYouGet: 'עניתם נכון?',
+                gotIt: '✓ צדקתי', missed: '✗ טעיתי',
+                tryAgain: '↻ שוב', backToLearning: '→ חזרה ללמידה', backToTopic: '→ חזרה לנושא',
+                perfect: 'מושלם!', greatJob: 'עבודה מצוינת!', niceEffort: 'כל הכבוד!', keepLearning: 'ממשיכים ללמוד!',
+                yourStats: 'הסטטיסטיקה שלך', topicsExplored: 'נושאים שנחקרו', questionsAnswered: 'שאלות שנענו',
+                correctAnswers: 'תשובות נכונות', accuracy: 'דיוק', topicProgress: 'התקדמות בנושאים',
+                nCategories: '{done}/{total} קטגוריות',
+                noMatch: 'אין נושאים שתואמים את החיפוש.', noTopics: 'אין עדיין נושאים בשפה הזו.',
+                offlineFail: '⚠️ <strong>הטעינה במצב לא מקוון נכשלה.</strong><br>התחברו לאינטרנט פעם אחת כדי להוריד את הטריוויה, ואז זה יעבוד גם ללא חיבור.',
+                resetConfirm: 'לאפס את כל ההתקדמות והסטטיסטיקה המקומית במכשיר הזה?',
+            }
+        };
+        let LANG = localStorage.getItem('trivia_lang') || (navigator.language || 'en').slice(0, 2).toLowerCase();
+        let AUD = localStorage.getItem('trivia_aud') || 'all';
+        let currentView = 'view-home';
+        let currentTopicIdx = null;
+        function t(key, vars) {
+            let s = (I18N[LANG] && I18N[LANG][key]) || I18N.en[key] || key;
+            if (vars) for (const k in vars) s = s.split('{' + k + '}').join(vars[k]);
+            return s;
+        }
+        function isRTLLang(code) { return code === 'he' || code === 'ar'; }
+        function availableLangs() {
+            const set = new Set((appData && appData.topics || []).map(x => x.lang || 'en'));
+            const order = ['en', 'he'];
+            return [...set].sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99));
+        }
+
         // ============================ THEMES ============================
         const THEMES = [
             { id: 'daylight', name: 'Daylight', color: '#6366f1' },
@@ -265,28 +354,77 @@
             document.documentElement.setAttribute('data-theme', id);
             localStorage.setItem('trivia_theme', id);
             const meta = document.querySelector('meta[name="theme-color"]');
-            const t = THEMES.find(x => x.id === id);
-            if (meta && t) meta.setAttribute('content', t.color);
+            const th = THEMES.find(x => x.id === id);
+            if (meta && th) meta.setAttribute('content', th.color);
             renderThemeChips();
         }
         function renderThemeChips() {
             const cur = localStorage.getItem('trivia_theme') || 'daylight';
             const box = document.getElementById('theme-chips');
             box.innerHTML = '';
-            THEMES.forEach(t => {
-                const chip = el('button', { class: 'theme-chip' + (t.id === cur ? ' active' : '') });
-                chip.style.background = t.color;
+            THEMES.forEach(th => {
+                const chip = el('button', { class: 'theme-chip' + (th.id === cur ? ' active' : '') });
+                chip.style.background = th.color;
                 chip.appendChild(el('span', { class: 'swatch' }));
-                chip.appendChild(el('span', { text: t.name }));
-                chip.onclick = () => applyTheme(t.id);
+                chip.appendChild(el('span', { text: th.name }));
+                chip.onclick = () => applyTheme(th.id);
                 box.appendChild(chip);
             });
+        }
+
+        // ============================ LANGUAGE + AUDIENCE ============================
+        function applyLang(code) {
+            LANG = code;
+            localStorage.setItem('trivia_lang', code);
+            document.documentElement.setAttribute('lang', code);
+            document.documentElement.setAttribute('dir', isRTLLang(code) ? 'rtl' : 'ltr');
+            renderMenuLabels();
+            renderLangChips();
+            renderAudChips();
+            renderHome();
+        }
+        function renderMenuLabels() {
+            document.getElementById('app-title').textContent = t('appTitle');
+            document.getElementById('lbl-language').textContent = t('language');
+            document.getElementById('lbl-audience').textContent = t('audience');
+            document.getElementById('lbl-appearance').textContent = t('appearance');
+            document.getElementById('lbl-stats').textContent = t('statistics');
+            document.getElementById('lbl-reset').textContent = t('resetProgress');
+        }
+        function renderLangChips() {
+            const box = document.getElementById('lang-chips');
+            const lbl = document.getElementById('lbl-language');
+            const avail = availableLangs();
+            box.innerHTML = '';
+            if (avail.length <= 1) { box.style.display = 'none'; lbl.style.display = 'none'; return; }
+            box.style.display = ''; lbl.style.display = '';
+            avail.forEach(code => {
+                box.appendChild(el('button', {
+                    class: 'opt-chip' + (code === LANG ? ' active' : ''),
+                    text: LANG_NAMES[code] || code, onclick: () => applyLang(code)
+                }));
+            });
+        }
+        function renderAudChips() {
+            const box = document.getElementById('aud-chips');
+            box.innerHTML = '';
+            [['all', t('audAll')], ['family', t('audFamily')], ['adult', t('audAdults')]].forEach(([v, label]) => {
+                box.appendChild(el('button', {
+                    class: 'opt-chip' + (v === AUD ? ' active' : ''), text: label,
+                    onclick: () => { AUD = v; localStorage.setItem('trivia_aud', v); renderAudChips(); refreshAfterFilter(); }
+                }));
+            });
+        }
+        function refreshAfterFilter() {
+            if (currentView === 'view-stats') renderStats();
+            else if (currentView !== 'view-home' && currentTopicIdx != null && appData && appData.topics[currentTopicIdx]) openTopic(currentTopicIdx);
+            else renderTopicList();
         }
 
         // ============================ STATS / PROGRESS (local only) ============================
         const stats = {
             explored: new Set(JSON.parse(localStorage.getItem('trivia_explored') || '[]')),
-            completedCats: new Set(JSON.parse(localStorage.getItem('trivia_completed') || '[]')), // "tid|cid"
+            completedCats: new Set(JSON.parse(localStorage.getItem('trivia_completed') || '[]')),
             correct: parseInt(localStorage.getItem('trivia_correct') || '0', 10),
             answered: parseInt(localStorage.getItem('trivia_answered') || '0', 10),
             save() {
@@ -298,19 +436,32 @@
             markExplored(id) { this.explored.add(id); this.save(); },
             markCatDone(tid, cid) { this.completedCats.add(tid + '|' + cid); this.save(); },
             recordAnswer(ok) { this.answered++; if (ok) this.correct++; this.save(); },
-            reset() {
-                this.explored.clear(); this.completedCats.clear(); this.correct = 0; this.answered = 0; this.save();
-            }
+            reset() { this.explored.clear(); this.completedCats.clear(); this.correct = 0; this.answered = 0; this.save(); }
         };
-        // Topic progress helpers
+        // Audience visibility (a per-category audience overrides the topic default)
+        function catAud(topic, cat) { return cat.audience || topic.audience || 'family'; }
+        function isCatVisible(topic, cat) { return AUD === 'all' || catAud(topic, cat) === AUD; }
+        function visibleCats(topic) { return (topic.categories || []).filter(c => isCatVisible(topic, c)); }
+        function topicAudiences(topic) {
+            const set = new Set((topic.categories || []).map(c => catAud(topic, c)));
+            return ['family', 'adult'].filter(a => set.has(a));
+        }
+        function audienceBadge(a) {
+            return a === 'adult'
+                ? el('span', { class: 'badge badge-adult', text: t('audAdults') })
+                : el('span', { class: 'badge badge-family', text: t('audFamily') });
+        }
+
+        // Topic progress (over the categories visible under the current audience filter)
         function topicProgress(topic) {
-            const cats = topic.categories || [];
+            const cats = visibleCats(topic);
             const done = cats.filter(c => stats.completedCats.has(topic.id + '|' + c.id)).length;
             return { done, total: cats.length };
         }
 
         // ============================ DOM HELPERS ============================
         function show(viewId) {
+            currentView = viewId;
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.getElementById(viewId).classList.add('active');
             closeMenu();
@@ -326,17 +477,6 @@
             return node;
         }
 
-        // Detect right-to-left scripts (Hebrew, Arabic, ...) so a whole topic flips direction.
-        function isRTL(s) {
-            s = String(s || '');
-            for (let i = 0; i < s.length; i++) {
-                const c = s.charCodeAt(i);
-                if (c >= 0x0590 && c <= 0x07FF) return true;   // Hebrew, Arabic, Syriac, Thaana ...
-            }
-            return false;
-        }
-        function topicDir(topic) { return topic && isRTL((topic.title || '') + ' ' + (topic.description || '')) ? 'rtl' : 'ltr'; }
-
         // ============================ MENU ============================
         function toggleMenu() { document.getElementById('menu-panel').classList.toggle('open'); }
         function closeMenu() { document.getElementById('menu-panel').classList.remove('open'); }
@@ -346,6 +486,7 @@
         let homeQuery = '';
 
         function renderHome() {
+            currentTopicIdx = null;
             const root = document.getElementById('view-home');
             root.innerHTML = '';
             if (!appData || !appData.topics || !appData.topics.length) {
@@ -354,20 +495,20 @@
                 return;
             }
 
-            // Controls
             const controls = el('div', { class: 'home-controls' });
             const search = el('input', { class: 'search-input', attrs: {
-                type: 'text', placeholder: '🔍 Search topics…', list: 'topic-suggestions', value: homeQuery } });
+                type: 'text', placeholder: t('search'), list: 'topic-suggestions', value: homeQuery } });
             search.oninput = () => { homeQuery = search.value; renderTopicList(); };
             const datalist = el('datalist', { attrs: { id: 'topic-suggestions' } });
-            appData.topics.forEach(t => datalist.appendChild(el('option', { attrs: { value: t.title } })));
+            appData.topics.filter(x => (x.lang || 'en') === LANG)
+                .forEach(x => datalist.appendChild(el('option', { attrs: { value: x.title } })));
             const sort = el('select', { class: 'sort-select' });
-            [['title', 'A–Z'], ['newest', 'Newest'], ['oldest', 'Oldest'], ['progress', 'Unfinished first']]
-                .forEach(([v, label]) => {
-                    const o = el('option', { text: label, attrs: { value: v } });
-                    if (v === homeSort) o.selected = true;
-                    sort.appendChild(o);
-                });
+            [['title', t('sortTitle')], ['newest', t('sortNewest')], ['oldest', t('sortOldest')],
+             ['progress', t('sortProgress')]].forEach(([v, label]) => {
+                const o = el('option', { text: label, attrs: { value: v } });
+                if (v === homeSort) o.selected = true;
+                sort.appendChild(o);
+            });
             sort.onchange = () => { homeSort = sort.value; localStorage.setItem('trivia_sort', homeSort); renderTopicList(); };
             controls.appendChild(search); controls.appendChild(datalist); controls.appendChild(sort);
             root.appendChild(controls);
@@ -378,13 +519,13 @@
         }
 
         function sortedFilteredTopics() {
-            let list = appData.topics.map((t, i) => ({ t, i }));
+            let list = appData.topics.map((t2, i) => ({ t: t2, i }))
+                .filter(({ t: x }) => (x.lang || 'en') === LANG);
+            if (AUD !== 'all') list = list.filter(({ t: x }) => visibleCats(x).length > 0);
             const q = homeQuery.trim().toLowerCase();
-            if (q) {
-                list = list.filter(({ t }) =>
-                    t.title.toLowerCase().includes(q) ||
-                    (t.categories || []).some(c => (c.title || '').toLowerCase().includes(q)));
-            }
+            if (q) list = list.filter(({ t: x }) =>
+                x.title.toLowerCase().includes(q) ||
+                (x.categories || []).some(c => (c.title || '').toLowerCase().includes(q)));
             const cmp = {
                 title: (a, b) => a.t.title.localeCompare(b.t.title),
                 newest: (a, b) => String(b.t.created || '').localeCompare(String(a.t.created || '')),
@@ -394,16 +535,16 @@
                     const da = pa.total && pa.done >= pa.total ? 1 : 0;
                     const db = pb.total && pb.done >= pb.total ? 1 : 0;
                     return da - db || a.t.title.localeCompare(b.t.title);
-                }
+                },
             }[homeSort] || (() => 0);
             return list.sort(cmp);
         }
 
         function progressBadge(topic) {
             const { done, total } = topicProgress(topic);
-            if (total && done >= total) return el('span', { class: 'badge badge-done', text: '✓ Done' });
+            if (total && done >= total) return el('span', { class: 'badge badge-done', text: t('badgeDone') });
             if (done > 0) return el('span', { class: 'badge badge-partial', text: `${done}/${total}` });
-            return el('span', { class: 'badge badge-new', text: 'New' });
+            return el('span', { class: 'badge badge-new', text: t('badgeNew') });
         }
 
         function renderTopicList() {
@@ -412,49 +553,54 @@
             container.innerHTML = '';
             const list = sortedFilteredTopics();
             if (!list.length) {
-                container.appendChild(el('div', { class: 'empty', text: 'No topics match your search.' }));
+                container.appendChild(el('div', { class: 'empty', text: homeQuery.trim() ? t('noMatch') : t('noTopics') }));
                 return;
             }
             list.forEach(({ t: topic, i: tIdx }) => {
                 const card = el('div', { class: 'card' });
-                card.setAttribute('dir', topicDir(topic));
                 const headRow = el('div', { class: 'card-head-row' });
                 headRow.appendChild(el('h3', { class: 'card-title', text: topic.title }));
-                headRow.appendChild(progressBadge(topic));
+                const badges = el('div', { attrs: { style: 'display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end' } });
+                topicAudiences(topic).forEach(a => badges.appendChild(audienceBadge(a)));
+                badges.appendChild(progressBadge(topic));
+                headRow.appendChild(badges);
                 card.appendChild(headRow);
                 card.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
-                card.appendChild(el('button', { class: 'btn', text: 'Explore →', onclick: () => openTopic(tIdx) }));
+                card.appendChild(el('button', { class: 'btn', text: t('explore'), onclick: () => openTopic(tIdx) }));
                 container.appendChild(card);
             });
         }
 
         // ============================ TOPIC ============================
         function openTopic(tIdx) {
+            currentTopicIdx = tIdx;
             const topic = appData.topics[tIdx];
             stats.markExplored(topic.id);
             const root = document.getElementById('view-topic');
             root.innerHTML = '';
-            root.setAttribute('dir', topicDir(topic));
-            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← All Topics', onclick: renderHome }));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('allTopics'), onclick: renderHome }));
 
             const head = el('div', { class: 'card' });
             head.appendChild(el('h2', { class: 'card-title', text: topic.title }));
             head.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
-            const totalQ = (topic.categories || []).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
+            const totalQ = visibleCats(topic).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
             if (totalQ > 0)
-                head.appendChild(el('button', { class: 'btn btn-full', text: `🏆 Quiz the whole topic (${totalQ} questions)`, onclick: () => beginQuiz(tIdx, null) }));
+                head.appendChild(el('button', { class: 'btn btn-full', text: t('quizWhole', { n: totalQ }), onclick: () => beginQuiz(tIdx, null) }));
             root.appendChild(head);
 
-            root.appendChild(el('h3', { class: 'section-title', html: '📚 Categories' }));
+            root.appendChild(el('h3', { class: 'section-title', html: '📚 ' + t('categories') }));
             (topic.categories || []).forEach((cat, cIdx) => {
+                if (!isCatVisible(topic, cat)) return;
                 const card = el('div', { class: 'card' });
                 const headRow = el('div', { class: 'card-head-row' });
                 headRow.appendChild(el('h3', { class: 'card-title', text: cat.title }));
-                if (stats.completedCats.has(topic.id + '|' + cat.id))
-                    headRow.appendChild(el('span', { class: 'badge badge-done', text: '✓' }));
+                const cbadges = el('div', { attrs: { style: 'display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end' } });
+                if (catAud(topic, cat) === 'adult') cbadges.appendChild(el('span', { class: 'badge badge-adult', text: t('audAdults') }));
+                if (stats.completedCats.has(topic.id + '|' + cat.id)) cbadges.appendChild(el('span', { class: 'badge badge-done', text: '✓' }));
+                headRow.appendChild(cbadges);
                 card.appendChild(headRow);
                 if (cat.description) card.appendChild(el('p', { class: 'card-desc', text: cat.description }));
-                card.appendChild(el('button', { class: 'btn', text: 'Learn →', onclick: () => openLearning(tIdx, cIdx) }));
+                card.appendChild(el('button', { class: 'btn', text: t('learn'), onclick: () => openLearning(tIdx, cIdx) }));
                 root.appendChild(card);
             });
             show('view-topic');
@@ -466,16 +612,14 @@
             const cat = topic.categories[cIdx];
             const root = document.getElementById('view-learning');
             root.innerHTML = '';
-            root.setAttribute('dir', topicDir(topic));
-            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: `← ${topic.title}`, onclick: () => openTopic(tIdx) }));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← ' + topic.title, onclick: () => openTopic(tIdx) }));
 
             const hasCards = Array.isArray(cat.cards) && cat.cards.length > 0;
-
             const head = el('div', { class: 'card' });
             head.appendChild(el('h2', { class: 'card-title', text: cat.title }));
             if (cat.description) head.appendChild(el('p', { class: 'narrative', text: cat.description }));
             if (!hasCards) {
-                head.appendChild(el('h3', { class: 'points-title', html: '💡 Key Learning Points' }));
+                head.appendChild(el('h3', { class: 'points-title', html: '💡 ' + t('keyPoints') }));
                 (cat.points || []).forEach(pt => head.appendChild(el('div', { class: 'point-item', text: pt })));
             }
             root.appendChild(head);
@@ -490,7 +634,7 @@
             }
 
             if (cat.trivia && cat.trivia.length)
-                root.appendChild(el('button', { class: 'btn btn-full', text: `❓ Start Trivia (${cat.trivia.length} questions) →`, onclick: () => beginQuiz(tIdx, cIdx) }));
+                root.appendChild(el('button', { class: 'btn btn-full', text: t('startTrivia', { n: cat.trivia.length }), onclick: () => beginQuiz(tIdx, cIdx) }));
             show('view-learning');
         }
 
@@ -498,17 +642,14 @@
         let quiz = null;
         function collectQuestions(tIdx, cIdx) {
             const topic = appData.topics[tIdx];
-            const cats = (cIdx == null) ? topic.categories : [topic.categories[cIdx]];
+            const cats = (cIdx == null) ? visibleCats(topic) : [topic.categories[cIdx]];
             const list = [];
-            cats.forEach(cat => (cat.trivia || []).forEach(t => list.push({ q: t, catTitle: cat.title })));
+            cats.forEach(cat => (cat.trivia || []).forEach(q => list.push({ q, catTitle: cat.title })));
             return list;
         }
         function shuffle(arr) {
             const a = arr.slice();
-            for (let i = a.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [a[i], a[j]] = [a[j], a[i]];
-            }
+            for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
             return a;
         }
         function beginQuiz(tIdx, cIdx) {
@@ -519,16 +660,15 @@
         function renderQuizSetup(tIdx, cIdx, total) {
             const root = document.getElementById('view-quiz');
             root.innerHTML = '';
-            root.setAttribute('dir', topicDir(appData.topics[tIdx]));
             const backTo = (cIdx == null) ? () => openTopic(tIdx) : () => openLearning(tIdx, cIdx);
-            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← Back', onclick: backTo }));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('back'), onclick: backTo }));
             const card = el('div', { class: 'card' });
-            card.appendChild(el('h2', { class: 'card-title', text: 'Quiz length' }));
-            card.appendChild(el('p', { class: 'card-desc', text: `This round has ${total} questions. How many would you like? (Shorter picks are chosen at random.)` }));
+            card.appendChild(el('h2', { class: 'card-title', text: t('quizLength') }));
+            card.appendChild(el('p', { class: 'card-desc', text: t('quizLengthPrompt', { n: total }) }));
             const opts = [5, 10, 20].filter(n => n < total);
             opts.push(total);
             opts.forEach(n => {
-                const label = (n === total) ? `All ${total} questions` : `${n} questions`;
+                const label = (n === total) ? t('allN', { n: total }) : t('nQuestions', { n });
                 const b = el('button', { class: 'btn btn-full', text: label, onclick: () => startQuiz(tIdx, cIdx, n) });
                 b.style.marginBottom = '10px';
                 card.appendChild(b);
@@ -546,16 +686,15 @@
         function renderQuestion() {
             const root = document.getElementById('view-quiz');
             root.innerHTML = '';
-            root.setAttribute('dir', topicDir(appData.topics[quiz.tIdx]));
             const total = quiz.questions.length;
             const item = quiz.questions[quiz.i];
-            const t = item.q;
+            const q = item.q;
             const topic = appData.topics[quiz.tIdx];
             const scopeLabel = quiz.scope === 'topic' ? topic.title : (item.catTitle || topic.title);
 
             const bar = el('div', { class: 'quiz-topbar' });
             bar.appendChild(el('span', { class: 'quiz-scope', text: scopeLabel }));
-            bar.appendChild(el('span', { text: `Question ${quiz.i + 1} of ${total}  •  Score ${quiz.score}` }));
+            bar.appendChild(el('span', { text: t('questionOf', { i: quiz.i + 1, n: total }) + '  •  ' + t('score', { s: quiz.score }) }));
             root.appendChild(bar);
 
             const track = el('div', { class: 'progress-track' });
@@ -563,29 +702,29 @@
             root.appendChild(track);
 
             const card = el('div', { class: 'card' });
-            card.appendChild(el('p', { class: 'quiz-question', text: t.question }));
-            if (t.type === 'single_qa') renderQA(card, t); else renderMC(card, t);
+            card.appendChild(el('p', { class: 'quiz-question', text: q.question }));
+            if (q.type === 'single_qa') renderQA(card, q); else renderMC(card, q);
             root.appendChild(card);
         }
         function nextButton(card) {
             const last = quiz.i >= quiz.questions.length - 1;
-            const btn = el('button', { class: 'btn btn-full', text: last ? 'See Results →' : 'Next Question →',
+            const btn = el('button', { class: 'btn btn-full', text: last ? t('seeResults') : t('next'),
                 onclick: () => { if (last) renderSummary(); else { quiz.i++; renderQuestion(); } } });
             btn.style.marginTop = '18px';
             card.appendChild(btn);
         }
-        function renderMC(card, t) {
+        function renderMC(card, q) {
             const wrap = el('div');
             let answered = false;
-            (t.options || []).forEach((opt, oIdx) => {
+            (q.options || []).forEach((opt, oIdx) => {
                 const b = el('button', { class: 'option-btn', text: opt });
                 b.onclick = () => {
                     if (answered) return;
                     answered = true;
-                    const ok = (oIdx === t.correct);
+                    const ok = (oIdx === q.correct);
                     [...wrap.children].forEach((child, idx) => {
                         child.disabled = true;
-                        if (idx === t.correct) child.classList.add('correct');
+                        if (idx === q.correct) child.classList.add('correct');
                         else if (idx === oIdx) child.classList.add('incorrect');
                     });
                     if (ok) quiz.score++;
@@ -596,43 +735,41 @@
             });
             card.appendChild(wrap);
         }
-        function renderQA(card, t) {
-            const revealBtn = el('button', { class: 'btn btn-full', text: '👁️ Reveal Answer' });
+        function renderQA(card, q) {
+            const revealBtn = el('button', { class: 'btn btn-full', text: t('reveal') });
             revealBtn.onclick = () => {
                 revealBtn.remove();
                 const box = el('div', { class: 'reveal-box' });
-                box.appendChild(el('span', { class: 'label', text: 'Answer' }));
-                box.appendChild(el('span', { class: 'answer', text: t.answer }));
+                box.appendChild(el('span', { class: 'label', text: t('answer') }));
+                box.appendChild(el('span', { class: 'answer', text: q.answer }));
                 card.appendChild(box);
-                card.appendChild(el('p', { class: 'self-grade-q', text: 'Did you get it right?' }));
+                card.appendChild(el('p', { class: 'self-grade-q', text: t('didYouGet') }));
                 const row = el('div', { class: 'btn-row' });
                 const grade = (ok) => {
                     if (ok) quiz.score++;
                     stats.recordAnswer(ok);
                     row.remove();
-                    const q = card.querySelector('.self-grade-q'); if (q) q.remove();
+                    const gq = card.querySelector('.self-grade-q'); if (gq) gq.remove();
                     nextButton(card);
                 };
-                row.appendChild(el('button', { class: 'btn btn-success', text: '✓ Got it', onclick: () => grade(true) }));
-                row.appendChild(el('button', { class: 'btn btn-danger', text: '✗ Missed', onclick: () => grade(false) }));
+                row.appendChild(el('button', { class: 'btn btn-success', text: t('gotIt'), onclick: () => grade(true) }));
+                row.appendChild(el('button', { class: 'btn btn-danger', text: t('missed'), onclick: () => grade(false) }));
                 card.appendChild(row);
             };
             card.appendChild(revealBtn);
         }
         function renderSummary() {
-            // Mark completion
             const topic = appData.topics[quiz.tIdx];
             if (quiz.scope === 'category') stats.markCatDone(topic.id, topic.categories[quiz.cIdx].id);
             else (topic.categories || []).forEach(c => stats.markCatDone(topic.id, c.id));
 
             const root = document.getElementById('view-summary');
             root.innerHTML = '';
-            root.setAttribute('dir', topicDir(topic));
             const total = quiz.questions.length, score = quiz.score, pct = total ? score / total : 0;
-            let emoji = '🌟', msg = 'Perfect!';
-            if (pct < 1) { emoji = '🎉'; msg = 'Great job!'; }
-            if (pct < 0.7) { emoji = '👍'; msg = 'Nice effort!'; }
-            if (pct < 0.4) { emoji = '📚'; msg = 'Keep learning!'; }
+            let emoji = '🌟', msg = t('perfect');
+            if (pct < 1) { emoji = '🎉'; msg = t('greatJob'); }
+            if (pct < 0.7) { emoji = '👍'; msg = t('niceEffort'); }
+            if (pct < 0.4) { emoji = '📚'; msg = t('keepLearning'); }
 
             const card = el('div', { class: 'card' });
             const s = el('div', { class: 'summary-score' });
@@ -642,11 +779,11 @@
             root.appendChild(card);
 
             const row = el('div', { class: 'btn-row' });
-            row.appendChild(el('button', { class: 'btn btn-ghost', text: '↻ Try Again', onclick: () => startQuiz(quiz.tIdx, quiz.cIdx, quiz.limit) }));
+            row.appendChild(el('button', { class: 'btn btn-ghost', text: t('tryAgain'), onclick: () => startQuiz(quiz.tIdx, quiz.cIdx, quiz.limit) }));
             if (quiz.scope === 'category')
-                row.appendChild(el('button', { class: 'btn', text: '← Back to Learning', onclick: () => openLearning(quiz.tIdx, quiz.cIdx) }));
+                row.appendChild(el('button', { class: 'btn', text: t('backToLearning'), onclick: () => openLearning(quiz.tIdx, quiz.cIdx) }));
             else
-                row.appendChild(el('button', { class: 'btn', text: '← Back to Topic', onclick: () => openTopic(quiz.tIdx) }));
+                row.appendChild(el('button', { class: 'btn', text: t('backToTopic'), onclick: () => openTopic(quiz.tIdx) }));
             root.appendChild(row);
             show('view-summary');
         }
@@ -655,30 +792,31 @@
         function renderStats() {
             const root = document.getElementById('view-stats');
             root.innerHTML = '';
-            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← Back', onclick: renderHome }));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('back'), onclick: renderHome }));
 
             const acc = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
             const grid = el('div', { class: 'stat-grid' });
-            [['Topics Explored', stats.explored.size], ['Questions Answered', stats.answered],
-             ['Correct Answers', stats.correct], ['Accuracy', acc + '%']].forEach(([l, n]) => {
+            [[t('topicsExplored'), stats.explored.size], [t('questionsAnswered'), stats.answered],
+             [t('correctAnswers'), stats.correct], [t('accuracy'), acc + '%']].forEach(([l, n]) => {
                 const box = el('div', { class: 'stat-box' });
                 box.appendChild(el('div', { class: 'n', text: String(n) }));
                 box.appendChild(el('div', { class: 'l', text: l }));
                 grid.appendChild(box);
             });
             const card = el('div', { class: 'card' });
-            card.appendChild(el('h2', { class: 'card-title', text: 'Your Statistics' }));
+            card.appendChild(el('h2', { class: 'card-title', text: t('yourStats') }));
             card.appendChild(grid);
             root.appendChild(card);
 
-            if (appData && appData.topics) {
+            const topics = (appData && appData.topics || []).filter(x => (x.lang || 'en') === LANG);
+            if (topics.length) {
                 const prog = el('div', { class: 'card' });
-                prog.appendChild(el('h3', { class: 'section-title', html: '📈 Topic Progress' }));
-                appData.topics.forEach(topic => {
+                prog.appendChild(el('h3', { class: 'section-title', html: '📈 ' + t('topicProgress') }));
+                topics.forEach(topic => {
                     const { done, total } = topicProgress(topic);
                     const row = el('div', { class: 'prog-row' });
                     row.appendChild(el('span', { text: topic.title }));
-                    row.appendChild(el('span', { text: total ? `${done}/${total} categories` : '—', attrs: { style: 'color:var(--muted)' } }));
+                    row.appendChild(el('span', { text: total ? t('nCategories', { done, total }) : '—', attrs: { style: 'color:var(--muted)' } }));
                     prog.appendChild(row);
                 });
                 root.appendChild(prog);
@@ -696,9 +834,16 @@
                 r.onerror = (e) => reject(e.target.error);
             });
         }
-        function idbGet(db) { return new Promise((res, rej) => { const t = db.transaction(STORE, 'readonly').objectStore(STORE).get(KEY); t.onsuccess = (e) => res(e.target.result); t.onerror = (e) => rej(e.target.error); }); }
-        function idbPut(db, d) { return new Promise((res, rej) => { const t = db.transaction(STORE, 'readwrite').objectStore(STORE).put(d, KEY); t.onsuccess = () => res(); t.onerror = (e) => rej(e.target.error); }); }
+        function idbGet(db) { return new Promise((res, rej) => { const tx = db.transaction(STORE, 'readonly').objectStore(STORE).get(KEY); tx.onsuccess = (e) => res(e.target.result); tx.onerror = (e) => rej(e.target.error); }); }
+        function idbPut(db, d) { return new Promise((res, rej) => { const tx = db.transaction(STORE, 'readwrite').objectStore(STORE).put(d, KEY); tx.onsuccess = () => res(); tx.onerror = (e) => rej(e.target.error); }); }
 
+        function initLang() {
+            const avail = availableLangs();
+            if (!avail.includes(LANG)) {
+                const nav = (navigator.language || '').slice(0, 2).toLowerCase();
+                LANG = avail.includes(nav) ? nav : (avail.includes('en') ? 'en' : (avail[0] || 'en'));
+            }
+        }
         async function loadDatabase() {
             let db = null;
             try { db = await openDB(); } catch (e) { console.warn('IndexedDB unavailable:', e); }
@@ -711,17 +856,19 @@
                 console.warn('Network load failed, trying offline cache...', netErr);
                 if (db) { try { appData = await idbGet(db); } catch (e) { console.error('IndexedDB read failed', e); } }
             }
-            if (appData && appData.topics) renderHome();
-            else document.getElementById('view-home').innerHTML =
-                '<div class="card error-card">⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia, then it works offline.</div>';
+            if (appData && appData.topics) { initLang(); applyLang(LANG); }
+            else document.getElementById('view-home').innerHTML = '<div class="card error-card">' + t('offlineFail') + '</div>';
         }
 
         // ============================ INIT ============================
         applyTheme(localStorage.getItem('trivia_theme') || 'daylight');
+        document.documentElement.setAttribute('lang', LANG);
+        document.documentElement.setAttribute('dir', isRTLLang(LANG) ? 'rtl' : 'ltr');
+        renderMenuLabels();
         document.getElementById('menu-btn').onclick = toggleMenu;
         document.getElementById('menu-stats').onclick = renderStats;
         document.getElementById('menu-reset').onclick = () => {
-            if (confirm('Reset all your local progress and statistics on this device?')) { stats.reset(); closeMenu(); renderHome(); }
+            if (confirm(t('resetConfirm'))) { stats.reset(); closeMenu(); renderHome(); }
         };
 
         window.addEventListener('DOMContentLoaded', loadDatabase);
