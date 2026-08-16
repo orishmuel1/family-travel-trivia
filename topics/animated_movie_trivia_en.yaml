@@ -1,0 +1,680 @@
+id: animated_movie_trivia_en
+title: Animated Movie Trivia
+description: >
+  Get ready for a magical tour of animated cinema! From classic Disney fairy tales and 
+  groundbreaking Pixar adventures to hilarious DreamWorks comedies and unforgettable songs, 
+  test your family's knowledge of the greatest animated films of all time.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      Fascinating behind-the-scenes milestones and revolutionary breakthroughs in animation history. 
+      Read these surprising facts aloud before jumping into the trivia round!
+    cards:
+      - title: Snow White & The Birth of Feature Animation
+        points:
+          - "Walt Disney's 'Snow White and the Seven Dwarfs' (1937) was the world's first full-length cel-animated feature film."
+          - "Hollywood skeptics initially labeled the expensive multi-year project 'Disney's Folly', predicting it would fail."
+          - "It became an enormous global box-office sensation, earning Walt Disney an honorary Oscar with one full-sized and seven miniature statuettes."
+          - "Animators drew and painted more than 200,000 individual transparent cels completely by hand."
+      - title: Toy Story & The CGI Revolution
+        points:
+          - "Released in 1995 by Pixar and Disney, 'Toy Story' was the very first entirely computer-animated feature film in history."
+          - "It took 110 Silicon Graphics computer workstations running 24 hours a day to render all 114,000 frames of the film."
+          - "Director John Lasseter won an Academy Special Achievement Award for pioneering computer-generated filmmaking."
+          - "The movie's success transformed animation, making 3D digital animation the dominant style for family movies worldwide."
+      - title: The A113 Easter Egg
+        points:
+          - "'A113' is a famous hidden Easter egg that appears in almost every Pixar film, as well as many Disney and Simpsons episodes."
+          - "It is the classroom number at the California Institute of the Arts (CalArts) where famous animators studied graphic design."
+          - "Alumni who studied in room A113 include John Lasseter, Brad Bird, Pete Docter, and Tim Burton."
+          - "It appears as Andy's mom's license plate in Toy Story, on a scuba diver's camera in Finding Nemo, and on a train in Cars."
+      - title: Voice Acting Legends
+        points:
+          - "Robin Williams revolutionized animated voice acting in 1992 by improvising over 16 hours of dialogue as the Genie in Aladdin."
+          - "Animators customized the Genie's visual transformations to match Robin Williams' lightning-fast comedic impressions."
+          - "His performance convinced major Hollywood stars that voicing animated characters was prestigious and artistic."
+          - "Today, top film actors eagerly lend their voices to bring animated heroes and villains to life."
+      - title: Studio Ghibli & Hand-Drawn Artistry
+        points:
+          - "Co-founded in Japan by master director Hayao Miyazaki in 1985, Studio Ghibli is world-renowned for breathtaking hand-drawn animation."
+          - "'Spirited Away' (2001) won the Academy Award for Best Animated Feature, becoming the only hand-drawn, non-English film to do so."
+          - "Ghibli films are famous for painterly watercolor backgrounds, environmental themes, and magical creature companions."
+          - "Director Miyazaki famously insists on hand-drawing key frames himself to maintain organic warmth and movement."
+      - title: The Magic of Stop-Motion Animation
+        points:
+          - "Stop-motion involves physically manipulating real puppets frame-by-frame, capturing 24 individual photographs for every second of film."
+          - "Studios like Aardman (Wallace & Gromit) and Laika (Coraline) spend weeks of painstaking labor to film just a few seconds of footage."
+          - "In 'The Nightmare Before Christmas' (1993), Jack Skellington had over 400 distinct hand-sculpted interchangeable heads for expressions."
+          - "Stop-motion combines the tangible texture of real physical materials with the limitless wonder of fantasy storytelling."
+      - title: Animated Box Office Titans
+        points:
+          - "'Inside Out 2' (2024) and 'The Lion King' (2019) shattered records to become the highest-grossing animated films in global box office history."
+          - "Animated franchises like Despicable Me/Minions, Shrek, and Toy Story have each grossed billions of dollars across multiple sequels."
+          - "Animated movies consistently rank among the most re-watched movies across digital streaming platforms."
+          - "Their universal appeal across both young children and nostalgic adults drives multi-generational box office success."
+      - title: Secret Cameos & The Pizza Planet Truck
+        points:
+          - "The yellow-and-white 1978 Gyozaer Pizza Planet delivery truck originally appeared in the first 'Toy Story' in 1995."
+          - "Since then, Pixar animators have sneaked the truck into almost every single Pixar film, from A Bug's Life to Coco."
+          - "Even in ancient Scotland in 'Brave' (2012), the witch carves a wooden figurine of the Pizza Planet truck!"
+          - "Finding hidden cameos and inside jokes has become a beloved tradition for eagle-eyed moviegoers of all ages."
+    trivia:
+      - type: multiple_choice
+        question: "What was the first full-length cel-animated feature film in movie history, released in 1937?"
+        options: ["Pinocchio", "Snow White and the Seven Dwarfs", "Bambi", "Fantasia"]
+        correct: 1
+      - type: single_qa
+        question: "What 1995 Pixar masterpiece was the first entirely computer-animated feature film in history?"
+        answer: "Toy Story"
+      - type: multiple_choice
+        question: "What famous classroom number at CalArts is hidden as an Easter egg across dozens of Pixar and Disney films?"
+        options: ["B12", "Room 404", "A113", "C77"]
+        correct: 2
+      - type: single_qa
+        question: "Which comedic genius revolutionized voice acting by improvising 16 hours of dialogue as the Genie in Aladdin?"
+        answer: "Robin Williams"
+      - type: multiple_choice
+        question: "Which Studio Ghibli film won the Academy Award for Best Animated Feature in 2003?"
+        options: ["My Neighbor Totoro", "Spirited Away", "Howl's Moving Castle", "Ponyo"]
+        correct: 1
+      - type: single_qa
+        question: "What yellow-and-white delivery vehicle is hidden as a secret cameo in almost every single Pixar movie?"
+        answer: "The Pizza Planet Truck"
+      - type: multiple_choice
+        question: "How many frames of individual photographs must stop-motion animators capture for a single second of film?"
+        options: ["5 frames", "12 frames", "24 frames", "60 frames"]
+        correct: 2
+      - type: single_qa
+        question: "How many special miniature Oscar statuettes did Walt Disney receive alongside his honorary Oscar for Snow White?"
+        answer: "Seven (7)"
+      - type: multiple_choice
+        question: "In what historical setting did the Pizza Planet truck appear as a carved wooden figurine in Pixar's 'Brave'?"
+        options: ["A pirate ship", "A witch's woodcarving cottage", "A castle dungeon", "A Viking longboat"]
+        correct: 1
+      - type: single_qa
+        question: "What British animation studio is world-famous for claymation classics like 'Wallace & Gromit' and 'Chicken Run'?"
+        answer: "Aardman Animations"
+      - type: multiple_choice
+        question: "What mocking nickname did Hollywood skeptics give Walt Disney's Snow White project during production?"
+        options: ["Disney's Folly", "The Money Pit", "The Cartoon Trap", "The Drawing Mistake"]
+        correct: 0
+      - type: single_qa
+        question: "Who was the visionary director and animator who co-founded Japan's celebrated Studio Ghibli?"
+        answer: "Hayao Miyazaki"
+      - type: multiple_choice
+        question: "How many distinct interchangeable sculpted heads were crafted for Jack Skellington in The Nightmare Before Christmas?"
+        options: ["Over 400", "50", "12", "1,000"]
+        correct: 0
+      - type: single_qa
+        question: "What 2024 Pixar sequel became one of the highest-grossing animated films of all time by exploring teenage emotions?"
+        answer: "Inside Out 2"
+      - type: multiple_choice
+        question: "On what vehicle does the code 'A113' appear in the original Toy Story?"
+        options: ["Buzz Lightyear's spaceship box", "Andy's mom's minivan license plate", "RC the remote control car", "The garbage truck"]
+        correct: 1
+      - type: single_qa
+        question: "What material did traditional 2D hand-drawn animators paint on before digital software was invented?"
+        answer: "Celluloid sheets (Cels)"
+
+  - id: disney_classics
+    title: "Disney Classics: Timeless Favorites"
+    description: >
+      From the golden savanna of Africa to enchanted ice palaces and Pacific island voyages! 
+      Relive the unforgettable heroes, sidekicks, and villains of iconic Disney storytelling.
+    cards:
+      - title: The Lion King (1994)
+        points:
+          - "Set in the Pride Lands of Africa, 'The Lion King' tells the epic story of young lion prince Simba regaining his throne."
+          - "The movie's dramatic royal rivalry between Mufasa, Scar, and Simba was heavily inspired by Shakespeare's 'Hamlet'."
+          - "Simba's beloved companions Timon the meerkat and Pumbaa the warthog popularized the Swahili phrase 'Hakuna Matata' ('No worries')."
+          - "It became the highest-grossing hand-drawn animated film in history and inspired an award-winning Broadway musical."
+      - title: Beauty and the Beast (1991)
+        points:
+          - "This French fairy tale adaptation follows book-loving Belle, who looks past appearances to fall in love with an enchanted Beast."
+          - "The enchanted castle staff includes memorable cursed household items: Lumière the candelabra, Cogsworth the clock, and Mrs. Potts the teapot."
+          - "It made history as the very first animated feature film ever nominated for the Academy Award for Best Picture."
+          - "The grand ballroom dance scene pioneered combining hand-drawn character animation with computer-generated 3D camera sweeps."
+      - title: Aladdin (1992)
+        points:
+          - "Set in the mystical city of Agrabah, 'Aladdin' follows a clever street urchin who finds a magic lamp and a wisecracking Genie."
+          - "Aladdin wishes to become Prince Ali to court the independent Princess Jasmine, with help from his mischievous pet monkey, Abu."
+          - "The evil Royal Vizier Jafar and his sarcastic parrot Iago attempt to steal the lamp to conquer Agrabah with dark magic."
+          - "The song 'A Whole New World' won the Grammy Award for Song of the Year, the only Disney song to ever win that honor."
+      - title: The Little Mermaid (1989)
+        points:
+          - "'The Little Mermaid' kicked off the legendary 'Disney Renaissance', a decade of critically acclaimed musical hits."
+          - "Ariel, a spirited mermaid princess fascinated with human artifacts, dreams of walking on land to be with Prince Eric."
+          - "She makes a dangerous bargain with the sea witch Ursula, trading her beautiful voice for human legs for three days."
+          - "Her lively musical sidekicks include Sebastian the calypso crab, Flounder the tropical fish, and Scuttle the seagull."
+      - title: Frozen (2013)
+        points:
+          - "Inspired by Hans Christian Andersen's 'The Snow Queen', 'Frozen' tells the story of royal sisters Elsa and Anna of Arendelle."
+          - "Elsa flees into the snowy mountains after her uncontrollable ice magic accidentally plunges the kingdom into eternal winter."
+          - "The movie overturned traditional fairy tale tropes by revealing that the 'act of true love' was the bond between two sisters."
+          - "The lovable, summer-loving snowman Olaf, voiced by Josh Gad, provided instant comedic charm."
+      - title: Moana (2016)
+        points:
+          - "Set in ancient Polynesia, 'Moana' follows the adventurous daughter of village Chief Tui chosen by the ocean to restore nature's balance."
+          - "She sails across the open Pacific Ocean to find the shapeshifting demigod Maui and return the glowing heart of Te Fiti."
+          - "Lin-Manuel Miranda co-wrote the Oscar-nominated musical soundtrack, including the inspiring anthem 'How Far I'll Go'."
+          - "Animators created breakthrough software to realistically render ocean water as a living, expressive supporting character."
+      - title: Zootopia (2016)
+        points:
+          - "'Zootopia' takes place in a sprawling mammal metropolis where predators and prey live together in diverse climate-controlled districts."
+          - "Judy Hopps makes history as the city's first rabbit police officer, partnering with cynical con-artist fox Nick Wilde."
+          - "The duo uncovers a conspiracy involving mysterious 'night howler' flowers that turn peaceful predators wild."
+          - "The movie's funniest scene features Flash and his fellow sloths running the DMV (Department of Mammal Vehicles) in ultra-slow motion."
+      - title: Encanto (2021)
+        points:
+          - "Set in the lush mountains of Colombia, 'Encanto' centers on the magical Madrigal family living in an enchanted sentient house (Casita)."
+          - "Every child in the family is blessed with a unique superpower—except Mirabel, who must save their fading magic."
+          - "The viral hit song 'We Don't Talk About Bruno', written by Lin-Manuel Miranda, spent five weeks at #1 on the Billboard Hot 100."
+          - "The film celebrated Colombian architecture, vibrant traditional attire, biodiversity, and complex family dynamics."
+    trivia:
+      - type: multiple_choice
+        question: "Which Disney animated masterpiece was the first animated film ever nominated for Best Picture at the Oscars?"
+        options: ["The Lion King", "Beauty and the Beast", "Aladdin", "Snow White"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of Simba's evil uncle who usurps the throne in The Lion King?"
+        answer: "Scar"
+      - type: multiple_choice
+        question: "What does the Swahili phrase 'Hakuna Matata' famously translate to in English?"
+        options: ["Be brave forever", "No worries", "King of the jungle", "Peace and harmony"]
+        correct: 1
+      - type: single_qa
+        question: "What was the name of Aladdin's mischievous pet monkey companion?"
+        answer: "Abu"
+      - type: multiple_choice
+        question: "What household object was the charming, French-accented servant Lumière turned into in Beauty and the Beast?"
+        options: ["A pendulum clock", "A teapot", "A candelabra (candle holder)", "A feather duster"]
+        correct: 2
+      - type: single_qa
+        question: "What sea witch stripped Ariel of her voice in exchange for human legs in The Little Mermaid?"
+        answer: "Ursula"
+      - type: multiple_choice
+        question: "What is the name of the magical kingdom ruled by sisters Elsa and Anna in Frozen?"
+        options: ["Arendelle", "Corona", "Atlantica", "DunBroch"]
+        correct: 0
+      - type: single_qa
+        question: "What shapeshifting demigod with a magical fishhook accompanies Moana on her Pacific voyage?"
+        answer: "Maui"
+      - type: multiple_choice
+        question: "In Zootopia, what kind of animal operates the DMV (Department of Mammal Vehicles) hilariously slowly?"
+        options: ["Turtles", "Sloths", "Snails", "Elephants"]
+        correct: 1
+      - type: single_qa
+        question: "Which Madrigal family member 'we don't talk about' has the power to see future visions in Encanto?"
+        answer: "Bruno"
+      - type: multiple_choice
+        question: "Which Disney song is the only one in history to win the Grammy Award for Song of the Year?"
+        options: ["Circle of Life", "A Whole New World", "Let It Go", "Under the Sea"]
+        correct: 1
+      - type: single_qa
+        question: "What Shakespeare tragedy was the primary storytelling inspiration for The Lion King?"
+        answer: "Hamlet"
+      - type: multiple_choice
+        question: "What species of crab is King Triton's court composer and Ariel's guardian, Sebastian?"
+        options: ["Hermit crab", "Calypso crab", "Blue crab", "King crab"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the magical, sentient house that the Madrigal family lives in in Encanto?"
+        answer: "Casita"
+      - type: multiple_choice
+        question: "What kind of animal is Judy Hopps, the optimistic rookie police officer in Zootopia?"
+        options: ["A fox", "A rabbit (bunny)", "A deer", "A sheep"]
+        correct: 1
+      - type: single_qa
+        question: "What funny summer-loving snowman was magically brought to life by Elsa's ice powers?"
+        answer: "Olaf"
+
+  - id: pixar_masterpieces
+    title: Pixar Masterpieces
+    description: >
+      Explore the emotional, imaginative, and revolutionary worlds of Pixar Animation Studios! 
+      From talking toys and deep-sea odysseys to superhero families and feelings inside your head.
+    cards:
+      - title: Toy Story (Franchise)
+        points:
+          - "Centered around the friendship of vintage cowboy doll Woody and high-tech space ranger Buzz Lightyear."
+          - "Woody's loyalty to his owner Andy anchors a four-film saga exploring loyalty, growing up, and moving on."
+          - "Buzz Lightyear's iconic catchphrase 'To Infinity and Beyond!' became one of the most famous movie quotes in cinema history."
+          - "Tom Hanks and Tim Allen provided the dynamic, heartwarming voice performances that defined the franchise."
+      - title: Finding Nemo (2003)
+        points:
+          - "Overprotective clownfish father Marlin embarks on an epic journey across the Pacific Ocean to rescue his captured son, Nemo."
+          - "He is accompanied by Dory, an optimistic blue tang fish with severe short-term memory loss, voiced by Ellen DeGeneres."
+          - "The movie introduced memorable characters like vegetarian sharks, sea turtles riding the East Australian Current, and seagulls saying 'Mine!'."
+          - "It won the Academy Award for Best Animated Feature and held the record as the best-selling DVD of all time."
+      - title: The Incredibles (2004)
+        points:
+          - "Directed by Brad Bird, this superhero film follows the Parr family trying to live quiet suburban lives after superheroes are outlawed."
+          - "Parents Bob (Mr. Incredible) and Helen (Elastigirl) team up with kids Violet, Dash, and baby Jack-Jack to stop the villain Syndrome."
+          - "Eccentric superhero fashion designer Edna Mode steals every scene with her strict, fiery rule: 'NO CAPES!'."
+          - "The film was celebrated for its retro-futuristic 1960s comic book aesthetic and realistic family dynamics."
+      - title: Monsters, Inc. (2001)
+        points:
+          - "In the monster city of Monstropolis, the energy grid is powered by bottling the screams of human children."
+          - "Top scarer James P. 'Sulley' Sullivan and his one-eyed assistant Mike Wazowski accidentally let a human toddler ('Boo') into their world."
+          - "Sulley and Mike discover that children's laughter produces ten times more energy than screams, revolutionizing their entire world."
+          - "Sulley's turquoise-and-purple fur required groundbreaking animation technology to render 2.3 million individual hairs."
+      - title: Up (2009)
+        points:
+          - "78-year-old widower Carl Fredricksen fulfills his lifelong dream of visiting Paradise Falls by attaching thousands of helium balloons to his house."
+          - "He is accidentally joined by an overeager 8-year-old Wilderness Explorer scout named Russell."
+          - "The movie's famous 4-minute wordless opening montage ('Married Life') is hailed as one of the most poignant sequences in cinematic history."
+          - "They encounter a talking golden retriever named Dug, who wears a special collar that translates his thoughts into speech."
+      - title: Coco (2017)
+        points:
+          - "Set in Mexico during Día de los Muertos (Day of the Dead), 12-year-old aspiring musician Miguel is magically transported to the Land of the Dead."
+          - "Miguel teams up with the charming skeleton trickster Héctor to find his musical great-great-grandfather and reverse a family ban on music."
+          - "The emotional centerpiece song 'Remember Me', composed by Kristen Anderson-Lopez and Robert Lopez, won an Academy Award."
+          - "The film was celebrated worldwide for its authentic, beautiful representation of Mexican culture, family heritage, and folklore."
+      - title: Inside Out (2015)
+        points:
+          - "Set inside the mind of 11-year-old girl Riley, five personified emotions manage her Headquarters: Joy, Sadness, Anger, Fear, and Disgust."
+          - "When Riley's family moves to San Francisco, Joy and Sadness get lost in Riley's long-term memory, triggering an emotional crisis."
+          - "The movie teaches a profound psychological lesson: sadness is essential for empathy, processing change, and emotional healing."
+          - "Riley's lovable pink cotton-candy imaginary friend, Bing Bong, sacrifices himself to help Joy return to Headquarters."
+      - title: Ratatouille (2007)
+        points:
+          - "Remy is an ambitious French rat blessed with an extraordinarily refined sense of taste and smell who dreams of becoming a master chef."
+          - "He secretly controls bumbling kitchen garbage boy Alfredo Linguini by pulling his hair from beneath a chef's toque hat."
+          - "Together they conquer the Paris culinary world and win over harsh food critic Anton Ego with a humble rustic dish of ratatouille."
+          - "The movie's core motto, 'Anyone can cook', champions that great talent can come from the most unexpected origins."
+    trivia:
+      - type: multiple_choice
+        question: "What is Buzz Lightyear's world-famous heroic catchphrase in Toy Story?"
+        options: ["To the Moon and Back!", "To Infinity and Beyond!", "Reach for the Stars!", "Blast off to Glory!"]
+        correct: 1
+      - type: single_qa
+        question: "What type of fish is Nemo and his father Marlin in Finding Nemo?"
+        answer: "Clownfish"
+      - type: multiple_choice
+        question: "What strict fashion rule does superhero costume designer Edna Mode enforce in The Incredibles?"
+        options: ["No bright colors", "No capes!", "No boots", "No masks"]
+        correct: 1
+      - type: single_qa
+        question: "What powers the city of Monstropolis before Sulley and Mike discover the power of laughter?"
+        answer: "Children's screams"
+      - type: multiple_choice
+        question: "How does 78-year-old Carl Fredricksen make his house fly to South America in 'Up'?"
+        options: ["A giant jet engine", "Thousands of helium balloons", "A magical propeller", "A flock of birds"]
+        correct: 1
+      - type: single_qa
+        question: "What Mexican holiday provides the colorful, musical setting for Pixar's 'Coco'?"
+        answer: "Día de los Muertos (Day of the Dead)"
+      - type: multiple_choice
+        question: "Which of the following is NOT one of the original five emotions in Riley's mind in Inside Out (2015)?"
+        options: ["Joy", "Sadness", "Envy", "Anger"]
+        correct: 2
+      - type: single_qa
+        question: "What French vegetable dish does rat chef Remy prepare to impress critic Anton Ego in Ratatouille?"
+        answer: "Ratatouille"
+      - type: multiple_choice
+        question: "What condition causes the friendly blue tang fish Dory to forget things in Finding Nemo?"
+        options: ["Short-term memory loss", "Color blindness", "Sleepwalking", "Sea sickness"]
+        correct: 0
+      - type: single_qa
+        question: "What is the name of the adorable human toddler who wanders into the monster world in Monsters, Inc.?"
+        answer: "Boo"
+      - type: multiple_choice
+        question: "What is the superhero alter ego name of the mother Helen Parr in The Incredibles?"
+        options: ["Invisible Woman", "Elastigirl", "Storm", "Shadow Cat"]
+        correct: 1
+      - type: single_qa
+        question: "What was the name of Riley's beloved pink cotton-candy imaginary friend in Inside Out?"
+        answer: "Bing Bong"
+      - type: multiple_choice
+        question: "What musical instrument does young Miguel desperately want to play in 'Coco'?"
+        options: ["Trumpet", "Guitar", "Violin", "Maracas"]
+        correct: 1
+      - type: single_qa
+        question: "What was the name of the sadistic boy next door who tortured toys in the original Toy Story?"
+        answer: "Sid (Sid Phillips)"
+      - type: multiple_choice
+        question: "What type of animal is Dug, who wears a collar that translates his thoughts into speech in 'Up'?"
+        options: ["Golden Retriever dog", "Parrot", "Chimpanzee", "Cat"]
+        correct: 0
+      - type: single_qa
+        question: "How did Remy the rat physically control Linguini's cooking movements in the kitchen in Ratatouille?"
+        answer: "By pulling his hair (from under his chef hat)"
+
+  - id: dreamworks_hits
+    title: DreamWorks Hits
+    description: >
+      Laugh out loud with DreamWorks Animation's funniest, wildest, and most thrilling sagas! 
+      From ogres in swamps and kung fu pandas to dragon riders and zoo animals on the loose.
+    cards:
+      - title: Shrek (2001)
+        points:
+          - "'Shrek' satirized traditional fairy tales with a green, grumpy, onion-loving ogre who wants to be left alone in his swamp."
+          - "He embarks on a quest to rescue feisty Princess Fiona from a dragon-guarded tower, accompanied by a talkative Donkey (Eddie Murphy)."
+          - "The film won the very first Academy Award for Best Animated Feature when the category was introduced in 2002."
+          - "It became a cultural juggernaut, spawning three sequels, spin-offs, and endless beloved pop-culture memes."
+      - title: How to Train Your Dragon (2010)
+        points:
+          - "On the rugged Viking island of Berk, scrawny teenager Hiccup befriends an injured, feared Night Fury dragon he names Toothless."
+          - "Hiccup constructs a prosthetic tail fin and harness, proving to his tribe that dragons can be peaceful companions rather than enemies."
+          - "The movie's breathtaking aerial flight sequences and stirring orchestral score by John Powell received universal acclaim."
+          - "The franchise expanded into a critically acclaimed trilogy celebrating empathy, growing up, and cross-species harmony."
+      - title: Kung Fu Panda (2008)
+        points:
+          - "Po, an overweight and clumsy giant panda working at a noodle shop, is surprisingly chosen as the legendary 'Dragon Warrior'."
+          - "Trained by red panda Master Shifu, Po learns kung fu using his love of dumplings and food as motivation."
+          - "He fights alongside the Furious Five: Tigress, Monkey, Crane, Viper, and Mantis."
+          - "The movie delivers the profound philosophical message that 'there is no secret ingredient'—greatness comes from believing in yourself."
+      - title: Madagascar (2005)
+        points:
+          - "Four pampered Central Park Zoo animals—Alex the lion, Marty the zebra, Melman the giraffe, and Gloria the hippo—get shipped to Madagascar."
+          - "They encounter eccentric lemur King Julien XIII, who loves partying to the dance anthem 'I Like to Move It'."
+          - "A squad of four tactical, military-minded penguins (Skipper, Kowalski, Rico, and Private) steals every scene with covert operations."
+          - "The franchise produced multiple sequels, a television series, and a dedicated Penguins of Madagascar spin-off movie."
+      - title: The Prince of Egypt (1998)
+        points:
+          - "This breathtaking, epic musical adaptation of the Book of Exodus recounts the biblical story of Moses and Ramses."
+          - "Raised as royal brothers in ancient Egypt, Moses discovers his Hebrew heritage and is called by God to liberate his people from slavery."
+          - "The parting of the Red Sea scene is widely considered one of the most stunning technical achievements in traditional 2D animation."
+          - "The song 'When You Believe', performed by Whitney Houston and Mariah Carey, won the Academy Award for Best Original Song."
+      - title: "Puss in Boots: The Last Wish (2022)"
+        points:
+          - "Having burned through eight of his nine lives, the daring swashbuckling feline Puss in Boots embarks on an epic quest for the Wishing Star."
+          - "He is pursued by Death itself, personified as a chilling, red-eyed Wolf wielding dual scythes and whistling an eerie tune."
+          - "Puss teams up with his feisty ex Kitty Softpaws and an irrepressibly cheerful therapy dog named Perrito."
+          - "The film received widespread acclaim for its painterly, dynamic anime-inspired action style and mature themes of mortality and gratitude."
+      - title: Megamind (2010)
+        points:
+          - "A clever subversion of superhero tropes, blue-skinned supervillain Megamind (Will Ferrell) accidentally defeats his heroic rival Metro Man."
+          - "Bored without a hero to fight, Megamind creates a new hero (Titan), who unexpectedly turns evil, forcing Megamind to become the savior."
+          - "Accompanied by his robotic fish sidekick Minion and rocking to classic AC/DC and Guns N' Roses tracks, Megamind discovers redemption."
+          - "The film developed a massive cult following for its brilliant comedic writing and exploration of identity."
+      - title: The Bad Guys (2022)
+        points:
+          - "Based on the popular graphic novel series, a crew of anthropomorphic outlaw animals plans ambitious heists across the city."
+          - "The crew includes charming pickpocket Mr. Wolf, safecracker Mr. Snake, hacker Ms. Tarantula, master of disguise Mr. Shark, and brawler Mr. Piranha."
+          - "When a heist goes wrong, Mr. Wolf accidentally experiences the thrill of doing good and decides to lead the gang toward redemption."
+          - "The film was lauded for its stylish, comic-book visual aesthetic blending 2D hand-drawn flair with 3D CGI."
+    trivia:
+      - type: multiple_choice
+        question: "Which movie won the very first Academy Award for Best Animated Feature when the award was introduced in 2002?"
+        options: ["Monsters, Inc.", "Shrek", "Jimmy Neutron", "Ice Age"]
+        correct: 1
+      - type: single_qa
+        question: "What rare, stealthy species of dragon is Toothless in 'How to Train Your Dragon'?"
+        answer: "Night Fury"
+      - type: multiple_choice
+        question: "What type of animal is Po, the unlikely Dragon Warrior in Kung Fu Panda?"
+        options: ["A grizzly bear", "A giant panda", "A red panda", "A snow leopard"]
+        correct: 1
+      - type: single_qa
+        question: "What energetic dance song does King Julien love to sing and dance to in Madagascar?"
+        answer: "I Like to Move It"
+      - type: multiple_choice
+        question: "Who was Moses' adoptive brother and royal rival in the animated epic 'The Prince of Egypt'?"
+        options: ["Ramses", "Pharaoh Seti", "Aaron", "Hotep"]
+        correct: 0
+      - type: single_qa
+        question: "How many of his nine lives had Puss in Boots burned through at the start of 'The Last Wish'?"
+        answer: "Eight (8) lives"
+      - type: multiple_choice
+        question: "What color is the oversized cranium of the supervillain protagonist in 'Megamind'?"
+        options: ["Bright green", "Vibrant blue", "Deep purple", "Crimson red"]
+        correct: 1
+      - type: single_qa
+        question: "What food did Master Shifu use to motivate and train Po in kung fu in Kung Fu Panda?"
+        answer: "Dumplings (or noodles)"
+      - type: multiple_choice
+        question: "What is the name of Shrek's talkative, waffle-loving companion voiced by Eddie Murphy?"
+        options: ["Puss in Boots", "Donkey", "Pinocchio", "Gingerbread Man"]
+        correct: 1
+      - type: single_qa
+        question: "What animal leads the tactical four-member covert operations team in Madagascar?"
+        answer: "Penguins (Skipper)"
+      - type: multiple_choice
+        question: "What natural barrier does Moses miraculously part in the climax of 'The Prince of Egypt'?"
+        options: ["The Nile River", "The Red Sea", "The Mediterranean Sea", "The Dead Sea"]
+        correct: 1
+      - type: single_qa
+        question: "What terrifying red-eyed animal personifies Death in 'Puss in Boots: The Last Wish'?"
+        answer: "A Wolf"
+      - type: multiple_choice
+        question: "What Viking island is the home of Hiccup and his dragon-riding tribe in How to Train Your Dragon?"
+        options: ["Berk", "Krag", "Valhalla", "Skye"]
+        correct: 0
+      - type: single_qa
+        question: "What vegetable does Shrek famously compare ogres to because both have 'layers'?"
+        answer: "Onions"
+      - type: multiple_choice
+        question: "What is the animal identity of Mr. Wolf's cunning hacker teammate in 'The Bad Guys'?"
+        options: ["A chameleon", "A tarantula (spider)", "A raccoon", "A bat"]
+        correct: 1
+      - type: single_qa
+        question: "What legendary title was Po unexpectedly chosen for by Master Oogway in Kung Fu Panda?"
+        answer: "The Dragon Warrior"
+
+  - id: iconic_songs_catchphrases
+    title: Iconic Songs & Catchphrases
+    description: >
+      Sing along to the unforgettable musical anthems and quote the legendary one-liners 
+      that have echoed through movie theaters and living rooms for decades!
+    cards:
+      - title: "'Let It Go' (Frozen)"
+        points:
+          - "Written by the powerhouse songwriting duo Kristen Anderson-Lopez and Robert Lopez, 'Let It Go' won the Academy Award for Best Original Song."
+          - "Sung by Broadway star Idina Menzel as Queen Elsa, the anthem marks Elsa's liberation as she constructs her ice palace."
+          - "The song became a historic global cultural phenomenon, translated and sung in over 40 official languages worldwide."
+          - "Its infectious chorus topped pop music charts around the world and generated billions of streams across platforms."
+      - title: "'Hakuna Matata' & 'Circle of Life' (The Lion King)"
+        points:
+          - "Sir Elton John and lyricist Tim Rice composed the legendary soundtrack for 'The Lion King', blending pop melodies with African rhythms."
+          - "South African composer Lebo M created the iconic Zulu opening chant for 'Circle of Life' ('Nants ingonyama bagithi Baba')."
+          - "'Hakuna Matata' became an international catchphrase for a carefree, worry-free philosophy of life."
+          - "The soundtrack album sold over 10 million copies in the US alone, earning a rare Diamond certification."
+      - title: "'You've Got a Friend in Me' (Toy Story)"
+        points:
+          - "Written and performed by veteran singer-songwriter Randy Newman, this warm, jazzy tune became the musical heartbeat of Pixar."
+          - "The song perfectly captures the enduring, unconditional friendship between Woody, Buzz, and their human child Andy."
+          - "Newman received an Academy Award nomination for the song, and it has been featured across all four Toy Story films."
+          - "It is widely recognized as one of the greatest friendship anthems in Hollywood film history."
+      - title: "'We Don't Talk About Bruno' (Encanto)"
+        points:
+          - "Composed by Lin-Manuel Miranda, this salsa-infused ensemble number became the biggest Disney song of the 21st century."
+          - "It spent five consecutive weeks at #1 on the Billboard Hot 100, surpassing 'Let It Go' and 'A Whole New World'."
+          - "Each family member sings their own unique rhythmic perspective about Bruno's ominous prophecies in a complex polyphonic climax."
+          - "Its viral choreography and catchy beats dominated social media and schoolyards worldwide throughout 2022."
+      - title: "'Remember Me' (Coco)"
+        points:
+          - "'Remember Me' serves as the emotional musical core of 'Coco', appearing in multiple distinct arrangements throughout the story."
+          - "It begins as a flashy pop song performed by famous musician Ernesto de la Cruz, but is revealed to be a tender lullaby written by a father for his daughter."
+          - "When young Miguel sings the acoustic lullaby to his aging great-grandmother Mama Coco, it awakens her fading childhood memories."
+          - "The song won the 2018 Academy Award for Best Original Song, bringing audiences worldwide to tears."
+      - title: "'To Infinity and Beyond!' (Buzz Lightyear)"
+        points:
+          - "Buzz Lightyear's confident space ranger slogan 'To Infinity and Beyond!' is Pixar's most recognizable catchphrase."
+          - "In 2008, astronauts aboard the Space Shuttle Discovery carried a 12-inch Buzz Lightyear action figure into space to orbit Earth for 468 days."
+          - "The phrase symbolizes boundless courage, optimism, and loyalty that stretches past impossible horizons."
+          - "American Film Institute (AFI) ranks it among the greatest 100 movie quotes in American cinema history."
+      - title: "'I Like to Move It' (Madagascar)"
+        points:
+          - "Originally a 1993 dance hit by Reel 2 Real, the high-energy electro track was resurrected by King Julien (Sacha Baron Cohen) in 'Madagascar'."
+          - "The infectious dance scene with the dancing lemurs became the most memorable comedic moment of the film."
+          - "The song became a signature staple across the entire Madagascar franchise and theme park attractions globally."
+          - "It has become a universal family road-trip dance anthem that gets kids and adults singing along immediately."
+      - title: "'Ogre Layers & Waffles' (Shrek)"
+        points:
+          - "Shrek's philosophical explanation to Donkey that 'Ogres are like onions... Onions have layers. Ogres have layers' became an instant classic."
+          - "Donkey hilariously counters by suggesting cakes or parfaits instead: 'Everybody likes parfait! Have you ever met a person, you say, Let's get some parfait, they say, Hell no, I don't like no parfait?'"
+          - "Donkey's enthusiastic offer, 'And in the morning, I'm making waffles!', became one of the most quoted lines in animated history."
+          - "These snappy, character-driven dialogues defined DreamWorks' irreverent, smart comedic voice."
+    trivia:
+      - type: multiple_choice
+        question: "Who provided the powerful singing voice for Queen Elsa in the global anthem 'Let It Go'?"
+        options: ["Kristen Bell", "Idina Menzel", "Kelly Clarkson", "Demi Lovato"]
+        correct: 1
+      - type: single_qa
+        question: "What language is the famous opening chant of 'Circle of Life' from The Lion King sung in?"
+        answer: "Zulu"
+      - type: multiple_choice
+        question: "Which legendary musician composed and sang the iconic Toy Story theme 'You've Got a Friend in Me'?"
+        options: ["Elton John", "Phil Collins", "Randy Newman", "Alan Menken"]
+        correct: 2
+      - type: single_qa
+        question: "What song from 'Encanto' became a viral #1 Billboard hit about a mysterious, prophecy-making uncle?"
+        answer: "We Don't Talk About Bruno"
+      - type: multiple_choice
+        question: "To which family member does Miguel sing the tender acoustic version of 'Remember Me' in the climax of 'Coco'?"
+        options: ["His mother", "Mama Coco (his great-grandmother)", "His cousin Rosa", "His aunt Victoria"]
+        correct: 1
+      - type: single_qa
+        question: "What food does Donkey famously promise to make in the morning after crashing at Shrek's swamp?"
+        answer: "Waffles"
+      - type: multiple_choice
+        question: "For how many days did a real Buzz Lightyear figure orbit Earth aboard the International Space Station?"
+        options: ["7 days", "30 days", "468 days", "1,000 days"]
+        correct: 2
+      - type: single_qa
+        question: "What multi-layered vegetable does Shrek compare ogres to when talking to Donkey?"
+        answer: "Onions"
+      - type: multiple_choice
+        question: "Who wrote the chart-topping songs for both 'Moana' and 'Encanto'?"
+        options: ["Lin-Manuel Miranda", "Hans Zimmer", "John Williams", "Elton John"]
+        correct: 0
+      - type: single_qa
+        question: "What is Buzz Lightyear's famous signature catchphrase in the Toy Story movies?"
+        answer: "To Infinity and Beyond!"
+      - type: multiple_choice
+        question: "Which high-energy dance track does King Julien lead the lemurs in singing in Madagascar?"
+        options: ["Macarena", "I Like to Move It", "YMCA", "Cha Cha Slide"]
+        correct: 1
+      - type: single_qa
+        question: "What dessert does Donkey claim that 'everybody loves' because nobody turns down layers of it?"
+        answer: "Parfait"
+      - type: multiple_choice
+        question: "In how many official languages was Elsa's song 'Let It Go' officially recorded and released worldwide?"
+        options: ["Over 40 languages", "10 languages", "5 languages", "100 languages"]
+        correct: 0
+      - type: single_qa
+        question: "What English rock legend collaborated with lyricist Tim Rice to write the songs for The Lion King?"
+        answer: "Sir Elton John"
+      - type: multiple_choice
+        question: "What family bond is celebrated as the core message of the Toy Story theme 'You've Got a Friend in Me'?"
+        options: ["Sibling rivalry", "Unconditional friendship and loyalty", "Romantic love", "Military duty"]
+        correct: 1
+      - type: single_qa
+        question: "Which Oscar-winning husband-and-wife songwriting team wrote both 'Let It Go' and 'Remember Me'?"
+        answer: "Kristen Anderson-Lopez and Robert Lopez"
+
+  - id: global_gems_stop_motion
+    title: Global Gems & Stop-Motion Wonders
+    description: >
+      Journey beyond traditional Hollywood studios to experience breathtaking international anime, 
+      claymation masterpieces, and multi-dimensional superhero universes!
+    cards:
+      - title: Spirited Away (2001)
+        points:
+          - "Directed by Hayao Miyazaki, 10-year-old Chihiro wanders into an abandoned amusement park that transforms into a spirit bathhouse."
+          - "When her parents are turned into pigs, Chihiro works for the sorceress Yubaba to earn their freedom."
+          - "She is aided by the river spirit dragon Haku and encounters unforgettable creatures like the enigmatic No-Face."
+          - "It became the highest-grossing film in Japanese box-office history for nearly two decades and won the Best Animated Feature Oscar."
+      - title: My Neighbor Totoro (1988)
+        points:
+          - "Two young sisters, Satsuki and Mei, move to the Japanese countryside and discover friendly forest spirits in an ancient camphor tree."
+          - "The giant, furry, gentle woodland creature Totoro takes them on magical nighttime adventures across flying treetops."
+          - "The film introduced the whimsical 'Catbus' (Nekobasu), a twelve-legged grinning feline bus with glowing mice headlights."
+          - "Totoro became Studio Ghibli's beloved global mascot, as iconic in Japan as Mickey Mouse is in the United States."
+      - title: Despicable Me & The Minions (2010)
+        points:
+          - "Produced by Illumination Entertainment, reformed supervillain Gru plots to steal the Moon, but softens when he adopts three orphan girls."
+          - "His yellow, pill-shaped henchmen, the Minions (Kevin, Stuart, Bob), communicate in a hilarious multilingual gibberish called 'Minionese'."
+          - "The Despicable Me franchise became the highest-grossing animated film franchise in global box office history."
+          - "The Minions became global pop-culture icons, celebrated for their slapstick humor and love of bananas."
+      - title: Wallace & Gromit / Chicken Run
+        points:
+          - "Created by Nick Park and Aardman Animations, Wallace is an eccentric, cheese-loving English inventor paired with his silent, genius beagle, Gromit."
+          - "Their claymation short films like 'The Wrong Trousers' and 'A Close Shave' won multiple Academy Awards."
+          - "'Chicken Run' (2000), their feature film about chickens plotting a WWII-style escape from a farm, remains the highest-grossing stop-motion film ever."
+          - "Every character is sculpted from plasticine clay, with animators meticulously moving eyebrows and limbs fraction by fraction."
+      - title: Coraline (2009)
+        points:
+          - "Produced by Laika and based on Neil Gaiman's dark fantasy novella, 11-year-old Coraline discovers a secret door in her new house."
+          - "The door leads to an idealized 'Other World' where her 'Other Mother' has black buttons for eyes and offers tempting treats."
+          - "When the sinister Other Mother tries to trap her forever, Coraline must muster courage and wits to save her real parents."
+          - "It made history as the first stop-motion film shot entirely in stereoscopic 3D, pioneering 3D-printed face replacements."
+      - title: "Spider-Man: Into the Spider-Verse (2018)"
+        points:
+          - "Brooklyn teenager Miles Morales gains spider abilities and teams up with alternate-universe Spider-Heroes to stop Kingpin."
+          - "Allies include a weary Peter B. Parker, Gwen Stacy, Spider-Man Noir (Nicolas Cage), anime Peni Parker, and cartoon pig Spider-Ham."
+          - "The film revolutionized modern animation by blending hand-drawn comic book techniques, halftone dot shading, and 3D computer models."
+          - "It won the Academy Award for Best Animated Feature, inspiring a new visual era in Hollywood animated filmmaking."
+      - title: The Nightmare Before Christmas (1993)
+        points:
+          - "Produced by Tim Burton and directed by Henry Selick, Jack Skellington, the Pumpkin King of Halloween Town, discovers Christmas Town."
+          - "Enchanted by the holiday, Jack attempts to take over Christmas, accidentally causing spooky holiday chaos."
+          - "Composer Danny Elfman wrote the iconic musical score and provided Jack's soaring singing voice."
+          - "The film became a permanent holiday classic, celebrated by fans during both Halloween and Christmas seasons."
+      - title: The Legacy of Global Animation
+        points:
+          - "Global animation demonstrates that powerful visual storytelling transcends national borders, languages, and animation techniques."
+          - "Whether created with hand-drawn inks, claymation puppets, or cutting-edge digital shaders, animation brings limitless dreams to life."
+          - "Animated films allow families to explore complex emotions, celebrate diverse cultures, and laugh together across generations."
+          - "The art form continues to push technical and artistic boundaries, inspiring the next generation of creative storytellers."
+    trivia:
+      - type: multiple_choice
+        question: "What animal form does the river spirit Haku take in Studio Ghibli's 'Spirited Away'?"
+        options: ["A white dragon", "A giant black cat", "A giant frog", "A golden eagle"]
+        correct: 0
+      - type: single_qa
+        question: "What is the name of the giant, gentle forest spirit who serves as the official mascot of Studio Ghibli?"
+        answer: "Totoro"
+      - type: multiple_choice
+        question: "What fruit are Gru's yellow Minions hilariously obsessed with in Despicable Me?"
+        options: ["Apples", "Bananas", "Oranges", "Pineapples"]
+        correct: 1
+      - type: single_qa
+        question: "What breed of brilliant, silent dog is the loyal companion of eccentric inventor Wallace in Wallace & Gromit?"
+        answer: "Beagle"
+      - type: multiple_choice
+        question: "What chilling physical feature do characters in the 'Other World' have instead of eyes in Coraline?"
+        options: ["Black buttons", "Glowing red coins", "Empty dark holes", "Gold jewels"]
+        correct: 0
+      - type: single_qa
+        question: "What Brooklyn teenager becomes Spider-Man in 'Spider-Man: Into the Spider-Verse'?"
+        answer: "Miles Morales"
+      - type: multiple_choice
+        question: "What title is held by Jack Skellington in the stop-motion classic The Nightmare Before Christmas?"
+        options: ["The Goblin King", "The Pumpkin King", "The Ghost Master", "The Skeleton Mayor"]
+        correct: 1
+      - type: single_qa
+        question: "What 12-legged feline vehicle transports Satsuki and Mei across the countryside in My Neighbor Totoro?"
+        answer: "The Catbus (Nekobasu)"
+      - type: multiple_choice
+        question: "What is the highest-grossing stop-motion animated film of all time, featuring chickens escaping a farm?"
+        options: ["Chicken Run", "Coraline", "Corpse Bride", "Fantastic Mr. Fox"]
+        correct: 0
+      - type: single_qa
+        question: "Who composed the songs and provided the singing voice for Jack Skellington in The Nightmare Before Christmas?"
+        answer: "Danny Elfman"
+      - type: multiple_choice
+        question: "What what does young Chihiro's parents turn into after greedily eating spirit food in Spirited Away?"
+        options: ["Pigs", "Donkeys", "Toads", "Birds"]
+        correct: 0
+      - type: single_qa
+        question: "What cartoon pig superhero from an alternate universe joins Miles Morales in 'Into the Spider-Verse'?"
+        answer: "Spider-Ham (Peter Porker)"
+      - type: multiple_choice
+        question: "What food is eccentric British inventor Wallace absolutely obsessed with in Wallace & Gromit?"
+        options: ["Chocolate", "Cheese (Wensleydale)", "Fish and chips", "Bacon"]
+        correct: 1
+      - type: single_qa
+        question: "What is the nonsensical, multilingual language spoken by the Minions called?"
+        answer: "Minionese (or Banana language)"
+      - type: multiple_choice
+        question: "Which dark fantasy author wrote the original novella that inspired Laika's stop-motion film 'Coraline'?"
+        options: ["Neil Gaiman", "J.K. Rowling", "Roald Dahl", "Stephen King"]
+        correct: 0
+      - type: single_qa
+        question: "What celestial object does supervillain Gru originally plan to shrink and steal in the first Despicable Me?"
+        answer: "The Moon"
