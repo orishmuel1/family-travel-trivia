@@ -1,0 +1,792 @@
+id: folklore_myths_legends_en
+title: Folklore, Myths, and Legends
+description: >
+  Step into a magical realm of noble knights, clever tricksters, towering folk heroes, 
+  and legendary warriors! Explore timeless stories from across the globe that have entertained, 
+  inspired, and shaped cultures for generations.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      The rich traditions of storytelling that connect human cultures across centuries. 
+      Learn about folklore roots, mythical creatures, and storytelling archetypes before testing your knowledge.
+    cards:
+      - title: Oral Storytelling Tradition
+        points:
+          - "Before books and writing were common, human history and moral lessons were passed down orally from memory."
+          - "Bards, griots, and village elders memorized thousands of verses to recite epic tales around evening fires."
+          - "Oral stories often adapted slightly over time, leading to dozens of unique regional variations of the same legend."
+          - "Folktales served as vital tools for teaching moral values, bravery, and respect for nature to children."
+      - title: The Hero's Journey
+        points:
+          - "Mythologist Joseph Campbell identified the 'Monomyth' or Hero's Journey, a shared pattern found across world myths."
+          - "In this archetype, a hero leaves the familiar world, overcomes daunting trials with mentors, and returns transformed."
+          - "This timeless storytelling structure is found in ancient tales like Gilgamesh and modern epics like Star Wars."
+          - "It reflects universal human experiences of growing up, facing adversity, and discovering inner courage."
+      - title: Dragons Across Continents
+        points:
+          - "European dragons are typically depicted as winged, fire-breathing reptilian monsters hoarding glittering gold."
+          - "In East Asian folklore, dragons (like the Chinese Long) are benevolent water deities bringing rainfall and good fortune."
+          - "Mesoamerican cultures revered the Feathered Serpent (Quetzalcoatl) as a god of wind, wisdom, and learning."
+          - "Dragons are among the few mythical creatures independently imagined by almost every major world culture."
+      - title: The Phoenix
+        points:
+          - "The Phoenix is a legendary bird that cyclically regenerates or is reborn from its own ashes."
+          - "Ancient Egyptian mythology featured the Bennu bird, a solar heron associated with rebirth and creation."
+          - "In Greek folklore, the Phoenix lived for 500 years before building a fragrant nest and bursting into flame."
+          - "It has become the universal global symbol for resilience, renewal, and rising stronger after disaster."
+      - title: Trickster Figures
+        points:
+          - "Tricksters are mischievous characters in folklore who use quick wits and clever cunning rather than brute strength."
+          - "Famous world tricksters include Anansi the Spider, Loki the Norse god, Coyote in Native American lore, and Br'er Rabbit."
+          - "While tricksters often cause humorous chaos, their stories teach important lessons about pride, greed, and adaptability."
+          - "They frequently challenge powerful bullies or greedy rulers, acting as champions for the underdog."
+      - title: Mythical Forests & Enchanted Woods
+        points:
+          - "Ancient folklore across Europe depicted deep forests as magical thresholds where ordinary laws of reality suspended."
+          - "Sherwood Forest, Brocéliande in Arthurian lore, and the Black Forest in Germany became epic settings for legendary adventures."
+          - "Folktales warned travelers to stay on marked paths to avoid mischievous fairies, wood spirits, and enchantments."
+          - "Forests represented the mysterious, untamed power of the natural world before the rise of modern civilization."
+      - title: The Legend of Atlantis
+        points:
+          - "The philosopher Plato first wrote about Atlantis around 360 BCE as an allegory about naval hubris and wealth."
+          - "According to the story, Atlantis was an advanced island civilization that sank into the Atlantic Ocean in a single day."
+          - "Though intended by Plato as a moral fable, the tale inspired centuries of real-world exploratory expeditions."
+          - "It remains one of the most enduring lost-civilization legends in literature, film, and popular imagination."
+      - title: Fairies and Little People
+        points:
+          - "Irish and Celtic mythology features the Aos Sí, a supernatural race of fairies living in ancient burial mounds."
+          - "Leprechauns were originally portrayed as solitary cobblers who hid their gold crocks at the end of rainbows."
+          - "Scandinavian folklore features Nisse or Tomte, household spirits that protect farmsteads if treated with respect."
+          - "Stories about hidden folk taught rural communities respect for unseen natural forces and domestic harmony."
+    trivia:
+      - type: multiple_choice
+        question: "Which mythical bird is famous across world folklore for being reborn from its own ashes?"
+        options: ["The Griffin", "The Phoenix", "The Thunderbird", "The Pegasus"]
+        correct: 1
+      - type: single_qa
+        question: "What Greek philosopher first wrote about the legendary sunken island of Atlantis around 360 BCE?"
+        answer: "Plato"
+      - type: multiple_choice
+        question: "In East Asian folklore, what natural element are dragons traditionally associated with?"
+        options: ["Fire and volcanoes", "Water, rain, and rivers", "Sand and deserts", "Ice and blizzards"]
+        correct: 1
+      - type: single_qa
+        question: "What mythologist coined the term 'The Hero's Journey' (Monomyth) to describe shared story patterns?"
+        answer: "Joseph Campbell"
+      - type: multiple_choice
+        question: "Which of the following is a classic Native American folklore trickster figure?"
+        options: ["Coyote", "Pegasus", "Thor", "King Arthur"]
+        correct: 0
+      - type: single_qa
+        question: "What traditional Irish mythological race of fairies was believed to live in ancient grassy mounds?"
+        answer: "Aos Sí"
+      - type: multiple_choice
+        question: "In medieval Europe, what was the primary purpose of oral bards and storytellers?"
+        options: ["Passing down history, laws, and moral tales", "Writing secret military codes", "Designing stone castles", "Trading silk on ocean voyages"]
+        correct: 0
+      - type: single_qa
+        question: "What famous Mesoamerican deity was revered as the legendary 'Feathered Serpent'?"
+        answer: "Quetzalcoatl"
+      - type: multiple_choice
+        question: "In Scandinavian folklore, what household spirit is known for protecting farmsteads if treated well?"
+        options: ["Tomte (Nisse)", "Banshee", "Chimera", "Minotaur"]
+        correct: 0
+      - type: single_qa
+        question: "In Irish folklore, what profession was the solitary Leprechaun traditionally said to practice?"
+        answer: "Cobbler (Shoemaker)"
+      - type: multiple_choice
+        question: "How long was the mythical Greek Phoenix said to live before being consumed by flames?"
+        options: ["50 years", "100 years", "500 years", "1,000 years"]
+        correct: 2
+      - type: single_qa
+        question: "What does the Phoenix universally symbolize across modern literature and art?"
+        answer: "Rebirth and renewal"
+      - type: multiple_choice
+        question: "What legendary forest in Brittany, France, is famously tied to Merlin and Arthurian legends?"
+        options: ["Sherwood Forest", "Brocéliande Forest", "Black Forest", "Fangorn Forest"]
+        correct: 1
+      - type: single_qa
+        question: "What type of folklore character relies on cleverness and deceit rather than physical power?"
+        answer: "Trickster"
+      - type: multiple_choice
+        question: "According to ancient Egyptian mythology, what sacred bird represented solar creation and rebirth?"
+        options: ["Bennu", "Ibis", "Falcon", "Vulture"]
+        correct: 0
+      - type: single_qa
+        question: "In Plato's allegory, how quickly did the island of Atlantis sink beneath the ocean waves?"
+        answer: "In a single day and night"
+
+  - id: king_arthur
+    title: The Legend of King Arthur
+    description: >
+      Journey to the mystical kingdom of Camelot! Uncover the heroic tales of chivalry, 
+      magical swords, noble knights, and the quest for the Holy Grail.
+    cards:
+      - title: King Arthur
+        points:
+          - "Arthur was a legendary British monarch who defended Britain against Saxon invaders in the late 5th and early 6th centuries."
+          - "He proved his royal lineage as a boy by miraculously pulling the enchanted sword from the stone."
+          - "Arthur established a golden age of peace and chivalry across Britain from his majestic castle of Camelot."
+          - "According to legend, he did not die but rests on the mystical island of Avalon, awaiting Britain's hour of need."
+      - title: Excalibur & The Sword in the Stone
+        points:
+          - "In early legends, Arthur drew a mysterious sword from an anvil and stone inscribed: 'Whoso pulleth out this sword is rightwise King'."
+          - "In later tales, Arthur received the legendary blade Excalibur from the mystical Lady of the Lake."
+          - "Excalibur was accompanied by a magical scabbard that protected its wearer from losing blood in battle."
+          - "As Arthur lay dying after the Battle of Camlann, he ordered Sir Bedivere to return Excalibur to the lake."
+      - title: Merlin the Enchanter
+        points:
+          - "Merlin was a wise wizard, prophet, and Arthur's chief advisor who orchestrated Arthur's birth and rise to power."
+          - "Legend attributed the construction of Stonehenge to Merlin, who used magic to transport giant stones from Ireland."
+          - "Merlin possessed shapeshifting abilities, the gift of future prophecy, and deep mastery of nature's forces."
+          - "He was eventually trapped in an enchanted glass tower or ancient hawthorn tree by the Lady of the Lake (Nimue)."
+      - title: Camelot
+        points:
+          - "Camelot was the legendary fortress and capital city where King Arthur gathered the finest knights of the realm."
+          - "It symbolized the pinnacle of medieval courtly love, justice, honor, and civilized harmony."
+          - "Historical candidates for the real-world Camelot include Cadbury Castle in Somerset and Tintagel Castle in Cornwall."
+          - "The phrase 'Camelot' has since become a global metaphor for an inspiring, vibrant, and idealistic golden era."
+      - title: The Knights of the Round Table
+        points:
+          - "King Arthur gathered his top champions around a massive circular table presented by King Leodegrance."
+          - "The round shape was revolutionary because it had no head or foot, signifying that all knights sat as equals."
+          - "The table seated legendary knights including Sir Lancelot, Sir Gawain, Sir Galahad, Sir Percival, and Sir Tristan."
+          - "The 'Siege Perilous' was a reserved empty seat at the table that could only be safely occupied by the purest knight."
+      - title: Sir Lancelot & Sir Galahad
+        points:
+          - "Sir Lancelot of the Lake was Arthur's greatest warrior and closest friend, renowned for unbeatable swordsmanship."
+          - "Lancelot was raised by the Lady of the Lake and became Arthur's premier champion in tournaments."
+          - "His son, Sir Galahad, was celebrated for unmatched purity of heart and was the only knight able to sit in the Siege Perilous."
+          - "Galahad successfully achieved the Quest for the Holy Grail and was granted a vision of divine enlightenment."
+      - title: The Quest for the Holy Grail
+        points:
+          - "The Holy Grail was described as the sacred cup used by Jesus at the Last Supper, possessing miraculous healing powers."
+          - "A mystical vision of the Grail appeared above the Round Table, prompting Arthur's knights to embark on a grand spiritual quest."
+          - "Only the most virtuous knights—Sir Galahad, Sir Percival, and Sir Bors—were deemed worthy to find and look upon it."
+          - "The Grail quest marked the transition from physical martial glory to spiritual enlightenment in medieval literature."
+      - title: Morgan le Fay & Mordred
+        points:
+          - "Morgan le Fay was Arthur's powerful half-sister, a skilled sorceress trained in the magical arts on the Isle of Avalon."
+          - "While early legends portrayed her as a benevolent healer, later medieval romances cast her as Arthur's cunning antagonist."
+          - "Mordred, Arthur's nephew (or son in later tales), rebelled and claimed the throne while Arthur was away campaigning."
+          - "Arthur and Mordred clashed at the apocalyptic Battle of Camlann, where Mordred was slain and Arthur was mortally wounded."
+    trivia:
+      - type: multiple_choice
+        question: "Why was King Arthur's Round Table circular instead of rectangular?"
+        options: ["To fit inside a round tower", "To show that all knights were seated as equals", "Because round tables were cheaper", "To spin around during banquets"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of King Arthur's legendary magical sword?"
+        answer: "Excalibur"
+      - type: multiple_choice
+        question: "Who gave Arthur the magical sword Excalibur in later Arthurian legends?"
+        options: ["Morgan le Fay", "Queen Guinevere", "The Lady of the Lake", "Merlin"]
+        correct: 2
+      - type: single_qa
+        question: "What is the name of the mystical island to which King Arthur was taken after the Battle of Camlann?"
+        answer: "Avalon"
+      - type: multiple_choice
+        question: "What was the name of the special seat at the Round Table reserved exclusively for the purest knight?"
+        options: ["The Golden Throne", "The Siege Perilous", "The King's Bench", "The Table of Honor"]
+        correct: 1
+      - type: single_qa
+        question: "Which knight was the son of Sir Lancelot and successfully completed the Quest for the Holy Grail?"
+        answer: "Sir Galahad"
+      - type: multiple_choice
+        question: "What real-world prehistoric monument did medieval legend claim Merlin magically built?"
+        options: ["Stonehenge", "Hadrian's Wall", "The Tower of London", "Colosseum"]
+        correct: 0
+      - type: single_qa
+        question: "What was the name of King Arthur's legendary fortress and royal capital?"
+        answer: "Camelot"
+      - type: multiple_choice
+        question: "Which knight had to return Excalibur to the lake as King Arthur lay wounded?"
+        options: ["Sir Gawain", "Sir Bedivere", "Sir Kay", "Sir Percival"]
+        correct: 1
+      - type: single_qa
+        question: "Who was Arthur's half-sister and famous sorceress rival?"
+        answer: "Morgan le Fay"
+      - type: multiple_choice
+        question: "What sacred object were Arthur's knights searching for during their greatest spiritual quest?"
+        options: ["The Holy Grail", "The Golden Fleece", "The Philosopher's Stone", "The Ark of the Covenant"]
+        correct: 0
+      - type: single_qa
+        question: "What was special about the scabbard (sheath) of the sword Excalibur?"
+        answer: "It prevented the wearer from losing blood"
+      - type: multiple_choice
+        question: "Which treacherous knight rebelled against Arthur, leading to the fateful Battle of Camlann?"
+        options: ["Sir Bors", "Mordred", "Sir Tristan", "Sir Gareth"]
+        correct: 1
+      - type: single_qa
+        question: "What did the inscription on the anvil beneath the sword in the stone declare?"
+        answer: "Whoso pulleth out this sword is rightwise King"
+      - type: multiple_choice
+        question: "Who raised Sir Lancelot in enchanted waters before he became Arthur's greatest champion?"
+        options: ["The Lady of the Lake", "Queen Guinevere", "Morgan le Fay", "Merlin"]
+        correct: 0
+      - type: single_qa
+        question: "According to legend, who did Arthur defend Britain against during the 5th and 6th centuries?"
+        answer: "Saxon invaders"
+
+  - id: robin_hood
+    title: The Adventures of Robin Hood
+    description: >
+      Head deep into Sherwood Forest with the Prince of Thieves! Discover the daring exploits, 
+      crack archery skills, and righteous battles of Robin Hood and his band of Merry Men.
+    cards:
+      - title: Robin of Loxley
+        points:
+          - "Robin Hood is England's most celebrated legendary outlaw, famed for robbing from the rich to give to the poor."
+          - "He is traditionally depicted as an expert archer dressed in Lincoln green, living off the king's deer in Sherwood Forest."
+          - "Earliest written ballads date back to the 14th and 15th centuries, celebrating commoner resistance against corrupt officials."
+          - "In later tales, he was portrayed as a dispossessed nobleman, the Earl of Huntingdon or Robin of Loxley."
+      - title: Sherwood Forest & Major Oak
+        points:
+          - "Sherwood Forest in Nottinghamshire was a royal hunting forest that served as the impenetrable hideout for Robin and his band."
+          - "The legendary centerpiece is the 'Major Oak', a massive ancient tree estimated to be over 800 to 1,000 years old."
+          - "According to local legend, Robin's Merry Men used the hollow interior of the Major Oak as their secret meeting place."
+          - "The forest provided food, shelter, and perfect terrain for setting ambushes on wealthy travelers."
+      - title: The Merry Men
+        points:
+          - "The Merry Men were Robin's loyal band of fellow outlaws, yeomen, and fugitives living hidden in the woods."
+          - "They swore a sacred oath to protect the poor, women, and the oppressed while never harming honest working people."
+          - "All members wore matching clothes dyed in Lincoln green to blend seamlessly with the forest canopy."
+          - "They used distinctive bugle horn calls to signal one another and summon reinforcements across the trees."
+      - title: Little John
+        points:
+          - "Little John was Robin Hood's seven-foot-tall chief lieutenant and most trusted companion."
+          - "His ironic name was given as a humorous joke because he was physically the largest and strongest man in the forest."
+          - "He first met Robin on a narrow footbridge over a stream, where the two fought a spirited duel with wooden quarterstaffs."
+          - "After knocking Robin into the water, Little John earned Robin's respect and joined the Merry Men immediately."
+      - title: Maid Marian
+        points:
+          - "Maid Marian is the noblewoman, fierce companion, and true love of Robin Hood."
+          - "Unlike traditional damsels in distress, early folk plays and ballads portrayed her as a brave archer and swordswoman."
+          - "She frequently acted as a secret inside spy within Nottingham Castle, warning the Merry Men of impending raids."
+          - "Her presence highlighted themes of loyalty, courtly romance, and justice within the outlaw community."
+      - title: Friar Tuck & Will Scarlet
+        points:
+          - "Friar Tuck was a jovial, rotund friar who provided spiritual guidance, good humor, and surprising combat skills with a sword."
+          - "Robin first met Tuck by forcing the friar to carry him across a river, only for Tuck to demand Robin carry him back!"
+          - "Will Scarlet was a dashing, hot-tempered swordsman and Robin's cousin, known for wearing fine scarlet silk."
+          - "Together with Alan-a-Dale the wandering minstrel, they added song, humor, and heart to the forest band."
+      - title: The Sheriff of Nottingham & Prince John
+        points:
+          - "The Sheriff of Nottingham was Robin Hood's primary arch-enemy, representing greed, tyranny, and corrupt local tax collection."
+          - "The stories are often set during the reign of King Richard the Lionheart, while his cruel brother Prince John ruled in his absence."
+          - "The Sheriff constantly devised traps to capture Robin, but was consistently outsmarted and humiliated by the outlaws."
+          - "When King Richard finally returned in disguise from the Crusades, he pardoned Robin and restored his lands."
+      - title: The Golden Arrow Contest
+        points:
+          - "The Sheriff of Nottingham hosted a grand archery tournament offering a solid golden arrow as bait to trap Robin Hood."
+          - "Despite the obvious danger, Robin attended in disguise, wearing a ragged tattered cloak and eyepatch."
+          - "In the dramatic finale, Robin split his rival's bullseye arrow down the middle to win the prized golden arrow."
+          - "Robin escaped back into Sherwood Forest and famously sent an arrow carrying a thank-you note into the Sheriff's banquet."
+    trivia:
+      - type: multiple_choice
+        question: "What color clothing did Robin Hood and his Merry Men famously wear to blend into the forest?"
+        options: ["Royal Purple", "Lincoln Green", "Midnight Blue", "Crimson Red"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of Robin Hood's primary arch-nemesis who enforced corrupt taxes?"
+        answer: "The Sheriff of Nottingham"
+      - type: multiple_choice
+        question: "Why was Robin's second-in-command named 'Little John'?"
+        options: ["He was a tiny child", "It was an ironic joke because he was seven feet tall", "He was younger than his brother John", "He had small feet"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the famous 800-year-old tree in Sherwood Forest where the Merry Men gathered?"
+        answer: "The Major Oak"
+      - type: multiple_choice
+        question: "What weapon did Robin and Little John use during their famous duel on the narrow footbridge?"
+        options: ["Broadswords", "Wooden quarterstaffs", "Longbows", "Daggers"]
+        correct: 1
+      - type: single_qa
+        question: "What prize did the Sheriff offer in the archery tournament to lure Robin Hood out of hiding?"
+        answer: "A golden arrow"
+      - type: multiple_choice
+        question: "Which English king was abroad on the Crusades during the traditional Robin Hood legends?"
+        options: ["King Henry VIII", "King Richard the Lionheart", "King George III", "King William the Conqueror"]
+        correct: 1
+      - type: single_qa
+        question: "What did Robin Hood do to his rival's arrow during the final shot of the archery tournament?"
+        answer: "He split it in half"
+      - type: multiple_choice
+        question: "Who was the jovial, sword-fighting friar who joined Robin Hood's Merry Men?"
+        options: ["Friar Tuck", "Friar Laurence", "Friar Francis", "Friar John"]
+        correct: 0
+      - type: single_qa
+        question: "What county in England is home to the historic Sherwood Forest?"
+        answer: "Nottinghamshire"
+      - type: multiple_choice
+        question: "What was Maid Marian's secret role in many traditional Robin Hood tales?"
+        options: ["An inside spy in Nottingham Castle", "The Sheriff's daughter", "A pirate captain", "The court jester"]
+        correct: 0
+      - type: single_qa
+        question: "What musical instrument did the minstrel Alan-a-Dale play for the Merry Men?"
+        answer: "Lute (or Harp)"
+      - type: multiple_choice
+        question: "What core motto defined Robin Hood's outlaw campaign across Sherwood Forest?"
+        options: ["Power to the strongest", "Rob from the rich to give to the poor", "Gold above all", "Silence is golden"]
+        correct: 1
+      - type: single_qa
+        question: "What did the Merry Men use to communicate across vast distances in Sherwood Forest?"
+        answer: "Bugle horn calls"
+      - type: multiple_choice
+        question: "What color clothes was Robin's hot-tempered swordsman cousin Will Scarlet known for wearing?"
+        options: ["Scarlet Red", "Forest Green", "Golden Yellow", "Pitch Black"]
+        correct: 0
+      - type: single_qa
+        question: "How did King Richard the Lionheart travel through Sherwood Forest when he first met Robin upon his return?"
+        answer: "In disguise as a monk (or traveler)"
+
+  - id: story_of_mulan
+    title: The Story of Mulan
+    description: >
+      Discover the legendary courage of Hua Mulan! Explore the ancient Chinese ballad of filial piety, 
+      stealth, battlefield bravery, and breaking societal expectations.
+    cards:
+      - title: The Ballad of Mulan (Ode to Mulan)
+        points:
+          - "The story of Mulan originated as a folk song ('Ballad of Mulan') composed in China during the Northern Wei dynasty (386–534 CE)."
+          - "The poem describes a young woman who buys a horse and rides out to war disguised as a man to spare her aging father."
+          - "The original ballad contains only 392 Chinese characters, yet it became one of the most famous literary legends in Chinese history."
+          - "For over a millennium, it has been recited as an inspiring masterpiece of filial devotion and selfless courage."
+      - title: Filial Piety (Xiao)
+        points:
+          - "Filial piety (Xiao) is a core Confucian virtue emphasizing deep love, respect, and duty toward one's parents and ancestors."
+          - "When the Emperor issues conscription orders demanding one man from every household, Mulan's elderly father is drafted."
+          - "Knowing her father is too frail to survive and her younger brother is only a child, Mulan makes the ultimate sacrifice."
+          - "Her choice to secretly take her father's place was seen as the supreme demonstration of filial love."
+      - title: The Four Markets
+        points:
+          - "In the famous opening stanza of the ballad, Mulan prepares for war by visiting four distinct city markets in a single day."
+          - "At the East market she buys a spirited steed; at the West market a saddle and blanket."
+          - "At the South market she purchases a bridle; at the North market she gets a long whip."
+          - "This rhythmic sequence highlights her independent determination and swift transition from domestic life to a soldier."
+      - title: Twelve Years on the Battlefield
+        points:
+          - "Mulan fought on the harsh northern frontiers for twelve long years, enduring freezing winters and fierce desert battles."
+          - "She proved to be a brilliant tactician, master archer, and fearless cavalry commander, rising through the military ranks."
+          - "Despite living in close quarters with fellow soldiers for over a decade, no one ever discovered her true identity."
+          - "The ballad poetically notes: 'Warriors die in a hundred battles, the brave hero returns after ten years.'"
+      - title: Refusing the Imperial Reward
+        points:
+          - "Upon returning victorious to the imperial capital, the Son of Heaven (the Emperor) offers Mulan high government office and gold."
+          - "Unlike typical ambitious generals, Mulan politely declines all official posts, wealth, and prestigious titles."
+          - "She asks only for a swift camel (or fine horse) so she can return home immediately to care for her parents."
+          - "Her humility proved that she fought purely out of love for her family rather than a desire for fame or political power."
+      - title: The Family Reunion & Reveal
+        points:
+          - "When Mulan arrives home, her joyous parents support each other outside the town gates, and her sister puts on fine clothes."
+          - "Her younger brother sharpens a knife to prepare a celebratory feast of pig and sheep."
+          - "Mulan goes to her room, takes off her armor, puts on her old dresses, combs her hair by the window, and applies yellow face powder."
+          - "When she steps out to greet her visiting army comrades, they are completely stunned to learn their fierce commander was a woman!"
+      - title: The Metaphor of the Two Rabbits
+        points:
+          - "The Ballad of Mulan concludes with one of the most famous poetic metaphors in world literature regarding gender equality."
+          - "The poem notes: 'The male rabbit hops around restlessly, while the female rabbit has squinting eyes.'"
+          - "'When two rabbits run side by side across the field, who can tell which one is male and which is female?'"
+          - "This memorable closing line celebrates that true courage and capability know no gender barriers."
+      - title: Cultural Legacy & Adaptations
+        points:
+          - "During the Ming and Qing dynasties, playwrights added the surname 'Hua' (meaning Flower) and expanded her story in plays and novels."
+          - "A real crater on the planet Venus was named 'Mulan' by the International Astronomical Union in her honor."
+          - "Disney's 1998 animated movie introduced Mulan to modern global audiences, featuring iconic characters like Mushu."
+          - "Statues and memorials dedicated to Hua Mulan stand across China, celebrating her as an eternal national heroine."
+    trivia:
+      - type: multiple_choice
+        question: "During which Chinese historical era was the original 'Ballad of Mulan' composed?"
+        options: ["Tang Dynasty", "Northern Wei Dynasty", "Ming Dynasty", "Han Dynasty"]
+        correct: 1
+      - type: single_qa
+        question: "What core Confucian virtue of devotion and respect to one's parents motivated Mulan to take her father's place?"
+        answer: "Filial piety (Xiao)"
+      - type: multiple_choice
+        question: "For how many years did Mulan serve on the battlefield according to the original poem?"
+        options: ["3 years", "7 years", "12 years", "20 years"]
+        correct: 2
+      - type: single_qa
+        question: "What animal metaphor concludes the Ballad of Mulan to show men and women can fight with equal skill?"
+        answer: "Two running rabbits (hares)"
+      - type: multiple_choice
+        question: "What reward did Mulan ask from the Emperor after winning the war?"
+        options: ["A chest of pure gold", "A high government ministry", "A swift steed/camel to ride home", "A grand palace"]
+        correct: 2
+      - type: single_qa
+        question: "What does Mulan's traditional Chinese family surname 'Hua' translate to in English?"
+        answer: "Flower (or Blossom)"
+      - type: multiple_choice
+        question: "Why was Mulan's father unable to fight when the conscription notice arrived?"
+        options: ["He was elderly and frail", "He was in prison", "He was the town governor", "He had lost his sword"]
+        correct: 0
+      - type: single_qa
+        question: "What did Mulan's comrades feel when she finally stepped out in her traditional dress after 12 years of war?"
+        answer: "Completely stunned (shocked)"
+      - type: multiple_choice
+        question: "What item did Mulan buy at the East market before heading to the battlefield?"
+        options: ["A fine horse (spirited steed)", "A long sword", "A bronze helmet", "A silk flag"]
+        correct: 0
+      - type: single_qa
+        question: "What astronomical feature on the planet Venus is named in honor of Mulan?"
+        answer: "A crater"
+      - type: multiple_choice
+        question: "Why couldn't Mulan's younger brother go to war in their father's place?"
+        options: ["He was only a young child", "He was traveling abroad", "He refused to go", "He was a monk"]
+        correct: 0
+      - type: single_qa
+        question: "What celebratory animals did Mulan's brother prepare for the feast when she returned home?"
+        answer: "Pig and sheep"
+      - type: multiple_choice
+        question: "How many Chinese characters did the original, ancient 'Ballad of Mulan' contain?"
+        options: ["392 characters", "1,500 characters", "50 characters", "10,000 characters"]
+        correct: 0
+      - type: single_qa
+        question: "What weapon did Mulan master to lead cavalry forces in the harsh northern borderlands?"
+        answer: "Bow and arrow (Archery)"
+      - type: multiple_choice
+        question: "What did Mulan apply to her face by the window upon returning to her family home?"
+        options: ["Yellow cosmetic powder", "Red war paint", "Mud camouflage", "Black charcoal"]
+        correct: 0
+      - type: single_qa
+        question: "Against which northern threats did the Northern Wei forces fight along the frontier in Mulan's era?"
+        answer: "Rouran (or nomadic invaders)"
+
+  - id: paul_bunyan_tall_tales
+    title: The Tale of Paul Bunyan & Tall Tales
+    description: >
+      Experience the exaggerated charm of American Tall Tales! Discover the roaring laughter, 
+      giant lumberjacks, blue oxen, and larger-than-life heroes of the American frontier.
+    cards:
+      - title: Paul Bunyan the Giant Lumberjack
+        points:
+          - "Paul Bunyan is a colossal mythical giant lumberjack in American folklore who cleared vast forests across North America."
+          - "Legend says it took five giant storks working together to deliver baby Paul to his parents in Maine."
+          - "As an infant, when Paul rolled over in his sleep, he caused earthquakes that knocked down entire pine forests."
+          - "He wielded an axe with a handle made from a full hickory tree and could fell seven trees with a single swing."
+      - title: Babe the Blue Ox
+        points:
+          - "During the legendary 'Winter of the Blue Snow', Paul discovered a tiny orphaned calf frozen blue in a snowdrift."
+          - "Paul took the calf into his cabin and nursed it back to health, naming him 'Babe the Blue Ox'."
+          - "Babe grew so gargantuan that the distance between his horns measured forty-two ax handles and a plug of tobacco!"
+          - "Babe was strong enough to haul entire logging camps and could pull crooked logging roads straight with a single tug."
+      - title: The Giant Logging Camp & Flapjack Kitchen
+        points:
+          - "Paul's logging camp was so massive that cooks had to strap sides of bacon to their boots and roller-skate across the griddle to grease it!"
+          - "The camp's pancake flippers used giant snow shovels to flip flapjacks, which were mixed in a converted concrete mixer."
+          - "The dinner horn was so long that only Paul had enough lung power to blow it, and the sound blew down ten acres of trees."
+          - "Hot coffee was pumped into giant wooden tank cars and delivered to hungry lumberjacks via miniature locomotives."
+      - title: Carving American Geography
+        points:
+          - "Tall tales credit Paul and Babe with shaping many of America's most famous natural geographic landmarks."
+          - "The 10,000 Lakes of Minnesota were created by Babe the Blue Ox's giant footprints filling with rainwater."
+          - "The Grand Canyon was supposedly formed when Paul carelessly dragged his heavy pickaxe behind him while walking."
+          - "Paul piled up extra dirt while clearing a logging driveway, which created the Cascade and Rocky Mountain ranges."
+      - title: Pecos Bill & the Wild West
+        points:
+          - "Pecos Bill was an exaggerated cowboy hero of the American Southwest who was raised by a pack of wild coyotes."
+          - "He rode a fierce mountain lion, used a live 10-foot rattlesnake as a lasso, and invented the lasso and branding iron."
+          - "During a severe drought, Pecos Bill roped a cyclone (tornado) and rode it like a bucking bronco across Texas and Oklahoma."
+          - "When the tornado finally crashed in California, the impact carved out the Grand Canyon and Death Valley."
+      - title: John Henry the Steel-Driving Man
+        points:
+          - "John Henry was a legendary African American folk hero renowned as the strongest railway steel-driver in the country."
+          - "Working on the Big Bend Tunnel in West Virginia in the 1870s, he hammered steel drills into rock to set explosives."
+          - "When the railroad company introduced a steam-powered drill, John Henry challenged the machine to a legendary contest."
+          - "With a hammer in each hand, John Henry beat the steam drill, but collapsed and died with his hammer in his hand, symbolizing the triumph of the human spirit."
+      - title: Johnny Appleseed
+        points:
+          - "Based on the real historical figure John Chapman (1774–1845), Johnny Appleseed was an eccentric, gentle pioneer."
+          - "He walked thousands of miles barefoot across Ohio, Indiana, and Illinois, planting apple orchards ahead of frontier settlers."
+          - "Folklore famously depicts him wearing a tin cooking pot on his head as a hat and carrying a sack of apple seeds."
+          - "He was a devout pacifist and animal lover who refused to harm a fly, living in complete harmony with nature and Native tribes."
+      - title: The Spirit of American Tall Tales
+        points:
+          - "Tall tales flourished in 19th-century frontier work camps among loggers, miners, sailors, and railroad builders."
+          - "They relied on wild hyperbole, tongue-in-cheek deadpan humor, and impossible feats of strength and engineering."
+          - "These stories celebrated pioneer resilience, teamwork, and humor when confronting the intimidating, untamed wilderness."
+          - "They helped forge a distinctly American folklore tradition blending historical grit with boundless imagination."
+    trivia:
+      - type: multiple_choice
+        question: "What color was Paul Bunyan's giant faithful companion, Babe the Ox?"
+        options: ["Fiery Red", "Bright Blue", "Golden Yellow", "Snow White"]
+        correct: 1
+      - type: single_qa
+        question: "What geographic feature in Minnesota was supposedly created by Babe the Blue Ox's giant footprints?"
+        answer: "The 10,000 Lakes"
+      - type: multiple_choice
+        question: "How did the cooks in Paul Bunyan's camp grease the colossal pancake griddle?"
+        options: ["Poured butter from airplanes", "Strapped sides of bacon to their shoes and roller-skated", "Sprayed it with fire hoses", "Used steam-powered mops"]
+        correct: 1
+      - type: single_qa
+        question: "According to tall tales, how was the Grand Canyon formed by Paul Bunyan?"
+        answer: "Dragging his pickaxe (or axe) behind him"
+      - type: multiple_choice
+        question: "What extreme weather phenomenon did cowboy folk hero Pecos Bill rope and ride like a horse?"
+        options: ["A blizzard", "A tornado (cyclone)", "A tsunami", "A heatwave"]
+        correct: 1
+      - type: single_qa
+        question: "What machine did steel-driving folk hero John Henry race against and defeat with his sledgehammers?"
+        answer: "A steam-powered drill (steam drill)"
+      - type: multiple_choice
+        question: "What unusual item did pioneer folk legend Johnny Appleseed famously wear as a hat?"
+        options: ["A tin cooking pot", "A hollowed-out pumpkin", "A raccoon cap", "A wooden bucket"]
+        correct: 0
+      - type: single_qa
+        question: "What real-world historical figure was the basis for the gentle legend of Johnny Appleseed?"
+        answer: "John Chapman"
+      - type: multiple_choice
+        question: "In what US state was baby Paul Bunyan said to have been delivered by five giant storks?"
+        options: ["Texas", "Maine", "California", "Florida"]
+        correct: 1
+      - type: single_qa
+        question: "During which mythical weather event did Paul Bunyan find and rescue baby Babe the Ox?"
+        answer: "The Winter of the Blue Snow"
+      - type: multiple_choice
+        question: "What dangerous animal did Pecos Bill use as a lasso rope in the Wild West?"
+        options: ["A rattlesnake", "An electric eel", "A mountain lion's tail", "A grizzly bear"]
+        correct: 0
+      - type: single_qa
+        question: "What tunnel project in West Virginia was the setting for John Henry's epic race against the machine?"
+        answer: "The Big Bend Tunnel"
+      - type: multiple_choice
+        question: "What literary device is the defining hallmark of American frontier tall tales?"
+        options: ["Tragic irony", "Wild hyperbole and exaggeration", "Rhyming iambic pentameter", "Strict historical realism"]
+        correct: 1
+      - type: single_qa
+        question: "How did Paul Bunyan's cooks mix the batter for the millions of pancakes required by loggers?"
+        answer: "In a converted concrete mixer"
+      - type: multiple_choice
+        question: "What pack of wild animals raised Pecos Bill after he fell out of his family's covered wagon?"
+        options: ["Coyotes", "Grizzly bears", "Timber wolves", "Prairie dogs"]
+        correct: 0
+      - type: single_qa
+        question: "What was Johnny Appleseed's attitude toward wild animals and nature?"
+        answer: "Pacifist / Complete harmony and kindness"
+
+  - id: anansi_the_spider
+    title: Clever Tales of Anansi the Spider
+    description: >
+      Enter the witty, colorful world of West African and Caribbean folklore! 
+      Meet Anansi the Spider, the ultimate trickster god who uses sharp intellect to outsmart giants and buy the world's stories.
+    cards:
+      - title: Anansi the Trickster God
+        points:
+          - "Anansi (also known as Kwaku Anansi) originated in the rich oral traditions of the Ashanti people of modern-day Ghana."
+          - "He is a shapeshifting trickster who can appear as a spider, a man with eight limbs, or a combination of both."
+          - "Physically small and physically vulnerable, Anansi triumphs over much larger and stronger animals solely through sharp wit."
+          - "He is celebrated as the Master of Stories, representing human resourcefulness, survival, and brain over brawn."
+      - title: Buying the World's Stories from Nyame
+        points:
+          - "In the beginning, all the stories of the world were kept locked away in a golden box by Nyame, the Sky God."
+          - "Anansi asked to buy the stories, but Nyame demanded an impossible price: capture four of the most dangerous creatures on Earth."
+          - "Nyame required: Osebo the leopard-with-teeth-like-spears, Onini the python, the Mmoboro hornets, and Mmoatia the invisible fairy."
+          - "While powerful warriors failed, Anansi accepted the impossible challenge using only cunning strategy."
+      - title: How Anansi Captured the Four Creatures
+        points:
+          - "To catch the Mmoboro hornets, Anansi poured water over a leaf like rain and convinced them to fly into his dry calabash gourd."
+          - "To capture Onini the python, he argued that the snake wasn't as long as a bamboo pole, tricking the python into lying down and tying him up."
+          - "To catch Osebo the leopard, Anansi dug a deep pit trap, then offered to pull the trapped leopard out with spider silk vines that tied him fast."
+          - "Nyame honored the bargain, opening the golden box and scattering the stories across the earth, creating all human folklore."
+      - title: Why Spiders Have Thin Waists
+        points:
+          - "In a humorous tale, Anansi smelled delicious food cooking in two neighboring villages on the same afternoon."
+          - "Unable to decide which feast to attend, he tied a web string around his waist and gave an end to each village, telling them to pull when ready."
+          - "Both villages finished cooking at the exact same moment and pulled their strings simultaneously with all their might!"
+          - "The competing tug-of-war squeezed Anansi's waist tight, which is why spiders have tiny, narrow waists to this day."
+      - title: Anansi and the Pot of Wisdom
+        points:
+          - "Anansi collected all the wisdom in the world into a clay pot, intending to hoard it all for himself."
+          - "He tried to climb a tall palm tree to hide the pot in the branches, tying it to his chest, but it kept bumping against the trunk."
+          - "His young son Ntikuma watched and laughed, asking: 'Father, why don't you tie the pot to your back so your arms are free?'"
+          - "Realizing his young son already had wisdom he didn't, Anansi hurled the pot down in frustration, shattering it and spreading wisdom to everyone."
+      - title: Anansi and the Five Yams
+        points:
+          - "A witch made a curse that anyone who spoke the word 'Five' would immediately fall fast asleep."
+          - "Anansi made five piles of yams by the road and tricked hungry passing animals into counting them so he could steal their lunches."
+          - "When clever Mrs. Guinea Fowl came by, she counted: 'One, two, three, four, and the pile Anansi is sitting on!'"
+          - "Infuriated, Anansi shouted: 'No, that's not how you count! One, two, three, four, FIVE!' and promptly fell asleep himself."
+      - title: The Journey to the Caribbean (Aunt Nancy)
+        points:
+          - "During the transatlantic slave trade, enslaved Ashanti people carried the beloved stories of Anansi in their memories across the ocean."
+          - "In Jamaica, the Caribbean, and the American South, Anansi transformed into 'Aunt Nancy', 'Compair Anansi', or 'Br'er Rabbit'."
+          - "The stories served as powerful symbols of resistance, teaching that an enslaved, oppressed person could outwit powerful oppressors."
+          - "Anansi stories remain a cornerstone of folklore across Jamaica, Suriname, Trinidad, and the American Gullah culture."
+      - title: Anansi's Enduring Legacy
+        points:
+          - "Anansi is celebrated in international literature, appearing in modern fantasy works by authors like Neil Gaiman (American Gods / Anansi Boys)."
+          - "In West African storytelling, folktales are still commonly called 'Anansesem' ('spider stories') regardless of who the story is about."
+          - "His tales continue to teach listeners that clever thinking and humor can overcome any obstacle, no matter how small you are."
+          - "Anansi remains an immortal cultural ambassador of African wit, survival, and imaginative power."
+    trivia:
+      - type: multiple_choice
+        question: "From the traditional folklore of which African culture did Anansi the Spider originate?"
+        options: ["Ashanti people of Ghana", "Zulu people of South Africa", "Masai people of Kenya", "Berber people of Morocco"]
+        correct: 0
+      - type: single_qa
+        question: "What is the name of the supreme West African Sky God who kept all the world's stories in a golden box?"
+        answer: "Nyame"
+      - type: multiple_choice
+        question: "How did Anansi trick Onini the giant python to capture him for the Sky God?"
+        options: ["Challenged him to measure his length against a bamboo pole", "Offered him a bowl of poisoned soup", "Trapped him in a metal cage", "Disguised himself as an eagle"]
+        correct: 0
+      - type: single_qa
+        question: "What did Nyame give Anansi after he successfully captured the four dangerous creatures?"
+        answer: "The golden box of stories (All the world's stories)"
+      - type: multiple_choice
+        question: "Why do spiders have tiny, narrow waists according to the humorous Anansi legend?"
+        options: ["Two villages pulled webs tied to his waist simultaneously during a feast", "He got stuck squeezing into a beehive", "He was born under a narrow leaf", "The Sky God stepped on him"]
+        correct: 0
+      - type: single_qa
+        question: "What did Anansi collect inside a clay pot before his son taught him that wisdom belongs to everyone?"
+        answer: "All the wisdom in the world"
+      - type: multiple_choice
+        question: "In Caribbean and Jamaican folklore, what adapted name is sometimes given to Anansi the trickster?"
+        options: ["Aunt Nancy (or Compair Anansi)", "King Arthur", "Captain Hook", "Baron Samedi"]
+        correct: 0
+      - type: single_qa
+        question: "What general term in Ghana is used for all folktales, literally translating to 'spider stories'?"
+        answer: "Anansesem"
+      - type: multiple_choice
+        question: "How did Anansi capture the stinging Mmoboro hornets for the Sky God?"
+        options: ["Tricked them into a dry gourd by pretending it was raining", "Froze them with snow", "Swatted them with a palm leaf", "Lured them into a beehive"]
+        correct: 0
+      - type: single_qa
+        question: "What clever bird outsmarted Anansi's yam counting trap by refusing to say the cursed number 'Five'?"
+        answer: "Mrs. Guinea Fowl"
+      - type: multiple_choice
+        question: "What physical characteristic describes Anansi's unique shapeshifting appearance?"
+        options: ["A spider with a human face, or a man with eight limbs", "A giant flying dragon", "A golden serpent", "A two-headed lion"]
+        correct: 0
+      - type: single_qa
+        question: "Who was Anansi's wise young son who gave him advice about carrying the pot of wisdom on his back?"
+        answer: "Ntikuma"
+      - type: multiple_choice
+        question: "Which American and Caribbean folklore character is directly derived from the West African Anansi tradition?"
+        options: ["Br'er Rabbit", "Paul Bunyan", "Pecos Bill", "Davy Crockett"]
+        correct: 0
+      - type: single_qa
+        question: "What did Anansi dig to capture Osebo the leopard-with-teeth-like-spears?"
+        answer: "A deep pit trap"
+      - type: multiple_choice
+        question: "Why did enslaved Africans preserve and celebrate Anansi stories during the transatlantic slave trade?"
+        options: ["As a symbol of surviving and outsmarting powerful oppressors", "To learn agriculture", "Because it was required by ships", "To predict the weather"]
+        correct: 0
+      - type: single_qa
+        question: "What author featured Anansi as a central character in modern novels like 'Anansi Boys' and 'American Gods'?"
+        answer: "Neil Gaiman"
+
+  - id: arabian_nights_monkey_king
+    title: Tales of 1,001 Nights & The Monkey King
+    description: >
+      Embark on enchanted adventures across ancient Arabia and imperial China! 
+      From magical genies and flying carpets to Sun Wukong's 72 transformations and cloud somersaults.
+    cards:
+      - title: Scheherazade & 1,001 Nights
+        points:
+          - "One Thousand and One Nights (The Arabian Nights) is a legendary Middle Eastern frame story collection from the Islamic Golden Age."
+          - "The clever Queen Scheherazade married the bitter King Shahryar, who executed each new wife after one day."
+          - "To survive, Scheherazade told an enthralling tale every night, deliberately pausing on a cliffhanger before dawn."
+          - "Fascinated, the king spared her life day after day for 1,001 nights, eventually falling in love with her wisdom and canceling the decree."
+      - title: Aladdin and the Wonderful Lamp
+        points:
+          - "Aladdin is a poor young street urchin recruited by an evil sorcerer to retrieve a magical oil lamp from an enchanted cave."
+          - "Trapped inside, Aladdin rubs the lamp, releasing a mighty Genie bound to grant the wishes of whoever rubs it."
+          - "With the Genie's help, Aladdin wins the heart of Princess Badroulbadour (Jasmine) and defeats the deceitful sorcerer."
+          - "Interestingly, original written versions set Aladdin's story in a Chinese city with Arabic cultural customs."
+      - title: Ali Baba and the Forty Thieves
+        points:
+          - "Ali Baba is a poor woodcutter who secretly witnesses a band of forty thieves opening a treasure cave with magic words: 'Open Sesame!'."
+          - "After the thieves leave, Ali Baba enters the cave and takes bags of gold coins to support his impoverished family."
+          - "The cunning thieves track Ali Baba down, hiding inside large oil jars to stage a surprise night attack."
+          - "Ali Baba's sharp-witted enslaved servant, Morgiana, discovers the plot and saves the household by neutralizing the thieves."
+      - title: Sinbad the Sailor
+        points:
+          - "Sinbad of Baghdad is a legendary sailor who embarks on seven dangerous voyages across the seas of Africa and Asia."
+          - "During his epic voyages, he encounters giant mythical Roc birds, cyclopean giants, magnetic islands, and sea monsters."
+          - "Through resourcefulness, resilience, and sheer luck, Sinbad survives every shipwreck and returns home unimaginably wealthy."
+          - "His adventures reflect the daring real-world maritime trade routes pioneered by Arab and Persian merchants across the Indian Ocean."
+      - title: "Sun Wukong: The Monkey King"
+        points:
+          - "Sun Wukong (The Monkey King) was born from a magical stone atop the Mountain of Flowers and Fruit."
+          - "He learned Taoist martial arts, mastered the 72 Earthly Transformations, and achieved multiple forms of immortality."
+          - "He broke into the Heavenly Kingdom, defeating the armies of heaven with mischievous, fearless defiance."
+          - "He is the central hero of Wu Cheng'en's 16th-century classical Chinese epic novel, 'Journey to the West'."
+      - title: The Ruyi Jingu Bang & Cloud Somersault
+        points:
+          - "Sun Wukong's primary weapon is the Ruyi Jingu Bang, a magical iron pillar obtained from the Dragon King of the Eastern Sea."
+          - "The staff weighs over 17,500 pounds, but can magically shrink to the size of a sewing needle to fit comfortably behind his ear!"
+          - "He also mastered the 'Jindouyun' (Cloud Somersault), allowing him to leap an astonishing 108,000 li (33,500 miles) in a single flip."
+          - "His hairs could be plucked and blown to transform into thousands of clone monkeys or various weapons in combat."
+      - title: The Journey to the West
+        points:
+          - "After causing havoc in Heaven, the Buddha trapped Sun Wukong under the Five Elements Mountain for 500 years."
+          - "He was released by the Buddhist monk Tang Sanzang on the condition that he protect the monk on a pilgrimage to India for sacred scriptures."
+          - "Sun Wukong was joined by fellow disciples Zhu Bajie (Pigsy) and Sha Wujing (Sandy), battling hundreds of demons along the Silk Road."
+          - "To keep the mischievous Monkey King under control, Tang Sanzang used a magical golden headband that tightened when a chant was recited."
+      - title: Global Influence & Modern Pop Culture
+        points:
+          - "Sun Wukong inspired legendary modern characters across global anime and gaming, most famously Son Goku in Akira Toriyama's Dragon Ball."
+          - "The Arabian Nights introduced iconic tropes into global culture, including flying carpets, magical lamps, genies, and the phrase 'Open Sesame'."
+          - "Both mythologies celebrate that clever wit, indomitable spirit, and loyalty can conquer supernatural odds and authoritarian power."
+          - "They remain two of the most widely adapted storytelling traditions in world cinema, theater, and video games."
+    trivia:
+      - type: multiple_choice
+        question: "How did Queen Scheherazade avoid being executed by King Shahryar in 'One Thousand and One Nights'?"
+        options: ["Defeated him in a sword duel", "Told an unfinished cliffhanger story every night", "Offered him a bag of magical rubies", "Flew away on a magic carpet"]
+        correct: 1
+      - type: single_qa
+        question: "What magic words opened the secret cave entrance in the tale of Ali Baba and the Forty Thieves?"
+        answer: "Open Sesame"
+      - type: multiple_choice
+        question: "How many dangerous ocean voyages did Sinbad the Sailor complete in the Arabian Nights?"
+        options: ["3 voyages", "7 voyages", "12 voyages", "40 voyages"]
+        correct: 1
+      - type: single_qa
+        question: "Who was the clever servant in Ali Baba's household who discovered the thieves hiding inside oil jars?"
+        answer: "Morgiana"
+      - type: multiple_choice
+        question: "What classical 16th-century Chinese epic novel stars Sun Wukong, the Monkey King?"
+        options: ["Romance of the Three Kingdoms", "Journey to the West", "Water Margin", "Dream of the Red Chamber"]
+        correct: 1
+      - type: single_qa
+        question: "From what natural object was Sun Wukong born atop the Mountain of Flowers and Fruit?"
+        answer: "A magical stone (rock)"
+      - type: multiple_choice
+        question: "What unique ability does Sun Wukong's magical staff (Ruyi Jingu Bang) possess?"
+        options: ["It can shrink to a needle or grow to touch the sky", "It shoots lightning bolts", "It turns water into tea", "It makes the user invisible"]
+        correct: 0
+      - type: single_qa
+        question: "Where did Sun Wukong conveniently store his shrunk magical staff when not in battle?"
+        answer: "Inside his ear (behind his ear)"
+      - type: multiple_choice
+        question: "How many earthly transformations did Sun Wukong master through his Taoist training?"
+        options: ["7 transformations", "12 transformations", "72 transformations", "108 transformations"]
+        correct: 2
+      - type: single_qa
+        question: "How far could Sun Wukong leap in a single Cloud Somersault?"
+        answer: "108,000 li (approx. 33,500 miles)"
+      - type: multiple_choice
+        question: "How long was Sun Wukong trapped beneath the Five Elements Mountain before being freed by the monk Tang Sanzang?"
+        options: ["100 years", "500 years", "1,000 years", "50 years"]
+        correct: 1
+      - type: single_qa
+        question: "What magical item on Sun Wukong's head was used by his master to discipline him with a headache chant?"
+        answer: "A golden headband (circlet)"
+      - type: multiple_choice
+        question: "Which legendary anime and manga character was directly inspired by Sun Wukong, the Monkey King?"
+        options: ["Son Goku (Dragon Ball)", "Naruto Uzumaki", "Monkey D. Luffy", "Sailor Moon"]
+        correct: 0
+      - type: single_qa
+        question: "What giant mythical bird did Sinbad the Sailor encounter on his legendary island voyages?"
+        answer: "The Roc"
+      - type: multiple_choice
+        question: "In early written manuscripts of 'Aladdin', what country was the story originally set in?"
+        options: ["Egypt", "China", "Persia", "India"]
+        correct: 1
+      - type: single_qa
+        question: "What pig-like mythical companion joined Sun Wukong and monk Tang Sanzang on their pilgrimage?"
+        answer: "Zhu Bajie (Pigsy)"
