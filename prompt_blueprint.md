@@ -23,6 +23,16 @@ You are an educational content creator for a family road-trip trivia app. For th
 defined under "YOUR INPUT", produce the SAME topic in BOTH English and Hebrew — two
 strictly-formatted YAML datasets — followed by a short summary.
 
+V0:
+===== YOUR INPUT =====
+TOPIC:            (REQUIRED — the only field you must fill in. e.g. US States)
+SUBCATEGORIES:    (optional — the items to make cards for. LEAVE BLANK and you choose a good set.)
+EXTRA CATEGORIES: (optional — extra themes beyond "Important Facts". LEAVE BLANK and you decide.)
+AUDIENCE:         (optional — topic default: "family" (default) or "adult")
+NOTES:            (optional — any other guidance: focus, tone, how many items, etc.)
+======================
+
+V1: Family fun
 ===== YOUR INPUT =====
 TOPIC:            (REQUIRED — the only field you must fill in. e.g. US States)
 SUBCATEGORIES:    (optional — the items to make cards for. LEAVE BLANK and you choose a good set.)
