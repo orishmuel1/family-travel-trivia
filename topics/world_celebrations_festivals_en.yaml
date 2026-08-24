@@ -1,0 +1,568 @@
+id: world_celebrations_festivals_en
+title: World Celebrations & Festivals
+description: >
+  Embark on a joyful global journey through humanity's most vibrant, colorful, and surprising celebrations! 
+  From Rio's samba rhythms and India's powder-tossing Holi to Spanish tomato battles and festive New Year 
+  traditions across cultures, test your family's knowledge of world festivities.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      Fascinating origins, universal symbols, and cultural milestones behind humanity's favorite celebrations. 
+      Read these cards together aloud before testing your knowledge in the trivia round!
+    cards:
+      - title: Ancient Solstices & Seasonal Cycles
+        points:
+          - "Many of the world's oldest celebrations originated as astronomical markers for the winter solstice, summer solstice, and spring/autumn equinoxes."
+          - "Ancient agrarian societies celebrated solstices to track crop planting, harvest abundance, and the returning light of the sun."
+          - "Monuments like Stonehenge in England and Newgrange in Ireland were engineered thousands of years ago to align with solstice sunrises."
+          - "Winter festivals like Yule, Saturnalia, and Dongzhi celebrated warmth, community feasting, and hope during the darkest days of the year."
+      - title: The Invention & Magic of Fireworks
+        points:
+          - "Fireworks were invented in ancient China during the Song Dynasty (around 9th–10th century) when alchemists mixed potassium nitrate, sulfur, and charcoal."
+          - "Gunpowder stuffed into bamboo stalks was originally ignited to produce loud bangs ('bianpao') to scare away evil spirits like the mythical monster Nian."
+          - "During the Italian Renaissance, fireworks masters learned to add metallic chemical salts to create brilliant colors (e.g., strontium for red, copper for blue)."
+          - "Today, fireworks remain a universal symbol of grand celebration for national holidays, New Year's Eve, and Olympic ceremonies."
+      - title: UNESCO Intangible Cultural Heritage
+        points:
+          - "UNESCO protects and celebrates living cultural traditions, festivals, music, and rituals as 'Intangible Cultural Heritage of Humanity'."
+          - "Recognized global festivals include the Day of the Dead in Mexico, the Carnival of Binche in Belgium, and the Tango of Argentina/Uruguay."
+          - "This international designation helps communities preserve ancient craft techniques, oral stories, and traditional music for future generations."
+          - "Over 600 distinct cultural practices and festive events from over 130 countries are officially inscribed on the UNESCO list."
+      - title: The Roots of Carnival & Mardi Gras
+        points:
+          - "The word 'Carnival' likely derives from the Latin 'carne levare' ('to remove meat'), referencing the pre-Lenten Christian fasting season."
+          - "Carnival originated as a decadent festive period where social hierarchies were flipped, allowing peasants and nobles to disguise themselves in masks."
+          - "'Mardi Gras' (French for 'Fat Tuesday') marks the final, joyful day of feasting on rich, fatty foods before the fasting period begins."
+          - "Today, Carnival has evolved into world-famous spectacles in Brazil, Italy, the Caribbean, and New Orleans, blending European, African, and Indigenous cultures."
+      - title: Lanterns & Light as Universal Symbols
+        points:
+          - "Across virtually every global civilization, light symbolizes knowledge, hope, purity, and the triumph of good over darkness."
+          - "In Hinduism, Sikhism, and Jainism, clay oil lamps ('diyas') illuminate Diwali to welcome prosperity and auspicious new beginnings."
+          - "In Chinese culture, glowing red paper lanterns represent vitality, good fortune, and ward off negative energy during festivals."
+          - "In Nordic Scandinavian traditions, St. Lucia Day features girls wearing crowns of glowing candles to bring light into midwinter darkness."
+      - title: Sacred Masks & Festive Costumes
+        points:
+          - "Festive masks have been worn for millennia in Africa, the Americas, Asia, and Europe to embody ancestors, spirits, or animals."
+          - "Venetian Carnival masks allowed citizens of different social classes to interact anonymously without rigid feudal protocol."
+          - "In West African masquerades, elaborate costumes transform dancers into living conduits for community healing, fertility, and ancestral blessings."
+          - "Modern festival costumes celebrate creativity, folklore heritage, and vibrant neighborhood pride in parade competitions."
+      - title: Traditional Feast Foods & Ritual Treats
+        points:
+          - "Every global festival features signature culinary delights created specifically to symbolize luck, sweetness, and prosperity."
+          - "In Jewish tradition, apples dipped in honey on Rosh Hashanah symbolize the heartfelt wish for a sweet, fruitful new year."
+          - "In Mexico, Pan de Muerto (sweet egg bread decorated with bone shapes) is baked to honor deceased loved ones on Day of the Dead."
+          - "In East Asia, round glutinous rice balls ('tangyuan') and sweet mooncakes symbolize family unity, wholeness, and harmony."
+      - title: Global Cultural Exchange & Travel
+        points:
+          - "Traveling to participate in international festivals allows visitors to experience cultural hospitality, music, and authentic heritage firsthand."
+          - "Festivals like St. Patrick's Day and Diwali have spread across continents, celebrated by millions of diverse cultural communities worldwide."
+          - "Community celebrations foster intercultural empathy, shared human joy, and respect for our planet's rich diversity of traditions."
+          - "Shared laughter, communal meals, and festive dancing remind us of our common human bonds across all languages and borders."
+    trivia:
+      - type: multiple_choice
+        question: "In what ancient country was gunpowder and fireworks originally invented around the 9th–10th century?"
+        options: ["Ancient Greece", "Ancient China", "Ancient Egypt", "The Persian Empire"]
+        correct: 1
+      - type: single_qa
+        question: "What international United Nations organization protects global festivals and traditions as 'Intangible Cultural Heritage'?"
+        answer: "UNESCO"
+      - type: multiple_choice
+        question: "What does the French festival name 'Mardi Gras' literally translate to in English?"
+        options: ["Great Party", "Fat Tuesday", "Holy Monday", "Sweet Sunday"]
+        correct: 1
+      - type: single_qa
+        question: "What ancient stone monument in England was constructed to align with the summer and winter solstices?"
+        answer: "Stonehenge"
+      - type: multiple_choice
+        question: "What traditional food is dipped in honey during the Jewish New Year (Rosh Hashanah) to symbolize a sweet year?"
+        options: ["Bread", "Apple slices", "Grapes", "Dates"]
+        correct: 1
+      - type: single_qa
+        question: "What metal chemical element is added to fireworks by pyrotechnicians to produce brilliant red sparks?"
+        answer: "Strontium"
+      - type: multiple_choice
+        question: "What Latin phrase is believed to be the linguistic root of the word 'Carnival', meaning 'to remove meat'?"
+        options: ["Carpe Diem", "Carne Levare", "Alma Mater", "Veni Vidi"]
+        correct: 1
+      - type: single_qa
+        question: "What small clay oil lamps are lit across homes during the Indian festival of Diwali?"
+        answer: "Diyas"
+      - type: multiple_choice
+        question: "Why did citizens historically wear elaborate masks during the famous Carnival of Venice in Italy?"
+        options: ["To protect from cold winter wind", "To hide social class and mix freely in anonymity", "By royal military order", "To scare off wild animals"]
+        correct: 1
+      - type: single_qa
+        question: "What mythical beast in ancient Chinese folklore was said to be frightened away by red lanterns and loud firecrackers?"
+        answer: "Nian (The Nian Monster)"
+      - type: multiple_choice
+        question: "What sweet Mexican bread decorated with dough bone shapes is baked for Day of the Dead (Día de los Muertos)?"
+        options: ["Tortilla", "Pan de Muerto", "Churros", "Empanada"]
+        correct: 1
+      - type: single_qa
+        question: "What round sweet treats symbolize family completeness and unity during the Chinese Lantern Festival?"
+        answer: "Tangyuan (Sweet Rice Balls)"
+      - type: multiple_choice
+        question: "In Scandinavian winter traditions, what saint is honored with a procession of girls wearing crowns of glowing candles?"
+        options: ["St. Lucia", "St. Brigid", "St. Teresa", "St. Catherine"]
+        correct: 0
+      - type: single_qa
+        question: "What astronomical event marks the shortest day and longest night of the year, celebrated by ancient winter festivals?"
+        answer: "The Winter Solstice"
+      - type: multiple_choice
+        question: "Approximately how many distinct cultural practices and festivals are inscribed on the UNESCO Intangible Heritage list?"
+        options: ["About 50", "Over 600", "Over 5,000", "Exactly 1,000"]
+        correct: 1
+      - type: single_qa
+        question: "What color of paper lanterns is predominantly hung during Lunar New Year in China to symbolize good fortune and vitality?"
+        answer: "Red"
+
+  - id: colorful_high_energy_festivals
+    title: Colorful High-Energy Festivals
+    description: >
+      Immerse yourself in exploding rainbow colors, thunderous drum rhythms, and electrifying street parades! 
+      From Rio's Sambadrome to India's joyous powder-flinging streets.
+    cards:
+      - title: "Rio de Janeiro Carnival (Brazil)"
+        points:
+          - "Rio's Carnival is considered the world's biggest party, drawing over two million revelers to the streets of Brazil every day."
+          - "Top Samba Schools compete in the massive 700-meter-long Sambadrome stadium, judged on elaborate floats, costumes, and music."
+          - "Dancers spend months hand-crafting jaw-dropping costumes adorned with thousands of sequins, beads, and iridescent feathers."
+          - "Informal neighborhood street parties called 'blocos' fill every corner of the city with joyful singing, brass bands, and dancing."
+      - title: "Holi: The Festival of Colors (India & Nepal)"
+        points:
+          - "Holi is an ancient Hindu spring festival celebrating the triumph of good over evil, the arrival of spring, and universal love."
+          - "Participants gleefully toss fragrant colored powders ('gulal') and spray tinted water at each other, turning entire cities into rainbows."
+          - "Traditional bonfires are lit on the eve of Holi (Holika Dahan) to commemorate the burning of the demoness Holika."
+          - "During Holi, social barriers of caste, age, and background evaporate as everyone celebrates together with festive sweets like gujiya."
+      - title: "Día de los Muertos: Day of the Dead (Mexico)"
+        points:
+          - "Celebrated on November 1st and 2nd, Día de los Muertos is a joyful Mexican holiday honoring and remembering deceased family members."
+          - "Families construct elaborate altars ('ofrendas') decorated with bright orange marigold flowers (cempasúchil), candles, photos, and favorite foods."
+          - "The sweet scent of marigolds is believed to guide the spirits of departed loved ones back home for a joyous annual reunion."
+          - "Iconic calaveras (sugar skulls) and elegant skeletons like 'La Catrina' celebrate that death is a natural, cheerful part of life's journey."
+      - title: "Songkran: The Water Festival (Thailand)"
+        points:
+          - "Songkran is Thailand's traditional solar New Year celebration in mid-April, marking the hottest month of the year."
+          - "The festival features countrywide water fights using water guns, buckets, and hoses, turning cities like Bangkok into giant water parks."
+          - "The splashing of water originated as a sacred ritual of washing away bad luck, sins, and misfortune to welcome a fresh start."
+          - "People also visit Buddhist temples to pour fragrant water gently over Buddha statues and pay deep respect to elderly family members."
+      - title: "Mardi Gras in New Orleans (USA)"
+        points:
+          - "New Orleans hosts the most famous Mardi Gras in North America, featuring weeks of vibrant parades organized by social clubs called 'krewes'."
+          - "Float riders toss colorful beaded necklaces, painted coconuts (Zulu Krewe), and collectible aluminum coins ('doubloons') to shouting crowds."
+          - "The official traditional colors are Purple (Justice), Green (Faith), and Gold (Power)."
+          - "Revelers enjoy festive 'King Cakes' iced in these colors, containing a tiny hidden plastic baby representing good luck and future hosting duties."
+      - title: "Venice Carnival & Masquerade (Italy)"
+        points:
+          - "Venice's Carnival is renowned for exquisite, historical 18th-century porcelain masks, velvet capes, and theatrical baroque costumes."
+          - "Traditional mask designs include the iconic white 'Bauta', the long-beaked 'Medico della Peste' (Plague Doctor), and the cat mask ('Gatta')."
+          - "The festival opens with the dramatic 'Flight of the Angel' (Volo dell'Angelo), where a costumed acrobat descends a zipline from St. Mark's Campanile."
+          - "Gondolas glide through misty canals while lavish masked masquerade balls take place inside historic Venetian palaces."
+      - title: "Oktoberfest in Munich (Germany)"
+        points:
+          - "Oktoberfest began in October 1810 as a royal wedding celebration for Bavarian Crown Prince Ludwig and Princess Therese."
+          - "Held on the 'Theresienwiese' meadow, it is the world's largest folk festival (Volksfest), attracting over six million visitors annually."
+          - "Attendees wear traditional Bavarian attire: lederhosen (leather shorts with suspenders) for men and dirndls (ruffled dresses) for women."
+          - "Visitors enjoy brass oompah bands, carnival amusement rides, and giant Bavarian pretzels ('brezen') inside massive festival tents."
+      - title: "St. Patrick's Day Celebrations (Ireland / Global)"
+        points:
+          - "Celebrated on March 17th, St. Patrick's Day honors the patron saint of Ireland with parades, traditional music, and vibrant green attire."
+          - "According to legend, St. Patrick used the three-leaf shamrock (clover) to explain the Holy Trinity to the ancient Irish people."
+          - "Since 1962, the city of Chicago famously dyes the entire Chicago River a brilliant, glowing emerald green using eco-friendly vegetable dye."
+          - "The holiday has become a worldwide celebration of Irish culture, Celtic music, step dancing, and hearty dishes like corned beef and cabbage."
+    trivia:
+      - type: multiple_choice
+        question: "In which South American city is the world's largest Carnival celebrated with Samba school parades in the Sambadrome?"
+        options: ["Buenos Aires", "Rio de Janeiro", "Lima", "Bogotá"]
+        correct: 1
+      - type: single_qa
+        question: "What colorful powder is joyfully thrown during the Indian spring festival of Holi?"
+        answer: "Gulal (or colored powder)"
+      - type: multiple_choice
+        question: "Which bright orange flower is traditionally used in Mexico to guide spirits to their ofrendas on Día de los Muertos?"
+        options: ["Roses", "Marigolds (Cempasúchil)", "Sunflowers", "Orchids"]
+        correct: 1
+      - type: single_qa
+        question: "What country celebrates its New Year in April with massive nationwide water fights during Songkran?"
+        answer: "Thailand"
+      - type: multiple_choice
+        question: "What are the three official traditional colors of New Orleans Mardi Gras?"
+        options: ["Red, White, and Blue", "Purple, Green, and Gold", "Orange, Black, and Yellow", "Blue, Silver, and White"]
+        correct: 1
+      - type: single_qa
+        question: "What famous river in the United States is dyed emerald green every year for St. Patrick's Day?"
+        answer: "The Chicago River"
+      - type: multiple_choice
+        question: "What long-beaked mask style from Venice Carnival was historically inspired by medical doctors during epidemics?"
+        options: ["Bauta", "Medico della Peste (Plague Doctor)", "Moretta", "Volto"]
+        correct: 1
+      - type: single_qa
+        question: "What royal occasion originally started the very first Oktoberfest in Munich in 1810?"
+        answer: "A royal wedding (Crown Prince Ludwig and Princess Therese)"
+      - type: multiple_choice
+        question: "What tiny plastic object is traditionally baked inside a New Orleans Mardi Gras King Cake?"
+        options: ["A silver coin", "A baby figurine", "A gold ring", "A miniature crown"]
+        correct: 1
+      - type: single_qa
+        question: "What three-leaf plant did St. Patrick famously use as a symbol in Ireland according to legend?"
+        answer: "The Shamrock (three-leaf clover)"
+      - type: multiple_choice
+        question: "What traditional leather shorts with suspenders are worn by men during Munich's Oktoberfest?"
+        options: ["Kilt", "Lederhosen", "Dirndl", "Poncho"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the elegant skeleton lady figure popularized by José Guadalupe Posada for Day of the Dead?"
+        answer: "La Catrina"
+      - type: multiple_choice
+        question: "What dramatic opening aerial event kicks off the Venice Carnival from the bell tower of St. Mark's Square?"
+        options: ["Flight of the Angel (Volo dell'Angelo)", "The Dragon Dance", "The Cannon Roar", "The Firework Cascade"]
+        correct: 0
+      - type: single_qa
+        question: "What are the festive street party parades organized by neighborhood clubs called during Rio's Carnival?"
+        answer: "Blocos (or Bloco de rua)"
+      - type: multiple_choice
+        question: "On the eve of Holi in India, what traditional ritual is performed to celebrate the burning of the demoness Holika?"
+        options: ["Lantern floating", "Lighting large community bonfires", "Kite flying", "Drum circles"]
+        correct: 1
+      - type: single_qa
+        question: "What traditional ruffled dress is worn by women during Oktoberfest in Bavaria, Germany?"
+        answer: "Dirndl"
+
+  - id: unusual_regional_traditions
+    title: Unusual Regional Traditions
+    description: >
+      Discover the world's most delightfully strange, hilarious, and daring local traditions! 
+      From rolling giant wheels of cheese down steep hills to Viking torch parades and epic fruit fights.
+    cards:
+      - title: "La Tomatina (Buñol, Spain)"
+        points:
+          - "Held on the last Wednesday of August in the small town of Buñol, La Tomatina is the world's biggest food fight."
+          - "Over 20,000 participants throw more than 150 metric tons of overripe, squashed tomatoes at each other for one hour."
+          - "The fight begins only after a brave competitor climbs a tall, greased wooden pole ('palo jabón') to retrieve a Spanish ham from the top."
+          - "Fire trucks hose down the streets and participants afterward, with the citric acid in the tomatoes leaving the cobblestone streets sparkling clean!"
+      - title: "Cooper's Hill Cheese-Rolling (England)"
+        points:
+          - "Held every May near Gloucester, competitors recklessly chase a 9-pound (4 kg) wheel of Double Gloucester cheese down a near-vertical, 200-yard hill."
+          - "The rolling cheese wheel can reach dangerous speeds of up to 110 km/h (70 mph), giving it a commanding head start."
+          - "Contenders tumble, roll, and somersault head-over-heels down the bumpy slope, with volunteer rugby players waiting at the bottom to catch them."
+          - "The first person to cross the finish line at the bottom of the hill wins the coveted wheel of cheese and international bragging rights."
+      - title: "Up Helly Aa Viking Fire Festival (Shetland, Scotland)"
+        points:
+          - "Held every January in Lerwick, Up Helly Aa marks the end of the yule season with a dramatic celebration of Shetland's Norse heritage."
+          - "Hundreds of costumed 'guizers' wearing winged Viking helmets, chainmail, and carrying real axes march through the streets in a torchlight procession."
+          - "Led by the 'Guizer Jarl' (Viking Chief), the squad hurls over a thousand flaming torches into a full-scale replica Viking longship, burning it to ashes."
+          - "The night concludes with hours of lively traditional fiddle music, theatrical skits, and Scottish ceilidh dancing."
+      - title: "Castells: Human Towers of Catalonia (Spain)"
+        points:
+          - "In Catalonia, teams called 'colles castelleres' build astonishing human towers ('castells') that can reach up to 10 stories high!"
+          - "A massive base of hundreds of interlocking people ('pinya') provides structural support and safety cushioning for the climbers."
+          - "The tower is only completed when a nimble child wearing a protective helmet (the 'enxaneta') scales to the very top and raises four fingers."
+          - "UNESCO recognized Castells as Intangible Cultural Heritage for embodying unity, teamwork, balance, and absolute trust."
+      - title: "Boryeong Mud Festival (South Korea)"
+        points:
+          - "Originally created in 1998 to promote the cosmetic benefits of local mineral-rich mud, it became South Korea's most popular summer festival."
+          - "Millions of visitors travel to Daecheon Beach to slide down giant mud slides, wrestle in mud pits, and paint themselves in colored mud."
+          - "The nutrient-packed grey sea mud is rich in germanium and bentonite, prized for purifying skin and rejuvenating body wellness."
+          - "The energetic beach festival includes K-pop concerts, obstacle courses, night fireworks, and massive beach dance parties."
+      - title: "Krampuslauf & Alpine Folklore (Austria / Germany)"
+        points:
+          - "In Alpine folklore across Austria, Bavaria, and Slovenia, St. Nicholas is accompanied by 'Krampus', a horned, beast-like creature."
+          - "While St. Nicholas rewards well-behaved children with sweets and gifts, Krampus playfully punishes naughty children with birch sticks."
+          - "During the annual 'Krampuslauf' (Krampus Run) in early December, hundreds of men in hand-carved wooden masks and shaggy fur suits parade through towns."
+          - "The loud clanging of heavy cowbells attached to their belts was traditionally believed to scare away harsh winter evil spirits."
+      - title: "Wife-Carrying World Championship (Finland)"
+        points:
+          - "Held annually in Sonkajärvi, Finland, male competitors race through a 253-meter obstacle course while carrying a female teammate."
+          - "The course includes dry land obstacles, deep sand pits, and a waist-deep water trench."
+          - "Most racers use the popular 'Estonian Carry', where the woman hangs upside down along the man's back with her legs wrapped over his shoulders."
+          - "The winning grand prize is the carried teammate's exact weight in craft beer!"
+      - title: "Monkey Buffet Festival (Lopburi, Thailand)"
+        points:
+          - "Held every November at the ancient Khmer temple of Phra Prang Sam Yot, locals host an extravagant feast for thousands of wild macaques."
+          - "Chefs prepare over two tons of fresh fruits, vegetables, sticky rice, cakes, and fruit-infused ice blocks arranged on lavish banquet tables."
+          - "The feast is held as an expression of gratitude to the monkeys, believed to bring good luck and tourist prosperity to the province."
+          - "Monkeys freely jump on tables, climb on amused tourists, and devour mountains of watermelon, bananas, and pineapples."
+    trivia:
+      - type: multiple_choice
+        question: "In what Spanish town is the world-famous tomato-throwing festival 'La Tomatina' held every August?"
+        options: ["Barcelona", "Buñol", "Seville", "Madrid"]
+        correct: 1
+      - type: single_qa
+        question: "What dairy food item do competitors recklessly chase down a steep English hill during the Cooper's Hill race?"
+        answer: "A wheel of cheese (Double Gloucester cheese)"
+      - type: multiple_choice
+        question: "In what Scottish islands is the fiery Viking heritage festival 'Up Helly Aa' celebrated by burning a longship?"
+        options: ["Orkney Islands", "Shetland Islands (Lerwick)", "Hebrides", "Isle of Skye"]
+        correct: 1
+      - type: single_qa
+        question: "In Catalonia, Spain, what astonishing structures reaching up to 10 tiers high are built by human teams ('Castells')?"
+        answer: "Human towers"
+      - type: multiple_choice
+        question: "What prize does the winner of the World Wife-Carrying Championship in Finland famously receive?"
+        options: ["A golden trophy", "The carried partner's weight in beer", "A brand-new car", "A trip to Lapland"]
+        correct: 1
+      - type: single_qa
+        question: "What horned, shaggy mythical creature accompanies St. Nicholas in Alpine winter folklore to scare naughty children?"
+        answer: "Krampus"
+      - type: multiple_choice
+        question: "What animals are treated to a lavish two-ton feast of fruits and vegetables in Lopburi, Thailand?"
+        options: ["Elephants", "Monkeys (Macaques)", "Tigers", "Giant tortoises"]
+        correct: 1
+      - type: single_qa
+        question: "What natural cosmetic substance is celebrated with giant slides and mud wrestling in Boryeong, South Korea?"
+        answer: "Mineral-rich mud"
+      - type: multiple_choice
+        question: "What greased item must a competitor climb up to retrieve before the tomato fight begins at La Tomatina?"
+        options: ["A Spanish ham (jamón)", "A wooden shield", "A gold coin", "A giant tomato"]
+        correct: 0
+      - type: single_qa
+        question: "What is the popular carry technique called in the Wife-Carrying championship where the woman hangs upside down?"
+        answer: "The Estonian Carry"
+      - type: multiple_choice
+        question: "What child climber wears a protective helmet and signals the completion of a Catalan human tower by raising four fingers?"
+        options: ["Enxaneta", "Casteller", "Pinya", "Jarl"]
+        correct: 0
+      - type: single_qa
+        question: "What title is given to the Viking Chief who leads the torchbearer procession during Scotland's Up Helly Aa?"
+        answer: "Guizer Jarl"
+      - type: multiple_choice
+        question: "What speeds can the rolling wheel of cheese reach while bouncing down Cooper's Hill in England?"
+        options: ["Up to 20 km/h", "Up to 50 km/h", "Up to 110 km/h (70 mph)", "Over 200 km/h"]
+        correct: 2
+      - type: single_qa
+        question: "What heavy metal noisemakers do costumed Krampus runners wear around their waists to make scary clanging sounds?"
+        answer: "Cowbells (heavy bells)"
+      - type: multiple_choice
+        question: "Why does the town of Lopburi host the annual Monkey Buffet Festival for local macaques?"
+        options: ["To reward them for good luck and tourism", "To capture them for science", "To keep them from eating temple flowers", "By ancient royal decree"]
+        correct: 0
+      - type: single_qa
+        question: "On which beach in South Korea is the Boryeong Mud Festival held every summer?"
+        answer: "Daecheon Beach"
+
+  - id: new_year_across_cultures
+    title: New Year Celebrations Across Cultures
+    description: >
+      Ring in fresh beginnings around the globe! Explore the rich customs, traditional foods, 
+      and seasonal rituals that welcome the New Year across diverse civilizations and calendars.
+    cards:
+      - title: "Lunar New Year & Spring Festival (East Asia)"
+        points:
+          - "Celebrated by billions across China, Korea, Vietnam (Tet), and global diasporas, Lunar New Year marks the first new moon of the lunar calendar."
+          - "Families clean their homes thoroughly to sweep away bad luck and decorate doorways with red banners bearing poetic wishes of prosperity."
+          - "Elders give red envelopes containing lucky money ('hongbao') to children, and family reunion banquets feature whole fish, dumplings, and spring rolls."
+          - "Vibrant lion and dragon dances accompany deafening firecrackers to welcome the new zodiac animal (e.g., Year of the Dragon, Rabbit, or Tiger)."
+      - title: "Rosh Hashanah: The Jewish New Year"
+        points:
+          - "Rosh Hashanah ('Head of the Year') occurs in the autumn month of Tishrei, marking the anniversary of the creation of the world."
+          - "A central commandment is hearing the sounding of the Shofar (a hollowed ram's horn), which serves as a spiritual wake-up call for introspection."
+          - "Families enjoy festive meals featuring apples dipped in honey for a sweet year, round challah bread symbolizing the cycle of life, and pomegranates."
+          - "The ritual of 'Tashlich' involves walking to a flowing body of water and symbolically casting away one's past misdeeds."
+      - title: "Nowruz: The Persian Spring New Year"
+        points:
+          - "Nowruz ('New Day') has been celebrated for over 3,000 years, marking the exact astronomical moment of the Vernal (Spring) Equinox in late March."
+          - "Observed across Iran, Central Asia, and the Caucasus, the holiday celebrates the rebirth of nature, renewal, and family harmony."
+          - "Homes set up an elaborate 'Haft-Sin' table display featuring seven symbolic items starting with the Persian letter 'S' (e.g., sprouts for rebirth, apples for beauty)."
+          - "The celebration concludes on the 13th day (Sizdah Bedar) with nationwide outdoor family picnics to welcome nature's springtime blossoming."
+      - title: "Hogmanay: Scotland's New Year Extravaganza"
+        points:
+          - "Hogmanay is Scotland's legendary celebration of the New Year, renowned for massive street parties, torchlight processions, and fireworks."
+          - "The custom of 'First-Footing' dictates that the first visitor to cross your threshold after midnight brings good luck for the year."
+          - "Traditionally, a tall, dark-haired man bearing gifts of coal, shortbread, salt, and whisky brings the greatest household fortune."
+          - "At midnight, revelers link hands across the world to sing the traditional Scottish poem 'Auld Lang Syne' by Robert Burns."
+      - title: "Times Square Ball Drop & Midnight Traditions"
+        points:
+          - "Since 1907, hundreds of thousands gather in New York City's Times Square to watch the illuminated crystal ball descend at midnight."
+          - "The modern ball is covered with 2,688 Waterford crystal triangles and lit by over 32,000 brilliant LED lights."
+          - "At the stroke of midnight, a ton of confetti containing handwritten wishes floats down over the cheering crowds."
+          - "In Spanish and Latin American traditions, people eat 12 grapes—one for each chime of the midnight clock—to bring 12 lucky months ahead."
+      - title: "Nyepi: The Balinese Day of Silence (Indonesia)"
+        points:
+          - "Nyepi is the Balinese Hindu New Year celebration, unique for being a complete 24-hour day of total silence, fasting, and meditation."
+          - "On Nyepi, the entire island of Bali shuts down: no lights or fires are lit, no vehicles drive on streets, and even the international airport closes!"
+          - "The night before Nyepi features dramatic, noisy parades of giant, menacing paper-mâché demon statues called 'Ogoh-Ogoh'."
+          - "The complete silence on the following day is meant to trick lingering evil spirits into believing the island is completely deserted so they leave."
+      - title: "Matariki: The Māori New Year (New Zealand)"
+        points:
+          - "Matariki is the Māori celebration marking the rising of the Pleiades star cluster (known as Matariki) in the midwinter night sky."
+          - "Officially designated as a national public holiday in New Zealand, Matariki is a time to remember ancestors, celebrate the present, and plan for the future."
+          - "Each star in the nine-star Matariki cluster is associated with an aspect of wellbeing and nature (freshwater, salt water, crops, trees, and wind)."
+          - "Communities gather to share traditional earth-oven feasts ('hāngī'), fly kites, and tell stories beneath the starry southern skies."
+      - title: "Water Blessings & Solar New Years in Southeast Asia"
+        points:
+          - "In mid-April, Southeast Asian nations celebrate traditional solar new years: Songkran in Thailand, Thingyan in Myanmar, and Chaul Chnam Thmey in Cambodia."
+          - "The celebrations align with the astrological passage of the Sun into Aries, marking the end of the dry season and the promise of monsoon rains."
+          - "Gentle water-pouring rituals over the hands of elders and monks express gratitude, respect, and seek blessings for health and prosperity."
+          - "Street festivities combine spiritual temple offerings with joyful communal water-throwing, symbolizing washing away the old year's troubles."
+    trivia:
+      - type: multiple_choice
+        question: "What musical instrument made from a ram's horn is sounded during the Jewish New Year (Rosh Hashanah)?"
+        options: ["Lyre", "Shofar", "Harp", "Bugle"]
+        correct: 1
+      - type: single_qa
+        question: "What Scottish folk song written by Robert Burns is traditionally sung at midnight on New Year's Eve around the world?"
+        answer: "Auld Lang Syne"
+      - type: multiple_choice
+        question: "What astronomical event in March marks the exact moment of the ancient Persian New Year, Nowruz?"
+        options: ["Winter Solstice", "Vernal (Spring) Equinox", "Summer Solstice", "Autumn Equinox"]
+        correct: 1
+      - type: single_qa
+        question: "What color envelopes containing lucky money ('hongbao') are traditionally given to children during Lunar New Year?"
+        answer: "Red envelopes"
+      - type: multiple_choice
+        question: "In Spain and Latin America, how many grapes do people eat at midnight on New Year's Eve for good luck?"
+        options: ["7 grapes", "10 grapes", "12 grapes", "24 grapes"]
+        correct: 2
+      - type: single_qa
+        question: "What star cluster's midwinter rising in the sky marks the Māori New Year (Matariki) in New Zealand?"
+        answer: "The Pleiades (or Seven Sisters / Matariki)"
+      - type: multiple_choice
+        question: "On the Indonesian island of Bali, how is the Hindu New Year of Nyepi uniquely celebrated for 24 hours?"
+        options: ["With massive fireworks all day", "With a complete day of absolute silence, darkness, and airport shutdown", "With continuous dancing in the ocean", "With a 24-hour street buffet"]
+        correct: 1
+      - type: single_qa
+        question: "What Scottish tradition involves the first guest crossing your threshold after midnight to bring good fortune?"
+        answer: "First-Footing"
+      - type: multiple_choice
+        question: "How many items starting with the Persian letter 'S' are displayed on the traditional Haft-Sin table during Nowruz?"
+        options: ["3 items", "5 items", "7 items", "12 items"]
+        correct: 2
+      - type: single_qa
+        question: "In what city's Times Square does an illuminated crystal ball drop at the stroke of midnight every New Year's Eve?"
+        answer: "New York City (NYC)"
+      - type: multiple_choice
+        question: "What giant demon statues made of paper-mâché are paraded through streets on the eve of Bali's Nyepi?"
+        options: ["Ogoh-Ogoh", "Tiki", "Ganesha", "Barong"]
+        correct: 0
+      - type: single_qa
+        question: "What fruit containing hundreds of seeds is eaten on Rosh Hashanah to symbolize a year full of good deeds?"
+        answer: "Pomegranate"
+      - type: multiple_choice
+        question: "What traditional earth-oven cooking method is used to prepare communal feasts during Matariki in New Zealand?"
+        options: ["Barbecue", "Hāngī", "Tandoor", "Ceviche"]
+        correct: 1
+      - type: single_qa
+        question: "In Chinese culture, how many different animals make up the repeating 12-year lunar zodiac cycle?"
+        answer: "12 animals"
+      - type: multiple_choice
+        question: "What gift items are traditionally brought by the 'First-Footer' in Scottish Hogmanay to ensure household warmth and wealth?"
+        options: ["Gold coins, wine, and honey", "Coal, shortbread, salt, and whisky", "A green plant, bread, and water", "Candles, meat, and wool"]
+        correct: 1
+      - type: single_qa
+        question: "What Jewish water ritual involves symbolically casting away sins into a flowing river on Rosh Hashanah?"
+        answer: "Tashlich"
+
+  - id: festivals_of_lights_fire_ice
+    title: "Festivals of Lights, Fire & Ice"
+    description: >
+      Marvel at the breathtaking spectacles of illuminating lanterns, roaring bonfires, and colossal ice palaces! 
+      Explore how light and temperature transform celebrations into enchanting visual wonders.
+    cards:
+      - title: "Diwali: The Festival of Lights (India)"
+        points:
+          - "Diwali is India's biggest and most auspicious five-day festival, celebrated by Hindus, Sikhs, and Jains worldwide."
+          - "It honors the triumph of spiritual light over darkness, good over evil, and wisdom over ignorance."
+          - "Homes and temples are illuminated with millions of clay lamps ('diyas'), strings of twinkling lights, and floor artwork ('rangoli')."
+          - "Families exchange sweet delicacies (mithai), burst fireworks, and worship Lakshmi, the goddess of prosperity and good fortune."
+      - title: "Yi Peng & Loy Krathong (Thailand)"
+        points:
+          - "Held on the full moon of the 12th lunar month (November), these twin Thai festivals create a magical spectacle of light on water and in the sky."
+          - "In Chiang Mai's Yi Peng festival, thousands of glowing rice-paper sky lanterns ('khom loi') are released simultaneously into the night sky."
+          - "During Loy Krathong, people float decorative banana-leaf boats ('krathongs') bearing candles, incense, and flowers onto rivers."
+          - "Releasing the floating boats and sky lanterns symbolizes letting go of grudges, negativity, and bad luck while making wishes for the future."
+      - title: "Las Fallas: The Sculptures of Fire (Valencia, Spain)"
+        points:
+          - "Held in March in Valencia, Spain, neighborhood artisans construct hundreds of gigantic, satirical paper-mâché sculptures called 'fallas'."
+          - "These colorful monuments can rise up to five stories tall, poking fun at politicians, celebrities, and pop-culture events with biting humor."
+          - "Daily midday firecracker displays ('mascletà') shake the city center with rhythmic, ground-trembling percussive explosions."
+          - "On the final night ('La Cremà'), all the magnificent sculptures across the city are simultaneously set on fire in a roaring, spectacular blaze!"
+      - title: "Harbin International Ice & Snow Festival (China)"
+        points:
+          - "Located in northeast China, Harbin hosts the world's largest ice and snow sculpture festival, drawing millions of winter travelers."
+          - "Tens of thousands of workers carve massive life-sized illuminated castles, towering pagodas, and giant ice slides from frozen Songhua River blocks."
+          - "At night, the crystal city transforms into a neon wonderland illuminated by computerized interior LED lights embedded inside the ice."
+          - "The sub-zero festival features ice marathons, winter swimming in frozen river pools, and snow sculpture competitions."
+      - title: "Hanukkah: The Jewish Festival of Lights"
+        points:
+          - "Hanukkah is an eight-day Jewish holiday commemorating the rededication of the Second Temple in Jerusalem in the 2nd century BCE."
+          - "According to tradition, a single day's supply of consecrated olive oil miraculously burned in the Temple's Menorah for eight full days."
+          - "Each evening, families light an additional candle on the nine-branched 'Hanukkiah' (Menorah), using the helper candle ('shamash')."
+          - "Celebrations include eating foods fried in oil like crispy potato pancakes ('latkes') and jelly-filled doughnuts ('sufganiyot'), and spinning the 'dreidel'."
+      - title: "Obon: Ancestral Lantern Festival (Japan)"
+        points:
+          - "Obon is an ancient Japanese Buddhist custom in August honoring the spirits of departed ancestors who briefly return to visit their families."
+          - "People welcome ancestor spirits with welcoming fires ('mukaebi') and clean their ancestral family graves."
+          - "Communities gather in kimono and yukata to dance the 'Bon Odori', a lively traditional folk dance around elevated wooden stages."
+          - "The festival concludes with 'Tōrō Nagashi', where thousands of paper lanterns containing glowing candles are floated down calm rivers to guide spirits home."
+      - title: "Midsummer: Bonfires & Endless Sun (Nordic Scandinavia)"
+        points:
+          - "Midsummer (around June 21–24) is one of the most cherished holidays in Sweden, Finland, Norway, and the Baltic nations."
+          - "Because the sun barely sets during the summer solstice in northern latitudes, people celebrate outdoors under the magical 'Midnight Sun'."
+          - "Communities raise tall birch-leaf maypoles ('midsommarstång') adorned with colorful flower wreaths, dancing traditional ring dances."
+          - "In Finland ('Juhannus') and Norway, massive towering bonfires ('kokko') are ignited along lakeshores and fjords to celebrate light and warmth."
+      - title: "Pingxi Sky Lantern Festival (Taiwan)"
+        points:
+          - "Held annually in the mountainous village of Pingxi during the Lunar New Year's Lantern Festival, thousands of illuminated sky lanterns are released."
+          - "People handwrite their personal hopes, dreams, and prayers in calligraphy onto the colorful paper lanterns before igniting the fuel cell."
+          - "Originally, sky lanterns were invented by military strategist Zhuge Liang (Kongming) to signal safety between isolated mountain villages."
+          - "Watching thousands of glowing lanterns gently ascend together into the dark night sky creates one of the most breathtaking visual sights on Earth."
+    trivia:
+      - type: multiple_choice
+        question: "What Hindu goddess of wealth and prosperity is especially worshipped during the festival of Diwali?"
+        options: ["Saraswati", "Lakshmi", "Parvati", "Durga"]
+        correct: 1
+      - type: single_qa
+        question: "In what Spanish city are giant paper-mâché monuments burned in a roaring blaze during 'Las Fallas'?"
+        answer: "Valencia"
+      - type: multiple_choice
+        question: "What festival in Chiang Mai, Thailand features thousands of glowing paper lanterns released into the night sky?"
+        options: ["Songkran", "Yi Peng", "Phuket Vegetarian Festival", "Ghost Festival"]
+        correct: 1
+      - type: single_qa
+        question: "What northeast Chinese city hosts the world's largest international festival of illuminated ice castles and snow sculptures?"
+        answer: "Harbin"
+      - type: multiple_choice
+        question: "How many days does the Jewish festival of lights, Hanukkah, last?"
+        options: ["7 days", "8 days", "10 days", "12 days"]
+        correct: 1
+      - type: single_qa
+        question: "What traditional spinning four-sided top is played with by children during Hanukkah?"
+        answer: "A Dreidel (Sevivon)"
+      - type: multiple_choice
+        question: "What traditional folk dance is performed around wooden stages during Japan's Obon festival?"
+        options: ["Bon Odori", "Kabuki", "Samba", "Flamenco"]
+        correct: 0
+      - type: single_qa
+        question: "What natural phenomenon occurs during Midsummer in northern Scandinavia where the sun remains visible all night?"
+        answer: "The Midnight Sun"
+      - type: multiple_choice
+        question: "What oil-fried treats are traditionally eaten during Hanukkah to commemorate the miracle of the oil lamp?"
+        options: ["Pretzels and strudel", "Latkes (potato pancakes) and Sufganiyot (jelly doughnuts)", "Dumplings and spring rolls", "Baklava and Turkish delight"]
+        correct: 1
+      - type: single_qa
+        question: "What village in Taiwan is world-famous for releasing thousands of handwritten calligraphy sky lanterns?"
+        answer: "Pingxi"
+      - type: multiple_choice
+        question: "What is the final night of Las Fallas called when all the giant sculptures are burned in massive bonfires?"
+        options: ["La Tomatina", "La Cremà", "La Mascletà", "La Mercè"]
+        correct: 1
+      - type: single_qa
+        question: "What decorative banana-leaf boats bearing candles and flowers are floated onto Thai rivers during Loy Krathong?"
+        answer: "Krathongs"
+      - type: multiple_choice
+        question: "From which frozen river do ice sculptors harvest huge crystal-clear ice blocks for the Harbin Ice Festival?"
+        options: ["Yangtze River", "Songhua River", "Yellow River", "Pearl River"]
+        correct: 1
+      - type: single_qa
+        question: "What is the helper candle called that is used to light the other eight candles on a Hanukkah Menorah?"
+        answer: "The Shamash"
+      - type: multiple_choice
+        question: "What Japanese ritual involves floating thousands of glowing paper lanterns down rivers to guide ancestor spirits home at the end of Obon?"
+        options: ["Tōrō Nagashi", "Hanami", "Koinobori", "Hatsumode"]
+        correct: 0
+      - type: single_qa
+        question: "What tall decorated pole adorned with flower wreaths and birch leaves do communities dance around during Swedish Midsummer?"
+        answer: "Maypole (Midsommarstång)"
