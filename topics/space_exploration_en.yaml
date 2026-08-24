@@ -1,0 +1,680 @@
+id: space_exploration_en
+title: Space Exploration & Astronomy
+description: >
+  Embark on an awe-inspiring journey through the cosmos! From blazing stars and mysterious 
+  black holes to the rocky surfaces of Mars and the historic Apollo Moon landing, test your family's 
+  knowledge of the universe and humanity's greatest adventures in space.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      Fascinating cosmic laws, human milestones, and eye-opening scientific facts about the universe. 
+      Read these cards together aloud before testing your knowledge in the trivia round!
+    cards:
+      - title: The Scale and Age of the Universe
+        points:
+          - "Scientists estimate the universe was born approximately 13.8 billion years ago in an explosive expansion called the Big Bang."
+          - "The observable universe contains an estimated 2 trillion individual galaxies, each holding hundreds of billions of stars."
+          - "Light travels at an astonishing speed of approximately 300,000 kilometers per second (186,000 miles per second)."
+          - "Because light takes time to travel, when we look at distant stars, we are literally looking back in time into the deep past."
+      - title: Gravity and Orbital Mechanics
+        points:
+          - "Gravity is the fundamental attractive force discovered mathematically by Sir Isaac Newton and refined by Albert Einstein."
+          - "Satellites and space stations stay in orbit by constantly falling toward Earth while moving sideways so fast that the planet curves away beneath them."
+          - "To escape Earth's gravitational pull and reach open space, a rocket must reach 'escape velocity' of about 40,000 km/h (25,000 mph)."
+          - "Planets orbit the Sun in elliptical (slightly oval-shaped) orbits, moving faster when closest to the Sun."
+      - title: The International Space Station (ISS)
+        points:
+          - "The ISS is a football-field-sized habitable laboratory orbiting 400 kilometers (250 miles) above Earth at 28,000 km/h (17,500 mph)."
+          - "Astronauts aboard the ISS circle the globe every 90 minutes, experiencing 16 sunrises and 16 sunsets every single day."
+          - "Human crews from the US, Europe, Japan, Canada, and Russia have lived continuously on the ISS since November 2000."
+          - "Astronauts must exercise for two hours every day to prevent severe bone and muscle loss caused by microgravity (weightlessness)."
+      - title: The Space Race (1957–1969)
+        points:
+          - "The Space Race began in October 1957 when the Soviet Union launched Sputnik 1, the world's first artificial satellite."
+          - "Soviet cosmonaut Yuri Gagarin became the first human in space in April 1961, orbiting Earth in his Vostok 1 spacecraft."
+          - "US President John F. Kennedy challenged America in 1961 to land a man on the Moon and return him safely before the decade ended."
+          - "The race culminated on July 20, 1969, when American astronaut Neil Armstrong stepped onto the lunar surface during Apollo 11."
+      - title: "Space Telescopes: Hubble & James Webb"
+        points:
+          - "The Hubble Space Telescope, launched in 1990, revolutionized astronomy by capturing crystal-clear images above Earth's blurring atmosphere."
+          - "Hubble determined the precise rate of cosmic expansion and photographed the famous 'Pillars of Creation' star-forming region."
+          - "The James Webb Space Telescope (JWST), launched on Christmas Day 2021, orbits 1.5 million kilometers away at the L2 Lagrange Point."
+          - "Equipped with a giant gold-coated beryllium mirror, JWST uses infrared light to photograph the very first galaxies formed after the Big Bang."
+      - title: Zero Gravity & Human Spaceflight
+        points:
+          - "In microgravity, liquids form floating, shimmering spheres due to surface tension rather than falling into containers."
+          - "Astronauts actually grow up to 5 centimeters (2 inches) taller in space because spinal discs expand without gravitational compression."
+          - "Food in space includes freeze-dried meals, vacuum-sealed pouches, and tortillas instead of bread to avoid dangerous floating crumbs."
+          - "Space suits (EMUs) provide oxygen, pressurization, temperature regulation, and micrometeoroid protection during spacewalks."
+      - title: The Kuiper Belt & Oort Cloud
+        points:
+          - "Beyond Neptune lies the Kuiper Belt, a vast ring of icy bodies, frozen comets, and dwarf planets including Pluto and Eris."
+          - "Far beyond the Kuiper Belt is the theoretical Oort Cloud, a giant spherical shell of trillions of icy comets surrounding the solar system."
+          - "The edge of the Oort Cloud extends nearly a light-year from the Sun, defining the gravitational boundary of our solar neighborhood."
+          - "Comets that take thousands or millions of years to orbit the Sun, like Comet Hale-Bopp, originate in these distant icy realms."
+      - title: The Search for Extraterrestrial Life
+        points:
+          - "Astronomers have discovered over 5,500 exoplanets (planets orbiting other stars), many located in their star's 'Goldilocks' habitable zone."
+          - "Moons in our own solar system, like Jupiter's Europa and Saturn's Enceladus, harbor warm, salty liquid oceans beneath thick ice crusts."
+          - "NASA's Mars rovers analyze ancient clay rocks and riverbeds searching for biosignatures of ancient microscopic microbial life."
+          - "The SETI Institute (Search for Extraterrestrial Intelligence) scans the cosmos using giant radio telescopes for artificial alien signals."
+    trivia:
+      - type: multiple_choice
+        question: "How long ago do scientists estimate the universe was born during the Big Bang?"
+        options: ["4.5 billion years ago", "13.8 billion years ago", "100 million years ago", "1 trillion years ago"]
+        correct: 1
+      - type: single_qa
+        question: "What is the approximate speed of light in a vacuum?"
+        answer: "300,000 kilometers per second (or 186,000 miles per second)"
+      - type: multiple_choice
+        question: "How many sunrises and sunsets do astronauts on the International Space Station experience each day?"
+        options: ["1 sunrise and sunset", "8 sunrises and sunsets", "16 sunrises and sunsets", "24 sunrises and sunsets"]
+        correct: 2
+      - type: single_qa
+        question: "Who was the first human being to travel into outer space in April 1961?"
+        answer: "Yuri Gagarin"
+      - type: multiple_choice
+        question: "What was the name of the first artificial satellite launched into space by the Soviet Union in 1957?"
+        options: ["Vostok 1", "Sputnik 1", "Explorer 1", "Luna 2"]
+        correct: 1
+      - type: single_qa
+        question: "What famous space telescope launched in 1990 provided breathtaking images of the 'Pillars of Creation'?"
+        answer: "The Hubble Space Telescope"
+      - type: multiple_choice
+        question: "What infrared space telescope launched in December 2021 with a giant gold-coated mirror to view the earliest galaxies?"
+        options: ["Spitzer Space Telescope", "James Webb Space Telescope (JWST)", "Kepler Observatory", "Chandra Observatory"]
+        correct: 1
+      - type: single_qa
+        question: "Why do astronauts eat tortillas instead of sliced bread aboard space stations?"
+        answer: "To prevent floating crumbs (which can damage equipment or eyes)"
+      - type: multiple_choice
+        question: "What physical change temporarily happens to an astronaut's height in microgravity?"
+        options: ["They shrink by 2 inches", "They grow up to 2 inches (5 cm) taller", "Their height remains identical", "Their legs get shorter"]
+        correct: 1
+      - type: single_qa
+        question: "What American president famously delivered the 1961 challenge to land humans on the Moon before 1970?"
+        answer: "John F. Kennedy (JFK)"
+      - type: multiple_choice
+        question: "What minimum speed must a rocket reach to escape Earth's gravity (escape velocity)?"
+        options: ["5,000 km/h", "11,000 km/h", "40,000 km/h (25,000 mph)", "100,000 km/h"]
+        correct: 2
+      - type: single_qa
+        question: "What icy moon of Jupiter is considered a prime candidate for extraterrestrial life due to its vast subsurface ocean?"
+        answer: "Europa"
+      - type: multiple_choice
+        question: "What is the vast spherical cloud of billions of icy comets surrounding the outer edge of our solar system called?"
+        options: ["The Asteroid Belt", "The Oort Cloud", "The Kuiper Ring", "The Van Allen Belt"]
+        correct: 1
+      - type: single_qa
+        question: "What scientific acronym stands for the search for signals from intelligent alien civilizations?"
+        answer: "SETI (Search for Extraterrestrial Intelligence)"
+      - type: multiple_choice
+        question: "Approximately how many individual galaxies are estimated to exist in the observable universe?"
+        options: ["100 million", "10 billion", "2 trillion", "50 trillion"]
+        correct: 2
+      - type: single_qa
+        question: "How many hours per day must astronauts exercise on the ISS to prevent bone and muscle deterioration?"
+        answer: "2 hours per day"
+
+  - id: planets_solar_system
+    title: Planets of Our Solar System
+    description: >
+      Journey from the sun-scorched rocky inner worlds to the massive gas giants and frozen ice worlds! 
+      Explore the unique climates, rings, moons, and geology of our solar neighborhood.
+    cards:
+      - title: "Mercury: The Scorched & Frozen World"
+        points:
+          - "Mercury is the smallest planet in our solar system and the closest to the Sun, orbiting it in just 88 Earth days."
+          - "Lacking a significant atmosphere to trap heat, Mercury experiences extreme temperature swings: 430°C (800°F) by day and -180°C (-290°F) at night."
+          - "Its gray, cratered surface closely resembles Earth's Moon, scarred by billions of years of meteorite impacts."
+          - "Despite intense daytime heat, deep craters at Mercury's poles permanently shielded from sunlight contain frozen water ice."
+      - title: "Venus: The Greenhouse Inferno"
+        points:
+          - "Venus is similar in size and mass to Earth ('Earth's twin'), but has a toxic, crushing carbon dioxide atmosphere."
+          - "A runaway greenhouse effect makes Venus the hottest planet in the solar system, with surface temperatures reaching 465°C (870°F)—hot enough to melt lead!"
+          - "Its thick yellowish clouds are made of corrosive sulfuric acid, completely hiding its volcanic surface from optical telescopes."
+          - "Venus rotates backward (retrograde rotation) compared to most planets, so the Sun rises in the west and sets in the east."
+      - title: "Earth: The Goldilocks Oasis"
+        points:
+          - "Earth is the only known celestial body in the universe confirmed to harbor liquid surface water and living organisms."
+          - "Positioned in the habitable 'Goldilocks Zone', Earth's distance from the Sun allows temperatures where water remains liquid."
+          - "Our protective atmosphere of nitrogen (78%) and oxygen (21%) shields life from solar radiation and burns up incoming meteors."
+          - "A strong geomagnetic field generated by Earth's molten iron core deflects harmful solar wind particles, creating beautiful auroras."
+      - title: "Mars: The Red Planet"
+        points:
+          - "Mars gets its reddish-orange color from iron oxide (rust) covering its vast desert plains and rocky canyons."
+          - "It hosts Olympus Mons, the largest volcano in the solar system, which stands nearly three times taller than Mount Everest."
+          - "Valles Marineris is an immense canyon system running along Mars' equator, four times deeper and ten times longer than the Grand Canyon."
+          - "Mars has two small, irregularly shaped captured asteroid moons named Phobos (Fear) and Deimos (Panic)."
+      - title: "Jupiter: The King of Planets"
+        points:
+          - "Jupiter is a massive gas giant more than twice as massive as all other planets in the solar system combined."
+          - "Its Great Red Spot is an enormous anticyclonic storm larger than Earth that has raged continuously for hundreds of years."
+          - "Jupiter has 95 officially recognized moons, including Ganymede (the largest moon in the solar system, bigger than Mercury)."
+          - "Volcanic Io spews sulfur plumes hundreds of miles high, while icy Europa hides a warm subsurface ocean with more water than Earth."
+      - title: "Saturn: The Lord of the Rings"
+        points:
+          - "Saturn is famous for its dazzling, extensive ring system made of billions of chunks of water ice, rock, and cosmic dust."
+          - "Despite spanning over 280,000 kilometers across, Saturn's main rings are extraordinarily thin—averaging only about 10 meters thick!"
+          - "Saturn has the lowest density of any planet; composed mostly of hydrogen and helium, it would literally float in a giant bathtub of water!"
+          - "Its giant moon Titan has a thick nitrogen atmosphere, methane rain, and liquid hydrocarbon lakes on its frozen surface."
+      - title: "Uranus & Neptune: The Ice Giants"
+        points:
+          - "Uranus and Neptune are classified as 'Ice Giants', composed of dense fluids of water, ammonia, and methane over a rocky core."
+          - "Uranus uniquely rotates on its side with an extreme axial tilt of 98 degrees, rolling along its orbit like a cosmic bowling ball."
+          - "Methane gas in their upper atmospheres absorbs red light and reflects blue, giving both planets their stunning cyan and azure colors."
+          - "Neptune is the windiest world in the solar system, with supersonic atmospheric winds reaching speeds over 2,100 km/h (1,300 mph)."
+      - title: "Dwarf Planets: Pluto & Ceres"
+        points:
+          - "In 2006, the International Astronomical Union (IAU) reclassified Pluto as a 'dwarf planet' because it has not cleared its orbital neighborhood."
+          - "NASA's New Horizons spacecraft flew past Pluto in 2015, revealing vast nitrogen glaciers and a giant heart-shaped plain (Tombaugh Regio)."
+          - "Ceres is the largest object in the main Asteroid Belt between Mars and Jupiter, containing bright sodium carbonate deposits."
+          - "Other recognized dwarf planets include Eris (located in the scattered disc), Haumea (football-shaped), and Makemake."
+    trivia:
+      - type: multiple_choice
+        question: "Which planet is the hottest in our solar system due to a runaway greenhouse effect?"
+        options: ["Mercury", "Venus", "Mars", "Jupiter"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the largest volcano in the solar system, located on Mars?"
+        answer: "Olympus Mons"
+      - type: multiple_choice
+        question: "Which planet has the lowest density in the solar system and would theoretically float in water?"
+        options: ["Uranus", "Neptune", "Saturn", "Jupiter"]
+        correct: 2
+      - type: single_qa
+        question: "What giant storm on Jupiter has been raging for hundreds of years and is larger than Earth?"
+        answer: "The Great Red Spot"
+      - type: multiple_choice
+        question: "Which planet uniquely rotates on its side with an axial tilt of 98 degrees?"
+        options: ["Uranus", "Neptune", "Saturn", "Mercury"]
+        correct: 0
+      - type: single_qa
+        question: "What are the names of Mars' two small, asteroid-like moons?"
+        answer: "Phobos and Deimos"
+      - type: multiple_choice
+        question: "What gas in the atmospheres of Uranus and Neptune gives them their distinctive blue color?"
+        options: ["Oxygen", "Methane", "Helium", "Carbon dioxide"]
+        correct: 1
+      - type: single_qa
+        question: "What giant moon of Saturn has a thick nitrogen atmosphere and lakes of liquid methane?"
+        answer: "Titan"
+      - type: multiple_choice
+        question: "In what year was Pluto reclassified from a major planet to a dwarf planet by the IAU?"
+        options: ["1999", "2006", "2012", "2015"]
+        correct: 1
+      - type: single_qa
+        question: "What is the largest moon in the solar system, which orbits Jupiter and is larger than Mercury?"
+        answer: "Ganymede"
+      - type: multiple_choice
+        question: "What material primarily makes up the majestic rings of Saturn?"
+        options: ["Solid gold and copper", "Water ice chunks, rock, and dust", "Liquid nitrogen", "Iron meteorites"]
+        correct: 1
+      - type: single_qa
+        question: "How long does it take Mercury to complete one full orbit around the Sun?"
+        answer: "88 Earth days"
+      - type: multiple_choice
+        question: "Which planet has the fastest recorded winds in the solar system, exceeding 2,100 km/h?"
+        options: ["Jupiter", "Saturn", "Neptune", "Earth"]
+        correct: 2
+      - type: single_qa
+        question: "What chemical compound gives Mars its distinctive rusty red coloration?"
+        answer: "Iron oxide (rust)"
+      - type: multiple_choice
+        question: "What is the name of the dwarf planet located inside the main Asteroid Belt between Mars and Jupiter?"
+        options: ["Ceres", "Pluto", "Eris", "Sedna"]
+        correct: 0
+      - type: single_qa
+        question: "What NASA probe flew past Pluto in 2015, capturing high-resolution photos of its heart-shaped glacier?"
+        answer: "New Horizons"
+
+  - id: moon_and_phases
+    title: The Moon & Its Phases
+    description: >
+      Discover the science, mysteries, and beauty of Earth's closest celestial companion! 
+      From ocean tides and lunar phases to giant impact craters and historic landing sites.
+    cards:
+      - title: The Giant Impact Hypothesis
+        points:
+          - "Scientists believe the Moon formed about 4.5 billion years ago when a Mars-sized protoplanet named Theia collided with early Earth."
+          - "The colossal collision blasted massive amounts of molten rock into orbit, which coalesced over time into the Moon."
+          - "Moon rocks brought back by Apollo astronauts confirmed that Earth and Moon share nearly identical oxygen isotopic signatures."
+          - "The Moon's gravitational presence stabilized Earth's axial tilt, preventing wild climate swings and enabling stable life to evolve."
+      - title: The Eight Lunar Phases
+        points:
+          - "The Moon does not produce its own light; it reflects light from the Sun as it orbits Earth every 29.5 days (synodic month)."
+          - "The 8 phases in order are: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Third Quarter, and Waning Crescent."
+          - "'Waxing' means the illuminated portion is growing larger, while 'Waning' means the illuminated portion is shrinking."
+          - "A 'Blue Moon' is a popular name for the rare occurrence of a second Full Moon within a single calendar month."
+      - title: Gravitational Tides & Ocean Pull
+        points:
+          - "The Moon's gravitational attraction pulls on Earth's oceans, creating high and low ocean tides twice every day."
+          - "When the Sun, Earth, and Moon align in a straight line during Full and New Moons, their gravity combines to produce higher 'Spring Tides'."
+          - "When the Moon is at a 90-degree angle to the Sun during Quarter Moons, the tidal pull is weaker, producing 'Neap Tides'."
+          - "Tidal friction is gradually slowing Earth's rotation by about 1.4 milliseconds per century and pushing the Moon 3.8 cm farther away each year."
+      - title: The Far Side of the Moon
+        points:
+          - "The Moon is 'tidally locked' to Earth, meaning it takes the exact same time to rotate on its axis as it does to orbit Earth (27.3 days)."
+          - "Because of tidal locking, the exact same face of the Moon always points toward Earth; humans never saw the Far Side until a Soviet probe in 1959."
+          - "The Far Side is often incorrectly called the 'dark side', but it actually receives just as much sunlight as the near side."
+          - "Unlike the smooth near side, the Far Side's crust is much thicker and heavily cratered, with almost no dark volcanic maria."
+      - title: Solar & Lunar Eclipses
+        points:
+          - "A Solar Eclipse occurs when the Moon passes directly between the Sun and Earth, casting its shadow (umbra) onto Earth's surface."
+          - "By a stunning cosmic coincidence, the Sun is 400 times larger than the Moon, but also 400 times farther away, making them appear identical in size in the sky!"
+          - "A Lunar Eclipse occurs when Earth passes directly between the Sun and Moon, casting Earth's shadow over the Full Moon."
+          - "During a total lunar eclipse, refracted sunlight through Earth's atmosphere turns the Moon a glowing copper red ('Blood Moon')."
+      - title: "Lunar Maria & The Sea of Tranquility"
+        points:
+          - "The dark patches visible on the Moon are called 'Maria' (Latin for 'seas'), ancient basaltic plains formed by ancient volcanic lava flows."
+          - "Early astronomers mistakenly believed these dark flat areas were vast oceans of liquid water."
+          - "The 'Sea of Tranquility' (Mare Tranquillitatis) is the historic landing site where Apollo 11's Eagle lunar module touched down in 1969."
+          - "The lighter, bright regions of the Moon are heavily cratered mountainous highlands composed of anorthosite rock."
+      - title: Water Ice in Polar Craters
+        points:
+          - "Because the Moon has an axial tilt of only 1.5 degrees, deep craters at the lunar poles never receive any direct sunlight."
+          - "These permanently shadowed regions act as 'cold traps', preserving billions of tons of ancient water ice at temperatures below -200°C (-330°F)."
+          - "Discovered by orbital probes like Chandrayaan-1 and LRO, this water ice is a vital resource for future human space exploration."
+          - "Future lunar astronauts can melt the ice for drinking water and split it into hydrogen and oxygen to produce rocket propellant."
+      - title: The Artemis Program & Future Bases
+        points:
+          - "NASA's Artemis program aims to land the first woman and first person of color on the Moon and establish sustainable human exploration."
+          - "The program uses the giant Space Launch System (SLS) rocket, the Orion crew capsule, and commercial lunar landers."
+          - "Artemis plans to build the 'Lunar Gateway', an international space station in lunar orbit to support surface missions."
+          - "Establishing a permanent presence on the Moon serves as a critical technological stepping stone for humanity's eventual journey to Mars."
+    trivia:
+      - type: multiple_choice
+        question: "What ancient protoplanet do scientists believe collided with Earth to form the Moon?"
+        options: ["Ceres", "Theia", "Vesta", "Nemesis"]
+        correct: 1
+      - type: single_qa
+        question: "What term describes the Moon phase when the illuminated portion is growing larger?"
+        answer: "Waxing"
+      - type: multiple_choice
+        question: "Why does humanity on Earth only ever see one side of the Moon?"
+        options: ["The Moon does not rotate at all", "The Moon is tidally locked (rotation period equals orbit period)", "Earth's magnetic field blocks the other side", "The far side is permanently in shadow"]
+        correct: 1
+      - type: single_qa
+        question: "What is the popular name for the rare occurrence of two Full Moons in a single calendar month?"
+        answer: "A Blue Moon"
+      - type: multiple_choice
+        question: "What type of eclipse occurs when the Moon passes directly between the Sun and Earth?"
+        options: ["Lunar Eclipse", "Solar Eclipse", "Stellar Eclipse", "Planetary Transit"]
+        correct: 1
+      - type: single_qa
+        question: "What color does the Moon appear during a total lunar eclipse ('Blood Moon')?"
+        answer: "Red (or copper red)"
+      - type: multiple_choice
+        question: "What is the historic name of the lunar basalt plain where Apollo 11 first landed on the Moon in 1969?"
+        options: ["Ocean of Storms", "Sea of Tranquility", "Sea of Serenity", "Crater of Copernicus"]
+        correct: 1
+      - type: single_qa
+        question: "Approximately how far is the Moon drifting away from Earth each year due to tidal friction?"
+        answer: "3.8 centimeters (about 1.5 inches)"
+      - type: multiple_choice
+        question: "What are the dark, smooth flat plains on the Moon called, formed by ancient volcanic lava?"
+        options: ["Maria (Seas)", "Terrae (Highlands)", "Calderas", "Regoliths"]
+        correct: 0
+      - type: single_qa
+        question: "What valuable resource was discovered frozen in permanently shadowed craters at the Moon's poles?"
+        answer: "Water ice"
+      - type: multiple_choice
+        question: "What is the name of NASA's modern 21st-century space program to return astronauts to the Moon?"
+        options: ["Apollo", "Artemis", "Gemini", "Mercury"]
+        correct: 1
+      - type: single_qa
+        question: "How many days does it take the Moon to complete a full cycle of 8 lunar phases (synodic month)?"
+        answer: "29.5 days"
+      - type: multiple_choice
+        question: "What type of extra-high ocean tides occur when the Sun, Earth, and Moon align in a straight line?"
+        options: ["Neap Tides", "Spring Tides", "Rip Tides", "Ebb Tides"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the planned international space station that will orbit the Moon under the Artemis program?"
+        answer: "Lunar Gateway (or Gateway)"
+      - type: multiple_choice
+        question: "How much larger is the Sun compared to the Moon in diameter, matching their distance ratio to Earth?"
+        options: ["10 times", "50 times", "400 times", "1,000 times"]
+        correct: 2
+      - type: single_qa
+        question: "What country's robotic probe (Luna 3) took the first photograph of the far side of the Moon in 1959?"
+        answer: "The Soviet Union (USSR)"
+
+  - id: famous_space_missions
+    title: Famous Space Missions & Rovers
+    description: >
+      Relive humanity's greatest adventures into the great unknown! 
+      From the first footprints on the lunar surface to robotic rovers roaming the dusty canyons of Mars.
+    cards:
+      - title: Apollo 11 & The Lunar Landings
+        points:
+          - "Launched on July 16, 1969, aboard the mighty 363-foot Saturn V rocket, Apollo 11 carried astronauts Neil Armstrong, Buzz Aldrin, and Michael Collins."
+          - "On July 20, 1969, Neil Armstrong stepped onto the lunar soil, proclaiming: 'That's one small step for [a] man, one giant leap for mankind.'"
+          - "Armstrong and Aldrin spent 21.5 hours on the lunar surface, collecting 21.5 kilograms (47.5 lbs) of rock samples and planting the American flag."
+          - "Between 1969 and 1972, a total of 12 humans walked on the Moon across six successful Apollo missions (Apollo 11, 12, 14, 15, 16, and 17)."
+      - title: "Voyager 1 & 2: The Interstellar Voyagers"
+        points:
+          - "Launched in 1977, the twin Voyager probes utilized a rare planetary alignment to conduct a 'Grand Tour' of Jupiter, Saturn, Uranus, and Neptune."
+          - "Each spacecraft carries a gold-plated copper 'Golden Record' containing greetings in 55 human languages, music (Bach, Chuck Berry), and Earth sounds."
+          - "In 2012, Voyager 1 became the first human-made object to cross the heliopause and officially enter interstellar space."
+          - "Voyager 1 captured the famous 'Pale Blue Dot' photograph in 1990, showing Earth as a tiny, vulnerable speck of dust in a beam of sunlight."
+      - title: "Mars Rovers: Spirit, Opportunity, Curiosity & Perseverance"
+        points:
+          - "Spirit and Opportunity landed on Mars in 2004; Opportunity was designed to last 90 days but operated for an astonishing 14 years!"
+          - "Curiosity, a car-sized nuclear-powered rover, landed in Gale Crater in 2012, discovering that ancient Mars had liquid freshwater lakes suitable for life."
+          - "Perseverance landed in Jezero Crater in 2021, equipped with drill tools to collect rock core samples for future return to Earth."
+          - "Perseverance carried 'Ingenuity', a robotic coaxial helicopter that achieved the first powered, controlled flight on another planet."
+      - title: The Cassini-Huygens Mission
+        points:
+          - "Cassini orbited Saturn from 2004 to 2017, dramatically expanding our understanding of the ringed planet and its dynamic moons."
+          - "The European Space Agency's Huygens probe detached from Cassini in 2005 and made a historic landing on the surface of Titan."
+          - "Cassini discovered active geysers of warm liquid water and organic molecules erupting from the south pole of icy moon Enceladus."
+          - "To protect potential pristine microbial life on the moons, Cassini concluded its mission with a dramatic controlled dive into Saturn's atmosphere."
+      - title: "New Horizons: Journey to Pluto"
+        points:
+          - "Launched in 2006, New Horizons was the fastest spacecraft ever launched from Earth, traveling over 58,000 km/h (36,000 mph)."
+          - "In July 2015, it conducted the first-ever close flyby of Pluto, capturing breathtaking high-resolution color images."
+          - "The probe revealed that Pluto is geologically active, with 3,000-meter-tall water ice mountains and active nitrogen glaciers."
+          - "In 2019, New Horizons made history again by flying past Arrokoth, a pristine contact-binary planetesimal in the distant Kuiper Belt."
+      - title: The Hubble Space Telescope Servicing Missions
+        points:
+          - "When Hubble was deployed in 1990, a microscopic flaw in its primary mirror (spherical aberration) resulted in blurry, distorted photos."
+          - "In 1993, space shuttle Endeavour astronauts performed a daring spacewalk repair, installing corrective optics (COSTAR) like 'glasses' for the telescope."
+          - "NASA astronauts conducted five risky Space Shuttle servicing missions, upgrading Hubble's instruments, batteries, and gyroscopes in orbit."
+          - "Hubble has operated for over 30 years, capturing iconic images and making over 1.5 million scientific observations."
+      - title: The James Webb Space Telescope Deployment
+        points:
+          - "Unlike Hubble, the James Webb Space Telescope could not be repaired in orbit because it operates 1.5 million kilometers from Earth."
+          - "The telescope had to perform over 300 complex, single-point failure mechanical deployments over 30 days in deep space."
+          - "Deployments included unfolding a five-layer tennis-court-sized sunshield and aligning 18 hexagonal gold-plated beryllium mirror segments."
+          - "The deployment was completely flawless, allowing astronomers to see the earliest stars that ignited after the Big Bang."
+      - title: Pioneer 10 & 11 & The Deep Space Network
+        points:
+          - "Pioneer 10 (1972) was the first spacecraft to navigate safely through the Asteroid Belt and conduct a close flyby of Jupiter."
+          - "Pioneer 10 and 11 carried gold-anodized aluminum plaques with pictograms of human figures and the location of Earth relative to pulsars."
+          - "NASA's Deep Space Network (DSN) uses giant radio antennas in California, Spain, and Australia to communicate with probes across the solar system."
+          - "These historic missions laid the technological foundations for deep-space navigation, autonomous robotics, and interstellar exploration."
+    trivia:
+      - type: multiple_choice
+        question: "What historic words did Neil Armstrong speak upon stepping onto the lunar surface in 1969?"
+        options: ["The Eagle has landed", "That's one small step for man, one giant leap for mankind", "We came in peace for all mankind", "Here men from the planet Earth first set foot upon the Moon"]
+        correct: 1
+      - type: single_qa
+        question: "How many total humans have walked on the surface of the Moon across the Apollo program?"
+        answer: "12 humans (all American astronauts)"
+      - type: multiple_choice
+        question: "What special object carrying recordings of world music and languages is attached to the Voyager probes?"
+        options: ["The Silver Disc", "The Golden Record", "The Crystal Cube", "The Silicon Chip"]
+        correct: 1
+      - type: single_qa
+        question: "What robotic helicopter made history in 2021 by performing the first powered flight on Mars?"
+        answer: "Ingenuity"
+      - type: multiple_choice
+        question: "What tiny robotic rover landed on Mars in 2004 and operated for 14 years despite being designed for only 90 days?"
+        options: ["Sojourner", "Spirit", "Opportunity", "Curiosity"]
+        correct: 2
+      - type: single_qa
+        question: "What famous photograph of Earth was taken by Voyager 1 in 1990 from a distance of 6 billion kilometers?"
+        answer: "The Pale Blue Dot"
+      - type: multiple_choice
+        question: "What space probe made the first historic flyby of Pluto in July 2015?"
+        options: ["Voyager 2", "New Horizons", "Cassini", "Pioneer 11"]
+        correct: 1
+      - type: single_qa
+        question: "What spacecraft orbited Saturn for 13 years and deployed the Huygens probe onto Titan's surface?"
+        answer: "Cassini (or Cassini-Huygens)"
+      - type: multiple_choice
+        question: "What was the optical defect that initially caused the Hubble Space Telescope to take blurry images in 1990?"
+        options: ["Broken radio antenna", "Spherical aberration in the primary mirror", "Clouded lens glass", "Dead sensor camera"]
+        correct: 1
+      - type: single_qa
+        question: "What giant rocket propelled Apollo 11 and its crew to the Moon in July 1969?"
+        answer: "Saturn V"
+      - type: multiple_choice
+        question: "In what year did Voyager 1 make history as the first human-made object to cross into interstellar space?"
+        options: ["1999", "2005", "2012", "2020"]
+        correct: 2
+      - type: single_qa
+        question: "What icy moon of Saturn did Cassini discover active plumes of water vapor and organic molecules erupting from?"
+        answer: "Enceladus"
+      - type: multiple_choice
+        question: "What is the global network of giant radio antenna facilities NASA uses to communicate with deep space probes?"
+        options: ["The Deep Space Network (DSN)", "The Global Satellite Grid", "The Orbital Relay Array", "The Cosmic Radio Link"]
+        correct: 0
+      - type: single_qa
+        question: "Which Apollo 11 astronaut stayed in lunar orbit aboard the command module Columbia while Armstrong and Aldrin walked on the Moon?"
+        answer: "Michael Collins"
+      - type: multiple_choice
+        question: "What car-sized nuclear-powered rover touched down in Mars' Gale Crater in 2012 using a rocket-powered 'sky crane'?"
+        options: ["Pathfinder", "Curiosity", "Viking 1", "Perseverance"]
+        correct: 1
+      - type: single_qa
+        question: "How many hexagonal gold-plated beryllium mirror segments make up the primary mirror of the James Webb Space Telescope?"
+        answer: "18 segments"
+
+  - id: stars_and_constellations
+    title: "Stars, Constellations & Galaxies"
+    description: >
+      Look up into the sparkling night sky! Learn how stars are born in stellar nurseries, 
+      navigate using ancient constellations, and explore the spiral arms of giant galaxies.
+    cards:
+      - title: "Stellar Nurseries: How Stars Are Born"
+        points:
+          - "Stars are born inside giant, cold clouds of interstellar gas and dust called Nebulae (such as the Orion Nebula)."
+          - "Gravity pulls pockets of gas together until the core reaches immense pressure and temperatures over 10 million degrees Celsius."
+          - "At this threshold, nuclear fusion ignites, fusing hydrogen atoms into helium and releasing immense light and energy."
+          - "A star spends most of its lifetime in a stable state known as the 'main sequence', balancing outward fusion pressure with inward gravity."
+      - title: "The Sun: Our Yellow Dwarf Star"
+        points:
+          - "The Sun is a G-type main-sequence star (yellow dwarf) that contains 99.86% of all the mass in the entire solar system."
+          - "Every second, the Sun's core fuses 600 million tons of hydrogen into helium, generating all the heat and light that sustains life on Earth."
+          - "Solar flares and coronal mass ejections (CMEs) release magnetic storms into space, interacting with Earth's magnetic field to create auroras."
+          - "The Sun is roughly 4.6 billion years old, about halfway through its 10-billion-year lifespan before it expands into a Red Giant."
+      - title: The Big Dipper & Polaris (The North Star)
+        points:
+          - "The Big Dipper is an easily recognized 'asterism' (star pattern) that forms part of the larger constellation Ursa Major (The Great Bear)."
+          - "The two outer stars in the Dipper's bowl (Merak and Dubhe) are known as 'The Pointers' because a line drawn through them points directly to Polaris."
+          - "Polaris (The North Star) sits almost directly above Earth's geographic North Pole, remaining stationary in the night sky while other stars rotate around it."
+          - "For thousands of years, sailors, explorers, and desert travelers used Polaris as their ultimate celestial compass for navigation."
+      - title: Orion the Hunter & Betelgeuse
+        points:
+          - "Orion is one of the most prominent and recognizable winter constellations, featuring three bright stars in a row forming 'Orion's Belt'."
+          - "Its upper left shoulder is marked by Betelgeuse, an aging red supergiant star so colossal that if placed at our Sun, it would swallow Mars and Jupiter!"
+          - "Its lower right knee is marked by Rigel, a brilliant blue-white supergiant star shining tens of thousands of times brighter than our Sun."
+          - "Hanging below Orion's Belt is Orion's Sword, which contains the famous Orion Nebula where new stars are actively being born."
+      - title: Supernovae & Neutron Stars
+        points:
+          - "When a massive star runs out of nuclear fuel, its core collapses catastrophically and explodes in a titanic blast called a Supernova."
+          - "A single supernova can briefly outshine an entire galaxy of hundreds of billions of stars and forge heavy elements like gold, silver, and platinum."
+          - "The collapsed remnant core can become a Neutron Star—an object so dense that a single sugar-cube-sized amount of its matter weighs a billion tons!"
+          - "Rapidly spinning, highly magnetized neutron stars that emit beams of radiation like cosmic lighthouses are called Pulsars."
+      - title: The Milky Way Galaxy
+        points:
+          - "Our solar system resides inside the Milky Way, a barred spiral galaxy containing an estimated 100 to 400 billion stars."
+          - "The Milky Way spans about 100,000 light-years across, with our Sun located in a spiral arm called the Orion-Cygnus Arm."
+          - "It takes our solar system approximately 230 million years to complete one full revolution around the galactic center (a 'Galactic Year')."
+          - "At the very heart of the Milky Way lies Sagittarius A*, a supermassive black hole with the mass of 4.3 million Suns."
+      - title: Andromeda & The Local Group
+        points:
+          - "The Andromeda Galaxy (M31) is the closest major spiral galaxy to the Milky Way, located approximately 2.5 million light-years away."
+          - "Andromeda is visible to the naked eye on dark nights, making it the most distant celestial object visible without a telescope."
+          - "The Milky Way and Andromeda are traveling toward each other at 110 km/s and are predicted to collide and merge in about 4.5 billion years."
+          - "Together with the Triangulum Galaxy and dozens of dwarf galaxies, they form our cosmic neighborhood known as the 'Local Group'."
+      - title: The 12 Zodiac Constellations
+        points:
+          - "The Zodiac is a belt of the sky through which the Sun, Moon, and planets appear to move along the ecliptic plane over the course of a year."
+          - "Ancient Babylonian and Greek astronomers identified 12 traditional zodiac constellations, including Aries, Taurus, Gemini, Leo, and Scorpio."
+          - "Due to 'precession' (the slow wobble of Earth's axis over a 26,000-year cycle), the positions of the constellations have shifted since ancient times."
+          - "Constellations provided ancient civilizations with an essential seasonal calendar to time agricultural planting, harvesting, and cultural festivals."
+    trivia:
+      - type: multiple_choice
+        question: "What nuclear process powers the Sun and other stars by fusing hydrogen atoms into helium?"
+        options: ["Nuclear Fission", "Nuclear Fusion", "Chemical Combustion", "Radioactive Decay"]
+        correct: 1
+      - type: single_qa
+        question: "What star sits directly above Earth's geographic North Pole and serves as a natural navigational compass?"
+        answer: "Polaris (The North Star)"
+      - type: multiple_choice
+        question: "What percentage of the entire solar system's total mass is contained within our Sun?"
+        options: ["50%", "75%", "90%", "99.86%"]
+        correct: 3
+      - type: single_qa
+        question: "What giant red supergiant star marks the upper-left shoulder of the constellation Orion?"
+        answer: "Betelgeuse"
+      - type: multiple_choice
+        question: "What is a rapidly spinning, highly magnetized neutron star that pulses beams of radiation called?"
+        options: ["Quasar", "Pulsar", "Magnetar", "Red Dwarf"]
+        correct: 1
+      - type: single_qa
+        question: "What type of galaxy is our home galaxy, the Milky Way?"
+        answer: "Barred Spiral Galaxy"
+      - type: multiple_choice
+        question: "What is the closest major spiral galaxy to the Milky Way, located 2.5 million light-years away?"
+        options: ["Triangulum Galaxy", "Andromeda Galaxy (M31)", "Sombrero Galaxy", "Whirlpool Galaxy"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the supermassive black hole located at the center of the Milky Way?"
+        answer: "Sagittarius A* (Sagittarius A-star)"
+      - type: multiple_choice
+        question: "What giant clouds of interstellar gas and dust serve as stellar nurseries where new stars are born?"
+        options: ["Asteroids", "Nebulae", "Black Holes", "Comets"]
+        correct: 1
+      - type: single_qa
+        question: "How many stars make up the distinctive line of 'Orion's Belt' in the night sky?"
+        answer: "3 stars"
+      - type: multiple_choice
+        question: "What catastrophic cosmic explosion occurs when a massive star exhausts its fuel and its core collapses?"
+        options: ["Solar flare", "Supernova", "Planetary nebula", "Gamma-ray flash"]
+        correct: 1
+      - type: single_qa
+        question: "In how many billion years are the Milky Way and Andromeda galaxies predicted to collide and merge?"
+        answer: "4.5 billion years"
+      - type: multiple_choice
+        question: "The Big Dipper is an asterism located within which larger constellation?"
+        options: ["Ursa Major (The Great Bear)", "Ursa Minor (The Little Bear)", "Cassiopeia", "Canis Major"]
+        correct: 0
+      - type: single_qa
+        question: "How long does it take our solar system to complete one full orbit around the center of the Milky Way (a galactic year)?"
+        answer: "Approximately 230 million years"
+      - type: multiple_choice
+        question: "What brilliant blue-white supergiant star marks the lower-right foot of the constellation Orion?"
+        options: ["Sirius", "Rigel", "Aldebaran", "Vega"]
+        correct: 1
+      - type: single_qa
+        question: "What slow wobble of Earth's rotational axis over a 26,000-year cycle shifts the positions of constellations over centuries?"
+        answer: "Precession (Axial precession)"
+
+  - id: black_holes_cosmic_mysteries
+    title: Black Holes & Cosmic Mysteries
+    description: >
+      Dare to venture into the deepest and most mysterious realms of modern astrophysics! 
+      From the gravitational grasp of black holes to dark matter, dark energy, and the fate of the universe.
+    cards:
+      - title: "Black Holes: The Ultimate Gravity Traps"
+        points:
+          - "A black hole is a region of spacetime where gravity is so intense that nothing—not even light—can move fast enough to escape."
+          - "They are formed when massive stars collapse under their own gravity at the end of their lifecycles."
+          - "The boundary beyond which nothing can escape is called the 'Event Horizon' (the point of no return)."
+          - "At the center lies the theoretical 'Singularity', a point of infinite density where the known laws of physics break down."
+      - title: Spaghettification & Time Dilation
+        points:
+          - "If an object falls toward a stellar black hole, the immense difference in gravitational pull between its top and bottom stretches it like spaghetti ('Spaghettification')."
+          - "Einstein's General Theory of Relativity predicted that intense gravity slows down time (gravitational time dilation)."
+          - "To an outside observer watching someone fall toward an event horizon, the falling person appears to slow down, freeze, and fade away."
+          - "Black holes were purely theoretical until astronomers detected their gravitational effects and photographed them directly."
+      - title: First Images of Black Holes
+        points:
+          - "In April 2019, the Event Horizon Telescope (EHT) captured the historic first-ever direct image of a black hole in galaxy Messier 87 (M87*)."
+          - "The EHT linked eight radio telescope observatories across Earth to create a virtual Earth-sized telescope with unprecedented resolution."
+          - "The image revealed a dark central shadow surrounded by a glowing, superheated ring of orbiting gas and matter."
+          - "In 2022, the EHT collaboration published the first direct image of Sagittarius A*, the supermassive black hole at the center of our own Milky Way."
+      - title: Dark Matter & Dark Energy
+        points:
+          - "Normal, visible matter (stars, planets, gas, and humans) accounts for only about 5% of the total mass-energy of the universe!"
+          - "Dark Matter makes up about 27% of the universe; it is invisible and does not emit or reflect light, but its gravitational pull holds galaxies together."
+          - "Dark Energy makes up roughly 68% of the universe; it is a mysterious force driving the accelerated expansion of space itself."
+          - "Unraveling the true nature of dark matter and dark energy remains the greatest unsolved mystery in modern physics."
+      - title: Gravitational Waves
+        points:
+          - "Predicted by Albert Einstein in 1916, gravitational waves are ripples in the fabric of spacetime caused by violent cosmic collisions."
+          - "In September 2015, the LIGO observatory made history by detecting gravitational waves produced by the collision of two black holes 1.3 billion light-years away."
+          - "LIGO detected ripples stretching space by a fraction of the diameter of a single subatomic proton using laser interferometers."
+          - "The discovery opened a brand-new era of 'gravitational astronomy', allowing scientists to 'listen' to the universe."
+      - title: Exoplanets & The Goldilocks Zone
+        points:
+          - "An exoplanet is any planet located outside our solar system that orbits another star."
+          - "The 'Goldilocks Zone' (habitable zone) is the sweet-spot orbital distance from a star where temperatures allow liquid surface water."
+          - "The Kepler Space Telescope discovered thousands of exoplanets by detecting tiny dips in a star's brightness as planets transit in front of it."
+          - "Planetary systems like TRAPPIST-1 contain seven Earth-sized rocky planets, with three located in the star's habitable zone."
+      - title: The Cosmic Microwave Background (CMB)
+        points:
+          - "The Cosmic Microwave Background is the oldest light in the universe, dating back to 380,000 years after the Big Bang."
+          - "Discovered accidentally by radio astronomers Arno Penzias and Robert Wilson in 1965, it earned them the Nobel Prize in Physics."
+          - "The CMB provides a thermal 'baby picture' of the infant universe, glowing uniformly across the entire sky at 2.7 Kelvin (-270.4°C)."
+          - "Tiny temperature ripples in the CMB represent the original seeds that gravity grew into galaxies, stars, and planets."
+      - title: The Ultimate Fate of the Universe
+        points:
+          - "Cosmologists study several theoretical scenarios for the ultimate long-term fate of our expanding universe."
+          - "The 'Big Freeze' (Heat Death) suggests that dark energy will cause the universe to expand forever until stars burn out and matter cools to absolute zero."
+          - "The 'Big Rip' theorizes that accelerating dark energy could eventually tear apart galaxies, stars, planets, and even atoms themselves."
+          - "Current astronomical observations indicate the Big Freeze is the most likely scenario over hundreds of trillions of years."
+    trivia:
+      - type: multiple_choice
+        question: "What is the boundary of a black hole called beyond which nothing, not even light, can escape?"
+        options: ["The Singularity", "The Event Horizon", "The Accretion Disk", "The Photon Sphere"]
+        correct: 1
+      - type: single_qa
+        question: "What percentage of the universe's total mass-energy is made up of regular visible matter (stars, planets, gas)?"
+        answer: "Approximately 5%"
+      - type: multiple_choice
+        question: "What observatory made history in 2015 by detecting gravitational waves from colliding black holes?"
+        options: ["CERN", "LIGO", "Hubble", "SETI"]
+        correct: 1
+      - type: single_qa
+        question: "What is the humorous scientific term for the extreme stretching of an object falling into a black hole?"
+        answer: "Spaghettification"
+      - type: multiple_choice
+        question: "What mysterious force makes up approximately 68% of the universe and accelerates the expansion of space?"
+        options: ["Dark Matter", "Dark Energy", "Antimatter", "Cosmic Magnetism"]
+        correct: 1
+      - type: single_qa
+        question: "In what year did the Event Horizon Telescope capture the historic first-ever direct photograph of a black hole (in galaxy M87)?"
+        answer: "2019"
+      - type: multiple_choice
+        question: "What is the oldest thermal radiation in the universe, dating to 380,000 years after the Big Bang, called?"
+        options: ["Cosmic Microwave Background (CMB)", "Solar Wind", "Gamma-Ray Burst", "Hawking Radiation"]
+        correct: 0
+      - type: single_qa
+        question: "What famous 20th-century physicist formulated the General Theory of Relativity and predicted gravitational waves and black holes?"
+        answer: "Albert Einstein"
+      - type: multiple_choice
+        question: "What is the orbital zone around a star where liquid water can exist on a planet's surface called?"
+        options: ["The Kuiper Zone", "The Goldilocks Zone (Habitable Zone)", "The Solar Corona", "The Asteroid Belt"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the planetary system discovered with seven Earth-sized planets orbiting a dwarf star?"
+        answer: "TRAPPIST-1"
+      - type: multiple_choice
+        question: "What is the theoretical point of infinite density at the very center of a black hole called?"
+        options: ["Event Horizon", "Singularity", "Wormhole", "Quark Core"]
+        correct: 1
+      - type: single_qa
+        question: "What invisible cosmic substance makes up about 27% of the universe and holds rotating galaxies together with its gravity?"
+        answer: "Dark Matter"
+      - type: multiple_choice
+        question: "What is the most widely accepted scientific scenario for the ultimate long-term fate of our universe?"
+        options: ["The Big Crunch", "The Big Freeze (Heat Death)", "The Big Bounce", "The Static Universe"]
+        correct: 1
+      - type: single_qa
+        question: "What space telescope discovered thousands of exoplanets by measuring the tiny dips in starlight during transits?"
+        answer: "Kepler Space Telescope"
+      - type: multiple_choice
+        question: "According to Einstein's relativity, what happens to the passage of time in an area of extreme gravitational pull?"
+        options: ["Time speeds up", "Time slows down (Gravitational Time Dilation)", "Time stops completely everywhere", "Time flows backward"]
+        correct: 1
+      - type: single_qa
+        question: "What form of theoretical radiation emitted slowly by black holes was proposed by physicist Stephen Hawking?"
+        answer: "Hawking Radiation"
