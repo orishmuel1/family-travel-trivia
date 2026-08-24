@@ -1,0 +1,568 @@
+id: true_crime_famous_heists_en
+title: True Crime & Famous Heists
+description: >
+  Step into the shadows of criminal history! From masterminded diamond vault break-ins 
+  and audacious art heists to cryptic unsolved serial cases, notorious Prohibition mobsters, 
+  and legendary con artists, explore the most compelling true crime cases ever recorded.
+lang: en
+audience: adult
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      Pioneering forensic breakthroughs, investigative psychology, and landmark criminological history. 
+      Read these cards together aloud before testing your knowledge in the trivia round!
+    cards:
+      - title: The Birth of Forensic Science
+        points:
+          - "In 1892, Argentinian police official Juan Vucetich made history by using bloody fingerprints to solve a murder, creating the first forensic fingerprint bureau."
+          - "Sir Arthur Conan Doyle's fictional detective Sherlock Holmes popularized forensic ballistics, handwriting analysis, and footprint casting before police forces adopted them."
+          - "Dr. Edmond Locard established the fundamental forensic tenet known as 'Locard's Exchange Principle': 'Every contact leaves a trace'."
+          - "Early investigators relied on the Bertillon system, a complex set of 11 physical body measurements, before fingerprinting proved far more reliable."
+      - title: DNA Profiling & Genetic Genealogy
+        points:
+          - "British geneticist Sir Alec Jeffreys invented DNA fingerprinting in 1984, first used to solve the Colin Pitchfork murders in 1986."
+          - "In 2018, police captured the infamous 'Golden State Killer' (Joseph James DeAngelo) after decades using investigative genetic genealogy via public database GEDmatch."
+          - "Modern touch-DNA techniques can extract complete genetic profiles from just a few skin cells left on a door handle or glass."
+          - "The FBI's national DNA database (CODIS) contains over 20 million offender and crime scene profiles, solving hundreds of thousands of cold cases."
+      - title: The Origins of Scotland Yard & The FBI
+        points:
+          - "London's Metropolitan Police Service was founded in 1829 by Sir Robert Peel, with officers nicknamed 'Bobbies' and headquarters at 'Scotland Yard'."
+          - "The US Federal Bureau of Investigation (FBI) was established in 1908 and dramatically expanded under J. Edgar Hoover during the Prohibition gangster era."
+          - "The FBI's 'Ten Most Wanted Fugitives' list was launched in 1950 after a reporter asked for names of the 'toughest guys' the bureau was hunting."
+          - "Over 90% of criminals featured on the Top Ten Most Wanted list have been successfully captured or located."
+      - title: Criminal Profiling & The BAU
+        points:
+          - "The FBI's Behavioral Analysis Unit (BAU) was pioneered in the late 1970s by agents John Douglas and Robert Ressler in Quantico, Virginia."
+          - "Agents conducted extensive in-depth prison interviews with convicted serial killers, including Ted Bundy, Charles Manson, and Ed Kemper."
+          - "Profiling analyzes crime scene evidence, victimology, and behavior to deduce an offender's psychological traits, habits, and likely demographics."
+          - "Ressler coined the term 'serial killer' to describe murderers who kill across multiple events with cooling-off periods."
+      - title: The Science of Bloodstain Pattern Analysis
+        points:
+          - "Bloodstain pattern analysis (BPA) uses physics and fluid dynamics to reconstruct the position, movement, and weapon used during violent crimes."
+          - "Luminol, a chemical discovered in 1928, produces a glowing blue chemiluminescence when reacting with iron in hemoglobin, even on bleached surfaces."
+          - "High-velocity spatter patterns (fine mists) typically indicate gunshot trauma, while cast-off patterns reveal swings from blunt weapons."
+          - "Modern forensic laboratories use laser trajectory rods and 3D digital photogrammetry to map entire crime scenes with millimeter precision."
+      - title: Interpol & The Red Notice System
+        points:
+          - "Founded in 1923 and headquartered in Lyon, France, Interpol (International Criminal Police Organization) connects police forces across 196 member countries."
+          - "An Interpol 'Red Notice' is not an international arrest warrant, but a global alert requesting law enforcement worldwide to locate and arrest a fugitive pending extradition."
+          - "Interpol manages global databases tracking stolen art, stolen passports, fingerprint records, and transnational organized crime networks."
+          - "The organization operates 24/7 communications channels to coordinate cross-border counter-terrorism and anti-human trafficking operations."
+      - title: The Criminal Code of Silence (Omertà)
+        points:
+          - "Originating in southern Italy, 'Omertà' is the strict code of silence that forbids members of organized crime from cooperating with authorities."
+          - "Breaking Omertà was historically punished by the Mafia with swift execution of the informant and their family members."
+          - "The code held strong in America until Joe Valachi publicly testified before the US Senate in 1963, exposing the existence of 'La Cosa Nostra'."
+          - "The US RICO Act (Racketeer Influenced and Corrupt Organizations Act) of 1970 revolutionized prosecuting mob bosses for crimes committed by subordinates."
+      - title: Flawed Forensics & The Innocence Project
+        points:
+          - "Founded in 1992 by Barry Scheck and Peter Neufeld, The Innocence Project has exonerated over 375 wrongfully convicted people in the US using post-conviction DNA."
+          - "Studies revealed that eyewitness misidentification is the single greatest contributing factor in over 70% of wrongful convictions overturned by DNA."
+          - "Previously trusted forensic methods like bite-mark analysis, microscopic hair comparison, and arson burn pattern analysis have faced severe scientific scrutiny."
+          - "Modern criminal justice reforms emphasize double-blind photo lineups, recorded interrogations, and strict scientific validation standards."
+    trivia:
+      - type: multiple_choice
+        question: "Who invented DNA profiling in 1984, forever revolutionizing forensic criminal investigations?"
+        options: ["Francis Crick", "Sir Alec Jeffreys", "Alexander Fleming", "Robert Koch"]
+        correct: 1
+      - type: single_qa
+        question: "What fundamental forensic rule states that 'every contact leaves a trace'?"
+        answer: "Locard's Exchange Principle"
+      - type: multiple_choice
+        question: "What chemical produces a glowing blue chemiluminescence when reacting with iron in bloodstains?"
+        options: ["Hydrogen peroxide", "Luminol", "Formaldehyde", "Ethanol"]
+        correct: 1
+      - type: single_qa
+        question: "What infamous serial killer was captured in 2018 after decades through investigative genetic genealogy?"
+        answer: "The Golden State Killer (Joseph James DeAngelo)"
+      - type: multiple_choice
+        question: "What British politician established London's Metropolitan Police in 1829, giving officers the nickname 'Bobbies'?"
+        options: ["Winston Churchill", "Sir Robert Peel", "Benjamin Disraeli", "William Gladstone"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the FBI's specialized profiling division based in Quantico, Virginia?"
+        answer: "Behavioral Analysis Unit (BAU)"
+      - type: multiple_choice
+        question: "What color notice does Interpol issue to alert global police to locate and arrest a fugitive pending extradition?"
+        options: ["Blue Notice", "Red Notice", "Yellow Notice", "Black Notice"]
+        correct: 1
+      - type: single_qa
+        question: "What traditional Italian Mafia code of silence forbids members from cooperating with police under penalty of death?"
+        answer: "Omertà"
+      - type: multiple_choice
+        question: "What is the single leading contributing factor in over 70% of wrongful convictions overturned by DNA evidence?"
+        options: ["Faulty fingerprints", "Eyewitness misidentification", "Corrupt judges", "Computer hacking"]
+        correct: 1
+      - type: single_qa
+        question: "Who was the first mobster to publicly break the Mafia code of silence before the US Senate in 1963?"
+        answer: "Joe Valachi"
+      - type: multiple_choice
+        question: "What federal law passed in 1970 allowed US prosecutors to charge mob bosses for crimes ordered to underlings?"
+        options: ["The Patriot Act", "The RICO Act", "The Volstead Act", "The Brady Bill"]
+        correct: 1
+      - type: single_qa
+        question: "What fictional detective created by Sir Arthur Conan Doyle popularized forensic science techniques before police used them?"
+        answer: "Sherlock Holmes"
+      - type: multiple_choice
+        question: "In what country is the global headquarters of Interpol located?"
+        options: ["Geneva, Switzerland", "Lyon, France", "London, UK", "The Hague, Netherlands"]
+        correct: 1
+      - type: single_qa
+        question: "What is the acronym for the FBI's national computerized DNA database system?"
+        answer: "CODIS (Combined DNA Index System)"
+      - type: multiple_choice
+        question: "What 19th-century physical identification system relied on 11 exact body measurements before fingerprinting was adopted?"
+        options: ["The Galton Method", "The Bertillon System", "The Lombroso Chart", "The Hoover Index"]
+        correct: 1
+      - type: single_qa
+        question: "What non-profit legal organization founded in 1992 works to exonerate wrongfully convicted prisoners using DNA?"
+        answer: "The Innocence Project"
+
+  - id: greatest_art_diamond_heists
+    title: The Greatest Art & Diamond Heists
+    description: >
+      Explore the world of multi-million-dollar break-ins, bypassed laser sensors, and master vault cracks! 
+      From priceless Vermeer paintings in Boston to hundreds of millions in diamonds in Antwerp and Dresden.
+    cards:
+      - title: "The Isabella Stewart Gardner Museum Heist (1990)"
+        points:
+          - "On St. Patrick's Day night in 1990, two thieves disguised as Boston police officers gained entry to the museum."
+          - "They tied up two security guards with duct tape and spent 81 minutes stealing 13 priceless masterpieces valued at over $500 million."
+          - "Stolen treasures included Rembrandt's only seascape ('The Storm on the Sea of Galilee'), Vermeer's 'The Concert', and sketches by Degas."
+          - "To this day, not a single painting has been recovered, the empty wooden frames still hang on the museum walls, and a $10 million reward remains active."
+      - title: "The Antwerp Diamond Center Heist (2003)"
+        points:
+          - "Masterminded by Italian thief Leonardo Notarbartolo and his crew ('The School of Turin'), this is considered the greatest diamond heist in history."
+          - "The team penetrated a subterranean vault in Belgium protected by 10 layers of security, including Doppler radar, heat sensors, and a magnetic field."
+          - "Notarbartolo rented an office in the building for two years, using hidden cameras in pens to copy key shapes and record safe combinations."
+          - "They stole over $100 million in loose diamonds and gold, with the bulk of the gems never recovered after being betrayed by half-eaten sandwich trash."
+      - title: "The Theft of the Mona Lisa (1911)"
+        points:
+          - "Leonardo da Vinci's 'Mona Lisa' was stolen from the Louvre in Paris by Vincenzo Peruggia, an Italian handyman working at the museum."
+          - "Peruggia hid inside an art closet overnight on a Sunday, removed the painting from its frame, and walked out on Monday morning with it under his coat."
+          - "The painting was missing for over 24 hours before anyone noticed; during the investigation, poet Guillaume Apollinaire and artist Pablo Picasso were questioned!"
+          - "Peruggia was caught two years later in Florence trying to sell it to an art dealer; the sensational global media coverage turned the Mona Lisa into the most famous painting on Earth."
+      - title: "The Dresden Green Vault Jewel Robbery (2019)"
+        points:
+          - "Thieves broke into Dresden Castle's 'Grünes Gewölbe' (Green Vault) in Germany, which housed Europe's largest collection of royal treasures."
+          - "The gang started a small fire at an electrical junction box to disable streetlights, then cut through iron window bars and smashed display cases with an axe."
+          - "In less than ten minutes, they stole 21 historical jewelry pieces encrusted with over 4,300 diamonds, rubies, and emeralds worth over $120 million."
+          - "German police later arrested members of the notorious Remmo crime clan in Berlin, recovering a portion of the damaged royal jewels in 2022."
+      - title: "The Hatton Garden Safe Deposit Burglary (2015)"
+        points:
+          - "Over the 2015 Easter bank holiday weekend, a gang of veteran London thieves burglarized an underground safe deposit facility in London's diamond district."
+          - "The burglars slipped down an elevator shaft, drilled through a 50-centimeter (20-inch) thick reinforced concrete vault wall using an industrial diamond drill, and ransacked 73 deposit boxes."
+          - "They stole an estimated £14 million ($19 million) in gold, diamonds, and cash."
+          - "The thieves surprised the world when captured: the ringleaders were elderly criminals in their 60s and 70s ('The Bad Grandpas')."
+      - title: "The Lufthansa Heist at JFK Airport (1978)"
+        points:
+          - "Masterminded by Lucchese crime family associate Jimmy Burke ('Jimmy the Gent'), a mob crew raided the Lufthansa cargo terminal at JFK Airport in New York."
+          - "Armed gunmen tied up employees and loaded $5.875 million in untraceable cash and jewels into a van in under an hour ($25 million in today's value)."
+          - "It stood for decades as the largest cash robbery ever committed on American soil."
+          - "Fearing informants, Burke orchestrated the systematic assassination of nearly everyone involved in the heist; the crime inspired Martin Scorsese's movie 'Goodfellas'."
+      - title: "The Banco Central Heist (Fortaleza, Brazil, 2005)"
+        points:
+          - "A sophisticated criminal gang rented a commercial building two blocks away, posing as a synthetic grass and landscape company."
+          - "Over three months, they excavated a 78-meter (256-foot) underground tunnel complete with wooden paneling, electric lighting, and air conditioning!"
+          - "The tunnel dug directly beneath the vault floor of the Banco Central branch, where they broke through 1.1 meters of steel-reinforced concrete."
+          - "They stole 160 million Brazilian reais ($70 million) in non-sequential, used 50-real banknotes weighing 3.5 tons without firing a single shot."
+      - title: "The Pink Panthers International Diamond Syndicate"
+        points:
+          - "The 'Pink Panthers' is Interpol's nickname for a loose international network of over 800 jewel thieves from the former Yugoslavia (Serbia and Montenegro)."
+          - "They earned their nickname after stealing a £500,000 diamond in London and hiding it inside a jar of face cream, mirroring a scene in the movie 'The Pink Panther'."
+          - "Known for cinematic, high-speed smash-and-grab raids, they famously drove luxury Audis through the window of a Dubai mall in 2007 to rob a jewelry boutique in 90 seconds."
+          - "Interpol estimates the syndicate has stolen over $500 million in high-end luxury gems across Tokyo, Paris, Geneva, and London."
+    trivia:
+      - type: multiple_choice
+        question: "From which Boston museum were 13 priceless masterpieces worth $500 million stolen in 1990 by thieves dressed as police?"
+        options: ["Museum of Fine Arts", "Isabella Stewart Gardner Museum", "Harvard Art Museum", "Boston Institute of Contemporary Art"]
+        correct: 1
+      - type: single_qa
+        question: "Who stole the Mona Lisa from the Louvre in 1911 by hiding inside an art closet and walking out with it under his coat?"
+        answer: "Vincenzo Peruggia"
+      - type: multiple_choice
+        question: "What European city's diamond district was the target of the legendary 2003 vault heist led by Leonardo Notarbartolo?"
+        options: ["Amsterdam, Netherlands", "Antwerp, Belgium", "Zurich, Switzerland", "Milan, Italy"]
+        correct: 1
+      - type: single_qa
+        question: "What international diamond-heist syndicate from the Balkans earned their nickname by hiding a stolen diamond in face cream?"
+        answer: "The Pink Panthers"
+      - type: multiple_choice
+        question: "In the 1978 Lufthansa Heist at JFK Airport, what Lucchese crime associate masterminded the $5.8 million cash robbery?"
+        options: ["John Gotti", "Jimmy Burke (Jimmy the Gent)", "Henry Hill", "Paul Vario"]
+        correct: 1
+      - type: single_qa
+        question: "What subterranean engineering method did thieves use in Fortaleza, Brazil in 2005 to steal $70 million from the Banco Central?"
+        answer: "A 78-meter underground tunnel"
+      - type: multiple_choice
+        question: "What was surprising about the ringleaders captured for the 2015 Hatton Garden diamond vault burglary in London?"
+        options: ["They were teenagers", "They were elderly men in their 60s and 70s", "They were bank employees", "They were undercover police"]
+        correct: 1
+      - type: single_qa
+        question: "What Martin Scorsese crime movie was directly based on the mobsters involved in the 1978 Lufthansa Heist?"
+        answer: "Goodfellas"
+      - type: multiple_choice
+        question: "What historic royal treasure vault in Dresden, Germany was broken into in 2019, losing $120 million in diamonds?"
+        options: ["The Green Vault (Grünes Gewölbe)", "The Amber Chamber", "The Silver Treasury", "The Imperial Armory"]
+        correct: 0
+      - type: single_qa
+        question: "How many priceless artworks were stolen during the 1990 Isabella Stewart Gardner Museum heist in Boston?"
+        answer: "13 artworks"
+      - type: multiple_choice
+        question: "Which famous artist was actually brought in for police questioning during the 1911 investigation of the Mona Lisa theft?"
+        options: ["Claude Monet", "Pablo Picasso", "Salvador Dalí", "Henri Matisse"]
+        correct: 1
+      - type: single_qa
+        question: "What tool did the Hatton Garden thieves use to penetrate the 20-inch reinforced concrete vault wall?"
+        answer: "An industrial diamond drill (Hilti drill)"
+      - type: multiple_choice
+        question: "What fake business front did Brazilian bank robbers set up to excavate their 78-meter tunnel unnoticed in Fortaleza?"
+        options: ["A bakery", "A synthetic grass and landscaping company", "A carpet cleaning store", "A plumbing repair shop"]
+        correct: 1
+      - type: single_qa
+        question: "What is currently hanging in the Isabella Stewart Gardner Museum in place of the stolen Rembrandt and Vermeer masterpieces?"
+        answer: "Empty wooden frames"
+      - type: multiple_choice
+        question: "In what city did the Pink Panthers drive two Audi cars directly through the glass doors of a shopping mall to rob a jewelry store in 2007?"
+        options: ["Tokyo", "Dubai (Wafi Mall)", "Paris", "Monaco"]
+        correct: 1
+      - type: single_qa
+        question: "What clue left behind in a garbage bag along a Belgian highway helped police identify the mastermind of the 2003 Antwerp diamond heist?"
+        answer: "A half-eaten sandwich (and invoice receipts)"
+
+  - id: unsolved_mysteries_cryptic_crimes
+    title: Unsolved Mysteries & Cryptic Crimes
+    description: >
+      Delve into history's most perplexing cold cases, vanishing acts, and coded messages! 
+      From parachuting hijackers over the Pacific Northwest to 19th-century London shadows.
+    cards:
+      - title: D.B. Cooper & The 1971 Boeing 727 Hijacking
+        points:
+          - "On November 24, 1971, a man traveling under the alias 'Dan Cooper' hijacked a Boeing 727 flight between Portland and Seattle."
+          - "He claimed to have a bomb in his briefcase and demanded $200,000 in cash and four parachutes, releasing the passengers in Seattle."
+          - "After refueling and ordering the pilots to fly toward Mexico, Cooper parachuted out the aft stairs into a freezing rainstorm over Washington State."
+          - "Despite the largest manhunt in FBI history (Operation NORJAK), Cooper was never found, leaving only a few thousand dollars in eroded cash discovered in 1980."
+      - title: The Zodiac Killer & The Coded Ciphers
+        points:
+          - "Operating in Northern California in the late 1960s, the self-proclaimed 'Zodiac' killed at least five victims and terrified the San Francisco Bay Area."
+          - "The killer sent taunting letters to local newspapers, demanding they be published on the front page and signing them with a crosshair symbol."
+          - "He enclosed four complex cryptographic ciphers; his 340-character cipher ('Z340') remained unsolved for 51 years until amateur codebreakers cracked it in 2020."
+          - "The killer's true identity was never officially established, remaining one of the most infamous unsolved cases in American history."
+      - title: Jack the Ripper & Whitechapel (1888)
+        points:
+          - "In 1888, an unidentified serial killer brutally murdered at least five women ('the Canonical Five') in the impoverished Whitechapel district of London."
+          - "The killer demonstrated surgical precision in removing organs, sparking theories that he was a doctor, butcher, or wealthy aristocrat."
+          - "The murderer earned the moniker 'Jack the Ripper' from a taunting letter sent to the Central News Agency, as well as the infamous 'From Hell' letter."
+          - "The case spurred early forensic profiling and investigative media sensationalism, inspiring hundreds of theories and books over 135 years."
+      - title: The Black Dahlia Case (Los Angeles, 1947)
+        points:
+          - "In January 1947, the severed, mutilated body of 22-year-old aspiring actress Elizabeth Short was found in a vacant lot in Leimert Park, Los Angeles."
+          - "The press sensationalized the case, dubbing her 'The Black Dahlia' due to her black clothing and a recent film noir movie."
+          - "The killer taunted police by mailing Elizabeth's birth certificate, photographs, and personal address book to the Los Angeles Examiner."
+          - "Despite hundreds of investigators, dozens of false confessions, and prominent suspects like Dr. George Hodel, the crime remains officially unsolved."
+      - title: The Great Alcatraz Escape (1962)
+        points:
+          - "In June 1962, inmates Frank Morris and brothers John and Clarence Anglin executed the only potentially successful escape from Alcatraz Federal Penitentiary."
+          - "Over months, they used sharpened spoons and a vacuum cleaner motor to chisel through crumbling concrete air vents behind their cells."
+          - "They placed realistic papier-mâché dummy heads with real human hair in their beds to fool nighttime guards."
+          - "The trio escaped into the freezing waters of San Francisco Bay on an improvised raft made from 50 stolen rubber raincoats and were never seen again."
+      - title: The Disappearance of Jimmy Hoffa (1975)
+        points:
+          - "James R. Hoffa, the powerful and controversial president of the International Brotherhood of Teamsters labor union, vanished on July 30, 1975."
+          - "He was last seen in the parking lot of the Machus Red Fox restaurant in Bloomfield Township, Michigan, en route to a meeting with mob bosses."
+          - "Investigators widely believe Hoffa was assassinated by the Mafia to prevent him from regaining control of the union and its multibillion-dollar pension fund."
+          - "Despite decades of digging beneath driveways, football stadiums, and horse farms, Hoffa's body has never been found, and he was declared legally dead in 1982."
+      - title: The Mary Celeste Ghost Ship Mystery (1872)
+        points:
+          - "In December 1872, the merchant brigantine Mary Celeste was discovered adrift in the Atlantic Ocean near the Azores in seaworthy condition."
+          - "The ship was fully provisioned with six months of food and water, cargo intact, and personal belongings undisturbed, but completely abandoned."
+          - "Captain Benjamin Briggs, his wife, their two-year-old daughter, and the seven-man crew had completely vanished without a trace."
+          - "The missing lifeboat and a frayed towline suggest an orderly evacuation, possibly sparked by fears of an explosion from its 1,700 barrels of raw alcohol."
+      - title: The Somerton Man & Tamam Shud (Australia, 1948)
+        points:
+          - "In December 1948, an unidentified, well-dressed deceased man was found propped against a seawall on Somerton Beach in Adelaide, Australia."
+          - "All clothing labels were missing, and hidden inside a tiny fob pocket was a scrap of paper torn from a rare book with the words 'Tamām Shud' (Persian for 'Ended')."
+          - "Police found the matching copy of the Rubáiyát of Omar Khayyám, containing a handwritten encrypted letter cipher in the back."
+          - "In 2022, Australian researchers used advanced DNA sequencing to identify the man as Carl 'Charles' Webb, though his cause of death remains a mystery."
+    trivia:
+      - type: multiple_choice
+        question: "Under what alias did the mysterious skyjacker board a Boeing 727 in 1971 before parachuting into the night with $200,000?"
+        options: ["Dan Cooper (D.B. Cooper)", "John Dillinger", "Frank Morris", "Victor Lustig"]
+        correct: 0
+      - type: single_qa
+        question: "In what year did the Jack the Ripper murders terrorize the Whitechapel district of London?"
+        answer: "1888"
+      - type: multiple_choice
+        question: "What 1962 island prison escape involved papier-mâché dummy heads and an inflatable raft made of raincoats?"
+        options: ["Sing Sing", "Alcatraz", "San Quentin", "Rikers Island"]
+        correct: 1
+      - type: single_qa
+        question: "What was the real name of the 22-year-old victim known in 1947 Los Angeles headlines as 'The Black Dahlia'?"
+        answer: "Elizabeth Short"
+      - type: multiple_choice
+        question: "What powerful American labor union president vanished outside a suburban Detroit restaurant in July 1975?"
+        options: ["Samuel Gompers", "Jimmy Hoffa", "George Meany", "Walter Reuther"]
+        correct: 1
+      - type: single_qa
+        question: "In what year was the Zodiac Killer's famous 340-character cipher ('Z340') finally cracked by codebreakers after 51 years?"
+        answer: "2020"
+      - type: multiple_choice
+        question: "What merchant ship was found completely seaworthy but mysteriously abandoned in the Atlantic Ocean in 1872?"
+        options: ["HMS Terror", "Mary Celeste", "The Flying Dutchman", "Queen Anne's Revenge"]
+        correct: 1
+      - type: single_qa
+        question: "What Persian phrase meaning 'Ended' or 'Finished' was found on a tiny scrap of paper in the Somerton Man case?"
+        answer: "Tamam Shud (Tamám Shud)"
+      - type: multiple_choice
+        question: "What model of passenger jet did D.B. Cooper hijack, chosen because its rear aft-stairs could open in mid-flight?"
+        options: ["Boeing 737", "Boeing 727", "Douglas DC-8", "Boeing 707"]
+        correct: 1
+      - type: single_qa
+        question: "What was the name of the Whitechapel murders victim group of five women attributed to Jack the Ripper?"
+        answer: "The Canonical Five"
+      - type: multiple_choice
+        question: "What symbol did the Zodiac Killer use to sign his taunting letters to California newspapers?"
+        options: ["A skull and bones", "A circle with a cross (crosshair)", "A black raven", "An inverted triangle"]
+        correct: 1
+      - type: single_qa
+        question: "What cargo of 1,700 barrels was being transported aboard the Mary Celeste when the crew abandoned ship?"
+        answer: "Industrial alcohol (raw alcohol)"
+      - type: multiple_choice
+        question: "Who was the ringleader inmate who orchestrated the famous June 1962 escape from Alcatraz alongside the Anglin brothers?"
+        options: ["Frank Morris", "Al Capone", "Machine Gun Kelly", "Robert Stroud"]
+        correct: 0
+      - type: single_qa
+        question: "What labor organization's pension fund was Jimmy Hoffa accused of misusing before his disappearance?"
+        answer: "The Teamsters Union (International Brotherhood of Teamsters)"
+      - type: multiple_choice
+        question: "In what Australian city was the mysterious Somerton Man found deceased on the beach in 1948?"
+        options: ["Sydney", "Adelaide", "Melbourne", "Brisbane"]
+        correct: 1
+      - type: single_qa
+        question: "How much ransom money did D.B. Cooper demand and receive before jumping from the plane?"
+        answer: "$200,000"
+
+  - id: historical_outlaws_gangsters
+    title: Historical Outlaws & Infamous Gangsters
+    description: >
+      Step into the era of Tommy guns, bank getaways, and vast criminal empires! 
+      From Wild West gunfighters and Depression-era bandits to the architects of the American Mafia.
+    cards:
+      - title: "Al Capone & The Chicago Outfit"
+        points:
+          - "During the Prohibition era (1920–1933), Alphonse 'Scarface' Capone built a multi-million-dollar bootlegging and gambling empire in Chicago."
+          - "On February 14, 1929, Capone's gunmen disguised as police executed seven rivals from the 'Bugs' Moran gang in the St. Valentine's Day Massacre."
+          - "Despite orchestrating dozens of murders, Capone was finally brought down in 1931 by federal agent Eliot Ness ('The Untouchables') on tax evasion."
+          - "Sentenced to 11 years in prison, he served part of his term in Alcatraz, where his mental and physical health deteriorated from neurosyphilis."
+      - title: Bonnie and Clyde's Crime Spree
+        points:
+          - "Bonnie Parker and Clyde Barrow led the 'Barrow Gang' on a notorious two-year robbery spree across the American South during the Great Depression."
+          - "They robbed gas stations, small grocery stores, and rural banks, killing at least nine police officers and several civilians."
+          - "The media sensationalized their romance, fueled by photos found at a hideout showing Bonnie holding a cigar and a pistol."
+          - "On May 23, 1934, lawmen led by former Texas Ranger Frank Hamer ambushed their Ford V8 in Louisiana, firing over 130 rounds into the car."
+      - title: "John Dillinger: Public Enemy #1"
+        points:
+          - "John Dillinger was a charismatic bank robber whose gang raided over twenty banks across the Midwest and escaped from jail twice."
+          - "He famously escaped from the 'escape-proof' Crown Point jail in Indiana using a wooden gun he carved and stained with black shoe polish!"
+          - "The newly formed FBI under J. Edgar Hoover named Dillinger America's first official 'Public Enemy #1'."
+          - "In July 1934, FBI agents shot Dillinger outside the Biograph Theater in Chicago after being tipped off by the 'Woman in Red' (Ana Cumpănaș)."
+      - title: Butch Cassidy & The Sundance Kid
+        points:
+          - "Robert LeRoy Parker ('Butch Cassidy') and Harry Alonzo Longabaugh ('The Sundance Kid') led the famous 'Wild Bunch' outlaw gang in the 1890s."
+          - "They specialized in robbing Union Pacific steam trains and banks across Wyoming, Utah, and Colorado, using secluded hideouts like 'Hole-in-the-Wall'."
+          - "Pursued relentlessly by the private Pinkerton National Detective Agency, the duo fled the United States to South America in 1901."
+          - "In November 1908, they were reportedly surrounded and killed by the Bolivian cavalry following a courier payroll robbery in San Vicente."
+      - title: Billy the Kid & The Lincoln County War
+        points:
+          - "Born Henry McCarty (also known as William H. Bonney), Billy the Kid was a legendary 19th-century American gunfighter in New Mexico."
+          - "He fought as a 'Regulator' in the bloody 1878 Lincoln County War, a deadly feud between rival merchant factions."
+          - "Legend claimed Billy killed 21 men—one for each year of his life—though historians calculate the actual count was likely between four and nine."
+          - "In July 1881, Lincoln County Sheriff Pat Garrett tracked the 21-year-old outlaw to Fort Sumner and fatally shot him in the dark."
+      - title: Pablo Escobar & The Medellín Cartel
+        points:
+          - "Pablo Escobar rose from smuggling contraband to dominating the global illicit cocaine trade from Medellín, Colombia, in the 1970s and 1980s."
+          - "At its peak, the Medellín Cartel supplied 80% of the cocaine entering the US, earning Escobar an estimated $30 billion fortune."
+          - "Escobar waged an all-out terror war against the Colombian state using his policy of 'plata o plomo' (silver or lead: bribes or assassination)."
+          - "He was tracked down and killed on a Medellín rooftop in December 1993 by the Colombian National Police with US intelligence support."
+      - title: Lucky Luciano & The Mafia Commission
+        points:
+          - "Charles 'Lucky' Luciano is regarded as the father of modern American organized crime, restructuring the New York underworld in 1931."
+          - "Luciano eliminated the old-world 'Mustache Pete' bosses and established 'The Commission'—a governing board of the Five Families to settle disputes."
+          - "The Five Families created were Genovese, Gambino, Lucchese, Bonanno, and Colombo, controlling rackets across labor, docks, and casinos."
+          - "During World War II, the US military partnered with Luciano ('Operation Underworld') to protect New York docks from Nazi sabotage."
+      - title: Whitey Bulger & The Winter Hill Gang
+        points:
+          - "James 'Whitey' Bulger was the ruthless boss of Boston's Winter Hill Gang, controlling South Boston's rackets for decades."
+          - "Unbeknownst to his criminal rivals, Bulger operated as a top-echelon FBI informant, secretly protected by corrupt FBI agent John Connolly."
+          - "When Connolly tipped him off about impending indictments in 1994, Bulger fled and spent 16 years on the FBI's Most Wanted list."
+          - "He was finally arrested in Santa Monica, California, in 2011 at age 81, living in a modest apartment filled with hidden cash and 30 firearms."
+    trivia:
+      - type: multiple_choice
+        question: "On what federal charge was Chicago mob boss Al Capone finally convicted and imprisoned in 1931?"
+        options: ["Murder", "Income tax evasion", "Bootlegging alcohol", "Bank robbery"]
+        correct: 1
+      - type: single_qa
+        question: "What outlaw couple was ambushed and killed by lawmen in a Ford V8 in Louisiana in May 1934?"
+        answer: "Bonnie and Clyde (Bonnie Parker and Clyde Barrow)"
+      - type: multiple_choice
+        question: "How did bank robber John Dillinger escape from the 'escape-proof' Crown Point jail in 1934?"
+        options: ["Bribed the warden with $50,000", "Carved a fake gun from a block of wood", "Dug an underground tunnel", "Hid inside a laundry truck"]
+        correct: 1
+      - type: single_qa
+        question: "Who was the Lincoln County sheriff who shot and killed Billy the Kid in Fort Sumner in 1881?"
+        answer: "Pat Garrett"
+      - type: multiple_choice
+        question: "What South American country did Butch Cassidy and the Sundance Kid flee to in 1901 to escape the Pinkerton detectives?"
+        options: ["Brazil", "Argentina (and Bolivia)", "Colombia", "Peru"]
+        correct: 1
+      - type: single_qa
+        question: "What Colombian drug lord ran the powerful Medellín Cartel before being killed on a rooftop in 1993?"
+        answer: "Pablo Escobar"
+      - type: multiple_choice
+        question: "Which mobster created 'The Commission' in 1931 to govern the Five Families of the American Mafia?"
+        options: ["Al Capone", "Charles 'Lucky' Luciano", "Vito Genovese", "Carlo Gambino"]
+        correct: 1
+      - type: single_qa
+        question: "What Boston mob boss operated as a corrupt FBI informant while running the Winter Hill Gang?"
+        answer: "Whitey Bulger (James Bulger)"
+      - type: multiple_choice
+        question: "Outside which Chicago movie theater was John Dillinger ambushed and killed by federal agents in 1934?"
+        options: ["The Rialto", "The Biograph Theater", "The Majestic", "The Paramount"]
+        correct: 1
+      - type: single_qa
+        question: "What date in 1929 saw the execution of seven Moran gang members in Chicago's St. Valentine's Day Massacre?"
+        answer: "February 14, 1929"
+      - type: multiple_choice
+        question: "What was the ruthless slogan used by Pablo Escobar meaning 'take a bribe or take a bullet'?"
+        options: ["Veni Vidi Vici", "Plata o Plomo (Silver or Lead)", "Carpe Diem", "Ojo por Ojo"]
+        correct: 1
+      - type: single_qa
+        question: "What private detective agency was hired by railroads to hunt down Butch Cassidy's Wild Bunch gang?"
+        answer: "The Pinkerton National Detective Agency (The Pinkertons)"
+      - type: multiple_choice
+        question: "In what California beach town was 81-year-old fugitive Whitey Bulger finally captured in 2011 after 16 years on the run?"
+        options: ["Malibu", "Santa Monica", "Laguna Beach", "Santa Barbara"]
+        correct: 1
+      - type: single_qa
+        question: "What was Billy the Kid's real birth name?"
+        answer: "Henry McCarty (or William H. Bonney)"
+      - type: multiple_choice
+        question: "What woman tipped off the FBI to John Dillinger's location, known in the press as the 'Woman in Red'?"
+        options: ["Bonnie Parker", "Ana Cumpănaș (Anna Sage)", "Evelyn Frechette", "Ma Barker"]
+        correct: 1
+      - type: single_qa
+        question: "What federal law enforcement leader headed the 'Untouchables' squad that investigated Al Capone's operations?"
+        answer: "Eliot Ness"
+
+  - id: legendary_con_artists_frauds
+    title: Legendary Con Artists & Financial Frauds
+    description: >
+      Uncover the bold deceptions, counterfeit fortunes, and audacious charlatans! 
+      From selling the Eiffel Tower for scrap metal to multibillion-dollar Wall Street Ponzi schemes.
+    cards:
+      - title: "Charles Ponzi & The Original Scheme (1920)"
+        points:
+          - "In 1920, Italian immigrant Charles Ponzi promised Boston investors a staggering 50% profit in 45 days through international reply postal coupons."
+          - "Instead of actual investments, Ponzi simply paid early investors using the money coming in from new investors, keeping the rest."
+          - "Ponzi took in millions of dollars before a financial investigative report in the Boston Post caused the fraudulent scheme to collapse."
+          - "The scam gave birth to the term 'Ponzi Scheme', which remains the universal name for fraudulent investment pyramids."
+      - title: "Bernie Madoff's $65 Billion Fraud"
+        points:
+          - "Bernard L. Madoff, a former chairman of the NASDAQ stock exchange, ran the largest Ponzi scheme in global financial history."
+          - "For decades, Madoff claimed consistent 10–12% annual returns through a fake 'split-strike conversion' trading strategy."
+          - "In reality, Madoff deposited client funds into a single Chase bank account, falsifying trade confirmations and statements."
+          - "The fraud unraveled during the 2008 financial crisis when clients requested $7 billion in withdrawals; Madoff was sentenced to 150 years in prison."
+      - title: "Victor Lustig: The Man Who Sold the Eiffel Tower"
+        points:
+          - "In 1925, charismatic Austrian con artist Count Victor Lustig read that the Eiffel Tower was in costly disrepair."
+          - "Posing as a French government official, Lustig invited scrap metal dealers to a confidential meeting at a luxury Paris hotel."
+          - "He convinced dealer André Poisson that the tower was being demolished and sold him the salvage rights plus a large bribe for $70,000."
+          - "Lustig fled to Vienna with the cash; Poisson was too humiliated to report it, prompting Lustig to return to Paris and try selling the tower a second time!"
+      - title: "Frank Abagnale Jr. & The Great Impostor Legends"
+        points:
+          - "Frank Abagnale Jr. gained international fame for cashing millions of dollars in forged checks across 26 countries in the 1960s."
+          - "He claimed to have successfully posed as a Pan Am airline pilot, a Georgia hospital pediatrician supervisor, and a Louisiana attorney."
+          - "After serving prison time in France, Sweden, and the US, Abagnale worked with the FBI as an anti-fraud security consultant."
+          - "His sensationalized memoirs inspired Steven Spielberg's acclaimed 2002 movie 'Catch Me If You Can', starring Leonardo DiCaprio."
+      - title: "Anna Sorokin (Anna Delvey: The Fake Heiress)"
+        points:
+          - "Between 2013 and 2017, Russian-born Anna Sorokin posed as 'Anna Delvey', a fictional German heiress with a €60 million trust fund."
+          - "She infiltrated Manhattan high society, living lavishly in boutique hotels, flying on private jets, and dining at Michelin-star restaurants on credit."
+          - "Sorokin attempted to secure a $22 million bank loan using fraudulent overseas financial documents to build a private arts club."
+          - "Convicted of multiple counts of grand larceny in 2019, her stranger-than-fiction tale became a viral media sensation and hit television series."
+      - title: "Ferdinand Waldo Demara: The Great Impostor"
+        points:
+          - "Demara possessed a photographic memory and extraordinary audacity, successfully impersonating dozens of licensed professionals without credentials."
+          - "During the Korean War, he posed as Dr. Joseph Cyr, a surgeon in the Royal Canadian Navy, successfully performing 16 complex combat surgeries!"
+          - "He also worked as a civil engineer, a psychology professor, a cancer researcher, a Trappist monk, and an assistant prison warden."
+          - "Demara claimed his motivation was not financial wealth, but the sheer intellectual thrill and challenge of assuming new identities."
+      - title: "The Millennium Dome Diamond Heist Attempt (2000)"
+        points:
+          - "In November 2000, a heavily armed gang plotted to steal the flawless 203-carat 'Millennium Star' diamond valued at £200 million from London's Millennium Dome."
+          - "The gang used a stolen JCB digger to smash through the building's exterior perimeter wall, hurling smoke grenades."
+          - "Unbeknownst to the thieves, the Flying Squad of the Metropolitan Police had placed them under surveillance for months."
+          - "Police swapped the real diamonds with glass replicas and disguised armed officers as cleaners and tourists, arresting the gang in seconds."
+      - title: "The Enron Corporation Scandal (2001)"
+        points:
+          - "Houston-based energy giant Enron Corporation was named 'America's Most Innovative Company' by Fortune magazine for six consecutive years."
+          - "Executives Jeffrey Skilling and Kenneth Lay concealed billions of dollars in debt and toxic assets using fraudulent off-the-books accounting (SPEs)."
+          - "Enron filed for Chapter 11 bankruptcy in December 2001, wiping out $74 billion in shareholder value and employee retirement pensions."
+          - "The scandal dissolved major accounting firm Arthur Andersen and led to the passage of the landmark Sarbanes-Oxley Act of 2002 to regulate corporate governance."
+    trivia:
+      - type: multiple_choice
+        question: "Which Italian immigrant's 1920 postal coupon investment scam gave birth to the term 'Ponzi Scheme'?"
+        options: ["Carlo Gambino", "Charles Ponzi", "Vincenzo Peruggia", "Frank Costello"]
+        correct: 1
+      - type: single_qa
+        question: "What famous Paris landmark did con artist Victor Lustig famously 'sell' for scrap metal in 1925?"
+        answer: "The Eiffel Tower"
+      - type: multiple_choice
+        question: "What former NASDAQ chairman orchestrated a $65 billion Wall Street Ponzi scheme that collapsed in 2008?"
+        options: ["Jordan Belfort", "Bernie Madoff", "Kenneth Lay", "Jeffrey Skilling"]
+        correct: 1
+      - type: single_qa
+        question: "What Steven Spielberg film starring Leonardo DiCaprio was based on the check-forgery life of Frank Abagnale Jr.?"
+        answer: "Catch Me If You Can"
+      - type: multiple_choice
+        question: "Under what alias did Russian-born Anna Sorokin pose as a wealthy German heiress in New York society?"
+        options: ["Anna Delvey", "Anna Karenina", "Anna Romanov", "Anna Schmidt"]
+        correct: 0
+      - type: single_qa
+        question: "What Canadian naval profession did Ferdinand Demara ('The Great Impostor') successfully fake during the Korean War?"
+        answer: "Surgeon (or Medical Doctor)"
+      - type: multiple_choice
+        question: "What flawless 203-carat diamond was the target of a thwarted bulldozer heist at London's Millennium Dome in 2000?"
+        options: ["The Hope Diamond", "The Millennium Star", "The Koh-i-Noor", "The Cullinan Diamond"]
+        correct: 1
+      - type: single_qa
+        question: "What major energy corporation collapsed in 2001 after hiding billions in debt through off-the-books accounting?"
+        answer: "Enron (Enron Corporation)"
+      - type: multiple_choice
+        question: "How long was the prison sentence handed to fraudster Bernie Madoff in 2009?"
+        options: ["25 years", "50 years", "100 years", "150 years"]
+        correct: 3
+      - type: single_qa
+        question: "What major 'Big Five' global accounting firm dissolved following its role in auditing Enron's fraudulent books?"
+        answer: "Arthur Andersen"
+      - type: multiple_choice
+        question: "How many times did con artist Victor Lustig attempt to 'sell' the Eiffel Tower to scrap dealers?"
+        options: ["Once", "Twice", "Three times", "Five times"]
+        correct: 1
+      - type: single_qa
+        question: "What postal item did Charles Ponzi originally claim to buy cheaply in Europe and redeem in the US for profit?"
+        answer: "International Reply Coupons (IRC)"
+      - type: multiple_choice
+        question: "What 2002 US federal law was enacted in the wake of the Enron collapse to enforce strict corporate accounting standards?"
+        options: ["Dodd-Frank Act", "Sarbanes-Oxley Act (SOX)", "Glass-Steagall Act", "Gramm-Leach-Bliley Act"]
+        correct: 1
+      - type: single_qa
+        question: "What heavy construction vehicle did the Millennium Dome heist gang use to smash through the building's wall?"
+        answer: "A JCB digger (or bulldozer)"
+      - type: multiple_choice
+        question: "What airline did Frank Abagnale Jr. famously pose as a co-pilot for during his 1960s check-cashing spree?"
+        options: ["TWA", "Pan Am (Pan American)", "Eastern Air Lines", "BOAC"]
+        correct: 1
+      - type: single_qa
+        question: "How much money did Anna Sorokin attempt to borrow from banks to fund her private Manhattan arts foundation?"
+        answer: "$22 million"
