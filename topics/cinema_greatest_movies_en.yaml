@@ -1,0 +1,793 @@
+id: cinema_greatest_movies_en
+title: Cinema & Greatest Movies
+description: >
+  Step onto the red carpet for the ultimate cinematic journey! From legendary mob epics 
+  and mind-bending psychological thrillers to landmark sci-fi masterpieces and iconic Oscar winners, 
+  test your knowledge of the greatest films ever made.
+lang: en
+audience: adult
+categories:
+  - id: important_facts
+    title: Important Facts
+    description: >
+      Foundational cinematic milestones, visionary directors, and legendary film history. 
+      Read these fascinating behind-the-scenes stories aloud before jumping into the trivia round!
+    cards:
+      - title: The Golden Age of Hollywood
+        points:
+          - "The classical Hollywood studio era (1927–1960s) saw the rise of the 'Big Five' studios: MGM, Paramount, Warner Bros., 20th Century Fox, and RKO."
+          - "The 1927 film 'The Jazz Singer' ended the silent film era by introducing synchronized dialogue, ushering in the age of 'talkies'."
+          - "1939 is widely hailed as Hollywood's greatest single year, releasing 'Gone with the Wind', 'The Wizard of Oz', and 'Mr. Smith Goes to Washington'."
+          - "Stars were under exclusive multi-year studio contracts, allowing moguls to control their public images and film roles."
+      - title: The Hays Code & Rating System
+        points:
+          - "From 1934 to 1968, Hollywood strictly enforced the Motion Picture Production Code (Hays Code), banning profanity, suggestive content, and violence."
+          - "Filmmakers had to use clever innuendo and visual metaphors to bypass censors while addressing mature themes."
+          - "The code collapsed in the late 1960s, replaced by the MPAA rating system (G, PG, R, and later PG-13 in 1984)."
+          - "This liberation sparked the 'New Hollywood' golden renaissance of bold, gritty, director-driven American auteur filmmaking."
+      - title: Master Directors & Auteur Cinema
+        points:
+          - "The 'Auteur Theory' posits that great directors possess a distinctive personal visual style and artistic worldview across all their films."
+          - "Alfred Hitchcock was crowned the 'Master of Suspense', pioneering innovative camera techniques like the famous dolly zoom in 'Vertigo'."
+          - "Stanley Kubrick became legendary for meticulous perfectionism, symmetrical single-point perspective framing, and ground-breaking realism."
+          - "New Hollywood directors like Martin Scorsese, Francis Ford Coppola, and Steven Spielberg reshaped modern cinema in the 1970s."
+      - title: The Academy Awards (The Oscars)
+        points:
+          - "The first Academy Awards ceremony took place in 1929 at the Hollywood Roosevelt Hotel, lasting just 15 minutes."
+          - "Only three movies in history have swept the 'Big Five' Oscars (Picture, Director, Actor, Actress, Screenplay): 'It Happened One Night', 'One Flew Over the Cuckoo's Nest', and 'The Silence of the Lambs'."
+          - "Three films share the record for the most Oscar wins ever (11 awards each): 'Ben-Hur' (1959), 'Titanic' (1997), and 'The Lord of the Rings: The Return of the King' (2003)."
+          - "The official Oscar statuette portrays a knight holding a crusader's sword standing on a reel of film."
+      - title: Revolutionary Special Effects
+        points:
+          - "Stanley Kubrick's '2001: A Space Odyssey' (1968) used front projection, slit-scan photography, and giant rotating centrifuges without any digital CGI."
+          - "Industrial Light & Magic (ILM), founded by George Lucas in 1975, revolutionized motion-control cameras and digital compositing for Star Wars."
+          - "Steven Spielberg's 'Jurassic Park' (1993) seamlessly combined Stan Winston's full-scale animatronic dinosaurs with pioneering photorealistic CGI."
+          - "'The Matrix' (1999) introduced the world to 'Bullet Time', using a 120-still-camera green-screen rig to freeze time around moving actors."
+      - title: Cannes, Venice & International Cinema
+        points:
+          - "The Venice Film Festival (founded in 1932) is the world's oldest film festival, awarding the prestigious Golden Lion."
+          - "The Cannes Film Festival on the French Riviera is the most prestigious film marketplace, awarding the coveted Palme d'Or."
+          - "Foreign-language masterpieces like Bong Joon-ho's 'Parasite' (2019) made history by winning both the Palme d'Or and the Oscar for Best Picture."
+          - "Movements like French New Wave, Italian Neorealism, and Japanese cinema (Kurosawa) fundamentally influenced Western directors."
+      - title: Behind-the-Scenes Legends & Scandals
+        points:
+          - "Francis Ford Coppola nearly suffered a nervous breakdown during the chaotic, typhoon-plagued shoot of 'Apocalypse Now' in the Philippines."
+          - "During the filming of 'The Exorcist' (1973), so many mysterious accidents occurred that the director had a priest bless the set."
+          - "Marlon Brando notoriously refused to memorize lines for 'The Godfather' and 'Superman', reading his dialogue from hidden cue cards."
+          - "These legendary production struggles often produced cinematic masterpieces that stood the test of time."
+      - title: The Box Office Billion-Dollar Era
+        points:
+          - "James Cameron became the first filmmaker to direct three movies that each surpassed $2 billion worldwide: 'Titanic', 'Avatar', and 'Avatar: The Way of Water'."
+          - "Steven Spielberg's 'Jaws' (1975) created the modern concept of the summer Hollywood blockbuster with nationwide multi-theater releases."
+          - "The global theatrical box office transformed into an international industry, driven heavily by Asian and European cinema markets."
+          - "Despite the rise of streaming, the communal theatrical experience remains the ultimate showcase for major cinematic spectacles."
+    trivia:
+      - type: multiple_choice
+        question: "Which 1927 film is celebrated as the first feature-length 'talkie' with synchronized recorded dialogue?"
+        options: ["Citizen Kane", "The Jazz Singer", "Metropolis", "Casablanca"]
+        correct: 1
+      - type: single_qa
+        question: "Which three films are tied for the record of most Oscar wins in history with 11 Academy Awards each?"
+        answer: "Ben-Hur, Titanic, and The Lord of the Rings: The Return of the King"
+      - type: multiple_choice
+        question: "Which iconic director is world-famous as the 'Master of Suspense'?"
+        options: ["Alfred Hitchcock", "Stanley Kubrick", "Martin Scorsese", "Federico Fellini"]
+        correct: 0
+      - type: single_qa
+        question: "What famous camera visual effect combining a zoom and a dolly track was pioneered in Hitchcock's 'Vertigo'?"
+        answer: "The Dolly Zoom (or Vertigo effect / Zolly)"
+      - type: multiple_choice
+        question: "What is the highest prize awarded at the prestigious Cannes Film Festival in France?"
+        options: ["The Golden Bear", "The Palme d'Or (Golden Palm)", "The Golden Lion", "The Silver Screen"]
+        correct: 1
+      - type: single_qa
+        question: "Which South Korean film made history in 2020 as the first non-English language movie to win the Oscar for Best Picture?"
+        answer: "Parasite (directed by Bong Joon-ho)"
+      - type: multiple_choice
+        question: "What famous visual effects company did George Lucas create in 1975 to pioneer special effects for Star Wars?"
+        options: ["Weta Digital", "Industrial Light & Magic (ILM)", "Digital Domain", "Framestore"]
+        correct: 1
+      - type: single_qa
+        question: "What year is widely regarded by film historians as the greatest single year in Hollywood history, releasing 'Gone with the Wind' and 'The Wizard of Oz'?"
+        answer: "1939"
+      - type: multiple_choice
+        question: "What was the strict Hollywood self-censorship system enforced from 1934 to 1968 called?"
+        options: ["The Hays Code", "The McCarthy Directive", "The Edison Trust", "The Studio Mandate"]
+        correct: 0
+      - type: single_qa
+        question: "What method did actor Marlon Brando famously use on set to avoid memorizing his dialogue lines in 'The Godfather'?"
+        answer: "Cue cards (taped to walls/actors)"
+      - type: multiple_choice
+        question: "Which 1975 Steven Spielberg thriller created the modern concept of the wide-release summer blockbuster?"
+        options: ["Close Encounters of the Third Kind", "Jaws", "Raiders of the Lost Ark", "E.T."]
+        correct: 1
+      - type: single_qa
+        question: "What visual effect rig using 120 still cameras was famously showcased in 'The Matrix' to freeze time during action?"
+        answer: "Bullet Time"
+      - type: multiple_choice
+        question: "Which film was the third and most recent movie to sweep all 'Big Five' Academy Awards in 1991?"
+        options: ["Forrest Gump", "The Silence of the Lambs", "Schindler's List", "Pulp Fiction"]
+        correct: 1
+      - type: single_qa
+        question: "What is the official statuette of the Academy Awards depicting?"
+        answer: "A knight holding a sword standing on a film reel"
+      - type: multiple_choice
+        question: "Who is the only director in cinema history to direct three separate films that each grossed over $2 billion worldwide?"
+        options: ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Peter Jackson"]
+        correct: 1
+      - type: single_qa
+        question: "In what year was the PG-13 film rating introduced following movies like Indiana Jones and the Temple of Doom and Gremlins?"
+        answer: "1984"
+
+  - id: mob_crime_epics
+    title: Iconic Mob & Crime Epics
+    description: >
+      Enter the gritty, dangerous underworld of organized crime, mafia families, 
+      and high-stakes heists. Explore the masterpieces of Coppola, Scorsese, Tarantino, and De Palma.
+    cards:
+      - title: "The Godfather (Part I & II)"
+        points:
+          - "Directed by Francis Ford Coppola, 'The Godfather' (1972) and 'Part II' (1974) chronicle the tragic rise of Michael Corleone (Al Pacino)."
+          - "Marlon Brando stuffed cotton balls into his cheeks and used a raspy whisper to create the legendary presence of Don Vito Corleone."
+          - "'Part II' made history as the first film sequel to win the Academy Award for Best Picture, juxtaposing young Vito's rise with Michael's moral fall."
+          - "Lines like 'I'm gonna make him an offer he can't refuse' cemented the saga as one of the greatest artistic achievements in world cinema."
+      - title: "Goodfellas (1990)"
+        points:
+          - "Martin Scorsese's kinetic crime masterpiece depicts the true life of mob associate Henry Hill (Ray Liotta) across three decades."
+          - "Robert De Niro and Joe Pesci delivered electrifying performances, with Pesci winning an Oscar for his volatile portrayal of Tommy DeVito."
+          - "The famous 3-minute continuous Steadicam tracking shot entering the Copacabana club through the kitchen is taught in every film school."
+          - "Pesci's intense, unscripted confrontation—'Funny how? Like I'm a clown? I amuse you?'—was based on a real interaction from his youth."
+      - title: "Pulp Fiction (1994)"
+        points:
+          - "Quentin Tarantino's nonlinear neo-noir masterpiece follows hitmen Vincent Vega (John Travolta) and Jules Winnfield (Samuel L. Jackson)."
+          - "The film won the Cannes Palme d'Or and the Oscar for Best Original Screenplay, revolutionizing independent cinema in the 1990s."
+          - "Famous for its pop-culture dialogue, the glowing briefcase, the twist dance contest at Jack Rabbit Slim's, and the Ezekiel 25:17 passage."
+          - "It revitalized John Travolta's career and established Samuel L. Jackson as one of Hollywood's most magnetic leading actors."
+      - title: "Scarface (1983)"
+        points:
+          - "Directed by Brian De Palma and written by Oliver Stone, Al Pacino stars as ruthless Cuban immigrant Tony Montana in 1980s Miami."
+          - "Tony's explosive rise from dishwasher to billionaire drug kingpin embodies the violent excess and hubris of the American Dream gone wrong."
+          - "The movie's climactic mansion shootout features the immortal shouted line: 'Say hello to my little friend!'."
+          - "Despite initial critical polarization for extreme violence and profanity, 'Scarface' became a massive global hip-hop and pop-culture icon."
+      - title: "The Departed (2006)"
+        points:
+          - "Martin Scorsese's Boston crime thriller earned him his long-overdue first Academy Awards for Best Director and Best Picture."
+          - "An adaptation of Hong Kong's 'Infernal Affairs', it stars Leonardo DiCaprio as an undercover cop and Matt Damon as a mob mole inside the police."
+          - "Jack Nicholson delivered an unhinged, commanding performance as Irish mob boss Frank Costello."
+          - "The tension-packed thriller explores betrayal, paranoia, identity loss, and systemic corruption within law enforcement."
+      - title: "Heat (1995)"
+        points:
+          - "Directed by Michael Mann, 'Heat' featured the historic first on-screen scene shared by acting legends Al Pacino and Robert De Niro."
+          - "De Niro plays meticulous master thief Neil McCauley, while Pacino plays obsessed LAPD homicide detective Vincent Hanna."
+          - "Their quiet, respectful confrontation over coffee in a diner is considered a masterclass in screenwriting and acting tension."
+          - "The film's 10-minute downtown Los Angeles bank robbery shootout used live gunfire audio, creating the gold standard for movie shootouts."
+      - title: "Taxi Driver (1976)"
+        points:
+          - "Martin Scorsese and writer Paul Schrader crafted this dark, searing portrait of lonely, insomniac Vietnam veteran Travis Bickle (Robert De Niro)."
+          - "Driving a yellow cab through the decadent, gritty streets of 1970s New York City, Travis slowly descends into violent vigilantism."
+          - "De Niro completely improvised the legendary mirror monologue: 'You talkin' to me? Well, I'm the only one here.'"
+          - "The film won the Palme d'Or at the 1976 Cannes Film Festival and earned four Oscar nominations."
+      - title: "Casino (1995)"
+        points:
+          - "Scorsese reunited with Robert De Niro and Joe Pesci to chronicle the mob's multibillion-dollar control of 1970s Las Vegas casinos."
+          - "De Niro stars as meticulous handicapper Sam 'Ace' Rothstein, alongside Sharon Stone in an Oscar-nominated performance as Ginger McKenna."
+          - "The film meticulously details the mechanics of the mob 'skim'—stealing suitcases of cash before profits were taxed or recorded."
+          - "Its operatic storytelling, voiceover narration, and extravagant visuals captured the glittering rise and violent fall of old Vegas."
+    trivia:
+      - type: multiple_choice
+        question: "Which film was the very first sequel in cinema history to win the Academy Award for Best Picture?"
+        options: ["The Empire Strikes Back", "The Godfather Part II", "Aliens", "Terminator 2"]
+        correct: 1
+      - type: single_qa
+        question: "What line did Joe Pesci famously utter during his tense, improvised restaurant scene in 'Goodfellas'?"
+        answer: "Funny how? Like I'm a clown? (I amuse you?)"
+      - type: multiple_choice
+        question: "What weapon does Al Pacino famously refer to as his 'little friend' in the climactic shootout of 'Scarface'?"
+        options: ["A revolver", "An M16 rifle with grenade launcher", "A katana sword", "A submachine gun"]
+        correct: 1
+      - type: single_qa
+        question: "What movie earned Martin Scorsese his long-awaited first Academy Award for Best Director in 2007?"
+        answer: "The Departed"
+      - type: multiple_choice
+        question: "In Quentin Tarantino's 'Pulp Fiction', what fictional fast-food burger joint is featured prominently?"
+        options: ["Big Kahuna Burger", "Los Pollos Hermanos", "Krusty Burger", "Good Burger"]
+        correct: 0
+      - type: single_qa
+        question: "What two acting legends shared an on-screen dialogue scene together for the first time in Michael Mann's 1995 crime thriller 'Heat'?"
+        answer: "Al Pacino and Robert De Niro"
+      - type: multiple_choice
+        question: "What line did Robert De Niro famously improvise while staring into a mirror in 'Taxi Driver'?"
+        options: ["Here's looking at you", "You talkin' to me?", "Are you ready for this?", "I'm the boss here"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the Corleone family's trusted lawyer and adopted brother in 'The Godfather'?"
+        answer: "Tom Hagen (played by Robert Duvall)"
+      - type: multiple_choice
+        question: "In 'Goodfellas', what legendary restaurant does Henry Hill take Karen into through the kitchen via a single continuous tracking shot?"
+        options: ["The Copacabana", "The Rainbow Room", "El Morocco", "21 Club"]
+        correct: 0
+      - type: single_qa
+        question: "What glowing object inside a combination-locked briefcase drives the plot of Quentin Tarantino's 'Pulp Fiction'?"
+        answer: "The golden briefcase contents (or Marcellus Wallace's soul)"
+      - type: multiple_choice
+        question: "What city's police department and Irish-American mob serve as the setting for 'The Departed'?"
+        options: ["Chicago", "Boston", "Philadelphia", "New York"]
+        correct: 1
+      - type: single_qa
+        question: "What gruesome animal trophy is placed inside film producer Jack Woltz's bed in 'The Godfather'?"
+        answer: "A severed horse's head (Khartoum)"
+      - type: multiple_choice
+        question: "Which actress received an Oscar nomination for her role as Ginger McKenna in Scorsese's 'Casino'?"
+        options: ["Sharon Stone", "Michelle Pfeiffer", "Jodie Foster", "Diane Keaton"]
+        correct: 0
+      - type: single_qa
+        question: "What is the famous first line spoken by Henry Hill as a narrator in 'Goodfellas'?"
+        answer: "As far back as I can remember, I always wanted to be a gangster"
+      - type: multiple_choice
+        question: "In 'Heat', what rule does master thief Neil McCauley live by regarding attachments in life?"
+        options: ["Trust no one over thirty", "Never have anything you can't walk out on in thirty seconds flat", "Always take half up front", "Kill the witnesses first"]
+        correct: 1
+      - type: single_qa
+        question: "What real-world South Boston gangster inspired Jack Nicholson's character Frank Costello in 'The Departed'?"
+        answer: "Whitey Bulger"
+
+  - id: mind_bending_thrillers
+    title: Mind-Bending Thrillers & Psychological Suspense
+    description: >
+      Question reality, sanity, and memory! Delve into psychological labyrinths, 
+      unreliable narrators, and shocking twists crafted by master suspense filmmakers.
+    cards:
+      - title: Inception (2010)
+        points:
+          - "Written and directed by Christopher Nolan, 'Inception' follows Dom Cobb (Leonardo DiCaprio), an 'extractor' who steals secrets from subconscious dreams."
+          - "Cobb is hired for the reverse task—'inception'—planting an original idea inside a target's mind across four nested dream layers."
+          - "The movie used breathtaking practical effects, including a real 100-foot rotating hotel hallway for Joseph Gordon-Levitt's zero-gravity fight scene."
+          - "The ambiguous final shot of Cobb's spinning brass totem left audiences debating whether he was in reality or still dreaming."
+      - title: Fight Club (1999)
+        points:
+          - "David Fincher's adaptation of Chuck Palahniuk's novel stars Edward Norton as a depressed, insomniac office worker seeking meaning."
+          - "He meets charismatic soap salesman Tyler Durden (Brad Pitt), co-founding an underground bare-knuckle fighting club for disillusioned men."
+          - "The famous twist reveals that Tyler Durden and the Narrator are the exact same person suffering from dissociative identity disorder."
+          - "Its famous quote, 'The first rule of Fight Club is: you do not talk about Fight Club', became an enduring pop-culture proverb."
+      - title: The Silence of the Lambs (1991)
+        points:
+          - "FBI trainee Clarice Starling (Jodie Foster) interviews imprisoned cannibalistic psychiatrist Dr. Hannibal Lecter (Anthony Hopkins) to catch serial killer Buffalo Bill."
+          - "Anthony Hopkins won the Academy Award for Best Actor despite appearing on screen for less than 16 minutes of the film's runtime."
+          - "The movie's intense psychological game of 'quid pro quo' explores vulnerability, manipulation, trauma, and institutional misogyny."
+          - "It remains the only horror/psychological thriller to ever win the Academy Award for Best Picture."
+      - title: Psycho (1960)
+        points:
+          - "Alfred Hitchcock financed this low-budget black-and-white shocker himself, forever altering the landscape of modern cinema."
+          - "The shocking early murder of leading lady Marion Crane (Janet Leigh) in the Bates Motel shower stunned unprepared 1960 audiences."
+          - "The shower scene features 78 camera setups and 52 rapid cuts in 45 seconds, scored to Bernard Herrmann's shrieking violins."
+          - "The twist reveals that lonely motel manager Norman Bates (Anthony Perkins) has adopted the persona of his deceased mother."
+      - title: Memento (2000)
+        points:
+          - "Christopher Nolan's breakthrough indie thriller follows Leonard Shelby (Guy Pearce), who suffers from anterograde amnesia (cannot form new memories)."
+          - "To track his wife's killer, Leonard relies on Polaroid photographs, handwritten notes, and crucial clues tattooed across his own body."
+          - "The movie unfolds in reverse chronological order in color sequences interspersed with forward-moving black-and-white scenes."
+          - "The structure brilliantly forces the audience into Leonard's disoriented mental state, questioning what is real and who is manipulating whom."
+      - title: Se7en (1995)
+        points:
+          - "David Fincher's rain-soaked neo-noir follows veteran detective Somerset (Morgan Freeman) and impulsive rookie Mills (Brad Pitt)."
+          - "They hunt a calculating serial killer known as 'John Doe' (Kevin Spacey), who executes victims based on the Seven Deadly Sins."
+          - "The shocking climax in the desert culminates in the horrifying realization of 'What's in the box?'."
+          - "The film set a dark, atmospheric standard for modern crime procedurals, television mysteries, and psychological horror."
+      - title: Shutter Island (2010)
+        points:
+          - "Martin Scorsese directs Leonardo DiCaprio as US Marshal Teddy Daniels, investigating the disappearance of a patient at an isolated asylum on an island."
+          - "Surrounded by ominous psychiatrists, violent storms, and cryptic clues, Teddy suspects a sinister government conspiracy."
+          - "The shocking twist reveals that Teddy is actually patient Andrew Laeddis, undergoing an elaborate role-playing therapy experiment."
+          - "The haunting closing line asks: 'Which would be worse—to live as a monster, or to die as a good man?'"
+      - title: The Prestige (2006)
+        points:
+          - "Christopher Nolan explores obsession, rivalry, and sacrifice through rival Victorian magicians Robert Angier (Hugh Jackman) and Alfred Borden (Christian Bale)."
+          - "Their bitter feud to perform the ultimate teleportation illusion ('The Transported Man') leads to sabotage, clones, and murder."
+          - "David Bowie makes an iconic appearance as real-world visionary electrical inventor Nikola Tesla."
+          - "The movie's structure mirrors the three stages of a magic trick: The Pledge, The Turn, and The Prestige."
+    trivia:
+      - type: multiple_choice
+        question: "What small spinning brass object does Dom Cobb use as a 'totem' to test if he is in a dream in Inception?"
+        options: ["A poker die", "A spinning top", "A chess pawn", "A silver coin"]
+        correct: 1
+      - type: single_qa
+        question: "What is the famous first rule of Fight Club according to Tyler Durden?"
+        answer: "You do not talk about Fight Club"
+      - type: multiple_choice
+        question: "For how many total minutes did Anthony Hopkins appear on screen to win Best Actor for 'The Silence of the Lambs'?"
+        options: ["Less than 16 minutes", "45 minutes", "72 minutes", "Over 90 minutes"]
+        correct: 0
+      - type: single_qa
+        question: "What screeching musical instrument sound effect scored the famous shower murder scene in Hitchcock's 'Psycho'?"
+        answer: "Violins (or screeching strings)"
+      - type: multiple_choice
+        question: "How does the amnesiac protagonist Leonard Shelby keep track of crucial clues in Christopher Nolan's 'Memento'?"
+        options: ["Voice memos on cassette", "Tattoos on his own body and Polaroid photos", "A leather diary", "Text messages"]
+        correct: 1
+      - type: single_qa
+        question: "What serial killer theme based on biblical transgressions drives the murders in David Fincher's 'Se7en'?"
+        answer: "The Seven Deadly Sins"
+      - type: multiple_choice
+        question: "Which iconic rock music legend portrayed electrical pioneer Nikola Tesla in 'The Prestige'?"
+        options: ["Mick Jagger", "David Bowie", "Freddie Mercury", "Iggy Pop"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the isolated psychiatric hospital island in Martin Scorsese's 'Shutter Island'?"
+        answer: "Shutter Island (Ashecliffe Hospital)"
+      - type: multiple_choice
+        question: "What is the shocking twist regarding Tyler Durden's true identity in 'Fight Club'?"
+        options: ["He is an alien", "He is an imaginary alternate personality of the Narrator", "He is a police officer", "He is the Narrator's brother"]
+        correct: 1
+      - type: single_qa
+        question: "What does Dr. Hannibal Lecter say he enjoyed eating with fava beans and a nice Chianti in 'The Silence of the Lambs'?"
+        answer: "A census taker's liver"
+      - type: multiple_choice
+        question: "What was Norman Bates' hobby in Hitchcock's 'Psycho'?"
+        options: ["Painting portraits", "Taxidermy (stuffing dead animals)", "Wood carving", "Gardening"]
+        correct: 1
+      - type: single_qa
+        question: "What question does Brad Pitt's character Detective Mills repeatedly scream in the climax of 'Se7en'?"
+        answer: "What's in the box? (What's in the box?!)"
+      - type: multiple_choice
+        question: "What are the three stages of a magic trick described in the prologue of 'The Prestige'?"
+        options: ["The Start, The Middle, The End", "The Pledge, The Turn, and The Prestige", "The Secret, The Trick, The Miracle", "The Look, The Spell, The Disappear"]
+        correct: 1
+      - type: single_qa
+        question: "What zero-gravity hotel hallway fight scene was shot using a massive 100-foot rotating set in 'Inception'?"
+        answer: "Joseph Gordon-Levitt's fight scene (Arthur's fight)"
+      - type: multiple_choice
+        question: "What is the name of the serial killer that Clarice Starling is trying to catch in 'The Silence of the Lambs'?"
+        options: ["The Zodiac", "Buffalo Bill (Jame Gumb)", "The Tooth Fairy", "Red Dragon"]
+        correct: 1
+      - type: single_qa
+        question: "In 'Shutter Island', what was the real name of Leonardo DiCaprio's character before his delusion?"
+        answer: "Andrew Laeddis"
+
+  - id: scifi_action_masterpieces
+    title: Sci-Fi & Action Masterpieces
+    description: >
+      Brace for adrenaline-fueled blockbusters, dystopian futures, and cosmic journeys! 
+      From sentient AI and cybernetic assassins to extraterrestrial terrors and post-apocalyptic road wars.
+    cards:
+      - title: The Matrix (1999)
+        points:
+          - "Written and directed by the Wachowskis, hacker Neo (Keanu Reeves) discovers humanity is trapped inside a simulated reality."
+          - "Offered a choice by Morpheus (Laurence Fishburne), Neo takes the red pill to wake up in a dystopian machine-dominated future."
+          - "The movie blended cyberpunk aesthetics, Hong Kong wire-fu martial arts, and philosophical skepticism into a global sensation."
+          - "It won four Academy Awards for technical achievements and redefined 21st-century action choreography."
+      - title: "Terminator 2: Judgment Day (1991)"
+        points:
+          - "James Cameron flipped expectations by making Arnold Schwarzenegger's iconic T-800 cyborg the protector of young John Connor."
+          - "They face the terrifying T-1000 (Robert Patrick), a liquid-metal shapeshifting assassin that pioneered morphing CGI."
+          - "Linda Hamilton's fierce, hardened transformation into warrior mother Sarah Connor set a new gold standard for action heroines."
+          - "The movie delivered groundbreaking car chases, relentless pacing, and emotional resonance ('Hasta la vista, baby')."
+      - title: "Alien & Aliens (1979 / 1986)"
+        points:
+          - "Ridley Scott's 'Alien' (1979) blended haunted-house horror with gritty space realism aboard the commercial freighter Nostromo."
+          - "Swiss artist H.R. Giger designed the terrifying biomechanical Xenomorph with acid blood and an inner pharyngeal jaw."
+          - "Sigourney Weaver's Ellen Ripley became one of cinema's greatest action protagonists, battling the alien queen in James Cameron's 1986 sequel 'Aliens'."
+          - "The chestburster scene remains one of the most famous, shocking practical effects sequences in cinematic history."
+      - title: "Blade Runner (1982)"
+        points:
+          - "Ridley Scott's visually staggering neo-noir adapted Philip K. Dick's novel about a rain-soaked, neon dystopian Los Angeles in 2019."
+          - "Harrison Ford plays Rick Deckard, a 'blade runner' assigned to track down and 'retire' rogue synthetic human bio-androids (replicants)."
+          - "Rutger Hauer delivered cinema's most poetic improvised death speech as Roy Batty: 'All those moments will be lost in time, like tears in rain.'"
+          - "The film pioneered the 'cyberpunk' visual aesthetic, inspiring decades of science fiction literature, anime, and design."
+      - title: "Die Hard (1988)"
+        points:
+          - "John McTiernan's action masterpiece stars Bruce Willis as off-duty NYPD cop John McClane visiting his estranged wife in Los Angeles."
+          - "When Alan Rickman's suave terrorist Hans Gruber seizes Nakatomi Plaza, barefoot McClane wages a one-man guerrilla war through vents and elevator shafts."
+          - "It revolutionized the action genre by replacing invulnerable muscle-bound heroes with an everyday, vulnerable, wisecracking underdog."
+          - "It remains the benchmark template for single-location action thrillers and sparked endless holiday debates as a Christmas classic."
+      - title: "Jurassic Park (1993)"
+        points:
+          - "Steven Spielberg brought Michael Crichton's dinosaur theme park novel to life, mesmerizing global audiences."
+          - "Billionaire John Hammond clones dinosaurs from fossilized amber DNA on Isla Nublar, but tropical storms and sabotage unleash chaos."
+          - "The suspenseful T-rex rain breakout and the kitchen velociraptor hunt are celebrated masterclasses in tension and sound design."
+          - "It became the highest-grossing film in history at the time, winning three Oscars for visual effects, sound, and sound editing."
+      - title: "Mad Max: Fury Road (2015)"
+        points:
+          - "Director George Miller returned to his post-apocalyptic franchise at age 70 to direct one of the greatest pure action films ever made."
+          - "Charlize Theron stars as the fierce Imperator Furiosa, driving a War Rig across a desert wasteland to rescue a tyrant's captive wives."
+          - "The movie relied on breathtaking real practical vehicle stunts, hundreds of custom-built demolition cars, and minimal CGI."
+          - "It won six Academy Awards and earned a rare Best Picture nomination for an all-out action spectacle."
+      - title: "2001: A Space Odyssey (1968)"
+        points:
+          - "Stanley Kubrick and Arthur C. Clarke crafted an ambitious, philosophical journey from humanity's prehistoric dawn to the outer reaches of Jupiter."
+          - "Astronauts aboard the Discovery One face the chilling betrayal of the sentient HAL 9000 supercomputer with its glowing red eye."
+          - "The famous match-cut transitions from a bone thrown by an ape into an orbiting spacecraft, bridging millions of years in a fraction of a second."
+          - "It set an untouchable standard for hard science fiction, realistic orbital physics, and classical music integration (Richard Strauss)."
+    trivia:
+      - type: multiple_choice
+        question: "In 'The Matrix', which color pill does Neo take to wake up and learn the truth about reality?"
+        options: ["The Blue Pill", "The Red Pill", "The Green Pill", "The Gold Pill"]
+        correct: 1
+      - type: single_qa
+        question: "What iconic phrase does Arnold Schwarzenegger deliver before shattering the frozen T-1000 in Terminator 2?"
+        answer: "Hasta la vista, baby"
+      - type: multiple_choice
+        question: "What Swiss surrealist artist designed the nightmarish Xenomorph creature in Ridley Scott's 'Alien'?"
+        options: ["H.R. Giger", "Salvador Dalí", "M.C. Escher", "René Magritte"]
+        correct: 0
+      - type: single_qa
+        question: "What skyscraper serves as the hostage battleground for John McClane in the action classic 'Die Hard'?"
+        answer: "Nakatomi Plaza"
+      - type: multiple_choice
+        question: "What famous poetic line concludes replicant Roy Batty's final monologue in 'Blade Runner'?"
+        options: ["Like sand through an hourglass", "Like tears in rain", "Like dust in the wind", "Like shadows in the dark"]
+        correct: 1
+      - type: single_qa
+        question: "From what fossilized substance did scientists extract dinosaur DNA in 'Jurassic Park'?"
+        answer: "Amber (fossilized tree resin)"
+      - type: multiple_choice
+        question: "What is the name of the sentient, rogue supercomputer with a calm voice and glowing red eye in '2001: A Space Odyssey'?"
+        options: ["Skynet", "HAL 9000", "Deep Blue", "Mother"]
+        correct: 1
+      - type: single_qa
+        question: "Who played the one-armed warrior Imperator Furiosa in the 2015 action masterpiece 'Mad Max: Fury Road'?"
+        answer: "Charlize Theron"
+      - type: multiple_choice
+        question: "What liquid metal material allows the villainous T-1000 to regenerate and shape-shift in Terminator 2?"
+        options: ["Liquid mimetic polyalloy", "Liquid titanium", "Liquid mercury", "Liquid vibranium"]
+        correct: 0
+      - type: single_qa
+        question: "What is the name of the commercial space freighter ship that lands on LV-426 in the original 1979 'Alien'?"
+        answer: "The USCSS Nostromo"
+      - type: multiple_choice
+        question: "Which actor played iconic German villain Hans Gruber in 'Die Hard' in his Hollywood feature film debut?"
+        options: ["Alan Rickman", "Jeremy Irons", "Gary Oldman", "Christoph Waltz"]
+        correct: 0
+      - type: single_qa
+        question: "What famous classical waltz music plays as spacecraft dock gracefully in '2001: A Space Odyssey'?"
+        answer: "The Blue Danube (by Johann Strauss II)"
+      - type: multiple_choice
+        question: "In 'The Matrix', what is Neo's real-world hacker identity name before he wakes up?"
+        options: ["Thomas Anderson", "John Connor", "Rick Deckard", "Miles Morales"]
+        correct: 0
+      - type: single_qa
+        question: "What species of stealthy, intelligent dinosaur hunts the children inside the industrial kitchen in 'Jurassic Park'?"
+        answer: "Velociraptors (Raptors)"
+      - type: multiple_choice
+        question: "In what futuristic year was Ridley Scott's original 1982 'Blade Runner' set in Los Angeles?"
+        options: ["1999", "2019", "2049", "2100"]
+        correct: 1
+      - type: single_qa
+        question: "What type of weapon does Ellen Ripley use while piloting the hydraulic power loader in 'Aliens'?"
+        answer: "The Power Loader hydraulic arms / Flame thrower"
+
+  - id: acclaimed_drama_epics
+    title: Acclaimed Drama & Oscar Powerhouses
+    description: >
+      Experience the emotional weight, historical grandeur, and powerful performances 
+      of Hollywood's most acclaimed dramatic masterworks.
+    cards:
+      - title: The Shawshank Redemption (1994)
+        points:
+          - "Adapted from Stephen King's novella, banker Andy Dufresne (Tim Robbins) is wrongfully convicted of murder and sent to Shawshank prison."
+          - "Andy forms an enduring friendship with seasoned contraband smuggler Ellis 'Red' Redding (Morgan Freeman)."
+          - "Over nineteen years, Andy meticulously tunnels through the prison wall using a small rock hammer, hiding his escape route behind a poster of Rita Hayworth."
+          - "The movie has held the #1 spot on IMDb's Top 250 Movies list for over fifteen consecutive years."
+      - title: Schindler's List (1993)
+        points:
+          - "Steven Spielberg's haunting Holocaust masterpiece chronicles German industrialist Oskar Schindler (Liam Neeson), who saved more than 1,100 Jews."
+          - "Shot in stark black-and-white to evoke historical documentary reality, the only selective color is a young girl's red coat."
+          - "Ralph Fiennes gave a chilling, terrifying performance as sadistic SS commandant Amon Göth."
+          - "The film won seven Academy Awards, including Best Picture and Steven Spielberg's first Oscar for Best Director."
+      - title: Forrest Gump (1994)
+        points:
+          - "Tom Hanks stars as a kind-hearted, simple Alabama man who unwittingly influences major events in 20th-century American history."
+          - "Forrest encounters historical figures like Elvis Presley, JFK, and John Lennon through pioneering CGI archival compositing."
+          - "From college football and Vietnam heroism to ping-pong diplomacy and shrimp boating, Forrest's devotion remains with his childhood love, Jenny."
+          - "The film won six Academy Awards, including Best Picture, Best Director for Robert Zemeckis, and Best Actor for Tom Hanks."
+      - title: Titanic (1997)
+        points:
+          - "James Cameron's monumental romantic epic follows aristocratic Rose (Kate Winslet) and penniless artist Jack (Leonardo DiCaprio) aboard the ill-fated ship."
+          - "Cameron built a massive 90% scale replica of the ocean liner in a 17-million-gallon water tank in Rosarito, Mexico."
+          - "It became the first movie in history to gross over $1 billion worldwide and tied the all-time record with 11 Academy Awards."
+          - "Celine Dion's theme song 'My Heart Will Go On' became one of the best-selling musical singles in global history."
+      - title: One Flew Over the Cuckoo's Nest (1975)
+        points:
+          - "Directed by Miloš Forman, charismatic rebel Randle McMurphy (Jack Nicholson) fakes insanity to serve a prison sentence in a mental asylum."
+          - "He wages a psychological battle of wills against the tyrannical, cold-hearted head nurse, Nurse Ratched (Louise Fletcher)."
+          - "The film became only the second movie in history to sweep all 'Big Five' Academy Awards (Picture, Director, Actor, Actress, Screenplay)."
+          - "Nurse Ratched remains one of the most iconic, chilling bureaucratic villains in cinematic history."
+      - title: Casablanca (1942)
+        points:
+          - "Set in unoccupied French Morocco during World War II, cynical American expatriate Rick Blaine (Humphrey Bogart) runs an upscale nightclub."
+          - "His world is upended when his lost love Ilsa Lund (Ingrid Bergman) walks into his gin joint with her fugitive Resistance husband."
+          - "The film features more universally recognized quotes than almost any other movie: 'Here's looking at you, kid' and 'Round up the usual suspects'."
+          - "The film stands as Hollywood's quintessential masterclass in romance, wartime sacrifice, and timeless screen chemistry."
+      - title: 12 Angry Men (1957)
+        points:
+          - "Sidney Lumet's gripping directorial debut takes place almost entirely inside a single sweltering New York jury deliberation room."
+          - "Twelve jurors must decide the fate of an 18-year-old accused of murdering his father, where a guilty verdict means the death penalty."
+          - "Juror 8 (Henry Fonda) is the lone holdout for 'not guilty', methodically breaking down prejudice and reasonable doubt."
+          - "Lumet used lenses with increasingly long focal lengths and low camera angles to create an escalating feeling of claustrophobia."
+      - title: Oppenheimer (2023)
+        points:
+          - "Christopher Nolan's biographical epic chronicles theoretical physicist J. Robert Oppenheimer (Cillian Murphy) leading the Manhattan Project."
+          - "The film details the race to build the first atomic bomb at Los Alamos and the subsequent political persecution Oppenheimer faced in 1954."
+          - "Robert Downey Jr. won the Academy Award for Best Supporting Actor as Oppenheimer's resentful political rival Lewis Strauss."
+          - "The film won seven Academy Awards, including Best Picture, Best Director, and Best Actor, grossing nearly $1 billion worldwide."
+    trivia:
+      - type: multiple_choice
+        question: "Which movie has held the #1 spot on IMDb's Top 250 Movies list for over fifteen consecutive years?"
+        options: ["The Godfather", "The Shawshank Redemption", "The Dark Knight", "Pulp Fiction"]
+        correct: 1
+      - type: single_qa
+        question: "What small tool did Andy Dufresne use over 19 years to dig his escape tunnel in 'The Shawshank Redemption'?"
+        answer: "A rock hammer"
+      - type: multiple_choice
+        question: "What single splash of selective color appears in Steven Spielberg's black-and-white masterpiece 'Schindler's List'?"
+        options: ["A yellow star", "A girl in a red coat", "A blue candle", "A green tree"]
+        correct: 1
+      - type: single_qa
+        question: "What was the name of the shrimp company co-founded by Forrest Gump to honor his fallen Vietnam comrade?"
+        answer: "Bubba Gump Shrimp Company"
+      - type: multiple_choice
+        question: "How many total Academy Awards did James Cameron's 'Titanic' win in 1998, tying the all-time record?"
+        options: ["9 Oscars", "11 Oscars", "14 Oscars", "7 Oscars"]
+        correct: 1
+      - type: single_qa
+        question: "What tyrannical head nurse ruled the psychiatric ward in 'One Flew Over the Cuckoo's Nest'?"
+        answer: "Nurse Ratched"
+      - type: multiple_choice
+        question: "What famous gin joint in Morocco is managed by Humphrey Bogart's cynical character in 'Casablanca'?"
+        options: ["Rick's Café Américain", "The Blue Parrot", "The Sahara Club", "Casablanca Palms"]
+        correct: 0
+      - type: single_qa
+        question: "Which actor played the lone holdout Juror 8 who argues for reasonable doubt in '12 Angry Men'?"
+        answer: "Henry Fonda"
+      - type: multiple_choice
+        question: "Which actor won the Academy Award for Best Actor in 2024 for portraying J. Robert Oppenheimer?"
+        answer: "Cillian Murphy"
+        options: ["Matt Damon", "Cillian Murphy", "Robert Downey Jr.", "Kenneth Branagh"]
+        correct: 1
+      - type: single_qa
+        question: "What real-world German industrialist saved over 1,100 Jewish workers during WWII as depicted in Spielberg's epic?"
+        answer: "Oskar Schindler"
+      - type: multiple_choice
+        question: "What famous line does Forrest Gump's mother teach him regarding life and a box of chocolates?"
+        options: ["Life is like a box of chocolates, you never know what you're gonna get", "Chocolate makes everything sweeter", "Always share your sweets", "The best pieces are on top"]
+        correct: 0
+      - type: single_qa
+        question: "What valuable diamond necklace drives the narrative framing of the 1997 epic 'Titanic'?"
+        answer: "The Heart of the Ocean (Le Cœur de la Mer)"
+      - type: multiple_choice
+        question: "In 'The Shawshank Redemption', behind a poster of which Hollywood star did Andy Dufresne hide his tunnel?"
+        options: ["Marilyn Monroe", "Rita Hayworth", "Audrey Hepburn", "Elizabeth Taylor"]
+        correct: 1
+      - type: single_qa
+        question: "What line did Humphrey Bogart famously say to Ingrid Bergman in 'Casablanca' as a romantic toast?"
+        answer: "Here's looking at you, kid"
+      - type: multiple_choice
+        question: "What secret New Mexico laboratory town was built from scratch to house the Manhattan Project in 'Oppenheimer'?"
+        options: ["Roswell", "Los Alamos", "Alamogordo", "White Sands"]
+        correct: 1
+      - type: single_qa
+        question: "Which actor played the sadistic SS commander Amon Göth in 'Schindler's List'?"
+        answer: "Ralph Fiennes"
+
+  - id: cult_classics_dark_comedies
+    title: Famous Cult Classics & Dark Comedies
+    description: >
+      Celebrate the quirky, rebellious, and endlessly quotable movies that developed passionate fan followings! 
+      From bowling alleys and bloody woodchippers to satirical dystopian odysseys.
+    cards:
+      - title: The Big Lebowski (1998)
+        points:
+          - "The Coen Brothers' cult comedy stars Jeff Bridges as Jeffrey 'The Dude' Lebowski, an ultra-relaxed Los Angeles slacker who loves bowling and White Russians."
+          - "When mistaken for a millionaire with the same name, The Dude's beloved rug is ruined ('It really tied the room together')."
+          - "John Goodman's unhinged, bowling-obsessed Vietnam veteran Walter Sobchak steals every scene with explosive rules."
+          - "The film inspired an annual fan festival (Lebowski Fest) and even a real-world philosophical movement known as 'Dudeism'."
+      - title: Fargo (1996)
+        points:
+          - "Set in snowy Minnesota, a desperate car salesman (William H. Macy) hires two inept criminals to kidnap his own wife for ransom."
+          - "Frances McDormand won an Oscar as heavily pregnant, sharp-witted police chief Marge Gunderson, who investigates the gruesome crimes."
+          - "The film's dark humor contrasts cheerful Midwestern accents ('Oh, ya, you betcha!') with graphic, shocking violence."
+          - "The infamous woodchipper scene became one of the most recognizable dark comedy climaxes in cinematic history."
+      - title: Reservoir Dogs (1992)
+        points:
+          - "Quentin Tarantino's explosive independent debut focuses on the bloody aftermath of a diamond heist gone wrong in an abandoned warehouse."
+          - "The criminals are given color-coded aliases to protect their identities: Mr. White, Mr. Orange, Mr. Blonde, Mr. Pink, Mr. Blue, and Mr. Brown."
+          - "Michael Madsen's chilling dance to Stealers Wheel's 'Stuck in the Middle with You' as Mr. Blonde became an iconic scene."
+          - "The film proved that gripping dialogue, raw tension, and non-linear storytelling could create a masterpiece on a micro-budget."
+      - title: American Psycho (2000)
+        points:
+          - "Mary Harron directs Christian Bale as Patrick Bateman, a wealthy, vanity-obsessed 1980s Wall Street investment banker with a murderous secret life."
+          - "The film satirizes consumerism, superficial corporate culture, and greed through Bateman's intense obsession with business cards and skincare."
+          - "Bateman famously delivers an analytical critique of Huey Lewis and the News before swinging an axe in a clear raincoat."
+          - "Christian Bale's manic, deadpan performance propelled him into Hollywood's A-list tier of dramatic leading actors."
+      - title: A Clockwork Orange (1971)
+        points:
+          - "Stanley Kubrick's controversial adaptation of Anthony Burgess's dystopian novel stars Malcolm McDowell as delinquent Alex DeLarge."
+          - "Alex leads his 'droogs' on violent crime sprees set to the music of Ludwig van Beethoven before being subjected to psychological aversion therapy."
+          - "The film's disturbing exploration of free will, state control, and criminality sparked massive international debates."
+          - "Kubrick famously withdrew the film from British cinemas himself after copycat violence concerns, making it a legendary cult item."
+      - title: Monty Python and the Holy Grail (1975)
+        points:
+          - "The British comedy troupe Monty Python parodied Arthurian legend on a shoestring budget, using banging coconut shells instead of real horses."
+          - "Iconic sketches include the unstoppable Black Knight ('It's just a flesh wound!'), the French Taunter, and the Killer Rabbit of Caerbannog."
+          - "The film's surreal absurdity and relentless one-liners made it the most widely quoted comedy in cinematic history."
+          - "It later spawned the massive Tony Award-winning Broadway musical adaptation, 'Spamalot'."
+      - title: Groundhog Day (1993)
+        points:
+          - "Bill Murray stars as cynical television weatherman Phil Connors, who gets trapped living February 2nd in Punxsutawney over and over."
+          - "Phil progresses through stages of disbelief, hedonistic indulgence, suicidal despair, and ultimately genuine self-improvement."
+          - "Director Harold Ramis crafted a modern moral fable that philosophers, religious scholars, and psychologists analyze extensively."
+          - "The phrase 'Groundhog Day' officially entered the English dictionary as a term for a monotonous, endlessly repeating situation."
+      - title: The Grand Budapest Hotel (2014)
+        points:
+          - "Wes Anderson's visually exquisite comedy follows Gustave H. (Ralph Fiennes), a devoted concierge at a luxury European mountain resort."
+          - "When a wealthy dowager leaves Gustave a priceless Renaissance painting, he and his lobby boy Zero get framed for murder."
+          - "The film showcases Anderson's signature symmetrical pastel framing, shifting aspect ratios for different time periods, and vibrant miniatures."
+          - "It won four Academy Awards and stands as one of Anderson's most acclaimed, heartwarming artistic triumphs."
+    trivia:
+      - type: multiple_choice
+        question: "What cocktail drink does Jeff Bridges' character 'The Dude' constantly sip in The Big Lebowski?"
+        options: ["Martini", "White Russian", "Old Fashioned", "Margarita"]
+        correct: 1
+      - type: single_qa
+        question: "What industrial machine is used by a criminal to dispose of a body in the climax of the Coen Brothers' 'Fargo'?"
+        answer: "A woodchipper"
+      - type: multiple_choice
+        question: "In Quentin Tarantino's 'Reservoir Dogs', what color alias does Steve Buscemi's character complain about receiving?"
+        options: ["Mr. Orange", "Mr. Pink", "Mr. Brown", "Mr. Blonde"]
+        correct: 1
+      - type: single_qa
+        question: "What pop-rock musician's album does Patrick Bateman analyze before attacking his victim in 'American Psycho'?"
+        answer: "Huey Lewis and the News (Fore!)"
+      - type: multiple_choice
+        question: "What items did the Monty Python comedy troupe bang together instead of using real horses in 'Holy Grail'?"
+        options: ["Wooden spoons", "Coconut shells", "Iron pots", "Leather boots"]
+        correct: 1
+      - type: single_qa
+        question: "What classical composer's Ninth Symphony is beloved by the delinquent Alex DeLarge in 'A Clockwork Orange'?"
+        answer: "Ludwig van Beethoven"
+      - type: multiple_choice
+        question: "In what Pennsylvania town is weatherman Phil Connors trapped in a time loop in 'Groundhog Day'?"
+        options: ["Pittsburgh", "Punxsutawney", "Scranton", "Allentown"]
+        correct: 1
+      - type: single_qa
+        question: "What is the name of the eccentric, perfume-spraying concierge played by Ralph Fiennes in 'The Grand Budapest Hotel'?"
+        answer: "Monsieur Gustave H."
+      - type: multiple_choice
+        question: "What home decor item does The Dude claim 'really tied the room together' in 'The Big Lebowski'?"
+        options: ["His bowling trophy", "His rug", "His record player", "His velvet armchair"]
+        correct: 1
+      - type: single_qa
+        question: "What phrase does the limb-severed Black Knight stubbornly repeat when fighting King Arthur in Monty Python?"
+        answer: "It's just a flesh wound! (or Tis but a scratch)"
+      - type: multiple_choice
+        question: "Which 1970s soft-rock hit plays during the infamous ear-cutting scene in 'Reservoir Dogs'?"
+        options: ["Stuck in the Middle with You", "Hooked on a Feeling", "Little Green Bag", "Free Bird"]
+        correct: 0
+      - type: single_qa
+        question: "Who won an Academy Award for Best Actress as the pregnant police chief Marge Gunderson in 'Fargo'?"
+        answer: "Frances McDormand"
+      - type: multiple_choice
+        question: "What stationery item are Wall Street bankers hysterically competitive about in 'American Psycho'?"
+        options: ["Business cards", "Fountain pens", "Leather briefcases", "Rolex watches"]
+        correct: 0
+      - type: single_qa
+        question: "What fictional Russian-influenced slang language do the youths speak in 'A Clockwork Orange'?"
+        answer: "Nadsat"
+      - type: multiple_choice
+        question: "What recurring radio song wakes Phil Connors up every morning at 6:00 AM in 'Groundhog Day'?"
+        options: ["I Got You Babe (Sonny & Cher)", "Good Morning Starshine", "Wake Up Little Susie", "Here Comes the Sun"]
+        correct: 0
+      - type: single_qa
+        question: "What is the job title of Zero Moustafa, Gustave's loyal young companion in 'The Grand Budapest Hotel'?"
+        answer: "Lobby Boy"
+
+  - id: iconic_quotes_plot_twists
+    title: Unforgettable Movie Quotes & Plot Twists
+    description: >
+      Relive the most spine-tingling lines, legendary one-liners, and earth-shattering plot twists 
+      that caught audiences completely off-guard and became permanent cinematic history!
+    cards:
+      - title: "'The Sixth Sense' (1999)"
+        points:
+          - "Directed by M. Night Shyamalan, child psychologist Malcolm Crowe (Bruce Willis) tries to help young Cole Sear (Haley Joel Osment)."
+          - "Cole reveals his terrifying secret in a whispered hospital scene: 'I see dead people. Walking around like regular people.'"
+          - "The legendary twist reveals that Malcolm himself was killed at the start of the movie and has been a ghost all along."
+          - "The twist made the film a global word-of-mouth phenomenon, encouraging audiences to rewatch it to catch all the hidden visual clues."
+      - title: "'The Usual Suspects' (1995)"
+        points:
+          - "Bryan Singer's neo-noir puzzle follows lone survivor Roger 'Verbal' Kint (Kevin Spacey) recounting the legendary mythical crime boss Keyser Söze."
+          - "Verbal describes Söze as a terrifying demon who eliminates everyone who knows his identity."
+          - "In the final moments, the detective looks at his corkboard and realizes Verbal improvised his entire interrogation story from brand names in the room."
+          - "Verbal walks out of the police station, his limp disappears, and he lights a cigarette as Keyser Söze: 'And like that... he's gone.'"
+      - title: "I'm gonna make him an offer he can't refuse"
+        points:
+          - "Spoken by Marlon Brando as Don Vito Corleone in 'The Godfather' (1972), it became the #2 movie quote in American cinema history (AFI)."
+          - "The quote represents the polite, soft-spoken veneer of civility that masks the mob's lethal, uncompromising power."
+          - "The 'offer' implies that the recipient can either accept the business proposition or be executed on the spot."
+          - "The line has been referenced, parodied, and paid homage to in hundreds of television shows, songs, and political speeches."
+      - title: "You can't handle the truth!"
+        points:
+          - "Written by Aaron Sorkin for the military courtroom drama 'A Few Good Men' (1992), directed by Rob Reiner."
+          - "During intense cross-examination by military lawyer Daniel Kaffee (Tom Cruise), base commander Colonel Nathan R. Jessep (Jack Nicholson) explodes."
+          - "Jessep roars: 'You want answers?!... You can't handle the truth! Son, we live in a world that has walls, and those walls have to be guarded by men with guns.'"
+          - "Jack Nicholson's blistering delivery made it one of the most explosive courtroom climaxes in movie history."
+      - title: "Here's looking at you, kid"
+        points:
+          - "Humphrey Bogart whispered this affectionate line to Ingrid Bergman as Rick Blaine bids farewell to Ilsa Lund on a foggy runway in 'Casablanca'."
+          - "The unscripted line was improvised by Bogart, who used to teach Bergman poker tricks between takes using that exact phrase."
+          - "The American Film Institute ranks it as the #5 greatest movie quote of all time."
+          - "It symbolizes putting the greater good of the world above personal heartbreak and romantic longing."
+      - title: "May the Force be with you"
+        points:
+          - "First spoken by General Dodonna and Han Solo in 'Star Wars: A New Hope' (1977), it became a global greeting for optimism."
+          - "The phrase represents faith in the mystical energy field created by all living things that binds the galaxy together."
+          - "Fans worldwide celebrate international Star Wars Day every year on May 4th ('May the Fourth be with you')."
+          - "It stands among the most culturally influential and universally recognized phrases in international pop culture."
+      - title: "'Planet of the Apes' (1968)"
+        points:
+          - "Astronaut George Taylor (Charlton Heston) crash-lands on a distant planet where intelligent apes rule over primitive mute humans."
+          - "Captured and put on trial, Taylor struggles to escape the ape society and ride along the shoreline."
+          - "The devastating final scene reveals the ruined, half-buried Statue of Liberty sticking out of the beach."
+          - "Taylor drops to his knees, screaming: 'You maniacs! You blew it up! Ah, damn you! God damn you all to hell!'—revealing the alien world was Earth all along."
+      - title: "Soylent Green is People!"
+        points:
+          - "In the 1973 dystopian sci-fi classic 'Soylent Green', Earth in 2022 suffers from catastrophic overpopulation, pollution, and food shortages."
+          - "Detective Thorn (Charlton Heston) investigates the corporate manufacturer of 'Soylent Green', a nutritious green wafer feeding the masses."
+          - "In the horrifying climax as he is carried away wounded on a stretcher, Thorn screams the truth: 'Soylent Green is people!'"
+          - "The line became an immortal pop-culture punchline and warning against unchecked industrial dystopia."
+    trivia:
+      - type: multiple_choice
+        question: "What famous line does young Haley Joel Osment whisper to Bruce Willis in 'The Sixth Sense'?"
+        options: ["There is no spoon", "I see dead people", "They're coming for us", "Don't look in the mirror"]
+        correct: 1
+      - type: single_qa
+        question: "Who is revealed to be the mysterious mythical crime kingpin Keyser Söze in 'The Usual Suspects'?"
+        answer: "Roger 'Verbal' Kint (Kevin Spacey)"
+      - type: multiple_choice
+        question: "Which actor delivered the explosive courtroom line 'You can't handle the truth!' in 'A Few Good Men'?"
+        options: ["Jack Nicholson", "Tom Cruise", "Kevin Bacon", "Al Pacino"]
+        correct: 0
+      - type: single_qa
+        question: "What half-buried national monument reveals the shocking twist ending of the 1968 'Planet of the Apes'?"
+        answer: "The Statue of Liberty"
+      - type: multiple_choice
+        question: "What famous mob quote does Marlon Brando whisper to undertaker Bonasera in 'The Godfather'?"
+        options: ["Keep your friends close", "I'm gonna make him an offer he can't refuse", "Leave the gun, take the cannoli", "It's not personal, it's business"]
+        correct: 1
+      - type: single_qa
+        question: "What is the shocking secret ingredient of the manufactured food wafer in the 1973 sci-fi film 'Soylent Green'?"
+        answer: "People (human corpses)"
+      - type: multiple_choice
+        question: "Which Humphrey Bogart line to Ingrid Bergman in 'Casablanca' was originally improvised by Bogart on set?"
+        options: ["Play it again, Sam", "Here's looking at you, kid", "We'll always have Paris", "Round up the usual suspects"]
+        correct: 1
+      - type: single_qa
+        question: "What date is celebrated worldwide as international Star Wars Day due to a famous pun on 'May the Force be with you'?"
+        answer: "May 4th (May the Fourth)"
+      - type: multiple_choice
+        question: "In 'The Sixth Sense', what shocking truth is revealed about Bruce Willis' character Dr. Malcolm Crowe?"
+        options: ["He is an escaped patient", "He is actually a ghost (he died at the start)", "He is the boy's father", "He has no medical degree"]
+        correct: 1
+      - type: single_qa
+        question: "What physical disability does Verbal Kint fake throughout his police interrogation in 'The Usual Suspects'?"
+        answer: "A limp (and a paralyzed hand)"
+      - type: multiple_choice
+        question: "What iconic line does Arnold Schwarzenegger utter as the Terminator upon entering a police station in the 1984 film?"
+        options: ["I'll be back", "Get to the chopper", "Hasta la vista", "You're terminated"]
+        correct: 0
+      - type: single_qa
+        question: "What screenwriter wrote the sharp, razor-fast dialogue for the courtroom drama 'A Few Good Men'?"
+        answer: "Aaron Sorkin"
+      - type: multiple_choice
+        question: "In 'Star Wars: The Empire Strikes Back', what does Darth Vader famously say to Luke Skywalker regarding his father?"
+        options: ["Obi-Wan killed your father", "No, I am your father", "Luke, I am your master", "Your father joined the dark side"]
+        correct: 1
+      - type: single_qa
+        question: "What color clothing visual motif is subtly used in 'The Sixth Sense' whenever something is connected to the spirit world?"
+        answer: "Red"
+      - type: multiple_choice
+        question: "What famous movie quote was voted #1 of all time by the American Film Institute from 'Gone with the Wind'?"
+        options: ["Frankly, my dear, I don't give a damn", "After all, tomorrow is another day", "As God is my witness, I'll never be hungry again", "I don't know nothin' 'bout birthin' babies"]
+        correct: 0
+      - type: single_qa
+        question: "What line does Clint Eastwood's 'Dirty Harry' Callahan famously ask a wounded robber regarding his revolver shots?"
+        answer: "Do you feel lucky, punk? (or Do I feel lucky?)"
