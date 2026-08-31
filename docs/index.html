@@ -248,10 +248,23 @@
 
         /* Figure Blocks */
         .figure-box {
-            background: var(--surface); border: 1px dashed var(--surface-border);
-            border-radius: 14px; padding: 16px; margin: 14px 0; text-align: center;
+            background: var(--surface); border: 1px solid var(--surface-border);
+            border-radius: 14px; padding: 16px; margin: 16px 0; text-align: center;
         }
-        .figure-box .fig-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+        .figure-title {
+            font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.05em; color: var(--primary); margin-bottom: 10px;
+        }
+        .figure-svg {
+            display: flex; justify-content: center; align-items: center;
+            overflow-x: auto; max-width: 100%; margin: 8px 0;
+        }
+        .figure-svg svg {
+            max-width: 100%; height: auto; display: block;
+        }
+        .figure-caption {
+            font-size: 0.86rem; color: var(--muted); margin-top: 10px; line-height: 1.45;
+        }
 
         /* Badges */
         .badge { font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
@@ -953,6 +966,17 @@
                     sub.appendChild(el('h3', { class: 'subcard-title', text: sc.title }));
                     if (sc.formula) {
                         sub.appendChild(el('div', { class: 'math-block', html: renderFormula(sc.formula) }));
+                    }
+                    if (sc.figure) {
+                        const figBox = el('div', { class: 'figure-box' });
+                        if (typeof sc.figure === 'object') {
+                            if (sc.figure.title) figBox.appendChild(el('div', { class: 'figure-title', text: sc.figure.title }));
+                            if (sc.figure.svg) figBox.appendChild(el('div', { class: 'figure-svg', html: sc.figure.svg }));
+                            if (sc.figure.caption) figBox.appendChild(el('div', { class: 'figure-caption', html: formatMathAndText(sc.figure.caption) }));
+                        } else if (typeof sc.figure === 'string') {
+                            figBox.appendChild(el('div', { class: 'figure-svg', html: sc.figure }));
+                        }
+                        sub.appendChild(figBox);
                     }
                     (sc.points || []).forEach(pt => {
                         sub.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt) }));
