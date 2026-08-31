@@ -167,21 +167,6 @@
         .view.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Mode Banner Switcher */
-        .mode-banner {
-            display: flex; background: var(--surface); border: 1px solid var(--surface-border);
-            border-radius: 14px; padding: 4px; margin-bottom: 18px;
-        }
-        .mode-banner-btn {
-            flex: 1; padding: 10px 14px; border: none; border-radius: 10px; background: transparent;
-            color: var(--muted); font-size: 0.92rem; font-weight: 700; font-family: inherit;
-            cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
-            transition: all 0.2s ease;
-        }
-        .mode-banner-btn.active {
-            background: var(--card); color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
         /* Controls */
         .home-controls { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
         .search-input, .sort-select {
@@ -752,23 +737,6 @@
         let homeSort = localStorage.getItem('trivia_sort') || 'title';
         let homeQuery = '';
 
-        function renderModeBanner(activeMode) {
-            const banner = el('div', { class: 'mode-banner' });
-            const btn1 = el('button', {
-                class: 'mode-banner-btn' + (activeMode === 'trivia' ? ' active' : ''),
-                html: '🚗 ' + t('triviaMode'),
-                onclick: () => setAppMode('trivia')
-            });
-            const btn2 = el('button', {
-                class: 'mode-banner-btn' + (activeMode === 'academic' ? ' active' : ''),
-                html: '🎓 ' + t('academicMode'),
-                onclick: () => setAppMode('academic')
-            });
-            banner.appendChild(btn1);
-            banner.appendChild(btn2);
-            return banner;
-        }
-
         function renderHome() {
             currentTopicIdx = null;
             const root = document.getElementById('view-home');
@@ -778,8 +746,6 @@
                 show('view-home');
                 return;
             }
-
-            root.appendChild(renderModeBanner('trivia'));
 
             const controls = el('div', { class: 'home-controls' });
             const search = el('input', { class: 'search-input', attrs: {
@@ -864,8 +830,6 @@
             currentAcademicIdx = null;
             const root = document.getElementById('view-academic-home');
             root.innerHTML = '';
-
-            root.appendChild(renderModeBanner('academic'));
 
             const academicList = (appData && appData.academic_topics || []).filter(x => (x.lang || 'en') === LANG);
 
