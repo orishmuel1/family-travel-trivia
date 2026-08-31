@@ -1,0 +1,733 @@
+id: dsp_101_en
+type: academic
+icon: "📡"
+title: "Digital Signal Processing (DSP 101)"
+description: >
+  An upper-level engineering curriculum in discrete-time signals, linear time-invariant systems, z-transforms, digital filter design, and fast spectral algorithms.
+lang: en
+audience: family
+categories:
+  - id: foundations_discrete_time
+    title: "1. Foundations & Discrete-Time Systems"
+    description: >
+      Discrete-time signal representations, linearity, time-invariance, convolution sum, causality, and difference equations.
+    cards:
+      - title: "Continuous-Time vs. Discrete-Time Signals"
+        points:
+          - "A continuous-time (CT) signal $x(t)$ is defined on a continuum of time $t \\in \\mathbb{R}$, whereas a discrete-time (DT) signal $x[n]$ is defined strictly for integer indices $n \\in \\mathbb{Z}$."
+          - "Periodic sampling at interval $T_s$ converts $x(t)$ into sequence $x[n] = x(n T_s)$, where $f_s = 1/T_s$ is the sampling rate in samples per second (Hz)."
+          - "The discrete unit impulse $\\delta[n]$ is defined as $\\delta[n] = 1$ for $n=0$ and $0$ for $n \\neq 0$. Unlike continuous $\\delta(t)$, $\\delta[n]$ has finite amplitude and unit area."
+          - "The discrete unit step $u[n]$ is $1$ for $n \\ge 0$ and $0$ for $n < 0$. It relates to the impulse via $u[n] = \\sum_{k=-\\infty}^n \\delta[k]$ and $\\delta[n] = u[n] - u[n-1]$."
+          - "Energy of a signal is $E = \\sum_{n=-\\infty}^{\\infty} |x[n]|^2$. If $E < \\infty$, it is an energy signal. If average power $P = \\lim_{N\\to\\infty} \\frac{1}{2N+1} \\sum_{n=-N}^N |x[n]|^2$ is non-zero and finite, it is a power signal."
+      - title: "Linear Time-Invariant (LTI) Systems & Convolution"
+        points:
+          - "A system is Linear if it obeys the principle of superposition: $T\\{a x_1[n] + b x_2[n]\\} = a T\\{x_1[n]\\} + b T\\{x_2[n]\\}$."
+          - "A system is Time-Invariant if a delay in the input produces the exact same delay in the output: if $x[n] \\to y[n]$, then $x[n-n_0] \\to y[n-n_0]$."
+          - "Any discrete LTI system is uniquely and completely characterized by its impulse response $h[n] = T\\{\\delta[n]\\}$."
+          - "The output for arbitrary input $x[n]$ is given by the convolution sum: $y[n] = (x * h)[n] = \\sum_{k=-\\infty}^{\\infty} x[k] h[n-k]$."
+          - "Convolution properties: Commutative ($x*h = h*x$), Associative ($x*(h_1*h_2) = (x*h_1)*h_2$), and Distributive ($x*(h_1+h_2) = x*h_1 + x*h_2$)."
+      - title: "Difference Equations, Causality & BIBO Stability"
+        points:
+          - "Linear Constant-Coefficient Difference Equations (LCCDE) model discrete systems: $\\sum_{k=0}^N a_k y[n-k] = \\sum_{m=0}^M b_m x[n-m]$ with $a_0 = 1$."
+          - "A system is Causal if the output $y[n]$ at any index $n$ depends only on current and past inputs $x[k]$ ($k \\le n$), which for an LTI system requires $h[n] = 0$ for all $n < 0$."
+          - "Bounded-Input Bounded-Output (BIBO) Stability: every bounded input $|x[n]| \\le B_x < \\infty$ yields a bounded output $|y[n]| \\le B_y < \\infty$."
+          - "An LTI system is BIBO stable if and only if its impulse response is absolutely summable: $\\sum_{n=-\\infty}^{\\infty} |h[n]| < \\infty$."
+    trivia:
+      - type: multiple_choice
+        question: "What is the mathematical definition of the discrete unit impulse function $\\delta[n]$?"
+        options:
+          - "$\\delta[n] = 1$ for $n=0$, and $0$ for all $n \\neq 0$"
+          - "$\\delta[n] = \\infty$ at $n=0$ with unit area under the curve"
+          - "$\\delta[n] = 1$ for all $n \\ge 0$"
+          - "$\\delta[n] = n$ for integer values"
+        correct: 0
+      - type: multiple_choice
+        question: "Under what necessary and sufficient condition is a discrete-time LTI system BIBO stable?"
+        options:
+          - "Its impulse response is absolutely summable: $\\sum |h[n]| < \\infty$"
+          - "Its impulse response is strictly non-zero for all time"
+          - "The system must be memoryless"
+          - "The input signal must have infinite energy"
+        correct: 0
+      - type: multiple_choice
+        question: "How is the output $y[n]$ of an LTI system computed from input $x[n]$ and impulse response $h[n]$?"
+        options:
+          - "Via the convolution sum: $\\sum_{k=-\\infty}^{\\infty} x[k] h[n-k]$"
+          - "Via point-by-point algebraic multiplication: $x[n] \\cdot h[n]$"
+          - "Via the derivative of the input signal: $\\frac{d}{dn} x[n]$"
+          - "Via scalar addition: $x[n] + h[n]$"
+        correct: 0
+      - type: multiple_choice
+        question: "Which property ensures that an input time-shift results in an identical output time-shift?"
+        options:
+          - "Time-Invariance"
+          - "Linearity"
+          - "Causality"
+          - "Stability"
+        correct: 0
+      - type: multiple_choice
+        question: "For an LTI system to be causal, what condition must its impulse response $h[n]$ satisfy?"
+        options:
+          - "$h[n] = 0$ for all $n < 0$"
+          - "$h[n] = 0$ for all $n > 0$"
+          - "$h[0] = 1$"
+          - "$\\sum_{n=0}^{\\infty} h[n] = 0$"
+        correct: 0
+      - type: multiple_choice
+        question: "What relationship connects the unit step $u[n]$ to the unit impulse $\\delta[n]$?"
+        options:
+          - "$\\delta[n] = u[n] - u[n-1]$"
+          - "$\\delta[n] = u[n] + u[n-1]$"
+          - "$\\delta[n] = u[n] \\cdot u[n-1]$"
+          - "$u[n] = \\delta[n] - \\delta[n-1]$"
+        correct: 0
+      - type: multiple_choice
+        question: "If a system is both linear and time-invariant, it is universally abbreviated as what?"
+        options:
+          - "LTI System"
+          - "FIR Filter"
+          - "BIBO Unit"
+          - "DSP Core"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the output of convolving any sequence $x[n]$ with a shifted impulse $\\delta[n - k]$?"
+        options:
+          - "The shifted sequence $x[n - k]$"
+          - "The scaled sequence $k \\cdot x[n]$"
+          - "The zero sequence"
+          - "The differentiated sequence $x'[n]$"
+        correct: 0
+      - type: multiple_choice
+        question: "Which term describes a signal whose total energy $\\sum |x[n]|^2$ is finite?"
+        options:
+          - "Energy Signal"
+          - "Power Signal"
+          - "Deterministic Ramp"
+          - "Infinite Impulse Sequence"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the convolution of two rectangular pulses of length $N$?"
+        options:
+          - "A triangular pulse of length $2N - 1$"
+          - "A rectangular pulse of length $2N$"
+          - "An impulse at origin"
+          - "A sinc sequence"
+        correct: 0
+      - type: multiple_choice
+        question: "Why is discrete convolution commutative, meaning $x[n] * h[n] = h[n] * x[n]$?"
+        options:
+          - "Because index substitution $m = n - k$ preserves the summation"
+          - "Because discrete signals have no phase"
+          - "Because all discrete signals are symmetric"
+          - "Because time reversal is impossible in digital hardware"
+        correct: 0
+      - type: multiple_choice
+        question: "In the difference equation $\\sum_{k=0}^N a_k y[n-k] = \\sum_{m=0}^M b_m x[n-m]$, what does $N$ represent?"
+        options:
+          - "The order of the system"
+          - "The sampling frequency"
+          - "The number of bits of quantization"
+          - "The frequency resolution"
+        correct: 0
+      - type: multiple_choice
+        question: "A system whose current output depends on future inputs $x[n+1]$ is classified as what?"
+        options:
+          - "Non-causal"
+          - "Causal"
+          - "Strictly stable"
+          - "Linear time-invariant"
+        correct: 0
+      - type: multiple_choice
+        question: "If $y[n] = x[n]^2$, which fundamental system property is violated?"
+        options:
+          - "Linearity"
+          - "Time-Invariance"
+          - "Causality"
+          - "Memorylessness"
+        correct: 0
+      - type: multiple_choice
+        question: "If $y[n] = n \\cdot x[n]$, which fundamental system property is violated?"
+        options:
+          - "Time-Invariance"
+          - "Linearity"
+          - "Causality"
+          - "Stability"
+        correct: 0
+
+  - id: z_transform_frequency
+    title: "2. The Z-Transform & Frequency Analysis"
+    description: >
+      Complex frequency domain, Region of Convergence (ROC), pole-zero analysis, transfer functions, and the Discrete-Time Fourier Transform (DTFT).
+    cards:
+      - title: "The Z-Transform & Region of Convergence (ROC)"
+        points:
+          - "The bilateral Z-transform maps a sequence $x[n]$ to complex variable $z = r e^{j\\omega}$: $X(z) = \\mathcal{Z}\\{x[n]\\} = \\sum_{n=-\\infty}^{\\infty} x[n] z^{-n}$."
+          - "The Region of Convergence (ROC) is the set of complex numbers $z$ for which the power series $\\sum |x[n] z^{-n}|$ converges absolutely."
+          - "The ROC is always an annular ring in the complex z-plane: $r_R < |z| < r_L$, centered at the origin."
+          - "Key ROC properties: (1) ROC never contains any poles; (2) For right-sided signals ($x[n]=0$ for $n < N_1$), ROC extends outward from the outermost pole: $|z| > r_{\\max}$; (3) For left-sided signals, ROC extends inward: $|z| < r_{\\min}$."
+          - "An LTI system is BIBO stable if and only if its ROC includes the unit circle $|z| = 1$."
+      - title: "Poles, Zeros & Transfer Function H(z)"
+        points:
+          - "The rational transfer function is $H(z) = \\frac{Y(z)}{X(z)} = \\frac{\\sum_{m=0}^M b_m z^{-m}}{\\sum_{k=0}^N a_k z^{-k}} = b_0 \\frac{\\prod_{m=1}^M (1 - c_m z^{-1})}{\\prod_{k=1}^N (1 - d_k z^{-1})}$."
+          - "Zeros ($c_m$) are values of $z$ where $H(z) = 0$; Poles ($d_k$) are values of $z$ where $H(z) \\to \\infty$."
+          - "A causal LTI system is BIBO stable if and only if ALL its poles lie strictly INSIDE the unit circle ($|d_k| < 1$ for all $k$)."
+          - "Poles close to the unit circle produce resonant peaks in magnitude response; zeros on or near the unit circle create sharp notches / nulls."
+      - title: "Discrete-Time Fourier Transform (DTFT)"
+        points:
+          - "The DTFT represents the frequency content of discrete signals: $X(e^{j\\omega}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n}$."
+          - "The DTFT is simply the Z-transform evaluated on the unit circle: $X(e^{j\\omega}) = X(z)|_{z = e^{j\\omega}}$."
+          - "The DTFT is always periodic in continuous normalized frequency $\\omega$ with period $2\\pi$: $X(e^{j(\\omega + 2\\pi)}) = X(e^{j\\omega})$."
+          - "Inverse DTFT synthesizes the sequence: $x[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega n} d\\omega$."
+          - "Parseval's Theorem states energy conservation between time and frequency: $\\sum_{n=-\\infty}^{\\infty} |x[n]|^2 = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} |X(e^{j\\omega})|^2 d\\omega$."
+    trivia:
+      - type: multiple_choice
+        question: "How is the Discrete-Time Fourier Transform (DTFT) related to the Z-transform $X(z)$?"
+        options:
+          - "It is the Z-transform evaluated on the unit circle ($z = e^{j\\omega}$)"
+          - "It is the Z-transform evaluated along the real axis ($z = r$)"
+          - "It is the inverse laplace transform of $X(z)$"
+          - "It is the derivative $\\frac{d}{dz} X(z)$"
+        correct: 0
+      - type: multiple_choice
+        question: "For a causal LTI system to be BIBO stable, where must all its poles lie in the z-plane?"
+        options:
+          - "Strictly inside the unit circle ($|z| < 1$)"
+          - "Strictly outside the unit circle ($|z| > 1$)"
+          - "Exactly on the imaginary axis"
+          - "In the left half of the s-plane"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the fundamental periodicity of the DTFT $X(e^{j\\omega})$ with respect to frequency $\\omega$?"
+        options:
+          - "$2\\pi$ radians"
+          - "$\\pi$ radians"
+          - "$4\\pi$ radians"
+          - "It is aperiodic"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Region of Convergence (ROC) for a right-sided causal sequence with pole at $z = a$?"
+        options:
+          - "$|z| > |a|$"
+          - "$|z| < |a|$"
+          - "The entire z-plane"
+          - "Only the unit circle"
+        correct: 0
+      - type: multiple_choice
+        question: "Can a pole of a transfer function $H(z)$ ever lie inside the Region of Convergence (ROC)?"
+        options:
+          - "No, the ROC can never contain any poles"
+          - "Yes, if the system is stable"
+          - "Yes, if the system is FIR"
+          - "Only if the pole has multiplicity greater than 2"
+        correct: 0
+      - type: multiple_choice
+        question: "What geometric feature in the z-plane creates a complete frequency null (zero gain) at $\\omega = \\omega_0$?"
+        options:
+          - "A zero placed directly on the unit circle at $z = e^{j\\omega_0}$"
+          - "A pole placed at the origin"
+          - "A pole placed on the unit circle"
+          - "A zero at $z = \\infty$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Z-transform of the time-delayed sequence $x[n - k]$ in terms of $X(z)$?"
+        options:
+          - "$z^{-k} X(z)$"
+          - "$z^{+k} X(z)$"
+          - "$k \\cdot z^{-1} X(z)$"
+          - "$X(z - k)$"
+        correct: 0
+      - type: multiple_choice
+        question: "What does Parseval's Theorem establish for discrete-time signals?"
+        options:
+          - "Energy equivalence between the time domain and frequency domain"
+          - "Phase linearity across all passbands"
+          - "The minimum number of quantization bits needed"
+          - "The stability boundary of recursive filters"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Z-transform of the unit impulse $\\delta[n]$?"
+        options:
+          - "$1$ for all $z$"
+          - "$\\frac{1}{1 - z^{-1}}$"
+          - "$z^{-1}$"
+          - "$0$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Z-transform of the causal exponential sequence $a^n u[n]$?"
+        options:
+          - "$\\frac{1}{1 - a z^{-1}}$ with ROC $|z| > |a|$"
+          - "$\\frac{1}{1 - a z^{-1}}$ with ROC $|z| < |a|$"
+          - "$\\frac{z}{z + a}$"
+          - "$\\ln(1 - a z^{-1})$"
+        correct: 0
+      - type: multiple_choice
+        question: "If a system's impulse response is symmetric $h[n] = h[N-1-n]$, what desirable property does it guarantee?"
+        options:
+          - "Strictly linear phase response"
+          - "Zero computational delay"
+          - "Infinite attenuation in stopband"
+          - "Minimum phase zeros only"
+        correct: 0
+      - type: multiple_choice
+        question: "Why is linear phase important in digital audio and image processing?"
+        options:
+          - "It ensures all frequency components experience the same constant time delay (no phase distortion)"
+          - "It eliminates all quantization noise"
+          - "It allows infinite dynamic range"
+          - "It avoids the need for floating-point arithmetic"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the group delay $\\tau_g(\\omega)$ of a system with phase response $\\theta(\\omega)$?"
+        options:
+          - "$\\tau_g(\\omega) = -\\frac{d\\theta(\\omega)}{d\\omega}$"
+          - "$\\tau_g(\\omega) = \\frac{\\theta(\\omega)}{\\omega}$"
+          - "$\\tau_g(\\omega) = |H(e^{j\\omega})|^2$"
+          - "$\\tau_g(\\omega) = \\int \\theta(\\omega) d\\omega$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is a system called if all its poles AND zeros are strictly inside the unit circle?"
+        options:
+          - "Minimum Phase System"
+          - "All-Pass System"
+          - "Non-causal System"
+          - "Direct Form II Transposed System"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the magnitude response $|H(e^{j\\omega})|$ of an ideal All-Pass filter?"
+        options:
+          - "A constant $|H(e^{j\\omega})| = 1$ for all frequencies"
+          - "Zero everywhere except at DC"
+          - "Linearly increasing with frequency"
+          - "A brick-wall lowpass characteristic"
+        correct: 0
+
+  - id: sampling_reconstruction
+    title: "3. Sampling & Reconstruction"
+    description: >
+      The Nyquist-Shannon sampling theorem, spectral replication, aliasing prevention, ideal bandlimited interpolation, and continuous processing.
+    cards:
+      - title: "The Nyquist-Shannon Sampling Theorem"
+        points:
+          - "The Nyquist-Shannon theorem states that a continuous bandlimited signal $x(t)$ with highest frequency $f_{\\max}$ can be uniquely and perfectly reconstructed from samples $x[n] = x(n T_s)$ if and only if the sampling frequency satisfies $f_s > 2 f_{\\max}$."
+          - "The threshold rate $f_{\\text{Nyquist}} = 2 f_{\\max}$ is called the Nyquist rate; half the sampling frequency $f_s/2$ is called the Nyquist frequency or folding frequency."
+          - "In the frequency domain, periodic impulse-train sampling replicates the continuous spectrum $X(j\\Omega)$ at integer multiples of sampling frequency: $X_s(j\\Omega) = \\frac{1}{T_s} \\sum_{k=-\\infty}^{\\infty} X(j(\\Omega - k \\Omega_s))$ where $\\Omega_s = \\frac{2\\pi}{T_s}$."
+      - title: "Aliasing & Anti-Aliasing Filtering"
+        points:
+          - "Aliasing occurs when $f_s < 2 f_{\\max}$: spectral replicas overlap, causing high-frequency components to disguise themselves as lower frequencies (folding around $f_s/2$)."
+          - "Aliasing causes irreversible information loss: once high frequencies fold into lower bands, they cannot be separated by subsequent digital processing."
+          - "An Anti-Aliasing Filter (AAF) is an analog lowpass filter placed before the Analog-to-Digital Converter (ADC) to eliminate frequencies above $f_s/2$ before sampling takes place."
+      - title: "Ideal Reconstruction & Sinc Interpolation"
+        points:
+          - "Perfect reconstruction uses an ideal analog lowpass filter with cutoff $\\Omega_c = \\Omega_s / 2$ and gain $T_s$."
+          - "In the time domain, multiplying by the ideal frequency rect corresponds to convolving samples with a continuous sinc function: $x(t) = \\sum_{n=-\\infty}^{\\infty} x[n] \\text{sinc}\\left(\\frac{t - n T_s}{T_s}\\right)$ where $\\text{sinc}(u) = \\frac{\\sin(\\pi u)}{\\pi u}$."
+          - "Practical DACs implement a Zero-Order Hold (ZOH), which keeps each sample constant for duration $T_s$, creating staircase artifacts smoothed by a reconstruction filter."
+    trivia:
+      - type: multiple_choice
+        question: "What is the minimum sampling rate required to avoid aliasing for an audio signal bandlimited to 20 kHz?"
+        options:
+          - "40 kHz (twice the highest frequency component)"
+          - "20 kHz"
+          - "10 kHz"
+          - "80 kHz"
+        correct: 0
+      - type: multiple_choice
+        question: "What happens in the frequency domain when a continuous signal is uniformly sampled in time?"
+        options:
+          - "Its continuous spectrum is periodically replicated at integer multiples of the sampling frequency"
+          - "Its spectrum is compressed to zero"
+          - "Its phase is rotated by 90 degrees"
+          - "Its amplitude is converted to decibels"
+        correct: 0
+      - type: multiple_choice
+        question: "Where must an anti-aliasing filter be positioned in a signal processing pipeline?"
+        options:
+          - "In the analog domain, immediately BEFORE the Analog-to-Digital Converter (ADC)"
+          - "In the digital domain, after the FFT calculation"
+          - "At the output of the DAC"
+          - "Inside the digital microprocessor accumulator"
+        correct: 0
+      - type: multiple_choice
+        question: "If a 7 kHz sine wave is sampled at $f_s = 10\\text{ kHz}$, at what aliased frequency will it appear in the discrete spectrum?"
+        options:
+          - "3 kHz ($|10 - 7|\\text{ kHz}$)"
+          - "7 kHz"
+          - "5 kHz"
+          - "14 kHz"
+        correct: 0
+      - type: multiple_choice
+        question: "What mathematical function serves as the ideal continuous interpolation kernel in Shannon's Whittaker-Shannon interpolation formula?"
+        options:
+          - "The $\\text{sinc}$ function: $\\frac{\\sin(\\pi t / T_s)}{\\pi t / T_s}$"
+          - "The Gaussian bell curve"
+          - "A triangular Bartlett window"
+          - "A polynomial spline"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Nyquist frequency of a system sampling at 48,000 samples/second (48 kHz)?"
+        options:
+          - "24 kHz ($f_s / 2$)"
+          - "48 kHz"
+          - "96 kHz"
+          - "12 kHz"
+        correct: 0
+      - type: multiple_choice
+        question: "Why can digital processing not undo aliasing after sampling has occurred?"
+        options:
+          - "Because overlapping spectral components add together irreversibly into the same frequencies"
+          - "Because digital memory cannot store complex numbers"
+          - "Because sampling destroys the DC offset"
+          - "Because DSP processors only support fixed-point mathematics"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the primary function of a Zero-Order Hold (ZOH) circuit in digital-to-analog conversion?"
+        options:
+          - "To maintain the analog voltage constant at each sample value for duration $T_s$"
+          - "To compute the derivative of incoming samples"
+          - "To remove all high-frequency harmonics without any analog filter"
+          - "To normalize digital word length"
+        correct: 0
+      - type: multiple_choice
+        question: "In discrete-time processing of continuous-time signals, how does digital frequency $\\omega$ relate to analog frequency $\\Omega$?"
+        options:
+          - "$\\omega = \\Omega T_s = \\frac{\\Omega}{f_s}$"
+          - "$\\omega = \\frac{\\Omega}{T_s}$"
+          - "$\\omega = \\Omega^2$"
+          - "$\\omega = 2\\pi \\Omega$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the standard CD audio sampling rate (44.1 kHz) chosen to preserve?"
+        options:
+          - "Human audible frequencies up to 20 kHz, leaving headroom for transition band analog filters"
+          - "Radio transmission band frequencies"
+          - "Ultrasonic bat vocalizations"
+          - "Telephone speech band up to 3.4 kHz"
+        correct: 0
+      - type: multiple_choice
+        question: "If an analog signal has frequency components between 100 Hz and 300 Hz, what is its Nyquist rate?"
+        options:
+          - "600 Hz ($2 \\times 300\\text{ Hz}$)"
+          - "300 Hz"
+          - "200 Hz"
+          - "1200 Hz"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the term for intentional noise added to an analog signal prior to quantization to reduce quantization harmonic distortion?"
+        options:
+          - "Dither"
+          - "Aliasing"
+          - "Jitter"
+          - "Decimation"
+        correct: 0
+      - type: multiple_choice
+        question: "What process reduces the sampling rate of a discrete signal by integer factor $M$ by keeping every $M$-th sample?"
+        options:
+          - "Decimation (Downsampling)"
+          - "Interpolation (Upsampling)"
+          - "Quantization"
+          - "Modulation"
+        correct: 0
+      - type: multiple_choice
+        question: "Before decimating a digital signal by factor $M$, what digital filter must be applied to prevent digital aliasing?"
+        options:
+          - "A digital anti-aliasing lowpass filter with cutoff $\\pi / M$"
+          - "A highpass notch filter"
+          - "An all-pass equalizer"
+          - "A differentiator"
+        correct: 0
+      - type: multiple_choice
+        question: "What does upsampling (interpolation by factor $L$) introduce into the digital spectrum that must be filtered out?"
+        options:
+          - "Spectral images (imaging replicas) removed by an anti-imaging filter"
+          - "Quantization noise"
+          - "Thermal noise"
+          - "Phase reversal"
+        correct: 0
+
+  - id: digital_filter_design
+    title: "4. Digital Filter Design"
+    description: >
+      FIR vs IIR architectures, linear phase FIR design via windowing, Parks-McClellan equiripple algorithm, and IIR design via Bilinear Transformation.
+    cards:
+      - title: "FIR vs. IIR Filters: Architecture & Trade-Offs"
+        points:
+          - "Finite Impulse Response (FIR) filters have an impulse response that settles to zero in finite time: $y[n] = \\sum_{k=0}^{M} b_k x[n-k]$. They are non-recursive, feedforward-only, and unconditionally stable."
+          - "Infinite Impulse Response (IIR) filters contain feedback loops: $y[n] = \\sum_{m=0}^M b_m x[n-m] - \\sum_{k=1}^N a_k y[n-k]$. They achieve much steeper roll-off with fewer coefficients, but can become unstable and have non-linear phase."
+          - "FIR filters can guarantee exact linear phase (constant group delay), which is impossible for causal IIR filters."
+      - title: "FIR Filter Design via Windowing"
+        points:
+          - "Ideal brick-wall filters have infinite, non-causal impulse responses: $h_{\\text{ideal}}[n] = \\frac{\\sin(\\omega_c (n - M/2))}{\\pi (n - M/2)}$."
+          - "The Window Method truncates and tapers $h_{\\text{ideal}}[n]$ using a window $w[n]$: $h[n] = h_{\\text{ideal}}[n] \\cdot w[n]$."
+          - "Window trade-off: main lobe width determines transition bandwidth; peak side lobe level determines stopband attenuation."
+          - "Common windows: Rectangular (narrowest main lobe, poor stopband $-13\\text{ dB}$), Hanning ($-31\\text{ dB}$), Hamming ($-43\\text{ dB}$), Blackman ($-58\\text{ dB}$), and Kaiser (parameter $\\beta$ dynamically tunes trade-off)."
+      - title: "IIR Filter Design & The Bilinear Transformation"
+        points:
+          - "IIR filters are commonly designed by transforming well-known analog prototypes (Butterworth, Chebyshev Type I/II, Elliptic) into the discrete z-domain."
+          - "The Bilinear Transformation maps the continuous s-plane to the discrete z-plane via: $s = \\frac{2}{T} \\frac{1 - z^{-1}}{1 + z^{-1}}$."
+          - "It maps the entire continuous $j\\Omega$ imaginary axis onto the discrete unit circle $|z| = 1$, completely avoiding aliasing."
+          - "Because the mapping is non-linear (frequency warping: $\\omega = 2 \\arctan\\left(\\frac{\\Omega T}{2}\\right)$), analog cutoff frequencies must be pre-warped before transformation: $\\Omega = \\frac{2}{T} \\tan\\left(\\frac{\\omega}{2}\\right)$."
+    trivia:
+      - type: multiple_choice
+        question: "Why are FIR (Finite Impulse Response) digital filters unconditionally stable?"
+        options:
+          - "Because all their poles reside exclusively at the origin $z = 0$"
+          - "Because they use feedback loops"
+          - "Because they have zero phase delay"
+          - "Because their frequency response is constant"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the primary advantage of IIR filters compared to FIR filters of equivalent passband/stopband specifications?"
+        options:
+          - "They require significantly fewer coefficients and lower computational cost for a given roll-off steepness"
+          - "They guarantee exact linear phase"
+          - "They have no rounding errors"
+          - "They are always non-recursive"
+        correct: 0
+      - type: multiple_choice
+        question: "In FIR window design, what undesirable effect occurs if an ideal impulse response is abruptly truncated with a rectangular window?"
+        options:
+          - "Gibbs phenomenon, causing substantial side lobes and passband ripple"
+          - "The filter becomes non-linear"
+          - "The filter poles move outside the unit circle"
+          - "The sampling frequency is halved"
+        correct: 0
+      - type: multiple_choice
+        question: "Which window provides an adjustable parameter $\\beta$ allowing engineers to continuously trade transition bandwidth for stopband attenuation?"
+        options:
+          - "Kaiser Window"
+          - "Rectangular Window"
+          - "Hamming Window"
+          - "Hanning Window"
+        correct: 0
+      - type: multiple_choice
+        question: "What mapping equation defines the Bilinear Transformation from analog s-plane to discrete z-plane?"
+        options:
+          - "$s = \\frac{2}{T} \\frac{1 - z^{-1}}{1 + z^{-1}}$"
+          - "$s = \\frac{1}{T} \\ln(z)$"
+          - "$z = e^{s T}$"
+          - "$s = z + z^{-1}$"
+        correct: 0
+      - type: multiple_choice
+        question: "Why must frequencies be 'pre-warped' when designing IIR filters using the Bilinear Transformation?"
+        options:
+          - "To compensate for the non-linear algebraic compression mapping the infinite continuous axis onto the finite unit circle"
+          - "To prevent thermal drift in hardware"
+          - "To convert floating point coefficients to integers"
+          - "To cancel quantization noise"
+        correct: 0
+      - type: multiple_choice
+        question: "Which classical analog filter prototype is characterized by a maximally flat magnitude response in the passband with no ripples?"
+        options:
+          - "Butterworth Filter"
+          - "Chebyshev Type I Filter"
+          - "Chebyshev Type II Filter"
+          - "Elliptic (Cauer) Filter"
+        correct: 0
+      - type: multiple_choice
+        question: "Which filter prototype features equal ripple in BOTH the passband and stopband, delivering the steepest transition for a given order?"
+        options:
+          - "Elliptic (Cauer) Filter"
+          - "Butterworth Filter"
+          - "Bessel Filter"
+          - "Gaussian Filter"
+        correct: 0
+      - type: multiple_choice
+        question: "What algorithm is used to design optimal equiripple linear-phase FIR filters by minimizing Chebyshev approximation error?"
+        options:
+          - "Parks-McClellan algorithm (Remez exchange)"
+          - "Cooley-Tukey algorithm"
+          - "Goertzel algorithm"
+          - "Viterbi algorithm"
+        correct: 0
+      - type: multiple_choice
+        question: "In digital filter implementation, what is the 'Direct Form II' structure noted for compared to Direct Form I?"
+        options:
+          - "It is canonical in memory (uses the minimum number of delay registers $z^{-1}$)"
+          - "It requires zero multiplications"
+          - "It avoids all limit cycles"
+          - "It is exclusively for FIR filters"
+        correct: 0
+      - type: multiple_choice
+        question: "What type of FIR filter (symmetric vs anti-symmetric, odd vs even length) cannot be used to design a highpass filter because it has a zero at $\\omega = \\pi$ ($z = -1$)?"
+        options:
+          - "Type II FIR filter (symmetric with even length / odd order)"
+          - "Type I FIR filter (symmetric with odd length)"
+          - "Type III FIR filter"
+          - "Type IV FIR filter"
+        correct: 0
+      - type: multiple_choice
+        question: "What phenomenon in fixed-point IIR filter implementations causes autonomous periodic oscillations with zero input due to rounding?"
+        options:
+          - "Limit Cycle Oscillations"
+          - "Aliasing"
+          - "Spectral Leakage"
+          - "Warping"
+        correct: 0
+      - type: multiple_choice
+        question: "How do the poles of a stable continuous analog filter in the Left-Half s-Plane ($Re(s) < 0$) map under the Bilinear Transformation?"
+        options:
+          - "They map strictly inside the discrete unit circle ($|z| < 1$)"
+          - "They map onto the unit circle ($|z| = 1$)"
+          - "They map outside the unit circle ($|z| > 1$)"
+          - "They all collapse to $z = 0$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the maximum stopband attenuation provided by a standard Hamming window?"
+        options:
+          - "Approximately $-53\\text{ dB}$ (first side lobe at $-43\\text{ dB}$)"
+          - "Approximately $-13\\text{ dB}$"
+          - "Approximately $-120\\text{ dB}$"
+          - "Infinite"
+        correct: 0
+      - type: multiple_choice
+        question: "Why are high-order IIR filters typically implemented as cascades of Second-Order Sections (Biquads) rather than a single high-order polynomial?"
+        options:
+          - "To minimize sensitivity to coefficient quantization and prevent numerical instability"
+          - "To make the filter linear phase"
+          - "To reduce the sampling frequency"
+          - "To eliminate the need for addition operations"
+        correct: 0
+
+  - id: dft_and_fft_algorithms
+    title: "5. The Discrete Fourier Transform & Fast Algorithms"
+    description: >
+      The discrete Fourier transform (DFT), circular convolution, spectral resolution, windowing & leakage, and the radix-2 Cooley-Tukey FFT algorithm.
+    cards:
+      - title: "The Discrete Fourier Transform (DFT)"
+        points:
+          - "The DFT converts a finite-length discrete sequence $x[n]$ of length $N$ into $N$ discrete frequency samples: $X[k] = \\sum_{n=0}^{N-1} x[n] W_N^{k n}$ where $W_N = e^{-j \\frac{2\\pi}{N}}$ is the twiddle factor."
+          - "The Inverse DFT reconstructs the sequence: $x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X[k] W_N^{-k n}$."
+          - "The $N$-point DFT samples the continuous DTFT $X(e^{j\\omega})$ at $N$ uniformly spaced points along the unit circle: $\\omega_k = \\frac{2\\pi k}{N}$ for $k = 0, 1, \\dots, N-1$."
+          - "Twiddle factor properties: Periodicity ($W_N^{k+N} = W_N^k$), Symmetry ($W_N^{k + N/2} = -W_N^k$), and Reduction ($W_N^{2k} = W_{N/2}^k$)."
+      - title: "Circular Convolution vs. Linear Convolution"
+        points:
+          - "Multiplying two DFTs in frequency $Y[k] = X_1[k] X_2[k]$ corresponds to Circular (periodic) Convolution in time: $y[n] = (x_1 \\circledast x_2)[n] = \\sum_{m=0}^{N-1} x_1[m] x_2[((n - m))_N]$."
+          - "To compute Linear Convolution of length $L$ and $P$ using the DFT without circular wrap-around aliasing, both sequences must be zero-padded to minimum length $N \\ge L + P - 1$."
+          - "Block convolution for long or streaming audio data is efficiently computed via Overlap-Add (OLA) or Overlap-Save (OLS) methods."
+      - title: "Spectral Resolution, Leakage & The Fast Fourier Transform (FFT)"
+        points:
+          - "Bin spacing in Hertz is $\\Delta f = \\frac{f_s}{N} = \\frac{1}{T_{\\text{total}}}$, determined strictly by total observation duration $T_{\\text{total}} = N T_s$. Zero-padding interpolates the spectrum but does NOT improve physical resolution."
+          - "Spectral Leakage occurs when a signal frequency does not align with an integer bin, smearing energy into adjacent bins; windowing reduces leakage sidelobes at the expense of main lobe broadening."
+          - "Direct DFT calculation requires $O(N^2)$ complex multiplications."
+          - "The Cooley-Tukey Radix-2 Decimation-in-Time (DIT) FFT algorithm decomposes an $N$-point DFT recursively into two $N/2$-point DFTs, slashing computational complexity to $O(N \\log_2 N)$."
+          - "For $N = 1024$, direct DFT requires $\\approx 1,048,576$ operations; FFT requires $\\approx 10,240$ operations — over 100 times faster!"
+    trivia:
+      - type: multiple_choice
+        question: "What is the computational complexity of computing an $N$-point DFT using the Radix-2 Cooley-Tukey FFT algorithm?"
+        options:
+          - "$O(N \\log_2 N)$"
+          - "$O(N^2)$"
+          - "$O(N^3)$"
+          - "$O(\\log N)$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the computational complexity of evaluating an $N$-point DFT directly from its algebraic formula?"
+        options:
+          - "$O(N^2)$ complex multiplications and additions"
+          - "$O(N \\log N)$"
+          - "$O(N)$"
+          - "$O(2^N)$"
+        correct: 0
+      - type: multiple_choice
+        question: "What does multiplying two $N$-point DFT sequences point-by-point in the frequency domain correspond to in time?"
+        options:
+          - "Circular (cyclic) convolution of length $N$"
+          - "Linear aperiodic convolution"
+          - "Point-by-point time addition"
+          - "Autocorrelation at zero lag"
+        correct: 0
+      - type: multiple_choice
+        question: "To compute the linear convolution of two signals of lengths $L$ and $P$ using the FFT, what is the minimum zero-padded length $N$ required?"
+        options:
+          - "$N \\ge L + P - 1$"
+          - "$N = L + P$"
+          - "$N = \\max(L, P)$"
+          - "$N = L \\times P$"
+        correct: 0
+      - type: multiple_choice
+        question: "What determines the true physical frequency resolution (minimum resolvable separation between two sine waves) of a DFT analysis?"
+        options:
+          - "The total duration of the recorded time window ($T_{\\text{total}} = N T_s$)"
+          - "The number of zeros padded at the end of the sequence"
+          - "The bit depth of the analog-to-digital converter"
+          - "The CPU clock speed"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the primary effect of zero-padding a time-domain signal before taking the DFT?"
+        options:
+          - "It provides ideal bandlimited interpolation of the DTFT spectrum (smoother display) without increasing physical resolution"
+          - "It increases true physical frequency resolution between closely spaced peaks"
+          - "It eliminates all spectral leakage"
+          - "It increases signal-to-noise ratio"
+        correct: 0
+      - type: multiple_choice
+        question: "What causes 'spectral leakage' when analyzing a continuous sinusoid with the DFT?"
+        options:
+          - "The sinusoid's frequency does not fall exactly on an integer multiple of the bin spacing $f_s/N$, truncating non-integer periods"
+          - "Thermal noise in the processor registers"
+          - "Aliasing from inadequate sampling"
+          - "Quantization noise in floating-point mantissa"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the fundamental building block of a Radix-2 Decimation-in-Time FFT signal flow graph called?"
+        options:
+          - "A Butterfly operation"
+          - "A Biquad cell"
+          - "A Ladder network"
+          - "A Sinc interpolator"
+        correct: 0
+      - type: multiple_choice
+        question: "In the Radix-2 Decimation-in-Time FFT algorithm, how must the input array indices be rearranged before computation?"
+        options:
+          - "Bit-Reversal Permutation"
+          - "Ascending magnitude sort"
+          - "Even-odd parity shuffle"
+          - "Matrix transposition"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the Twiddle Factor $W_N$ defined as in DFT mathematics?"
+        options:
+          - "$W_N = e^{-j \\frac{2\\pi}{N}}$"
+          - "$W_N = e^{+j 2\\pi N}$"
+          - "$W_N = \\cos(2\\pi / N)$"
+          - "$W_N = \\frac{1}{\\sqrt{N}}$"
+        correct: 0
+      - type: multiple_choice
+        question: "Which block convolution algorithm breaks an infinite input stream into blocks, zero-pads them, performs FFT convolution, and sums overlapping output blocks?"
+        options:
+          - "Overlap-Add (OLA) method"
+          - "Overlap-Save (OLS) method"
+          - "Goertzel algorithm"
+          - "Polyphase decomposition"
+        correct: 0
+      - type: multiple_choice
+        question: "If an engineer only needs to detect a single specific frequency tone (e.g. DTMF touch-tone telephone dialing), which algorithm is more efficient than a full FFT?"
+        options:
+          - "The Goertzel Algorithm"
+          - "The Cooley-Tukey FFT"
+          - "The Remez Exchange"
+          - "The Bilinear Transform"
+        correct: 0
+      - type: multiple_choice
+        question: "For a real-valued input sequence $x[n]$, what symmetry property does its DFT $X[k]$ exhibit?"
+        options:
+          - "Conjugate symmetry: $X[N-k] = X^*[k]$"
+          - "Strictly real values only"
+          - "Strictly imaginary values only"
+          - "Odd skew symmetry: $X[N-k] = -X[k]$"
+        correct: 0
+      - type: multiple_choice
+        question: "What is the value of the zero-frequency DFT coefficient $X[0]$?"
+        options:
+          - "The sum of all time-domain samples $\\sum_{n=0}^{N-1} x[n]$ (the DC component)"
+          - "Always 0"
+          - "The maximum amplitude in time"
+          - "The Nyquist component"
+        correct: 0
+      - type: multiple_choice
+        question: "For a 1024-point real-time FFT at $f_s = 44,100\\text{ Hz}$, what is the approximate frequency width $\\Delta f$ of each DFT bin?"
+        options:
+          - "$\\approx 43.07\\text{ Hz}$ ($44100 / 1024$)"
+          - "$\\approx 10.24\\text{ Hz}$"
+          - "$\\approx 100\\text{ Hz}$"
+          - "$\\approx 1.0\\text{ Hz}$"
+        correct: 0

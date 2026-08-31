@@ -3,72 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Family Travel Trivia</title>
+    <title>Family Travel Trivia & Academy</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#6366f1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Travel Trivia">
+    <meta name="apple-mobile-web-app-title" content="Trivia & Academy">
     <link rel="apple-touch-icon" href="icon-192.png">
 
     <style>
         /* ===================== THEME PALETTES ===================== */
         :root, :root[data-theme="daylight"] {
             --bg: #f4f6fb; --grad1: rgba(99,102,241,0.10); --grad2: rgba(168,85,247,0.10);
-            --header-bg: rgba(255,255,255,0.9);
+            --header-bg: rgba(255,255,255,0.92);
             --card: #ffffff; --card-border: rgba(15,23,42,0.08);
             --text: #1e293b; --muted: #64748b;
             --primary: #6366f1; --primary-2: #a855f7;
+            --academic-accent: #0284c7;
             --success: #059669; --error: #e11d48;
-            --surface: rgba(15,23,42,0.02); --surface-border: rgba(15,23,42,0.10);
+            --surface: rgba(15,23,42,0.03); --surface-border: rgba(15,23,42,0.10);
             --shadow: 0 8px 24px rgba(15,23,42,0.08);
+            --math-bg: rgba(99,102,241,0.06);
         }
         :root[data-theme="sunrise"] {
             --bg: #fff7ed; --grad1: rgba(249,115,22,0.12); --grad2: rgba(45,212,191,0.12);
-            --header-bg: rgba(255,247,237,0.9);
+            --header-bg: rgba(255,247,237,0.92);
             --card: #fffdf9; --card-border: rgba(120,53,15,0.10);
             --text: #431407; --muted: #9a6b52;
             --primary: #f97316; --primary-2: #fb7185;
+            --academic-accent: #ea580c;
             --success: #059669; --error: #e11d48;
             --surface: rgba(120,53,15,0.03); --surface-border: rgba(120,53,15,0.12);
             --shadow: 0 8px 24px rgba(120,53,15,0.10);
+            --math-bg: rgba(249,115,22,0.08);
         }
         :root[data-theme="sky"] {
             --bg: #eef6ff; --grad1: rgba(37,99,235,0.10); --grad2: rgba(6,182,212,0.12);
-            --header-bg: rgba(238,246,255,0.9);
+            --header-bg: rgba(238,246,255,0.92);
             --card: #ffffff; --card-border: rgba(12,42,77,0.08);
             --text: #0c2a4d; --muted: #5b7a9e;
             --primary: #2563eb; --primary-2: #06b6d4;
+            --academic-accent: #0284c7;
             --success: #059669; --error: #e11d48;
-            --surface: rgba(12,42,77,0.02); --surface-border: rgba(12,42,77,0.10);
+            --surface: rgba(12,42,77,0.03); --surface-border: rgba(12,42,77,0.10);
             --shadow: 0 8px 24px rgba(12,42,77,0.08);
+            --math-bg: rgba(37,99,235,0.07);
         }
         :root[data-theme="meadow"] {
             --bg: #f0fdf4; --grad1: rgba(22,163,74,0.10); --grad2: rgba(132,204,22,0.12);
-            --header-bg: rgba(240,253,244,0.9);
+            --header-bg: rgba(240,253,244,0.92);
             --card: #ffffff; --card-border: rgba(20,50,31,0.08);
             --text: #14321f; --muted: #4b7358;
             --primary: #16a34a; --primary-2: #65a30d;
+            --academic-accent: #0d9488;
             --success: #059669; --error: #e11d48;
-            --surface: rgba(20,50,31,0.02); --surface-border: rgba(20,50,31,0.10);
+            --surface: rgba(20,50,31,0.03); --surface-border: rgba(20,50,31,0.10);
             --shadow: 0 8px 24px rgba(20,50,31,0.08);
+            --math-bg: rgba(22,163,74,0.07);
         }
         :root[data-theme="midnight"] {
             --bg: #0f172a; --grad1: rgba(99,102,241,0.15); --grad2: rgba(139,92,246,0.15);
-            --header-bg: rgba(15,23,42,0.85);
-            --card: rgba(30,41,59,0.7); --card-border: rgba(255,255,255,0.06);
+            --header-bg: rgba(15,23,42,0.88);
+            --card: rgba(30,41,59,0.78); --card-border: rgba(255,255,255,0.08);
             --text: #f8fafc; --muted: #94a3b8;
             --primary: #6366f1; --primary-2: #c084fc;
+            --academic-accent: #38bdf8;
             --success: #10b981; --error: #f43f5e;
-            --surface: rgba(255,255,255,0.02); --surface-border: rgba(255,255,255,0.10);
-            --shadow: 0 10px 30px rgba(0,0,0,0.25);
+            --surface: rgba(255,255,255,0.04); --surface-border: rgba(255,255,255,0.12);
+            --shadow: 0 10px 30px rgba(0,0,0,0.28);
+            --math-bg: rgba(99,102,241,0.18);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             background-image:
                 radial-gradient(at 0% 0%, var(--grad1) 0px, transparent 50%),
@@ -83,32 +93,46 @@
 
         header {
             position: sticky; top: 0; z-index: 100;
-            background: var(--header-bg); backdrop-filter: blur(8px);
+            background: var(--header-bg); backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--card-border);
-            padding: 16px 20px; padding-top: calc(16px + env(safe-area-inset-top));
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 12px 18px; padding-top: calc(12px + env(safe-area-inset-top));
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
-        .header-title { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.025em; }
+        .header-left { display: flex; align-items: center; gap: 10px; }
+        .header-title { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.025em; cursor: pointer; }
         .header-title span {
             background: linear-gradient(to right, var(--primary), var(--primary-2));
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .menu-btn {
-            position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
-            margin-top: calc(env(safe-area-inset-top) / 2);
+        .header-right { display: flex; align-items: center; gap: 8px; }
+
+        .mode-btn {
             background: var(--surface); border: 1px solid var(--surface-border);
-            color: var(--text); width: 42px; height: 42px; border-radius: 11px;
-            font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            color: var(--text); padding: 8px 14px; border-radius: 12px;
+            font-size: 0.88rem; font-weight: 700; font-family: inherit;
+            cursor: pointer; display: flex; align-items: center; gap: 6px;
+            transition: all 0.2s ease;
+        }
+        .mode-btn:hover { background: var(--card); border-color: var(--primary); transform: translateY(-1px); }
+        .mode-btn.academic-active {
+            background: linear-gradient(135deg, var(--academic-accent), var(--primary));
+            color: #fff; border-color: transparent; box-shadow: 0 4px 12px rgba(2,132,199,0.3);
+        }
+
+        .menu-btn {
+            background: var(--surface); border: 1px solid var(--surface-border);
+            color: var(--text); width: 38px; height: 38px; border-radius: 11px;
+            font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
         }
         .menu-btn:hover { background: var(--card); }
 
         .menu-panel {
             position: sticky; top: 0; z-index: 90;
-            max-width: 650px; margin: 0 auto; padding: 0 18px;
+            max-width: 680px; margin: 0 auto; padding: 0 18px;
             max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
         }
-        .menu-panel.open { max-height: 720px; }
+        .menu-panel.open { max-height: 750px; }
         .menu-inner {
             background: var(--card); border: 1px solid var(--card-border);
             border-radius: 16px; margin-top: 12px; padding: 16px; box-shadow: var(--shadow);
@@ -137,13 +161,28 @@
         }
         .menu-item:hover { background: var(--bg); }
 
-        main { max-width: 650px; margin: 20px auto; padding: 0 18px; }
+        main { max-width: 680px; margin: 20px auto; padding: 0 18px; }
 
         .view { display: none; animation: fadeIn 0.35s ease-out forwards; }
         .view.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Home controls */
+        /* Mode Banner Switcher */
+        .mode-banner {
+            display: flex; background: var(--surface); border: 1px solid var(--surface-border);
+            border-radius: 14px; padding: 4px; margin-bottom: 18px;
+        }
+        .mode-banner-btn {
+            flex: 1; padding: 10px 14px; border: none; border-radius: 10px; background: transparent;
+            color: var(--muted); font-size: 0.92rem; font-weight: 700; font-family: inherit;
+            cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .mode-banner-btn.active {
+            background: var(--card); color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        /* Controls */
         .home-controls { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
         .search-input, .sort-select {
             background: var(--card); border: 1px solid var(--surface-border); color: var(--text);
@@ -153,6 +192,7 @@
         .search-input:focus, .sort-select:focus { border-color: var(--primary); }
         .sort-select { cursor: pointer; }
 
+        /* Card Styles */
         .card {
             background: var(--card); backdrop-filter: blur(12px);
             border: 1px solid var(--card-border); border-radius: 18px; padding: 22px;
@@ -162,13 +202,82 @@
         .card-title { font-size: 1.22rem; font-weight: 700; margin-bottom: 6px; }
         .card-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
 
+        /* Academic Single-Card (Icon + Title only, compact) */
+        .academic-topic-card {
+            display: flex; align-items: center; gap: 16px; padding: 18px 20px;
+            background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
+            margin-bottom: 14px; box-shadow: var(--shadow); cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .academic-topic-card:hover {
+            transform: translateY(-2px); border-color: var(--primary);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        }
+        .academic-topic-icon {
+            font-size: 2.2rem; line-height: 1; flex-shrink: 0;
+            width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+            background: var(--surface); border-radius: 14px;
+        }
+        .academic-topic-content { flex: 1; min-width: 0; }
+        .academic-topic-title {
+            font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 2px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .academic-topic-meta {
+            font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 8px;
+        }
+        .academic-arrow {
+            color: var(--muted); font-size: 1.3rem; font-weight: bold; flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+        .academic-topic-card:hover .academic-arrow { color: var(--primary); transform: translateX(3px); }
+        [dir="rtl"] .academic-topic-card:hover .academic-arrow { transform: translateX(-3px); }
+
+        /* Lesson Roadmap Styles */
+        .lesson-card {
+            border-inline-start: 4px solid var(--academic-accent);
+            padding: 18px 20px; margin-bottom: 14px;
+        }
+        .lesson-num {
+            display: inline-block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.05em; color: var(--academic-accent); margin-bottom: 4px;
+        }
+
+        /* Math & Formulas Typography */
+        .math-inline {
+            font-family: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', 'Times New Roman', serif;
+            font-style: italic; background: var(--math-bg); padding: 2px 6px;
+            border-radius: 6px; font-size: 1.04em; color: var(--text);
+            display: inline-block; direction: ltr; unicode-bidi: embed;
+        }
+        .math-block {
+            font-family: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', 'Times New Roman', serif;
+            font-style: italic; background: var(--math-bg); padding: 14px 18px;
+            border-radius: 12px; margin: 12px 0; text-align: center; font-size: 1.15em;
+            overflow-x: auto; border: 1px solid var(--surface-border); direction: ltr; unicode-bidi: embed;
+        }
+        .math-frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 4px; font-size: 0.9em; }
+        .math-num { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+        .math-den { padding-top: 1px; }
+        .math-sqrt { border-top: 1px solid currentColor; padding-left: 2px; }
+
+        /* Figure Blocks */
+        .figure-box {
+            background: var(--surface); border: 1px dashed var(--surface-border);
+            border-radius: 14px; padding: 16px; margin: 14px 0; text-align: center;
+        }
+        .figure-box .fig-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+
+        /* Badges */
         .badge { font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
         .badge-done { background: color-mix(in srgb, var(--success) 18%, transparent); color: var(--success); }
         .badge-partial { background: color-mix(in srgb, var(--primary) 18%, transparent); color: var(--primary); }
         .badge-new { background: var(--surface); color: var(--muted); }
         .badge-family { background: color-mix(in srgb, var(--primary-2) 16%, transparent); color: var(--primary-2); }
         .badge-adult { background: color-mix(in srgb, var(--error) 16%, transparent); color: var(--error); }
+        .badge-academic { background: color-mix(in srgb, var(--academic-accent) 18%, transparent); color: var(--academic-accent); }
 
+        /* Buttons */
         .btn {
             background-color: var(--primary); color: #fff; border: none;
             padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 0.98rem;
@@ -182,6 +291,7 @@
         .btn-full { width: 100%; }
         .btn-ghost { background: var(--surface); border: 1px solid var(--surface-border); color: var(--text); }
         .btn-ghost:hover { background: var(--bg); filter: none; }
+        .btn-academic { background-color: var(--academic-accent); }
         .btn-success { background-color: var(--success); }
         .btn-danger { background-color: var(--error); }
         .btn-back { margin-bottom: 18px; }
@@ -195,11 +305,12 @@
         .subcard { border-inline-start: 4px solid var(--primary); padding: 18px 20px; }
         .subcard-title { font-size: 1.08rem; font-weight: 700; margin-bottom: 10px; color: var(--text); }
 
+        /* Quiz */
         .quiz-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.85rem; color: var(--muted); }
         .quiz-scope { font-weight: 600; color: var(--primary); }
         .progress-track { height: 8px; background: var(--surface); border: 1px solid var(--surface-border); border-radius: 99px; overflow: hidden; margin-bottom: 22px; }
         .progress-fill { height: 100%; background: linear-gradient(to right, var(--primary), var(--primary-2)); border-radius: 99px; transition: width 0.35s ease; }
-        .quiz-question { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+        .quiz-question { font-size: 1.18rem; font-weight: 600; margin-bottom: 20px; }
 
         .option-btn {
             display: block; width: 100%; background: var(--surface); border: 1px solid var(--surface-border);
@@ -230,13 +341,22 @@
         .empty { text-align: center; color: var(--muted); padding: 30px 10px; }
         .error-card { border-color: var(--error); text-align: center; }
 
-        @media (max-width: 480px) { .btn-row { flex-direction: column; } }
+        @media (max-width: 480px) {
+            .btn-row { flex-direction: column; }
+            .academic-topic-card { padding: 14px 16px; gap: 12px; }
+            .academic-topic-icon { width: 40px; height: 40px; font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <button id="menu-btn" class="menu-btn" aria-label="Menu">&#9776;</button>
-        <div class="header-title"><span id="app-title">Family Travel Trivia</span></div>
+        <div class="header-left">
+            <button id="menu-btn" class="menu-btn" aria-label="Menu">&#9776;</button>
+            <div class="header-title" id="btn-header-home"><span id="app-title">Travel Trivia & Academy</span></div>
+        </div>
+        <div class="header-right">
+            <button id="mode-toggle-btn" class="mode-btn">🎓 <span id="lbl-mode-btn">Academic</span></button>
+        </div>
     </header>
 
     <div id="menu-panel" class="menu-panel">
@@ -247,6 +367,8 @@
             <div id="aud-chips" class="opt-chips"></div>
             <div class="menu-label" id="lbl-appearance">Appearance</div>
             <div id="theme-chips" class="theme-chips"></div>
+            <button class="menu-item" id="menu-academic">🎓 <span id="lbl-academic-switch">Switch to Academic Mode</span></button>
+            <button class="menu-item" id="menu-trivia">🚗 <span id="lbl-trivia-switch">Switch to Travel Trivia</span></button>
             <button class="menu-item" id="menu-stats">📊 <span id="lbl-stats">Statistics</span></button>
             <button class="menu-item" id="menu-reset">↺ <span id="lbl-reset">Reset progress</span></button>
         </div>
@@ -254,8 +376,11 @@
 
     <main>
         <div id="view-home" class="view active"></div>
+        <div id="view-academic-home" class="view"></div>
         <div id="view-topic" class="view"></div>
+        <div id="view-academic-topic" class="view"></div>
         <div id="view-learning" class="view"></div>
+        <div id="view-academic-lesson" class="view"></div>
         <div id="view-quiz" class="view"></div>
         <div id="view-summary" class="view"></div>
         <div id="view-stats" class="view"></div>
@@ -265,22 +390,37 @@
         "use strict";
 
         let appData = null;
+        let currentMode = localStorage.getItem('trivia_mode') || 'trivia'; // 'trivia' | 'academic'
 
         // ============================ i18n ============================
         const LANG_NAMES = { en: 'English', he: 'עברית' };
         const I18N = {
             en: {
-                appTitle: 'Family Travel Trivia',
+                appTitle: 'Travel Trivia & Academy',
+                triviaMode: 'Travel Trivia',
+                academicMode: 'Academic Courses',
+                switchToAcademic: 'Switch to Academic Courses',
+                switchToTrivia: 'Switch to Travel Trivia',
+                academicBtn: 'Academic 🎓',
+                triviaBtn: 'Trivia 🚗',
                 language: 'Language', audience: 'Audience', appearance: 'Appearance',
                 statistics: 'Statistics', resetProgress: 'Reset progress',
                 search: '🔍 Search topics…',
+                academicSearch: '🔍 Search academic courses…',
                 sortTitle: 'A–Z', sortNewest: 'Newest', sortOldest: 'Oldest',
                 sortProgress: 'Unfinished first',
                 audAll: 'All', audFamily: 'Family', audAdults: 'Adults',
                 badgeDone: '✓ Done', badgeNew: 'New',
-                explore: 'Explore →', allTopics: '← All Topics', categories: 'Categories',
+                explore: 'Explore →', allTopics: '← All Topics', allAcademicTopics: '← All Academic Courses',
+                categories: 'Categories',
+                syllabus: 'Curriculum & Lessons',
+                studyLesson: 'Study Lesson →',
+                practiceQuiz: 'Practice Quiz →',
+                testCourse: '🏆 Test Entire Course ({n} questions)',
                 quizWhole: '🏆 Quiz the whole topic ({n} questions)', learn: 'Learn →',
-                keyPoints: 'Key Learning Points', startTrivia: '❓ Start Trivia ({n} questions) →',
+                keyPoints: 'Key Learning Points',
+                startTrivia: '❓ Start Trivia ({n} questions) →',
+                startAcademicPractice: '❓ Practice Questions ({n} questions) →',
                 quizLength: 'Quiz length',
                 quizLengthPrompt: 'This round has {n} questions. How many would you like? (Shorter picks are chosen at random.)',
                 allN: 'All {n} questions', nQuestions: '{n} questions', back: '← Back',
@@ -288,48 +428,69 @@
                 next: 'Next Question →', seeResults: 'See Results →',
                 reveal: '👁️ Reveal Answer', answer: 'Answer', didYouGet: 'Did you get it right?',
                 gotIt: '✓ Got it', missed: '✗ Missed',
-                tryAgain: '↻ Try Again', backToLearning: '← Back to Learning', backToTopic: '← Back to Topic',
+                tryAgain: '↻ Try Again', backToLearning: '← Back to Lesson', backToTopic: '← Back to Course',
                 perfect: 'Perfect!', greatJob: 'Great job!', niceEffort: 'Nice effort!', keepLearning: 'Keep learning!',
-                yourStats: 'Your Statistics', topicsExplored: 'Topics Explored', questionsAnswered: 'Questions Answered',
-                correctAnswers: 'Correct Answers', accuracy: 'Accuracy', topicProgress: 'Topic Progress',
-                nCategories: '{done}/{total} categories',
-                noMatch: 'No topics match your search.', noTopics: 'No topics in this language yet.',
-                offlineFail: '⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia, then it works offline.',
+                yourStats: 'Your Statistics', topicsExplored: 'Topics & Courses Explored', questionsAnswered: 'Questions Answered',
+                correctAnswers: 'Correct Answers', accuracy: 'Accuracy', topicProgress: 'Course & Topic Progress',
+                nCategories: '{done}/{total} completed',
+                noMatch: 'No items match your search.',
+                noTopics: 'No topics in this language yet.',
+                noAcademicTopics: 'No academic courses in this language yet.',
+                offlineFail: '⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia & courses, then it works offline.',
                 resetConfirm: 'Reset all your local progress and statistics on this device?',
             },
             he: {
-                appTitle: 'טריוויה לטיולים',
+                appTitle: 'טריוויה ואקדמיה',
+                triviaMode: 'טריוויה לטיולים',
+                academicMode: 'נושאים אקדמיים',
+                switchToAcademic: 'מעבר לקורסים אקדמיים',
+                switchToTrivia: 'מעבר לטריוויה לטיולים',
+                academicBtn: 'אקדמיה 🎓',
+                triviaBtn: 'טריוויה 🚗',
                 language: 'שפה', audience: 'קהל', appearance: 'מראה',
                 statistics: 'סטטיסטיקה', resetProgress: 'איפוס התקדמות',
                 search: '🔍 חיפוש נושאים…',
+                academicSearch: '🔍 חיפוש קורסים אקדמיים…',
                 sortTitle: 'א–ת', sortNewest: 'החדשים ביותר', sortOldest: 'הישנים ביותר',
                 sortProgress: 'שלא הושלמו תחילה',
                 audAll: 'הכול', audFamily: 'משפחתי', audAdults: 'מבוגרים',
                 badgeDone: '✓ הושלם', badgeNew: 'חדש',
-                explore: 'לחקור ←', allTopics: '→ כל הנושאים', categories: 'קטגוריות',
+                explore: 'לחקור ←', allTopics: '→ כל הנושאים', allAcademicTopics: '→ כל הקורסים האקדמיים',
+                categories: 'קטגוריות',
+                syllabus: 'סילבוס ושיעורי הקורס',
+                studyLesson: 'למידת השיעור ←',
+                practiceQuiz: 'תרגול שאלות ←',
+                testCourse: '🏆 מבחן על כל הקורס ({n} שאלות)',
                 quizWhole: '🏆 חידון על כל הנושא ({n} שאלות)', learn: 'ללמוד ←',
-                keyPoints: 'נקודות למידה עיקריות', startTrivia: '❓ התחלת חידון ({n} שאלות) ←',
-                quizLength: 'אורך החידון',
+                keyPoints: 'נקודות למידה עיקריות',
+                startTrivia: '❓ התחלת חידון ({n} שאלות) ←',
+                startAcademicPractice: '❓ תרגול שאלות הבנה ({n} שאלות) ←',
+                quizLength: 'אורך המבחן / החידון',
                 quizLengthPrompt: 'בסבב הזה יש {n} שאלות. כמה תרצו? (בחירה קצרה יותר נבחרת באקראי.)',
                 allN: 'כל {n} השאלות', nQuestions: '{n} שאלות', back: '→ חזרה',
                 questionOf: 'שאלה {i} מתוך {n}', score: 'ניקוד {s}',
                 next: 'השאלה הבאה ←', seeResults: 'לתוצאות ←',
                 reveal: '👁️ חשיפת התשובה', answer: 'תשובה', didYouGet: 'עניתם נכון?',
                 gotIt: '✓ צדקתי', missed: '✗ טעיתי',
-                tryAgain: '↻ שוב', backToLearning: '→ חזרה ללמידה', backToTopic: '→ חזרה לנושא',
+                tryAgain: '↻ שוב', backToLearning: '→ חזרה לשיעור', backToTopic: '→ חזרה לקורס',
                 perfect: 'מושלם!', greatJob: 'עבודה מצוינת!', niceEffort: 'כל הכבוד!', keepLearning: 'ממשיכים ללמוד!',
-                yourStats: 'הסטטיסטיקה שלך', topicsExplored: 'נושאים שנחקרו', questionsAnswered: 'שאלות שנענו',
-                correctAnswers: 'תשובות נכונות', accuracy: 'דיוק', topicProgress: 'התקדמות בנושאים',
-                nCategories: '{done}/{total} קטגוריות',
-                noMatch: 'אין נושאים שתואמים את החיפוש.', noTopics: 'אין עדיין נושאים בשפה הזו.',
-                offlineFail: '⚠️ <strong>הטעינה במצב לא מקוון נכשלה.</strong><br>התחברו לאינטרנט פעם אחת כדי להוריד את הטריוויה, ואז זה יעבוד גם ללא חיבור.',
+                yourStats: 'הסטטיסטיקה שלך', topicsExplored: 'נושאים וקורסים שנחקרו', questionsAnswered: 'שאלות שנענו',
+                correctAnswers: 'תשובות נכונות', accuracy: 'דיוק', topicProgress: 'התקדמות בקורסים ובנושאים',
+                nCategories: '{done}/{total} הושלמו',
+                noMatch: 'אין פריטים שתואמים את החיפוש.',
+                noTopics: 'אין עדיין נושאים בשפה הזו.',
+                noAcademicTopics: 'אין עדיין קורסים אקדמיים בשפה הזו.',
+                offlineFail: '⚠️ <strong>הטעינה במצב לא מקוון נכשלה.</strong><br>התחברו לאינטרנט פעם אחת כדי להוריד את התוכן, ואז זה יעבוד גם ללא חיבור.',
                 resetConfirm: 'לאפס את כל ההתקדמות והסטטיסטיקה המקומית במכשיר הזה?',
             }
         };
+
         let LANG = localStorage.getItem('trivia_lang') || (navigator.language || 'en').slice(0, 2).toLowerCase();
         let AUD = localStorage.getItem('trivia_aud') || 'all';
         let currentView = 'view-home';
         let currentTopicIdx = null;
+        let currentAcademicIdx = null;
+
         function t(key, vars) {
             let s = (I18N[LANG] && I18N[LANG][key]) || I18N.en[key] || key;
             if (vars) for (const k in vars) s = s.split('{' + k + '}').join(vars[k]);
@@ -337,9 +498,81 @@
         }
         function isRTLLang(code) { return code === 'he' || code === 'ar'; }
         function availableLangs() {
-            const set = new Set((appData && appData.topics || []).map(x => x.lang || 'en'));
+            const all = [...((appData && appData.topics) || []), ...((appData && appData.academic_topics) || [])];
+            const set = new Set(all.map(x => x.lang || 'en'));
             const order = ['en', 'he'];
             return [...set].sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99));
+        }
+
+        // ============================ MATH & RICH FORMATTING ============================
+        function formatMathAndText(text) {
+            if (!text) return '';
+            let s = String(text);
+
+            // 1. Process block math $$ ... $$
+            s = s.replace(/\$\$([\s\S]*?)\$\$/g, (match, formula) => {
+                return `<div class="math-block">${renderFormula(formula)}</div>`;
+            });
+
+            // 2. Process inline math $ ... $
+            s = s.replace(/\$([^\$\n]+?)\$/g, (match, formula) => {
+                return `<span class="math-inline">${renderFormula(formula)}</span>`;
+            });
+
+            // 3. Bold **...**
+            s = s.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            // 4. Code `...`
+            s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            return s;
+        }
+
+        function renderFormula(raw) {
+            let f = raw.trim();
+            // Greek letters
+            const greek = {
+                '\\alpha': 'α', '\\beta': 'β', '\\gamma': 'γ', '\\delta': 'δ', '\\Delta': 'Δ',
+                '\\epsilon': 'ε', '\\zeta': 'ζ', '\\eta': 'η', '\\theta': 'θ', '\\Theta': 'Θ',
+                '\\lambda': 'λ', '\\Lambda': 'Λ', '\\mu': 'μ', '\\nu': 'ν', '\\xi': 'ξ',
+                '\\pi': 'π', '\\Pi': 'Π', '\\rho': 'ρ', '\\sigma': 'σ', '\\Sigma': 'Σ',
+                '\\tau': 'τ', '\\phi': 'φ', '\\Phi': 'Φ', '\\chi': 'χ', '\\psi': 'ψ',
+                '\\omega': 'ω', '\\Omega': 'Ω'
+            };
+            for (const [k, v] of Object.entries(greek)) {
+                f = f.split(k).join(v);
+            }
+
+            // Math symbols
+            const symbols = {
+                '\\sum': '∑', '\\int': '∫', '\\prod': '∏',
+                '\\le': '≤', '\\leq': '≤', '\\ge': '≥', '\\geq': '≥',
+                '\\neq': '≠', '\\ne': '≠', '\\approx': '≈', '\\sim': '∼',
+                '\\to': '→', '\\rightarrow': '→', '\\infty': '∞',
+                '\\cdot': '·', '\\times': '×', '\\pm': '±',
+                '\\in': '∈', '\\subset': '⊂', '\\subseteq': '⊆',
+                '\\mathbb{R}': 'ℝ', '\\mathbb{Z}': 'ℤ', '\\mathbb{C}': 'ℂ', '\\mathbb{N}': 'ℕ',
+                '\\mathcal{Z}': '𝒵', '\\mathcal{F}': 'ℱ',
+                '\\circledast': '⊛', '\\ast': '*',
+                '\\text': '', '\\mathrm': '', '\\left': '', '\\right': ''
+            };
+            for (const [k, v] of Object.entries(symbols)) {
+                f = f.split(k).join(v);
+            }
+
+            // Fractions: \frac{A}{B}
+            f = f.replace(/\\frac\s*\{([^{}]+)\}\s*\{([^{}]+)\}/g, '<span class="math-frac"><span class="math-num">$1</span><span class="math-den">$2</span></span>');
+
+            // Square root: \sqrt{A}
+            f = f.replace(/\\sqrt\s*\{([^{}]+)\}/g, '√<span class="math-sqrt">$1</span>');
+
+            // Subscripts & Superscripts
+            f = f.replace(/_\{([^}]+)\}/g, '<sub>$1</sub>');
+            f = f.replace(/_([a-zA-Z0-9])/g, '<sub>$1</sub>');
+            f = f.replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>');
+            f = f.replace(/\^([a-zA-Z0-9\+\-])/g, '<sup>$1</sup>');
+
+            return f;
         }
 
         // ============================ THEMES ============================
@@ -381,7 +614,9 @@
             renderMenuLabels();
             renderLangChips();
             renderAudChips();
-            renderHome();
+            updateModeBtn();
+            if (currentMode === 'academic') renderAcademicHome();
+            else renderHome();
         }
         function renderMenuLabels() {
             document.getElementById('app-title').textContent = t('appTitle');
@@ -390,6 +625,20 @@
             document.getElementById('lbl-appearance').textContent = t('appearance');
             document.getElementById('lbl-stats').textContent = t('statistics');
             document.getElementById('lbl-reset').textContent = t('resetProgress');
+            document.getElementById('lbl-academic-switch').textContent = t('switchToAcademic');
+            document.getElementById('lbl-trivia-switch').textContent = t('switchToTrivia');
+            updateModeBtn();
+        }
+        function updateModeBtn() {
+            const btn = document.getElementById('mode-toggle-btn');
+            const lbl = document.getElementById('lbl-mode-btn');
+            if (currentMode === 'academic') {
+                btn.className = 'mode-btn academic-active';
+                lbl.textContent = t('triviaBtn');
+            } else {
+                btn.className = 'mode-btn';
+                lbl.textContent = t('academicBtn');
+            }
         }
         function renderLangChips() {
             const box = document.getElementById('lang-chips');
@@ -417,11 +666,32 @@
         }
         function refreshAfterFilter() {
             if (currentView === 'view-stats') renderStats();
-            else if (currentView !== 'view-home' && currentTopicIdx != null && appData && appData.topics[currentTopicIdx]) openTopic(currentTopicIdx);
-            else renderTopicList();
+            else if (currentMode === 'academic') {
+                if (currentAcademicIdx != null && appData && appData.academic_topics && appData.academic_topics[currentAcademicIdx])
+                    openAcademicTopic(currentAcademicIdx);
+                else renderAcademicHome();
+            } else {
+                if (currentTopicIdx != null && appData && appData.topics && appData.topics[currentTopicIdx])
+                    openTopic(currentTopicIdx);
+                else renderTopicList();
+            }
         }
 
-        // ============================ STATS / PROGRESS (local only) ============================
+        // ============================ MODE SWITCHING ============================
+        function toggleAppMode() {
+            if (currentMode === 'academic') setAppMode('trivia');
+            else setAppMode('academic');
+        }
+        function setAppMode(mode) {
+            currentMode = mode;
+            localStorage.setItem('trivia_mode', mode);
+            updateModeBtn();
+            closeMenu();
+            if (mode === 'academic') renderAcademicHome();
+            else renderHome();
+        }
+
+        // ============================ STATS / PROGRESS ============================
         const stats = {
             explored: new Set(JSON.parse(localStorage.getItem('trivia_explored') || '[]')),
             completedCats: new Set(JSON.parse(localStorage.getItem('trivia_completed') || '[]')),
@@ -438,7 +708,7 @@
             recordAnswer(ok) { this.answered++; if (ok) this.correct++; this.save(); },
             reset() { this.explored.clear(); this.completedCats.clear(); this.correct = 0; this.answered = 0; this.save(); }
         };
-        // Audience visibility (a per-category audience overrides the topic default)
+
         function catAud(topic, cat) { return cat.audience || topic.audience || 'family'; }
         function isCatVisible(topic, cat) { return AUD === 'all' || catAud(topic, cat) === AUD; }
         function visibleCats(topic) { return (topic.categories || []).filter(c => isCatVisible(topic, c)); }
@@ -451,8 +721,6 @@
                 ? el('span', { class: 'badge badge-adult', text: t('audAdults') })
                 : el('span', { class: 'badge badge-family', text: t('audFamily') });
         }
-
-        // Topic progress (over the categories visible under the current audience filter)
         function topicProgress(topic) {
             const cats = visibleCats(topic);
             const done = cats.filter(c => stats.completedCats.has(topic.id + '|' + c.id)).length;
@@ -477,23 +745,41 @@
             return node;
         }
 
-        // ============================ MENU ============================
         function toggleMenu() { document.getElementById('menu-panel').classList.toggle('open'); }
         function closeMenu() { document.getElementById('menu-panel').classList.remove('open'); }
 
-        // ============================ HOME ============================
+        // ============================ TRIVIA HOME ============================
         let homeSort = localStorage.getItem('trivia_sort') || 'title';
         let homeQuery = '';
+
+        function renderModeBanner(activeMode) {
+            const banner = el('div', { class: 'mode-banner' });
+            const btn1 = el('button', {
+                class: 'mode-banner-btn' + (activeMode === 'trivia' ? ' active' : ''),
+                html: '🚗 ' + t('triviaMode'),
+                onclick: () => setAppMode('trivia')
+            });
+            const btn2 = el('button', {
+                class: 'mode-banner-btn' + (activeMode === 'academic' ? ' active' : ''),
+                html: '🎓 ' + t('academicMode'),
+                onclick: () => setAppMode('academic')
+            });
+            banner.appendChild(btn1);
+            banner.appendChild(btn2);
+            return banner;
+        }
 
         function renderHome() {
             currentTopicIdx = null;
             const root = document.getElementById('view-home');
             root.innerHTML = '';
-            if (!appData || !appData.topics || !appData.topics.length) {
+            if (!appData || !appData.topics) {
                 root.appendChild(el('div', { class: 'card error-card', html: '⚠️ <strong>No topics loaded.</strong>' }));
                 show('view-home');
                 return;
             }
+
+            root.appendChild(renderModeBanner('trivia'));
 
             const controls = el('div', { class: 'home-controls' });
             const search = el('input', { class: 'search-input', attrs: {
@@ -519,7 +805,7 @@
         }
 
         function sortedFilteredTopics() {
-            let list = appData.topics.map((t2, i) => ({ t: t2, i }))
+            let list = (appData.topics || []).map((t2, i) => ({ t: t2, i }))
                 .filter(({ t: x }) => (x.lang || 'en') === LANG);
             if (AUD !== 'all') list = list.filter(({ t: x }) => visibleCats(x).length > 0);
             const q = homeQuery.trim().toLowerCase();
@@ -571,7 +857,152 @@
             });
         }
 
-        // ============================ TOPIC ============================
+        // ============================ ACADEMIC HOME ============================
+        let academicQuery = '';
+
+        function renderAcademicHome() {
+            currentAcademicIdx = null;
+            const root = document.getElementById('view-academic-home');
+            root.innerHTML = '';
+
+            root.appendChild(renderModeBanner('academic'));
+
+            const academicList = (appData && appData.academic_topics || []).filter(x => (x.lang || 'en') === LANG);
+
+            const controls = el('div', { class: 'home-controls' });
+            const search = el('input', { class: 'search-input', attrs: {
+                type: 'text', placeholder: t('academicSearch'), value: academicQuery } });
+            search.oninput = () => { academicQuery = search.value; renderAcademicTopicList(); };
+            controls.appendChild(search);
+            root.appendChild(controls);
+
+            root.appendChild(el('div', { attrs: { id: 'academic-topic-list' } }));
+            renderAcademicTopicList();
+            show('view-academic-home');
+        }
+
+        function renderAcademicTopicList() {
+            const container = document.getElementById('academic-topic-list');
+            if (!container) return;
+            container.innerHTML = '';
+            let list = (appData && appData.academic_topics || []).map((t2, i) => ({ t: t2, i }))
+                .filter(({ t: x }) => (x.lang || 'en') === LANG);
+
+            const q = academicQuery.trim().toLowerCase();
+            if (q) {
+                list = list.filter(({ t: x }) =>
+                    x.title.toLowerCase().includes(q) ||
+                    (x.categories || []).some(c => (c.title || '').toLowerCase().includes(q)));
+            }
+
+            if (!list.length) {
+                container.appendChild(el('div', { class: 'empty', text: academicQuery.trim() ? t('noMatch') : t('noAcademicTopics') }));
+                return;
+            }
+
+            list.forEach(({ t: topic, i: aIdx }) => {
+                const card = el('div', { class: 'academic-topic-card', onclick: () => openAcademicTopic(aIdx) });
+                const iconBox = el('div', { class: 'academic-topic-icon', text: topic.icon || '🎓' });
+                const content = el('div', { class: 'academic-topic-content' });
+                content.appendChild(el('div', { class: 'academic-topic-title', text: topic.title }));
+
+                const totalQ = (topic.categories || []).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
+                const meta = el('div', { class: 'academic-topic-meta' });
+                meta.appendChild(el('span', { text: `${topic.categories ? topic.categories.length : 0} ${t('categories')}` }));
+                meta.appendChild(el('span', { text: '•' }));
+                meta.appendChild(el('span', { text: `${totalQ} Qs` }));
+                meta.appendChild(progressBadge(topic));
+                content.appendChild(meta);
+
+                card.appendChild(iconBox);
+                card.appendChild(content);
+                card.appendChild(el('div', { class: 'academic-arrow', text: isRTLLang(LANG) ? '←' : '→' }));
+                container.appendChild(card);
+            });
+        }
+
+        // ============================ ACADEMIC TOPIC (COURSE SYLLABUS) ============================
+        function openAcademicTopic(aIdx) {
+            currentAcademicIdx = aIdx;
+            const topic = appData.academic_topics[aIdx];
+            stats.markExplored(topic.id);
+            const root = document.getElementById('view-academic-topic');
+            root.innerHTML = '';
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('allAcademicTopics'), onclick: renderAcademicHome }));
+
+            const head = el('div', { class: 'card' });
+            const titleRow = el('div', { attrs: { style: 'display:flex;align-items:center;gap:12px;margin-bottom:8px;' } });
+            titleRow.appendChild(el('span', { attrs: { style: 'font-size:2.2rem;line-height:1;' }, text: topic.icon || '🎓' }));
+            titleRow.appendChild(el('h2', { class: 'card-title', attrs: { style: 'margin:0;' }, text: topic.title }));
+            head.appendChild(titleRow);
+
+            if (topic.description) head.appendChild(el('p', { class: 'card-desc', html: formatMathAndText(topic.description) }));
+            const totalQ = visibleCats(topic).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
+            if (totalQ > 0)
+                head.appendChild(el('button', { class: 'btn btn-academic btn-full', text: t('testCourse', { n: totalQ }), onclick: () => beginQuiz(aIdx, null, true) }));
+            root.appendChild(head);
+
+            root.appendChild(el('h3', { class: 'section-title', html: '📖 ' + t('syllabus') }));
+            (topic.categories || []).forEach((cat, cIdx) => {
+                if (!isCatVisible(topic, cat)) return;
+                const card = el('div', { class: 'card lesson-card' });
+                const headRow = el('div', { class: 'card-head-row' });
+                const left = el('div');
+                left.appendChild(el('span', { class: 'lesson-num', text: `${t('categories')} #${cIdx + 1}` }));
+                left.appendChild(el('h3', { class: 'card-title', text: cat.title }));
+                headRow.appendChild(left);
+
+                const cbadges = el('div', { attrs: { style: 'display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end' } });
+                if (stats.completedCats.has(topic.id + '|' + cat.id)) cbadges.appendChild(el('span', { class: 'badge badge-done', text: '✓' }));
+                headRow.appendChild(cbadges);
+                card.appendChild(headRow);
+
+                if (cat.description) card.appendChild(el('p', { class: 'card-desc', html: formatMathAndText(cat.description) }));
+
+                const btnRow = el('div', { class: 'btn-row' });
+                btnRow.appendChild(el('button', { class: 'btn btn-academic', text: t('studyLesson'), onclick: () => openAcademicLesson(aIdx, cIdx) }));
+                if (cat.trivia && cat.trivia.length)
+                    btnRow.appendChild(el('button', { class: 'btn btn-ghost', text: t('practiceQuiz'), onclick: () => beginQuiz(aIdx, cIdx, true) }));
+                card.appendChild(btnRow);
+                root.appendChild(card);
+            });
+            show('view-academic-topic');
+        }
+
+        // ============================ ACADEMIC LESSON ============================
+        function openAcademicLesson(aIdx, cIdx) {
+            const topic = appData.academic_topics[aIdx];
+            const cat = topic.categories[cIdx];
+            const root = document.getElementById('view-academic-lesson');
+            root.innerHTML = '';
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: '← ' + topic.title, onclick: () => openAcademicTopic(aIdx) }));
+
+            const head = el('div', { class: 'card' });
+            head.appendChild(el('span', { class: 'lesson-num', text: `${t('categories')} #${cIdx + 1}` }));
+            head.appendChild(el('h2', { class: 'card-title', text: cat.title }));
+            if (cat.description) head.appendChild(el('p', { class: 'narrative', html: formatMathAndText(cat.description) }));
+            root.appendChild(head);
+
+            if (Array.isArray(cat.cards) && cat.cards.length > 0) {
+                cat.cards.forEach(sc => {
+                    const sub = el('div', { class: 'card subcard' });
+                    sub.appendChild(el('h3', { class: 'subcard-title', text: sc.title }));
+                    if (sc.formula) {
+                        sub.appendChild(el('div', { class: 'math-block', html: renderFormula(sc.formula) }));
+                    }
+                    (sc.points || []).forEach(pt => {
+                        sub.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt) }));
+                    });
+                    root.appendChild(sub);
+                });
+            }
+
+            if (cat.trivia && cat.trivia.length)
+                root.appendChild(el('button', { class: 'btn btn-academic btn-full', text: t('startAcademicPractice', { n: cat.trivia.length }), onclick: () => beginQuiz(aIdx, cIdx, true) }));
+            show('view-academic-lesson');
+        }
+
+        // ============================ TRIVIA TOPIC ============================
         function openTopic(tIdx) {
             currentTopicIdx = tIdx;
             const topic = appData.topics[tIdx];
@@ -585,7 +1016,7 @@
             head.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
             const totalQ = visibleCats(topic).reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
             if (totalQ > 0)
-                head.appendChild(el('button', { class: 'btn btn-full', text: t('quizWhole', { n: totalQ }), onclick: () => beginQuiz(tIdx, null) }));
+                head.appendChild(el('button', { class: 'btn btn-full', text: t('quizWhole', { n: totalQ }), onclick: () => beginQuiz(tIdx, null, false) }));
             root.appendChild(head);
 
             root.appendChild(el('h3', { class: 'section-title', html: '📚 ' + t('categories') }));
@@ -606,7 +1037,7 @@
             show('view-topic');
         }
 
-        // ============================ LEARNING ============================
+        // ============================ TRIVIA LEARNING ============================
         function openLearning(tIdx, cIdx) {
             const topic = appData.topics[tIdx];
             const cat = topic.categories[cIdx];
@@ -620,7 +1051,7 @@
             if (cat.description) head.appendChild(el('p', { class: 'narrative', text: cat.description }));
             if (!hasCards) {
                 head.appendChild(el('h3', { class: 'points-title', html: '💡 ' + t('keyPoints') }));
-                (cat.points || []).forEach(pt => head.appendChild(el('div', { class: 'point-item', text: pt })));
+                (cat.points || []).forEach(pt => head.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt) })));
             }
             root.appendChild(head);
 
@@ -628,39 +1059,50 @@
                 cat.cards.forEach(sc => {
                     const sub = el('div', { class: 'card subcard' });
                     sub.appendChild(el('h3', { class: 'subcard-title', text: sc.title }));
-                    (sc.points || []).forEach(pt => sub.appendChild(el('div', { class: 'point-item', text: pt })));
+                    (sc.points || []).forEach(pt => sub.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt) })));
                     root.appendChild(sub);
                 });
             }
 
             if (cat.trivia && cat.trivia.length)
-                root.appendChild(el('button', { class: 'btn btn-full', text: t('startTrivia', { n: cat.trivia.length }), onclick: () => beginQuiz(tIdx, cIdx) }));
+                root.appendChild(el('button', { class: 'btn btn-full', text: t('startTrivia', { n: cat.trivia.length }), onclick: () => beginQuiz(tIdx, cIdx, false) }));
             show('view-learning');
         }
 
         // ============================ QUIZ ============================
         let quiz = null;
-        function collectQuestions(tIdx, cIdx) {
-            const topic = appData.topics[tIdx];
+
+        function getTopicSource(isAcademic, idx) {
+            return isAcademic ? appData.academic_topics[idx] : appData.topics[idx];
+        }
+
+        function collectQuestions(tIdx, cIdx, isAcademic) {
+            const topic = getTopicSource(isAcademic, tIdx);
             const cats = (cIdx == null) ? visibleCats(topic) : [topic.categories[cIdx]];
             const list = [];
             cats.forEach(cat => (cat.trivia || []).forEach(q => list.push({ q, catTitle: cat.title })));
             return list;
         }
+
         function shuffle(arr) {
             const a = arr.slice();
             for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
             return a;
         }
-        function beginQuiz(tIdx, cIdx) {
-            const pool = collectQuestions(tIdx, cIdx);
-            if (pool.length <= 5) { startQuiz(tIdx, cIdx, pool.length); return; }
-            renderQuizSetup(tIdx, cIdx, pool.length);
+
+        function beginQuiz(tIdx, cIdx, isAcademic = false) {
+            const pool = collectQuestions(tIdx, cIdx, isAcademic);
+            if (pool.length <= 5) { startQuiz(tIdx, cIdx, pool.length, isAcademic); return; }
+            renderQuizSetup(tIdx, cIdx, pool.length, isAcademic);
         }
-        function renderQuizSetup(tIdx, cIdx, total) {
+
+        function renderQuizSetup(tIdx, cIdx, total, isAcademic) {
             const root = document.getElementById('view-quiz');
             root.innerHTML = '';
-            const backTo = (cIdx == null) ? () => openTopic(tIdx) : () => openLearning(tIdx, cIdx);
+            const backTo = isAcademic
+                ? ((cIdx == null) ? () => openAcademicTopic(tIdx) : () => openAcademicLesson(tIdx, cIdx))
+                : ((cIdx == null) ? () => openTopic(tIdx) : () => openLearning(tIdx, cIdx));
+
             root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('back'), onclick: backTo }));
             const card = el('div', { class: 'card' });
             card.appendChild(el('h2', { class: 'card-title', text: t('quizLength') }));
@@ -669,27 +1111,33 @@
             opts.push(total);
             opts.forEach(n => {
                 const label = (n === total) ? t('allN', { n: total }) : t('nQuestions', { n });
-                const b = el('button', { class: 'btn btn-full', text: label, onclick: () => startQuiz(tIdx, cIdx, n) });
+                const b = el('button', {
+                    class: 'btn btn-full' + (isAcademic ? ' btn-academic' : ''),
+                    text: label,
+                    onclick: () => startQuiz(tIdx, cIdx, n, isAcademic)
+                });
                 b.style.marginBottom = '10px';
                 card.appendChild(b);
             });
             root.appendChild(card);
             show('view-quiz');
         }
-        function startQuiz(tIdx, cIdx, limit) {
-            let pool = collectQuestions(tIdx, cIdx);
+
+        function startQuiz(tIdx, cIdx, limit, isAcademic) {
+            let pool = collectQuestions(tIdx, cIdx, isAcademic);
             if (limit && limit < pool.length) pool = shuffle(pool).slice(0, limit);
-            quiz = { tIdx, cIdx, limit: limit || pool.length, questions: pool, i: 0, score: 0, scope: (cIdx == null ? 'topic' : 'category') };
+            quiz = { tIdx, cIdx, limit: limit || pool.length, questions: pool, i: 0, score: 0, scope: (cIdx == null ? 'topic' : 'category'), isAcademic };
             renderQuestion();
             show('view-quiz');
         }
+
         function renderQuestion() {
             const root = document.getElementById('view-quiz');
             root.innerHTML = '';
             const total = quiz.questions.length;
             const item = quiz.questions[quiz.i];
             const q = item.q;
-            const topic = appData.topics[quiz.tIdx];
+            const topic = getTopicSource(quiz.isAcademic, quiz.tIdx);
             const scopeLabel = quiz.scope === 'topic' ? topic.title : (item.catTitle || topic.title);
 
             const bar = el('div', { class: 'quiz-topbar' });
@@ -702,22 +1150,27 @@
             root.appendChild(track);
 
             const card = el('div', { class: 'card' });
-            card.appendChild(el('p', { class: 'quiz-question', text: q.question }));
+            card.appendChild(el('p', { class: 'quiz-question', html: formatMathAndText(q.question) }));
             if (q.type === 'single_qa') renderQA(card, q); else renderMC(card, q);
             root.appendChild(card);
         }
+
         function nextButton(card) {
             const last = quiz.i >= quiz.questions.length - 1;
-            const btn = el('button', { class: 'btn btn-full', text: last ? t('seeResults') : t('next'),
-                onclick: () => { if (last) renderSummary(); else { quiz.i++; renderQuestion(); } } });
+            const btn = el('button', {
+                class: 'btn btn-full' + (quiz.isAcademic ? ' btn-academic' : ''),
+                text: last ? t('seeResults') : t('next'),
+                onclick: () => { if (last) renderSummary(); else { quiz.i++; renderQuestion(); } }
+            });
             btn.style.marginTop = '18px';
             card.appendChild(btn);
         }
+
         function renderMC(card, q) {
             const wrap = el('div');
             let answered = false;
             (q.options || []).forEach((opt, oIdx) => {
-                const b = el('button', { class: 'option-btn', text: opt });
+                const b = el('button', { class: 'option-btn', html: formatMathAndText(opt) });
                 b.onclick = () => {
                     if (answered) return;
                     answered = true;
@@ -735,13 +1188,14 @@
             });
             card.appendChild(wrap);
         }
+
         function renderQA(card, q) {
             const revealBtn = el('button', { class: 'btn btn-full', text: t('reveal') });
             revealBtn.onclick = () => {
                 revealBtn.remove();
                 const box = el('div', { class: 'reveal-box' });
                 box.appendChild(el('span', { class: 'label', text: t('answer') }));
-                box.appendChild(el('span', { class: 'answer', text: q.answer }));
+                box.appendChild(el('span', { class: 'answer', html: formatMathAndText(q.answer) }));
                 card.appendChild(box);
                 card.appendChild(el('p', { class: 'self-grade-q', text: t('didYouGet') }));
                 const row = el('div', { class: 'btn-row' });
@@ -758,8 +1212,9 @@
             };
             card.appendChild(revealBtn);
         }
+
         function renderSummary() {
-            const topic = appData.topics[quiz.tIdx];
+            const topic = getTopicSource(quiz.isAcademic, quiz.tIdx);
             if (quiz.scope === 'category') stats.markCatDone(topic.id, topic.categories[quiz.cIdx].id);
             else (topic.categories || []).forEach(c => stats.markCatDone(topic.id, c.id));
 
@@ -779,11 +1234,18 @@
             root.appendChild(card);
 
             const row = el('div', { class: 'btn-row' });
-            row.appendChild(el('button', { class: 'btn btn-ghost', text: t('tryAgain'), onclick: () => startQuiz(quiz.tIdx, quiz.cIdx, quiz.limit) }));
-            if (quiz.scope === 'category')
-                row.appendChild(el('button', { class: 'btn', text: t('backToLearning'), onclick: () => openLearning(quiz.tIdx, quiz.cIdx) }));
-            else
-                row.appendChild(el('button', { class: 'btn', text: t('backToTopic'), onclick: () => openTopic(quiz.tIdx) }));
+            row.appendChild(el('button', { class: 'btn btn-ghost', text: t('tryAgain'), onclick: () => startQuiz(quiz.tIdx, quiz.cIdx, quiz.limit, quiz.isAcademic) }));
+            if (quiz.isAcademic) {
+                if (quiz.scope === 'category')
+                    row.appendChild(el('button', { class: 'btn btn-academic', text: t('backToLearning'), onclick: () => openAcademicLesson(quiz.tIdx, quiz.cIdx) }));
+                else
+                    row.appendChild(el('button', { class: 'btn btn-academic', text: t('backToTopic'), onclick: () => openAcademicTopic(quiz.tIdx) }));
+            } else {
+                if (quiz.scope === 'category')
+                    row.appendChild(el('button', { class: 'btn', text: t('backToLearning'), onclick: () => openLearning(quiz.tIdx, quiz.cIdx) }));
+                else
+                    row.appendChild(el('button', { class: 'btn', text: t('backToTopic'), onclick: () => openTopic(quiz.tIdx) }));
+            }
             root.appendChild(row);
             show('view-summary');
         }
@@ -792,7 +1254,10 @@
         function renderStats() {
             const root = document.getElementById('view-stats');
             root.innerHTML = '';
-            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('back'), onclick: renderHome }));
+            root.appendChild(el('button', {
+                class: 'btn btn-ghost btn-back', text: t('back'),
+                onclick: () => (currentMode === 'academic' ? renderAcademicHome() : renderHome())
+            }));
 
             const acc = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
             const grid = el('div', { class: 'stat-grid' });
@@ -808,14 +1273,17 @@
             card.appendChild(grid);
             root.appendChild(card);
 
-            const topics = (appData && appData.topics || []).filter(x => (x.lang || 'en') === LANG);
-            if (topics.length) {
+            const allTopics = [...((appData && appData.topics) || []), ...((appData && appData.academic_topics) || [])]
+                .filter(x => (x.lang || 'en') === LANG);
+
+            if (allTopics.length) {
                 const prog = el('div', { class: 'card' });
                 prog.appendChild(el('h3', { class: 'section-title', html: '📈 ' + t('topicProgress') }));
-                topics.forEach(topic => {
+                allTopics.forEach(topic => {
                     const { done, total } = topicProgress(topic);
                     const row = el('div', { class: 'prog-row' });
-                    row.appendChild(el('span', { text: topic.title }));
+                    const isAcad = topic.type === 'academic';
+                    row.appendChild(el('span', { text: (isAcad ? (topic.icon || '🎓') + ' ' : '') + topic.title }));
                     row.appendChild(el('span', { text: total ? t('nCategories', { done, total }) : '—', attrs: { style: 'color:var(--muted)' } }));
                     prog.appendChild(row);
                 });
@@ -825,7 +1293,7 @@
         }
 
         // ============================ DATA LOADING ============================
-        const DB_NAME = 'FamilyTriviaDB', DB_VERSION = 1, STORE = 'app_data', KEY = 'trivia_json';
+        const DB_NAME = 'FamilyTriviaDB', DB_VERSION = 2, STORE = 'app_data', KEY = 'trivia_json';
         function openDB() {
             return new Promise((resolve, reject) => {
                 const r = indexedDB.open(DB_NAME, DB_VERSION);
@@ -844,6 +1312,7 @@
                 LANG = avail.includes(nav) ? nav : (avail.includes('en') ? 'en' : (avail[0] || 'en'));
             }
         }
+
         async function loadDatabase() {
             let db = null;
             try { db = await openDB(); } catch (e) { console.warn('IndexedDB unavailable:', e); }
@@ -856,8 +1325,12 @@
                 console.warn('Network load failed, trying offline cache...', netErr);
                 if (db) { try { appData = await idbGet(db); } catch (e) { console.error('IndexedDB read failed', e); } }
             }
-            if (appData && appData.topics) { initLang(); applyLang(LANG); }
-            else document.getElementById('view-home').innerHTML = '<div class="card error-card">' + t('offlineFail') + '</div>';
+            if (appData && (appData.topics || appData.academic_topics)) {
+                initLang();
+                applyLang(LANG);
+            } else {
+                document.getElementById('view-home').innerHTML = '<div class="card error-card">' + t('offlineFail') + '</div>';
+            }
         }
 
         // ============================ INIT ============================
@@ -866,9 +1339,18 @@
         document.documentElement.setAttribute('dir', isRTLLang(LANG) ? 'rtl' : 'ltr');
         renderMenuLabels();
         document.getElementById('menu-btn').onclick = toggleMenu;
+        document.getElementById('mode-toggle-btn').onclick = toggleAppMode;
+        document.getElementById('btn-header-home').onclick = () => (currentMode === 'academic' ? renderAcademicHome() : renderHome());
+        document.getElementById('menu-academic').onclick = () => setAppMode('academic');
+        document.getElementById('menu-trivia').onclick = () => setAppMode('trivia');
         document.getElementById('menu-stats').onclick = renderStats;
         document.getElementById('menu-reset').onclick = () => {
-            if (confirm(t('resetConfirm'))) { stats.reset(); closeMenu(); renderHome(); }
+            if (confirm(t('resetConfirm'))) {
+                stats.reset();
+                closeMenu();
+                if (currentMode === 'academic') renderAcademicHome();
+                else renderHome();
+            }
         };
 
         window.addEventListener('DOMContentLoaded', loadDatabase);

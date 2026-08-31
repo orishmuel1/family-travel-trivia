@@ -40,6 +40,7 @@ except ImportError:
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TOPICS_DIR = os.path.join(BASE_DIR, "topics")
+ACADEMIC_TOPICS_DIR = os.path.join(BASE_DIR, "academic_topics")
 DOCS_DIR = os.path.join(BASE_DIR, "docs")
 OUTPUT_FILE = os.path.join(DOCS_DIR, "data.json")
 SW_FILE = os.path.join(DOCS_DIR, "sw.js")
@@ -48,6 +49,7 @@ CREATED_LEDGER = os.path.join(TOPICS_DIR, ".created.json")
 VALID_TRIVIA_TYPES = ("multiple_choice", "single_qa")
 MIN_POINTS, MAX_POINTS = 2, 5           # flat category points
 CARD_MIN_POINTS, CARD_MAX_POINTS = 1, 6  # per-card (subcategory) bullets
+ACADEMIC_CARD_MAX_POINTS = 30           # flexible bullets for academic cards
 VALID_AUDIENCE = ("family", "adult")
 
 
@@ -249,12 +251,13 @@ def validate_trivia(loc, trivia, issues):
                                 "Add an 'answer' string."))
 
 
-def validate_cards(cloc, cards, issues):
+def validate_cards(cloc, cards, issues, is_academic=False):
     """Validate + normalize a category's 'cards' list (each card = a subcategory)."""
     if not isinstance(cards, list) or not cards:
         issues.append(Issue("error", cloc, "'cards' is present but empty or not a list.",
                             "Add at least one card (a subcategory with a title and a few facts)."))
         return
+    max_pts = ACADEMIC_CARD_MAX_POINTS if is_academic else CARD_MAX_POINTS
     for i, card in enumerate(cards):
         cardloc = f"{cloc} -> card #{i + 1}"
         if not isinstance(card, dict):
@@ -272,17 +275,17 @@ def validate_cards(cloc, cards, issues):
         pts = card.get("points")
         if not isinstance(pts, list):
             issues.append(Issue("error", cardloc, "card has no 'points' list.",
-                                f"Add {CARD_MIN_POINTS}-{CARD_MAX_POINTS} bullet facts."))
+                                f"Add bullet facts (at least {CARD_MIN_POINTS})."))
         else:
             for j, pt in enumerate(pts):
                 c, ch = clean_str(pt)
                 if ch:
                     pts[j] = c
             n = len(pts)
-            if n < CARD_MIN_POINTS or n > CARD_MAX_POINTS:
+            if n < CARD_MIN_POINTS or n > max_pts:
                 issues.append(Issue("error", cardloc,
-                                    f"card 'points' must have {CARD_MIN_POINTS}-{CARD_MAX_POINTS} facts, found {n}.",
-                                    f"Adjust to between {CARD_MIN_POINTS} and {CARD_MAX_POINTS} facts."))
+                                    f"card 'points' must have {CARD_MIN_POINTS}-{max_pts} facts, found {n}.",
+                                    f"Adjust to between {CARD_MIN_POINTS} and {max_pts} facts."))
 
 
 def validate_topic(path, data):
@@ -295,6 +298,16 @@ def validate_topic(path, data):
                             "the top level of the file is not a topic object.",
                             "It must start with id / title / description / categories."))
         return result
+
+    # Check if academic topic (from path or explicit property)
+    is_academic = ("academic_topics" in path.replace(os.sep, "/")) or (data.get("type") == "academic")
+    if is_academic:
+        data["type"] = "academic"
+        icon, changed = clean_str(data.get("icon", "🎓"))
+        if changed:
+            data["icon"] = icon
+        if not data.get("icon"):
+            data["icon"] = "🎓"
 
     # --- topic id (derive from filename if missing; slugify if malformed) ---
     tid = data.get("id")
@@ -426,7 +439,7 @@ def validate_topic(path, data):
                                     f"'points' must have {MIN_POINTS}-{MAX_POINTS} facts, found {n}.",
                                     f"Adjust to between {MIN_POINTS} and {MAX_POINTS} facts."))
         if has_cards:
-            validate_cards(cloc, cat["cards"], issues)
+            validate_cards(cloc, cat["cards"], issues, is_academic=is_academic)
 
         # trivia
         trivia = cat.get("trivia")
@@ -435,6 +448,11 @@ def validate_topic(path, data):
                                 "Add at least one trivia question."))
         else:
             for t_index, t in enumerate(trivia):
+                if is_academic and isinstance(t, dict):
+                    if t.get("type") and t.get("type") != "multiple_choice":
+                        issues.append(Issue("error", f"{cloc} -> trivia #{t_index + 1}",
+                                            f"academic questions must be 'multiple_choice', found '{t.get('type')}'.",
+                                            "Change to multiple_choice with 4 options."))
                 validate_trivia(f"{cloc} -> trivia #{t_index + 1}", t, issues)
 
     # Only expose data for compilation if there are no hard errors.
@@ -500,14 +518,14 @@ def _ordered(d, key_order):
 
 def canonicalize(topic):
     """Rebuild a topic dict with a clean, consistent key order for readable output."""
-    topic = _ordered(topic, ["id", "title", "description", "lang", "audience", "categories"])
+    topic = _ordered(topic, ["id", "type", "icon", "title", "description", "lang", "audience", "categories"])
     cats = []
     for cat in topic.get("categories", []):
         if isinstance(cat, dict):
             cat = _ordered(cat, ["id", "title", "description", "audience", "cards", "points", "trivia"])
             if isinstance(cat.get("cards"), list):
                 cat["cards"] = [
-                    _ordered(c, ["title", "points"]) if isinstance(c, dict) else c
+                    _ordered(c, ["title", "figure", "formula", "points"]) if isinstance(c, dict) else c
                     for c in cat["cards"]
                 ]
             cat["trivia"] = [
@@ -543,11 +561,14 @@ def build_database(topics):
         os.makedirs(DOCS_DIR)
     trivia_count = sum(len(cat.get("trivia", []))
                        for topic in topics for cat in topic.get("categories", []))
+    regular_topics = [t for t in topics if t.get("type") != "academic"]
+    academic_topics = [t for t in topics if t.get("type") == "academic"]
     compiled_db = {
         "app_name": "Family Travel Trivia",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "last_updated": datetime.date.today().isoformat(),
-        "topics": topics,
+        "topics": regular_topics,
+        "academic_topics": academic_topics,
     }
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(compiled_db, f, separators=(",", ":"), ensure_ascii=False)
@@ -585,15 +606,15 @@ def gather_files(single_file):
             print(f"Error: file not found: {single_file}")
             sys.exit(2)
         return [os.path.abspath(single_file)]
-    if not os.path.isdir(TOPICS_DIR):
-        print(f"Error: topics directory not found at: {TOPICS_DIR}")
-        sys.exit(2)
     files = []
-    for name in sorted(os.listdir(TOPICS_DIR)):
-        if name.startswith("."):
-            continue  # skip dotfiles like the .created.json ledger
-        if name.lower().endswith((".yaml", ".yml", ".json")):
-            files.append(os.path.join(TOPICS_DIR, name))
+    for dir_path in (TOPICS_DIR, ACADEMIC_TOPICS_DIR):
+        if not os.path.isdir(dir_path):
+            continue
+        for name in sorted(os.listdir(dir_path)):
+            if name.startswith("."):
+                continue  # skip dotfiles like the .created.json ledger
+            if name.lower().endswith((".yaml", ".yml", ".json")):
+                files.append(os.path.join(dir_path, name))
     return files
 
 
