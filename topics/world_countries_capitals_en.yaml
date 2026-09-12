@@ -1,420 +1,847 @@
 id: world_countries_capitals_en
-title: "Countries of the World & Capital Cities"
-description: >
-  Embark on an epic globetrotting adventure! Test your geography mastery across iconic capitals, 
-  fascinating border anomalies, microstates, flag lore, and world records.
+title: Countries of the World & Capital Cities
+description: 'Embark on an epic globetrotting adventure! Test your geography mastery across iconic capitals,  fascinating
+  border anomalies, microstates, flag lore, and world records.
+
+  '
 lang: en
 audience: family
 categories:
-  - id: iconic_capitals
-    title: "Iconic Capitals & Historic Seats of Power"
-    description: >
-      Journey through the world's most famous and influential capital cities, their monumental landmarks, 
-      and deep historical roots.
-    cards:
-      - title: "Tokyo: The Megacity of Japan"
-        points:
-          - "Tokyo (formerly known as Edo) became the capital of Japan in 1868 when Emperor Meiji moved his seat from Kyoto."
-          - "The Greater Tokyo Area is the most populous metropolitan area on Earth, with over 37 million residents."
-          - "Despite its immense population, Tokyo is consistently ranked among the safest and most punctual cities in the world."
-          - "Tokyo's famous Shibuya Crossing is considered the busiest pedestrian intersection in the world, with up to 3,000 people crossing during a single green light."
-      - title: "London: Capital on the Thames"
-        points:
-          - "London was founded by the Romans almost 2,000 years ago under the name Londinium."
-          - "The famous clock tower at the Palace of Westminster is commonly called 'Big Ben', though Big Ben is actually the name of the giant 13-ton bell inside, while the tower itself is officially named Elizabeth Tower."
-          - "London has served as the capital of England since the 11th century, succeeding Winchester."
-          - "It is home to the world's oldest underground railway network, the London Underground ('The Tube'), opened in 1863."
-      - title: "Paris: The City of Light"
-        points:
-          - "Paris earned the nickname 'City of Light' (La Ville Lumière) both for its leading role during the Age of Enlightenment and because it was one of the first European cities to install gas street lighting."
-          - "The Eiffel Tower was built in 1889 as the entrance arch for the World's Fair (Exposition Universelle) and was originally intended to be torn down after 20 years."
-          - "The Louvre Museum in Paris is the world's most visited art museum and was originally built as a medieval royal fortress."
-      - title: "Rome: The Eternal City"
-        points:
-          - "Legend says Rome was founded in 753 BCE by twin brothers Romulus and Remus, who were nursed by a she-wolf."
-          - "Rome completely surrounds another independent sovereign country: Vatican City, making it a unique city containing an entire nation."
-          - "Nearly 3,000 Euros are thrown into the Trevi Fountain every single day by tourists wishing for a return trip; the money is donated to local charity."
-      - title: "Washington, D.C.: The Federal District"
-        points:
-          - "Washington, D.C. was established by the U.S. Constitution in 1790 as a federal district rather than a state, so no single state would hold undue power over the capital."
-          - "It was designed by French-American engineer Pierre Charles L'Enfant with wide avenues, grand public squares, and expansive green spaces."
-          - "By local law (the Height of Buildings Act of 1910), no skyscraper can overpower the city's skyline; buildings cannot exceed the width of the street plus 20 feet."
-    trivia:
-      - type: multiple_choice
-        question: "What is the official name of the famous London clock tower commonly nicknamed 'Big Ben'?"
-        options: ["Elizabeth Tower", "Victoria Tower", "King George Spire", "St. Stephen Campanile"]
-        correct: 0
-      - type: multiple_choice
-        question: "What historical city served as the ancient imperial capital of Japan before Tokyo (Edo) in 1868?"
-        options: ["Kyoto", "Osaka", "Hiroshima", "Sapporo"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which independent sovereign country is completely encircled inside the city of Rome, Italy?"
-        options: ["Vatican City", "San Marino", "Monaco", "Liechtenstein"]
-        correct: 0
-      - type: multiple_choice
-        question: "Why was the Eiffel Tower in Paris originally constructed in 1889?"
-        options: ["As the entrance arch for the 1889 World's Fair", "As a permanent radio broadcast antenna", "As a military lookout tower against naval invasions", "As a private residence for Gustave Eiffel"]
-        correct: 0
-      - type: multiple_choice
-        question: "What does 'D.C.' stand for in the name of the United States capital, Washington, D.C.?"
-        options: ["District of Columbia", "Democratic Capital", "Department of Congress", "Division of Colonies"]
-        correct: 0
-      - type: multiple_choice
-        question: "What city was the historical capital of England before London took over in the 11th century?"
-        options: ["Winchester", "York", "Bath", "Canterbury"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is considered the busiest pedestrian intersection in the world, located in Tokyo?"
-        options: ["Shibuya Crossing", "Ginza Square", "Shinjuku Plaza", "Akihabara Walk"]
-        correct: 0
-      - type: multiple_choice
-        question: "Why did Paris first gain its famous moniker 'The City of Light'?"
-        options: ["Its role in the Age of Enlightenment and early adoption of gas street lights", "It was the first city powered by solar panels", "It experiences 24 hours of continuous daylight in summer", "The white stone of its buildings glows under moonlight"]
-        correct: 0
-      - type: multiple_choice
-        question: "What happens to the thousands of Euros tossed into Rome's Trevi Fountain every day?"
-        options: ["They are collected daily and donated to charitable causes", "They are melted down to create commemorative medals", "They are used to pay for fountain maintenance exclusively", "They remain at the bottom of the pool permanently"]
-        correct: 0
-      - type: multiple_choice
-        question: "Who designed the original grand layout and wide avenues of Washington, D.C.?"
-        options: ["Pierre Charles L'Enfant", "Thomas Jefferson", "Benjamin Franklin", "Frederick Law Olmsted"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Australia?"
-        options: ["Canberra", "Sydney", "Melbourne", "Brisbane"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Canada?"
-        options: ["Ottawa", "Toronto", "Montreal", "Vancouver"]
-        correct: 0
+- id: iconic_capitals
+  title: Iconic Capitals & Historic Seats of Power
+  description: 'Journey through the world''s most famous and influential capital cities, their monumental
+    landmarks,  and deep historical roots.
 
-  - id: surprising_capitals
-    title: "Surprising Capitals & Cities with a Twist"
-    description: >
-      Uncover the world's most frequently mistaken capitals! Test your knowledge on planned capital cities, 
-      compromise locations, and countries with multiple official capitals.
-    cards:
-      - title: "Canberra: Australia's Compromise Capital"
-        points:
-          - "Many people mistakenly think Sydney or Melbourne is the capital of Australia."
-          - "Canberra was chosen in 1908 as a deliberate compromise between the two rival economic powerhouse cities: Sydney and Melbourne."
-          - "The entirely planned city was designed by American architects Walter Burley Griffin and Marion Mahony Griffin, featuring circular geometric rings centered around an artificial lake."
-      - title: "Ottawa: Queen Victoria's Strategic Choice"
-        points:
-          - "Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural hub)."
-          - "In 1857, Queen Victoria selected the small lumber town of Ottawa because it sat right on the border between English-speaking Ontario and French-speaking Quebec."
-          - "Ottawa was also located further inland away from the US border, making it much easier to defend militarily."
-      - title: "South Africa: The Three-Capital Nation"
-        points:
-          - "South Africa is the only nation in the world with three official capital cities, dividing government branches equally:"
-          - "1. Pretoria: The Executive / Administrative Capital (President and Cabinet)."
-          - "2. Cape Town: The Legislative Capital (Seat of Parliament)."
-          - "3. Bloemfontein: The Judicial Capital (Seat of the Supreme Court of Appeal)."
-          - "Johannesburg is the largest city and economic center, but not an official capital."
-      - title: "Brasília: The Airplane-Shaped City"
-        points:
-          - "In 1960, Brazil moved its capital inland from coastal Rio de Janeiro to the newly constructed planned city of Brasília."
-          - "The move aimed to develop Brazil's vast interior region and provide a neutral federal center."
-          - "Designed by urban planner Lúcio Costa and architect Oscar Niemeyer, Brasília's master plan is famous for resembling the shape of an airplane (or giant bird)."
-      - title: "Bern: Switzerland's De Facto Capital"
-        points:
-          - "Switzerland technically has no official 'capital city' written into its constitution because all 26 cantons are considered equal."
-          - "Instead, Bern serves as the 'Federal City' (Bundesstadt) and de facto capital hosting the Swiss Parliament and federal government."
-          - "Geneva hosts the United Nations European headquarters, while Zurich is the largest financial hub."
-    trivia:
-      - type: multiple_choice
-        question: "Why was the planned city of Canberra chosen as the capital of Australia?"
-        options: ["As a compromise location to settle the rivalry between Sydney and Melbourne", "Because it was the first British settlement in Australia", "Because it had the largest natural deep-water harbor", "Due to rich gold discoveries in its immediate hills"]
-        correct: 0
-      - type: multiple_choice
-        question: "How many official capital cities does South Africa have?"
-        options: ["Three (Pretoria, Cape Town, Bloemfontein)", "One (Johannesburg)", "Two (Durban and Pretoria)", "None (it operates as a direct federation)"]
-        correct: 0
-      - type: multiple_choice
-        question: "What distinct geometric shape does the urban master plan of Brasília resemble from above?"
-        options: ["An airplane (or giant bird)", "A perfect five-pointed star", "A circular bullseye target", "A giant crescent moon"]
-        correct: 0
-      - type: multiple_choice
-        question: "Why did Queen Victoria select Ottawa as Canada's capital in 1857 instead of Toronto or Montreal?"
-        options: ["It straddled English and French regions and was safer from US military attack", "It was the birthplace of Canada's first Prime Minister", "It possessed the largest population in North America", "It was the only city with a functioning railway station"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which city serves as the Legislative capital of South Africa, hosting the national parliament?"
-        options: ["Cape Town", "Pretoria", "Bloemfontein", "Johannesburg"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Turkey?"
-        options: ["Ankara", "Istanbul", "Izmir", "Antalya"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of New Zealand?"
-        options: ["Wellington", "Auckland", "Christchurch", "Queenstown"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Morocco?"
-        options: ["Rabat", "Casablanca", "Marrakech", "Fes"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the official federal capital of Brazil, inaugurated in 1960?"
-        options: ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"]
-        correct: 0
-      - type: multiple_choice
-        question: "What city functions as the de facto federal seat of government in Switzerland?"
-        options: ["Bern", "Zurich", "Geneva", "Basel"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of the United Arab Emirates?"
-        options: ["Abu Dhabi", "Dubai", "Sharjah", "Doha"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Scotland?"
-        options: ["Edinburgh", "Glasgow", "Aberdeen", "Dundee"]
-        correct: 0
+    '
+  cards:
+  - title: 'Tokyo: The Megacity of Japan'
+    points:
+    - Tokyo (formerly known as Edo) became the capital of Japan in 1868 when Emperor Meiji moved his seat
+      from Kyoto.
+    - The Greater Tokyo Area is the most populous metropolitan area on Earth, with over 37 million residents.
+    - Despite its immense population, Tokyo is consistently ranked among the safest and most punctual
+      cities in the world.
+    - Tokyo's famous Shibuya Crossing is considered the busiest pedestrian intersection in the world,
+      with up to 3,000 people crossing during a single green light.
+  - title: 'London: Capital on the Thames'
+    points:
+    - London was founded by the Romans almost 2,000 years ago under the name Londinium.
+    - The famous clock tower at the Palace of Westminster is commonly called 'Big Ben', though Big Ben
+      is actually the name of the giant 13-ton bell inside, while the tower itself is officially named
+      Elizabeth Tower.
+    - London has served as the capital of England since the 11th century, succeeding Winchester.
+    - It is home to the world's oldest underground railway network, the London Underground ('The Tube'),
+      opened in 1863.
+  - title: 'Paris: The City of Light'
+    points:
+    - Paris earned the nickname 'City of Light' (La Ville Lumière) both for its leading role during the
+      Age of Enlightenment and because it was one of the first European cities to install gas street lighting.
+    - The Eiffel Tower was built in 1889 as the entrance arch for the World's Fair (Exposition Universelle)
+      and was originally intended to be torn down after 20 years.
+    - The Louvre Museum in Paris is the world's most visited art museum and was originally built as a
+      medieval royal fortress.
+  - title: 'Rome: The Eternal City'
+    points:
+    - Legend says Rome was founded in 753 BCE by twin brothers Romulus and Remus, who were nursed by a
+      she-wolf.
+    - 'Rome completely surrounds another independent sovereign country: Vatican City, making it a unique
+      city containing an entire nation.'
+    - Nearly 3,000 Euros are thrown into the Trevi Fountain every single day by tourists wishing for a
+      return trip; the money is donated to local charity.
+  - title: 'Washington, D.C.: The Federal District'
+    points:
+    - Washington, D.C. was established by the U.S. Constitution in 1790 as a federal district rather than
+      a state, so no single state would hold undue power over the capital.
+    - It was designed by French-American engineer Pierre Charles L'Enfant with wide avenues, grand public
+      squares, and expansive green spaces.
+    - By local law (the Height of Buildings Act of 1910), no skyscraper can overpower the city's skyline;
+      buildings cannot exceed the width of the street plus 20 feet.
+  trivia:
+  - type: multiple_choice
+    question: What is the official name of the famous London clock tower commonly nicknamed 'Big Ben'?
+    options:
+    - Elizabeth Tower
+    - Victoria Tower
+    - King George Spire
+    - St. Stephen Campanile
+    correct: 0
+    explanation: The famous clock tower at the Palace of Westminster is commonly called 'Big Ben', though
+      Big Ben is actually the name of the giant 13-ton bell inside, while the tower itself is officially
+      named Elizabeth Tower.
+  - type: multiple_choice
+    question: What historical city served as the ancient imperial capital of Japan before Tokyo (Edo)
+      in 1868?
+    options:
+    - Kyoto
+    - Osaka
+    - Hiroshima
+    - Sapporo
+    correct: 0
+    explanation: Tokyo (formerly known as Edo) became the capital of Japan in 1868 when Emperor Meiji
+      moved his seat from Kyoto.
+  - type: multiple_choice
+    question: Which independent sovereign country is completely encircled inside the city of Rome, Italy?
+    options:
+    - Vatican City
+    - San Marino
+    - Monaco
+    - Liechtenstein
+    correct: 0
+    explanation: 'Rome completely surrounds another independent sovereign country: Vatican City, making
+      it a unique city containing an entire nation.'
+  - type: multiple_choice
+    question: Why was the Eiffel Tower in Paris originally constructed in 1889?
+    options:
+    - As the entrance arch for the 1889 World's Fair
+    - As a permanent radio broadcast antenna
+    - As a military lookout tower against naval invasions
+    - As a private residence for Gustave Eiffel
+    correct: 0
+    explanation: The Eiffel Tower was built in 1889 as the entrance arch for the World's Fair (Exposition
+      Universelle) and was originally intended to be torn down after 20 years.
+  - type: multiple_choice
+    question: What does 'D.C.' stand for in the name of the United States capital, Washington, D.C.?
+    options:
+    - District of Columbia
+    - Democratic Capital
+    - Department of Congress
+    - Division of Colonies
+    correct: 0
+    explanation: Washington, D.C. was established by the U.S. Constitution in 1790 as a federal district
+      rather than a state, so no single state would hold undue power over the capital.
+  - type: multiple_choice
+    question: What city was the historical capital of England before London took over in the 11th century?
+    options:
+    - Winchester
+    - York
+    - Bath
+    - Canterbury
+    correct: 0
+    explanation: London has served as the capital of England since the 11th century, succeeding Winchester.
+  - type: multiple_choice
+    question: What is considered the busiest pedestrian intersection in the world, located in Tokyo?
+    options:
+    - Shibuya Crossing
+    - Ginza Square
+    - Shinjuku Plaza
+    - Akihabara Walk
+    correct: 0
+    explanation: Tokyo's famous Shibuya Crossing is considered the busiest pedestrian intersection in
+      the world, with up to 3,000 people crossing during a single green light.
+  - type: multiple_choice
+    question: Why did Paris first gain its famous moniker 'The City of Light'?
+    options:
+    - Its role in the Age of Enlightenment and early adoption of gas street lights
+    - It was the first city powered by solar panels
+    - It experiences 24 hours of continuous daylight in summer
+    - The white stone of its buildings glows under moonlight
+    correct: 0
+    explanation: Paris earned the nickname 'City of Light' (La Ville Lumière) both for its leading role
+      during the Age of Enlightenment and because it was one of the first European cities to install gas
+      street lighting.
+  - type: multiple_choice
+    question: What happens to the thousands of Euros tossed into Rome's Trevi Fountain every day?
+    options:
+    - They are collected daily and donated to charitable causes
+    - They are melted down to create commemorative medals
+    - They are used to pay for fountain maintenance exclusively
+    - They remain at the bottom of the pool permanently
+    correct: 0
+    explanation: Nearly 3,000 Euros are thrown into the Trevi Fountain every single day by tourists wishing
+      for a return trip; the money is donated to local charity.
+  - type: multiple_choice
+    question: Who designed the original grand layout and wide avenues of Washington, D.C.?
+    options:
+    - Pierre Charles L'Enfant
+    - Thomas Jefferson
+    - Benjamin Franklin
+    - Frederick Law Olmsted
+    correct: 0
+    explanation: It was designed by French-American engineer Pierre Charles L'Enfant with wide avenues,
+      grand public squares, and expansive green spaces.
+  - type: multiple_choice
+    question: What is the capital city of Australia?
+    options:
+    - Canberra
+    - Sydney
+    - Melbourne
+    - Brisbane
+    correct: 0
+    explanation: Tokyo (formerly known as Edo) became the capital of Japan in 1868 when Emperor Meiji
+      moved his seat from Kyoto.
+  - type: multiple_choice
+    question: What is the capital city of Canada?
+    options:
+    - Ottawa
+    - Toronto
+    - Montreal
+    - Vancouver
+    correct: 0
+    explanation: Tokyo (formerly known as Edo) became the capital of Japan in 1868 when Emperor Meiji
+      moved his seat from Kyoto.
+- id: surprising_capitals
+  title: Surprising Capitals & Cities with a Twist
+  description: 'Uncover the world''s most frequently mistaken capitals! Test your knowledge on planned
+    capital cities,  compromise locations, and countries with multiple official capitals.
 
-  - id: microstates_extremes
-    title: "Microstates & Geographic Extremes"
-    description: >
-      Explore the world's smallest nations, highest capitals, northernmost settlements, 
-      and extraordinary geographical superlatives.
-    cards:
-      - title: "Vatican City: The Smallest Nation on Earth"
-        points:
-          - "Vatican City is the smallest independent state in the world, measuring just 0.49 square kilometers (about 121 acres)."
-          - "It has a population of around 800 citizens, none of whom acquire citizenship by birth; citizenship is granted strictly on appointment by the Holy See."
-          - "It operates its own post office, newspaper, radio station, pharmacy, and banking system, and has the highest crime rate per capita in the world due to tourist pickpocketing."
-      - title: "Monaco: The Densest & Wealthiest Playground"
-        points:
-          - "Monaco is the second-smallest independent country in the world (about 2 square kilometers), smaller than New York's Central Park!"
-          - "It is the most densely populated sovereign state on Earth, with over 19,000 residents per square kilometer."
-          - "Roughly one-third of Monaco's residents are millionaires, drawn by its zero personal income tax policy and Mediterranean climate."
-      - title: "La Paz & Quito: High-Altitude Capitals"
-        points:
-          - "La Paz, Bolivia is the highest administrative capital in the world, sitting at roughly 3,640 meters (11,942 feet) above sea level."
-          - "Due to the thin air, water boils at just 88°C (190°F) in La Paz, and aircraft require extra-long runways for takeoff."
-          - "Quito, Ecuador is the second-highest capital (2,850m) and the closest capital city to the Equator."
-      - title: "Reykjavik: Northernmost Sovereign Capital"
-        points:
-          - "Reykjavik, Iceland is the world's northernmost capital of a sovereign state, situated at 64°08' N latitude."
-          - "During the summer solstice, Reykjavik experiences 24 hours of continuous daylight ('midnight sun'), while in midwinter it sees only about 4 hours of sunlight."
-          - "The entire city is heated almost 100% by renewable geothermal energy tapped from volcanic hot springs."
-      - title: "Nauru & San Marino: Unique Microstates"
-        points:
-          - "Nauru is the smallest island nation in the world (21 sq km) and the only sovereign country on Earth without an official designated capital city."
-          - "San Marino claims to be the world's oldest surviving constitutional republic, founded in 301 CE by a stonemason named Saint Marinus."
-    trivia:
-      - type: multiple_choice
-        question: "Which sovereign nation is the smallest in the world by both area and population?"
-        options: ["Vatican City", "Monaco", "Nauru", "Tuvalu"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which city is the highest administrative national capital on Earth, sitting over 3,600 meters above sea level?"
-        options: ["La Paz (Bolivia)", "Quito (Ecuador)", "Bogotá (Colombia)", "Addis Ababa (Ethiopia)"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the northernmost capital city of an independent sovereign state in the world?"
-        options: ["Reykjavik (Iceland)", "Oslo (Norway)", "Helsinki (Finland)", "Nuuk (Greenland)"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which sovereign island nation in the Pacific has no officially designated capital city?"
-        options: ["Nauru", "Fiji", "Samoa", "Vanuatu"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which European microstate claims to be the world's oldest continuous constitutional republic, founded in 301 CE?"
-        options: ["San Marino", "Liechtenstein", "Andorra", "Monaco"]
-        correct: 0
-      - type: multiple_choice
-        question: "How does someone become an official citizen of Vatican City?"
-        options: ["By appointment and service to the Holy See (not by birth)", "By living inside the walls for 5 continuous years", "By purchasing citizenship through real estate investment", "By passing a mandatory Latin fluency examination"]
-        correct: 0
-      - type: multiple_choice
-        question: "What energy source heats nearly 100% of the homes and buildings in Reykjavik, Iceland?"
-        options: ["Geothermal volcanic energy", "Offshore wind turbines", "Nuclear fission reactors", "Imported coal power"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which sovereign nation has the highest population density in the entire world?"
-        options: ["Monaco", "Singapore", "Malta", "Bangladesh"]
-        correct: 0
-      - type: multiple_choice
-        question: "What unusual physical effect happens to boiling water in high-altitude La Paz, Bolivia?"
-        options: ["Water boils at a much lower temperature (around 88°C / 190°F)", "Water refuses to boil under any circumstance", "Water boils instantly without requiring heat", "Water boils at a much higher temperature (150°C)"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Liechtenstein?"
-        options: ["Vaduz", "Schaan", "Balzers", "Triesen"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Andorra?"
-        options: ["Andorra la Vella", "Escaldes-Engordany", "Encamp", "La Massana"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which capital city is situated closest to the Earth's Equator?"
-        options: ["Quito (Ecuador)", "Nairobi (Kenya)", "Bogotá (Colombia)", "Singapore"]
-        correct: 0
+    '
+  cards:
+  - title: 'Canberra: Australia''s Compromise Capital'
+    points:
+    - Many people mistakenly think Sydney or Melbourne is the capital of Australia.
+    - 'Canberra was chosen in 1908 as a deliberate compromise between the two rival economic powerhouse
+      cities: Sydney and Melbourne.'
+    - The entirely planned city was designed by American architects Walter Burley Griffin and Marion Mahony
+      Griffin, featuring circular geometric rings centered around an artificial lake.
+  - title: 'Ottawa: Queen Victoria''s Strategic Choice'
+    points:
+    - Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural hub).
+    - In 1857, Queen Victoria selected the small lumber town of Ottawa because it sat right on the border
+      between English-speaking Ontario and French-speaking Quebec.
+    - Ottawa was also located further inland away from the US border, making it much easier to defend
+      militarily.
+  - title: 'South Africa: The Three-Capital Nation'
+    points:
+    - 'South Africa is the only nation in the world with three official capital cities, dividing government
+      branches equally:'
+    - '1. Pretoria: The Executive / Administrative Capital (President and Cabinet).'
+    - '2. Cape Town: The Legislative Capital (Seat of Parliament).'
+    - '3. Bloemfontein: The Judicial Capital (Seat of the Supreme Court of Appeal).'
+    - Johannesburg is the largest city and economic center, but not an official capital.
+  - title: 'Brasília: The Airplane-Shaped City'
+    points:
+    - In 1960, Brazil moved its capital inland from coastal Rio de Janeiro to the newly constructed planned
+      city of Brasília.
+    - The move aimed to develop Brazil's vast interior region and provide a neutral federal center.
+    - Designed by urban planner Lúcio Costa and architect Oscar Niemeyer, Brasília's master plan is famous
+      for resembling the shape of an airplane (or giant bird).
+  - title: 'Bern: Switzerland''s De Facto Capital'
+    points:
+    - Switzerland technically has no official 'capital city' written into its constitution because all
+      26 cantons are considered equal.
+    - Instead, Bern serves as the 'Federal City' (Bundesstadt) and de facto capital hosting the Swiss
+      Parliament and federal government.
+    - Geneva hosts the United Nations European headquarters, while Zurich is the largest financial hub.
+  trivia:
+  - type: multiple_choice
+    question: Why was the planned city of Canberra chosen as the capital of Australia?
+    options:
+    - As a compromise location to settle the rivalry between Sydney and Melbourne
+    - Because it was the first British settlement in Australia
+    - Because it had the largest natural deep-water harbor
+    - Due to rich gold discoveries in its immediate hills
+    correct: 0
+    explanation: 'Canberra was chosen in 1908 as a deliberate compromise between the two rival economic
+      powerhouse cities: Sydney and Melbourne.'
+  - type: multiple_choice
+    question: How many official capital cities does South Africa have?
+    options:
+    - Three (Pretoria, Cape Town, Bloemfontein)
+    - One (Johannesburg)
+    - Two (Durban and Pretoria)
+    - None (it operates as a direct federation)
+    correct: 0
+    explanation: 'South Africa is the only nation in the world with three official capital cities, dividing
+      government branches equally:'
+  - type: multiple_choice
+    question: What distinct geometric shape does the urban master plan of Brasília resemble from above?
+    options:
+    - An airplane (or giant bird)
+    - A perfect five-pointed star
+    - A circular bullseye target
+    - A giant crescent moon
+    correct: 0
+    explanation: Designed by urban planner Lúcio Costa and architect Oscar Niemeyer, Brasília's master
+      plan is famous for resembling the shape of an airplane (or giant bird).
+  - type: multiple_choice
+    question: Why did Queen Victoria select Ottawa as Canada's capital in 1857 instead of Toronto or Montreal?
+    options:
+    - It straddled English and French regions and was safer from US military attack
+    - It was the birthplace of Canada's first Prime Minister
+    - It possessed the largest population in North America
+    - It was the only city with a functioning railway station
+    correct: 0
+    explanation: In 1857, Queen Victoria selected the small lumber town of Ottawa because it sat right
+      on the border between English-speaking Ontario and French-speaking Quebec.
+  - type: multiple_choice
+    question: Which city serves as the Legislative capital of South Africa, hosting the national parliament?
+    options:
+    - Cape Town
+    - Pretoria
+    - Bloemfontein
+    - Johannesburg
+    correct: 0
+    explanation: '2. Cape Town: The Legislative Capital (Seat of Parliament).'
+  - type: multiple_choice
+    question: What is the capital city of Turkey?
+    options:
+    - Ankara
+    - Istanbul
+    - Izmir
+    - Antalya
+    correct: 0
+    explanation: Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural
+      hub).
+  - type: multiple_choice
+    question: What is the capital city of New Zealand?
+    options:
+    - Wellington
+    - Auckland
+    - Christchurch
+    - Queenstown
+    correct: 0
+    explanation: Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural
+      hub).
+  - type: multiple_choice
+    question: What is the capital city of Morocco?
+    options:
+    - Rabat
+    - Casablanca
+    - Marrakech
+    - Fes
+    correct: 0
+    explanation: Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural
+      hub).
+  - type: multiple_choice
+    question: What is the official federal capital of Brazil, inaugurated in 1960?
+    options:
+    - Brasília
+    - Rio de Janeiro
+    - São Paulo
+    - Salvador
+    correct: 0
+    explanation: In 1960, Brazil moved its capital inland from coastal Rio de Janeiro to the newly constructed
+      planned city of Brasília.
+  - type: multiple_choice
+    question: What city functions as the de facto federal seat of government in Switzerland?
+    options:
+    - Bern
+    - Zurich
+    - Geneva
+    - Basel
+    correct: 0
+    explanation: Instead, Bern serves as the 'Federal City' (Bundesstadt) and de facto capital hosting
+      the Swiss Parliament and federal government.
+  - type: multiple_choice
+    question: What is the capital city of the United Arab Emirates?
+    options:
+    - Abu Dhabi
+    - Dubai
+    - Sharjah
+    - Doha
+    correct: 0
+    explanation: Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural
+      hub).
+  - type: multiple_choice
+    question: What is the capital city of Scotland?
+    options:
+    - Edinburgh
+    - Glasgow
+    - Aberdeen
+    - Dundee
+    correct: 0
+    explanation: Canada's capital is Ottawa, not Toronto (the largest city) or Montreal (the cultural
+      hub).
+- id: microstates_extremes
+  title: Microstates & Geographic Extremes
+  description: 'Explore the world''s smallest nations, highest capitals, northernmost settlements,  and
+    extraordinary geographical superlatives.
 
-  - id: flags_borders_territories
-    title: "Flags, Borders & Unique Territories"
-    description: >
-      Unravel the world's strangest borders, enclave nations, flag designs, 
-      and territorial oddities.
-    cards:
-      - title: "Enclaves: Nations Inside Other Nations"
-        points:
-          - "An enclave is a country entirely surrounded by the territory of another single country."
-          - "There are only three fully enclaved sovereign states in the world:"
-          - "1. Lesotho (completely surrounded by South Africa)."
-          - "2. San Marino (completely surrounded by Italy)."
-          - "3. Vatican City (completely surrounded by Italy / Rome)."
-      - title: "Nepal's Non-Quadrilateral Flag"
-        points:
-          - "Nepal is the only country in the world whose national flag is not rectangular or square."
-          - "Its flag consists of two stacked pennant shapes representing the Himalayan mountains and the two major religions: Hinduism and Buddhism."
-          - "The flag features the sun and crescent moon symbols, representing the wish that the nation will live as long as the celestial bodies."
-          - "The geometric construction of Nepal's flag is so mathematically precise that it is written directly into Article 9 of the Nepalese Constitution."
-      - title: "The Longest International Border"
-        points:
-          - "The border between Canada and the United States is the longest undefended international land border in the world, stretching 8,891 km (5,525 miles)."
-          - "It includes a 20-foot wide cleared deforested swath through wilderness called 'The Slash' to clearly mark the frontier."
-          - "The second longest continuous border is between Russia and Kazakhstan (7,513 km)."
-      - title: "Unique Flag Oddities"
-        points:
-          - "Switzerland and Vatican City are the only two sovereign nations with perfectly square national flags."
-          - "Mozambique's flag features a modern AK-47 assault rifle with a bayonet attached, symbolizing national defense and vigilance."
-          - "Dominica is one of the only national flags in the world to feature the color purple (depicting the Sisserou parrot)."
-          - "Belize is the only sovereign national flag to feature human beings as a prominent design element."
-      - title: "The Büsingen & Baarle Border Enclaves"
-        points:
-          - "Baarle-Hertog (Belgium) and Baarle-Nassau (Netherlands) feature 22 separate Belgian enclaves inside the Netherlands and Dutch counter-enclaves inside Belgium."
-          - "The international border cuts directly through living rooms, cafes, and supermarkets, marked by white crosses on the pavement."
-    trivia:
-      - type: multiple_choice
-        question: "Which country has the only national flag in the world that is not four-sided (non-rectangular)?"
-        options: ["Nepal", "Bhutan", "Switzerland", "Papua New Guinea"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which of the following sovereign nations is an enclave completely surrounded by South Africa?"
-        options: ["Lesotho", "Eswatini (Swaziland)", "Botswana", "Namibia"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which two sovereign nations possess officially square national flags?"
-        options: ["Switzerland and Vatican City", "Monaco and Indonesia", "Belgium and Germany", "San Marino and Andorra"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the longest continuous international land border between two countries in the world?"
-        options: ["Canada and the United States", "Russia and Kazakhstan", "Chile and Argentina", "China and Mongolia"]
-        correct: 0
-      - type: multiple_choice
-        question: "What rare color in vexillology is featured on the flag of Dominica, depicting its national parrot?"
-        options: ["Purple", "Turquoise", "Magenta", "Silver"]
-        correct: 0
-      - type: multiple_choice
-        question: "What modern military object is depicted on the official national flag of Mozambique?"
-        options: ["An AK-47 assault rifle", "A cannon", "A fighter jet", "A submarine"]
-        correct: 0
-      - type: multiple_choice
-        question: "How is the 8,891 km border between the US and Canada kept visible through remote forests?"
-        options: ["A 20-foot-wide deforested tree clearance called 'The Slash'", "A continuous 6-foot stone wall", "Bright orange painted trees every 10 meters", "A deep trench filled with gravel"]
-        correct: 0
-      - type: multiple_choice
-        question: "What sovereign nation is the only one in the world to feature human figures on its national flag?"
-        options: ["Belize", "Malta", "Barbados", "Grenada"]
-        correct: 0
-      - type: multiple_choice
-        question: "How many completely enclaved sovereign nations exist in the entire world?"
-        options: ["Three (Lesotho, San Marino, Vatican City)", "One (Vatican City only)", "Five", "Twelve"]
-        correct: 0
-      - type: multiple_choice
-        question: "In what two European countries do the towns of Baarle-Nassau and Baarle-Hertog share an intertwined puzzle border?"
-        options: ["The Netherlands and Belgium", "France and Spain", "Germany and Austria", "Switzerland and Italy"]
-        correct: 0
-      - type: multiple_choice
-        question: "What celestial symbols are depicted on the two pennants of the flag of Nepal?"
-        options: ["The Sun and the Crescent Moon", "Two crossed shooting stars", "The North Star and Southern Cross", "A solar eclipse"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the capital city of Lesotho, the enclave nation inside South Africa?"
-        options: ["Maseru", "Mbabane", "Gaborone", "Windhoek"]
-        correct: 0
+    '
+  cards:
+  - title: 'Vatican City: The Smallest Nation on Earth'
+    points:
+    - Vatican City is the smallest independent state in the world, measuring just 0.49 square kilometers
+      (about 121 acres).
+    - It has a population of around 800 citizens, none of whom acquire citizenship by birth; citizenship
+      is granted strictly on appointment by the Holy See.
+    - It operates its own post office, newspaper, radio station, pharmacy, and banking system, and has
+      the highest crime rate per capita in the world due to tourist pickpocketing.
+  - title: 'Monaco: The Densest & Wealthiest Playground'
+    points:
+    - Monaco is the second-smallest independent country in the world (about 2 square kilometers), smaller
+      than New York's Central Park!
+    - It is the most densely populated sovereign state on Earth, with over 19,000 residents per square
+      kilometer.
+    - Roughly one-third of Monaco's residents are millionaires, drawn by its zero personal income tax
+      policy and Mediterranean climate.
+  - title: 'La Paz & Quito: High-Altitude Capitals'
+    points:
+    - La Paz, Bolivia is the highest administrative capital in the world, sitting at roughly 3,640 meters
+      (11,942 feet) above sea level.
+    - Due to the thin air, water boils at just 88°C (190°F) in La Paz, and aircraft require extra-long
+      runways for takeoff.
+    - Quito, Ecuador is the second-highest capital (2,850m) and the closest capital city to the Equator.
+  - title: 'Reykjavik: Northernmost Sovereign Capital'
+    points:
+    - Reykjavik, Iceland is the world's northernmost capital of a sovereign state, situated at 64°08'
+      N latitude.
+    - During the summer solstice, Reykjavik experiences 24 hours of continuous daylight ('midnight sun'),
+      while in midwinter it sees only about 4 hours of sunlight.
+    - The entire city is heated almost 100% by renewable geothermal energy tapped from volcanic hot springs.
+  - title: 'Nauru & San Marino: Unique Microstates'
+    points:
+    - Nauru is the smallest island nation in the world (21 sq km) and the only sovereign country on Earth
+      without an official designated capital city.
+    - San Marino claims to be the world's oldest surviving constitutional republic, founded in 301 CE
+      by a stonemason named Saint Marinus.
+  trivia:
+  - type: multiple_choice
+    question: Which sovereign nation is the smallest in the world by both area and population?
+    options:
+    - Vatican City
+    - Monaco
+    - Nauru
+    - Tuvalu
+    correct: 0
+    explanation: Nauru is the smallest island nation in the world (21 sq km) and the only sovereign country
+      on Earth without an official designated capital city.
+  - type: multiple_choice
+    question: Which city is the highest administrative national capital on Earth, sitting over 3,600 meters
+      above sea level?
+    options:
+    - La Paz (Bolivia)
+    - Quito (Ecuador)
+    - Bogotá (Colombia)
+    - Addis Ababa (Ethiopia)
+    correct: 0
+    explanation: La Paz, Bolivia is the highest administrative capital in the world, sitting at roughly
+      3,640 meters (11,942 feet) above sea level.
+  - type: multiple_choice
+    question: What is the northernmost capital city of an independent sovereign state in the world?
+    options:
+    - Reykjavik (Iceland)
+    - Oslo (Norway)
+    - Helsinki (Finland)
+    - Nuuk (Greenland)
+    correct: 0
+    explanation: Reykjavik, Iceland is the world's northernmost capital of a sovereign state, situated
+      at 64°08' N latitude.
+  - type: multiple_choice
+    question: Which sovereign island nation in the Pacific has no officially designated capital city?
+    options:
+    - Nauru
+    - Fiji
+    - Samoa
+    - Vanuatu
+    correct: 0
+    explanation: Nauru is the smallest island nation in the world (21 sq km) and the only sovereign country
+      on Earth without an official designated capital city.
+  - type: multiple_choice
+    question: Which European microstate claims to be the world's oldest continuous constitutional republic,
+      founded in 301 CE?
+    options:
+    - San Marino
+    - Liechtenstein
+    - Andorra
+    - Monaco
+    correct: 0
+    explanation: San Marino claims to be the world's oldest surviving constitutional republic, founded
+      in 301 CE by a stonemason named Saint Marinus.
+  - type: multiple_choice
+    question: How does someone become an official citizen of Vatican City?
+    options:
+    - By appointment and service to the Holy See (not by birth)
+    - By living inside the walls for 5 continuous years
+    - By purchasing citizenship through real estate investment
+    - By passing a mandatory Latin fluency examination
+    correct: 0
+    explanation: It has a population of around 800 citizens, none of whom acquire citizenship by birth;
+      citizenship is granted strictly on appointment by the Holy See.
+  - type: multiple_choice
+    question: What energy source heats nearly 100% of the homes and buildings in Reykjavik, Iceland?
+    options:
+    - Geothermal volcanic energy
+    - Offshore wind turbines
+    - Nuclear fission reactors
+    - Imported coal power
+    correct: 0
+    explanation: The entire city is heated almost 100% by renewable geothermal energy tapped from volcanic
+      hot springs.
+  - type: multiple_choice
+    question: Which sovereign nation has the highest population density in the entire world?
+    options:
+    - Monaco
+    - Singapore
+    - Malta
+    - Bangladesh
+    correct: 0
+    explanation: It operates its own post office, newspaper, radio station, pharmacy, and banking system,
+      and has the highest crime rate per capita in the world due to tourist pickpocketing.
+  - type: multiple_choice
+    question: What unusual physical effect happens to boiling water in high-altitude La Paz, Bolivia?
+    options:
+    - Water boils at a much lower temperature (around 88°C / 190°F)
+    - Water refuses to boil under any circumstance
+    - Water boils instantly without requiring heat
+    - Water boils at a much higher temperature (150°C)
+    correct: 0
+    explanation: Due to the thin air, water boils at just 88°C (190°F) in La Paz, and aircraft require
+      extra-long runways for takeoff.
+  - type: multiple_choice
+    question: What is the capital city of Liechtenstein?
+    options:
+    - Vaduz
+    - Schaan
+    - Balzers
+    - Triesen
+    correct: 0
+    explanation: Quito, Ecuador is the second-highest capital (2,850m) and the closest capital city to
+      the Equator.
+  - type: multiple_choice
+    question: What is the capital city of Andorra?
+    options:
+    - Andorra la Vella
+    - Escaldes-Engordany
+    - Encamp
+    - La Massana
+    correct: 0
+    explanation: Quito, Ecuador is the second-highest capital (2,850m) and the closest capital city to
+      the Equator.
+  - type: multiple_choice
+    question: Which capital city is situated closest to the Earth's Equator?
+    options:
+    - Quito (Ecuador)
+    - Nairobi (Kenya)
+    - Bogotá (Colombia)
+    - Singapore
+    correct: 0
+    explanation: Quito, Ecuador is the second-highest capital (2,850m) and the closest capital city to
+      the Equator.
+- id: flags_borders_territories
+  title: Flags, Borders & Unique Territories
+  description: 'Unravel the world''s strangest borders, enclave nations, flag designs,  and territorial
+    oddities.
 
-  - id: symbols_traditions
-    title: "Curious National Symbols & Global Traditions"
-    description: >
-      Discover extraordinary national animals, historic anthems, unique mottos, 
-      and curious cultural traditions from around the globe.
-    cards:
-      - title: "Unusual National Animals"
-        points:
-          - "Scotland's official national animal is the mythical Unicorn, chosen in Celtic mythology for its nobility, purity, and fierce independence (and as the natural enemy of the English Lion)."
-          - "Wales has the Red Dragon (Y Ddraig Goch) as its iconic national symbol, featured boldly on its national flag."
-          - "Mauritius honors the extinct flightless Dodo bird on its national coat of arms."
-          - "Australia features both the Red Kangaroo and the Emu on its coat of arms because neither animal can easily move backwards, symbolizing a nation always moving forward."
-      - title: "National Anthems With a Twist"
-        points:
-          - "Spain's national anthem, the 'Marcha Real' (Royal March), is one of the only national anthems in the world that has no official lyrics—it is purely instrumental."
-          - "The oldest national anthem melody is the Dutch 'Wilhelmus' (written in 1574)."
-          - "Greece's national anthem, the 'Hymn to Liberty', is the longest in the world, consisting of a staggering 158 stanzas (verses)!"
-          - "Japan's anthem, 'Kimigayo', has the oldest lyrics of any anthem (dating back over 1,000 years to the Heian period) and is also among the shortest."
-      - title: "Time Zone Extremes"
-        points:
-          - "France holds the record for the most time zones of any country in the world, with 12 time zones (spanning from the Caribbean to Polynesia and the Indian Ocean) due to overseas territories."
-          - "Russia spans 11 contiguous time zones across a single continuous landmass from the Baltic Sea to the Bering Strait."
-          - "China spans 5 geographic time zones but officially uses a single nationwide time zone (Beijing Time, UTC+8)."
-      - title: "National Trees & Floral Symbols"
-        points:
-          - "Canada's national symbol is the Maple Leaf, officially recognized on its red-and-white flag since 1965."
-          - "Lebanon features the majestic Green Cedar of Lebanon on its national flag, revered since biblical antiquity."
-          - "Japan celebrates the Cherry Blossom (Sakura) as its beloved cultural floral emblem, representing the fleeting beauty of life."
-      - title: "Unique Country Superlatives"
-        points:
-          - "Iceland has no standing army, no mosquitoes, and is home to the world's oldest parliamentary assembly, the Althing, founded in 930 CE."
-          - "Bhutan is the only country in the world that measures its national progress using 'Gross National Happiness' (GNH) rather than just GDP."
-          - "Papua New Guinea is the most linguistically diverse nation on Earth, with over 840 living languages spoken among its population."
-    trivia:
-      - type: multiple_choice
-        question: "What mythical creature is the official national animal of Scotland?"
-        options: ["The Unicorn", "The Griffin", "The Loch Ness Monster", "The Dragon"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is unusual about the official national anthem of Spain ('Marcha Real')?"
-        options: ["It has no official lyrics (it is purely instrumental)", "It must be sung in three different languages simultaneously", "It can only be played on acoustic bagpipes", "It is over two hours long"]
-        correct: 0
-      - type: multiple_choice
-        question: "Why do the Kangaroo and the Emu appear on the Australian coat of arms?"
-        options: ["Neither animal can easily move backwards, symbolizing progress", "They were the only animals present when explorers landed", "They are the fastest running animals in Australia", "They were domesticated by early settlers for transportation"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which country holds the world record for the highest number of time zones (12 time zones) due to overseas territories?"
-        options: ["France", "Russia", "United States", "United Kingdom"]
-        correct: 0
-      - type: multiple_choice
-        question: "What nation officially measures its progress using 'Gross National Happiness' (GNH) rather than Gross Domestic Product (GDP)?"
-        options: ["Bhutan", "Nepal", "Costa Rica", "New Zealand"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which national anthem is the longest in the world with a total of 158 verses?"
-        options: ["Greece ('Hymn to Liberty')", "United Kingdom ('God Save the King')", "United States ('Star-Spangled Banner')", "France ('La Marseillaise')"]
-        correct: 0
-      - type: multiple_choice
-        question: "Which country is the most linguistically diverse in the world, with over 840 indigenous languages spoken?"
-        options: ["Papua New Guinea", "India", "Nigeria", "Indonesia"]
-        correct: 0
-      - type: multiple_choice
-        question: "What iconic tree is featured prominently at the center of the national flag of Lebanon?"
-        options: ["The Cedar of Lebanon", "The Olive Tree", "The Date Palm", "The Oak Tree"]
-        correct: 0
-      - type: multiple_choice
-        question: "What extinct bird is proudly depicted on the national coat of arms of Mauritius?"
-        options: ["The Dodo", "The Passenger Pigeon", "The Moa", "The Great Auk"]
-        correct: 0
-      - type: multiple_choice
-        question: "How many official time zones does China use across its entire vast continent-sized territory?"
-        options: ["Exactly one (Beijing Time)", "Five distinct regional zones", "Three time zones", "Ten time zones"]
-        correct: 0
-      - type: multiple_choice
-        question: "What is the oldest continuous parliament in the world, founded in Iceland in 930 CE?"
-        options: ["The Althing", "The Duma", "The Knesset", "The Tynwald"]
-        correct: 0
-      - type: multiple_choice
-        question: "What beloved flower represents the fleeting beauty of life and serves as an unofficial cultural symbol of Japan?"
-        options: ["Cherry Blossom (Sakura)", "Lotus Flower", "Chrysanthemum", "Red Orchid"]
-        correct: 0
+    '
+  cards:
+  - title: 'Enclaves: Nations Inside Other Nations'
+    points:
+    - An enclave is a country entirely surrounded by the territory of another single country.
+    - 'There are only three fully enclaved sovereign states in the world:'
+    - 1. Lesotho (completely surrounded by South Africa).
+    - 2. San Marino (completely surrounded by Italy).
+    - 3. Vatican City (completely surrounded by Italy / Rome).
+  - title: Nepal's Non-Quadrilateral Flag
+    points:
+    - Nepal is the only country in the world whose national flag is not rectangular or square.
+    - 'Its flag consists of two stacked pennant shapes representing the Himalayan mountains and the two
+      major religions: Hinduism and Buddhism.'
+    - The flag features the sun and crescent moon symbols, representing the wish that the nation will
+      live as long as the celestial bodies.
+    - The geometric construction of Nepal's flag is so mathematically precise that it is written directly
+      into Article 9 of the Nepalese Constitution.
+  - title: The Longest International Border
+    points:
+    - The border between Canada and the United States is the longest undefended international land border
+      in the world, stretching 8,891 km (5,525 miles).
+    - It includes a 20-foot wide cleared deforested swath through wilderness called 'The Slash' to clearly
+      mark the frontier.
+    - The second longest continuous border is between Russia and Kazakhstan (7,513 km).
+  - title: Unique Flag Oddities
+    points:
+    - Switzerland and Vatican City are the only two sovereign nations with perfectly square national flags.
+    - Mozambique's flag features a modern AK-47 assault rifle with a bayonet attached, symbolizing national
+      defense and vigilance.
+    - Dominica is one of the only national flags in the world to feature the color purple (depicting the
+      Sisserou parrot).
+    - Belize is the only sovereign national flag to feature human beings as a prominent design element.
+  - title: The Büsingen & Baarle Border Enclaves
+    points:
+    - Baarle-Hertog (Belgium) and Baarle-Nassau (Netherlands) feature 22 separate Belgian enclaves inside
+      the Netherlands and Dutch counter-enclaves inside Belgium.
+    - The international border cuts directly through living rooms, cafes, and supermarkets, marked by
+      white crosses on the pavement.
+  trivia:
+  - type: multiple_choice
+    question: Which country has the only national flag in the world that is not four-sided (non-rectangular)?
+    options:
+    - Nepal
+    - Bhutan
+    - Switzerland
+    - Papua New Guinea
+    correct: 0
+    explanation: Nepal is the only country in the world whose national flag is not rectangular or square.
+  - type: multiple_choice
+    question: Which of the following sovereign nations is an enclave completely surrounded by South Africa?
+    options:
+    - Lesotho
+    - Eswatini (Swaziland)
+    - Botswana
+    - Namibia
+    correct: 0
+    explanation: 1. Lesotho (completely surrounded by South Africa).
+  - type: multiple_choice
+    question: Which two sovereign nations possess officially square national flags?
+    options:
+    - Switzerland and Vatican City
+    - Monaco and Indonesia
+    - Belgium and Germany
+    - San Marino and Andorra
+    correct: 0
+    explanation: Switzerland and Vatican City are the only two sovereign nations with perfectly square
+      national flags.
+  - type: multiple_choice
+    question: What is the longest continuous international land border between two countries in the world?
+    options:
+    - Canada and the United States
+    - Russia and Kazakhstan
+    - Chile and Argentina
+    - China and Mongolia
+    correct: 0
+    explanation: The border between Canada and the United States is the longest undefended international
+      land border in the world, stretching 8,891 km (5,525 miles).
+  - type: multiple_choice
+    question: What rare color in vexillology is featured on the flag of Dominica, depicting its national
+      parrot?
+    options:
+    - Purple
+    - Turquoise
+    - Magenta
+    - Silver
+    correct: 0
+    explanation: Dominica is one of the only national flags in the world to feature the color purple (depicting
+      the Sisserou parrot).
+  - type: multiple_choice
+    question: What modern military object is depicted on the official national flag of Mozambique?
+    options:
+    - An AK-47 assault rifle
+    - A cannon
+    - A fighter jet
+    - A submarine
+    correct: 0
+    explanation: Mozambique's flag features a modern AK-47 assault rifle with a bayonet attached, symbolizing
+      national defense and vigilance.
+  - type: multiple_choice
+    question: How is the 8,891 km border between the US and Canada kept visible through remote forests?
+    options:
+    - A 20-foot-wide deforested tree clearance called 'The Slash'
+    - A continuous 6-foot stone wall
+    - Bright orange painted trees every 10 meters
+    - A deep trench filled with gravel
+    correct: 0
+    explanation: It includes a 20-foot wide cleared deforested swath through wilderness called 'The Slash'
+      to clearly mark the frontier.
+  - type: multiple_choice
+    question: What sovereign nation is the only one in the world to feature human figures on its national
+      flag?
+    options:
+    - Belize
+    - Malta
+    - Barbados
+    - Grenada
+    correct: 0
+    explanation: Belize is the only sovereign national flag to feature human beings as a prominent design
+      element.
+  - type: multiple_choice
+    question: How many completely enclaved sovereign nations exist in the entire world?
+    options:
+    - Three (Lesotho, San Marino, Vatican City)
+    - One (Vatican City only)
+    - Five
+    - Twelve
+    correct: 0
+    explanation: 'There are only three fully enclaved sovereign states in the world:'
+  - type: multiple_choice
+    question: In what two European countries do the towns of Baarle-Nassau and Baarle-Hertog share an
+      intertwined puzzle border?
+    options:
+    - The Netherlands and Belgium
+    - France and Spain
+    - Germany and Austria
+    - Switzerland and Italy
+    correct: 0
+    explanation: Baarle-Hertog (Belgium) and Baarle-Nassau (Netherlands) feature 22 separate Belgian enclaves
+      inside the Netherlands and Dutch counter-enclaves inside Belgium.
+  - type: multiple_choice
+    question: What celestial symbols are depicted on the two pennants of the flag of Nepal?
+    options:
+    - The Sun and the Crescent Moon
+    - Two crossed shooting stars
+    - The North Star and Southern Cross
+    - A solar eclipse
+    correct: 0
+    explanation: The flag features the sun and crescent moon symbols, representing the wish that the nation
+      will live as long as the celestial bodies.
+  - type: multiple_choice
+    question: What is the capital city of Lesotho, the enclave nation inside South Africa?
+    options:
+    - Maseru
+    - Mbabane
+    - Gaborone
+    - Windhoek
+    correct: 0
+    explanation: 1. Lesotho (completely surrounded by South Africa).
+- id: symbols_traditions
+  title: Curious National Symbols & Global Traditions
+  description: 'Discover extraordinary national animals, historic anthems, unique mottos,  and curious
+    cultural traditions from around the globe.
+
+    '
+  cards:
+  - title: Unusual National Animals
+    points:
+    - Scotland's official national animal is the mythical Unicorn, chosen in Celtic mythology for its
+      nobility, purity, and fierce independence (and as the natural enemy of the English Lion).
+    - Wales has the Red Dragon (Y Ddraig Goch) as its iconic national symbol, featured boldly on its national
+      flag.
+    - Mauritius honors the extinct flightless Dodo bird on its national coat of arms.
+    - Australia features both the Red Kangaroo and the Emu on its coat of arms because neither animal
+      can easily move backwards, symbolizing a nation always moving forward.
+  - title: National Anthems With a Twist
+    points:
+    - Spain's national anthem, the 'Marcha Real' (Royal March), is one of the only national anthems in
+      the world that has no official lyrics—it is purely instrumental.
+    - The oldest national anthem melody is the Dutch 'Wilhelmus' (written in 1574).
+    - Greece's national anthem, the 'Hymn to Liberty', is the longest in the world, consisting of a staggering
+      158 stanzas (verses)!
+    - Japan's anthem, 'Kimigayo', has the oldest lyrics of any anthem (dating back over 1,000 years to
+      the Heian period) and is also among the shortest.
+  - title: Time Zone Extremes
+    points:
+    - France holds the record for the most time zones of any country in the world, with 12 time zones
+      (spanning from the Caribbean to Polynesia and the Indian Ocean) due to overseas territories.
+    - Russia spans 11 contiguous time zones across a single continuous landmass from the Baltic Sea to
+      the Bering Strait.
+    - China spans 5 geographic time zones but officially uses a single nationwide time zone (Beijing Time,
+      UTC+8).
+  - title: National Trees & Floral Symbols
+    points:
+    - Canada's national symbol is the Maple Leaf, officially recognized on its red-and-white flag since
+      1965.
+    - Lebanon features the majestic Green Cedar of Lebanon on its national flag, revered since biblical
+      antiquity.
+    - Japan celebrates the Cherry Blossom (Sakura) as its beloved cultural floral emblem, representing
+      the fleeting beauty of life.
+  - title: Unique Country Superlatives
+    points:
+    - Iceland has no standing army, no mosquitoes, and is home to the world's oldest parliamentary assembly,
+      the Althing, founded in 930 CE.
+    - Bhutan is the only country in the world that measures its national progress using 'Gross National
+      Happiness' (GNH) rather than just GDP.
+    - Papua New Guinea is the most linguistically diverse nation on Earth, with over 840 living languages
+      spoken among its population.
+  trivia:
+  - type: multiple_choice
+    question: What mythical creature is the official national animal of Scotland?
+    options:
+    - The Unicorn
+    - The Griffin
+    - The Loch Ness Monster
+    - The Dragon
+    correct: 0
+    explanation: Scotland's official national animal is the mythical Unicorn, chosen in Celtic mythology
+      for its nobility, purity, and fierce independence (and as the natural enemy of the English Lion).
+  - type: multiple_choice
+    question: What is unusual about the official national anthem of Spain ('Marcha Real')?
+    options:
+    - It has no official lyrics (it is purely instrumental)
+    - It must be sung in three different languages simultaneously
+    - It can only be played on acoustic bagpipes
+    - It is over two hours long
+    correct: 0
+    explanation: Spain's national anthem, the 'Marcha Real' (Royal March), is one of the only national
+      anthems in the world that has no official lyrics—it is purely instrumental.
+  - type: multiple_choice
+    question: Why do the Kangaroo and the Emu appear on the Australian coat of arms?
+    options:
+    - Neither animal can easily move backwards, symbolizing progress
+    - They were the only animals present when explorers landed
+    - They are the fastest running animals in Australia
+    - They were domesticated by early settlers for transportation
+    correct: 0
+    explanation: Australia features both the Red Kangaroo and the Emu on its coat of arms because neither
+      animal can easily move backwards, symbolizing a nation always moving forward.
+  - type: multiple_choice
+    question: Which country holds the world record for the highest number of time zones (12 time zones)
+      due to overseas territories?
+    options:
+    - France
+    - Russia
+    - United States
+    - United Kingdom
+    correct: 0
+    explanation: France holds the record for the most time zones of any country in the world, with 12
+      time zones (spanning from the Caribbean to Polynesia and the Indian Ocean) due to overseas territories.
+  - type: multiple_choice
+    question: What nation officially measures its progress using 'Gross National Happiness' (GNH) rather
+      than Gross Domestic Product (GDP)?
+    options:
+    - Bhutan
+    - Nepal
+    - Costa Rica
+    - New Zealand
+    correct: 0
+    explanation: Bhutan is the only country in the world that measures its national progress using 'Gross
+      National Happiness' (GNH) rather than just GDP.
+  - type: multiple_choice
+    question: Which national anthem is the longest in the world with a total of 158 verses?
+    options:
+    - Greece ('Hymn to Liberty')
+    - United Kingdom ('God Save the King')
+    - United States ('Star-Spangled Banner')
+    - France ('La Marseillaise')
+    correct: 0
+    explanation: Greece's national anthem, the 'Hymn to Liberty', is the longest in the world, consisting
+      of a staggering 158 stanzas (verses)!
+  - type: multiple_choice
+    question: Which country is the most linguistically diverse in the world, with over 840 indigenous
+      languages spoken?
+    options:
+    - Papua New Guinea
+    - India
+    - Nigeria
+    - Indonesia
+    correct: 0
+    explanation: Papua New Guinea is the most linguistically diverse nation on Earth, with over 840 living
+      languages spoken among its population.
+  - type: multiple_choice
+    question: What iconic tree is featured prominently at the center of the national flag of Lebanon?
+    options:
+    - The Cedar of Lebanon
+    - The Olive Tree
+    - The Date Palm
+    - The Oak Tree
+    correct: 0
+    explanation: Wales has the Red Dragon (Y Ddraig Goch) as its iconic national symbol, featured boldly
+      on its national flag.
+  - type: multiple_choice
+    question: What extinct bird is proudly depicted on the national coat of arms of Mauritius?
+    options:
+    - The Dodo
+    - The Passenger Pigeon
+    - The Moa
+    - The Great Auk
+    correct: 0
+    explanation: Mauritius honors the extinct flightless Dodo bird on its national coat of arms.
+  - type: multiple_choice
+    question: How many official time zones does China use across its entire vast continent-sized territory?
+    options:
+    - Exactly one (Beijing Time)
+    - Five distinct regional zones
+    - Three time zones
+    - Ten time zones
+    correct: 0
+    explanation: China spans 5 geographic time zones but officially uses a single nationwide time zone
+      (Beijing Time, UTC+8).
+  - type: multiple_choice
+    question: What is the oldest continuous parliament in the world, founded in Iceland in 930 CE?
+    options:
+    - The Althing
+    - The Duma
+    - The Knesset
+    - The Tynwald
+    correct: 0
+    explanation: Iceland has no standing army, no mosquitoes, and is home to the world's oldest parliamentary
+      assembly, the Althing, founded in 930 CE.
+  - type: multiple_choice
+    question: What beloved flower represents the fleeting beauty of life and serves as an unofficial cultural
+      symbol of Japan?
+    options:
+    - Cherry Blossom (Sakura)
+    - Lotus Flower
+    - Chrysanthemum
+    - Red Orchid
+    correct: 0
+    explanation: Japan celebrates the Cherry Blossom (Sakura) as its beloved cultural floral emblem, representing
+      the fleeting beauty of life.

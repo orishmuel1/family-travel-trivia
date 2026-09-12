@@ -1,698 +1,1400 @@
 id: famous_inventions_discoveries_en
 title: Famous Inventions & Discoveries
-description: >
-  Embark on an exciting journey through human ingenuity! Explore the groundbreaking creations 
-  and scientific milestones that transformed how we live, communicate, and understand the universe. 
-  Perfect for curious minds of all ages.
+description: 'Embark on an exciting journey through human ingenuity! Explore the groundbreaking creations  and
+  scientific milestones that transformed how we live, communicate, and understand the universe.  Perfect
+  for curious minds of all ages.
+
+  '
 lang: en
 audience: family
 categories:
-  - id: important_facts
-    title: Important Facts
-    description: >
-      Fascinating and foundational milestones in human history. Learn how early breakthroughs 
-      laid the groundwork for the modern world before jumping into the trivia questions.
-    cards:
-      - title: The Wheel
-        points:
-          - "Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather than transportation."
-          - "It took hundreds of years before people thought to connect wheels to axles for chariots and carts."
-          - "The invention revolutionized agriculture, trade, and logistics across ancient civilizations."
-          - "It is widely considered one of the most important mechanical inventions in human history."
-      - title: The Compass
-        points:
-          - "The magnetic compass was first invented in China during the Han Dynasty as a fortune-telling tool."
-          - "By the 11th century, the Chinese military adapted it for maritime navigation and travel."
-          - "It enabled explorers to navigate the open seas safely, transforming global trade and exploration."
-          - "Early compasses used lodestone, a naturally magnetized piece of the mineral magnetite."
-      - title: Gunpowder
-        points:
-          - "Gunpowder was discovered by Chinese alchemists in the 9th century while searching for an elixir of immortality."
-          - "It is one of the 'Four Great Inventions' of ancient China, along with the compass, papermaking, and printing."
-          - "Its formula spread to the Middle East and Europe, completely changing global warfare and engineering."
-          - "Beyond weapons, it revolutionized mining and construction through controlled explosions."
-      - title: Optical Lenses
-        points:
-          - "The earliest recorded use of lenses dates back to ancient Egypt and Mesopotamia for magnifying text."
-          - "In the 13th century, Italian artisans crafted the first wearable eyeglasses to correct vision."
-          - "Lenses later paved the way for the invention of the microscope and the telescope in the early 1600s."
-          - "They allowed humanity to see both the microscopic world and distant stars for the very first time."
-      - title: The Calendar
-        points:
-          - "Ancient Egyptians created one of the first solar calendars based on the annual flooding of the Nile River."
-          - "The Julian calendar, introduced by Julius Caesar, added a leap year every four years to fix seasonal drift."
-          - "The Gregorian calendar, introduced in 1582, corrected minor math errors and is the standard calendar used today."
-          - "Tracking time allowed ancient societies to successfully organize farming, religion, and government."
-      - title: Papermaking
-        points:
-          - "Papermaking was invented in ancient China around 105 CE during the Han Dynasty by court official Ts'ai Lun."
-          - "Early paper was made from mulberry bark, hemp waste, old rags, and fishnets beaten into pulp."
-          - "It dramatically lowered the cost of recording information compared to expensive silk, parchment, and bamboo strips."
-          - "The craft spread along the Silk Road to the Islamic world and Europe, enabling the widespread preservation of knowledge."
-      - title: Metallurgy and Smelting
-        points:
-          - "The discovery of smelting ore around 5000 BCE allowed humans to extract pure copper and transition out of the Stone Age."
-          - "Combining copper with tin created bronze, giving rise to stronger tools, weapons, and entire civilizations."
-          - "The subsequent mastery of iron around 1200 BCE made metal tools widespread and accessible for everyday agriculture."
-          - "Metallurgy laid the foundation for structural architecture, coinage, and modern industrial machinery."
-      - title: Mechanical Clocks
-        points:
-          - "Early humans measured time using sundials, water clocks (clepsydras), and hourglasses filled with sand."
-          - "The verge escapement mechanism in medieval Europe led to the creation of the first mechanical weight-driven tower clocks."
-          - "In 1656, Christiaan Huygens invented the pendulum clock, dramatically increasing accuracy to seconds per day."
-          - "Accurate timekeeping proved essential for naval navigation, railroad scheduling, and industrial work shifts."
-      - title: The Microscope
-        points:
-          - "Dutch spectacle makers Hans and Zacharias Janssen created the first compound microscope around 1590."
-          - "Robert Hooke coined the word 'cell' in 1665 after viewing plant cork under a microscope."
-          - "Antonie van Leeuwenhoek was the first to observe bacteria and protozoa, which he called 'animalcules'."
-          - "Microscopes unlocked the world of microbiology, transforming biology, medicine, and disease research forever."
-      - title: The Telescope
-        points:
-          - "Hans Lippershey filed the earliest known patent for a refracting telescope in the Netherlands in 1608."
-          - "In 1609, Galileo Galilei built his own version and pointed it toward the heavens, discovering Jupiter's four largest moons."
-          - "Sir Isaac Newton invented the reflecting telescope in 1668, using mirrors instead of glass lenses to eliminate color distortion."
-          - "Telescopes dismantled the geocentric view of the universe, proving Earth revolves around the Sun."
-    trivia:
-      - type: multiple_choice
-        question: "Where was the magnetic compass originally invented?"
-        options: ["Ancient Egypt", "Ancient Rome", "China", "Greece"]
-        correct: 2
-      - type: single_qa
-        question: "What was the wheel originally used for before transportation?"
-        answer: "Pottery"
-      - type: multiple_choice
-        question: "Which calendar is the standard, widely used calendar system across the world today?"
-        options: ["Julian Calendar", "Gregorian Calendar", "Lunar Calendar", "Mayan Calendar"]
-        correct: 1
-      - type: single_qa
-        question: "Chinese alchemists accidentally discovered gunpowder while trying to find a formula for what?"
-        answer: "Immortality"
-      - type: multiple_choice
-        question: "The microscope and telescope were made possible by the development of which technology?"
-        options: ["Optical lenses", "Steam power", "Electricity", "Magnetic steel"]
-        correct: 0
-      - type: single_qa
-        question: "Around which year BCE was the wheel invented in Mesopotamia?"
-        answer: "3500 BCE"
-      - type: multiple_choice
-        question: "Which mineral was used to create the earliest magnetic compasses?"
-        options: ["Quartz", "Lodestone", "Flint", "Obsidian"]
-        correct: 1
-      - type: single_qa
-        question: "Who introduced the calendar system that first added a leap year every four years?"
-        answer: "Julius Caesar"
-      - type: multiple_choice
-        question: "Which of the following is NOT one of the 'Four Great Inventions' of ancient China?"
-        options: ["The Compass", "Gunpowder", "Papermaking", "The Steam Engine"]
-        correct: 3
-      - type: single_qa
-        question: "In which country were the first wearable eyeglasses crafted during the 13th century?"
-        answer: "Italy"
-      - type: multiple_choice
-        question: "Who is credited with inventing papermaking in ancient China in 105 CE?"
-        options: ["Ts'ai Lun", "Confucius", "Sun Tzu", "Qin Shi Huang"]
-        correct: 0
-      - type: single_qa
-        question: "What alloy is produced by combining copper with tin?"
-        answer: "Bronze"
-      - type: multiple_choice
-        question: "Who coined the scientific term 'cell' after looking at cork under a microscope?"
-        options: ["Antonie van Leeuwenhoek", "Robert Hooke", "Louis Pasteur", "Charles Darwin"]
-        correct: 1
-      - type: single_qa
-        question: "What Dutch scientist invented the pendulum clock in 1656?"
-        answer: "Christiaan Huygens"
-      - type: multiple_choice
-        question: "What type of telescope did Sir Isaac Newton invent using mirrors rather than lenses?"
-        options: ["Refracting telescope", "Reflecting telescope", "Radio telescope", "Infrared telescope"]
-        correct: 1
-      - type: single_qa
-        question: "What did Antonie van Leeuwenhoek call the microscopic microorganisms he discovered?"
-        answer: "Animalcules"
-      - type: multiple_choice
-        question: "Which ancient civilization created a solar calendar based on the flooding of the Nile River?"
-        options: ["Mesopotamia", "Ancient Egypt", "Ancient Greece", "Inca Empire"]
-        correct: 1
-      - type: single_qa
-        question: "Around what year BCE did humans discover how to smelt copper ore?"
-        answer: "5000 BCE"
-      - type: multiple_choice
-        question: "What early timekeeping device measured time using the flow of water?"
-        options: ["Clepsydra", "Astrolabe", "Sundial", "Sextant"]
-        correct: 0
-      - type: single_qa
-        question: "Which Dutch spectacle maker filed the earliest patent for a telescope in 1608?"
-        answer: "Hans Lippershey"
+- id: important_facts
+  title: Important Facts
+  description: 'Fascinating and foundational milestones in human history. Learn how early breakthroughs  laid
+    the groundwork for the modern world before jumping into the trivia questions.
 
-  - id: world_changing_inventions
-    title: Inventions that Changed the World
-    description: >
-      Massive technological leaps that fundamentally altered the fabric of human society. 
-      Discover how these revolutionary ideas reshaped global communication, industry, transport, and daily life.
-    cards:
-      - title: The Printing Press
-        points:
-          - "Johannes Gutenberg invented the movable-type printing press around 1440 in Germany."
-          - "It allowed books to be mass-produced quickly, lowering costs and boosting literacy rates worldwide."
-          - "The first major book printed was the Gutenberg Bible, which became instantly famous."
-          - "It fueled the Scientific Revolution by allowing researchers to share discoveries widely."
-      - title: The Steam Engine
-        points:
-          - "James Watt vastly improved earlier steam engine designs in the late 18th century, making them practical."
-          - "It provided a reliable source of mechanical power that did not rely on wind, water, or horses."
-          - "The steam engine powered factories, trains, and ships, driving the Industrial Revolution."
-          - "It allowed cities and industries to expand rapidly away from natural waterways."
-      - title: Harnessing Electricity
-        points:
-          - "Benjamin Franklin proved lightning was electrical in 1752 using his famous kite experiment."
-          - "Michael Faraday discovered electromagnetic induction, leading to the creation of generators."
-          - "Thomas Edison developed the long-lasting incandescent light bulb, lighting up the night."
-          - "Electricity fundamentally transformed manufacturing, homes, safety, and nighttime activities."
-      - title: The Automobile
-        points:
-          - "Karl Benz is credited with inventing the first modern gas-powered automobile in 1886."
-          - "Henry Ford revolutionized manufacturing by using the assembly line to build affordable cars."
-          - "The Model T made personal car ownership possible for millions of average families."
-          - "Cars led to the construction of massive highway systems and redefined urban design."
-      - title: Photography
-        points:
-          - "Louis Daguerre introduced the daguerreotype in 1839, the first widely available photographic process."
-          - "Early photographs required long exposure times, meaning people had to sit perfectly still for minutes."
-          - "George Eastman invented roll film and the Kodak camera, bringing photography to the public."
-          - "It allowed history, family moments, and faraway places to be captured visually for the first time."
-      - title: The Airplane
-        points:
-          - "Orville and Wilbur Wright achieved the first powered, controlled, sustained heavier-than-air flight in 1903 at Kitty Hawk."
-          - "Their breakthrough was the three-axis control system, which allowed pilots to steer the aircraft in all directions."
-          - "Commercial aviation expanded rapidly after World War II, connecting distant continents in mere hours."
-          - "Air travel transformed tourism, international business, diplomacy, and global disaster relief."
-      - title: The Transistor and Microchip
-        points:
-          - "John Bardeen, Walter Brattain, and William Shockley invented the transistor at Bell Labs in 1947."
-          - "Transistors replaced bulky, fragile vacuum tubes, enabling compact electronics and computers."
-          - "Robert Noyce and Jack Kilby independently invented the integrated circuit (microchip) in the late 1950s."
-          - "Microchips pack billions of tiny transistors onto a fingernail-sized piece of silicon, powering modern smart tech."
-      - title: Radio and Wireless Communication
-        points:
-          - "Heinrich Hertz proved the existence of electromagnetic radio waves in the late 1880s."
-          - "Guglielmo Marconi developed the first practical radio telegraph system, sending a transatlantic signal in 1901."
-          - "Radio became the primary medium for live news, entertainment, and maritime safety in the early 20th century."
-          - "It laid the physical foundation for television, radar, Wi-Fi, cell phone networks, and satellite communications."
-      - title: Refrigeration
-        points:
-          - "Before mechanical cooling, people relied on ice harvesting, cellars, and salt curing to prevent food spoilage."
-          - "Carl von Linde developed the first practical compressed ammonia refrigeration system in the 1870s."
-          - "Household electric refrigerators became common in the 1920s, drastically reducing foodborne illnesses."
-          - "Refrigerated transport ships and trucks created a global food supply chain, allowing fresh produce to travel worldwide."
-      - title: The Moving Assembly Line
-        points:
-          - "Henry Ford implemented the moving assembly line in 1913 at his Highland Park car plant."
-          - "It reduced the assembly time of a Model T car from over 12 hours down to just 93 minutes."
-          - "This massive leap in efficiency allowed Ford to drastically drop prices while doubling worker wages to $5 a day."
-          - "Assembly-line mass production became the blueprint for 20th-century consumer manufacturing worldwide."
-    trivia:
-      - type: multiple_choice
-        question: "Who is credited with inventing the movable-type printing press in Europe?"
-        options: ["Leonardo da Vinci", "Johannes Gutenberg", "Isaac Newton", "Galileo Galilei"]
-        correct: 1
-      - type: single_qa
-        question: "Which major historical era was powered and accelerated by the practical steam engine?"
-        answer: "Industrial Revolution"
-      - type: multiple_choice
-        question: "Who utilized the assembly line to make the automobile affordable for the public?"
-        options: ["Karl Benz", "Henry Ford", "Nikola Tesla", "Alexander Graham Bell"]
-        correct: 1
-      - type: single_qa
-        question: "What was the name of the first widely available photographic process invented in 1839?"
-        answer: "Daguerreotype"
-      - type: multiple_choice
-        question: "Which scientist discovered electromagnetic induction, paving the way for power generators?"
-        options: ["Michael Faraday", "Thomas Edison", "Benjamin Franklin", "Albert Einstein"]
-        correct: 0
-      - type: single_qa
-        question: "In what year did Karl Benz patent the first modern gas-powered automobile?"
-        answer: "1886"
-      - type: multiple_choice
-        question: "What famous book was the first major work mass-produced on Gutenberg's printing press?"
-        options: ["The Odyssey", "The Bible", "The Republic", "The Canterbury Tales"]
-        correct: 1
-      - type: single_qa
-        question: "Which American statesman flew a kite in a thunderstorm to prove lightning is electricity?"
-        answer: "Benjamin Franklin"
-      - type: multiple_choice
-        question: "Who founded the Kodak company and introduced convenient roll film to the public?"
-        options: ["Louis Daguerre", "George Eastman", "Thomas Edison", "Alexander Graham Bell"]
-        correct: 1
-      - type: single_qa
-        question: "What did early photographs require people to do because of long exposure times?"
-        answer: "Sit perfectly still"
-      - type: multiple_choice
-        question: "Where did the Wright Brothers achieve their historic first powered flight in 1903?"
-        options: ["Dayton, Ohio", "Kitty Hawk, North Carolina", "Cape Canaveral, Florida", "Detroit, Michigan"]
-        correct: 1
-      - type: single_qa
-        question: "What semiconductor component invented at Bell Labs in 1947 replaced bulky vacuum tubes?"
-        answer: "The Transistor"
-      - type: multiple_choice
-        question: "Who sent the very first successful wireless transatlantic radio signal in 1901?"
-        options: ["Guglielmo Marconi", "Alexander Graham Bell", "Heinrich Hertz", "Nikola Tesla"]
-        correct: 0
-      - type: single_qa
-        question: "What German engineer developed the first practical compressed ammonia refrigeration system in the 1870s?"
-        answer: "Carl von Linde"
-      - type: multiple_choice
-        question: "By how much did Henry Ford's moving assembly line reduce the production time of a Model T?"
-        options: ["From 12 hours to 93 minutes", "From 3 days to 1 day", "From 5 hours to 3 hours", "From 24 hours to 10 hours"]
-        correct: 0
-      - type: single_qa
-        question: "What key steering breakthrough did the Wright Brothers invent that made controlled flight possible?"
-        answer: "Three-axis control"
-      - type: multiple_choice
-        question: "Which two inventors independently created the integrated circuit (microchip) in the late 1950s?"
-        options: ["Jack Kilby and Robert Noyce", "Steve Jobs and Steve Wozniak", "Bill Gates and Paul Allen", "Thomas Edison and Nikola Tesla"]
-        correct: 0
-      - type: single_qa
-        question: "What famous daily wage did Henry Ford introduce for his assembly line workers in 1914?"
-        answer: "$5 a day"
-      - type: multiple_choice
-        question: "Which German physicist proved the existence of electromagnetic radio waves in the late 1880s?"
-        options: ["Heinrich Hertz", "Wilhelm Röntgen", "Max Planck", "Werner Heisenberg"]
-        correct: 0
-      - type: single_qa
-        question: "What mineral was commonly harvested from frozen lakes and rivers before mechanical refrigeration?"
-        answer: "Ice"
+    '
+  cards:
+  - title: The Wheel
+    points:
+    - Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather than transportation.
+    - It took hundreds of years before people thought to connect wheels to axles for chariots and carts.
+    - The invention revolutionized agriculture, trade, and logistics across ancient civilizations.
+    - It is widely considered one of the most important mechanical inventions in human history.
+  - title: The Compass
+    points:
+    - The magnetic compass was first invented in China during the Han Dynasty as a fortune-telling tool.
+    - By the 11th century, the Chinese military adapted it for maritime navigation and travel.
+    - It enabled explorers to navigate the open seas safely, transforming global trade and exploration.
+    - Early compasses used lodestone, a naturally magnetized piece of the mineral magnetite.
+  - title: Gunpowder
+    points:
+    - Gunpowder was discovered by Chinese alchemists in the 9th century while searching for an elixir
+      of immortality.
+    - It is one of the 'Four Great Inventions' of ancient China, along with the compass, papermaking,
+      and printing.
+    - Its formula spread to the Middle East and Europe, completely changing global warfare and engineering.
+    - Beyond weapons, it revolutionized mining and construction through controlled explosions.
+  - title: Optical Lenses
+    points:
+    - The earliest recorded use of lenses dates back to ancient Egypt and Mesopotamia for magnifying text.
+    - In the 13th century, Italian artisans crafted the first wearable eyeglasses to correct vision.
+    - Lenses later paved the way for the invention of the microscope and the telescope in the early 1600s.
+    - They allowed humanity to see both the microscopic world and distant stars for the very first time.
+  - title: The Calendar
+    points:
+    - Ancient Egyptians created one of the first solar calendars based on the annual flooding of the Nile
+      River.
+    - The Julian calendar, introduced by Julius Caesar, added a leap year every four years to fix seasonal
+      drift.
+    - The Gregorian calendar, introduced in 1582, corrected minor math errors and is the standard calendar
+      used today.
+    - Tracking time allowed ancient societies to successfully organize farming, religion, and government.
+  - title: Papermaking
+    points:
+    - Papermaking was invented in ancient China around 105 CE during the Han Dynasty by court official
+      Ts'ai Lun.
+    - Early paper was made from mulberry bark, hemp waste, old rags, and fishnets beaten into pulp.
+    - It dramatically lowered the cost of recording information compared to expensive silk, parchment,
+      and bamboo strips.
+    - The craft spread along the Silk Road to the Islamic world and Europe, enabling the widespread preservation
+      of knowledge.
+  - title: Metallurgy and Smelting
+    points:
+    - The discovery of smelting ore around 5000 BCE allowed humans to extract pure copper and transition
+      out of the Stone Age.
+    - Combining copper with tin created bronze, giving rise to stronger tools, weapons, and entire civilizations.
+    - The subsequent mastery of iron around 1200 BCE made metal tools widespread and accessible for everyday
+      agriculture.
+    - Metallurgy laid the foundation for structural architecture, coinage, and modern industrial machinery.
+  - title: Mechanical Clocks
+    points:
+    - Early humans measured time using sundials, water clocks (clepsydras), and hourglasses filled with
+      sand.
+    - The verge escapement mechanism in medieval Europe led to the creation of the first mechanical weight-driven
+      tower clocks.
+    - In 1656, Christiaan Huygens invented the pendulum clock, dramatically increasing accuracy to seconds
+      per day.
+    - Accurate timekeeping proved essential for naval navigation, railroad scheduling, and industrial
+      work shifts.
+  - title: The Microscope
+    points:
+    - Dutch spectacle makers Hans and Zacharias Janssen created the first compound microscope around 1590.
+    - Robert Hooke coined the word 'cell' in 1665 after viewing plant cork under a microscope.
+    - Antonie van Leeuwenhoek was the first to observe bacteria and protozoa, which he called 'animalcules'.
+    - Microscopes unlocked the world of microbiology, transforming biology, medicine, and disease research
+      forever.
+  - title: The Telescope
+    points:
+    - Hans Lippershey filed the earliest known patent for a refracting telescope in the Netherlands in
+      1608.
+    - In 1609, Galileo Galilei built his own version and pointed it toward the heavens, discovering Jupiter's
+      four largest moons.
+    - Sir Isaac Newton invented the reflecting telescope in 1668, using mirrors instead of glass lenses
+      to eliminate color distortion.
+    - Telescopes dismantled the geocentric view of the universe, proving Earth revolves around the Sun.
+  trivia:
+  - type: multiple_choice
+    question: Where was the magnetic compass originally invented?
+    options:
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    - Greece
+    correct: 2
+    explanation: The magnetic compass was first invented in China during the Han Dynasty as a fortune-telling
+      tool.
+  - type: multiple_choice
+    question: What was the wheel originally used for before transportation?
+    explanation: Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather
+      than transportation.
+    options:
+    - Pottery
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Which calendar is the standard, widely used calendar system across the world today?
+    options:
+    - Julian Calendar
+    - Gregorian Calendar
+    - Lunar Calendar
+    - Mayan Calendar
+    correct: 1
+    explanation: The Gregorian calendar, introduced in 1582, corrected minor math errors and is the standard
+      calendar used today.
+  - type: multiple_choice
+    question: Chinese alchemists accidentally discovered gunpowder while trying to find a formula for
+      what?
+    explanation: Gunpowder was discovered by Chinese alchemists in the 9th century while searching for
+      an elixir of immortality.
+    options:
+    - Immortality
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: The microscope and telescope were made possible by the development of which technology?
+    options:
+    - Optical lenses
+    - Steam power
+    - Electricity
+    - Magnetic steel
+    correct: 0
+    explanation: Lenses later paved the way for the invention of the microscope and the telescope in the
+      early 1600s.
+  - type: multiple_choice
+    question: Around which year BCE was the wheel invented in Mesopotamia?
+    explanation: Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather
+      than transportation.
+    options:
+    - 3500 BCE
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Which mineral was used to create the earliest magnetic compasses?
+    options:
+    - Quartz
+    - Lodestone
+    - Flint
+    - Obsidian
+    correct: 1
+    explanation: Early compasses used lodestone, a naturally magnetized piece of the mineral magnetite.
+  - type: multiple_choice
+    question: Who introduced the calendar system that first added a leap year every four years?
+    explanation: The Julian calendar, introduced by Julius Caesar, added a leap year every four years
+      to fix seasonal drift.
+    options:
+    - Julius Caesar
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Which of the following is NOT one of the 'Four Great Inventions' of ancient China?
+    options:
+    - The Compass
+    - Gunpowder
+    - Papermaking
+    - The Steam Engine
+    correct: 3
+    explanation: It is one of the 'Four Great Inventions' of ancient China, along with the compass, papermaking,
+      and printing.
+  - type: multiple_choice
+    question: In which country were the first wearable eyeglasses crafted during the 13th century?
+    explanation: In the 13th century, Italian artisans crafted the first wearable eyeglasses to correct
+      vision.
+    options:
+    - Italy
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Who is credited with inventing papermaking in ancient China in 105 CE?
+    options:
+    - Ts'ai Lun
+    - Confucius
+    - Sun Tzu
+    - Qin Shi Huang
+    correct: 0
+    explanation: Papermaking was invented in ancient China around 105 CE during the Han Dynasty by court
+      official Ts'ai Lun.
+  - type: multiple_choice
+    question: What alloy is produced by combining copper with tin?
+    explanation: Combining copper with tin created bronze, giving rise to stronger tools, weapons, and
+      entire civilizations.
+    options:
+    - Bronze
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Who coined the scientific term 'cell' after looking at cork under a microscope?
+    options:
+    - Antonie van Leeuwenhoek
+    - Robert Hooke
+    - Louis Pasteur
+    - Charles Darwin
+    correct: 1
+    explanation: Robert Hooke coined the word 'cell' in 1665 after viewing plant cork under a microscope.
+  - type: multiple_choice
+    question: What Dutch scientist invented the pendulum clock in 1656?
+    explanation: In 1656, Christiaan Huygens invented the pendulum clock, dramatically increasing accuracy
+      to seconds per day.
+    options:
+    - Christiaan Huygens
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: What type of telescope did Sir Isaac Newton invent using mirrors rather than lenses?
+    options:
+    - Refracting telescope
+    - Reflecting telescope
+    - Radio telescope
+    - Infrared telescope
+    correct: 1
+    explanation: Sir Isaac Newton invented the reflecting telescope in 1668, using mirrors instead of
+      glass lenses to eliminate color distortion.
+  - type: multiple_choice
+    question: What did Antonie van Leeuwenhoek call the microscopic microorganisms he discovered?
+    explanation: Antonie van Leeuwenhoek was the first to observe bacteria and protozoa, which he called
+      'animalcules'.
+    options:
+    - Animalcules
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: Which ancient civilization created a solar calendar based on the flooding of the Nile River?
+    options:
+    - Mesopotamia
+    - Ancient Egypt
+    - Ancient Greece
+    - Inca Empire
+    correct: 1
+    explanation: Ancient Egyptians created one of the first solar calendars based on the annual flooding
+      of the Nile River.
+  - type: multiple_choice
+    question: Around what year BCE did humans discover how to smelt copper ore?
+    explanation: The discovery of smelting ore around 5000 BCE allowed humans to extract pure copper and
+      transition out of the Stone Age.
+    options:
+    - 5000 BCE
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+  - type: multiple_choice
+    question: What early timekeeping device measured time using the flow of water?
+    options:
+    - Clepsydra
+    - Astrolabe
+    - Sundial
+    - Sextant
+    correct: 0
+    explanation: Early humans measured time using sundials, water clocks (clepsydras), and hourglasses
+      filled with sand.
+  - type: multiple_choice
+    question: Which Dutch spectacle maker filed the earliest patent for a telescope in 1608?
+    explanation: Hans Lippershey filed the earliest known patent for a refracting telescope in the Netherlands
+      in 1608.
+    options:
+    - Hans Lippershey
+    - Ancient Egypt
+    - Ancient Rome
+    - China
+    correct: 0
+- id: world_changing_inventions
+  title: Inventions that Changed the World
+  description: 'Massive technological leaps that fundamentally altered the fabric of human society.  Discover
+    how these revolutionary ideas reshaped global communication, industry, transport, and daily life.
 
-  - id: medical_breakthroughs
-    title: Medical Breakthroughs
-    description: >
-      Life-saving discoveries that doubled human life expectancy and conquered deadly diseases. 
-      Explore the milestones of medicine, surgery, and genetics that protect our health every day.
-    cards:
-      - title: Vaccines
-        points:
-          - "Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox."
-          - "He noticed milkmaids were immune to smallpox because they had contracted milder cowpox."
-          - "Louis Pasteur expanded on this by developing vaccines for rabies and anthrax."
-          - "Vaccines train the immune system to fight off dangerous viruses and bacteria safely."
-      - title: Penicillin
-        points:
-          - "Alexander Fleming accidentally discovered penicillin in 1928 when mold grew on his bacteria dishes."
-          - "He noticed the Penicillium mold completely destroyed the surrounding harmful bacteria."
-          - "It became the world's first effective antibiotic, saving millions of lives from infections."
-          - "Penicillin revolutionized warfare and civilian life by turning deadly wounds into treatable conditions."
-      - title: Anesthesia
-        points:
-          - "Before anesthesia, surgeries were incredibly painful and had to be performed as quickly as possible."
-          - "In 1846, William Morton demonstrated the effective use of ether as a surgical anesthetic."
-          - "It allows patients to fall into a deep, painless sleep during complex medical operations."
-          - "Anesthesia turned surgery from a desperate, terrifying last resort into a precise science."
-      - title: X-rays
-        points:
-          - "Wilhelm Röntgen accidentally discovered X-rays in 1895 while experimenting with electrical currents."
-          - "The very first X-ray image ever taken showed the bones inside his wife's hand."
-          - "X-rays pass easily through skin and muscle but are blocked by denser bones, creating a shadow image."
-          - "This medical breakthrough allowed doctors to look inside the human body without surgery."
-      - title: Insulin
-        points:
-          - "Frederick Banting and Charles Best successfully isolated insulin in 1921."
-          - "Before this breakthrough, a diagnosis of Type 1 diabetes was a fatal condition with no treatment."
-          - "Insulin regulates glucose levels in the blood, allowing the body to use sugar for energy properly."
-          - "Their discovery transformed diabetes from a death sentence into a highly manageable condition."
-      - title: Germ Theory and Antiseptics
-        points:
-          - "For centuries, people believed diseases were spread by foul air called 'miasma' or bodily imbalances."
-          - "Louis Pasteur and Robert Koch proved that specific microscopic organisms (germs) cause infectious diseases."
-          - "Joseph Lister applied this discovery in the 1860s by using carbolic acid to sterilize surgical instruments."
-          - "Antiseptic practices and handwashing dramatically reduced hospital infections and maternal mortality."
-      - title: Blood Groups and Transfusion
-        points:
-          - "Early blood transfusions often killed patients due to mysterious, violent immune reactions."
-          - "Karl Landsteiner discovered the ABO human blood group system in 1901."
-          - "Understanding blood compatibility allowed safe transfusions during surgery, trauma, and childbirth."
-          - "He was awarded the 1930 Nobel Prize in Physiology or Medicine for this monumental discovery."
-      - title: The Polio Vaccine
-        points:
-          - "Polio was a dreaded virus that paralyzed tens of thousands of children worldwide every year."
-          - "Jonas Salk developed the first effective inactivated polio vaccine in 1953, testing it nationwide."
-          - "Albert Sabin introduced an oral polio vaccine on a sugar cube, making mass immunization easy."
-          - "Global vaccination campaigns have virtually eradicated polio from almost the entire planet."
-      - title: DNA Double Helix
-        points:
-          - "James Watson and Francis Crick determined the double helix structure of DNA in 1953."
-          - "Crucial experimental data and X-ray diffraction images were captured by chemist Rosalind Franklin."
-          - "The twisted ladder shape explained how genetic information is stored, copied, and passed to offspring."
-          - "This discovery launched modern molecular biology, genetic testing, and personalized medicine."
-      - title: CRISPR and Gene Editing
-        points:
-          - "CRISPR-Cas9 is a revolutionary gene-editing tool adapted from a natural bacterial defense system."
-          - "Jennifer Doudna and Emmanuelle Charpentier showed how to use it like molecular scissors to edit DNA."
-          - "They won the 2020 Nobel Prize in Chemistry for their groundbreaking work."
-          - "CRISPR enables scientists to correct genetic defects, treat hereditary diseases, and develop resilient crops."
-    trivia:
-      - type: multiple_choice
-        question: "Who discovered penicillin, the world's first effective antibiotic, in 1928?"
-        options: ["Louis Pasteur", "Edward Jenner", "Alexander Fleming", "Jonas Salk"]
-        correct: 2
-      - type: single_qa
-        question: "Which disease did Edward Jenner target to create the world's first vaccine?"
-        answer: "Smallpox"
-      - type: multiple_choice
-        question: "Whose hand was featured in the very first medical X-ray image ever taken?"
-        options: ["Wilhelm Röntgen's wife", "Thomas Edison", "Queen Victoria", "Alexander Fleming"]
-        correct: 0
-      - type: single_qa
-        question: "What hormone did Frederick Banting and Charles Best isolate to treat diabetes?"
-        answer: "Insulin"
-      - type: multiple_choice
-        question: "Which substance was successfully demonstrated in 1846 as a surgical anesthetic?"
-        options: ["Penicillin", "Ether", "Aspirin", "Quinine"]
-        correct: 1
-      - type: single_qa
-        question: "From what type of organism did Alexander Fleming isolate penicillin?"
-        answer: "Mold"
-      - type: multiple_choice
-        question: "Louis Pasteur developed a famous life-saving vaccine for which deadly animal-borne virus?"
-        options: ["Rabies", "Malaria", "Influenza", "Polio"]
-        correct: 0
-      - type: single_qa
-        question: "What physical property allows X-rays to show bones clearly on film?"
-        answer: "Bones are dense"
-      - type: multiple_choice
-        question: "Before the discovery of insulin in 1921, Type 1 diabetes was considered:"
-        options: ["Easily curable", "A minor allergy", "A fatal condition", "A skin disease"]
-        correct: 2
-      - type: single_qa
-        question: "What did Edward Jenner observe milkmaids catching that kept them safe from smallpox?"
-        answer: "Cowpox"
-      - type: multiple_choice
-        question: "Who pioneered antiseptic surgery in the 1860s by using carbolic acid to sterilize tools?"
-        options: ["Joseph Lister", "William Morton", "Robert Koch", "Karl Landsteiner"]
-        correct: 0
-      - type: single_qa
-        question: "What Austrian biologist discovered the ABO human blood groups in 1901?"
-        answer: "Karl Landsteiner"
-      - type: multiple_choice
-        question: "Who developed the first widely used inactivated polio vaccine in 1953?"
-        options: ["Jonas Salk", "Albert Sabin", "Edward Jenner", "Alexander Fleming"]
-        correct: 0
-      - type: single_qa
-        question: "Which British biophysicist captured Photo 51, the famous X-ray diffraction image of DNA?"
-        answer: "Rosalind Franklin"
-      - type: multiple_choice
-        question: "What shape describes the molecular structure of DNA discovered by Watson and Crick?"
-        options: ["Double Helix", "Triple Ring", "Single Sheet", "Concentric Sphere"]
-        correct: 0
-      - type: single_qa
-        question: "What revolutionary gene-editing technology was adapted from bacterial immune systems?"
-        answer: "CRISPR-Cas9"
-      - type: multiple_choice
-        question: "What old medical theory falsely claimed that infectious diseases were spread by foul air?"
-        options: ["Miasma theory", "Humoral theory", "Phlogiston theory", "Vitalism"]
-        correct: 0
-      - type: single_qa
-        question: "Who developed the oral polio vaccine given on a sugar cube?"
-        answer: "Albert Sabin"
-      - type: multiple_choice
-        question: "Jennifer Doudna and Emmanuelle Charpentier won the 2020 Nobel Prize in Chemistry for developing:"
-        options: ["CRISPR gene editing", "The Polio Vaccine", "Penicillin synthesis", "Synthetic Insulin"]
-        correct: 0
-      - type: single_qa
-        question: "What chemical did Joseph Lister use as an antiseptic wash for wounds and instruments?"
-        answer: "Carbolic acid"
+    '
+  cards:
+  - title: The Printing Press
+    points:
+    - Johannes Gutenberg invented the movable-type printing press around 1440 in Germany.
+    - It allowed books to be mass-produced quickly, lowering costs and boosting literacy rates worldwide.
+    - The first major book printed was the Gutenberg Bible, which became instantly famous.
+    - It fueled the Scientific Revolution by allowing researchers to share discoveries widely.
+  - title: The Steam Engine
+    points:
+    - James Watt vastly improved earlier steam engine designs in the late 18th century, making them practical.
+    - It provided a reliable source of mechanical power that did not rely on wind, water, or horses.
+    - The steam engine powered factories, trains, and ships, driving the Industrial Revolution.
+    - It allowed cities and industries to expand rapidly away from natural waterways.
+  - title: Harnessing Electricity
+    points:
+    - Benjamin Franklin proved lightning was electrical in 1752 using his famous kite experiment.
+    - Michael Faraday discovered electromagnetic induction, leading to the creation of generators.
+    - Thomas Edison developed the long-lasting incandescent light bulb, lighting up the night.
+    - Electricity fundamentally transformed manufacturing, homes, safety, and nighttime activities.
+  - title: The Automobile
+    points:
+    - Karl Benz is credited with inventing the first modern gas-powered automobile in 1886.
+    - Henry Ford revolutionized manufacturing by using the assembly line to build affordable cars.
+    - The Model T made personal car ownership possible for millions of average families.
+    - Cars led to the construction of massive highway systems and redefined urban design.
+  - title: Photography
+    points:
+    - Louis Daguerre introduced the daguerreotype in 1839, the first widely available photographic process.
+    - Early photographs required long exposure times, meaning people had to sit perfectly still for minutes.
+    - George Eastman invented roll film and the Kodak camera, bringing photography to the public.
+    - It allowed history, family moments, and faraway places to be captured visually for the first time.
+  - title: The Airplane
+    points:
+    - Orville and Wilbur Wright achieved the first powered, controlled, sustained heavier-than-air flight
+      in 1903 at Kitty Hawk.
+    - Their breakthrough was the three-axis control system, which allowed pilots to steer the aircraft
+      in all directions.
+    - Commercial aviation expanded rapidly after World War II, connecting distant continents in mere hours.
+    - Air travel transformed tourism, international business, diplomacy, and global disaster relief.
+  - title: The Transistor and Microchip
+    points:
+    - John Bardeen, Walter Brattain, and William Shockley invented the transistor at Bell Labs in 1947.
+    - Transistors replaced bulky, fragile vacuum tubes, enabling compact electronics and computers.
+    - Robert Noyce and Jack Kilby independently invented the integrated circuit (microchip) in the late
+      1950s.
+    - Microchips pack billions of tiny transistors onto a fingernail-sized piece of silicon, powering
+      modern smart tech.
+  - title: Radio and Wireless Communication
+    points:
+    - Heinrich Hertz proved the existence of electromagnetic radio waves in the late 1880s.
+    - Guglielmo Marconi developed the first practical radio telegraph system, sending a transatlantic
+      signal in 1901.
+    - Radio became the primary medium for live news, entertainment, and maritime safety in the early 20th
+      century.
+    - It laid the physical foundation for television, radar, Wi-Fi, cell phone networks, and satellite
+      communications.
+  - title: Refrigeration
+    points:
+    - Before mechanical cooling, people relied on ice harvesting, cellars, and salt curing to prevent
+      food spoilage.
+    - Carl von Linde developed the first practical compressed ammonia refrigeration system in the 1870s.
+    - Household electric refrigerators became common in the 1920s, drastically reducing foodborne illnesses.
+    - Refrigerated transport ships and trucks created a global food supply chain, allowing fresh produce
+      to travel worldwide.
+  - title: The Moving Assembly Line
+    points:
+    - Henry Ford implemented the moving assembly line in 1913 at his Highland Park car plant.
+    - It reduced the assembly time of a Model T car from over 12 hours down to just 93 minutes.
+    - This massive leap in efficiency allowed Ford to drastically drop prices while doubling worker wages
+      to $5 a day.
+    - Assembly-line mass production became the blueprint for 20th-century consumer manufacturing worldwide.
+  trivia:
+  - type: multiple_choice
+    question: Who is credited with inventing the movable-type printing press in Europe?
+    options:
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    - Galileo Galilei
+    correct: 1
+    explanation: Johannes Gutenberg invented the movable-type printing press around 1440 in Germany.
+  - type: multiple_choice
+    question: Which major historical era was powered and accelerated by the practical steam engine?
+    explanation: The steam engine powered factories, trains, and ships, driving the Industrial Revolution.
+    options:
+    - Industrial Revolution
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Who utilized the assembly line to make the automobile affordable for the public?
+    options:
+    - Karl Benz
+    - Henry Ford
+    - Nikola Tesla
+    - Alexander Graham Bell
+    correct: 1
+    explanation: Henry Ford revolutionized manufacturing by using the assembly line to build affordable
+      cars.
+  - type: multiple_choice
+    question: What was the name of the first widely available photographic process invented in 1839?
+    explanation: Louis Daguerre introduced the daguerreotype in 1839, the first widely available photographic
+      process.
+    options:
+    - Daguerreotype
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Which scientist discovered electromagnetic induction, paving the way for power generators?
+    options:
+    - Michael Faraday
+    - Thomas Edison
+    - Benjamin Franklin
+    - Albert Einstein
+    correct: 0
+    explanation: Michael Faraday discovered electromagnetic induction, leading to the creation of generators.
+  - type: multiple_choice
+    question: In what year did Karl Benz patent the first modern gas-powered automobile?
+    explanation: Karl Benz is credited with inventing the first modern gas-powered automobile in 1886.
+    options:
+    - '1886'
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: What famous book was the first major work mass-produced on Gutenberg's printing press?
+    options:
+    - The Odyssey
+    - The Bible
+    - The Republic
+    - The Canterbury Tales
+    correct: 1
+    explanation: The first major book printed was the Gutenberg Bible, which became instantly famous.
+  - type: multiple_choice
+    question: Which American statesman flew a kite in a thunderstorm to prove lightning is electricity?
+    explanation: Benjamin Franklin proved lightning was electrical in 1752 using his famous kite experiment.
+    options:
+    - Benjamin Franklin
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Who founded the Kodak company and introduced convenient roll film to the public?
+    options:
+    - Louis Daguerre
+    - George Eastman
+    - Thomas Edison
+    - Alexander Graham Bell
+    correct: 1
+    explanation: George Eastman invented roll film and the Kodak camera, bringing photography to the public.
+  - type: multiple_choice
+    question: What did early photographs require people to do because of long exposure times?
+    explanation: Early photographs required long exposure times, meaning people had to sit perfectly still
+      for minutes.
+    options:
+    - Sit perfectly still
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Where did the Wright Brothers achieve their historic first powered flight in 1903?
+    options:
+    - Dayton, Ohio
+    - Kitty Hawk, North Carolina
+    - Cape Canaveral, Florida
+    - Detroit, Michigan
+    correct: 1
+    explanation: Orville and Wilbur Wright achieved the first powered, controlled, sustained heavier-than-air
+      flight in 1903 at Kitty Hawk.
+  - type: multiple_choice
+    question: What semiconductor component invented at Bell Labs in 1947 replaced bulky vacuum tubes?
+    explanation: John Bardeen, Walter Brattain, and William Shockley invented the transistor at Bell Labs
+      in 1947.
+    options:
+    - The Transistor
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Who sent the very first successful wireless transatlantic radio signal in 1901?
+    options:
+    - Guglielmo Marconi
+    - Alexander Graham Bell
+    - Heinrich Hertz
+    - Nikola Tesla
+    correct: 0
+    explanation: Guglielmo Marconi developed the first practical radio telegraph system, sending a transatlantic
+      signal in 1901.
+  - type: multiple_choice
+    question: What German engineer developed the first practical compressed ammonia refrigeration system
+      in the 1870s?
+    explanation: Carl von Linde developed the first practical compressed ammonia refrigeration system
+      in the 1870s.
+    options:
+    - Carl von Linde
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: By how much did Henry Ford's moving assembly line reduce the production time of a Model
+      T?
+    options:
+    - From 12 hours to 93 minutes
+    - From 3 days to 1 day
+    - From 5 hours to 3 hours
+    - From 24 hours to 10 hours
+    correct: 0
+    explanation: It reduced the assembly time of a Model T car from over 12 hours down to just 93 minutes.
+  - type: multiple_choice
+    question: What key steering breakthrough did the Wright Brothers invent that made controlled flight
+      possible?
+    explanation: Their breakthrough was the three-axis control system, which allowed pilots to steer the
+      aircraft in all directions.
+    options:
+    - Three-axis control
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Which two inventors independently created the integrated circuit (microchip) in the late
+      1950s?
+    options:
+    - Jack Kilby and Robert Noyce
+    - Steve Jobs and Steve Wozniak
+    - Bill Gates and Paul Allen
+    - Thomas Edison and Nikola Tesla
+    correct: 0
+    explanation: Robert Noyce and Jack Kilby independently invented the integrated circuit (microchip)
+      in the late 1950s.
+  - type: multiple_choice
+    question: What famous daily wage did Henry Ford introduce for his assembly line workers in 1914?
+    explanation: Henry Ford implemented the moving assembly line in 1913 at his Highland Park car plant.
+    options:
+    - $5 a day
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Which German physicist proved the existence of electromagnetic radio waves in the late 1880s?
+    options:
+    - Heinrich Hertz
+    - Wilhelm Röntgen
+    - Max Planck
+    - Werner Heisenberg
+    correct: 0
+    explanation: Heinrich Hertz proved the existence of electromagnetic radio waves in the late 1880s.
+  - type: multiple_choice
+    question: What mineral was commonly harvested from frozen lakes and rivers before mechanical refrigeration?
+    explanation: Before mechanical cooling, people relied on ice harvesting, cellars, and salt curing
+      to prevent food spoilage.
+    options:
+    - Ice
+    - Leonardo da Vinci
+    - Johannes Gutenberg
+    - Isaac Newton
+    correct: 0
+- id: medical_breakthroughs
+  title: Medical Breakthroughs
+  description: 'Life-saving discoveries that doubled human life expectancy and conquered deadly diseases.  Explore
+    the milestones of medicine, surgery, and genetics that protect our health every day.
 
-  - id: everyday_objects
-    title: Everyday Objects
-    description: >
-      The incredible stories behind items we use every single day. From instant communication 
-      to office stationery and zippers, find out how these modern conveniences came to be.
-    cards:
-      - title: The Telephone
-        points:
-          - "Alexander Graham Bell was granted the first official patent for the telephone in 1876."
-          - "His first famous spoken words through the machine were, 'Mr. Watson, come here, I want to see you.'"
-          - "The invention converted spoken sound waves into electrical signals to travel along wires."
-          - "It allowed people to speak across cities and continents instantly, shrinking the world."
-      - title: The Light Bulb
-        points:
-          - "While many tried, Thomas Edison created the first commercially practical incandescent light bulb in 1879."
-          - "The key was finding a carbonized bamboo filament that could burn for over 1,200 hours without melting."
-          - "Edison also built an entire electrical grid system so homes could actually power their bulbs."
-          - "It freed human activity from the limits of daylight and replaced smelly gas lamps."
-      - title: The Internet
-        points:
-          - "The Internet began as ARPANET in the late 1960s, a military network funded by the US government."
-          - "Tim Berners-Lee invented the World Wide Web in 1989, making the internet easy for the public to use."
-          - "It allows computers across the globe to share data instantly through interconnected networks."
-          - "The internet fundamentally changed education, commerce, entertainment, and social interaction."
-      - title: Canned Food
-        points:
-          - "Nicolas Appert invented food canning in 1810 after a French military contest sought ways to preserve army rations."
-          - "He discovered that sealing food inside airtight glass jars and boiling them kept it from spoiling."
-          - "Amusingly, the tin can was invented shortly after, but the mechanical can opener wasn't invented until 50 years later!"
-          - "It made long-distance travel, military campaigns, and modern grocery stores possible."
-      - title: The Microwave Oven
-        points:
-          - "Percy Spencer accidentally invented the microwave oven in 1945 while working on military radar equipment."
-          - "He noticed that radar waves had completely melted a chocolate bar inside his pocket."
-          - "The first food intentionally cooked with a microwave for testing was popcorn, followed immediately by an egg (which famously exploded in a colleague's face!)."
-          - "It revolutionized home cooking by heating food molecules rapidly without warming the air around them."
-      - title: The Zipper
-        points:
-          - "Early clothing relied on tedious buttons, laces, and hooks that were slow to fasten."
-          - "Whitcomb Judson patented the 'clasp locker' in 1893, and Gideon Sundback perfected the modern interlocking teeth in 1913."
-          - "The B.F. Goodrich Company coined the catchy name 'zipper' in 1923 when they used it on rubber boots."
-          - "Today, billions of zippers are produced each year for clothing, luggage, camping gear, and spacesuits."
-      - title: Hook and Loop Fasteners (Velcro)
-        points:
-          - "Swiss engineer George de Mestral invented hook-and-loop fasteners in 1941 after a hunting walk with his dog."
-          - "He inspected the burdock burrs clinging stubbornly to his socks and his dog's fur under a microscope."
-          - "He observed hundreds of microscopic hooks that effortlessly gripped tiny loops in animal fur and fabric."
-          - "NASA popularized the fastener during the Apollo space missions to secure equipment in zero gravity."
-      - title: Post-it Notes
-        points:
-          - "In 1968, 3M chemist Spencer Silver accidentally created a unique, low-tack adhesive that peeled off cleanly."
-          - "Years later, his colleague Art Fry used the weak glue to keep bookmarks from falling out of his church hymnbook."
-          - "3M launched Post-it Notes in 1980, and the canary-yellow squares became a worldwide office staple."
-          - "The iconic yellow color was a pure coincidence because the lab next door only had scrap yellow paper."
-      - title: The Ballpoint Pen
-        points:
-          - "Fountain pens often leaked, smudged easily, and needed frequent refilling from messy inkwells."
-          - "Hungarian journalist László Bíró noticed quick-drying newspaper ink and designed a tiny rotating metal ball socket in 1938."
-          - "British Royal Air Force pilots adopted Bíró pens during World War II because they did not leak at high altitudes."
-          - "Marcel Bich later streamlined manufacturing to create the ultra-affordable, ubiquitous BIC Cristal pen."
-      - title: The Barcode
-        points:
-          - "Norman Joseph Woodland and Bernard Silver invented the barcode in 1949, inspired by Morse code dots and dashes."
-          - "Woodland extended Morse code into thin and thick lines drawn in the sand on a Miami beach."
-          - "The first commercial item scanned by a laser barcode reader in 1974 was a pack of Wrigley's Juicy Fruit gum."
-          - "Barcodes and modern QR codes automated inventory, retail checkout, package shipping, and ticketing."
-    trivia:
-      - type: multiple_choice
-        question: "Who is credited with inventing the World Wide Web in 1989?"
-        options: ["Bill Gates", "Tim Berners-Lee", "Steve Jobs", "Alan Turing"]
-        correct: 1
-      - type: single_qa
-        question: "What did Alexander Graham Bell ask his assistant Mr. Watson to do in the first telephone call?"
-        answer: "Come here"
-      - type: multiple_choice
-        question: "What object melted in Percy Spencer's pocket, leading to the invention of the microwave?"
-        options: ["An apple", "A chocolate bar", "A piece of cheese", "A candle"]
-        correct: 1
-      - type: single_qa
-        question: "Which country's military offered a prize that inspired the invention of food preservation canning?"
-        answer: "France"
-      - type: multiple_choice
-        question: "What filament material did Edison use to make his light bulb last over 1,200 hours?"
-        options: ["Copper wire", "Carbonized bamboo", "Iron thread", "Platinum"]
-        correct: 1
-      - type: single_qa
-        question: "What was the name of the early 1960s military computer network that laid the foundation for the Internet?"
-        answer: "ARPANET"
-      - type: multiple_choice
-        question: "What food was intentionally tested and cooked second in the early microwave oven experiments?"
-        options: ["An egg", "A potato", "A slice of pizza", "A hot dog"]
-        correct: 0
-      - type: single_qa
-        question: "For how many years after the tin can's invention did people wait for a dedicated mechanical can opener?"
-        answer: "50 years"
-      - type: multiple_choice
-        question: "What physical force does a telephone convert voice into so it can travel along copper wires?"
-        options: ["Electrical signals", "Radio waves", "Light beams", "Magnetic fields"]
-        correct: 0
-      - type: single_qa
-        question: "In what year did Thomas Edison demonstrate his commercially viable incandescent light bulb?"
-        answer: "1879"
-      - type: multiple_choice
-        question: "What natural item stuck to his dog's fur inspired George de Mestral to invent Velcro?"
-        options: ["Burdock burrs", "Pine cones", "Thistle needles", "Tree sap"]
-        correct: 0
-      - type: single_qa
-        question: "Who invented the modern leak-proof ballpoint pen featuring a rolling metal ball in 1938?"
-        answer: "László Bíró"
-      - type: multiple_choice
-        question: "What was the very first commercial item scanned by a barcode reader at a supermarket checkout in 1974?"
-        options: ["A can of soup", "A pack of chewing gum", "A loaf of bread", "A bottle of soda"]
-        correct: 1
-      - type: single_qa
-        question: "Which company coined the term 'zipper' in 1923 for rubber boots?"
-        answer: "B.F. Goodrich"
-      - type: multiple_choice
-        question: "Why were Post-it Notes originally made in their iconic canary yellow color?"
-        options: ["Yellow stands out best", "The neighboring lab had scrap yellow paper", "Yellow ink was cheapest", "The inventor loved yellow"]
-        correct: 1
-      - type: single_qa
-        question: "What code system inspired Norman Joseph Woodland to invent the barcode?"
-        answer: "Morse code"
-      - type: multiple_choice
-        question: "Which military force widely adopted the ballpoint pen during WWII because it didn't leak at high altitudes?"
-        options: ["British Royal Air Force", "US Navy Submarines", "French Army", "Canadian Infantry"]
-        correct: 0
-      - type: single_qa
-        question: "What organization popularized Velcro by using it to secure items in zero gravity during space missions?"
-        answer: "NASA"
-      - type: multiple_choice
-        question: "Who created the unique low-tack adhesive in 1968 that later led to Post-it Notes?"
-        options: ["Spencer Silver", "Art Fry", "Thomas Edison", "Percy Spencer"]
-        correct: 0
-      - type: single_qa
-        question: "What Swedish-American engineer perfected the modern interlocking zipper design in 1913?"
-        answer: "Gideon Sundback"
+    '
+  cards:
+  - title: Vaccines
+    points:
+    - Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox.
+    - He noticed milkmaids were immune to smallpox because they had contracted milder cowpox.
+    - Louis Pasteur expanded on this by developing vaccines for rabies and anthrax.
+    - Vaccines train the immune system to fight off dangerous viruses and bacteria safely.
+  - title: Penicillin
+    points:
+    - Alexander Fleming accidentally discovered penicillin in 1928 when mold grew on his bacteria dishes.
+    - He noticed the Penicillium mold completely destroyed the surrounding harmful bacteria.
+    - It became the world's first effective antibiotic, saving millions of lives from infections.
+    - Penicillin revolutionized warfare and civilian life by turning deadly wounds into treatable conditions.
+  - title: Anesthesia
+    points:
+    - Before anesthesia, surgeries were incredibly painful and had to be performed as quickly as possible.
+    - In 1846, William Morton demonstrated the effective use of ether as a surgical anesthetic.
+    - It allows patients to fall into a deep, painless sleep during complex medical operations.
+    - Anesthesia turned surgery from a desperate, terrifying last resort into a precise science.
+  - title: X-rays
+    points:
+    - Wilhelm Röntgen accidentally discovered X-rays in 1895 while experimenting with electrical currents.
+    - The very first X-ray image ever taken showed the bones inside his wife's hand.
+    - X-rays pass easily through skin and muscle but are blocked by denser bones, creating a shadow image.
+    - This medical breakthrough allowed doctors to look inside the human body without surgery.
+  - title: Insulin
+    points:
+    - Frederick Banting and Charles Best successfully isolated insulin in 1921.
+    - Before this breakthrough, a diagnosis of Type 1 diabetes was a fatal condition with no treatment.
+    - Insulin regulates glucose levels in the blood, allowing the body to use sugar for energy properly.
+    - Their discovery transformed diabetes from a death sentence into a highly manageable condition.
+  - title: Germ Theory and Antiseptics
+    points:
+    - For centuries, people believed diseases were spread by foul air called 'miasma' or bodily imbalances.
+    - Louis Pasteur and Robert Koch proved that specific microscopic organisms (germs) cause infectious
+      diseases.
+    - Joseph Lister applied this discovery in the 1860s by using carbolic acid to sterilize surgical instruments.
+    - Antiseptic practices and handwashing dramatically reduced hospital infections and maternal mortality.
+  - title: Blood Groups and Transfusion
+    points:
+    - Early blood transfusions often killed patients due to mysterious, violent immune reactions.
+    - Karl Landsteiner discovered the ABO human blood group system in 1901.
+    - Understanding blood compatibility allowed safe transfusions during surgery, trauma, and childbirth.
+    - He was awarded the 1930 Nobel Prize in Physiology or Medicine for this monumental discovery.
+  - title: The Polio Vaccine
+    points:
+    - Polio was a dreaded virus that paralyzed tens of thousands of children worldwide every year.
+    - Jonas Salk developed the first effective inactivated polio vaccine in 1953, testing it nationwide.
+    - Albert Sabin introduced an oral polio vaccine on a sugar cube, making mass immunization easy.
+    - Global vaccination campaigns have virtually eradicated polio from almost the entire planet.
+  - title: DNA Double Helix
+    points:
+    - James Watson and Francis Crick determined the double helix structure of DNA in 1953.
+    - Crucial experimental data and X-ray diffraction images were captured by chemist Rosalind Franklin.
+    - The twisted ladder shape explained how genetic information is stored, copied, and passed to offspring.
+    - This discovery launched modern molecular biology, genetic testing, and personalized medicine.
+  - title: CRISPR and Gene Editing
+    points:
+    - CRISPR-Cas9 is a revolutionary gene-editing tool adapted from a natural bacterial defense system.
+    - Jennifer Doudna and Emmanuelle Charpentier showed how to use it like molecular scissors to edit
+      DNA.
+    - They won the 2020 Nobel Prize in Chemistry for their groundbreaking work.
+    - CRISPR enables scientists to correct genetic defects, treat hereditary diseases, and develop resilient
+      crops.
+  trivia:
+  - type: multiple_choice
+    question: Who discovered penicillin, the world's first effective antibiotic, in 1928?
+    options:
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    - Jonas Salk
+    correct: 2
+    explanation: Alexander Fleming accidentally discovered penicillin in 1928 when mold grew on his bacteria
+      dishes.
+  - type: multiple_choice
+    question: Which disease did Edward Jenner target to create the world's first vaccine?
+    explanation: Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox.
+    options:
+    - Smallpox
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: Whose hand was featured in the very first medical X-ray image ever taken?
+    options:
+    - Wilhelm Röntgen's wife
+    - Thomas Edison
+    - Queen Victoria
+    - Alexander Fleming
+    correct: 0
+    explanation: The very first X-ray image ever taken showed the bones inside his wife's hand.
+  - type: multiple_choice
+    question: What hormone did Frederick Banting and Charles Best isolate to treat diabetes?
+    explanation: Frederick Banting and Charles Best successfully isolated insulin in 1921.
+    options:
+    - Insulin
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: Which substance was successfully demonstrated in 1846 as a surgical anesthetic?
+    options:
+    - Penicillin
+    - Ether
+    - Aspirin
+    - Quinine
+    correct: 1
+    explanation: In 1846, William Morton demonstrated the effective use of ether as a surgical anesthetic.
+  - type: multiple_choice
+    question: From what type of organism did Alexander Fleming isolate penicillin?
+    explanation: Alexander Fleming accidentally discovered penicillin in 1928 when mold grew on his bacteria
+      dishes.
+    options:
+    - Mold
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: Louis Pasteur developed a famous life-saving vaccine for which deadly animal-borne virus?
+    options:
+    - Rabies
+    - Malaria
+    - Influenza
+    - Polio
+    correct: 0
+    explanation: Louis Pasteur expanded on this by developing vaccines for rabies and anthrax.
+  - type: multiple_choice
+    question: What physical property allows X-rays to show bones clearly on film?
+    explanation: X-rays pass easily through skin and muscle but are blocked by denser bones, creating
+      a shadow image.
+    options:
+    - Bones are dense
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: 'Before the discovery of insulin in 1921, Type 1 diabetes was considered:'
+    options:
+    - Easily curable
+    - A minor allergy
+    - A fatal condition
+    - A skin disease
+    correct: 2
+    explanation: Before this breakthrough, a diagnosis of Type 1 diabetes was a fatal condition with no
+      treatment.
+  - type: multiple_choice
+    question: What did Edward Jenner observe milkmaids catching that kept them safe from smallpox?
+    explanation: Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox.
+    options:
+    - Cowpox
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: Who pioneered antiseptic surgery in the 1860s by using carbolic acid to sterilize tools?
+    options:
+    - Joseph Lister
+    - William Morton
+    - Robert Koch
+    - Karl Landsteiner
+    correct: 0
+    explanation: Joseph Lister applied this discovery in the 1860s by using carbolic acid to sterilize
+      surgical instruments.
+  - type: multiple_choice
+    question: What Austrian biologist discovered the ABO human blood groups in 1901?
+    explanation: Karl Landsteiner discovered the ABO human blood group system in 1901.
+    options:
+    - Karl Landsteiner
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: Who developed the first widely used inactivated polio vaccine in 1953?
+    options:
+    - Jonas Salk
+    - Albert Sabin
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+    explanation: Jonas Salk developed the first effective inactivated polio vaccine in 1953, testing it
+      nationwide.
+  - type: multiple_choice
+    question: Which British biophysicist captured Photo 51, the famous X-ray diffraction image of DNA?
+    explanation: Crucial experimental data and X-ray diffraction images were captured by chemist Rosalind
+      Franklin.
+    options:
+    - Rosalind Franklin
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: What shape describes the molecular structure of DNA discovered by Watson and Crick?
+    options:
+    - Double Helix
+    - Triple Ring
+    - Single Sheet
+    - Concentric Sphere
+    correct: 0
+    explanation: James Watson and Francis Crick determined the double helix structure of DNA in 1953.
+  - type: multiple_choice
+    question: What revolutionary gene-editing technology was adapted from bacterial immune systems?
+    explanation: CRISPR-Cas9 is a revolutionary gene-editing tool adapted from a natural bacterial defense
+      system.
+    options:
+    - CRISPR-Cas9
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: What old medical theory falsely claimed that infectious diseases were spread by foul air?
+    options:
+    - Miasma theory
+    - Humoral theory
+    - Phlogiston theory
+    - Vitalism
+    correct: 0
+    explanation: For centuries, people believed diseases were spread by foul air called 'miasma' or bodily
+      imbalances.
+  - type: multiple_choice
+    question: Who developed the oral polio vaccine given on a sugar cube?
+    explanation: Albert Sabin introduced an oral polio vaccine on a sugar cube, making mass immunization
+      easy.
+    options:
+    - Albert Sabin
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+  - type: multiple_choice
+    question: 'Jennifer Doudna and Emmanuelle Charpentier won the 2020 Nobel Prize in Chemistry for developing:'
+    options:
+    - CRISPR gene editing
+    - The Polio Vaccine
+    - Penicillin synthesis
+    - Synthetic Insulin
+    correct: 0
+    explanation: They won the 2020 Nobel Prize in Chemistry for their groundbreaking work.
+  - type: multiple_choice
+    question: What chemical did Joseph Lister use as an antiseptic wash for wounds and instruments?
+    explanation: Joseph Lister applied this discovery in the 1860s by using carbolic acid to sterilize
+      surgical instruments.
+    options:
+    - Carbolic acid
+    - Louis Pasteur
+    - Edward Jenner
+    - Alexander Fleming
+    correct: 0
+- id: everyday_objects
+  title: Everyday Objects
+  description: 'The incredible stories behind items we use every single day. From instant communication  to
+    office stationery and zippers, find out how these modern conveniences came to be.
 
-  - id: famous_scientists_inventors
-    title: Famous Scientists and Inventors
-    description: >
-      Meet the extraordinary minds whose curiosity changed the course of human history. 
-      From gravity to radioactivity and computing, discover the people behind the breakthroughs.
-    cards:
-      - title: Isaac Newton
-        points:
-          - "Sir Isaac Newton formulated the three laws of motion and the law of universal gravitation."
-          - "Legend says he was inspired to study gravity after watching an apple fall from a tree in his orchard."
-          - "He invented calculus to help explain his complex theories of physics and motion."
-          - "Newton also discovered that white light is actually made up of a spectrum of many colors."
-      - title: Marie Curie
-        points:
-          - "Marie Curie discovered the radioactive elements polonium and radium through tireless research."
-          - "She was the first woman to win a Nobel Prize, and the only person to win them in two different sciences."
-          - "During World War I, she created mobile X-ray units to help battlefield doctors treat wounded soldiers."
-          - "Her dedicated work with radiation laid the foundation for modern cancer treatments."
-      - title: Albert Einstein
-        points:
-          - "Albert Einstein developed the famous Theory of Relativity, reshaping our view of space and time."
-          - "He came up with the world's most famous scientific equation: E=mc^2."
-          - "He won the 1921 Nobel Prize in Physics, specifically for explaining the photoelectric effect."
-          - "His name has become an everyday worldwide synonym for an exceptionally brilliant person."
-      - title: Nikola Tesla
-        points:
-          - "Nikola Tesla designed the Alternating Current (AC) electrical system, which powers modern homes today."
-          - "He held a famous rivalry with Thomas Edison, who championed the competing Direct Current (DC) system."
-          - "Tesla invented the Tesla Coil, a high-voltage device that produces spectacular bolts of artificial lightning."
-          - "He envisioned brilliant futuristic concepts like wireless global communication and free energy."
-      - title: Galileo Galilei
-        points:
-          - "Galileo built an improved telescope to observe the night sky, discovering four of Jupiter's moons."
-          - "His observations proved the Copernican theory that the Earth revolves around the Sun."
-          - "He faced severe backlash from authorities for challenging the traditional belief that Earth was the center."
-          - "He is widely celebrated as the father of modern observational astronomy."
-      - title: Leonardo da Vinci
-        points:
-          - "Leonardo was the quintessential Renaissance polymath, excelling as a painter, engineer, anatomist, and inventor."
-          - "Centuries before they were built, his notebooks contained detailed conceptual sketches of helicopters, tanks, and scuba gear."
-          - "He wrote in a unique mirrored reverse script from right to left to prevent ink from smudging as a left-handed writer."
-          - "His anatomical drawings of the human skeleton, muscles, and heart were centuries ahead of contemporary medicine."
-      - title: Thomas Edison
-        points:
-          - "Thomas Edison held a staggering 1,093 US patents throughout his prolific life."
-          - "He invented the phonograph in 1877, the first machine that could both record and reproduce sound."
-          - "He established the world's first modern industrial research laboratory in Menlo Park, New Jersey."
-          - "His famous quote states: 'Genius is one percent inspiration and ninety-nine percent perspiration.'"
-      - title: Ada Lovelace
-        points:
-          - "Ada Lovelace was an English mathematician and the daughter of the famous poet Lord Byron."
-          - "She worked closely with Charles Babbage on his mechanical general-purpose computer, the Analytical Engine."
-          - "In 1843, she published what is widely recognized as the world's first computer algorithm (program)."
-          - "She envisioned that computers could manipulate symbols beyond numbers, foreseeing digital music and art."
-      - title: Louis Pasteur
-        points:
-          - "Louis Pasteur was a French chemist and microbiologist who disproved the myth of spontaneous generation."
-          - "He developed pasteurization, a heating process that kills harmful microbes in milk, wine, and juice."
-          - "He founded the field of bacteriology and created life-saving vaccines for rabies and anthrax."
-          - "The Pasteur Institute, which he founded in Paris, remains one of the world's premier biomedical research centers."
-      - title: Archimedes
-        points:
-          - "Archimedes was an ancient Greek mathematician, physicist, and engineer from Syracuse, Sicily."
-          - "He discovered the principle of buoyancy while taking a bath, famously shouting 'Eureka!' ('I have found it!')."
-          - "He explained the mathematical principles behind levers, claiming: 'Give me a lever long enough and I shall move the world.'"
-          - "He invented the Archimedes screw, a revolving spiral tube still used worldwide to lift water for irrigation."
-    trivia:
-      - type: multiple_choice
-        question: "Who is the only person to win Nobel Prizes in two different scientific fields?"
-        options: ["Albert Einstein", "Marie Curie", "Isaac Newton", "Nikola Tesla"]
-        correct: 1
-      - type: single_qa
-        question: "What math system did Isaac Newton invent to help explain his laws of physics?"
-        answer: "Calculus"
-      - type: multiple_choice
-        question: "Which electrical system developed by Nikola Tesla powers our homes and cities today?"
-        options: ["Direct Current (DC)", "Alternating Current (AC)", "Static Current", "Magnetic Flux"]
-        correct: 1
-      - type: single_qa
-        question: "What planet did Galileo study to discover its four largest moons?"
-        answer: "Jupiter"
-      - type: multiple_choice
-        question: "What does the 'c' stand for in Albert Einstein's famous equation E=mc^2?"
-        options: ["Constant", "Core temperature", "Speed of light", "Charge"]
-        correct: 2
-      - type: single_qa
-        question: "Which elemental property did Marie Curie study and name, which ultimately led to her discoveries?"
-        answer: "Radioactivity"
-      - type: multiple_choice
-        question: "Legend says Isaac Newton began studying gravity after watching what object fall?"
-        options: ["An apple", "A stone", "A feather", "A star"]
-        correct: 0
-      - type: single_qa
-        question: "What is Galileo Galilei widely celebrated as the father of?"
-        answer: "Modern observational astronomy"
-      - type: multiple_choice
-        question: "For explaining which phenomenon did Albert Einstein win his 1921 Nobel Prize in Physics?"
-        options: ["Black Holes", "General Relativity", "The Photoelectric Effect", "Gravity Waves"]
-        correct: 2
-      - type: single_qa
-        question: "What element did Marie Curie name after her beloved home country?"
-        answer: "Polonium"
-      - type: multiple_choice
-        question: "Who is celebrated as the world's first computer programmer for writing an algorithm in 1843?"
-        options: ["Ada Lovelace", "Charles Babbage", "Alan Turing", "Grace Hopper"]
-        correct: 0
-      - type: single_qa
-        question: "What famous exclamation did Archimedes shout when discovering buoyancy in the bath?"
-        answer: "Eureka!"
-      - type: multiple_choice
-        question: "What sound-recording machine did Thomas Edison invent in 1877 that recorded sound onto foil cylinders?"
-        options: ["Phonograph", "Gramophone", "Telegraph", "Radio"]
-        correct: 0
-      - type: single_qa
-        question: "What thermal process invented by Louis Pasteur kills harmful bacteria in milk and liquids?"
-        answer: "Pasteurization"
-      - type: multiple_choice
-        question: "Why did Leonardo da Vinci write his personal notebooks in mirror reverse script?"
-        options: ["To prevent left-handed ink smudges", "To hide secrets from enemies", "It was required by law", "To test optical mirrors"]
-        correct: 0
-      - type: single_qa
-        question: "What ancient Greek inventor designed a spiral water-lifting screw still used for irrigation?"
-        answer: "Archimedes"
-      - type: multiple_choice
-        question: "Thomas Edison established his famous premier industrial research laboratory in which New Jersey town?"
-        options: ["Menlo Park", "Princeton", "Trenton", "Hoboken"]
-        correct: 0
-      - type: single_qa
-        question: "On which mathematician's proposed 'Analytical Engine' did Ada Lovelace write her first algorithm?"
-        answer: "Charles Babbage"
-      - type: multiple_choice
-        question: "Which of the following machines was sketched in Leonardo da Vinci's notebooks centuries before being built?"
-        options: ["An aerial screw helicopter", "A jet engine", "A steam turbine", "A digital calculator"]
-        correct: 0
-      - type: single_qa
-        question: "What famous quote did Thomas Edison coin regarding genius and perspiration?"
-        answer: "Genius is 1% inspiration and 99% perspiration"
+    '
+  cards:
+  - title: The Telephone
+    points:
+    - Alexander Graham Bell was granted the first official patent for the telephone in 1876.
+    - His first famous spoken words through the machine were, 'Mr. Watson, come here, I want to see you.'
+    - The invention converted spoken sound waves into electrical signals to travel along wires.
+    - It allowed people to speak across cities and continents instantly, shrinking the world.
+  - title: The Light Bulb
+    points:
+    - While many tried, Thomas Edison created the first commercially practical incandescent light bulb
+      in 1879.
+    - The key was finding a carbonized bamboo filament that could burn for over 1,200 hours without melting.
+    - Edison also built an entire electrical grid system so homes could actually power their bulbs.
+    - It freed human activity from the limits of daylight and replaced smelly gas lamps.
+  - title: The Internet
+    points:
+    - The Internet began as ARPANET in the late 1960s, a military network funded by the US government.
+    - Tim Berners-Lee invented the World Wide Web in 1989, making the internet easy for the public to
+      use.
+    - It allows computers across the globe to share data instantly through interconnected networks.
+    - The internet fundamentally changed education, commerce, entertainment, and social interaction.
+  - title: Canned Food
+    points:
+    - Nicolas Appert invented food canning in 1810 after a French military contest sought ways to preserve
+      army rations.
+    - He discovered that sealing food inside airtight glass jars and boiling them kept it from spoiling.
+    - Amusingly, the tin can was invented shortly after, but the mechanical can opener wasn't invented
+      until 50 years later!
+    - It made long-distance travel, military campaigns, and modern grocery stores possible.
+  - title: The Microwave Oven
+    points:
+    - Percy Spencer accidentally invented the microwave oven in 1945 while working on military radar equipment.
+    - He noticed that radar waves had completely melted a chocolate bar inside his pocket.
+    - The first food intentionally cooked with a microwave for testing was popcorn, followed immediately
+      by an egg (which famously exploded in a colleague's face!).
+    - It revolutionized home cooking by heating food molecules rapidly without warming the air around
+      them.
+  - title: The Zipper
+    points:
+    - Early clothing relied on tedious buttons, laces, and hooks that were slow to fasten.
+    - Whitcomb Judson patented the 'clasp locker' in 1893, and Gideon Sundback perfected the modern interlocking
+      teeth in 1913.
+    - The B.F. Goodrich Company coined the catchy name 'zipper' in 1923 when they used it on rubber boots.
+    - Today, billions of zippers are produced each year for clothing, luggage, camping gear, and spacesuits.
+  - title: Hook and Loop Fasteners (Velcro)
+    points:
+    - Swiss engineer George de Mestral invented hook-and-loop fasteners in 1941 after a hunting walk with
+      his dog.
+    - He inspected the burdock burrs clinging stubbornly to his socks and his dog's fur under a microscope.
+    - He observed hundreds of microscopic hooks that effortlessly gripped tiny loops in animal fur and
+      fabric.
+    - NASA popularized the fastener during the Apollo space missions to secure equipment in zero gravity.
+  - title: Post-it Notes
+    points:
+    - In 1968, 3M chemist Spencer Silver accidentally created a unique, low-tack adhesive that peeled
+      off cleanly.
+    - Years later, his colleague Art Fry used the weak glue to keep bookmarks from falling out of his
+      church hymnbook.
+    - 3M launched Post-it Notes in 1980, and the canary-yellow squares became a worldwide office staple.
+    - The iconic yellow color was a pure coincidence because the lab next door only had scrap yellow paper.
+  - title: The Ballpoint Pen
+    points:
+    - Fountain pens often leaked, smudged easily, and needed frequent refilling from messy inkwells.
+    - Hungarian journalist László Bíró noticed quick-drying newspaper ink and designed a tiny rotating
+      metal ball socket in 1938.
+    - British Royal Air Force pilots adopted Bíró pens during World War II because they did not leak at
+      high altitudes.
+    - Marcel Bich later streamlined manufacturing to create the ultra-affordable, ubiquitous BIC Cristal
+      pen.
+  - title: The Barcode
+    points:
+    - Norman Joseph Woodland and Bernard Silver invented the barcode in 1949, inspired by Morse code dots
+      and dashes.
+    - Woodland extended Morse code into thin and thick lines drawn in the sand on a Miami beach.
+    - The first commercial item scanned by a laser barcode reader in 1974 was a pack of Wrigley's Juicy
+      Fruit gum.
+    - Barcodes and modern QR codes automated inventory, retail checkout, package shipping, and ticketing.
+  trivia:
+  - type: multiple_choice
+    question: Who is credited with inventing the World Wide Web in 1989?
+    options:
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    - Alan Turing
+    correct: 1
+    explanation: Tim Berners-Lee invented the World Wide Web in 1989, making the internet easy for the
+      public to use.
+  - type: multiple_choice
+    question: What did Alexander Graham Bell ask his assistant Mr. Watson to do in the first telephone
+      call?
+    explanation: Alexander Graham Bell was granted the first official patent for the telephone in 1876.
+    options:
+    - Come here
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What object melted in Percy Spencer's pocket, leading to the invention of the microwave?
+    options:
+    - An apple
+    - A chocolate bar
+    - A piece of cheese
+    - A candle
+    correct: 1
+    explanation: Percy Spencer accidentally invented the microwave oven in 1945 while working on military
+      radar equipment.
+  - type: multiple_choice
+    question: Which country's military offered a prize that inspired the invention of food preservation
+      canning?
+    explanation: Nicolas Appert invented food canning in 1810 after a French military contest sought ways
+      to preserve army rations.
+    options:
+    - France
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What filament material did Edison use to make his light bulb last over 1,200 hours?
+    options:
+    - Copper wire
+    - Carbonized bamboo
+    - Iron thread
+    - Platinum
+    correct: 1
+    explanation: The key was finding a carbonized bamboo filament that could burn for over 1,200 hours
+      without melting.
+  - type: multiple_choice
+    question: What was the name of the early 1960s military computer network that laid the foundation
+      for the Internet?
+    explanation: The Internet began as ARPANET in the late 1960s, a military network funded by the US
+      government.
+    options:
+    - ARPANET
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What food was intentionally tested and cooked second in the early microwave oven experiments?
+    options:
+    - An egg
+    - A potato
+    - A slice of pizza
+    - A hot dog
+    correct: 0
+    explanation: The first food intentionally cooked with a microwave for testing was popcorn, followed
+      immediately by an egg (which famously exploded in a colleague's face!).
+  - type: multiple_choice
+    question: For how many years after the tin can's invention did people wait for a dedicated mechanical
+      can opener?
+    explanation: Amusingly, the tin can was invented shortly after, but the mechanical can opener wasn't
+      invented until 50 years later!
+    options:
+    - 50 years
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What physical force does a telephone convert voice into so it can travel along copper wires?
+    options:
+    - Electrical signals
+    - Radio waves
+    - Light beams
+    - Magnetic fields
+    correct: 0
+    explanation: The invention converted spoken sound waves into electrical signals to travel along wires.
+  - type: multiple_choice
+    question: In what year did Thomas Edison demonstrate his commercially viable incandescent light bulb?
+    explanation: While many tried, Thomas Edison created the first commercially practical incandescent
+      light bulb in 1879.
+    options:
+    - '1879'
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What natural item stuck to his dog's fur inspired George de Mestral to invent Velcro?
+    options:
+    - Burdock burrs
+    - Pine cones
+    - Thistle needles
+    - Tree sap
+    correct: 0
+    explanation: He inspected the burdock burrs clinging stubbornly to his socks and his dog's fur under
+      a microscope.
+  - type: multiple_choice
+    question: Who invented the modern leak-proof ballpoint pen featuring a rolling metal ball in 1938?
+    explanation: Hungarian journalist László Bíró noticed quick-drying newspaper ink and designed a tiny
+      rotating metal ball socket in 1938.
+    options:
+    - László Bíró
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: What was the very first commercial item scanned by a barcode reader at a supermarket checkout
+      in 1974?
+    options:
+    - A can of soup
+    - A pack of chewing gum
+    - A loaf of bread
+    - A bottle of soda
+    correct: 1
+    explanation: The first commercial item scanned by a laser barcode reader in 1974 was a pack of Wrigley's
+      Juicy Fruit gum.
+  - type: multiple_choice
+    question: Which company coined the term 'zipper' in 1923 for rubber boots?
+    explanation: The B.F. Goodrich Company coined the catchy name 'zipper' in 1923 when they used it on
+      rubber boots.
+    options:
+    - B.F. Goodrich
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: Why were Post-it Notes originally made in their iconic canary yellow color?
+    options:
+    - Yellow stands out best
+    - The neighboring lab had scrap yellow paper
+    - Yellow ink was cheapest
+    - The inventor loved yellow
+    correct: 1
+    explanation: The iconic yellow color was a pure coincidence because the lab next door only had scrap
+      yellow paper.
+  - type: multiple_choice
+    question: What code system inspired Norman Joseph Woodland to invent the barcode?
+    explanation: Norman Joseph Woodland and Bernard Silver invented the barcode in 1949, inspired by Morse
+      code dots and dashes.
+    options:
+    - Morse code
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: Which military force widely adopted the ballpoint pen during WWII because it didn't leak
+      at high altitudes?
+    options:
+    - British Royal Air Force
+    - US Navy Submarines
+    - French Army
+    - Canadian Infantry
+    correct: 0
+    explanation: British Royal Air Force pilots adopted Bíró pens during World War II because they did
+      not leak at high altitudes.
+  - type: multiple_choice
+    question: What organization popularized Velcro by using it to secure items in zero gravity during
+      space missions?
+    explanation: NASA popularized the fastener during the Apollo space missions to secure equipment in
+      zero gravity.
+    options:
+    - NASA
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+  - type: multiple_choice
+    question: Who created the unique low-tack adhesive in 1968 that later led to Post-it Notes?
+    options:
+    - Spencer Silver
+    - Art Fry
+    - Thomas Edison
+    - Percy Spencer
+    correct: 0
+    explanation: In 1968, 3M chemist Spencer Silver accidentally created a unique, low-tack adhesive that
+      peeled off cleanly.
+  - type: multiple_choice
+    question: What Swedish-American engineer perfected the modern interlocking zipper design in 1913?
+    explanation: Whitcomb Judson patented the 'clasp locker' in 1893, and Gideon Sundback perfected the
+      modern interlocking teeth in 1913.
+    options:
+    - Gideon Sundback
+    - Bill Gates
+    - Tim Berners-Lee
+    - Steve Jobs
+    correct: 0
+- id: famous_scientists_inventors
+  title: Famous Scientists and Inventors
+  description: 'Meet the extraordinary minds whose curiosity changed the course of human history.  From
+    gravity to radioactivity and computing, discover the people behind the breakthroughs.
+
+    '
+  cards:
+  - title: Isaac Newton
+    points:
+    - Sir Isaac Newton formulated the three laws of motion and the law of universal gravitation.
+    - Legend says he was inspired to study gravity after watching an apple fall from a tree in his orchard.
+    - He invented calculus to help explain his complex theories of physics and motion.
+    - Newton also discovered that white light is actually made up of a spectrum of many colors.
+  - title: Marie Curie
+    points:
+    - Marie Curie discovered the radioactive elements polonium and radium through tireless research.
+    - She was the first woman to win a Nobel Prize, and the only person to win them in two different sciences.
+    - During World War I, she created mobile X-ray units to help battlefield doctors treat wounded soldiers.
+    - Her dedicated work with radiation laid the foundation for modern cancer treatments.
+  - title: Albert Einstein
+    points:
+    - Albert Einstein developed the famous Theory of Relativity, reshaping our view of space and time.
+    - 'He came up with the world''s most famous scientific equation: E=mc^2.'
+    - He won the 1921 Nobel Prize in Physics, specifically for explaining the photoelectric effect.
+    - His name has become an everyday worldwide synonym for an exceptionally brilliant person.
+  - title: Nikola Tesla
+    points:
+    - Nikola Tesla designed the Alternating Current (AC) electrical system, which powers modern homes
+      today.
+    - He held a famous rivalry with Thomas Edison, who championed the competing Direct Current (DC) system.
+    - Tesla invented the Tesla Coil, a high-voltage device that produces spectacular bolts of artificial
+      lightning.
+    - He envisioned brilliant futuristic concepts like wireless global communication and free energy.
+  - title: Galileo Galilei
+    points:
+    - Galileo built an improved telescope to observe the night sky, discovering four of Jupiter's moons.
+    - His observations proved the Copernican theory that the Earth revolves around the Sun.
+    - He faced severe backlash from authorities for challenging the traditional belief that Earth was
+      the center.
+    - He is widely celebrated as the father of modern observational astronomy.
+  - title: Leonardo da Vinci
+    points:
+    - Leonardo was the quintessential Renaissance polymath, excelling as a painter, engineer, anatomist,
+      and inventor.
+    - Centuries before they were built, his notebooks contained detailed conceptual sketches of helicopters,
+      tanks, and scuba gear.
+    - He wrote in a unique mirrored reverse script from right to left to prevent ink from smudging as
+      a left-handed writer.
+    - His anatomical drawings of the human skeleton, muscles, and heart were centuries ahead of contemporary
+      medicine.
+  - title: Thomas Edison
+    points:
+    - Thomas Edison held a staggering 1,093 US patents throughout his prolific life.
+    - He invented the phonograph in 1877, the first machine that could both record and reproduce sound.
+    - He established the world's first modern industrial research laboratory in Menlo Park, New Jersey.
+    - 'His famous quote states: ''Genius is one percent inspiration and ninety-nine percent perspiration.'''
+  - title: Ada Lovelace
+    points:
+    - Ada Lovelace was an English mathematician and the daughter of the famous poet Lord Byron.
+    - She worked closely with Charles Babbage on his mechanical general-purpose computer, the Analytical
+      Engine.
+    - In 1843, she published what is widely recognized as the world's first computer algorithm (program).
+    - She envisioned that computers could manipulate symbols beyond numbers, foreseeing digital music
+      and art.
+  - title: Louis Pasteur
+    points:
+    - Louis Pasteur was a French chemist and microbiologist who disproved the myth of spontaneous generation.
+    - He developed pasteurization, a heating process that kills harmful microbes in milk, wine, and juice.
+    - He founded the field of bacteriology and created life-saving vaccines for rabies and anthrax.
+    - The Pasteur Institute, which he founded in Paris, remains one of the world's premier biomedical
+      research centers.
+  - title: Archimedes
+    points:
+    - Archimedes was an ancient Greek mathematician, physicist, and engineer from Syracuse, Sicily.
+    - He discovered the principle of buoyancy while taking a bath, famously shouting 'Eureka!' ('I have
+      found it!').
+    - 'He explained the mathematical principles behind levers, claiming: ''Give me a lever long enough
+      and I shall move the world.'''
+    - He invented the Archimedes screw, a revolving spiral tube still used worldwide to lift water for
+      irrigation.
+  trivia:
+  - type: multiple_choice
+    question: Who is the only person to win Nobel Prizes in two different scientific fields?
+    options:
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    - Nikola Tesla
+    correct: 1
+    explanation: She was the first woman to win a Nobel Prize, and the only person to win them in two
+      different sciences.
+  - type: multiple_choice
+    question: What math system did Isaac Newton invent to help explain his laws of physics?
+    explanation: He invented calculus to help explain his complex theories of physics and motion.
+    options:
+    - Calculus
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Which electrical system developed by Nikola Tesla powers our homes and cities today?
+    options:
+    - Direct Current (DC)
+    - Alternating Current (AC)
+    - Static Current
+    - Magnetic Flux
+    correct: 1
+    explanation: Nikola Tesla designed the Alternating Current (AC) electrical system, which powers modern
+      homes today.
+  - type: multiple_choice
+    question: What planet did Galileo study to discover its four largest moons?
+    explanation: Galileo built an improved telescope to observe the night sky, discovering four of Jupiter's
+      moons.
+    options:
+    - Jupiter
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: What does the 'c' stand for in Albert Einstein's famous equation E=mc^2?
+    options:
+    - Constant
+    - Core temperature
+    - Speed of light
+    - Charge
+    correct: 2
+    explanation: Albert Einstein developed the famous Theory of Relativity, reshaping our view of space
+      and time.
+  - type: multiple_choice
+    question: Which elemental property did Marie Curie study and name, which ultimately led to her discoveries?
+    explanation: Marie Curie discovered the radioactive elements polonium and radium through tireless
+      research.
+    options:
+    - Radioactivity
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Legend says Isaac Newton began studying gravity after watching what object fall?
+    options:
+    - An apple
+    - A stone
+    - A feather
+    - A star
+    correct: 0
+    explanation: Legend says he was inspired to study gravity after watching an apple fall from a tree
+      in his orchard.
+  - type: multiple_choice
+    question: What is Galileo Galilei widely celebrated as the father of?
+    explanation: He is widely celebrated as the father of modern observational astronomy.
+    options:
+    - Modern observational astronomy
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: For explaining which phenomenon did Albert Einstein win his 1921 Nobel Prize in Physics?
+    options:
+    - Black Holes
+    - General Relativity
+    - The Photoelectric Effect
+    - Gravity Waves
+    correct: 2
+    explanation: He won the 1921 Nobel Prize in Physics, specifically for explaining the photoelectric
+      effect.
+  - type: multiple_choice
+    question: What element did Marie Curie name after her beloved home country?
+    explanation: Marie Curie discovered the radioactive elements polonium and radium through tireless
+      research.
+    options:
+    - Polonium
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Who is celebrated as the world's first computer programmer for writing an algorithm in 1843?
+    options:
+    - Ada Lovelace
+    - Charles Babbage
+    - Alan Turing
+    - Grace Hopper
+    correct: 0
+    explanation: In 1843, she published what is widely recognized as the world's first computer algorithm
+      (program).
+  - type: multiple_choice
+    question: What famous exclamation did Archimedes shout when discovering buoyancy in the bath?
+    explanation: He discovered the principle of buoyancy while taking a bath, famously shouting 'Eureka!'
+      ('I have found it!').
+    options:
+    - Eureka!
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: What sound-recording machine did Thomas Edison invent in 1877 that recorded sound onto foil
+      cylinders?
+    options:
+    - Phonograph
+    - Gramophone
+    - Telegraph
+    - Radio
+    correct: 0
+    explanation: He invented the phonograph in 1877, the first machine that could both record and reproduce
+      sound.
+  - type: multiple_choice
+    question: What thermal process invented by Louis Pasteur kills harmful bacteria in milk and liquids?
+    explanation: He developed pasteurization, a heating process that kills harmful microbes in milk, wine,
+      and juice.
+    options:
+    - Pasteurization
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Why did Leonardo da Vinci write his personal notebooks in mirror reverse script?
+    options:
+    - To prevent left-handed ink smudges
+    - To hide secrets from enemies
+    - It was required by law
+    - To test optical mirrors
+    correct: 0
+    explanation: He wrote in a unique mirrored reverse script from right to left to prevent ink from smudging
+      as a left-handed writer.
+  - type: multiple_choice
+    question: What ancient Greek inventor designed a spiral water-lifting screw still used for irrigation?
+    explanation: He invented the Archimedes screw, a revolving spiral tube still used worldwide to lift
+      water for irrigation.
+    options:
+    - Archimedes
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Thomas Edison established his famous premier industrial research laboratory in which New
+      Jersey town?
+    options:
+    - Menlo Park
+    - Princeton
+    - Trenton
+    - Hoboken
+    correct: 0
+    explanation: He established the world's first modern industrial research laboratory in Menlo Park,
+      New Jersey.
+  - type: multiple_choice
+    question: On which mathematician's proposed 'Analytical Engine' did Ada Lovelace write her first algorithm?
+    explanation: She worked closely with Charles Babbage on his mechanical general-purpose computer, the
+      Analytical Engine.
+    options:
+    - Charles Babbage
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0
+  - type: multiple_choice
+    question: Which of the following machines was sketched in Leonardo da Vinci's notebooks centuries
+      before being built?
+    options:
+    - An aerial screw helicopter
+    - A jet engine
+    - A steam turbine
+    - A digital calculator
+    correct: 0
+    explanation: Centuries before they were built, his notebooks contained detailed conceptual sketches
+      of helicopters, tanks, and scuba gear.
+  - type: multiple_choice
+    question: What famous quote did Thomas Edison coin regarding genius and perspiration?
+    explanation: 'His famous quote states: ''Genius is one percent inspiration and ninety-nine percent
+      perspiration.'''
+    options:
+    - Genius is 1% inspiration and 99% perspiration
+    - Albert Einstein
+    - Marie Curie
+    - Isaac Newton
+    correct: 0

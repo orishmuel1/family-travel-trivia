@@ -13,7 +13,7 @@
  * so any content OR shell change bumps the version and evicts stale caches.
  */
 
-const CACHE_NAME = 'trivia-cache-v-ecfaa858';
+const CACHE_NAME = 'trivia-cache-v-68b8e0f2';
 
 const ASSETS_TO_CACHE = [
   './',

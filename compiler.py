@@ -250,6 +250,14 @@ def validate_trivia(loc, trivia, issues):
             issues.append(Issue("error", loc, "single_qa is missing an 'answer'.",
                                 "Add an 'answer' string."))
 
+    # explanation (optional)
+    if "explanation" in trivia:
+        exp, changed = clean_str(trivia.get("explanation"))
+        if changed:
+            trivia["explanation"] = exp
+        if not exp or not str(exp).strip():
+            del trivia["explanation"]
+
 
 def validate_cards(cloc, cards, issues, is_academic=False):
     """Validate + normalize a category's 'cards' list (each card = a subcategory)."""
@@ -529,7 +537,7 @@ def canonicalize(topic):
                     for c in cat["cards"]
                 ]
             cat["trivia"] = [
-                _ordered(t, ["type", "question", "options", "correct", "answer"])
+                _ordered(t, ["type", "question", "options", "correct", "answer", "explanation"])
                 if isinstance(t, dict) else t
                 for t in cat.get("trivia", [])
             ]

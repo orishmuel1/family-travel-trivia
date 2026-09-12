@@ -340,6 +340,12 @@
             font-size: 0.95rem; font-weight: 700; color: var(--primary);
             margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
         }
+        .explanation-text {
+            color: var(--text);
+            font-size: 0.94rem;
+            line-height: 1.55;
+            padding: 4px 0;
+        }
 
         .reveal-box { margin: 6px 0 18px; padding: 16px; border-radius: 12px; background: color-mix(in srgb, var(--success) 12%, transparent); border: 1px solid color-mix(in srgb, var(--success) 40%, transparent); font-size: 1.05rem; }
         .reveal-box .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: block; margin-bottom: 4px; }
@@ -1188,6 +1194,8 @@
             }));
             const shuffledOptions = shuffle(rawOptions);
 
+            const learnController = attachLearnMore(card, q, cat);
+
             shuffledOptions.forEach((optObj, btnIdx) => {
                 const b = el('button', { class: 'option-btn', html: formatMathAndText(optObj.text) });
                 b.onclick = () => {
@@ -1201,18 +1209,26 @@
                     });
                     if (ok) quiz.score++;
                     stats.recordAnswer(ok);
+                    if (learnController && q && q.explanation) {
+                        learnController.showBox();
+                    }
                     nextButton(card);
                 };
                 wrap.appendChild(b);
             });
-            card.appendChild(wrap);
 
-            attachLearnMore(card, cat);
+            if (learnController && learnController.learnWrap) {
+                card.insertBefore(wrap, learnController.learnWrap);
+            } else {
+                card.appendChild(wrap);
+            }
         }
 
-        function attachLearnMore(card, cat) {
-            if (!cat || (!cat.cards && !cat.description)) return;
-            const learnWrap = el('div');
+        function attachLearnMore(card, q, cat) {
+            const explanationText = q && q.explanation ? q.explanation : null;
+            if (!explanationText && (!cat || (!cat.cards && !cat.description))) return null;
+
+            const learnWrap = el('div', { class: 'learn-more-wrapper' });
             const toggleBtn = el('button', {
                 class: 'learn-more-toggle',
                 html: t('learnMore'),
@@ -1222,25 +1238,40 @@
                         existingBox.remove();
                         toggleBtn.innerHTML = t('learnMore');
                     } else {
-                        const box = el('div', { class: 'learn-more-box' });
-                        box.appendChild(el('div', { class: 'learn-more-title', text: cat.title }));
-                        if (cat.description) {
-                            box.appendChild(el('p', { html: formatMathAndText(cat.description), attrs: { style: 'margin-bottom: 10px; color: var(--muted);' } }));
-                        }
-                        (cat.cards || []).forEach(c => {
-                            const subTitle = el('strong', { text: c.title, attrs: { style: 'display:block; margin-top: 8px; color: var(--text);' } });
-                            box.appendChild(subTitle);
-                            (c.points || []).forEach(pt => {
-                                box.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt), attrs: { style: 'font-size: 0.88rem; margin-bottom: 6px;' } }));
-                            });
-                        });
-                        learnWrap.appendChild(box);
-                        toggleBtn.innerHTML = t('hideLearnMore');
+                        showBox();
                     }
                 }
             });
+
+            function showBox() {
+                let existingBox = learnWrap.querySelector('.learn-more-box');
+                if (existingBox) return;
+                const box = el('div', { class: 'learn-more-box' });
+                const headerTitle = explanationText 
+                    ? (currentLang === 'he' ? '💡 הסבר ותשובה' : '💡 Explanation & Context')
+                    : (cat ? cat.title : '');
+                box.appendChild(el('div', { class: 'learn-more-title', text: headerTitle }));
+
+                if (explanationText) {
+                    box.appendChild(el('div', { class: 'explanation-text', html: formatMathAndText(explanationText) }));
+                } else if (cat) {
+                    if (cat.description) {
+                        box.appendChild(el('p', { html: formatMathAndText(cat.description), attrs: { style: 'margin-bottom: 8px; color: var(--muted);' } }));
+                    }
+                    (cat.cards || []).forEach(c => {
+                        box.appendChild(el('strong', { text: c.title, attrs: { style: 'display:block; margin-top: 6px; color: var(--text);' } }));
+                        (c.points || []).forEach(pt => {
+                            box.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt), attrs: { style: 'font-size: 0.88rem; margin-bottom: 4px;' } }));
+                        });
+                    });
+                }
+                learnWrap.appendChild(box);
+                toggleBtn.innerHTML = t('hideLearnMore');
+            }
+
             learnWrap.appendChild(toggleBtn);
             card.appendChild(learnWrap);
+            return { showBox, learnWrap, toggleBtn };
         }
 
         function renderQA(card, q, cat) {
@@ -1263,7 +1294,7 @@
                 row.appendChild(el('button', { class: 'btn btn-success', text: t('gotIt'), onclick: () => grade(true) }));
                 row.appendChild(el('button', { class: 'btn btn-danger', text: t('missed'), onclick: () => grade(false) }));
                 card.appendChild(row);
-                attachLearnMore(card, cat);
+                attachLearnMore(card, q, cat);
             };
             card.appendChild(revealBtn);
         }
