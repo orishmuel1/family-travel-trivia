@@ -1,119 +1,115 @@
-# Academic Topics Generator Blueprint & Templates
+# Academic Topics Generator Blueprint & Master Pedagogy Guide
 
-This document defines how academic topics and university-level courses are generated, structured, and validated for the application's **Academic Mode**.
+This document defines how academic topics and university-level courses are created, structured, and validated for the application's **Academic Mode**.
 
 ---
 
-## 1. Generation Workflows
+## 1. Core Pedagogical Philosophy ("First-Principles for Engineers")
+
+Every academic topic in this application must bridge the gap between **rigorous university concepts** and **crystal-clear engineering intuition**. The goal is that any general software engineer, computer science graduate, or curious developer can understand the material deeply without needing prior domain-specific expertise.
+
+### Key Teaching Rules:
+1. **Build from First Principles**:
+   - Start from fundamentals every engineer understands: time steps, memory buffers, arrays, clocks, physical waves, frequencies, and code loops.
+   - Avoid throwing raw jargon without context. When introducing terms like *LTI*, *Convolution*, *Z-Transform*, *Poles/Zeros*, *ROC*, *Aliasing*, or *Butterfly Operation*, immediately define **what it actually is physically/computationally**, **how it works**, and **why an engineer cares**.
+2. **Tell the Story Behind the Math**:
+   - Long, rich cards are encouraged! Do not compress or rush explanations into cryptic formulas. Take the space needed to explain the physical intuition, the practical trade-offs, and real-world applications (e.g., Spotify equalizers, Shazam audio fingerprinting, Wi-Fi modems, noise cancellation, MRI scans).
+3. **Formulas as Clear Mathematical Language**:
+   - Formulas should illuminate the narrative rather than overwhelm it. Always provide plain-language commentary for each equation: explain what each variable ($n, k, \omega, z, T_s$) represents in reality.
+4. **Visual Diagrams & Plots (SVG Figures)**:
+   - Include clear, clean vector SVG diagrams and plots for architectural flowcharts, geometric mappings (e.g. pole-zero plots on the complex plane), time-vs-frequency waveforms, and algorithm signal-flow graphs.
+5. **Multiple-Choice Conceptual Testing**:
+   - All questions must be 4-option `multiple_choice`. Questions should test conceptual understanding, "why" mechanisms, edge cases, and engineering trade-offs.
+
+---
+
+## 2. Generation Workflows
 
 ### Option A: In-Session via Antigravity (Recommended)
-You can ask Antigravity directly in this chat to generate, expand, or update any academic topic:
+You can ask Antigravity directly in this chat to create or update any academic topic:
 ```text
 Generate a new academic topic:
-- COURSE / TOPIC: [e.g., Digital Signal Processing (DSP 101), Microeconomics 101, Organic Chemistry I]
-- SYLLABUS / LESSONS: [List 4-6 curriculum modules/lessons, or leave blank to auto-curate]
+- COURSE / TOPIC: [e.g., Digital Signal Processing (DSP 101), Linear Algebra for ML, Computer Architecture 101]
+- SYLLABUS / LESSONS: [List 4-6 curriculum modules, or leave blank to auto-curate]
 - ICON: [e.g., 📡, 🔬, 📈, 🧠, ⚡, 📐]
 - AUDIENCE: [family (default) or adult]
-- NOTES: [Key formulas to include, diagrams, specific pedagogical focus]
+- FOCUS: [Specific engineering focus, key algorithms, figures]
 ```
-Antigravity will automatically:
-1. Write both `academic_topics/<slug>_en.yaml` and `academic_topics/<slug>_he.yaml`.
-2. Ensure university-level rigor explained with crystal-clear intuition, formulas, figures, and rich multiple-choice questions.
-3. Validate and compile via `./.venv/bin/python compiler.py`.
-4. Stage and commit updates to git.
 
 ---
 
 ### Option B: External LLM Copy-Paste Prompt (ChatGPT / Claude / Gemini Web)
-Copy the entire code box below, fill in the `YOUR INPUT` section, paste into the LLM, and save the outputs as `academic_topics/<slug>_en.yaml` and `academic_topics/<slug>_he.yaml`.
+Copy the code block below, fill in `YOUR INPUT`, paste into the LLM, and save the resulting files into `academic_topics/<slug>_en.yaml` and `academic_topics/<slug>_he.yaml`.
 
 ```text
-You are an expert university professor and master educator. For the academic course
-defined under "YOUR INPUT", produce a complete, rigorous, yet intuitively explained curriculum
+You are an award-winning university professor and master engineering educator. For the academic course
+defined under "YOUR INPUT", produce a complete, rigorous, and deeply intuitive curriculum
 in BOTH English and Hebrew — two strictly-formatted YAML datasets — followed by a short summary.
 
 ===== YOUR INPUT =====
-COURSE / TOPIC:   (REQUIRED — e.g., Digital Signal Processing, Linear Algebra, Macroeconomics)
+COURSE / TOPIC:   (REQUIRED — e.g., Digital Signal Processing, Computer Architecture, Machine Learning Math)
 SYLLABUS/LESSONS: (optional — 4 to 6 curriculum modules. LEAVE BLANK and decide based on top university syllabi)
-ICON:             (optional — a relevant emoji icon, e.g. 📡, 🔬, ⚛️, 📈, 🧠)
+ICON:             (optional — a relevant emoji icon, e.g. 📡, 🔬, ⚛️, 📈, 🧠, 💻)
 AUDIENCE:         (optional — "family" (default) or "adult")
-NOTES:            (optional — specific focus, must-include theorems or formulas)
+NOTES:            (optional — specific focus, must-include theorems, figures, or formulas)
 ======================
 
-PEDAGOGICAL & STRUCTURAL REQUIREMENTS:
-1. Academic Concept: Structured as a university curriculum. Categories represent LESSONS / MODULES.
-2. Conceptual Depth with Clear Intuition: Break down complex math, physics, engineering, or theory into clear, digestible principles. Explain *why* things work before diving into the formulas.
-3. Flexible Cards & Points: Each Lesson category contains 3 to 6 subtopic cards. Each card can have ANY number of bullet points needed to thoroughly teach the concept (typically 3 to 8 comprehensive bullet points per card).
-4. Formulas & Figures:
-   - Use clean LaTeX / mathematical notation (e.g. $X(z) = \sum_{n=-\infty}^{\infty} x[n] z^{-n}$, $e^{j\omega}$, $f_s \ge 2 f_{\max}$) or clear ASCII/unicode math where relevant.
-   - You can include inline figures/ASCII diagrams or descriptive visual blocks where diagrams enhance understanding.
-5. Multiple-Choice Only Questions:
-   - Provide AT LEAST 15 to 25 MULTIPLE CHOICE questions per lesson category.
+PEDAGOGICAL REQUIREMENTS:
+1. Audience: An intelligent software/hardware engineer who does NOT have prior specialized background in this specific field.
+2. First-Principles Explanation: Explain every term from the ground up. Whenever introducing a technical term or acronym (e.g., LTI, Z-transform, ROC, BIBO, Aliasing, FIR/IIR, FFT), immediately explain what it physically means in plain English/Hebrew before stating the math.
+3. Rich Storytelling: Use comprehensive, well-structured cards. Take the space to explain the physical intuition, mathematical reasoning, and practical engineering trade-offs.
+4. Embedded SVG Figures: Include responsive, clean SVG vector diagrams (`svg: > ...`) illustrating key physical waveforms, geometric maps, block diagrams, or signal flow graphs.
+5. Multiple-Choice Only Quizzes:
+   - Provide AT LEAST 15 MULTIPLE CHOICE questions per lesson module (75-100 questions per course).
    - ALL questions must be type: multiple_choice with EXACTLY 4 options and a 0-based 'correct' index (0, 1, 2, or 3).
-   - Questions should test conceptual understanding, formula applications, edge cases, and core theorems.
-   - Total questions per topic: 75-120 questions per language file.
+   - Questions should test conceptual understanding, real-world trade-offs, and core theorems.
 
 WHAT TO OUTPUT:
-1. An English YAML code block (lang: en, id: <slug>_en).
-2. A Hebrew YAML code block — the SAME topic translated to Hebrew (lang: he, id: <slug>_he).
-   - Keep all category IDs in English (snake_case).
-   - Translate all pedagogical content, formulas context, questions, and options into natural, academic Hebrew.
-   - HEBREW QUOTE RULE: Do NOT use raw ASCII double quotes inside double-quoted strings (use Hebrew gershayim ״ or single quotes for acronyms like מכ״ם, תנ״ך, צה״ל, LTI -> מערכות LTI).
-3. After both code blocks, a short plain-text summary showing lesson card & question counts.
+1. English YAML block (`lang: en`, `id: <slug>_en`).
+2. Hebrew YAML block (`lang: he`, `id: <slug>_he`):
+   - Keep category IDs in English (snake_case).
+   - Translate all explanations, formulas context, and questions into natural, rigorous academic Hebrew.
+   - HEBREW QUOTES RULE: Do NOT use raw ASCII double quotes inside double-quoted strings (use Hebrew gershayim ״ or single quotes for acronyms like מכ״ם, תנ״ך, LTI).
+3. Plain-text summary showing lesson card & question counts.
 
-FOLLOW THIS YAML SHAPE:
+YAML SCHEMA STRUCTURE:
 id: dsp_101_en
 type: academic
 icon: "📡"
-title: Digital Signal Processing (DSP 101)
+title: "Digital Signal Processing (DSP 101)"
 description: >
-  A comprehensive university-level introduction to discrete-time signals, LTI systems, transforms, and digital filter design.
+  Course description summarizing curriculum roadmap.
 lang: en
 audience: family
 categories:
-  - id: discrete_time_foundations
-    title: Foundations & Discrete-Time Systems
+  - id: module_1_id
+    title: "1. Module Title"
     description: >
-      Study the foundational mathematics of discrete-time signals, linearity, time-invariance, convolution, and difference equations.
+      Module overview.
     cards:
-      - title: Continuous-Time vs. Discrete-Time Signals
+      - title: "Subtopic Title"
+        figure:
+          title: "Figure Caption Title"
+          svg: >
+            <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">...</svg>
+          caption: "Detailed figure caption."
         points:
-          - "A continuous-time signal $x(t)$ is defined for all real numbers $t$, whereas a discrete-time signal $x[n]$ is defined only at integer values of index $n$."
-          - "Sampling a continuous signal at uniform intervals $T_s$ generates the discrete sequence $x[n] = x(n T_s)$, where $f_s = 1/T_s$ is the sampling frequency."
-          - "Fundamental discrete-time signals include the unit impulse $\\delta[n]$ (1 at $n=0$, 0 elsewhere) and the unit step $u[n]$ (1 for $n \\ge 0$, 0 for $n < 0$)."
-      - title: Linear Time-Invariant (LTI) Systems & Convolution
-        points:
-          - "An LTI system satisfies both linearity (superposition and scaling) and time-invariance (a shift in input produces an identical shift in output)."
-          - "The behavior of any discrete LTI system is completely characterized by its impulse response $h[n]$."
-          - "The output $y[n]$ is computed via the discrete convolution sum: $y[n] = (x * h)[n] = \\sum_{k=-\\infty}^{\\infty} x[k] h[n-k]$."
+          - "Detailed point 1 breaking down the concept from first principles..."
+          - "Detailed point 2 explaining the formula $y[n] = ...$ in plain words..."
     trivia:
       - type: multiple_choice
-        question: "What is the primary condition for a discrete-time system to be completely characterized by its impulse response?"
+        question: "Clear conceptual question?"
         options:
-          - "The system must be Linear and Time-Invariant (LTI)"
-          - "The system must be memoryless"
-          - "The input must be strictly periodic"
-          - "The sampling rate must be infinite"
+          - "Correct option"
+          - "Distractor 1"
+          - "Distractor 2"
+          - "Distractor 3"
         correct: 0
-      - type: multiple_choice
-        question: "What is the value of the unit impulse function $\\delta[n]$ at $n = 0$?"
-        options:
-          - "1"
-          - "0"
-          - "Infinity"
-          - "Undefined"
-        correct: 0
-
-SUMMARY FORMAT (plain text, AFTER the two code blocks):
-  Course: <title> — <N> Lessons — generated in English (_en) and Hebrew (_he)
-  Then one line per lesson:
-    - Lesson <#>: <lesson title> — <C> cards, <Q> questions
-  Total multiple-choice questions per version: <sum>
 ```
 
 ---
 
-## 2. Schema & Field Reference
+## 3. Schema & Field Reference
 
 | Field | Where | Type / Format | Rule |
 | :--- | :--- | :--- | :--- |
@@ -130,7 +126,8 @@ SUMMARY FORMAT (plain text, AFTER the two code blocks):
 | `categories[].description` | Lesson | string | Overview of the lesson module |
 | `cards[]` | Lesson | list | Subtopics within the lesson |
 | `cards[].title` | Card | string | Subtopic title |
-| `cards[].points[]` | Card | list of strings | Flexible number of detailed, intuitive pedagogical facts & formulas |
+| `cards[].figure` | Card | object (optional)| `title`, `svg` (clean vector XML), and `caption` |
+| `cards[].points[]` | Card | list of strings | Rich, intuitive bullet points explaining concepts from first principles |
 | `trivia[]` | Lesson | list | Multiple-choice questions testing conceptual mastery |
 | `trivia[].type` | Trivia | `multiple_choice` | MUST be `multiple_choice` (no `single_qa`) |
 | `trivia[].question` | Trivia | string | Clear multiple-choice question |
