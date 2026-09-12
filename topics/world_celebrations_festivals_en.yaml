@@ -297,9 +297,10 @@ categories:
         question: "In what Scottish islands is the fiery Viking heritage festival 'Up Helly Aa' celebrated by burning a longship?"
         options: ["Orkney Islands", "Shetland Islands (Lerwick)", "Hebrides", "Isle of Skye"]
         correct: 1
-      - type: single_qa
-        question: "In Catalonia, Spain, what astonishing structures reaching up to 10 tiers high are built by human teams ('Castells')?"
-        answer: "Human towers"
+      - type: multiple_choice
+        question: "During traditional festivals in Catalonia, Spain, what astonishing structures reaching up to 10 tiers high are constructed by teams called 'colles'?"
+        options: ["Human towers ('Castells')", "Giant straw pyramids", "Floating wooden pagodas", "Stacked stone obelisks"]
+        correct: 0
       - type: multiple_choice
         question: "What prize does the winner of the World Wife-Carrying Championship in Finland famously receive?"
         options: ["A golden trophy", "The carried partner's weight in beer", "A brand-new car", "A trip to Lapland"]

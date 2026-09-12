@@ -320,6 +320,27 @@
         .option-btn.correct { background: color-mix(in srgb, var(--success) 16%, transparent); border-color: var(--success); font-weight: 600; }
         .option-btn.incorrect { background: color-mix(in srgb, var(--error) 16%, transparent); border-color: var(--error); }
 
+        .learn-more-toggle {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--surface); border: 1px dashed var(--surface-border);
+            color: var(--primary); font-size: 0.88rem; font-weight: 600;
+            padding: 8px 14px; border-radius: 10px; cursor: pointer;
+            margin-top: 14px; transition: all 0.2s ease;
+        }
+        .learn-more-toggle:hover {
+            background: var(--card); border-color: var(--primary);
+        }
+        .learn-more-box {
+            margin-top: 14px; padding: 16px; border-radius: 14px;
+            background: var(--surface); border: 1px solid var(--surface-border);
+            font-size: 0.92rem; line-height: 1.5; text-align: start;
+            animation: fadeIn 0.25s ease-out;
+        }
+        .learn-more-title {
+            font-size: 0.95rem; font-weight: 700; color: var(--primary);
+            margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+        }
+
         .reveal-box { margin: 6px 0 18px; padding: 16px; border-radius: 12px; background: color-mix(in srgb, var(--success) 12%, transparent); border: 1px solid color-mix(in srgb, var(--success) 40%, transparent); font-size: 1.05rem; }
         .reveal-box .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: block; margin-bottom: 4px; }
         .reveal-box .answer { font-weight: 700; color: var(--success); }
@@ -426,6 +447,7 @@
                 next: 'Next Question →', seeResults: 'See Results →',
                 reveal: '👁️ Reveal Answer', answer: 'Answer', didYouGet: 'Did you get it right?',
                 gotIt: '✓ Got it', missed: '✗ Missed',
+                learnMore: '📖 Learn more about this topic', hideLearnMore: '📖 Hide learning notes',
                 tryAgain: '↻ Try Again', backToLearning: '← Back to Lesson', backToTopic: '← Back to Course',
                 perfect: 'Perfect!', greatJob: 'Great job!', niceEffort: 'Nice effort!', keepLearning: 'Keep learning!',
                 yourStats: 'Your Statistics', topicsExplored: 'Topics & Courses Explored', questionsAnswered: 'Questions Answered',
@@ -470,6 +492,7 @@
                 next: 'השאלה הבאה ←', seeResults: 'לתוצאות ←',
                 reveal: '👁️ חשיפת התשובה', answer: 'תשובה', didYouGet: 'עניתם נכון?',
                 gotIt: '✓ צדקתי', missed: '✗ טעיתי',
+                learnMore: '📖 למד עוד על הנושא', hideLearnMore: '📖 הסתר מידע לימודי',
                 tryAgain: '↻ שוב', backToLearning: '→ חזרה לשיעור', backToTopic: '→ חזרה לקורס',
                 perfect: 'מושלם!', greatJob: 'עבודה מצוינת!', niceEffort: 'כל הכבוד!', keepLearning: 'ממשיכים ללמוד!',
                 yourStats: 'הסטטיסטיקה שלך', topicsExplored: 'נושאים וקורסים שנחקרו', questionsAnswered: 'שאלות שנענו',
@@ -1068,7 +1091,7 @@
             const topic = getTopicSource(isAcademic, tIdx);
             const cats = (cIdx == null) ? visibleCats(topic) : [topic.categories[cIdx]];
             const list = [];
-            cats.forEach(cat => (cat.trivia || []).forEach(q => list.push({ q, catTitle: cat.title })));
+            cats.forEach(cat => (cat.trivia || []).forEach(q => list.push({ q, catTitle: cat.title, cat })));
             return list;
         }
 
@@ -1125,6 +1148,7 @@
             const total = quiz.questions.length;
             const item = quiz.questions[quiz.i];
             const q = item.q;
+            const cat = item.cat;
             const topic = getTopicSource(quiz.isAcademic, quiz.tIdx);
             const scopeLabel = quiz.scope === 'topic' ? topic.title : (item.catTitle || topic.title);
 
@@ -1139,7 +1163,7 @@
 
             const card = el('div', { class: 'card' });
             card.appendChild(el('p', { class: 'quiz-question', html: formatMathAndText(q.question) }));
-            if (q.type === 'single_qa') renderQA(card, q); else renderMC(card, q);
+            if (q.type === 'single_qa') renderQA(card, q, cat); else renderMC(card, q, cat);
             root.appendChild(card);
         }
 
@@ -1154,19 +1178,26 @@
             card.appendChild(btn);
         }
 
-        function renderMC(card, q) {
+        function renderMC(card, q, cat) {
             const wrap = el('div');
             let answered = false;
-            (q.options || []).forEach((opt, oIdx) => {
-                const b = el('button', { class: 'option-btn', html: formatMathAndText(opt) });
+
+            const rawOptions = (q.options || []).map((opt, oIdx) => ({
+                text: opt,
+                isCorrect: (oIdx === q.correct)
+            }));
+            const shuffledOptions = shuffle(rawOptions);
+
+            shuffledOptions.forEach((optObj, btnIdx) => {
+                const b = el('button', { class: 'option-btn', html: formatMathAndText(optObj.text) });
                 b.onclick = () => {
                     if (answered) return;
                     answered = true;
-                    const ok = (oIdx === q.correct);
+                    const ok = optObj.isCorrect;
                     [...wrap.children].forEach((child, idx) => {
                         child.disabled = true;
-                        if (idx === q.correct) child.classList.add('correct');
-                        else if (idx === oIdx) child.classList.add('incorrect');
+                        if (shuffledOptions[idx].isCorrect) child.classList.add('correct');
+                        else if (idx === btnIdx) child.classList.add('incorrect');
                     });
                     if (ok) quiz.score++;
                     stats.recordAnswer(ok);
@@ -1175,9 +1206,44 @@
                 wrap.appendChild(b);
             });
             card.appendChild(wrap);
+
+            attachLearnMore(card, cat);
         }
 
-        function renderQA(card, q) {
+        function attachLearnMore(card, cat) {
+            if (!cat || (!cat.cards && !cat.description)) return;
+            const learnWrap = el('div');
+            const toggleBtn = el('button', {
+                class: 'learn-more-toggle',
+                html: t('learnMore'),
+                onclick: () => {
+                    const existingBox = learnWrap.querySelector('.learn-more-box');
+                    if (existingBox) {
+                        existingBox.remove();
+                        toggleBtn.innerHTML = t('learnMore');
+                    } else {
+                        const box = el('div', { class: 'learn-more-box' });
+                        box.appendChild(el('div', { class: 'learn-more-title', text: cat.title }));
+                        if (cat.description) {
+                            box.appendChild(el('p', { html: formatMathAndText(cat.description), attrs: { style: 'margin-bottom: 10px; color: var(--muted);' } }));
+                        }
+                        (cat.cards || []).forEach(c => {
+                            const subTitle = el('strong', { text: c.title, attrs: { style: 'display:block; margin-top: 8px; color: var(--text);' } });
+                            box.appendChild(subTitle);
+                            (c.points || []).forEach(pt => {
+                                box.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt), attrs: { style: 'font-size: 0.88rem; margin-bottom: 6px;' } }));
+                            });
+                        });
+                        learnWrap.appendChild(box);
+                        toggleBtn.innerHTML = t('hideLearnMore');
+                    }
+                }
+            });
+            learnWrap.appendChild(toggleBtn);
+            card.appendChild(learnWrap);
+        }
+
+        function renderQA(card, q, cat) {
             const revealBtn = el('button', { class: 'btn btn-full', text: t('reveal') });
             revealBtn.onclick = () => {
                 revealBtn.remove();
@@ -1197,6 +1263,7 @@
                 row.appendChild(el('button', { class: 'btn btn-success', text: t('gotIt'), onclick: () => grade(true) }));
                 row.appendChild(el('button', { class: 'btn btn-danger', text: t('missed'), onclick: () => grade(false) }));
                 card.appendChild(row);
+                attachLearnMore(card, cat);
             };
             card.appendChild(revealBtn);
         }

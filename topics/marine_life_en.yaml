@@ -1,0 +1,426 @@
+id: marine_life_en
+title: "Marine Life & Ocean Wonders"
+description: >
+  Dive deep into the mesmerizing world beneath the waves! Explore majestic whales, playful dolphins, 
+  cunning apex predators, vibrant coral reefs, and the alien wonders of the dark abyss.
+lang: en
+audience: family
+categories:
+  - id: whales_giants_deep
+    title: "Whales & Giants of the Deep"
+    description: >
+      Encounter the gentle titans of the ocean! Discover the immense Blue Whale, complex humpback songs, 
+      deep-diving sperm whales, and legendary creatures of the open sea.
+    cards:
+      - title: "The Blue Whale: Largest Animal on Earth"
+        points:
+          - "The Blue Whale is the largest animal ever known to have lived on Earth, even bigger than the largest dinosaur."
+          - "They can reach lengths of up to 30 meters (100 feet) and weigh up to 200 metric tons."
+          - "A blue whale's heart alone is roughly the size of a small car (such as a Volkswagen Beetle) and weighs around 180 kg (400 lbs)."
+          - "Despite their immense bulk, their diet consists almost exclusively of tiny shrimp-like crustaceans called krill, consuming up to 4 tons per day."
+          - "A newborn blue whale calf weighs around 3 tons and gains about 90 kg (200 lbs) every single day just by nursing."
+      - title: "Humpback Whales & Their Complex Songs"
+        points:
+          - "Male humpback whales compose complex, haunting 'songs' that can last up to 30 minutes and repeat for hours across ocean basins."
+          - "All males in the same oceanic population sing the same evolving song, which gradually changes and updates from year to year."
+          - "Humpbacks are famous for acrobatic breaching, leaping entirely out of the water to communicate, dislodge parasites, or play."
+          - "They employ a cooperative feeding strategy called 'bubble-net feeding', blowing rings of bubbles to corral schools of fish."
+      - title: "Sperm Whales: Champions of the Abyss"
+        points:
+          - "The Sperm Whale has the largest brain of any creature known in history, weighing up to 9 kilograms (20 lbs)."
+          - "They can dive to extreme depths exceeding 2,000 meters (6,500 feet) and hold their breath for up to 90 minutes."
+          - "They use powerful echolocation clicks—the loudest sound produced by any animal on Earth (over 230 decibels underwater)."
+          - "Their massive head contains a reservoir of spermaceti oil, which aids in buoyancy control and sound focusing."
+          - "Their primary prey in the ink-black depths are giant squids and colossal squids."
+      - title: "Narwhals: The Unicorns of the Sea"
+        points:
+          - "The narwhal is an Arctic whale famous for the long, spiral tusk protruding from the upper lip of males."
+          - "This iconic 'horn' is actually an elongated canine tooth that can grow up to 3 meters (10 feet) long."
+          - "The tusk contains millions of sensory nerve endings, allowing the whale to detect changes in water temperature, salinity, and pressure."
+          - "Medieval traders often sold narwhal tusks to European royalty as genuine horns of mythical unicorns."
+      - title: "Baleen vs. Toothed Whales"
+        points:
+          - "Cetaceans are divided into two main suborders: Mysticeti (baleen whales) and Odontoceti (toothed whales)."
+          - "Baleen plates are made of keratin (the same protein as human fingernails and hair) and act as giant strainers."
+          - "Baleen whales (like Blue, Humpback, and Right whales) have two blowholes, whereas toothed whales (like Orcas and Sperm whales) have only one."
+    trivia:
+      - type: multiple_choice
+        question: "How large is the heart of a full-grown adult Blue Whale?"
+        options: ["About the size of a small car", "About the size of a basketball", "About the size of a refrigerator", "About the size of a peanut"]
+        correct: 0
+      - type: multiple_choice
+        question: "What tiny organisms make up almost the entire diet of the gigantic Blue Whale?"
+        options: ["Krill (tiny shrimp-like crustaceans)", "Jellyfish and sea anemones", "Small squids and octopuses", "Seaweed and kelp"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the famous long spiral 'tusk' of a male narwhal anatomically?"
+        options: ["An elongated canine tooth", "A hardened nasal bone", "A calcified antenna", "A specialized dorsal fin"]
+        correct: 0
+      - type: multiple_choice
+        question: "What cooperative hunting method do humpback whales use to trap schools of fish?"
+        options: ["Bubble-net feeding", "Sonic blast stunning", "Tail-whipping tornadoes", "Mud-ring lassoing"]
+        correct: 0
+      - type: multiple_choice
+        question: "Which whale species possesses the largest brain of any animal known on Earth?"
+        options: ["Sperm Whale", "Blue Whale", "Killer Whale (Orca)", "Humpback Whale"]
+        correct: 0
+      - type: multiple_choice
+        question: "What protein material are whale baleen plates composed of?"
+        options: ["Keratin (same as human fingernails)", "Pure calcium carbonate", "Cartilage and collagen", "Enamel and dentin"]
+        correct: 0
+      - type: multiple_choice
+        question: "How many blowholes do baleen whales (Mysticeti) possess compared to toothed whales (Odontoceti)?"
+        options: ["Baleen whales have two, toothed whales have one", "Baleen whales have one, toothed whales have two", "Both groups have exactly two blowholes", "Both groups have exactly one blowhole"]
+        correct: 0
+      - type: multiple_choice
+        question: "How loud can a sperm whale's echolocation click be underwater, making it the loudest animal sound on Earth?"
+        options: ["Over 230 decibels", "Around 120 decibels", "Around 80 decibels", "Over 500 decibels"]
+        correct: 0
+      - type: multiple_choice
+        question: "In medieval Europe, narwhal tusks were commonly traded and sold as what mythical object?"
+        options: ["Unicorn horns", "Dragon teeth", "Mermaid wands", "Phoenix feathers"]
+        correct: 0
+      - type: multiple_choice
+        question: "Approximately how much weight does a newborn blue whale calf gain per day while nursing?"
+        options: ["Around 90 kg (200 lbs)", "Around 10 kg (22 lbs)", "Around 500 kg (1,100 lbs)", "Around 1 kg (2.2 lbs)"]
+        correct: 0
+      - type: multiple_choice
+        question: "What deep-sea predator is the primary favorite food of the deep-diving sperm whale?"
+        options: ["Giant and colossal squids", "Great white sharks", "Electric eels", "Deep-sea king crabs"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why do male humpback whale songs change over time?"
+        options: ["The whole population cultural song evolves and updates together", "Each whale composes a purely unique solo song forever", "Songs only change when a whale migrates to a new ocean", "Whale songs are completely random noise with no pattern"]
+        correct: 0
+
+  - id: dolphins_seals_mammals
+    title: "Dolphins, Seals & Marine Mammals"
+    description: >
+      Discover the remarkable intelligence and charm of marine mammals! From clever bottlenose dolphins 
+      and apex orcas to tool-using sea otters and gentle manatees.
+    cards:
+      - title: "Killer Whales (Orcas): The Ocean's Apex Pack"
+        points:
+          - "Despite their common name 'Killer Whale', Orcas are actually the largest members of the oceanic dolphin family (Delphinidae)."
+          - "Orcas have no natural predators in the ocean, making them true apex predators."
+          - "Different orca pods have distinct dialects, hunting techniques, and cultures passed down across matriarchal generations."
+          - "Some pods hunt great white sharks by targeting their nutrient-rich livers, while others beach themselves intentionally to catch seals."
+      - title: "Bottlenose Dolphins & High Intelligence"
+        points:
+          - "Bottlenose dolphins use 'signature whistles'—unique acoustic names used to identify and call specific individuals."
+          - "They practice unihemispheric slow-wave sleep: sleeping with only one half of their brain at a time while keeping the opposite eye open to breathe and watch for predators."
+          - "Dolphins pass the mirror self-recognition test, demonstrating advanced self-awareness alongside great apes and elephants."
+          - "They have been observed using sea sponges as protective tools over their snouts when foraging on rocky seafloors."
+      - title: "Sea Otters: Tool Users of the Kelp Forest"
+        points:
+          - "Sea otters have the densest fur of any animal on Earth, with up to one million hairs per square inch and no blubber layer."
+          - "They keep a favorite rock tucked in a loose pouch of skin under their forearm to crack open hard clams, crabs, and sea urchins."
+          - "Sea otters wrap themselves in giant kelp while sleeping and hold paws with their mates so they do not drift away with ocean currents."
+          - "As a keystone species, they protect kelp forests from being overgrazed by sea urchins."
+      - title: "Manatees & Dugongs: Gentle Sea Cows"
+        points:
+          - "Manatees are peaceful, slow-moving aquatic herbivores related more closely to modern elephants and hyraxes than to whales."
+          - "They graze on seagrass for up to 8 hours a day, consuming up to 10-15% of their body weight daily."
+          - "Manatees replace their molar teeth continuously throughout life, marching new teeth forward as old ones wear down from sandy seagrass."
+      - title: "Seals vs. Sea Lions & Walruses"
+        points:
+          - "True seals (Phocidae) lack external ear flaps and crawl on land using their bellies, while Sea Lions (Otariidae) have visible ear flaps and can walk on all fours using rotating rear flippers."
+          - "Walruses have enormous tusks (canines) used for hauling their heavy bodies onto ice floes, defending territory, and breaking breathing holes."
+          - "Walrus skin can change color depending on temperature: turning pale pink when warm (blood circulating near surface) and grayish-white when in freezing water."
+    trivia:
+      - type: multiple_choice
+        question: "To which taxonomic family do Killer Whales (Orcas) actually belong?"
+        options: ["Oceanic dolphins (Delphinidae)", "Baleen whales (Balaenopteridae)", "Sperm whales (Physeteridae)", "Porpoises (Phocoenidae)"]
+        correct: 0
+      - type: multiple_choice
+        question: "How do dolphins sleep safely without drowning or being ambushed by predators?"
+        options: ["Unihemispheric sleep (one brain hemisphere sleeps while the other stays awake)", "They enter a complete 10-hour coma at the ocean bottom", "They only sleep during high noon when the sun is brightest", "They never sleep at any point during their lifetime"]
+        correct: 0
+      - type: multiple_choice
+        question: "What unique natural insulation keeps sea otters warm without having a thick layer of blubber?"
+        options: ["The densest fur of any animal (up to a million hairs per square inch)", "A layer of volcanic heat-absorbing scales", "A waterproof internal oil furnace organ", "Constantly shivering at 200 vibrations per minute"]
+        correct: 0
+      - type: multiple_choice
+        question: "What terrestrial mammal is the closest living land relative of the manatee?"
+        options: ["Elephant", "Hippopotamus", "Cow", "Brown bear"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why do sleeping sea otters frequently hold paws with each other?"
+        options: ["To prevent drifting apart in ocean currents", "To share body heat through their palm pads", "To communicate telepathically through pulse beats", "To intimidate nearby predatory sea eagles"]
+        correct: 0
+      - type: multiple_choice
+        question: "How can you easily distinguish a sea lion from a true seal by looking at its head and locomotion?"
+        options: ["Sea lions have visible external ear flaps and can walk on all four flippers", "Sea lions have no ears and slide only on their belly", "Sea lions have long tusks like a walrus", "True seals have feathered crests behind their heads"]
+        correct: 0
+      - type: multiple_choice
+        question: "What tool do sea otters famously store in their armpit pouch to crack open hard shellfish?"
+        options: ["A favorite rock", "A sharp piece of coral", "A pointed wooden twig", "A discarded crab claw"]
+        correct: 0
+      - type: multiple_choice
+        question: "What acoustic tool do bottlenose dolphins use to identify themselves like personal names?"
+        options: ["Signature whistles", "Low frequency hums", "Bubble rings", "Rhythmic tail slaps"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why do walruses appear pale or pinkish when basking in the sun?"
+        options: ["Blood vessels near the skin surface dilate to dissipate heat", "Their skin gets sunburned instantly", "They coat themselves in pink algae for camouflage", "They shed their entire outer skin layer in sunlight"]
+        correct: 0
+      - type: multiple_choice
+        question: "What happens to a manatee's teeth over the course of its lifetime?"
+        options: ["New molars continuously grow at the back and march forward like a conveyor belt", "They grow a single set of indestructible diamond-coated tusks", "They lose all teeth by age 5 and swallow food whole", "Their front teeth grow continuously like rodent incisors"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why are sea otters considered a crucial 'keystone species' in ocean ecology?"
+        options: ["They eat sea urchins, preventing them from destroying vital kelp forests", "They filter microplastics from the water surface", "They dig underwater tunnels that provide homes for sharks", "They produce oxygen through specialized skin pores"]
+        correct: 0
+      - type: multiple_choice
+        question: "What part of a great white shark do specialized orca pods selectively consume for maximum energy?"
+        options: ["The nutrient- and oil-rich liver", "The dorsal fin", "The teeth and jaws", "The tail cartilage"]
+        correct: 0
+
+  - id: apex_sharks_rays
+    title: "Apex Predators: Sharks & Rays"
+    description: >
+      Explore the fascinating biology and sensory superpowers of elasmobranchs! From Great White precision 
+      and Hammerhead 360-degree vision to gentle Whale Sharks and graceful Manta Rays.
+    cards:
+      - title: "Shark Senses: The Ampullae of Lorenzini"
+        points:
+          - "Sharks have a sixth sense powered by special electroreceptor pores called the 'Ampullae of Lorenzini'."
+          - "These gel-filled pores around their snout can detect tiny electrical fields generated by the muscle contractions and heartbeats of buried prey."
+          - "They can also sense Earth's geomagnetic field, serving as an internal compass for long-distance migrations."
+          - "Sharks' skeleton is made entirely of lightweight, flexible cartilage rather than rigid bone."
+      - title: "The Great White Shark & Ocean Hunters"
+        points:
+          - "Great Whites are warm-bodied (endothermic) fish; they can keep their stomach and muscles warmer than surrounding cold water."
+          - "They can lose and replace thousands of teeth throughout their lifetime, with rows of backup teeth rotating into position like a conveyor belt."
+          - "Great whites can accelerate up to 40 km/h (25 mph) and launch completely into the air ('breaching') when ambushing seals from below."
+      - title: "Hammerhead Sharks: 360-Degree Vision"
+        points:
+          - "The wide, flattened head of a hammerhead is called a 'cephalofoil'."
+          - "Having eyes mounted on opposite ends of the cephalofoil gives hammerheads exceptional 360-degree vertical vision and binocular depth perception."
+          - "The wide surface area also houses a massive number of electroreceptors, turning their head into a metal detector scanning the sandy seafloor for buried stingrays."
+      - title: "Whale Sharks: The Gentle Giants"
+        points:
+          - "The Whale Shark is the largest living fish species in the world, growing up to 18 meters (60 feet) in length."
+          - "Despite having over 3,000 tiny teeth, they are completely harmless filter feeders that gulp plankton, fish eggs, and small fish."
+          - "Each whale shark has a completely unique pattern of white spots and stripes on its dark skin, like a human fingerprint."
+          - "Scientists use NASA star-mapping algorithms to identify individual whale sharks from photographs of their spot patterns."
+      - title: "Manta Rays & Electric Rays"
+        points:
+          - "Manta rays have the largest brain-to-body weight ratio of all fish and exhibit high curiosity and social intelligence."
+          - "Unlike stingrays, oceanic manta rays have no venomous tail barb and are harmless plankton feeders with wingspans up to 7 meters (23 feet)."
+          - "Electric rays (torpedo rays) can generate stunning electric discharges of up to 220 volts from specialized kidney-shaped electric organs to stun prey or defend against predators."
+    trivia:
+      - type: multiple_choice
+        question: "What is the primary function of the 'Ampullae of Lorenzini' pores found on a shark's head?"
+        options: ["Detecting electrical fields produced by prey and magnetic fields", "Filtering salt out of drinking seawater", "Regulating underwater buoyancy through gas release", "Producing bioluminescent light to attract mates"]
+        correct: 0
+      - type: multiple_choice
+        question: "What material makes up the entire skeletal structure of sharks and rays?"
+        options: ["Cartilage (lightweight and flexible)", "Dense calcium bone", "Chitinous exoskeleton", "Spongy mineralized keratin"]
+        correct: 0
+      - type: multiple_choice
+        question: "Which species holds the title of the largest living fish in the world?"
+        options: ["Whale Shark", "Great White Shark", "Basking Shark", "Giant Oarfish"]
+        correct: 0
+      - type: multiple_choice
+        question: "How do scientists uniquely identify individual whale sharks in the wild?"
+        options: ["By their unique pattern of white spots using star-mapping algorithms", "By the number of serrations on their tail fin", "By the color shade of their belly underbelly", "By measuring the exact length of their dorsal fin"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the anatomical name for the wide, hammer-shaped head of a hammerhead shark?"
+        options: ["Cephalofoil", "Rostrum", "Operculum", "Placoid"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the primary visual benefit of the hammerhead shark's wide head structure?"
+        options: ["Outstanding 360-degree vertical vision and binocular depth perception", "Night-vision infrared thermal imaging", "Ability to see through muddy silt like X-ray vision", "Magnifying microscopic plankton at close range"]
+        correct: 0
+      - type: multiple_choice
+        question: "What happens when a shark loses a tooth while biting hard prey?"
+        options: ["A backup tooth from rows behind moves forward to replace it immediately", "It must wait one year for a new tooth to sprout from bone", "The tooth never regrows, leaving an empty socket", "Its jaw regrows two smaller replacement teeth"]
+        correct: 0
+      - type: multiple_choice
+        question: "Unlike stingrays, what defensive weapon do giant Manta Rays completely lack?"
+        options: ["A venomous stinger / tail barb", "Gills for breathing underwater", "A protective skin mucus layer", "Pectoral fins for propulsion"]
+        correct: 0
+      - type: multiple_choice
+        question: "How high of an electric discharge can an electric torpedo ray generate to stun prey?"
+        options: ["Up to 220 volts", "Around 1.5 volts", "Over 10,000 volts", "Around 12 volts"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why can great white sharks hunt effectively in freezing deep water without slowing down?"
+        options: ["They are endothermic (regional warm-bodied) and keep core muscles warm", "They store boiling chemical fluids in their swim bladder", "Their cartilage produces anti-freeze glycol proteins", "They never enter water colder than tropical temperatures"]
+        correct: 0
+      - type: multiple_choice
+        question: "What surprising attribute does the Manta Ray hold among all living fish species?"
+        options: ["The largest brain-to-body weight ratio of any fish", "The fastest swimming speed in the ocean", "The ability to fly continuously for 10 miles over water", "The longest lifespan exceeding 500 years"]
+        correct: 0
+      - type: multiple_choice
+        question: "What kind of teeth do massive filter-feeding Whale Sharks possess?"
+        options: ["Over 3,000 tiny, non-functional teeth arranged in rows", "Razor-sharp triangular serrated serrations", "Crushing flat plates for cracking oyster shells", "No teeth whatsoever in their entire jaw"]
+        correct: 0
+
+  - id: coral_reefs_camouflage
+    title: "Coral Reefs & Master Camouflage"
+    description: >
+      Step into the bustling rainforests of the sea! Unravel the symbiotic secrets of corals, 
+      the shapeshifting genius of octopuses and cuttlefish, and the strange biology of seahorses.
+    cards:
+      - title: "Corals: Animals, Not Plants or Rocks"
+        points:
+          - "Corals are colonial marine invertebrates made of thousands of tiny soft-bodied animals called polyps."
+          - "They secrete hard calcium carbonate exoskeletons that accumulate over millennia to build coral reefs."
+          - "Corals share a vital mutualistic symbiosis with microscopic algae called zooxanthellae that live inside their tissues, supplying up to 90% of their energy via photosynthesis."
+          - "Coral bleaching occurs when rising water temperatures stress corals, causing them to expel their colorful zooxanthellae and turn bone white."
+      - title: "Octopuses: The Shapeshifting Invertebrates"
+        points:
+          - "Octopuses have three hearts and blue blood powered by copper-based hemocyanin rather than iron-based hemoglobin."
+          - "Two-thirds of an octopus's neurons are located in its eight arms, allowing each arm to explore, taste, and make decisions semi-autonomously."
+          - "They can change color and skin texture in less than 200 milliseconds using specialized skin cells called chromatophores, iridophores, and papillae."
+          - "The Mimic Octopus (Thaumoctopus mimicus) can actively impersonate up to 15 different venomous sea creatures, including lionfish, sea snakes, and flatfish."
+      - title: "Cuttlefish: Kings of Dynamic Color"
+        points:
+          - "Cuttlefish possess a unique internal porous shell called a 'cuttlebone' filled with gas and liquid to regulate buoyancy."
+          - "They have W-shaped pupils that give them an expansive field of view and the ability to detect polarized light."
+          - "They produce mesmerizing 'passing clouds' of rhythmic color pulses across their skin to mesmerize crabs before striking with tentacle speed."
+      - title: "Clownfish & Sea Anemones: Classic Symbiosis"
+        points:
+          - "Clownfish are immune to the stinging nematocysts of sea anemones thanks to a specialized mucus coating on their skin."
+          - "The anemone provides the clownfish with a safe home protected from predators, while the clownfish cleans parasites and defends the anemone."
+          - "All clownfish are born male (protandrous hermaphrodites); if the dominant breeding female in a group dies, the largest male transforms into the new breeding female."
+      - title: "Seahorses & Male Pregnancy"
+        points:
+          - "Seahorses are true fish with gills, a swim bladder, and fins, but they swim upright and lack a caudal tail fin."
+          - "They are one of the only animal species on Earth where the male experiences pregnancy, carrying fertilized eggs in a specialized brood pouch until birth."
+          - "Their prehensile tails can anchor them firmly to seagrass or coral during violent ocean storms."
+    trivia:
+      - type: multiple_choice
+        question: "What biological kingdom do living corals belong to?"
+        options: ["Animals (Invertebrates)", "Plants (Aquatic flora)", "Fungi", "Minerals"]
+        correct: 0
+      - type: multiple_choice
+        question: "What symbiotic microscopic organism lives inside coral tissues and provides most of their food through photosynthesis?"
+        options: ["Zooxanthellae (microscopic algae)", "Cyanobacteria", "Sea lice parasites", "Planktonic copepods"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why is octopus blood naturally blue instead of red?"
+        options: ["It contains copper-based hemocyanin to carry oxygen in cold water", "It contains high levels of blue iodine dye", "It has blue fluorescent proteins to light up in dark caves", "It lacks blood cells and consists only of deep-sea saline water"]
+        correct: 0
+      - type: multiple_choice
+        question: "Where are approximately two-thirds of an octopus's neurons located?"
+        options: ["In its eight arms", "In its main central brain between the eyes", "In its mantle cavity", "Along the lining of its digestive system"]
+        correct: 0
+      - type: multiple_choice
+        question: "What unique reproductive role makes seahorses famous throughout the animal kingdom?"
+        options: ["The male carries fertilized eggs in a brood pouch and gives birth", "They lay millions of airborne floating bubble eggs", "Both parents combine into a single organism to fertilize eggs", "The female gives birth to fully grown adult seahorses instantly"]
+        correct: 0
+      - type: multiple_choice
+        question: "What happens in a clownfish school if the dominant breeding female dies?"
+        options: ["The largest dominant male changes sex into a female", "A young female migrates from miles away to take over", "The entire school disbands and wanders alone", "The males stop reproducing and guard the empty anemone"]
+        correct: 0
+      - type: multiple_choice
+        question: "How does a clownfish avoid being stung by its host sea anemone's stinging tentacles?"
+        options: ["It has a specialized protective mucus coating on its skin", "Its scales are made of thick impenetrable bone plates", "It permanently removes the anemone's venom glands with its teeth", "It only touches the anemone while swimming backwards"]
+        correct: 0
+      - type: multiple_choice
+        question: "How many hearts does an octopus have to pump blood through its gills and body?"
+        options: ["Three hearts", "One heart", "Two hearts", "Eight hearts (one per arm)"]
+        correct: 0
+      - type: multiple_choice
+        question: "What internal porous organ does a cuttlefish use to precisely control its depth and buoyancy?"
+        options: ["Cuttlebone", "Swim bladder sack", "Floating liver", "Oil-filled spine"]
+        correct: 0
+      - type: multiple_choice
+        question: "What remarkable behavior is the Mimic Octopus famous for displaying when threatened?"
+        options: ["Impersonating other venomous creatures like lionfish and sea snakes", "Shooting poisonous ink darts across several meters", "Rolling into a spiky ball that looks like a sea urchin", "Flashing bright red lasers from its eye pupils"]
+        correct: 0
+      - type: multiple_choice
+        question: "What causes 'coral bleaching' on shallow reefs worldwide?"
+        options: ["Elevated water temperatures causing corals to expel their symbiotic algae", "Corals painting themselves with calcium to reflect bright sunlight", "A sudden lack of salt in deep ocean currents", "Predatory parrotfish chewing off all coral pigment"]
+        correct: 0
+      - type: multiple_choice
+        question: "What specialized cells allow octopuses and cuttlefish to change their skin colors almost instantaneously?"
+        options: ["Chromatophores", "Osteocytes", "Nematocysts", "Myocytes"]
+        correct: 0
+
+  - id: abyss_bioluminescence
+    title: "The Abyss & Bioluminescent Creatures"
+    description: >
+      Journey into the permanent midnight zone of the deep ocean! Encounter glowing anglerfish, 
+      the mysterious colossal squid, bubbling hydrothermal vents, and mind-bending adaptations to crush depth.
+    cards:
+      - title: "The Ocean Zones: From Sunlit to Hadal"
+        points:
+          - "The Epipelagic (Sunlight) zone extends to 200m depth; below 1,000m lies the Bathypelagic (Midnight) zone with complete darkness."
+          - "The Hadal zone covers deep trenches down to nearly 11,000 meters (36,000 feet) in the Mariana Trench."
+          - "At Mariana Trench depths, water pressure exceeds 1,000 atmospheres—equivalent to the weight of an elephant balanced on a postage stamp."
+          - "Water temperatures in the deep sea hover just above freezing, between 0°C and 4°C (32°F - 39°F)."
+      - title: "Bioluminescence: Cold Light in the Dark"
+        points:
+          - "Over 75% of deep-sea creatures produce bioluminescence—light generated by a chemical reaction involving luciferin and luciferase."
+          - "Bioluminescence is used for attracting prey (anglerfish lure), confusing predators (ink clouds of glowing light), mating signals, and counterillumination camouflage."
+          - "Counterillumination: Many deep fish have belly photophores that match the faint sunlight filtering from above, erasing their shadow from predators below."
+      - title: "The Deep-Sea Anglerfish"
+        points:
+          - "Female anglerfish possess an 'illicium' (modified dorsal fin spine) tipped with a glowing bacterial bulb called an 'esca'."
+          - "The glowing esca dangles in front of their needle-toothed mouth like a fishing rod to lure unsuspecting prey in the pitch black."
+          - "Deep-sea anglerfish practice extreme sexual parasitism: tiny dwarf males bite onto the giant female, permanently fusing their bloodstreams and degenerating into sperm-producing organs."
+      - title: "Giant & Colossal Squids"
+        points:
+          - "Colossal Squids (Mesonychoteuthis hamiltoni) possess the largest eyes in the entire animal kingdom, measuring up to 27 cm (11 inches) across—the size of a soccer ball."
+          - "Their gigantic eyes capture the faintest photons of light, detecting the bioluminescent glow of approaching sperm whales from over 120 meters away."
+          - "Unlike giant squids with toothed suction cups, colossal squid tentacles are armed with swiveling, razor-sharp claws."
+      - title: "Hydrothermal Vents & Chemosynthesis"
+        points:
+          - "Hydrothermal vents ('black smokers') spew mineral-rich water heated by magma up to 400°C (750°F) without boiling due to extreme pressure."
+          - "These ecosystems do not rely on sunlight for photosynthesis; instead, specialized bacteria produce energy via chemosynthesis by oxidizing toxic hydrogen sulfide."
+          - "Giant tube worms (Riftia pachyptila) reaching 2.4 meters in length live near vents with no mouth or digestive tract, nourished entirely by symbiotic chemosynthetic bacteria."
+    trivia:
+      - type: multiple_choice
+        question: "What is the biological process called where deep-sea organisms create energy from chemicals without sunlight?"
+        options: ["Chemosynthesis", "Photosynthesis", "Radiosynthesis", "Thermosynthesis"]
+        correct: 0
+      - type: multiple_choice
+        question: "What animal holds the world record for the largest eyes in the animal kingdom (up to the size of a soccer ball)?"
+        options: ["Colossal Squid", "Blue Whale", "Great White Shark", "Ostrich"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the glowing lure on a female deep-sea anglerfish's head called?"
+        options: ["Esca", "Cephalofoil", "Operculum", "Baleen"]
+        correct: 0
+      - type: multiple_choice
+        question: "How do tiny male deep-sea anglerfish survive and mate in the vast, empty ocean?"
+        options: ["They fuse permanently into the body of a female as a parasitic mate", "They build large glowing nests on deep-sea sand plains", "They fight in underwater arenas for female attention", "They live in separate colonies and release airborne pheromones"]
+        correct: 0
+      - type: multiple_choice
+        question: "What chemical compound spewing from deep-sea hydrothermal vents is used by bacteria to generate food?"
+        options: ["Hydrogen sulfide", "Pure liquid methane", "Nitrous oxide", "Carbon monoxide"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the deepest known location in the world's oceans, reaching nearly 11,000 meters down?"
+        options: ["The Mariana Trench (Challenger Deep)", "The Puerto Rico Trench", "The Java Trench", "The Cayman Trough"]
+        correct: 0
+      - type: multiple_choice
+        question: "How do giant tube worms living near hydrothermal vents feed without a mouth or stomach?"
+        options: ["Symbiotic bacteria living inside them convert toxic vent chemicals into nutrients", "They absorb plankton directly through their hard outer shell", "They filter boiling volcanic steam through their tentacles", "They consume small deep-sea crabs by dissolving them in acid"]
+        correct: 0
+      - type: multiple_choice
+        question: "What clever camouflage technique uses glowing belly photophores to blend in with faint light from above?"
+        options: ["Counterillumination", "Batesian mimicry", "Disruptive coloration", "Phosphorescent masking"]
+        correct: 0
+      - type: multiple_choice
+        question: "What two chemicals react together inside living organisms to produce cold bioluminescent light?"
+        options: ["Luciferin and Luciferase", "Hemocyanin and Hemoglobin", "Keratin and Collagen", "Melanin and Carotenoid"]
+        correct: 0
+      - type: multiple_choice
+        question: "Why does superheated 400°C (750°F) water spewing from hydrothermal vents not boil into steam?"
+        options: ["The immense crushing water pressure at the ocean floor prevents boiling", "The water contains high levels of volcanic liquid nitrogen", "The surrounding water cools it instantaneously before bubbles can form", "The vents are located in zero-gravity underwater pockets"]
+        correct: 0
+      - type: multiple_choice
+        question: "What weapons are found on the tentacle clubs of the colossal squid instead of simple suction cups?"
+        options: ["Swiveling, sharp chitinous hooks", "Venomous stinging harpoons", "Electric stun pads", "Serrated razor teeth made of bone"]
+        correct: 0
+      - type: multiple_choice
+        question: "What is the name of the ocean depth zone below 1,000 meters that receives zero sunlight?"
+        options: ["The Bathypelagic (Midnight) zone", "The Epipelagic (Sunlight) zone", "The Mesopelagic (Twilight) zone", "The Intertidal zone"]
+        correct: 0
