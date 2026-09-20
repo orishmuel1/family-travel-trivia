@@ -454,6 +454,7 @@
                 reveal: '👁️ Reveal Answer', answer: 'Answer', didYouGet: 'Did you get it right?',
                 gotIt: '✓ Got it', missed: '✗ Missed',
                 learnMore: '📖 Learn more about this topic', hideLearnMore: '📖 Hide learning notes',
+                explanationTitle: '💡 Explanation & Context',
                 tryAgain: '↻ Try Again', backToLearning: '← Back to Lesson', backToTopic: '← Back to Course',
                 perfect: 'Perfect!', greatJob: 'Great job!', niceEffort: 'Nice effort!', keepLearning: 'Keep learning!',
                 yourStats: 'Your Statistics', topicsExplored: 'Topics & Courses Explored', questionsAnswered: 'Questions Answered',
@@ -499,6 +500,7 @@
                 reveal: '👁️ חשיפת התשובה', answer: 'תשובה', didYouGet: 'עניתם נכון?',
                 gotIt: '✓ צדקתי', missed: '✗ טעיתי',
                 learnMore: '📖 למד עוד על הנושא', hideLearnMore: '📖 הסתר מידע לימודי',
+                explanationTitle: '💡 הסבר ותשובה',
                 tryAgain: '↻ שוב', backToLearning: '→ חזרה לשיעור', backToTopic: '→ חזרה לקורס',
                 perfect: 'מושלם!', greatJob: 'עבודה מצוינת!', niceEffort: 'כל הכבוד!', keepLearning: 'ממשיכים ללמוד!',
                 yourStats: 'הסטטיסטיקה שלך', topicsExplored: 'נושאים וקורסים שנחקרו', questionsAnswered: 'שאלות שנענו',
@@ -1252,9 +1254,7 @@
                 let existingBox = learnWrap.querySelector('.learn-more-box');
                 if (existingBox) return;
                 const box = el('div', { class: 'learn-more-box' });
-                const headerTitle = explanationText 
-                    ? (currentLang === 'he' ? '💡 הסבר ותשובה' : '💡 Explanation & Context')
-                    : (cat ? cat.title : '');
+                const headerTitle = explanationText ? t('explanationTitle') : (cat ? cat.title : '');
                 box.appendChild(el('div', { class: 'learn-more-title', text: headerTitle }));
 
                 if (explanationText) {
@@ -1448,7 +1448,10 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('SW registered', reg.scope))
+                    .then(reg => {
+                        reg.update();
+                        console.log('SW registered', reg.scope);
+                    })
                     .catch(err => console.error('SW registration failed', err));
             });
         }

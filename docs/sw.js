@@ -13,7 +13,7 @@
  * so any content OR shell change bumps the version and evicts stale caches.
  */
 
-const CACHE_NAME = 'trivia-cache-v-fccbfdf4';
+const CACHE_NAME = 'trivia-cache-v-b2d06db0';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -59,13 +59,25 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Everything else (the shell): cache-first, then network, then cached index.html.
+  // HTML navigations / index.html: network-first (fresh updates online), cache fallback offline.
+  if (req.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname.endsWith('/')) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+          return res;
+        })
+        .catch(() => caches.match('./index.html').then((cached) => cached || caches.match('./')))
+    );
+    return;
+  }
+
+  // Static assets: cache-first, then network.
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
-      return fetch(req).catch(() => {
-        if (req.mode === 'navigate') return caches.match('./index.html');
-      });
+      return fetch(req);
     })
   );
 });
