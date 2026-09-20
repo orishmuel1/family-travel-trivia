@@ -105,6 +105,7 @@ categories:
           - "Distractor 2"
           - "Distractor 3"
         correct: 0
+        explanation: "Clear, intuitive explanation stating why the correct option holds and why other approaches differ."
 ```
 
 ---
@@ -131,5 +132,7 @@ categories:
 | `trivia[]` | Lesson | list | Multiple-choice questions testing conceptual mastery |
 | `trivia[].type` | Trivia | `multiple_choice` | MUST be `multiple_choice` (no `single_qa`) |
 | `trivia[].question` | Trivia | string | Clear multiple-choice question |
-| `trivia[].options` | Trivia | list of 4 strings | Exactly 4 options |
+| `trivia[].options` | Trivia | list of 4 strings | Exactly 4 options sharing the same semantic type |
 | `trivia[].correct` | Trivia | integer (0–3) | 0-based index of the correct answer |
+| `trivia[].explanation` | Trivia | string | Contextual explanation providing the "Learn More" drawer content |
+

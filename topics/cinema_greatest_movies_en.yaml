@@ -871,11 +871,11 @@ categories:
   - type: multiple_choice
     question: In 'The Matrix', which color pill does Neo take to wake up and learn the truth about reality?
     options:
-    - The Blue Pill
     - The Red Pill
+    - The Blue Pill
     - The Green Pill
-    - The Gold Pill
-    correct: 1
+    - The Yellow Pill
+    correct: 0
     explanation: Offered a choice by Morpheus (Laurence Fishburne), Neo takes the red pill to wake up
       in a dystopian machine-dominated future.
   - type: multiple_choice
@@ -885,9 +885,9 @@ categories:
       the protector of young John Connor.
     options:
     - Hasta la vista, baby
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - I'll be back
+    - Come with me if you want to live
+    - Get to the chopper
     correct: 0
   - type: multiple_choice
     question: What Swiss surrealist artist designed the nightmarish Xenomorph creature in Ridley Scott's
@@ -907,9 +907,9 @@ categories:
       holiday debates as a Christmas classic.
     options:
     - Nakatomi Plaza
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Empire State Building
+    - Chrysler Building
+    - Sears Tower
     correct: 0
   - type: multiple_choice
     question: What famous poetic line concludes replicant Roy Batty's final monologue in 'Blade Runner'?
@@ -927,9 +927,9 @@ categories:
       tropical storms and sabotage unleash chaos.
     options:
     - Amber (fossilized tree resin)
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Petrified Wood
+    - Volcanic Basalt
+    - Obsidian
     correct: 0
   - type: multiple_choice
     question: 'What is the name of the sentient, rogue supercomputer with a calm voice and glowing red
@@ -949,9 +949,9 @@ categories:
       wasteland to rescue a tyrant's captive wives.
     options:
     - Charlize Theron
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Sigourney Weaver
+    - Linda Hamilton
+    - Emily Blunt
     correct: 0
   - type: multiple_choice
     question: What liquid metal material allows the villainous T-1000 to regenerate and shape-shift in
@@ -971,9 +971,9 @@ categories:
       aboard the commercial freighter Nostromo.
     options:
     - The USCSS Nostromo
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - The Millennium Falcon
+    - The USS Enterprise
+    - The Discovery One
     correct: 0
   - type: multiple_choice
     question: Which actor played iconic German villain Hans Gruber in 'Die Hard' in his Hollywood feature
@@ -993,9 +993,9 @@ categories:
       bridging millions of years in a fraction of a second.
     options:
     - The Blue Danube (by Johann Strauss II)
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Ride of the Valkyries
+    - Moonlight Sonata
+    - Boléro
     correct: 0
   - type: multiple_choice
     question: In 'The Matrix', what is Neo's real-world hacker identity name before he wakes up?
@@ -1014,9 +1014,9 @@ categories:
       is trapped inside a simulated reality.
     options:
     - Velociraptors (Raptors)
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Tyrannosaurus Rex
+    - Dilophosaurus
+    - Brachiosaurus
     correct: 0
   - type: multiple_choice
     question: In what futuristic year was Ridley Scott's original 1982 'Blade Runner' set in Los Angeles?
@@ -1034,9 +1034,9 @@ categories:
       battling the alien queen in James Cameron's 1986 sequel 'Aliens'.
     options:
     - The Power Loader hydraulic arms / Flame thrower
-    - The Blue Pill
-    - The Red Pill
-    - The Green Pill
+    - Plasma Cannon
+    - Proton Pack
+    - Sonic Blaster
     correct: 0
 - id: acclaimed_drama_epics
   title: Acclaimed Drama & Oscar Powerhouses

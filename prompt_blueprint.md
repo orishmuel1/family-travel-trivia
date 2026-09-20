@@ -51,15 +51,17 @@ NOTES:            (optional — any other guidance: focus, tone, how many items,
 VOLUME & DEPTH REQUIREMENTS:
 - Structure: ALWAYS start with category "Important Facts" (id: important_facts) + 2-4 EXTRA theme categories.
 - Cards: Exactly 8 to 12 cards per category (each card = 1 subcategory entity).
-- Facts per card: Exactly 4-5 engaging, informative, true bullet points per card.
-- Trivia: At least 15 to 20 questions per category (mix of multiple_choice with 4 options and single_qa with concise answers).
+- Facts per card: Exactly 4-5 engaging, informative, true bullet points per card explaining concepts clearly with rich storytelling.
+- Trivia: At least 15 to 20 questions per category (100% multiple_choice with 4 domain-aligned options and a dedicated explanation).
+- Distractor Quality: All 4 options must share the exact same semantic type (e.g., all 4 are people, all 4 are years, all 4 are cities). Never mix types or use unrelated fallback distractors.
+- Learn More (Explanation): Every question MUST include an `explanation` field that explains why the answer is correct and provides rich context derived from the lesson cards.
 - Total questions: 60-100 questions total per language file.
 
 WHAT TO OUTPUT:
 1. An English YAML code block (lang: en, id: <slug>_en).
 2. A Hebrew YAML code block — the SAME topic translated to Hebrew (lang: he, id: <slug>_he).
    - Keep all category/card IDs in English (snake_case).
-   - Translate all visible text (titles, descriptions, points, questions, answers) into natural Hebrew.
+   - Translate all visible text (titles, descriptions, points, questions, options, explanations) into natural Hebrew.
    - HEBREW QUOTE RULE: Do NOT use raw ASCII double quotes inside double-quoted strings (e.g. use Hebrew gershayim ״ or single quotes for acronyms like מכ״ם, תנ״ך, צה״ל).
 3. After both code blocks, a short plain-text summary showing card & question counts per category.
 
@@ -90,12 +92,10 @@ categories:
           - "Engaging, true fact sentence #4."
     trivia:
       - type: multiple_choice
-        question: "Which item was developed first?"
+        question: "Which item was developed first in this sequence?"
         options: ["Item One", "Item Two", "Item Three", "Item Four"]
         correct: 0
-      - type: single_qa
-        question: "What material was used in the first prototype?"
-        answer: "Wood"
+        explanation: "Item One was developed first in 1845, pioneering the technology before Item Two followed decades later."
 
 SUMMARY FORMAT (plain text, AFTER the two code blocks):
   Topic: <title> — <N> categories — generated in English (_en) and Hebrew (_he)
