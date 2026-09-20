@@ -1158,6 +1158,11 @@
             const topic = getTopicSource(quiz.isAcademic, quiz.tIdx);
             const scopeLabel = quiz.scope === 'topic' ? topic.title : (item.catTitle || topic.title);
 
+            const backTo = quiz.isAcademic
+                ? ((quiz.cIdx == null) ? () => openAcademicTopic(quiz.tIdx) : () => openAcademicLesson(quiz.tIdx, quiz.cIdx))
+                : ((quiz.cIdx == null) ? () => openTopic(quiz.tIdx) : () => openLearning(quiz.tIdx, quiz.cIdx));
+            root.appendChild(el('button', { class: 'btn btn-ghost btn-back', text: t('back'), onclick: backTo }));
+
             const bar = el('div', { class: 'quiz-topbar' });
             bar.appendChild(el('span', { class: 'quiz-scope', text: scopeLabel }));
             bar.appendChild(el('span', { text: t('questionOf', { i: quiz.i + 1, n: total }) + '  •  ' + t('score', { s: quiz.score }) }));

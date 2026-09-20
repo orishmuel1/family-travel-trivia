@@ -106,13 +106,13 @@ categories:
       tool.
   - type: multiple_choice
     question: What was the wheel originally used for before transportation?
-    explanation: Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather
-      than transportation.
+    explanation: The wheel was invented around 3500 BCE in Mesopotamia for pottery crafting before being
+      adapted for chariots and transportation centuries later.
     options:
-    - Pottery
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Pottery shaping
+    - Grain grinding
+    - Water lifting
+    - Spinning wool
     correct: 0
   - type: multiple_choice
     question: Which calendar is the standard, widely used calendar system across the world today?
@@ -127,13 +127,13 @@ categories:
   - type: multiple_choice
     question: Chinese alchemists accidentally discovered gunpowder while trying to find a formula for
       what?
-    explanation: Gunpowder was discovered by Chinese alchemists in the 9th century while searching for
-      an elixir of immortality.
+    explanation: In 9th-century China, Taoist alchemists accidentally discovered gunpowder while experimenting
+      with potassium nitrate and sulfur to create an elixir of eternal life.
     options:
-    - Immortality
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - An elixir of immortality
+    - A cure for the plague
+    - A method to turn lead into gold
+    - A fire-starting fuel
     correct: 0
   - type: multiple_choice
     question: The microscope and telescope were made possible by the development of which technology?
@@ -147,13 +147,13 @@ categories:
       early 1600s.
   - type: multiple_choice
     question: Around which year BCE was the wheel invented in Mesopotamia?
-    explanation: Invented around 3500 BCE in Mesopotamia, the wheel was originally used for pottery rather
-      than transportation.
+    explanation: The wheel was first invented around 3500 BCE in ancient Mesopotamia for pottery and ceramic
+      production.
     options:
     - 3500 BCE
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - 1500 BCE
+    - 8000 BCE
+    - 500 BCE
     correct: 0
   - type: multiple_choice
     question: Which mineral was used to create the earliest magnetic compasses?
@@ -166,13 +166,13 @@ categories:
     explanation: Early compasses used lodestone, a naturally magnetized piece of the mineral magnetite.
   - type: multiple_choice
     question: Who introduced the calendar system that first added a leap year every four years?
-    explanation: The Julian calendar, introduced by Julius Caesar, added a leap year every four years
-      to fix seasonal drift.
+    explanation: The Julian calendar, introduced by Julius Caesar in 45 BCE, added a leap year every four
+      years to fix seasonal drift.
     options:
     - Julius Caesar
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Augustus
+    - Pope Gregory XIII
+    - Alexander the Great
     correct: 0
   - type: multiple_choice
     question: Which of the following is NOT one of the 'Four Great Inventions' of ancient China?
@@ -186,13 +186,13 @@ categories:
       and printing.
   - type: multiple_choice
     question: In which country were the first wearable eyeglasses crafted during the 13th century?
-    explanation: In the 13th century, Italian artisans crafted the first wearable eyeglasses to correct
-      vision.
+    explanation: Italian artisans in Venice and Florence crafted the first wearable convex magnifying
+      spectacles to correct presbyopia in the late 13th century.
     options:
     - Italy
-    - Ancient Egypt
-    - Ancient Rome
     - China
+    - Egypt
+    - England
     correct: 0
   - type: multiple_choice
     question: Who is credited with inventing papermaking in ancient China in 105 CE?
@@ -206,13 +206,13 @@ categories:
       official Ts'ai Lun.
   - type: multiple_choice
     question: What alloy is produced by combining copper with tin?
-    explanation: Combining copper with tin created bronze, giving rise to stronger tools, weapons, and
-      entire civilizations.
+    explanation: Combining copper with tin creates bronze, which gave its name to the Bronze Age and produced
+      much stronger tools and weapons than pure copper.
     options:
     - Bronze
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Brass
+    - Steel
+    - Pewter
     correct: 0
   - type: multiple_choice
     question: Who coined the scientific term 'cell' after looking at cork under a microscope?
@@ -225,13 +225,13 @@ categories:
     explanation: Robert Hooke coined the word 'cell' in 1665 after viewing plant cork under a microscope.
   - type: multiple_choice
     question: What Dutch scientist invented the pendulum clock in 1656?
-    explanation: In 1656, Christiaan Huygens invented the pendulum clock, dramatically increasing accuracy
-      to seconds per day.
+    explanation: Dutch physicist Christiaan Huygens patented the pendulum clock in 1656, dramatically
+      reducing clock errors from 15 minutes a day to a few seconds.
     options:
     - Christiaan Huygens
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Isaac Newton
+    - Robert Hooke
+    - Johannes Kepler
     correct: 0
   - type: multiple_choice
     question: What type of telescope did Sir Isaac Newton invent using mirrors rather than lenses?
@@ -245,13 +245,13 @@ categories:
       glass lenses to eliminate color distortion.
   - type: multiple_choice
     question: What did Antonie van Leeuwenhoek call the microscopic microorganisms he discovered?
-    explanation: Antonie van Leeuwenhoek was the first to observe bacteria and protozoa, which he called
-      'animalcules'.
+    explanation: Antonie van Leeuwenhoek called the microscopic single-celled organisms and bacteria he
+      discovered under his handcrafted microscopes 'animalcules'.
     options:
-    - Animalcules
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Animalcules ('tiny animals')
+    - Bacteria
+    - Microbes
+    - Cells
     correct: 0
   - type: multiple_choice
     question: Which ancient civilization created a solar calendar based on the flooding of the Nile River?
@@ -265,13 +265,13 @@ categories:
       of the Nile River.
   - type: multiple_choice
     question: Around what year BCE did humans discover how to smelt copper ore?
-    explanation: The discovery of smelting ore around 5000 BCE allowed humans to extract pure copper and
-      transition out of the Stone Age.
+    explanation: The discovery of smelting copper ore around 5000 BCE marked the dawn of metallurgy, allowing
+      humanity to transition out of the Stone Age.
     options:
     - 5000 BCE
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - 1000 BCE
+    - 10000 BCE
+    - 500 BCE
     correct: 0
   - type: multiple_choice
     question: What early timekeeping device measured time using the flow of water?
@@ -289,9 +289,9 @@ categories:
       in 1608.
     options:
     - Hans Lippershey
-    - Ancient Egypt
-    - Ancient Rome
-    - China
+    - Zacharias Janssen
+    - Jacob Metius
+    - Galileo Galilei
     correct: 0
 - id: world_changing_inventions
   title: Inventions that Changed the World
@@ -382,12 +382,13 @@ categories:
     explanation: Johannes Gutenberg invented the movable-type printing press around 1440 in Germany.
   - type: multiple_choice
     question: Which major historical era was powered and accelerated by the practical steam engine?
-    explanation: The steam engine powered factories, trains, and ships, driving the Industrial Revolution.
+    explanation: James Watt's practical steam engine provided the mechanical muscle that powered factories,
+      locomotives, and steamships during the Industrial Revolution.
     options:
-    - Industrial Revolution
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - The Industrial Revolution
+    - The Renaissance
+    - The Space Age
+    - The Bronze Age
     correct: 0
   - type: multiple_choice
     question: Who utilized the assembly line to make the automobile affordable for the public?
@@ -401,13 +402,13 @@ categories:
       cars.
   - type: multiple_choice
     question: What was the name of the first widely available photographic process invented in 1839?
-    explanation: Louis Daguerre introduced the daguerreotype in 1839, the first widely available photographic
-      process.
+    explanation: Louis Daguerre introduced the daguerreotype in 1839, the first commercially successful
+      photographic process that captured images on silvered copper plates.
     options:
     - Daguerreotype
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Calotype
+    - Cyanotype
+    - Tintype
     correct: 0
   - type: multiple_choice
     question: Which scientist discovered electromagnetic induction, paving the way for power generators?
@@ -420,12 +421,13 @@ categories:
     explanation: Michael Faraday discovered electromagnetic induction, leading to the creation of generators.
   - type: multiple_choice
     question: In what year did Karl Benz patent the first modern gas-powered automobile?
-    explanation: Karl Benz is credited with inventing the first modern gas-powered automobile in 1886.
+    explanation: Karl Benz patented his three-wheeled Motorwagen powered by an internal combustion gasoline
+      engine on January 29, 1886.
     options:
     - '1886'
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - '1908'
+    - '1850'
+    - '1923'
     correct: 0
   - type: multiple_choice
     question: What famous book was the first major work mass-produced on Gutenberg's printing press?
@@ -438,12 +440,13 @@ categories:
     explanation: The first major book printed was the Gutenberg Bible, which became instantly famous.
   - type: multiple_choice
     question: Which American statesman flew a kite in a thunderstorm to prove lightning is electricity?
-    explanation: Benjamin Franklin proved lightning was electrical in 1752 using his famous kite experiment.
+    explanation: In 1752, Benjamin Franklin conducted his famous kite-and-key experiment in Philadelphia,
+      demonstrating that lightning is an electrical phenomenon.
     options:
     - Benjamin Franklin
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Thomas Jefferson
+    - Alexander Hamilton
+    - John Adams
     correct: 0
   - type: multiple_choice
     question: Who founded the Kodak company and introduced convenient roll film to the public?
@@ -456,13 +459,13 @@ categories:
     explanation: George Eastman invented roll film and the Kodak camera, bringing photography to the public.
   - type: multiple_choice
     question: What did early photographs require people to do because of long exposure times?
-    explanation: Early photographs required long exposure times, meaning people had to sit perfectly still
-      for minutes.
+    explanation: Early photographic processes like the daguerreotype required exposure times of several
+      minutes, forcing subjects to sit motionless using head rests.
     options:
-    - Sit perfectly still
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Sit perfectly still without moving
+    - Wear dark sunglasses
+    - Stand in total darkness
+    - Submerge their hands in water
     correct: 0
   - type: multiple_choice
     question: Where did the Wright Brothers achieve their historic first powered flight in 1903?
@@ -476,13 +479,13 @@ categories:
       flight in 1903 at Kitty Hawk.
   - type: multiple_choice
     question: What semiconductor component invented at Bell Labs in 1947 replaced bulky vacuum tubes?
-    explanation: John Bardeen, Walter Brattain, and William Shockley invented the transistor at Bell Labs
-      in 1947.
+    explanation: John Bardeen, Walter Brattain, and William Shockley invented the point-contact transistor
+      at Bell Labs in 1947, revolutionizing computing.
     options:
     - The Transistor
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - The Capacitor
+    - The Inductor
+    - The Diode
     correct: 0
   - type: multiple_choice
     question: Who sent the very first successful wireless transatlantic radio signal in 1901?
@@ -497,13 +500,13 @@ categories:
   - type: multiple_choice
     question: What German engineer developed the first practical compressed ammonia refrigeration system
       in the 1870s?
-    explanation: Carl von Linde developed the first practical compressed ammonia refrigeration system
-      in the 1870s.
+    explanation: Carl von Linde developed the first practical compressed-ammonia refrigeration system
+      in the 1870s, enabling modern industrial and household cooling.
     options:
     - Carl von Linde
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Karl Benz
+    - Rudolf Diesel
+    - Gottlieb Daimler
     correct: 0
   - type: multiple_choice
     question: By how much did Henry Ford's moving assembly line reduce the production time of a Model
@@ -518,13 +521,13 @@ categories:
   - type: multiple_choice
     question: What key steering breakthrough did the Wright Brothers invent that made controlled flight
       possible?
-    explanation: Their breakthrough was the three-axis control system, which allowed pilots to steer the
-      aircraft in all directions.
+    explanation: The Wright brothers' fundamental breakthrough was the three-axis control system (wing
+      warping for roll, elevator for pitch, rudder for yaw).
     options:
-    - Three-axis control
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Three-axis control system
+    - Jet propulsion
+    - Helicopter rotor
+    - Gyroscopic autopilot
     correct: 0
   - type: multiple_choice
     question: Which two inventors independently created the integrated circuit (microchip) in the late
@@ -539,12 +542,13 @@ categories:
       in the late 1950s.
   - type: multiple_choice
     question: What famous daily wage did Henry Ford introduce for his assembly line workers in 1914?
-    explanation: Henry Ford implemented the moving assembly line in 1913 at his Highland Park car plant.
+    explanation: In 1914, Henry Ford introduced the revolutionary $5-a-day wage (more than double existing
+      average factory wages) to reduce worker turnover and boost morale.
     options:
     - $5 a day
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - $1 a day
+    - $10 a day
+    - $25 a day
     correct: 0
   - type: multiple_choice
     question: Which German physicist proved the existence of electromagnetic radio waves in the late 1880s?
@@ -557,13 +561,13 @@ categories:
     explanation: Heinrich Hertz proved the existence of electromagnetic radio waves in the late 1880s.
   - type: multiple_choice
     question: What mineral was commonly harvested from frozen lakes and rivers before mechanical refrigeration?
-    explanation: Before mechanical cooling, people relied on ice harvesting, cellars, and salt curing
-      to prevent food spoilage.
+    explanation: Before mechanical cooling, people relied on harvesting natural ice blocks from frozen
+      lakes and rivers, storing them in insulated ice houses.
     options:
     - Ice
-    - Leonardo da Vinci
-    - Johannes Gutenberg
-    - Isaac Newton
+    - Rock salt
+    - Peat
+    - Limestone
     correct: 0
 - id: medical_breakthroughs
   title: Medical Breakthroughs
@@ -648,12 +652,13 @@ categories:
       dishes.
   - type: multiple_choice
     question: Which disease did Edward Jenner target to create the world's first vaccine?
-    explanation: Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox.
+    explanation: Edward Jenner created the world's first vaccine in 1796 by inoculating a boy with mild
+      cowpox to protect him against deadly smallpox.
     options:
     - Smallpox
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Rabies
+    - Polio
+    - Tuberculosis
     correct: 0
   - type: multiple_choice
     question: Whose hand was featured in the very first medical X-ray image ever taken?
@@ -666,12 +671,13 @@ categories:
     explanation: The very first X-ray image ever taken showed the bones inside his wife's hand.
   - type: multiple_choice
     question: What hormone did Frederick Banting and Charles Best isolate to treat diabetes?
-    explanation: Frederick Banting and Charles Best successfully isolated insulin in 1921.
+    explanation: Frederick Banting and Charles Best isolated insulin from animal pancreases in 1921, transforming
+      Type 1 diabetes into a manageable condition.
     options:
     - Insulin
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Adrenaline
+    - Thyroxine
+    - Cortisol
     correct: 0
   - type: multiple_choice
     question: Which substance was successfully demonstrated in 1846 as a surgical anesthetic?
@@ -684,13 +690,13 @@ categories:
     explanation: In 1846, William Morton demonstrated the effective use of ether as a surgical anesthetic.
   - type: multiple_choice
     question: From what type of organism did Alexander Fleming isolate penicillin?
-    explanation: Alexander Fleming accidentally discovered penicillin in 1928 when mold grew on his bacteria
-      dishes.
+    explanation: Alexander Fleming discovered penicillin in 1928 when airborne spores of Penicillium notatum
+      mold contaminated a petri dish of staphylococcus bacteria.
     options:
-    - Mold
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Penicillium mold (fungus)
+    - Streptococcus bacteria
+    - Seaweed algae
+    - Tree bark virus
     correct: 0
   - type: multiple_choice
     question: Louis Pasteur developed a famous life-saving vaccine for which deadly animal-borne virus?
@@ -703,13 +709,13 @@ categories:
     explanation: Louis Pasteur expanded on this by developing vaccines for rabies and anthrax.
   - type: multiple_choice
     question: What physical property allows X-rays to show bones clearly on film?
-    explanation: X-rays pass easily through skin and muscle but are blocked by denser bones, creating
-      a shadow image.
+    explanation: Dense calcium-rich bones absorb X-ray radiation much more than soft skin and muscle tissue,
+      casting distinct white shadows on photographic film.
     options:
-    - Bones are dense
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Bones are much denser and absorb X-rays
+    - Bones emit their own light
+    - Bones reflect magnetic fields
+    - Bones conduct electricity
     correct: 0
   - type: multiple_choice
     question: 'Before the discovery of insulin in 1921, Type 1 diabetes was considered:'
@@ -723,12 +729,13 @@ categories:
       treatment.
   - type: multiple_choice
     question: What did Edward Jenner observe milkmaids catching that kept them safe from smallpox?
-    explanation: Edward Jenner created the world's first successful vaccine in 1796 to fight smallpox.
+    explanation: Edward Jenner noticed that milkmaids who contracted cowpox (a mild infection from cows)
+      were completely immune to the deadly smallpox virus.
     options:
     - Cowpox
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Chickenpox
+    - Measles
+    - Scarlet fever
     correct: 0
   - type: multiple_choice
     question: Who pioneered antiseptic surgery in the 1860s by using carbolic acid to sterilize tools?
@@ -742,12 +749,13 @@ categories:
       surgical instruments.
   - type: multiple_choice
     question: What Austrian biologist discovered the ABO human blood groups in 1901?
-    explanation: Karl Landsteiner discovered the ABO human blood group system in 1901.
+    explanation: Karl Landsteiner identified the A, B, and O blood groups in 1901, enabling safe blood
+      transfusions and earning the 1930 Nobel Prize in Medicine.
     options:
     - Karl Landsteiner
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Gregor Mendel
+    - Robert Koch
+    - Paul Ehrlich
     correct: 0
   - type: multiple_choice
     question: Who developed the first widely used inactivated polio vaccine in 1953?
@@ -761,13 +769,13 @@ categories:
       nationwide.
   - type: multiple_choice
     question: Which British biophysicist captured Photo 51, the famous X-ray diffraction image of DNA?
-    explanation: Crucial experimental data and X-ray diffraction images were captured by chemist Rosalind
-      Franklin.
+    explanation: Rosalind Franklin captured Photo 51 in 1952 using X-ray crystallography, providing the
+      crucial experimental proof of DNA's double-helix structure.
     options:
     - Rosalind Franklin
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Ada Lovelace
+    - Dorothy Hodgkin
+    - Marie Curie
     correct: 0
   - type: multiple_choice
     question: What shape describes the molecular structure of DNA discovered by Watson and Crick?
@@ -780,13 +788,13 @@ categories:
     explanation: James Watson and Francis Crick determined the double helix structure of DNA in 1953.
   - type: multiple_choice
     question: What revolutionary gene-editing technology was adapted from bacterial immune systems?
-    explanation: CRISPR-Cas9 is a revolutionary gene-editing tool adapted from a natural bacterial defense
-      system.
+    explanation: CRISPR-Cas9 was adapted from a natural bacterial defense mechanism against viruses into
+      a precision molecular scissor tool for gene editing.
     options:
     - CRISPR-Cas9
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Polymerase Chain Reaction (PCR)
+    - Stem cell cloning
+    - Gel electrophoresis
     correct: 0
   - type: multiple_choice
     question: What old medical theory falsely claimed that infectious diseases were spread by foul air?
@@ -800,13 +808,13 @@ categories:
       imbalances.
   - type: multiple_choice
     question: Who developed the oral polio vaccine given on a sugar cube?
-    explanation: Albert Sabin introduced an oral polio vaccine on a sugar cube, making mass immunization
-      easy.
+    explanation: Albert Sabin developed the live attenuated oral polio vaccine in the late 1950s, which
+      could be administered easily on sugar cubes or drops.
     options:
     - Albert Sabin
-    - Louis Pasteur
+    - Jonas Salk
     - Edward Jenner
-    - Alexander Fleming
+    - Louis Pasteur
     correct: 0
   - type: multiple_choice
     question: 'Jennifer Doudna and Emmanuelle Charpentier won the 2020 Nobel Prize in Chemistry for developing:'
@@ -819,13 +827,13 @@ categories:
     explanation: They won the 2020 Nobel Prize in Chemistry for their groundbreaking work.
   - type: multiple_choice
     question: What chemical did Joseph Lister use as an antiseptic wash for wounds and instruments?
-    explanation: Joseph Lister applied this discovery in the 1860s by using carbolic acid to sterilize
-      surgical instruments.
+    explanation: Joseph Lister introduced carbolic acid (phenol) sprays in the 1860s to sterilize surgical
+      instruments, wounds, and surgeons' hands, cutting infection rates.
     options:
-    - Carbolic acid
-    - Louis Pasteur
-    - Edward Jenner
-    - Alexander Fleming
+    - Carbolic acid (phenol)
+    - Bleach
+    - Hydrogen peroxide
+    - Ethanol
     correct: 0
 - id: everyday_objects
   title: Everyday Objects
@@ -924,12 +932,13 @@ categories:
   - type: multiple_choice
     question: What did Alexander Graham Bell ask his assistant Mr. Watson to do in the first telephone
       call?
-    explanation: Alexander Graham Bell was granted the first official patent for the telephone in 1876.
+    explanation: 'On March 10, 1876, Alexander Graham Bell spoke the first intelligible telephone sentence:
+      ''Mr. Watson, come here, I want to see you.'''
     options:
-    - Come here
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - '''Come here, I want to see you.'''
+    - '''Can you hear me now?'''
+    - '''What hath God wrought?'''
+    - '''Hello, Watson, are you there?'''
     correct: 0
   - type: multiple_choice
     question: What object melted in Percy Spencer's pocket, leading to the invention of the microwave?
@@ -944,13 +953,13 @@ categories:
   - type: multiple_choice
     question: Which country's military offered a prize that inspired the invention of food preservation
       canning?
-    explanation: Nicolas Appert invented food canning in 1810 after a French military contest sought ways
-      to preserve army rations.
+    explanation: The French military under Napoleon offered a 12,000-franc prize in 1795 for a way to
+      preserve army rations, won by confectioner Nicolas Appert in 1810.
     options:
-    - France
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - France (Napoleonic Wars)
+    - Great Britain
+    - Prussia
+    - United States
     correct: 0
   - type: multiple_choice
     question: What filament material did Edison use to make his light bulb last over 1,200 hours?
@@ -965,13 +974,13 @@ categories:
   - type: multiple_choice
     question: What was the name of the early 1960s military computer network that laid the foundation
       for the Internet?
-    explanation: The Internet began as ARPANET in the late 1960s, a military network funded by the US
-      government.
+    explanation: ARPANET (Advanced Research Projects Agency Network), funded by the US Department of Defense
+      in 1969, pioneered packet switching and TCP/IP.
     options:
     - ARPANET
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - ETHERNET
+    - MILNET
+    - NSFNET
     correct: 0
   - type: multiple_choice
     question: What food was intentionally tested and cooked second in the early microwave oven experiments?
@@ -986,13 +995,13 @@ categories:
   - type: multiple_choice
     question: For how many years after the tin can's invention did people wait for a dedicated mechanical
       can opener?
-    explanation: Amusingly, the tin can was invented shortly after, but the mechanical can opener wasn't
-      invented until 50 years later!
+    explanation: The tin can was patented in 1810, but early cans were so thick they had to be opened
+      with hammers and chisels until can openers were invented around 1858.
     options:
-    - 50 years
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - About 50 years
+    - Over 200 years
+    - Only 2 years
+    - Exactly 100 years
     correct: 0
   - type: multiple_choice
     question: What physical force does a telephone convert voice into so it can travel along copper wires?
@@ -1005,13 +1014,13 @@ categories:
     explanation: The invention converted spoken sound waves into electrical signals to travel along wires.
   - type: multiple_choice
     question: In what year did Thomas Edison demonstrate his commercially viable incandescent light bulb?
-    explanation: While many tried, Thomas Edison created the first commercially practical incandescent
-      light bulb in 1879.
+    explanation: Thomas Edison demonstrated his long-lasting incandescent bulb using a carbonized filament
+      in October 1879 at his Menlo Park laboratory.
     options:
     - '1879'
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - '1903'
+    - '1850'
+    - '1920'
     correct: 0
   - type: multiple_choice
     question: What natural item stuck to his dog's fur inspired George de Mestral to invent Velcro?
@@ -1025,13 +1034,13 @@ categories:
       a microscope.
   - type: multiple_choice
     question: Who invented the modern leak-proof ballpoint pen featuring a rolling metal ball in 1938?
-    explanation: Hungarian journalist László Bíró noticed quick-drying newspaper ink and designed a tiny
-      rotating metal ball socket in 1938.
+    explanation: Hungarian journalist László Bíró patented the first modern ballpoint pen in 1938 using
+      a freely rotating tiny metal ball and quick-drying ink.
     options:
     - László Bíró
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - Marcel Bich
+    - Lewis Waterman
+    - Gideon Sundback
     correct: 0
   - type: multiple_choice
     question: What was the very first commercial item scanned by a barcode reader at a supermarket checkout
@@ -1046,13 +1055,13 @@ categories:
       Juicy Fruit gum.
   - type: multiple_choice
     question: Which company coined the term 'zipper' in 1923 for rubber boots?
-    explanation: The B.F. Goodrich Company coined the catchy name 'zipper' in 1923 when they used it on
-      rubber boots.
+    explanation: The B.F. Goodrich Company coined the onomatopoeic word 'zipper' in 1923 when they used
+      Gideon Sundback's slide fastener on rubber boots.
     options:
     - B.F. Goodrich
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - Goodyear
+    - Nike
+    - Levi Strauss
     correct: 0
   - type: multiple_choice
     question: Why were Post-it Notes originally made in their iconic canary yellow color?
@@ -1066,13 +1075,13 @@ categories:
       yellow paper.
   - type: multiple_choice
     question: What code system inspired Norman Joseph Woodland to invent the barcode?
-    explanation: Norman Joseph Woodland and Bernard Silver invented the barcode in 1949, inspired by Morse
-      code dots and dashes.
+    explanation: Norman Joseph Woodland conceived the barcode in 1949 by extending dots and dashes of
+      Morse code into thick and thin parallel vertical lines.
     options:
     - Morse code
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - Braille code
+    - Binary ASCII code
+    - Baudot code
     correct: 0
   - type: multiple_choice
     question: Which military force widely adopted the ballpoint pen during WWII because it didn't leak
@@ -1088,13 +1097,13 @@ categories:
   - type: multiple_choice
     question: What organization popularized Velcro by using it to secure items in zero gravity during
       space missions?
-    explanation: NASA popularized the fastener during the Apollo space missions to secure equipment in
-      zero gravity.
+    explanation: NASA adopted George de Mestral's hook-and-loop fasteners for Apollo space suits and spacecraft
+      cabins to keep equipment from floating in zero-g.
     options:
     - NASA
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - The US Air Force
+    - The Red Cross
+    - The US Navy
     correct: 0
   - type: multiple_choice
     question: Who created the unique low-tack adhesive in 1968 that later led to Post-it Notes?
@@ -1108,13 +1117,13 @@ categories:
       peeled off cleanly.
   - type: multiple_choice
     question: What Swedish-American engineer perfected the modern interlocking zipper design in 1913?
-    explanation: Whitcomb Judson patented the 'clasp locker' in 1893, and Gideon Sundback perfected the
-      modern interlocking teeth in 1913.
+    explanation: Swedish-born engineer Gideon Sundback designed the 'Separable Fastener' with interlocking
+      metal teeth in 1913, the basis for modern zippers.
     options:
     - Gideon Sundback
-    - Bill Gates
-    - Tim Berners-Lee
-    - Steve Jobs
+    - Whitcomb Judson
+    - Elias Howe
+    - Alfred Nobel
     correct: 0
 - id: famous_scientists_inventors
   title: Famous Scientists and Inventors
@@ -1209,12 +1218,13 @@ categories:
       different sciences.
   - type: multiple_choice
     question: What math system did Isaac Newton invent to help explain his laws of physics?
-    explanation: He invented calculus to help explain his complex theories of physics and motion.
+    explanation: Sir Isaac Newton invented calculus (which he called 'the method of fluxions') in 1665–1666
+      to formulate his laws of planetary motion and gravitation.
     options:
-    - Calculus
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Calculus (Fluxions)
+    - Euclidean Geometry
+    - Trigonometry
+    - Linear Algebra
     correct: 0
   - type: multiple_choice
     question: Which electrical system developed by Nikola Tesla powers our homes and cities today?
@@ -1228,13 +1238,13 @@ categories:
       homes today.
   - type: multiple_choice
     question: What planet did Galileo study to discover its four largest moons?
-    explanation: Galileo built an improved telescope to observe the night sky, discovering four of Jupiter's
-      moons.
+    explanation: In 1610, Galileo pointed his telescope at Jupiter and discovered its four largest moons
+      (Io, Europa, Ganymede, and Callisto), proving not all bodies orbit Earth.
     options:
     - Jupiter
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Saturn
+    - Mars
+    - Venus
     correct: 0
   - type: multiple_choice
     question: What does the 'c' stand for in Albert Einstein's famous equation E=mc^2?
@@ -1248,13 +1258,13 @@ categories:
       and time.
   - type: multiple_choice
     question: Which elemental property did Marie Curie study and name, which ultimately led to her discoveries?
-    explanation: Marie Curie discovered the radioactive elements polonium and radium through tireless
-      research.
+    explanation: Marie Curie coined the term 'radioactivity' in 1898 to describe the spontaneous emission
+      of ionizing radiation from uranium, polonium, and radium.
     options:
     - Radioactivity
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Magnetism
+    - Electrical conductivity
+    - Fluorescence
     correct: 0
   - type: multiple_choice
     question: Legend says Isaac Newton began studying gravity after watching what object fall?
@@ -1268,12 +1278,13 @@ categories:
       in his orchard.
   - type: multiple_choice
     question: What is Galileo Galilei widely celebrated as the father of?
-    explanation: He is widely celebrated as the father of modern observational astronomy.
+    explanation: Galileo Galilei is widely honored as the 'father of modern observational astronomy' and
+      'father of modern physics' for using scientific instruments.
     options:
     - Modern observational astronomy
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Modern microbiology
+    - Modern quantum mechanics
+    - Modern genetics
     correct: 0
   - type: multiple_choice
     question: For explaining which phenomenon did Albert Einstein win his 1921 Nobel Prize in Physics?
@@ -1287,13 +1298,13 @@ categories:
       effect.
   - type: multiple_choice
     question: What element did Marie Curie name after her beloved home country?
-    explanation: Marie Curie discovered the radioactive elements polonium and radium through tireless
-      research.
+    explanation: Marie Curie isolated and named the radioactive element Polonium in 1898 in honor of her
+      native homeland of Poland.
     options:
-    - Polonium
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Polonium (after Poland)
+    - Francium
+    - Curium
+    - Radium
     correct: 0
   - type: multiple_choice
     question: Who is celebrated as the world's first computer programmer for writing an algorithm in 1843?
@@ -1307,13 +1318,13 @@ categories:
       (program).
   - type: multiple_choice
     question: What famous exclamation did Archimedes shout when discovering buoyancy in the bath?
-    explanation: He discovered the principle of buoyancy while taking a bath, famously shouting 'Eureka!'
-      ('I have found it!').
+    explanation: According to legend, Archimedes stepped into a full bath, noticed water displacement,
+      realized how to measure volume, and ran shouting 'Eureka!'.
     options:
-    - Eureka!
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - '''Eureka!'' (''I have found it!'')'
+    - '''Alea iacta est!'''
+    - '''Carpe Diem!'''
+    - '''Veni, vidi, vici!'''
     correct: 0
   - type: multiple_choice
     question: What sound-recording machine did Thomas Edison invent in 1877 that recorded sound onto foil
@@ -1328,13 +1339,13 @@ categories:
       sound.
   - type: multiple_choice
     question: What thermal process invented by Louis Pasteur kills harmful bacteria in milk and liquids?
-    explanation: He developed pasteurization, a heating process that kills harmful microbes in milk, wine,
-      and juice.
+    explanation: Louis Pasteur developed pasteurization in 1864, heating liquids like milk and wine to
+      roughly 60–70°C to destroy pathogens without spoiling taste.
     options:
     - Pasteurization
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Fermentation
+    - Sterilization
+    - Distillation
     correct: 0
   - type: multiple_choice
     question: Why did Leonardo da Vinci write his personal notebooks in mirror reverse script?
@@ -1348,13 +1359,13 @@ categories:
       as a left-handed writer.
   - type: multiple_choice
     question: What ancient Greek inventor designed a spiral water-lifting screw still used for irrigation?
-    explanation: He invented the Archimedes screw, a revolving spiral tube still used worldwide to lift
-      water for irrigation.
+    explanation: Archimedes invented the Archimedes Screw around the 3rd century BCE, a rotating helix
+      inside a hollow pipe that lifts water for irrigation.
     options:
     - Archimedes
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Pythagoras
+    - Euclid
+    - Heron of Alexandria
     correct: 0
   - type: multiple_choice
     question: Thomas Edison established his famous premier industrial research laboratory in which New
@@ -1369,13 +1380,13 @@ categories:
       New Jersey.
   - type: multiple_choice
     question: On which mathematician's proposed 'Analytical Engine' did Ada Lovelace write her first algorithm?
-    explanation: She worked closely with Charles Babbage on his mechanical general-purpose computer, the
-      Analytical Engine.
+    explanation: In 1843, Ada Lovelace wrote an algorithm for Charles Babbage's mechanical Analytical
+      Engine to calculate Bernoulli numbers, making her the first programmer.
     options:
     - Charles Babbage
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - Alan Turing
+    - John von Neumann
+    - Blaise Pascal
     correct: 0
   - type: multiple_choice
     question: Which of the following machines was sketched in Leonardo da Vinci's notebooks centuries
@@ -1390,11 +1401,11 @@ categories:
       of helicopters, tanks, and scuba gear.
   - type: multiple_choice
     question: What famous quote did Thomas Edison coin regarding genius and perspiration?
-    explanation: 'His famous quote states: ''Genius is one percent inspiration and ninety-nine percent
-      perspiration.'''
+    explanation: 'Thomas Edison famously remarked: ''Genius is one percent inspiration, ninety-nine percent
+      perspiration'', emphasizing relentless trial and error.'
     options:
-    - Genius is 1% inspiration and 99% perspiration
-    - Albert Einstein
-    - Marie Curie
-    - Isaac Newton
+    - '''Genius is 1% inspiration and 99% perspiration.'''
+    - '''Knowledge is power.'''
+    - '''Imagination is more important than knowledge.'''
+    - '''Failure is simply the opportunity to begin again.'''
     correct: 0
