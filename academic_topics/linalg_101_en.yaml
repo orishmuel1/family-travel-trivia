@@ -1,0 +1,1138 @@
+id: linalg_101_en
+type: academic
+icon: 📐
+title: Linear Algebra & Geometry for AI & Engineers (LinAlg 101)
+description: A deeply visual, first-principles guide exploring how vectors span dimensions, how matrices
+  morph space, and how eigenvalues and SVD power modern machine learning and computer graphics.
+lang: en
+audience: family
+categories:
+- id: vectors_spaces_projections
+  title: 1. Vectors, Dot Products & Spatial Projections
+  description: Understanding vectors as geometric displacement arrows, the dot product as shadow projection
+    and angle measurement, linear independence, and orthogonal span.
+  cards:
+  - title: What is a Vector? Arrows in Space vs. Number Lists
+    figure:
+      title: Vector Addition & The Dot Product Projection
+      svg: "<svg viewBox=\"0 0 520 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:150px;\"\
+        >\n  <!-- Grid Axis -->\n  <line x1=\"30\" y1=\"120\" x2=\"480\" y2=\"120\" stroke=\"currentColor\"\
+        \ stroke-width=\"1.5\" opacity=\"0.3\"/>\n  <line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"140\" stroke=\"\
+        currentColor\" stroke-width=\"1.5\" opacity=\"0.3\"/>\n\n  <!-- Vector u -->\n  <line x1=\"60\"\
+        \ y1=\"120\" x2=\"260\" y2=\"120\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <polygon points=\"\
+        260,116 270,120 260,124\" fill=\"#3b82f6\"/>\n  <text x=\"160\" y=\"140\" font-size=\"12\" font-weight=\"\
+        bold\" fill=\"#3b82f6\" text-anchor=\"middle\">Vector v</text>\n\n  <!-- Vector v -->\n  <line\
+        \ x1=\"60\" y1=\"120\" x2=\"200\" y2=\"30\" stroke=\"#8b5cf6\" stroke-width=\"3\"/>\n  <polygon\
+        \ points=\"196,26 206,30 202,38\" fill=\"#8b5cf6\"/>\n  <text x=\"120\" y=\"65\" font-size=\"\
+        12\" font-weight=\"bold\" fill=\"#8b5cf6\">Vector u</text>\n\n  <!-- Projection drop line -->\n\
+        \  <line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"120\" stroke=\"#ec4899\" stroke-width=\"2\" stroke-dasharray=\"\
+        4,4\"/>\n\n  <!-- Projected length -->\n  <rect x=\"60\" y=\"116\" width=\"140\" height=\"8\"\
+        \ fill=\"#10b981\" fill-opacity=\"0.5\"/>\n  <text x=\"130\" y=\"110\" font-size=\"10\" font-weight=\"\
+        bold\" fill=\"#10b981\" text-anchor=\"middle\">Projection: ||u|| cos(θ)</text>\n  <text x=\"360\"\
+        \ y=\"75\" font-size=\"12\" font-weight=\"bold\" fill=\"currentColor\">u · v = ||u|| ||v|| cos(θ)</text>\n\
+        </svg>"
+      caption: 'The dot product measures directional alignment: it projects vector $\mathbf{u}$ onto vector
+        $\mathbf{v}$ and multiplies their lengths.'
+    points:
+    - To a software developer, a vector is an ordered array of floating-point numbers (e.g. $[3.2, -1.5,
+      4.0]$). To a physicist or graphics engineer, a vector is a geometric arrow possessing both a magnitude
+      (length) and a direction in space.
+    - Vector Addition $(\mathbf{u} + \mathbf{v})$ corresponds to chaining movements tip-to-tail. Scalar
+      Multiplication $(c \mathbf{v})$ stretches, shrinks, or reverses the arrow's length without changing
+      its underlying line of action.
+    - 'The Dot Product (Inner Product) combines two vectors into a single scalar number: $\mathbf{u} \cdot
+      \mathbf{v} = u_1 v_1 + u_2 v_2 + \dots + u_n v_n = \|\mathbf{u}\| \|\mathbf{v}\| \cos(\theta)$.'
+    - 'Geometrically, the dot product measures alignment: if $\mathbf{u} \cdot \mathbf{v} > 0$, the vectors
+      point in a similar direction; if $\mathbf{u} \cdot \mathbf{v} = 0$, they are strictly Perpendicular
+      (Orthogonal); and if $\mathbf{u} \cdot \mathbf{v} < 0$, they point in opposite directions.'
+  - title: Linear Combinations, Span & Linear Independence
+    points:
+    - 'A Linear Combination of vectors $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k$ is any new vector
+      formed by scaling and adding them: $c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_k \mathbf{v}_k$.'
+    - The Span of a set of vectors is the entire geometric subspace of all possible vectors reachable
+      by taking linear combinations. Two non-parallel 2D vectors span the entire 2D plane $\mathbb{R}^2$.
+    - 'Linear Independence: A set of vectors is linearly independent if NO vector in the set can be constructed
+      as a linear combination of the others (i.e. every vector adds a genuinely new spatial dimension).'
+    - A Basis for a vector space is a minimal set of linearly independent vectors that spans the entire
+      space (e.g. standard Cartesian unit basis vectors $\hat{i} = [1, 0]$ and $\hat{j} = [0, 1]$).
+  - title: Orthogonal Projections & The Gram-Schmidt Process
+    points:
+    - 'The Orthogonal Projection of vector $\mathbf{b}$ onto vector $\mathbf{a}$ finds the point on $\mathbf{a}$
+      closest to $\mathbf{b}$, decomposing $\mathbf{b}$ into parallel and perpendicular components: $\text{proj}_{\mathbf{a}}(\mathbf{b})
+      = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\|^2} \mathbf{a}$.'
+    - This geometric projection is the fundamental engine behind Linear Regression, Fourier Series decomposition,
+      and neural network attention mechanisms.
+    - The Gram-Schmidt Process takes any set of arbitrary linearly independent vectors and systematically
+      converts them into an Orthonormal Basis (all vectors have length 1.0 and are mutually perpendicular,
+      $\mathbf{u}_i \cdot \mathbf{u}_j = 0$ for $i \neq j$).
+  trivia:
+  - type: multiple_choice
+    question: What geometric condition is indicated when the dot product of two non-zero vectors equals
+      zero (u · v = 0)?
+    options:
+    - The vectors are mutually orthogonal (perpendicular at an angle of 90 degrees)
+    - The vectors point in exactly the same direction
+    - The vectors have equal mathematical lengths
+    - The vectors lie outside the Cartesian coordinate system
+    correct: 0
+    explanation: Because $\mathbf{u} \cdot \mathbf{v} = \|\mathbf{u}\| \|\mathbf{v}\| \cos(\theta)$, a
+      dot product of zero means $\cos(\theta) = 0$, proving the angle between them is exactly $90^\circ$
+      (orthogonal).
+  - type: multiple_choice
+    question: What is the 'Span' of a set of vectors?
+    options:
+    - The set of all possible vectors that can be created through linear combinations (scaling and adding)
+      of those vectors
+    - The physical distance between the origin and the longest vector
+    - The maximum number of non-zero floating point numbers in an array
+    - The matrix determinant of the vector cross product
+    correct: 0
+    explanation: The span of a set of vectors is the entire subspace formed by all possible linear combinations
+      $c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_k \mathbf{v}_k$.
+  - type: multiple_choice
+    question: When is a collection of vectors considered 'Linearly Dependent'?
+    options:
+    - When at least one vector in the set can be written as a linear combination of the remaining vectors
+      (redundant dimension)
+    - When all vectors have identical lengths
+    - When the vectors are all perpendicular to one another
+    - When the dot product of any two vectors is positive
+    correct: 0
+    explanation: Linear dependence means there is redundancy in the set; at least one vector lies within
+      the span of the others and adds no new geometric dimension.
+  - type: multiple_choice
+    question: What does the Gram-Schmidt process accomplish in linear algebra?
+    options:
+    - It transforms any basis of linearly independent vectors into an orthonormal basis of mutually perpendicular
+      unit vectors
+    - It inverts a non-square matrix using Gaussian elimination
+    - It finds the roots of high-order polynomial equations
+    - It compresses image files using JPEG quantization
+    correct: 0
+    explanation: The Gram-Schmidt algorithm takes linearly independent vectors and iteratively subtracts
+      parallel projections to construct a set of mutually orthogonal unit vectors.
+  - type: multiple_choice
+    question: What is the formula for the Euclidean length (L2 norm) of a 3D vector v = [x, y, z]?
+    options:
+    - sqrt(x^2 + y^2 + z^2)
+    - x + y + z
+    - x * y * z
+    - max(|x|, |y|, |z|)
+    correct: 0
+    explanation: By the Pythagorean theorem extended to $n$ dimensions, the Euclidean norm $\|\mathbf{v}\|_2$
+      equals $\sqrt{x^2 + y^2 + z^2} = \sqrt{\mathbf{v} \cdot \mathbf{v}}$.
+  - type: multiple_choice
+    question: What is a 'Unit Vector'?
+    options:
+    - A vector whose geometric length (magnitude) is exactly equal to 1.0
+    - A vector containing only integer numbers
+    - A matrix with 1s along the main diagonal
+    - A vector that points exclusively along the positive X axis
+    correct: 0
+    explanation: A unit vector is any vector normalized so that its Euclidean length $\|\mathbf{v}\| =
+      1$, representing pure direction without scale.
+  - type: multiple_choice
+    question: What does the Cauchy-Schwarz Inequality state for any two real vectors u and v?
+    options:
+    - '|u · v| <= ||u|| ||v||'
+    - '||u + v|| = ||u|| + ||v||'
+    - u · v >= ||u|| ||v||
+    - u · v = 0
+    correct: 0
+    explanation: The Cauchy-Schwarz inequality $|\mathbf{u} \cdot \mathbf{v}| \leq \|\mathbf{u}\| \|\mathbf{v}\|$
+      reflects the fact that $|\cos(\theta)| \leq 1$, with equality holding only when the vectors are
+      parallel.
+  - type: multiple_choice
+    question: What is the result of the Cross Product of two 3D vectors (u x v)?
+    options:
+    - A new 3D vector that is mutually perpendicular (orthogonal) to both u and v
+    - A single scalar number representing the dot product
+    - A 3x3 diagonal identity matrix
+    - The scalar sum of the coordinates of u and v
+    correct: 0
+    explanation: The cross product $\mathbf{u} \times \mathbf{v}$ yields a vector perpendicular to the
+      plane containing $\mathbf{u}$ and $\mathbf{v}$, with magnitude equal to the parallelogram area spanned
+      by them.
+  - type: multiple_choice
+    question: What defines a 'Basis' for a vector space V?
+    options:
+    - A set of linearly independent vectors that spans the entire space V
+    - Any collection of vectors with integer coordinates
+    - A set of vectors whose dot products are all negative
+    - The origin point [0, 0, 0]
+    correct: 0
+    explanation: 'A basis is a minimal spanning set: it must be linearly independent and span the vector
+      space, allowing every vector in the space to be written uniquely as a linear combination.'
+  - type: multiple_choice
+    question: How do you project a vector b orthogonally onto a line defined by unit vector u (where ||u||
+      = 1)?
+    options:
+    - (b · u) u
+    - b + u
+    - b / u
+    - sqrt(b · u)
+    correct: 0
+    explanation: When $\mathbf{u}$ is a unit vector, the scalar shadow length is $(\mathbf{b} \cdot \mathbf{u})$,
+      and multiplying by direction vector $\mathbf{u}$ gives the orthogonal projection $(\mathbf{b} \cdot
+      \mathbf{u}) \mathbf{u}$.
+  - type: multiple_choice
+    question: What is the dimension of a vector space?
+    options:
+    - The exact number of vectors in any basis for that vector space
+    - The physical byte size of the floating point array
+    - The determinant of the covariance matrix
+    - The maximum value of the coordinates
+    correct: 0
+    explanation: The dimension of a vector space is defined as the cardinality (number of elements) in
+      any basis spanning that space.
+  - type: multiple_choice
+    question: What is an 'Orthonormal' set of vectors?
+    options:
+    - A set of vectors where every vector has a length of 1.0 and all distinct pairs are mutually perpendicular
+    - A set of vectors with all positive coordinates
+    - A set of vectors that forms a closed polygon
+    - A set of vectors that cannot be multiplied by scalars
+    correct: 0
+    explanation: "An orthonormal set satisfies two conditions: orthogonality ($\\mathbf{u}_i \\cdot \\\
+      mathbf{u}_j = 0$ for $i \neq j$) and normality ($\\|\\mathbf{u}_i\\| = 1$ for all $i$)."
+  - type: multiple_choice
+    question: In cosine similarity used in NLP and search engines, what does a cosine value of 1.0 between
+      two embedding vectors signify?
+    options:
+    - The two vectors point in the exact same direction (highest possible semantic similarity)
+    - The two vectors are completely orthogonal (unrelated)
+    - The two vectors are diametrically opposed in meaning
+    - The vectors contain corrupt NaN values
+    correct: 0
+    explanation: Cosine similarity $\frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+      = \cos(\theta)$ reaches 1.0 when the angle $\theta = 0^\circ$, indicating identical directional
+      semantics.
+  - type: multiple_choice
+    question: What happens if you attempt to form a basis for 3D space (R^3) using only 2 linearly independent
+      vectors?
+    options:
+    - The 2 vectors can only span a 2D flat plane, leaving the rest of 3D space unreachable
+    - The 2 vectors will automatically generate a third vector through quantum entanglement
+    - The determinant of the vectors will be infinite
+    - The vectors will bend into non-Euclidean curves
+    correct: 0
+    explanation: In $\mathbb{R}^3$, any basis must contain exactly 3 linearly independent vectors; 2 vectors
+      can only span a 2D plane embedded within the 3D space.
+  - type: multiple_choice
+    question: What is the Zero Vector [0, 0, ..., 0] in linear algebra?
+    options:
+    - The unique additive identity element of the vector space such that v + 0 = v for all vectors v
+    - A vector that cannot be multiplied by scalar numbers
+    - A vector that has an undefined mathematical length
+    - A vector that spans all dimensions simultaneously
+    correct: 0
+    explanation: The zero vector $\mathbf{0}$ is the unique additive identity in any vector space; adding
+      it to any vector $\mathbf{v}$ yields $\mathbf{v}$, and its length is 0.
+- id: matrix_transformations_determinants
+  title: 2. Matrices as Linear Spatial Transformations
+  description: Visualizing matrices not as boring number spreadsheets, but as dynamic functions that warp
+    space, basis vector mapping, and the determinant as area scaling.
+  cards:
+  - title: A Matrix is a Dynamic Spatial Transformation
+    figure:
+      title: How a 2x2 Matrix Transforms the Coordinate Grid
+      svg: "<svg viewBox=\"0 0 520 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:150px;\"\
+        >\n  <!-- Original Grid Basis -->\n  <g transform=\"translate(40,20)\">\n    <rect x=\"0\" y=\"\
+        0\" width=\"100\" height=\"100\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-dasharray=\"\
+        2,2\"/>\n    <line x1=\"0\" y1=\"100\" x2=\"100\" y2=\"100\" stroke=\"#3b82f6\" stroke-width=\"\
+        3\"/>\n    <polygon points=\"96,96 106,100 96,104\" fill=\"#3b82f6\"/>\n    <text x=\"50\" y=\"\
+        118\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">i_hat [1,\
+        \ 0]</text>\n\n    <line x1=\"0\" y1=\"100\" x2=\"0\" y2=\"0\" stroke=\"#10b981\" stroke-width=\"\
+        3\"/>\n    <polygon points=\"-4,6 0,-4 4,6\" fill=\"#10b981\"/>\n    <text x=\"-8\" y=\"50\" font-size=\"\
+        10\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"end\">j_hat [0, 1]</text>\n    <text\
+        \ x=\"50\" y=\"55\" font-size=\"11\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"\
+        middle\">Area = 1.0</text>\n  </g>\n\n  <!-- Transform Arrow -->\n  <path d=\"M 180 70 L 250 70\"\
+        \ stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#arr)\" opacity=\"0.6\"/>\n  <text\
+        \ x=\"215\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\"\
+        >Matrix A</text>\n\n  <!-- Transformed Grid Parallelogram -->\n  <g transform=\"translate(290,20)\"\
+        >\n    <polygon points=\"0,100 120,70 160,0 40,30\" fill=\"#8b5cf6\" fill-opacity=\"0.2\" stroke=\"\
+        #8b5cf6\" stroke-width=\"2\"/>\n    <line x1=\"0\" y1=\"100\" x2=\"120\" y2=\"70\" stroke=\"#3b82f6\"\
+        \ stroke-width=\"3\"/>\n    <polygon points=\"116,66 126,69 120,76\" fill=\"#3b82f6\"/>\n    <text\
+        \ x=\"70\" y=\"100\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\">A * i_hat</text>\n\
+        \n    <line x1=\"0\" y1=\"100\" x2=\"40\" y2=\"30\" stroke=\"#10b981\" stroke-width=\"3\"/>\n\
+        \    <polygon points=\"36,26 44,24 42,34\" fill=\"#10b981\"/>\n    <text x=\"10\" y=\"45\" font-size=\"\
+        10\" font-weight=\"bold\" fill=\"#10b981\">A * j_hat</text>\n    <text x=\"85\" y=\"50\" font-size=\"\
+        11\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">Area = |det(A)|</text>\n  </g>\n\
+        </svg>"
+      caption: A matrix transformation is completely described by where the basis vectors $\hat{i}$ and
+        $\hat{j}$ land. The determinant measures how area scales.
+    points:
+    - 'A Linear Transformation is a geometric function $T(\mathbf{v})$ that morphs space while respecting
+      two rules: (1) The origin $[0,0]$ remains fixed in place, and (2) All straight grid lines remain
+      straight and evenly spaced.'
+    - You can completely determine what a matrix does to the ENTIRE infinite space just by watching where
+      the standard basis vectors land! Where does $\hat{i} = [1,0]$ land? That becomes column 1 of the
+      matrix. Where does $\hat{j} = [0,1]$ land? That becomes column 2.
+    - 'Matrix-Vector Multiplication $A\mathbf{x}$ simply scales the transformed basis vectors: $A \begin{bmatrix}
+      x \\ y \end{bmatrix} = x (\text{column 1}) + y (\text{column 2})$.'
+    - 'Matrix Multiplication $(AB)$ represents the Composition of transformations: applying transformation
+      $B$ first, followed by transformation $A$ ($A(B\mathbf{x})$). Because spatial morphs depend on order
+      (e.g. rotating then shearing $\neq$ shearing then rotating), matrix multiplication is Non-Commutative:
+      $AB \neq BA$!'
+  - title: 'The Determinant: Scaling of Areas and Volumes'
+    points:
+    - The Determinant $\det(A)$ measures the factor by which areas (in 2D), volumes (in 3D), or hyper-volumes
+      (in $n$D) are scaled by the linear transformation.
+    - If $\det(A) = 3$, every shape transformed by $A$ has its area tripled. If $\det(A) = 1$, the transformation
+      preserves area exactly (like pure spatial rotations).
+    - A Negative Determinant (e.g. $\det(A) = -2$) means the transformation flips the orientation of space
+      (like looking at a reflection in a mirror).
+    - If $\det(A) = 0$, the transformation collapses space into a lower dimension (squashing a 2D plane
+      into a 1D line or a point). When this happens, information is irreversibly destroyed, and the matrix
+      has NO inverse ($A^{-1}$ does not exist)!
+  - title: Matrix Inverses & Special Matrix Classes
+    points:
+    - 'The Inverse Matrix $A^{-1}$ ''undoes'' the transformation performed by $A$, returning every vector
+      to its original location: $A^{-1} A = I$ (the Identity Matrix).'
+    - 'An Orthogonal Matrix $Q$ preserves all lengths and angles: $Q^T Q = I$, meaning its columns are
+      mutually orthonormal unit vectors and its inverse is simply its transpose ($Q^{-1} = Q^T$).'
+    - A Symmetric Matrix equals its own transpose ($A = A^T$), playing a central role in covariance matrices,
+      Hessian optimization matrices, and physics inertia tensors.
+  trivia:
+  - type: multiple_choice
+    question: What is the geometric meaning of the determinant of a 2x2 matrix det(A)?
+    options:
+    - The factor by which the transformation scales the area of any geometric shape in the 2D plane
+    - The slope of the line passing through the matrix origin
+    - The total sum of all floating point entries in the matrix
+    - The angle of rotational acceleration applied to the basis vectors
+    correct: 0
+    explanation: The determinant $\det(A)$ measures the area scaling factor of the transformation; a $1
+      \times 1$ unit square transforms into a parallelogram with area $|\det(A)|$.
+  - type: multiple_choice
+    question: What does a determinant of zero (det(A) = 0) indicate about a linear transformation?
+    options:
+    - The transformation squashes space into a lower dimension (e.g. a 2D plane into a 1D line), meaning
+      the matrix is singular and non-invertible
+    - The transformation is a pure lossless rotation
+    - The matrix contains only zeroes in all rows and columns
+    - The inverse matrix is equal to the identity matrix
+    correct: 0
+    explanation: When $\det(A) = 0$, the transformation collapses dimensional volume to zero, irreversibly
+      losing information; hence, no inverse matrix $A^{-1}$ exists.
+  - type: multiple_choice
+    question: Why is matrix multiplication non-commutative (AB != BA in general)?
+    options:
+    - Because matrix multiplication represents function composition, and applying spatial transformations
+      in different orders produces different geometric results
+    - Because hardware floating point units suffer rounding errors in reverse order
+    - Because matrix multiplication requires squaring the matrix entries first
+    - Because negative numbers cannot be multiplied from the right
+    correct: 0
+    explanation: Matrix multiplication represents successive spatial transformations; rotating space by
+      $90^\circ$ and then shearing it produces a completely different result than shearing first and then
+      rotating.
+  - type: multiple_choice
+    question: What is the defining property of an Orthogonal Matrix Q?
+    options:
+    - Its transpose is equal to its inverse (Q^T Q = I), preserving vector lengths and angles
+    - All of its off-diagonal entries are equal to 0
+    - Its determinant is always equal to 0
+    - Its eigenvalues are all pure imaginary numbers
+    correct: 0
+    explanation: An orthogonal matrix $Q$ has orthonormal columns and rows; multiplying by $Q$ preserves
+      vector lengths and angles (rotations/reflections), and $Q^{-1} = Q^T$.
+  - type: multiple_choice
+    question: What are the columns of a 2x2 transformation matrix A?
+    options:
+    - The coordinates of where the standard basis vectors i_hat [1, 0] and j_hat [0, 1] land after transformation
+    - The eigenvalues of the matrix squared
+    - The normal vectors of the coordinate axes
+    - The coordinates of the null space kernel
+    correct: 0
+    explanation: Column 1 of matrix $A$ is the vector where $\hat{i} = [1,0]^T$ lands, and Column 2 is
+      the vector where $\hat{j} = [0,1]^T$ lands.
+  - type: multiple_choice
+    question: What is a 'Symmetric Matrix'?
+    options:
+    - A square matrix that is identical to its own transpose (A = A^T)
+    - A matrix whose determinant equals 1
+    - A matrix with an equal number of positive and negative numbers
+    - A matrix that only operates on 2D coordinates
+    correct: 0
+    explanation: A matrix is symmetric if $A_{ij} = A_{ji}$ for all entries, which means swapping rows
+      and columns ($A^T$) leaves the matrix unchanged.
+  - type: multiple_choice
+    question: What geometric operation is performed by a 2x2 Rotation Matrix R(theta)?
+    options:
+    - Rotating all vectors counter-clockwise about the origin by angle theta while preserving lengths
+      and areas
+    - Scaling the X axis by factor theta while leaving Y untouched
+    - Projecting all vectors onto a line at angle theta
+    - Squashing the 2D plane into a 1D diagonal line
+    correct: 0
+    explanation: A rotation matrix $R(\theta) = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta
+      & \cos\theta \end{bmatrix}$ rotates the entire plane by $\theta$ without changing vector lengths
+      (an isometry with $\det = 1$).
+  - type: multiple_choice
+    question: What does a negative determinant value (det(A) < 0) mean geometrically?
+    options:
+    - The transformation inverts the spatial orientation (like a reflection in a mirror)
+    - The transformation shrinks all vectors to zero length
+    - The matrix cannot be multiplied by any other matrix
+    - The transformed area is negative in physical centimeters
+    correct: 0
+    explanation: A negative determinant indicates that the spatial orientation has been flipped (handedness
+      inverted, like reflecting through an axis).
+  - type: multiple_choice
+    question: What is the Identity Matrix I?
+    options:
+    - A square matrix with 1s along the main diagonal and 0s elsewhere that acts as the 'do nothing' transformation
+      (I v = v)
+    - A matrix whose entries are all equal to 1
+    - A matrix that flips the sign of all coordinates
+    - A matrix that deletes the last row of any vector
+    correct: 0
+    explanation: 'The identity matrix $I$ acts as the multiplicative identity in linear algebra: multiplying
+      any vector or matrix by $I$ leaves it unchanged ($I\mathbf{v} = \mathbf{v}$).'
+  - type: multiple_choice
+    question: What is the Transpose of a matrix (A^T)?
+    options:
+    - An operation that flips the matrix over its main diagonal, turning rows into columns
+    - Inverting all the mathematical signs of the matrix elements
+    - Multiplying the matrix by its determinant
+    - Calculating the matrix derivative with respect to time
+    correct: 0
+    explanation: 'Transposing a matrix $A$ swaps its row and column indices: $(A^T)_{ij} = A_{ji}$.'
+  - type: multiple_choice
+    question: What is the determinant of a product of two square matrices det(AB)?
+    options:
+    - det(A) * det(B)
+    - det(A) + det(B)
+    - det(A) / det(B)
+    - max(det(A), det(B))
+    correct: 0
+    explanation: 'The determinant of a product equals the product of the determinants: $\det(AB) = \det(A)
+      \det(B)$, reflecting sequential area scaling.'
+  - type: multiple_choice
+    question: What is the Trace of a square matrix Tr(A)?
+    options:
+    - The sum of all elements along the main diagonal (A_11 + A_22 + ... + A_nn)
+    - The product of the corner entries of the matrix
+    - The number of non-zero rows in reduced echelon form
+    - The Euclidean length of the first column vector
+    correct: 0
+    explanation: The trace $\text{Tr}(A)$ is the sum of the diagonal entries $\sum_{i=1}^n A_{ii}$, which
+      also remarkably equals the sum of its eigenvalues.
+  - type: multiple_choice
+    question: What is a 'Diagonal Matrix'?
+    options:
+    - A matrix where all entries outside the main diagonal are equal to zero
+    - A matrix that only has entries along the top-right to bottom-left diagonal
+    - A matrix whose rows sum to 1.0
+    - A non-square matrix with more columns than rows
+    correct: 0
+    explanation: A diagonal matrix has non-zero entries only where row index equals column index ($i =
+      j$); multiplying by it simply scales each coordinate axis independently.
+  - type: multiple_choice
+    question: If matrix A satisfies A^2 = A, what type of transformation does it represent?
+    options:
+    - A Projection (Idempotent matrix)
+    - A continuous 360-degree rotation
+    - An exponential growth transformation
+    - A reflection through the origin
+    correct: 0
+    explanation: 'An idempotent matrix ($A^2 = A$) represents a projection: once a vector is projected
+      onto a subspace, applying the projection again leaves it unchanged.'
+  - type: multiple_choice
+    question: How does scalar multiplication of an n x n matrix by constant c affect its determinant (det(c
+      A))?
+    options:
+    - c^n * det(A)
+    - c * det(A)
+    - c + det(A)
+    - det(A) / c
+    correct: 0
+    explanation: Because scaling an $n$-dimensional space by factor $c$ along all $n$ axes multiplies
+      the $n$-dimensional volume by $c^n$, $\det(c A) = c^n \det(A)$.
+- id: linear_systems_nullspace_rank
+  title: 3. Systems of Equations, Column Space & Rank
+  description: Solving Ax = b as vector linear combinations, the fundamental subspaces of a matrix, Nullspace,
+    Column Space, and the Rank-Nullity Theorem.
+  cards:
+  - title: Ax = b as a Linear Combination of Columns
+    figure:
+      title: Column Space (Image) vs. Null Space (Kernel)
+      svg: "<svg viewBox=\"0 0 520 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:150px;\"\
+        >\n  <!-- Input Domain Space R^n -->\n  <rect x=\"20\" y=\"20\" width=\"200\" height=\"110\" rx=\"\
+        10\" fill=\"#3b82f6\" fill-opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"\
+        120\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">Input\
+        \ Domain (R^n)</text>\n  <rect x=\"40\" y=\"55\" width=\"160\" height=\"35\" rx=\"6\" fill=\"\
+        #ef4444\" fill-opacity=\"0.2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"120\" y=\"\
+        77\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\" text-anchor=\"middle\">Null Space:\
+        \ A x = 0</text>\n  <text x=\"120\" y=\"115\" font-size=\"9\" fill=\"currentColor\" text-anchor=\"\
+        middle\">Row Space (Orthogonal to Null Space)</text>\n\n  <!-- Transformation Mapping Arrow -->\n\
+        \  <path d=\"M 225 75 L 290 75\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#arr)\"\
+        \ opacity=\"0.6\"/>\n  <text x=\"257\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #8b5cf6\" text-anchor=\"middle\">Matrix A</text>\n\n  <!-- Output Codomain Space R^m -->\n  <rect\
+        \ x=\"295\" y=\"20\" width=\"205\" height=\"110\" rx=\"10\" fill=\"#10b981\" fill-opacity=\"0.1\"\
+        \ stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"397\" y=\"42\" font-size=\"12\" font-weight=\"\
+        bold\" fill=\"#10b981\" text-anchor=\"middle\">Output Codomain (R^m)</text>\n  <rect x=\"315\"\
+        \ y=\"55\" width=\"165\" height=\"35\" rx=\"6\" fill=\"#10b981\" fill-opacity=\"0.25\" stroke=\"\
+        #10b981\" stroke-width=\"1.5\"/>\n  <text x=\"397\" y=\"77\" font-size=\"11\" font-weight=\"bold\"\
+        \ fill=\"#10b981\" text-anchor=\"middle\">Column Space: Col(A)</text>\n  <circle cx=\"397\" cy=\"\
+        115\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"410\" y=\"118\" font-size=\"10\" fill=\"#ef4444\"\
+        >Zero Vector 0</text>\n</svg>"
+      caption: All vectors in the Null Space collapse to the single point $\mathbf{0}$. The Column Space
+        is the entire subspace of outputs reachable by $A\mathbf{x}$.
+    points:
+    - 'A system of linear equations (like $2x + 3y = 8$ and $4x - y = 2$) is traditionally viewed as intersecting
+      lines. In linear algebra, we view it as a single vector equation: $x \begin{bmatrix} 2 \\ 4 \end{bmatrix}
+      + y \begin{bmatrix} 3 \\ -1 \end{bmatrix} = \begin{bmatrix} 8 \\ 2 \end{bmatrix}$ ($A\mathbf{x}
+      = \mathbf{b}$).'
+    - The Column Space $\text{Col}(A)$ is the span of all column vectors in matrix $A$. The equation $A\mathbf{x}
+      = \mathbf{b}$ has a solution if and only if target vector $\mathbf{b}$ lies inside the Column Space
+      of $A$!
+    - 'The Null Space (Kernel) $\text{Null}(A)$ is the set of all input vectors $\mathbf{x}$ that get
+      squashed to the zero vector: $A\mathbf{x} = \mathbf{0}$.'
+    - 'The Rank of a matrix is the dimension of its Column Space (the number of linearly independent columns).
+      The Rank-Nullity Theorem proves that: $\text{Rank}(A) + \text{Nullity}(A) = n$ (total number of
+      input columns).'
+  - title: Gaussian Elimination, Row Echelon Form & Pivots
+    points:
+    - 'Gaussian Elimination solves $A\mathbf{x} = \mathbf{b}$ by systematically applying 3 elementary
+      row operations: (1) Swapping rows, (2) Multiplying a row by a non-zero scalar, and (3) Adding a
+      multiple of one row to another.'
+    - These operations transform the augmented matrix into Row Echelon Form (an upper-triangular staircase
+      of leading non-zero entries called Pivots).
+    - The number of non-zero pivots in echelon form equals the exact mathematical Rank of the matrix.
+    - Variables corresponding to pivot columns are Basic Variables; variables corresponding to non-pivot
+      columns are Free Variables (which parametrize infinite solution families).
+  - title: Underdetermined vs. Overdetermined Systems & Least Squares
+    points:
+    - 'Underdetermined Systems (more unknowns than equations, $m < n$): usually have infinitely many solutions.
+      The minimal-norm solution is found using the pseudoinverse.'
+    - 'Overdetermined Systems (more equations than unknowns, $m > n$, e.g. fitting 100 noisy data points
+      to a 2-parameter line): usually have NO exact solution because $\mathbf{b}$ does not lie in $\text{Col}(A)$.'
+    - 'The Method of Least Squares finds the best approximate vector $\mathbf{\hat{x}}$ that minimizes
+      the squared error $\|A\mathbf{x} - \mathbf{b}\|^2$. It projects $\mathbf{b}$ orthogonally onto $\text{Col}(A)$
+      by solving the Normal Equations: $A^T A \mathbf{\hat{x}} = A^T \mathbf{b} \implies \mathbf{\hat{x}}
+      = (A^T A)^{-1} A^T \mathbf{b}$.'
+  trivia:
+  - type: multiple_choice
+    question: What is the 'Column Space' (or Range / Image) of a matrix A?
+    options:
+    - The set of all possible output vectors reachable by taking linear combinations of the columns of
+      A (the span of its columns)
+    - The set of all vectors that multiply with A to yield zero
+    - The sum of all numbers in the first column of A
+    - The diagonal elements of the inverse matrix
+    correct: 0
+    explanation: The column space $\text{Col}(A)$ is the subspace formed by all linear combinations of
+      the columns of $A$, representing all possible outputs $A\mathbf{x}$.
+  - type: multiple_choice
+    question: What is the 'Null Space' (or Kernel) of a matrix A?
+    options:
+    - The set of all input vectors x that satisfy the homogeneous equation A x = 0
+    - The set of all vectors that have length equal to 0
+    - The memory space in RAM that has been deallocated
+    - The collection of eigenvalues that are equal to 1
+    correct: 0
+    explanation: The null space $\text{Null}(A)$ consists of all vectors $\mathbf{x}$ mapped to the zero
+      vector by matrix $A$ ($A\mathbf{x} = \mathbf{0}$).
+  - type: multiple_choice
+    question: What fundamental relationship is established by the Rank-Nullity Theorem for an m x n matrix
+      A?
+    options:
+    - Rank(A) + Nullity(A) = n (the total number of columns / input dimensions)
+    - Rank(A) * Nullity(A) = m * n
+    - Rank(A) = Nullity(A) - 1
+    - Rank(A) + Nullity(A) = det(A)
+    correct: 0
+    explanation: The Rank-Nullity theorem states that the dimension of the column space plus the dimension
+      of the null space equals the total number of input columns $n$.
+  - type: multiple_choice
+    question: When does the linear system A x = b have at least one valid solution?
+    options:
+    - When the target vector b lies within the Column Space of matrix A
+    - When the determinant of A is equal to 0
+    - When matrix A is symmetric and positive definite
+    - When the vector b is orthogonal to all rows of A
+    correct: 0
+    explanation: Because $A\mathbf{x}$ is a linear combination of the columns of $A$, a solution $\mathbf{x}$
+      exists if and only if vector $\mathbf{b}$ belongs to $\text{Col}(A)$.
+  - type: multiple_choice
+    question: What are the 'Normal Equations' used to find the Least Squares solution for overdetermined
+      systems (A x ~= b)?
+    options:
+    - A^T A x = A^T b
+    - A x = b
+    - A A^T x = b
+    - det(A) x = b
+    correct: 0
+    explanation: The normal equations $A^T A \mathbf{\hat{x}} = A^T \mathbf{b}$ project vector $\mathbf{b}$
+      orthogonally onto the column space of $A$, minimizing the Euclidean residual error $\|A\mathbf{x}
+      - \mathbf{b}\|^2$.
+  - type: multiple_choice
+    question: What is the 'Rank' of a matrix?
+    options:
+    - The maximum number of linearly independent column vectors (or row vectors) in the matrix
+    - The total count of non-zero numbers in the matrix
+    - The physical number of rows multiplied by columns
+    - The largest single numerical value in the matrix
+    correct: 0
+    explanation: The rank of a matrix is the dimension of the subspace spanned by its columns, which always
+      equals the dimension of the subspace spanned by its rows.
+  - type: multiple_choice
+    question: What is a 'Full Rank' square n x n matrix?
+    options:
+    - A matrix whose rank equals n, meaning all columns are linearly independent and the matrix is fully
+      invertible
+    - A matrix containing only numbers greater than zero
+    - A matrix with rank equal to 0
+    - A matrix whose determinant is equal to zero
+    correct: 0
+    explanation: A full-rank $n \times n$ matrix has rank $n$; its determinant is non-zero, its null space
+      contains only $\{\mathbf{0}\}$, and it is fully invertible.
+  - type: multiple_choice
+    question: In Gaussian elimination, what is a 'Pivot'?
+    options:
+    - The first non-zero element in a row used to eliminate the values below it
+    - The center coordinate of an image rotation
+    - The last column of the augmented matrix
+    - The determinant divided by the trace
+    correct: 0
+    explanation: A pivot is the leading non-zero coefficient in a row during Gaussian elimination, used
+      to clear out non-zero entries in the column beneath it.
+  - type: multiple_choice
+    question: What characterizes an 'Overdetermined' system of linear equations?
+    options:
+    - There are more equations (constraints) than variables (unknowns), m > n
+    - There are more unknowns than equations, n > m
+    - The determinant of the coefficient matrix is negative
+    - All variables are constrained to integer values
+    correct: 0
+    explanation: An overdetermined system has more equations ($m$) than variables ($n$); in real-world
+      data with noise, an exact solution rarely exists, requiring Least Squares approximation.
+  - type: multiple_choice
+    question: What characterizes an 'Underdetermined' system of linear equations with full row rank (m
+      < n)?
+    options:
+    - There are fewer equations than unknowns, resulting in infinitely many possible solutions
+    - There is strictly no mathematical solution possible
+    - There is exactly one unique solution
+    - The matrix determinant is always equal to 1.0
+    correct: 0
+    explanation: Underdetermined systems have fewer equations than unknowns ($m < n$); because there are
+      free variables, there are infinitely many solutions forming an affine subspace.
+  - type: multiple_choice
+    question: What is the geometric relationship between the Row Space and the Null Space of a matrix
+      A?
+    options:
+    - They are orthogonal complements in R^n (every vector in the null space is perpendicular to every
+      vector in the row space)
+    - They are identical subspaces
+    - They span opposite quadrants of the coordinate system
+    - Their intersection is the entire vector space R^n
+    correct: 0
+    explanation: Because $A\mathbf{x} = \mathbf{0}$ means every row of $A$ dotted with $\mathbf{x}$ equals
+      zero, the Null Space is the exact orthogonal complement of the Row Space in $\mathbb{R}^n$.
+  - type: multiple_choice
+    question: What does Reduced Row Echelon Form (RREF) achieve?
+    options:
+    - A staircase matrix form where every pivot is 1.0 and is the only non-zero entry in its column
+    - A diagonal matrix with only negative values
+    - A matrix converted into complex numbers
+    - A matrix whose row sum is zero
+    correct: 0
+    explanation: In RREF, each leading pivot is 1, and all other entries in pivot columns are cleared
+      to 0, making the solution to the system immediately readable.
+  - type: multiple_choice
+    question: What is the Moore-Penrose Pseudoinverse (A+) used for?
+    options:
+    - Generalizing matrix inversion to non-square or singular matrices to solve linear least squares problems
+    - Inverting 1x1 scalar numbers
+    - Rotating 3D vectors around the Z axis
+    - Encrypting cryptographic hash digests
+    correct: 0
+    explanation: The pseudoinverse $A^+$ provides a generalized inverse for any $m \times n$ matrix, computing
+      the minimum-norm least-squares solution $\mathbf{\hat{x}} = A^+ \mathbf{b}$.
+  - type: multiple_choice
+    question: If a 3x3 matrix has Rank = 2, what geometric shape is formed by its Column Space in 3D space?
+    options:
+    - A 2D flat plane passing through the origin
+    - A 1D straight line
+    - The full 3D space
+    - A single isolated point at [0, 0, 0]
+    correct: 0
+    explanation: Rank represents the dimension of the column space; a rank of 2 in 3D space spans a 2-dimensional
+      flat plane passing through the origin.
+  - type: multiple_choice
+    question: What are 'Free Variables' in a system of linear equations?
+    options:
+    - Variables corresponding to non-pivot columns that can be assigned any arbitrary scalar value to
+      generate solutions
+    - Variables that are not defined in the source code
+    - Variables that have no memory address in RAM
+    - Constants that cannot be multiplied by numbers
+    correct: 0
+    explanation: Free variables correspond to columns without pivots in echelon form; they can take any
+      real value and parametrize the infinite solution set.
+- id: eigenvalues_eigenvectors_pca
+  title: 4. Eigenvalues, Eigenvectors & Diagonalization
+  description: Understanding axes that do not rotate during linear transformations, the characteristic
+    equation, spectral decomposition, and Principal Component Analysis (PCA).
+  cards:
+  - title: What are Eigenvectors? Invariant Directions of Space
+    figure:
+      title: 'Eigenvector Direction Preservation: A v = λ v'
+      svg: "<svg viewBox=\"0 0 520 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:150px;\"\
+        >\n  <!-- Non-eigenvector vector (rotates) -->\n  <g transform=\"translate(40,20)\">\n    <line\
+        \ x1=\"20\" y1=\"100\" x2=\"80\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"\
+        0.4\"/>\n    <line x1=\"20\" y1=\"100\" x2=\"110\" y2=\"50\" stroke=\"#ec4899\" stroke-width=\"\
+        3\"/>\n    <polygon points=\"106,46 116,51 108,56\" fill=\"#ec4899\"/>\n    <text x=\"70\" y=\"\
+        120\" font-size=\"10\" fill=\"#ec4899\" text-anchor=\"middle\">Normal Vector: Rotates!</text>\n\
+        \  </g>\n\n  <!-- Eigenvector vector (only scales!) -->\n  <g transform=\"translate(260,20)\"\
+        >\n    <!-- Original line of action -->\n    <line x1=\"0\" y1=\"120\" x2=\"220\" y2=\"10\" stroke=\"\
+        #8b5cf6\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n\n    <!-- Original\
+        \ eigenvector v -->\n    <line x1=\"20\" y1=\"110\" x2=\"80\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"\
+        3\"/>\n    <polygon points=\"76,76 86,77 80,86\" fill=\"#3b82f6\"/>\n    <text x=\"50\" y=\"70\"\
+        \ font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\">Vector v</text>\n\n    <!-- Transformed\
+        \ A*v = λ v -->\n    <line x1=\"20\" y1=\"110\" x2=\"170\" y2=\"35\" stroke=\"#10b981\" stroke-width=\"\
+        3\"/>\n    <polygon points=\"166,31 176,32 170,41\" fill=\"#10b981\"/>\n    <text x=\"130\" y=\"\
+        25\" font-size=\"11\" font-weight=\"bold\" fill=\"#10b981\">A v = λ v (Scaled along same line!)</text>\n\
+        \  </g>\n</svg>"
+      caption: Most vectors change direction when multiplied by a matrix. An Eigenvector $\mathbf{v}$
+        stays on its original line of action, merely scaling by factor $\lambda$.
+    points:
+    - When a matrix transforms space, almost every vector gets knocked off its original span line and
+      rotated to a new direction.
+    - 'However, special invariant directions exist where vectors do NOT rotate at all — they are simply
+      stretched, squashed, or flipped along their original line of action! These special vectors are called
+      Eigenvectors $(\mathbf{v})$, and the scaling factor is the Eigenvalue $(\lambda)$: $A\mathbf{v}
+      = \lambda \mathbf{v}$.'
+    - 'To find eigenvalues, we rewrite the equation as $(A - \lambda I)\mathbf{v} = \mathbf{0}$. For a
+      non-zero vector $\mathbf{v}$ to exist in the null space, the matrix $(A - \lambda I)$ must be singular:
+      $\det(A - \lambda I) = 0$ (The Characteristic Polynomial).'
+    - Solving $\det(A - \lambda I) = 0$ yields the eigenvalues $\lambda_1, \lambda_2, \dots, \lambda_n$.
+      Substituting each $\lambda$ back into $(A - \lambda I)\mathbf{v} = \mathbf{0}$ yields the corresponding
+      eigenvector directions.
+  - title: Matrix Diagonalization & Powers of Matrices
+    points:
+    - 'If an $n \times n$ matrix $A$ has $n$ linearly independent eigenvectors, we can assemble them as
+      the columns of matrix $P$, and assemble the eigenvalues into diagonal matrix $D$. This yields Matrix
+      Diagonalization: $A = P D P^{-1}$.'
+    - 'Diagonalization changes coordinate systems: $P^{-1}$ translates vectors into the ''eigenvector
+      basis'', $D$ performs pure coordinate scaling by $\lambda_i$, and $P$ converts back to the standard
+      basis.'
+    - 'Computing high powers of matrices becomes trivial: $A^k = (P D P^{-1})^k = P D^k P^{-1}$. Instead
+      of performing $k$ heavy matrix multiplications, we simply compute $\lambda_i^k$ along the diagonal
+      of $D$!'
+  - title: The Spectral Theorem & Principal Component Analysis (PCA)
+    points:
+    - 'The Spectral Theorem for Real Symmetric Matrices: If $A = A^T$, then (1) All eigenvalues are guaranteed
+      to be real numbers, and (2) All eigenvectors are mutually orthogonal and form an orthonormal basis:
+      $A = Q D Q^T$.'
+    - 'Principal Component Analysis (PCA): In machine learning, high-dimensional datasets (e.g. 1000 features
+      per user) contain heavy correlations. PCA computes the Covariance Matrix $\Sigma = \frac{1}{N} X^T
+      X$, which is always real and symmetric.'
+    - The eigenvectors of $\Sigma$ (Principal Components) point in the directions of maximum data variance!
+      The largest eigenvalue $\lambda_1$ corresponds to the 1st principal component. By projecting data
+      onto the top $k$ eigenvectors, engineers compress 1,000 dimensions down to 2 or 3 while preserving
+      99% of information.
+  trivia:
+  - type: multiple_choice
+    question: What is the defining algebraic equation for an eigenvector v and eigenvalue lambda of matrix
+      A?
+    options:
+    - A v = lambda v
+    - A + v = lambda
+    - A v = 0
+    - det(A) = lambda v
+    correct: 0
+    explanation: 'An eigenvector $\mathbf{v}$ multiplied by matrix $A$ yields a vector pointing along
+      the exact same line, scaled by scalar eigenvalue $\lambda$: $A\mathbf{v} = \lambda\mathbf{v}$.'
+  - type: multiple_choice
+    question: How do you calculate the eigenvalues of a square matrix A?
+    options:
+    - By solving the characteristic polynomial equation det(A - lambda I) = 0 for lambda
+    - By taking the average of all matrix diagonal entries
+    - By calculating the matrix inverse A^-1
+    - By dividing the matrix trace by the matrix rank
+    correct: 0
+    explanation: Setting the determinant of $(A - \lambda I)$ to zero guarantees a non-trivial null space,
+      producing the characteristic polynomial whose roots are the eigenvalues.
+  - type: multiple_choice
+    question: What does the Spectral Theorem guarantee for any real symmetric matrix (A = A^T)?
+    options:
+    - All eigenvalues are real numbers, and there exists an orthonormal basis of eigenvectors (A = Q D
+      Q^T)
+    - All eigenvalues are equal to 0
+    - The matrix determinant is always negative
+    - The matrix cannot be diagonalized
+    correct: 0
+    explanation: The Spectral Theorem proves that every real symmetric matrix has strictly real eigenvalues
+      and can be orthogonally diagonalized as $A = Q D Q^T$ with mutually perpendicular eigenvectors.
+  - type: multiple_choice
+    question: In Principal Component Analysis (PCA), what do the eigenvectors of the data covariance matrix
+      represent?
+    options:
+    - The orthogonal axes of maximum variance in the dataset (the principal components)
+    - The mean coordinates of all data clusters
+    - The outlier data points that must be deleted
+    - The learning rate hyperparameter of the neural network
+    correct: 0
+    explanation: The eigenvectors of the covariance matrix point along the axes where data spreads the
+      most (maximum variance), enabling optimal dimensionality reduction.
+  - type: multiple_choice
+    question: Why is matrix diagonalization (A = P D P^-1) computationally advantageous when computing
+      matrix powers A^100?
+    options:
+    - Because A^100 = P D^100 P^-1, which only requires raising the individual diagonal eigenvalue entries
+      to the 100th power
+    - Because it converts the matrix into a single scalar integer
+    - Because it eliminates the need for floating point multiplication
+    - Because it guarantees all matrix entries become zero
+    correct: 0
+    explanation: Raising a diagonal matrix $D$ to power $k$ simply raises each diagonal eigenvalue to
+      $\lambda_i^k$, avoiding $k$ expensive $O(n^3)$ matrix multiplications.
+  - type: multiple_choice
+    question: What is the relationship between the eigenvalues of a matrix and its determinant det(A)?
+    options:
+    - The determinant equals the product of all eigenvalues (det(A) = lambda_1 * lambda_2 * ... * lambda_n)
+    - The determinant equals the sum of all eigenvalues
+    - The determinant equals the largest eigenvalue squared
+    - There is no mathematical relationship between them
+    correct: 0
+    explanation: 'The determinant of a matrix is identical to the product of its eigenvalues: $\det(A)
+      = \prod_{i=1}^n \lambda_i$.'
+  - type: multiple_choice
+    question: What is the relationship between the eigenvalues of a matrix and its Trace Tr(A)?
+    options:
+    - The trace equals the sum of all eigenvalues (Tr(A) = lambda_1 + lambda_2 + ... + lambda_n)
+    - The trace equals the product of all eigenvalues
+    - The trace equals the smallest eigenvalue
+    - The trace is always equal to 0
+    correct: 0
+    explanation: 'The trace of a square matrix (the sum of its main diagonal entries) is always equal
+      to the sum of all its eigenvalues: $\text{Tr}(A) = \sum_{i=1}^n \lambda_i$.'
+  - type: multiple_choice
+    question: What does an eigenvalue of lambda = 0 indicate about a matrix?
+    options:
+    - The matrix is singular (det = 0) and has a non-trivial null space containing the corresponding eigenvector
+    - The matrix is an identity matrix
+    - The matrix cannot be multiplied by vectors
+    - All matrix entries are equal to zero
+    correct: 0
+    explanation: If $\lambda = 0$, then $A\mathbf{v} = 0 \mathbf{v} = \mathbf{0}$, proving that $\mathbf{v}$
+      is a non-zero vector in the null space, meaning $\det(A) = 0$ (singular).
+  - type: multiple_choice
+    question: What are the eigenvalues of an Identity Matrix I?
+    options:
+    - All eigenvalues are equal to 1.0
+    - All eigenvalues are equal to 0.0
+    - The eigenvalues are infinite
+    - The eigenvalues are pure imaginary numbers
+    correct: 0
+    explanation: Because $I\mathbf{v} = 1 \mathbf{v}$ for every vector in the space, every non-zero vector
+      is an eigenvector with eigenvalue $\lambda = 1$.
+  - type: multiple_choice
+    question: What does it mean if a 2x2 rotation matrix has complex eigenvalues (e.g. lambda = cos(theta)
+      +/- i sin(theta))?
+    options:
+    - There are no real lines in the 2D plane that maintain their direction during the rotation
+    - The matrix is mathematically invalid
+    - The vector lengths shrink to zero
+    - The matrix determinant is negative
+    correct: 0
+    explanation: A pure rotation (by an angle other than $0^\circ$ or $180^\circ$) rotates every real
+      vector in 2D space; hence, no real eigenvectors exist, resulting in complex conjugate eigenvalues.
+  - type: multiple_choice
+    question: What is an 'Eigenspace' corresponding to eigenvalue lambda?
+    options:
+    - The set of all eigenvectors associated with lambda together with the zero vector (the null space
+      of A - lambda I)
+    - The bounding box of the dataset in machine learning
+    - The physical area of the matrix memory buffer
+    - The set of eigenvalues that are positive
+    correct: 0
+    explanation: The eigenspace $E_\lambda = \text{Null}(A - \lambda I)$ is the linear subspace formed
+      by all eigenvectors associated with $\lambda$ plus the zero vector.
+  - type: multiple_choice
+    question: What is a 'Positive Definite Matrix'?
+    options:
+    - A symmetric matrix where x^T A x > 0 for all non-zero vectors x (all eigenvalues are strictly positive)
+    - A matrix containing only positive integers
+    - A matrix whose determinant is equal to +1
+    - A matrix with more rows than columns
+    correct: 0
+    explanation: A symmetric matrix is positive definite if all its eigenvalues are strictly positive
+      ($\lambda_i > 0$), guaranteeing that quadratic forms $\mathbf{x}^T A \mathbf{x}$ act like convex
+      bowls in optimization.
+  - type: multiple_choice
+    question: What algorithm used by Google in its original search engine is fundamentally an eigenvector
+      calculation of a massive web link matrix?
+    options:
+    - PageRank Algorithm
+    - Dijkstra Shortest Path
+    - Binary Search
+    - QuickSort Algorithm
+    correct: 0
+    explanation: Google's PageRank computes the dominant eigenvector (with eigenvalue $\lambda = 1$) of
+      the Markov transition matrix representing web hyperlink probabilities (via the Power Iteration method).
+  - type: multiple_choice
+    question: What is the 'Power Iteration' method in numerical linear algebra?
+    options:
+    - An algorithm that repeatedly multiplies a random vector by matrix A to converge to the eigenvector
+      with the largest eigenvalue
+    - A hardware technique to reduce CPU power consumption
+    - A method to solve systems of linear inequalities
+    - An algorithm that computes the square root of matrix entries
+    correct: 0
+    explanation: Power iteration repeatedly applies $A\mathbf{x}_{k+1} = \frac{A\mathbf{x}_k}{\|A\mathbf{x}_k\|}$;
+      because the dominant eigenvalue grows fastest, $\mathbf{x}$ rapidly converges to the dominant eigenvector.
+  - type: multiple_choice
+    question: When can a square matrix NOT be diagonalized (is 'Defective')?
+    options:
+    - When it does not have enough linearly independent eigenvectors to form a full basis (geometric multiplicity
+      < algebraic multiplicity)
+    - When its determinant is a prime number
+    - When all its entries are floating-point numbers
+    - When it is multiplied by a diagonal matrix
+    correct: 0
+    explanation: A defective matrix lacks a full set of $n$ linearly independent eigenvectors (such as
+      non-zero shear matrices like $\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$), preventing standard
+      diagonalization.
+- id: svd_matrix_factorizations
+  title: 5. Singular Value Decomposition (SVD) & ML Applications
+  description: 'The Swiss Army knife of linear algebra: factoring any rectangular matrix into U Sigma
+    V^T, low-rank approximation, recommender systems, and image compression.'
+  cards:
+  - title: 'The Master Theorem of Linear Algebra: SVD ($A = U \Sigma V^T$)'
+    figure:
+      title: 'Geometric Decomposition: Rotation -> Scaling -> Rotation'
+      svg: "<svg viewBox=\"0 0 520 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:150px;\"\
+        >\n  <!-- Circle in V space -->\n  <g transform=\"translate(30,20)\">\n    <circle cx=\"50\" cy=\"\
+        50\" r=\"40\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n\
+        \    <line x1=\"50\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n\
+        \    <line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"10\" stroke=\"#10b981\" stroke-width=\"2.5\"/>\n\
+        \    <text x=\"50\" y=\"110\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"\
+        middle\">1. Orthonormal V Basis</text>\n  </g>\n\n  <!-- Step 1 Arrow: V^T -->\n  <path d=\"M\
+        \ 130 70 L 165 70\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#arr)\" opacity=\"\
+        0.5\"/>\n  <text x=\"147\" y=\"60\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\"\
+        >V^T</text>\n\n  <!-- Step 2 Arrow: Sigma -->\n  <g transform=\"translate(180,20)\">\n    <!--\
+        \ Ellipse scaled by singular values -->\n    <ellipse cx=\"60\" cy=\"50\" rx=\"55\" ry=\"25\"\
+        \ fill=\"#8b5cf6\" fill-opacity=\"0.15\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n    <line x1=\"\
+        60\" y1=\"50\" x2=\"115\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n    <line x1=\"\
+        60\" y1=\"50\" x2=\"60\" y2=\"25\" stroke=\"#10b981\" stroke-width=\"2.5\"/>\n    <text x=\"85\"\
+        \ y=\"42\" font-size=\"9\" font-weight=\"bold\" fill=\"#3b82f6\">σ1</text>\n    <text x=\"65\"\
+        \ y=\"32\" font-size=\"9\" font-weight=\"bold\" fill=\"#10b981\">σ2</text>\n    <text x=\"60\"\
+        \ y=\"110\" font-size=\"10\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">2. Stretch\
+        \ by Σ (σ_i)</text>\n  </g>\n\n  <!-- Step 3 Arrow: U -->\n  <path d=\"M 310 70 L 345 70\" stroke=\"\
+        currentColor\" stroke-width=\"2\" marker-end=\"url(#arr)\" opacity=\"0.5\"/>\n  <text x=\"327\"\
+        \ y=\"60\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\">U</text>\n\n  <!-- Final\
+        \ Ellipse rotated by U -->\n  <g transform=\"translate(360,20)\">\n    <g transform=\"rotate(-30\
+        \ 60 50)\">\n      <ellipse cx=\"60\" cy=\"50\" rx=\"55\" ry=\"25\" fill=\"#ec4899\" fill-opacity=\"\
+        0.2\" stroke=\"#ec4899\" stroke-width=\"2\"/>\n      <line x1=\"60\" y1=\"50\" x2=\"115\" y2=\"\
+        50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n      <line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"\
+        25\" stroke=\"#10b981\" stroke-width=\"2.5\"/>\n    </g>\n    <text x=\"60\" y=\"110\" font-size=\"\
+        10\" font-weight=\"bold\" fill=\"#ec4899\" text-anchor=\"middle\">3. Rotate into U Space</text>\n\
+        \  </g>\n</svg>"
+      caption: 'SVD proves every linear transformation factorizes into three steps: an initial rotation
+        ($V^T$), coordinate axis stretching by singular values ($\Sigma$), and a final rotation ($U$).'
+    points:
+    - Eigenvalue diagonalization only works on square matrices ($n \times n$) that have full sets of eigenvectors.
+      What about non-square rectangular matrices ($m \times n$, like a dataset of 10,000 users $\times$
+      500 movies)?
+    - 'Singular Value Decomposition (SVD) is the universal master theorem of linear algebra: ANY real
+      matrix $A$ of size $m \times n$ can be factored into: $A = U \Sigma V^T$.'
+    - $U$ is an $m \times m$ orthogonal matrix (Left Singular Vectors, eigenvectors of $A A^T$). $\Sigma$
+      is an $m \times n$ diagonal matrix holding non-negative Singular Values $\sigma_1 \ge \sigma_2 \ge
+      \dots \ge 0$ in descending order. $V$ is an $n \times n$ orthogonal matrix (Right Singular Vectors,
+      eigenvectors of $A^T A$).
+    - Geometrically, SVD shows that ANY linear transformation maps a unit sphere in $\mathbb{R}^n$ into
+      an ellipsoid in $\mathbb{R}^m$, where the semi-axis lengths of the ellipsoid are exactly the singular
+      values $\sigma_i$!
+  - title: Low-Rank Matrix Approximation & The Eckart-Young Theorem
+    points:
+    - 'SVD allows us to express any matrix as a sum of rank-1 outer products weighted by singular values:
+      $A = \sum_{i=1}^{r} \sigma_i \mathbf{u}_i \mathbf{v}_i^T$.'
+    - The Eckart-Young-Mirsky Theorem proves that the mathematically optimal rank-$k$ approximation of
+      matrix $A$ (minimizing Frobenius reconstruction error) is obtained simply by keeping the top $k$
+      largest singular values and discarding the rest ($A_k = \sum_{i=1}^{k} \sigma_i \mathbf{u}_i \mathbf{v}_i^T$).
+    - 'Image Compression: A $1000 \times 1000$ pixel image requires 1,000,000 numbers. Storing only the
+      top $k=20$ singular values requires only $20 \times (1000 + 1000 + 1) = 40,020$ numbers — a 96%
+      reduction in storage while retaining nearly crystal-clear visual quality!'
+  - title: Recommender Systems (Netflix Prize) & Latent Semantic Analysis (LSA)
+    points:
+    - 'Collaborative Filtering / Recommender Systems: Consider a massive matrix $A$ where rows are users,
+      columns are movies, and entries are ratings (mostly blank).'
+    - 'SVD factorizes $A \approx U_k \Sigma_k V_k^T$: The rows of $U_k$ become dense embeddings representing
+      user preferences across $k$ ''latent concepts'' (e.g. action intensity, romance, sci-fi tone); the
+      rows of $V_k$ represent how strongly each movie embodies those same latent concepts.'
+    - Latent Semantic Analysis (LSA) in NLP uses SVD on term-document frequency matrices to discover underlying
+      semantic topics, clustering synonyms and related concepts automatically from raw text.
+  trivia:
+  - type: multiple_choice
+    question: What is the mathematical formulation of Singular Value Decomposition (SVD) for any m x n
+      matrix A?
+    options:
+    - A = U Sigma V^T (where U and V are orthogonal matrices and Sigma is a diagonal matrix of non-negative
+      singular values)
+    - A = P D P^-1
+    - A = L U
+    - A = Q R Q^T
+    correct: 0
+    explanation: SVD factorizes any rectangular matrix $A$ into $U \Sigma V^T$, where $U$ contains the
+      left singular vectors, $\Sigma$ contains sorted singular values, and $V^T$ contains right singular
+      vectors.
+  - type: multiple_choice
+    question: What does the Eckart-Young-Mirsky Theorem prove regarding Low-Rank Matrix Approximation?
+    options:
+    - The optimal rank-k approximation of a matrix (minimizing reconstruction error) is obtained by truncating
+      the SVD to the top k largest singular values
+    - Every square matrix has a determinant equal to its trace
+    - Matrices with rank less than 5 cannot be inverted
+    - Singular values grow exponentially with matrix dimensions
+    correct: 0
+    explanation: The Eckart-Young theorem proves that truncating the SVD sum to the top $k$ terms ($A_k
+      = \sum_{i=1}^k \sigma_i \mathbf{u}_i \mathbf{v}_i^T$) yields the best possible rank-$k$ approximation
+      under both Frobenius and Spectral norms.
+  - type: multiple_choice
+    question: How are the Singular Values (sigma_i) of matrix A related to the eigenvalues of A^T A?
+    options:
+    - The singular values are the non-negative square roots of the eigenvalues of A^T A (sigma_i = sqrt(lambda_i))
+    - The singular values are equal to the eigenvalues divided by 2
+    - The singular values are the inverse of the eigenvalues
+    - There is no mathematical relationship between them
+    correct: 0
+    explanation: 'The right singular vectors are the eigenvectors of symmetric matrix $A^T A$, and the
+      singular values are the square roots of its non-negative eigenvalues: $\sigma_i = \sqrt{\lambda_i(A^T
+      A)}$.'
+  - type: multiple_choice
+    question: In recommender systems (like the Netflix Prize), what do the low-rank factor matrices U
+      and V represent?
+    options:
+    - Latent feature embeddings capturing user preferences and item/movie characteristics in a shared
+      conceptual space
+    - The geographic IP addresses of the streaming servers
+    - The exact timestamps when users clicked the play button
+    - The cryptographic hash keys of user passwords
+    correct: 0
+    explanation: 'Matrix factorization decomposes the sparse rating matrix into dense latent factor vectors:
+      $U$ embeds user preference profiles, and $V$ embeds item characteristics in the same $k$-dimensional
+      latent space.'
+  - type: multiple_choice
+    question: What is the 'Condition Number' of an invertible matrix (kappa(A) = sigma_max / sigma_min)?
+    options:
+    - 'A measure of numerical sensitivity: how much small errors or noise in the input can be magnified
+      in the output solution'
+    - The temperature limit of the physical DRAM chips
+    - The count of negative numbers in the matrix
+    - The number of floating point operations per second
+    correct: 0
+    explanation: The condition number $\kappa(A) = \frac{\sigma_{\max}}{\sigma_{\min}}$ measures numerical
+      stability; an 'ill-conditioned' matrix with a huge condition number magnifies floating-point rounding
+      errors dramatically.
+  - type: multiple_choice
+    question: How can the Moore-Penrose Pseudoinverse (A+) be expressed using the SVD components A = U
+      Sigma V^T?
+    options:
+    - A+ = V Sigma^+ U^T (where Sigma^+ inverts all non-zero singular values 1/sigma_i)
+    - A+ = U^T Sigma V
+    - A+ = (U Sigma V^T)^-1
+    - A+ = Sigma^-1
+    correct: 0
+    explanation: Using SVD, the pseudoinverse is computed directly as $A^+ = V \Sigma^+ U^T$, where $\Sigma^+$
+      transposes $\Sigma$ and replaces every non-zero singular value $\sigma_i$ with $1/\sigma_i$.
+  - type: multiple_choice
+    question: How many singular values of matrix A are strictly greater than zero?
+    options:
+    - Exactly equal to the mathematical Rank of matrix A
+    - Always equal to the number of rows m
+    - Always equal to the number of columns n
+    - Zero singular values are greater than zero
+    correct: 0
+    explanation: The number of non-zero singular values $\sigma_i > 0$ equals the exact rank of matrix
+      $A$ (the dimension of its column space).
+  - type: multiple_choice
+    question: What is the 'Frobenius Norm' of a matrix ||A||_F?
+    options:
+    - The square root of the sum of the squared values of all matrix entries (equal to sqrt(sum(sigma_i^2)))
+    - The largest single number in the matrix
+    - The absolute value of the determinant
+    - The number of non-zero rows in reduced row echelon form
+    correct: 0
+    explanation: The Frobenius norm $\|A\|_F = \sqrt{\sum_{i,j} A_{ij}^2}$ measures overall matrix magnitude,
+      and equals the Euclidean norm of its singular value vector $\sqrt{\sum_{i} \sigma_i^2}$.
+  - type: multiple_choice
+    question: In Latent Semantic Analysis (LSA) for natural language processing, what matrix is decomposed
+      using SVD?
+    options:
+    - A Term-Document Frequency Matrix (where rows are vocabulary words and columns are documents)
+    - A network routing table of IP addresses
+    - A matrix of binary ASCII character codes
+    - A database schema table of user IDs
+    correct: 0
+    explanation: LSA applies truncated SVD to a term-document frequency matrix (e.g. TF-IDF), mapping
+      words and documents into a shared continuous semantic space.
+  - type: multiple_choice
+    question: Why does SVD work on ANY arbitrary rectangular matrix, unlike standard eigenvalue diagonalization?
+    options:
+    - Because A A^T and A^T A are always symmetric and positive semi-definite, guaranteeing real, non-negative
+      singular values
+    - Because rectangular matrices have more rows than columns
+    - Because SVD does not use floating point numbers
+    - Because SVD converts all matrix numbers to zero
+    correct: 0
+    explanation: For any real matrix $A$, the products $A^T A$ and $A A^T$ are always real, symmetric,
+      and positive semi-definite, ensuring orthogonal bases $U, V$ and real non-negative singular values
+      exist unconditionally.
+  - type: multiple_choice
+    question: What geometric shape does a unit sphere in R^n become after being mapped by a linear transformation
+      A with SVD singular values sigma_1, sigma_2, ...?
+    options:
+    - A Hyper-Ellipsoid in R^m whose principal semi-axes have lengths equal to the singular values sigma_i
+    - A perfect cube with side length equal to det(A)
+    - A 1-dimensional line segment
+    - A flat triangle passing through the origin
+    correct: 0
+    explanation: SVD shows geometrically that any matrix transformation maps an $n$-dimensional unit sphere
+      into an $m$-dimensional hyper-ellipsoid with axis lengths $\sigma_1, \sigma_2, \dots, \sigma_r$.
+  - type: multiple_choice
+    question: What is 'QR Decomposition' of a matrix A?
+    options:
+    - Factoring A into an Orthogonal matrix Q (Q^T Q = I) and an Upper Triangular matrix R
+    - Dividing matrix A into four equal quadrants
+    - Computing the square root of matrix A
+    - Multiplying matrix A by a quantum random number
+    correct: 0
+    explanation: QR factorization decomposes a matrix into an orthogonal matrix $Q$ (obtained via Gram-Schmidt
+      or Householder reflections) and an upper-triangular matrix $R$, widely used for stable least squares.
+  - type: multiple_choice
+    question: What is 'LU Decomposition' of a square matrix A?
+    options:
+    - Factoring A into a Lower Triangular matrix L and an Upper Triangular matrix U (A = L U)
+    - Factoring A into a Left matrix and an Ultra matrix
+    - Decomposing A into floating point exponent and mantissa
+    - Translating A into a linear equation
+    correct: 0
+    explanation: 'LU decomposition encodes Gaussian elimination into matrix form: $L$ stores elimination
+      multipliers in a lower-triangular matrix, and $U$ is the resulting upper-triangular echelon form.'
+  - type: multiple_choice
+    question: What is 'Cholesky Decomposition' for a symmetric positive-definite matrix A?
+    options:
+    - 'Factoring A into the product of a lower triangular matrix and its transpose: A = L L^T'
+    - Factoring A into three diagonal matrices
+    - Approximating A with random Gaussian noise
+    - Inverting A by computing its determinant
+    correct: 0
+    explanation: For symmetric positive-definite matrices, Cholesky decomposition computes $A = L L^T$
+      in roughly half the computational operations of standard LU decomposition, widely used in Kalman
+      filters and Gaussian processes.
+  - type: multiple_choice
+    question: What is the primary trade-off when choosing the truncation rank k in Low-Rank Matrix Compression?
+    options:
+    - Smaller k gives greater compression and memory savings, but discards more fine details and increases
+      reconstruction error
+    - Smaller k increases the time needed to invert the matrix
+    - Larger k causes the singular values to become negative numbers
+    - Larger k changes the physical font size of the text
+    correct: 0
+    explanation: 'Choosing rank $k$ balances compression vs fidelity: smaller $k$ saves massive memory
+      by storing fewer vectors, while larger $k$ captures subtle nuances at the cost of higher storage.'
