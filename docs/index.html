@@ -241,6 +241,33 @@
             border-radius: 12px; margin: 12px 0; text-align: center; font-size: 1.15em;
             overflow-x: auto; border: 1px solid var(--surface-border); direction: ltr; unicode-bidi: embed;
         }
+        .math-bf {
+            font-weight: 700;
+            font-style: normal;
+            font-family: inherit;
+            color: var(--primary);
+        }
+        .math-op {
+            font-style: normal;
+            font-weight: 600;
+            font-family: inherit;
+            padding: 0 1px;
+        }
+        .math-matrix {
+            display: inline-table;
+            vertical-align: middle;
+            border-left: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            border-radius: 4px;
+            margin: 0 4px;
+            padding: 2px 4px;
+            border-collapse: collapse;
+        }
+        .math-matrix-cell {
+            padding: 2px 6px;
+            text-align: center;
+            font-size: 0.9em;
+        }
         .math-frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 4px; font-size: 0.9em; }
         .math-num { border-bottom: 1px solid currentColor; padding-bottom: 1px; }
         .math-den { padding-top: 1px; }
@@ -559,11 +586,26 @@
 
         function renderFormula(raw) {
             let f = raw.trim();
-            // Greek letters
+
+            // 1. Matrices: \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+            f = f.replace(/\\begin\{(?:b|p|v|V)?matrix\}([\s\S]*?)\\end\{(?:b|p|v|V)?matrix\}/g, (match, body) => {
+                const rows = body.trim().split(/\\\\|\n/).filter(r => r.trim().length > 0);
+                const rowHtml = rows.map(r => {
+                    const cells = r.split('&').map(c => `<td class="math-matrix-cell">${renderFormula(c.trim())}</td>`).join('');
+                    return `<tr>${cells}</tr>`;
+                }).join('');
+                return `<table class="math-matrix"><tbody>${rowHtml}</tbody></table>`;
+            });
+
+            // 2. Double-bar norm \| or \lVert / \rVert
+            f = f.replace(/\\\|/g, '‖');
+            f = f.replace(/\\lVert/g, '‖').replace(/\\rVert/g, '‖');
+
+            // 3. Greek letters
             const greek = {
                 '\\alpha': 'α', '\\beta': 'β', '\\gamma': 'γ', '\\delta': 'δ', '\\Delta': 'Δ',
                 '\\epsilon': 'ε', '\\zeta': 'ζ', '\\eta': 'η', '\\theta': 'θ', '\\Theta': 'Θ',
-                '\\lambda': 'λ', '\\Lambda': 'Λ', '\\mu': 'μ', '\\nu': 'ν', '\\xi': 'ξ',
+                '\\kappa': 'κ', '\\lambda': 'λ', '\\Lambda': 'Λ', '\\mu': 'μ', '\\nu': 'ν', '\\xi': 'ξ',
                 '\\pi': 'π', '\\Pi': 'Π', '\\rho': 'ρ', '\\sigma': 'σ', '\\Sigma': 'Σ',
                 '\\tau': 'τ', '\\phi': 'φ', '\\Phi': 'Φ', '\\chi': 'χ', '\\psi': 'ψ',
                 '\\omega': 'ω', '\\Omega': 'Ω'
@@ -572,34 +614,66 @@
                 f = f.split(k).join(v);
             }
 
-            // Math symbols
+            // 4. Bold vectors / matrices: \mathbf{v}, \mathbf{u}, \mathbf{x}
+            f = f.replace(/\\mathbf\s*\{([^{}]+)\}/g, '<strong class="math-bf">$1</strong>');
+            f = f.replace(/\\mathbf\s+([a-zA-Z0-9])/g, '<strong class="math-bf">$1</strong>');
+
+            // 5. Hat unit vectors: \hat{i}, \hat{j}, \hat{v}, \hat{\mathbf{x}}
+            f = f.replace(/\\hat\s*\{<strong class="math-bf">([^{}]+)<\/strong>\}/g, '<strong class="math-bf">$1̂</strong>');
+            f = f.replace(/\\hat\s*\{([^{}]+)\}/g, '$1̂');
+            f = f.replace(/\\hat\s+([a-zA-Z0-9])/g, '$1̂');
+
+            // 6. Vector arrows: \vec{v}
+            f = f.replace(/\\vec\s*\{([^{}]+)\}/g, '$1⃗');
+
+            // 7. Dots & ellipsis: \dots, \cdots, \ldots, \vdots, \ddots
+            f = f.replace(/\\(dots|cdots|ldots)/g, '…');
+            f = f.replace(/\\vdots/g, '⋮');
+            f = f.replace(/\\ddots/g, '⋱');
+
+            // 8. Math Operators & Named Functions
+            const ops = ['cos', 'sin', 'tan', 'det', 'dim', 'ker', 'ln', 'log', 'exp', 'max', 'min', 'lim', 'proj', 'span', 'rank', 'tr', 'diag'];
+            for (const op of ops) {
+                const re = new RegExp('\\\\' + op + '(?![a-zA-Z])', 'g');
+                f = f.replace(re, `<span class="math-op">${op}</span>`);
+            }
+
+            // 9. Math symbols
             const symbols = {
                 '\\sum': '∑', '\\int': '∫', '\\prod': '∏',
                 '\\le': '≤', '\\leq': '≤', '\\ge': '≥', '\\geq': '≥',
                 '\\neq': '≠', '\\ne': '≠', '\\approx': '≈', '\\sim': '∼',
-                '\\to': '→', '\\rightarrow': '→', '\\infty': '∞',
-                '\\cdot': '·', '\\times': '×', '\\pm': '±',
+                '\\implies': '⟹', '\\iff': '⟺',
+                '\\to': '→', '\\rightarrow': '→', '\\leftarrow': '←', '\\leftrightarrow': '↔',
+                '\\infty': '∞', '\\cdot': '·', '\\times': '×', '\\pm': '±',
                 '\\in': '∈', '\\subset': '⊂', '\\subseteq': '⊆',
+                '\\perp': '⟂', '\\angle': '∠', '\\circ': '°',
+                '\\langle': '⟨', '\\rangle': '⟩', '\\nabla': '∇', '\\partial': '∂',
                 '\\mathbb{R}': 'ℝ', '\\mathbb{Z}': 'ℤ', '\\mathbb{C}': 'ℂ', '\\mathbb{N}': 'ℕ',
                 '\\mathcal{Z}': '𝒵', '\\mathcal{F}': 'ℱ',
                 '\\circledast': '⊛', '\\ast': '*',
-                '\\text': '', '\\mathrm': '', '\\left': '', '\\right': ''
+                '\\top': 'T',
+                '\\text': '', '\\mathrm': '', '\\operatorname': '', '\\textbf': '',
+                '\\left': '', '\\right': ''
             };
             for (const [k, v] of Object.entries(symbols)) {
                 f = f.split(k).join(v);
             }
 
-            // Fractions: \frac{A}{B}
+            // 10. Fractions: \frac{A}{B}
             f = f.replace(/\\frac\s*\{([^{}]+)\}\s*\{([^{}]+)\}/g, '<span class="math-frac"><span class="math-num">$1</span><span class="math-den">$2</span></span>');
 
-            // Square root: \sqrt{A}
+            // 11. Square root: \sqrt{A}
             f = f.replace(/\\sqrt\s*\{([^{}]+)\}/g, '√<span class="math-sqrt">$1</span>');
 
-            // Subscripts & Superscripts
+            // 12. Subscripts & Superscripts
             f = f.replace(/_\{([^}]+)\}/g, '<sub>$1</sub>');
             f = f.replace(/_([a-zA-Z0-9])/g, '<sub>$1</sub>');
             f = f.replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>');
-            f = f.replace(/\^([a-zA-Z0-9\+\-])/g, '<sup>$1</sup>');
+            f = f.replace(/\^([a-zA-Z0-9\+\-T])/g, '<sup>$1</sup>');
+
+            // 13. Clean up residual braces
+            f = f.replace(/[{}]/g, '');
 
             return f;
         }
