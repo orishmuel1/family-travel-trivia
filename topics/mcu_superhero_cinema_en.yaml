@@ -1,0 +1,707 @@
+id: mcu_superhero_cinema_en
+title: The Marvel Cinematic Universe & Superhero Sagas
+description: Step into the most ambitious interconnected cinematic universe in film history! From the origins of Iron Man
+  and the battle for the Infinity Stones to the Multiverse Saga and Deadpool, test your knowledge on iconic MCU movies, Marvel
+  lore, and behind-the-scenes secrets.
+lang: en
+audience: adult
+categories:
+- id: phase1_origins
+  title: 'Phase 1: The Origins & Avengers Assemble (2008–2012)'
+  description: How Kevin Feige, Robert Downey Jr., and Joss Whedon laid the foundation for the superhero cinematic era.
+  cards:
+  - title: Iron Man (2008)
+    points:
+    - 'IMDb Rating: 7.9/10 | Directed by Jon Favreau | Starring Robert Downey Jr., Gwyneth Paltrow (Pepper Potts), and Jeff
+      Bridges (Obadiah Stane / Iron Monger).'
+    - 'Storyline & Themes: Billionaire weapons industrialist Tony Stark is captured in Afghanistan, builds an improvised powered
+      exoskeleton (Mark I) powered by an Arc Reactor, and vows to protect the world.'
+    - 'Filming & Production: Shot primarily in California (Edwards Air Force Base, Lone Pine, and sound stages). Jon Favreau
+      allowed extensive dialogue improvisation because the script was continuously refined during shooting.'
+    - 'Cinematic Milestone: The film''s post-credits scene featuring Samuel L. Jackson as Nick Fury (''You''ve become part
+      of a bigger universe, you just don''t know it yet'') birthed the modern cinematic universe concept.'
+  - title: 'Captain America: The First Avenger (2011)'
+    points:
+    - 'IMDb Rating: 6.9/10 | Directed by Joe Johnston | Starring Chris Evans as Steve Rogers and Hugo Weaving as Johann Schmidt
+      / Red Skull.'
+    - 'Storyline & Themes: During WWII, sickly volunteer Steve Rogers is injected with Dr. Erskine''s Super-Soldier Serum,
+      wielding a vibranium shield against Nazi rogue science division HYDRA.'
+    - 'Infinity Stone Debut: Introduced the glowing blue Tesseract, later revealed to house the Space Stone.'
+    - 'Visual Effects: Lola VFX used digital body-shrinking techniques (composite plates and body doubles) to create ''Skinny
+      Steve'' Rogers before his serum transformation.'
+  - title: Thor (2011)
+    points:
+    - 'IMDb Rating: 7.0/10 | Directed by Shakespearean veteran Kenneth Branagh.'
+    - 'Cast & Characters: Chris Hemsworth as the arrogant God of Thunder, Tom Hiddleston in his breakout role as Loki, and
+      Anthony Hopkins as King Odin.'
+    - 'Storyline & Themes: Stripped of his powers and divine hammer Mjolnir, Thor is banished to Earth (New Mexico) to learn
+      humility and true worthiness.'
+    - 'Casting Trivia: Tom Hiddleston originally auditioned for the role of Thor, bulking up with 20 pounds of muscle, before
+      Branagh cast him as the deceptive trickster Loki.'
+  - title: The Avengers (2012)
+    points:
+    - 'IMDb Rating: 8.0/10 | Written and directed by Joss Whedon | First film in history to generate a $200M+ opening weekend
+      in North America.'
+    - 'Storyline & Themes: Earth''s Mightiest Heroes (Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye) unite
+      to stop Loki and the alien Chitauri army during the Battle of New York.'
+    - 'Iconic Scene: The continuous 360-degree circling hero shot of the assembled team in the middle of Grand Central / Park
+      Avenue.'
+    - 'End Credits: Featured the legendary silent ''Shawarma'' eating scene, filmed just days after the world premiere at
+      the El Capitan Theatre.'
+  trivia:
+  - type: multiple_choice
+    question: What iconic line does Tony Stark announce to the press at the end of 'Iron Man' (2008), completely breaking
+      comic book secret-identity convention?
+    options:
+    - '''I am Iron Man.'''
+    - '''The truth is, I work with Iron Man.'''
+    - '''Peace in our time.'''
+    - '''Avengers, assemble.'''
+    correct: 0
+    explanation: Robert Downey Jr.'s line 'I am Iron Man' was partially improvised and cemented Tony Stark's bold, public
+      persona in the MCU.
+  - type: multiple_choice
+    question: Which rare, vibration-absorbing fictional metal was used by Howard Stark to forge Captain America's circular
+      shield?
+    options:
+    - Vibranium
+    - Adamantium
+    - Uru
+    - Promethium
+    correct: 0
+    explanation: Howard Stark created Steve Rogers' iconic shield using the world's rarest metal, Vibranium, mined from the
+      isolated nation of Wakanda.
+  - type: multiple_choice
+    question: Which actor originally auditioned and screen-tested for the role of Thor before being cast as Loki?
+    options:
+    - Tom Hiddleston
+    - Benedict Cumberbatch
+    - Sebastian Stan
+    - Paul Bettany
+    correct: 0
+    explanation: Tom Hiddleston originally gained 20 lbs of muscle to audition for Thor before director Kenneth Branagh realized
+      he was the perfect Loki.
+  - type: multiple_choice
+    question: What fast-food meal do the exhausted Avengers silently eat together in the famous post-credits scene of 'The
+      Avengers' (2012)?
+    options:
+    - Shawarma
+    - Cheeseburgers
+    - New York pizza slices
+    - Chinese takeout noodles
+    correct: 0
+    explanation: Following Tony Stark's battle line asking if anyone had tried shawarma, the team is shown quietly chewing
+      shawarma at a wrecked restaurant.
+  - type: multiple_choice
+    question: Which mysterious cosmic entity makes his first brief MCU appearance in the mid-credits scene of 'The Avengers'
+      (2012)?
+    options:
+    - Thanos (The Mad Titan)
+    - Galactus
+    - Kang the Conqueror
+    - The Collector
+    correct: 0
+    explanation: Thanos turns to the camera with a sinister grin when his servant The Other warns that challenging Earth's
+      heroes would be 'to court death'.
+  - type: multiple_choice
+    question: What is the name of the AI digital assistant Tony Stark created that resides in his helmet and mansion in early
+      MCU films (voiced by Paul Bettany)?
+    options:
+    - J.A.R.V.I.S.
+    - F.R.I.D.A.Y.
+    - E.D.I.T.H.
+    - K.A.R.E.N.
+    correct: 0
+    explanation: J.A.R.V.I.S. (Just A Rather Very Intelligent System) was Tony's primary AI before Paul Bettany physically
+      transitioned into Vision.
+  - type: multiple_choice
+    question: 'In ''Captain America: The First Avenger'', what ancient artifact houses the Space Stone that Red Skull uses
+      to power HYDRA weapons?'
+    options:
+    - The Tesseract
+    - The Aether
+    - The Orb
+    - The Eye of Agamotto
+    correct: 0
+    explanation: Johann Schmidt (Red Skull) steals the blue glowing Tesseract from a church crypt in Tønsberg, Norway.
+  - type: multiple_choice
+    question: Who directed the critically acclaimed 2011 Shakespearean fantasy epic 'Thor'?
+    options:
+    - Kenneth Branagh
+    - Joss Whedon
+    - Jon Favreau
+    - Taika Waititi
+    correct: 0
+    explanation: Acclaimed Shakespearean actor and director Kenneth Branagh brought regal, theatrical weight to the kingdom
+      of Asgard.
+  - type: multiple_choice
+    question: 'Which weapon does Odin whisper an enchantment onto: ''Whosoever holds this hammer, if he be worthy, shall possess
+      the power of Thor''?'
+    options:
+    - Mjolnir
+    - Stormbreaker
+    - Gungnir
+    - The Hofund Sword
+    correct: 0
+    explanation: Odin enchants Thor's hammer Mjolnir (forged in the heart of a dying star) before casting it down to Earth.
+  - type: multiple_choice
+    question: Which SHIELD director approaches Tony Stark in the historic post-credits scene of 'Iron Man' to talk about 'The
+      Avengers Initiative'?
+    options:
+    - Nick Fury
+    - Phil Coulson
+    - Alexander Pierce
+    - Maria Hill
+    correct: 0
+    explanation: Samuel L. Jackson made a surprise cameo as Nick Fury, initiating the overarching MCU storyline.
+- id: phase2_3_infinity
+  title: 'Phase 2 & 3: The Infinity Saga & Cosmic Horizons (2014–2018)'
+  description: The golden expansion of the MCU, introducing political thrillers, space outlaws, and internal civil wars.
+  cards:
+  - title: 'Captain America: The Winter Soldier (2014)'
+    points:
+    - 'IMDb Rating: 7.8/10 | Directed by Anthony & Joe Russo (The Russo Brothers).'
+    - 'Cast & Characters: Chris Evans, Scarlett Johansson (Black Widow), Anthony Mackie (Sam Wilson / Falcon), and Sebastian
+      Stan as Bucky Barnes / The Winter Soldier.'
+    - 'Storyline & Themes: A 1970s-style political conspiracy thriller revealing that SHIELD has been secretly infiltrated
+      by HYDRA sleeper cells since WWII.'
+    - 'Action Landmark: Features the famous claustrophobic 10-on-1 glass elevator fight sequence (''Before we get started,
+      does anyone want to get out?'').'
+    - 'Influence: Propelled the Russo Brothers to helm ''Civil War'', ''Infinity War'', and ''Endgame''.'
+  - title: Guardians of the Galaxy (2014)
+    points:
+    - 'IMDb Rating: 8.0/10 | Written and directed by James Gunn.'
+    - 'Cast & Characters: Chris Pratt (Peter Quill / Star-Lord), Zoe Saldaña (Gamora), Dave Bautista (Drax), Bradley Cooper
+      (Rocket), and Vin Diesel (Groot).'
+    - 'Storyline & Themes: A ragtag band of galactic criminals unite to prevent Ronan the Accuser from using the purple Power
+      Stone to destroy planet Xandar.'
+    - 'Musical Sensation: The vintage 1970s soundtrack cassette tape (''Awesome Mix Vol. 1'') topped the US Billboard 200
+      chart with zero new original songs.'
+  - title: 'Captain America: Civil War (2016)'
+    points:
+    - 'IMDb Rating: 7.8/10 | Directed by the Russo Brothers | Adapting Mark Millar''s comic event.'
+    - 'Storyline & Themes: The Avengers split into opposing factions over the UN Sokovia Accords (government oversight) and
+      Bucky''s past: Team Iron Man vs. Team Captain America.'
+    - 'Major MCU Debuts: Introduced Tom Holland as Peter Parker / Spider-Man and Chadwick Boseman as T''Challa / Black Panther.'
+    - 'Set Piece: The iconic 17-minute Leipzig/Halle Airport clash shot with digital IMAX cameras.'
+  - title: 'Thor: Ragnarok (2017)'
+    points:
+    - 'IMDb Rating: 7.9/10 | Directed by New Zealand visionary Taika Waititi.'
+    - 'Cast & Characters: Chris Hemsworth, Mark Ruffalo (Hulk), Cate Blanchett (Hela, Goddess of Death), Jeff Goldblum (Grandmaster),
+      and Tessa Thompson (Valkyrie).'
+    - 'Storyline & Re-invention: Reinvented Thor with vibrant 80s synth colors and improvisational humor as he fights Hulk
+      in a gladiatorial arena on Sakaar and battles Hela to save Asgard.'
+    - 'Key Theme: Asgard is not a place; it is a people.'
+  - title: Black Panther (2018)
+    points:
+    - 'IMDb Rating: 7.3/10 | Directed by Ryan Coogler | Starring Chadwick Boseman, Michael B. Jordan (Erik Killmonger), Lupita
+      Nyong''o, and Letitia Wright.'
+    - 'Cultural Phenomenon: First superhero film in history nominated for the Academy Award for Best Picture; won 3 Oscars
+      (Costume Design, Production Design, Original Score).'
+    - 'Storyline & Themes: T''Challa ascends the throne of the technologically advanced, hidden African nation of Wakanda,
+      challenged by Killmonger''s global revolutionary ideology.'
+  trivia:
+  - type: multiple_choice
+    question: 'In ''Captain America: The Winter Soldier'', what historic intelligence agency is revealed to have been secretly
+      infiltrated and controlled by HYDRA?'
+    options:
+    - S.H.I.E.L.D.
+    - The C.I.A.
+    - M.I.6
+    - The Department of Damage Control
+    correct: 0
+    explanation: Captain America uncovers that HYDRA has grown secretly inside S.H.I.E.L.D. like a parasite since the end
+      of World War II.
+  - type: multiple_choice
+    question: What is the name of the vintage 1970s cassette mixtape given to Peter Quill by his mother in 'Guardians of the
+      Galaxy'?
+    options:
+    - Awesome Mix Vol. 1
+    - Cosmic Hits Vol. 1
+    - Star-Lord Grooves
+    - Earth Classics '88
+    correct: 0
+    explanation: '''Awesome Mix Vol. 1'' is Peter Quill''s most cherished possession, packed with classic 1970s tracks like
+      ''Hooked on a Feeling''.'
+  - type: multiple_choice
+    question: 'Which two major superhero characters made their official Marvel Cinematic Universe debut in ''Captain America:
+      Civil War'' (2016)?'
+    options:
+    - Spider-Man and Black Panther
+    - Doctor Strange and Ant-Man
+    - Deadpool and Wolverine
+    - Captain Marvel and Falcon
+    correct: 0
+    explanation: Tom Holland's Peter Parker / Spider-Man and Chadwick Boseman's T'Challa / Black Panther both debuted in 'Civil
+      War'.
+  - type: multiple_choice
+    question: 'Who directed the vibrant, comedic reinvention of the God of Thunder in ''Thor: Ragnarok'' (2017)?'
+    options:
+    - Taika Waititi
+    - James Gunn
+    - Jon Watts
+    - Shane Black
+    correct: 0
+    explanation: Taika Waititi revitalized the Thor franchise with vibrant color, humor, and Led Zeppelin's 'Immigrant Song'.
+  - type: multiple_choice
+    question: What historic Oscar milestone did Ryan Coogler's 'Black Panther' (2018) achieve at the 91st Academy Awards?
+    options:
+    - First superhero film nominated for Best Picture
+    - First film to win Best Visual Effects and Best Animated Feature
+    - First film to sweep all four acting Oscars
+    - First Marvel movie to win Best Director
+    correct: 0
+    explanation: '''Black Panther'' made history as the first comic book / superhero movie ever nominated for the Best Picture
+      Oscar.'
+  - type: multiple_choice
+    question: 'What international legislation causes the ideological divide between Tony Stark and Steve Rogers in ''Captain
+      America: Civil War''?'
+    options:
+    - The Sokovia Accords
+    - The Geneva Superhero Protocol
+    - The Wakandan Treaty
+    - The New York Sanctions
+    correct: 0
+    explanation: The Sokovia Accords, drafted by 117 nations following the collateral damage in Sokovia, required Avengers
+      to register with the UN.
+  - type: multiple_choice
+    question: Which Infinity Stone was encased inside the Orb retrieved by Star-Lord on the planet Morag in 'Guardians of
+      the Galaxy'?
+    options:
+    - The Power Stone (Purple)
+    - The Soul Stone (Orange)
+    - The Reality Stone (Red)
+    - The Mind Stone (Yellow)
+    correct: 0
+    explanation: The Orb contained the purple Power Stone, capable of annihilating entire planetary surfaces upon direct contact.
+  - type: multiple_choice
+    question: Who played the complex, critically acclaimed antagonist Erik 'Killmonger' Stevens in 'Black Panther' (2018)?
+    options:
+    - Michael B. Jordan
+    - Daniel Kaluuya
+    - Winston Duke
+    - Sterling K. Brown
+    correct: 0
+    explanation: Michael B. Jordan delivered a widely celebrated performance as the vengeful and ideological Killmonger.
+  - type: multiple_choice
+    question: 'Which villainess, played by Cate Blanchett, is revealed to be Thor and Loki''s banished older sister and the
+      Goddess of Death in ''Thor: Ragnarok''?'
+    options:
+    - Hela
+    - Enchantress
+    - Morgan le Fay
+    - Deathbird
+    correct: 0
+    explanation: Cate Blanchett played Hela, Odin's firstborn child who drew immense supernatural power directly from Asgard.
+  - type: multiple_choice
+    question: 'What famous martial arts / fight sequence inside a glass elevator takes place in ''Captain America: The Winter
+      Soldier''?'
+    options:
+    - Steve Rogers fighting 10 STRIKE agents in a descending elevator
+    - Black Widow fighting Winter Soldier on an escalator
+    - Falcon dodging drone missiles in an elevator shaft
+    - Bucky fighting Tony Stark in a bank elevator
+    correct: 0
+    explanation: Cap calmly delivers the line 'Before we get started, does anyone want to get out?' before fighting Rumlow
+      and the STRIKE strike team in the elevator.
+- id: climax_infinity_endgame
+  title: 'The Climax: Infinity War & Endgame (2018–2019)'
+  description: The epic 2-part conclusion of the 22-film Infinity Saga that shattered global box office records.
+  cards:
+  - title: 'Avengers: Infinity War (2018)'
+    points:
+    - 'IMDb Rating: 8.4/10 | Directed by Anthony & Joe Russo | Written by Christopher Markus and Stephen McFeely.'
+    - 'Storyline & Themes: Thanos embarks on a merciless quest across the cosmos to collect all six Infinity Stones and wipe
+      out 50% of all living beings to achieve universal resource balance.'
+    - 'Filming Landmark: The first Hollywood studio blockbuster shot entirely using ARRI Alexa IMAX digital cameras.'
+    - 'The Snap (''The Blip''): Concludes with Thanos snapping his fingers in Wakanda, turning half of the universe (including
+      Spider-Man, Black Panther, and Doctor Strange) into dust.'
+  - title: 'Avengers: Endgame (2019)'
+    points:
+    - 'IMDb Rating: 8.4/10 | Directed by the Russo Brothers | Runtime: 181 minutes.'
+    - 'Storyline & Themes: Five years after the devastating snap, the surviving Avengers execute a complex ''Time Heist''
+      through the Quantum Realm to retrieve the Infinity Stones from past MCU timelines.'
+    - 'Iconic Payoffs: Captain America proves worthy to lift Mjolnir; the ''Portals'' assembly scene uniting every MCU hero;
+      Tony Stark''s ultimate sacrifice (''And I... am... Iron Man'').'
+    - 'Box Office King: Briefly surpassed ''Avatar'' as the highest-grossing film of all time, generating $2.798 billion worldwide.'
+  - title: The Six Infinity Stones Explained
+    points:
+    - 'Space Stone (Blue): Teleportation across space (originally housed in the Tesseract).'
+    - 'Mind Stone (Yellow): Consciousness and psychic power (in Loki''s Scepter, then Vision''s forehead).'
+    - 'Reality Stone (Red): Alters matter and physical reality (originally manifested as the liquid Aether).'
+    - 'Power Stone (Purple): Pure destructive planetary energy (contained inside the Morag Orb).'
+    - 'Time Stone (Green): Temporal manipulation and forward/backward time travel (the Eye of Agamotto).'
+    - 'Soul Stone (Orange): Control over life and death; requires the ultimate sacrifice of a loved one on the cliff of Vormir.'
+  trivia:
+  - type: multiple_choice
+    question: 'How many possible future outcomes did Doctor Strange view using the Time Stone on Titan in ''Avengers: Infinity
+      War'' to find the 1 winning scenario?'
+    options:
+    - 14,000,605 futures
+    - 1,000,000 futures
+    - 500,000 futures
+    - 140,000,000 futures
+    correct: 0
+    explanation: Doctor Strange looked forward in time to view 14,000,605 alternate futures, stating there was only one scenario
+      where the Avengers won.
+  - type: multiple_choice
+    question: 'Which Avenger makes the ultimate sacrifice on the planet Vormir to allow Hawkeye to claim the Soul Stone in
+      ''Avengers: Endgame''?'
+    options:
+    - Natasha Romanoff (Black Widow)
+    - Nebula
+    - Gamora
+    - Wanda Maximoff
+    correct: 0
+    explanation: Natasha Romanoff sacrifices herself by jumping off the cliff on Vormir so Clint Barton (Hawkeye) can retrieve
+      the Soul Stone.
+  - type: multiple_choice
+    question: 'Which iconic weapon does Captain America summon and wield against Thanos during the climax of ''Avengers: Endgame''?'
+    options:
+    - Mjolnir (Thor's hammer)
+    - Stormbreaker
+    - The Infinity Gauntlet
+    - The Dragonfang Sword
+    correct: 0
+    explanation: Steve Rogers proves his worthiness by summoning Mjolnir, prompting Thor to joyfully exclaim 'I knew it!'.
+  - type: multiple_choice
+    question: 'What final six words does Tony Stark say right before snapping his fingers to disintegrate Thanos and his army
+      in ''Avengers: Endgame''?'
+    options:
+    - '''And I... am... Iron Man.'''
+    - '''I am inevitable.'''
+    - '''Avengers... assemble!'''
+    - '''We are the Avengers.'''
+    correct: 0
+    explanation: After Thanos proclaims 'I am inevitable', Tony reveals the Infinity Stones on his nano-gauntlet and replies,
+      'And I... am... Iron Man.'
+  - type: multiple_choice
+    question: 'Where does Thanos retreat to live peacefully as a farmer after wiping out half the universe in ''Avengers:
+      Infinity War''?'
+    options:
+    - The Garden (Planet 0259-S)
+    - Knowhere
+    - Titan
+    - Nidavellir
+    correct: 0
+    explanation: Thanos retires to a lush, peaceful planet known simply as 'The Garden' to hang up his armor as a scarecrow.
+  - type: multiple_choice
+    question: 'What mechanism allows the Avengers to travel back in time to 2012, 2013, and 2014 in ''Avengers: Endgame''?'
+    options:
+    - The Quantum Realm navigated with Pym Particles
+    - Doctor Strange's sling rings
+    - The Bifrost Bridge
+    - A modified Tesseract engine
+    correct: 0
+    explanation: Using Scott Lang's knowledge and Pym Particles, Tony Stark engineers a 'Time Space GPS' to navigate the Quantum
+      Realm.
+  - type: multiple_choice
+    question: What sweet phrase does Tony Stark's young daughter Morgan say to him, which became the emotional motto of 'Endgame'?
+    options:
+    - '''I love you 3,000.'''
+    - '''You are my hero.'''
+    - '''Love you to the moon and back.'''
+    - '''Cheeseburgers first.'''
+    correct: 0
+    explanation: '''I love you 3,000'' came directly from Robert Downey Jr.''s real-life children saying it to him, which
+      the directors added to the script.'
+  - type: multiple_choice
+    question: Who forges Thor's giant axe Stormbreaker in the heart of the dying neutron star on Nidavellir in 'Infinity War'?
+    options:
+    - Eitri the Dwarf King (Peter Dinklage)
+    - The Grandmaster
+    - The Collector
+    - Heimdall
+    correct: 0
+    explanation: Giant dwarf king Eitri (played by Peter Dinklage) operates the cosmic forge on Nidavellir to cast Stormbreaker.
+  - type: multiple_choice
+    question: 'Which character utters the long-awaited rallying cry ''Avengers... assemble'' into his radio earpiece in ''Avengers:
+      Endgame''?'
+    options:
+    - Captain America (Steve Rogers)
+    - Iron Man (Tony Stark)
+    - Thor Odinson
+    - Nick Fury
+    correct: 0
+    explanation: Steve Rogers quietly says 'Avengers... assemble' as the armies charge at Thanos's forces at the ruined Avengers
+      Compound.
+  - type: multiple_choice
+    question: What is the five-year time period between Thanos's snap in 2018 and the heroes' return in 2023 officially called
+      in the MCU?
+    options:
+    - The Blip (The Decimation)
+    - The Great Silence
+    - The Void Period
+    - The Dark Half
+    correct: 0
+    explanation: 'In MCU canon (established in ''Spider-Man: Far From Home''), the 5-year disappearance and subsequent sudden
+      return is known as ''The Blip''.'
+- id: multiverse_saga_modern
+  title: The Multiverse Saga, Spider-Man & Deadpool (2021–Present)
+  description: Crossing cinematic dimensions, the Time Variance Authority, and blockbuster multiverse team-ups.
+  cards:
+  - title: 'Spider-Man: No Way Home (2021)'
+    points:
+    - 'IMDb Rating: 8.2/10 | Directed by Jon Watts | Starring Tom Holland, Zendaya, and Benedict Cumberbatch.'
+    - 'Multiverse Reunion: Brought together three generations of cinematic Spider-Men: Tobey Maguire (Sam Raimi era), Andrew
+      Garfield (Marc Webb era), and Tom Holland (MCU).'
+    - 'Villains Return: Willem Dafoe (Green Goblin), Alfred Molina (Doc Ock), and Jamie Foxx (Electro) reprised their iconic
+      roles via multiverse rifts.'
+    - 'Emotional Climax: To heal the fractured multiverse, Peter Parker sacrifices his personal identity, having Doctor Strange
+      cast a spell that makes the entire world forget Peter Parker ever existed.'
+  - title: Deadpool & Wolverine (2024)
+    points:
+    - 'IMDb Rating: 7.8/10 | Directed by Shawn Levy | Starring Ryan Reynolds (Wade Wilson / Deadpool) and Hugh Jackman (Logan
+      / Wolverine).'
+    - 'Historic R-Rated Milestone: The first R-rated film in the Marvel Cinematic Universe, earning over $1.3 billion worldwide.'
+    - 'Plot & Themes: Pulled from his timeline by the Time Variance Authority (TVA), Deadpool recruits a grief-stricken alternate
+      Wolverine to save his universe from annihilation in ''The Void''.'
+    - 'Cameo Extravaganza: Featured beloved retro Marvel heroes including Wesley Snipes as Blade, Channing Tatum as Gambit,
+      Chris Evans as Johnny Storm, and Jennifer Garner as Elektra.'
+  - title: Guardians of the Galaxy Vol. 3 (2023)
+    points:
+    - 'IMDb Rating: 7.9/10 | Written and directed by James Gunn.'
+    - 'Storyline & Heart: The emotional swan song of the original Guardians lineup, delving into Rocket Raccoon''s tragic
+      backstory and genetic creation by the cruel High Evolutionary (Chukwudi Iwuji).'
+    - 'Visual Feat: Set the Guinness World Record for the most makeup appliances created for a single production (over 22,500
+      prosthetics across 1,000+ actors).'
+  trivia:
+  - type: multiple_choice
+    question: 'Which three actors appeared together on screen as their respective versions of Peter Parker / Spider-Man in
+      ''Spider-Man: No Way Home'' (2021)?'
+    options:
+    - Tom Holland, Tobey Maguire, and Andrew Garfield
+    - Tom Holland, Miles Morales, and Nicolas Cage
+    - Tobey Maguire, Jake Gyllenhaal, and Andrew Garfield
+    - Tom Holland, Chris Pine, and Shameik Moore
+    correct: 0
+    explanation: In a historic cinematic event, Holland, Maguire, and Garfield united on screen as Peter 1, Peter 2, and Peter
+      3.
+  - type: multiple_choice
+    question: 'Which actor reprised his iconic role as Green Goblin / Norman Osborn in ''Spider-Man: No Way Home'', delivering
+      all of his own physical stunts at age 66?'
+    options:
+    - Willem Dafoe
+    - Alfred Molina
+    - Thomas Haden Church
+    - Rhys Ifans
+    correct: 0
+    explanation: Willem Dafoe returned as Norman Osborn / Green Goblin, insisting on performing his own hand-to-hand fight
+      stunts.
+  - type: multiple_choice
+    question: What official age rating did 'Deadpool & Wolverine' (2024) hold, making it the very first MCU film with that
+      classification?
+    options:
+    - R-Rated (Restricted)
+    - PG-13
+    - NC-17
+    - Unrated
+    correct: 0
+    explanation: '''Deadpool & Wolverine'' was the first R-rated entry in the Marvel Cinematic Universe, breaking records
+      as the highest-grossing R-rated film in history.'
+  - type: multiple_choice
+    question: Which classic comic book character did Channing Tatum portray in a heavily celebrated live-action cameo in 'Deadpool
+      & Wolverine'?
+    options:
+    - Gambit (Remy LeBeau)
+    - Cyclops
+    - Nightcrawler
+    - Bishop
+    correct: 0
+    explanation: After nearly a decade of canceled solo film development, Channing Tatum finally donned the kinetic-card-throwing
+      trench coat as Gambit.
+  - type: multiple_choice
+    question: Who is revealed as the sadistic creator and genetic tormentor of Rocket Raccoon in 'Guardians of the Galaxy
+      Vol. 3'?
+    options:
+    - The High Evolutionary
+    - The Grandmaster
+    - Ego the Living Planet
+    - Ronan the Accuser
+    correct: 0
+    explanation: Chukwudi Iwuji played the High Evolutionary, a megalomaniac obsessed with engineering a flawless cybernetic
+      civilization.
+  - type: multiple_choice
+    question: 'What does Doctor Strange''s final spell in ''Spider-Man: No Way Home'' make the world forget to prevent the
+      collapse of reality?'
+    options:
+    - The existence and identity of Peter Parker
+    - The existence of Spider-Man
+    - The events of the Battle of New York
+    - The secret of the multiverse
+    correct: 0
+    explanation: Strange's spell wipes all memories of Peter Parker from the entire world, leaving Peter completely anonymous
+      and isolated.
+  - type: multiple_choice
+    question: Which mysterious organization monitors timelines and prunes rogue branches in the MCU (featured in 'Loki' and
+      'Deadpool & Wolverine')?
+    options:
+    - The Time Variance Authority (TVA)
+    - The Nova Corps
+    - The Ravagers
+    - The High Council of Elders
+    correct: 0
+    explanation: The TVA (Time Variance Authority) operates outside of space and time to regulate timelines and prevent multiversal
+      war.
+  - type: multiple_choice
+    question: Which actor unexpectedly appeared in 'Deadpool & Wolverine' playing Johnny Storm (The Human Torch), shocking
+      fans who expected Captain America?
+    options:
+    - Chris Evans
+    - Michael B. Jordan
+    - Sebastian Stan
+    - Anthony Mackie
+    correct: 0
+    explanation: Chris Evans reprised his pre-MCU 2005 role as Johnny Storm from Fox's 'Fantastic Four', shouting 'Flame On!'.
+  - type: multiple_choice
+    question: What Guinness World Record was officially broken by the production team of 'Guardians of the Galaxy Vol. 3'
+      (2023)?
+    options:
+    - Most prosthetic makeup appliances created for a single movie (over 22,500)
+    - Most stunt performers set on fire in one scene
+    - Most digital CGI models used in space battles
+    - Longest continuous IMAX camera take in cinema
+    correct: 0
+    explanation: Legacy Effects and the makeup department created over 22,500 prosthetics for over 1,000 alien background
+      actors.
+  - type: multiple_choice
+    question: Who directed the supernatural horror-infused MCU blockbuster 'Doctor Strange in the Multiverse of Madness' (2022)?
+    options:
+    - Sam Raimi
+    - Scott Derrickson
+    - James Wan
+    - Guillermo del Toro
+    correct: 0
+    explanation: Legendary 'Evil Dead' and original 'Spider-Man' trilogy director Sam Raimi directed the multiversal horror
+      thriller.
+- id: lore_cameos_secrets
+  title: Marvel Lore, Stan Lee Cameos & Behind-The-Scenes Secrets
+  description: Fascinating easter eggs, comic creator tributes, and casting near-misses of the MCU.
+  cards:
+  - title: 'Stan Lee: The Father of Marvel''s Cinematic Cameos'
+    points:
+    - 'Legendary Legacy: Marvel comics co-creator Stan Lee (1922–2018) appeared in 22 MCU films from ''Iron Man'' (2008) through
+      his final posthumous cameo in ''Avengers: Endgame'' (1970s flower child driver).'
+    - 'Watchers Theory: In ''Guardians of the Galaxy Vol. 2'', Stan Lee is shown on an asteroid reporting his human adventures
+      to The Watchers, confirming the fan theory that he plays the same cosmic informant across all Marvel films.'
+  - title: MCU Casting Near-Misses & Alternate Realities
+    points:
+    - 'Iron Man: Marvel executives initially resisted Robert Downey Jr. due to his past legal troubles, pushing for Tom Cruise
+      or Nicolas Cage before Jon Favreau fought tirelessly for Downey.'
+    - 'Black Widow: Emily Blunt was originally cast as Natasha Romanoff in ''Iron Man 2'' but had to drop out due to a contractual
+      obligation to film ''Gulliver''s Travels'', opening the door for Scarlett Johansson.'
+    - 'Star-Lord: Glenn Howerton (Dennis in ''It''s Always Sunny in Philadelphia'') was James Gunn''s second choice for Peter
+      Quill if Chris Pratt had declined.'
+  - title: The Post-Credits Scene Tradition
+    points:
+    - 'Origins: Starting with Nick Fury in 2008, post-credits scenes became mandatory viewing for cinema audiences worldwide.'
+    - 'Dual Formula: Marvel perfected a standard two-scene structure: the mid-credits scene sets up major future plot arcs,
+      while the end-credits stinger delivers a comedic gag or character easter egg (e.g., Captain America''s PSA on patience
+      in ''Spider-Man: Homecoming'').'
+  trivia:
+  - type: multiple_choice
+    question: In which MCU film did Stan Lee make his final, posthumous on-screen cameo appearance before his passing?
+    options:
+    - 'Avengers: Endgame (2019)'
+    - 'Spider-Man: Far From Home (2019)'
+    - Captain Marvel (2019)
+    - 'Avengers: Infinity War (2018)'
+    correct: 0
+    explanation: 'Stan Lee''s final cameo was in ''Avengers: Endgame'', where he appeared digitally de-aged as a 1970s pacifist
+      driving past Camp Lehigh yelling ''Hey man, make love, not war!''.'
+  - type: multiple_choice
+    question: Which actress was originally cast as Black Widow (Natasha Romanoff) in 'Iron Man 2' before dropping out due
+      to a scheduling conflict?
+    options:
+    - Emily Blunt
+    - Jessica Chastain
+    - Charlize Theron
+    - Rachel McAdams
+    correct: 0
+    explanation: Emily Blunt was contracted to film 'Gulliver's Travels' for Fox and was forced to decline the role, allowing
+      Scarlett Johansson to claim it.
+  - type: multiple_choice
+    question: In 'Guardians of the Galaxy Vol. 2', Stan Lee is depicted sitting in a space suit talking to which ancient cosmic
+      observers?
+    options:
+    - The Watchers
+    - The Celestials
+    - The Elders of the Universe
+    - The Kree Supreme Intelligence
+    correct: 0
+    explanation: Stan Lee is seen chatting with The Watchers, giant cosmic entities tasked with observing all multiversal
+      events without interfering.
+  - type: multiple_choice
+    question: 'What comedic PSA topic does Captain America speak about in the very last end-credits gag of ''Spider-Man: Homecoming''
+      (2017)?'
+    options:
+    - The virtue of patience (mocking audiences waiting for post-credits scenes)
+    - The dangers of skipping school lunches
+    - The importance of dental hygiene
+    - Why gym class rope climbs build character
+    correct: 0
+    explanation: Cap directly talks to the theater audience about how patience is a valuable trait, but sometimes 'you wonder
+      why you waited so long for something so disappointing'.
+  - type: multiple_choice
+    question: 'Which Marvel character''s voice was provided by director Taika Waititi via on-set motion capture in ''Thor:
+      Ragnarok''?'
+    options:
+    - Korg (the Kronan rock gladiator)
+    - Miek
+    - Surtur
+    - Fenris the Wolf
+    correct: 0
+    explanation: Taika Waititi wore a motion capture suit on set and provided the gentle, soft-spoken Polynesian-accented
+      voice for Korg.
+  - type: multiple_choice
+    question: 'Which real-life music artist''s song ''Back in Black'' is mistakenly called ''Led Zeppelin'' by Peter Parker
+      in ''Spider-Man: Far From Home''?'
+    options:
+    - AC/DC
+    - Black Sabbath
+    - Guns N' Roses
+    - Aerosmith
+    correct: 0
+    explanation: 'Happy Hogan plays AC/DC''s ''Back in Black'' on the Stark jet, and Peter excitedly responds: ''I love Led
+      Zeppelin!''.'
+  - type: multiple_choice
+    question: What is the name of Thor's home kingdom's rainbow teleportation bridge operated by Heimdall?
+    options:
+    - The Bifrost
+    - The Yggdrasil Beam
+    - The Valhalla Gate
+    - The Asgardian Conduit
+    correct: 0
+    explanation: The Bifrost is the rainbow light bridge that instantly transports Asgardians across the Nine Realms.
+  - type: multiple_choice
+    question: What pet animal is Goose in 'Captain Marvel' (2019), who appears as a normal ginger cat but is actually a dangerous
+      alien?
+    options:
+    - A Flerken
+    - A Skrull
+    - A Chitauri hound
+    - A Kree beast
+    correct: 0
+    explanation: Goose is a Flerken, a highly dangerous alien species capable of swallowing massive objects (and the Tesseract)
+      using dimensional pocket tentacles.
+  - type: multiple_choice
+    question: What is the name of the iconic Marvel Studios president who has served as the master architect and producer
+      of the entire MCU since 2008?
+    options:
+    - Kevin Feige
+    - Avi Arad
+    - Bob Iger
+    - Louis D'Esposito
+    correct: 0
+    explanation: Kevin Feige has been the visionary president of Marvel Studios, overseeing the unprecedented interconnected
+      cinematic universe.
+  - type: multiple_choice
+    question: 'Which iconic weapon did Thanos use his giant double-bladed sword to shatter in ''Avengers: Endgame''?'
+    options:
+    - Captain America's vibranium shield
+    - Iron Man's Mark 85 helmet
+    - Thor's Stormbreaker handle
+    - Hawkeye's tactical bow
+    correct: 0
+    explanation: Thanos violently chops into Cap's shield with his double-edged blade, splintering the vibranium into ragged
+      halves.
