@@ -1,0 +1,832 @@
+id: hollywood_modern_classics_en
+title: Modern Hollywood Masterpieces (1990s–Present)
+description: An electrifying journey through modern cinema from the 1990s to today! Test your knowledge on landmark adult
+  classics, Tarantino & Fincher thrillers, Christopher Nolan mind-benders, modern sci-fi epics, iconic directors, and legendary
+  behind-the-scenes lore.
+lang: en
+audience: adult
+categories:
+- id: groundbreakers_90s
+  title: 90s Groundbreakers & Cult Revolutions (1990–1999)
+  description: The decade that transformed independent cinema, auteur storytelling, and visual effects forever.
+  cards:
+  - title: The Shawshank Redemption (1994)
+    points:
+    - 'IMDb Rating: 9.3/10 (Highest-rated film of all time on IMDb) | Directed by Frank Darabont.'
+    - 'Cast & Characters: Tim Robbins as Andy Dufresne (a wrongly convicted banker) and Morgan Freeman as Ellis Boyd ''Red''
+      Redding (the prison contraband fixer).'
+    - 'Storyline & Themes: Over nearly two decades inside Maine''s Shawshank State Penitentiary, Andy maintains quiet dignity,
+      fosters hope, and secretly executes a brilliant geological escape plan.'
+    - 'Filming Location: Filmed primarily at the historic Ohio State Reformatory in Mansfield, Ohio.'
+    - 'Trivia & Legacy: While a commercial disappointment at the box office due to stiff competition from ''Forrest Gump''
+      and ''Pulp Fiction'', it became a colossal home-video sensation and cultural masterpiece.'
+  - title: Pulp Fiction (1994)
+    points:
+    - 'IMDb Rating: 8.9/10 | Directed and written by Quentin Tarantino | Won the Palme d''Or at Cannes and Best Original Screenplay
+      Oscar.'
+    - 'Cast & Characters: John Travolta (Vincent Vega), Samuel L. Jackson (Jules Winnfield), Uma Thurman (Mia Wallace), and
+      Bruce Willis (Butch Coolidge).'
+    - 'Storyline & Themes: Intertwined, non-linear Los Angeles crime stories exploring redemption, loyalty, and chance with
+      rapid-fire pop culture dialogue and eclectic surf rock/funk tracks.'
+    - 'Filming Location: Shot entirely across Los Angeles and Hawthorne, California (including the famous Hawthorne Grill).'
+    - 'Trivia: The glowing contents of Marsellus Wallace''s mysterious briefcase (combination 666) were never revealed, sparking
+      endless fan theories.'
+  - title: The Matrix (1999)
+    points:
+    - 'IMDb Rating: 8.7/10 | Written and directed by The Wachowskis (Lana & Lilly Wachowski).'
+    - 'Cast & Characters: Keanu Reeves as Thomas Anderson / Neo, Laurence Fishburne as Morpheus, Carrie-Anne Moss as Trinity,
+      and Hugo Weaving as Agent Smith.'
+    - 'Storyline & Themes: A dystopian cyber-thriller where humanity is unknowingly trapped inside a simulated reality created
+      by sentient machines to harvest bio-electric power.'
+    - 'Filming Location: Shot on sound stages and downtown streets in Sydney, Australia to maximize budget efficiency.'
+    - 'Revolutionary Tech: Pioneered ''Bullet Time'' cinematography using circular camera rigs with 120+ still cameras firing
+      in microsecond sequences.'
+  - title: Fight Club (1999)
+    points:
+    - 'IMDb Rating: 8.8/10 | Directed by David Fincher | Adapted from Chuck Palahniuk''s novel.'
+    - 'Cast & Characters: Edward Norton as the unnamed depressed Narrator, Brad Pitt as charismatic soapmaker Tyler Durden,
+      and Helena Bonham Carter as Marla Singer.'
+    - 'Storyline & Themes: A searing critique of late-20th-century consumerism, corporate alienation, and toxic masculinity
+      escalating into an anarchist financial collapse.'
+    - 'Filming Location: Shot across dozens of industrial and urban alley locations in downtown Los Angeles.'
+    - 'Visual Detail: Fincher hid a Starbucks coffee cup in almost every single scene of the movie to symbolize ubiquitous
+      corporate saturation.'
+  - title: Goodfellas (1990)
+    points:
+    - 'IMDb Rating: 8.7/10 | Directed by Martin Scorsese | Based on Nicholas Pileggi''s non-fiction book ''Wiseguy''.'
+    - 'Cast & Characters: Ray Liotta as Henry Hill, Robert De Niro as Jimmy Conway, and Joe Pesci as the volatile Tommy DeVito
+      (winning Best Supporting Actor).'
+    - 'Storyline & Themes: The three-decade rise and fall of Lucchese crime family associate Henry Hill, tracing the seductive
+      allure and brutal paranoia of mob life.'
+    - 'Cinematic Landmark: Features the legendary 3-minute continuous Steadicam tracking shot entering the Copacabana nightclub
+      through the kitchen service entrance.'
+    - 'Trivia: Pesci''s iconic ''Funny how? Like I''m a clown, I amuse you?'' interrogation scene was improvised based on
+      a real-life incident Pesci experienced while working as a young waiter.'
+  - title: The Silence of the Lambs (1991)
+    points:
+    - 'IMDb Rating: 8.6/10 | Directed by Jonathan Demme | Based on Thomas Harris''s novel.'
+    - 'Cast & Characters: Jodie Foster as FBI trainee Clarice Starling and Anthony Hopkins as the brilliant, cannibalistic
+      psychiatrist Dr. Hannibal Lecter.'
+    - 'Storyline & Themes: Clarice must probe Lecter''s terrifying psychological intellect from behind glass to catch active
+      serial killer Buffalo Bill.'
+    - 'Filming Location: Shot predominantly around Pittsburgh, Pennsylvania and the Western Penitentiary.'
+    - 'Historic Triumph: One of only three films in Oscar history to sweep the ''Big Five'' Academy Awards (Best Picture,
+      Director, Actor, Actress, and Adapted Screenplay), with Hopkins on screen for just 16 minutes.'
+  trivia:
+  - type: multiple_choice
+    question: What is the primary filming location that served as Shawshank State Penitentiary in 'The Shawshank Redemption'?
+    options:
+    - Ohio State Reformatory in Mansfield
+    - Alcatraz Federal Penitentiary in San Francisco
+    - Eastern State Penitentiary in Philadelphia
+    - Sing Sing Correctional Facility in New York
+    correct: 0
+    explanation: '''The Shawshank Redemption'' was filmed at the historic Ohio State Reformatory in Mansfield, Ohio, which
+      is now a major historic museum and tourist destination.'
+  - type: multiple_choice
+    question: In 'Pulp Fiction', what is the lock combination on Marsellus Wallace's mysterious glowing briefcase?
+    options:
+    - '666'
+    - '777'
+    - '123'
+    - '999'
+    correct: 0
+    explanation: The briefcase combination is 666, which fueled many popular fan theories that the glowing contents represented
+      Marsellus Wallace's soul.
+  - type: multiple_choice
+    question: Which groundbreaking visual effects camera technique was invented and popularized by 'The Matrix' in 1999?
+    options:
+    - Bullet Time
+    - Deepfake Motion Capture
+    - StageCraft LED Volume
+    - Dolly Zoom (Vertigo Effect)
+    correct: 0
+    explanation: Bullet Time used a circular array of high-speed still cameras triggered in micro-second intervals to allow
+      the camera to rotate around a frozen or slow-motion subject.
+  - type: multiple_choice
+    question: In David Fincher's 'Fight Club', what everyday commercial object did the director hide in almost every single
+      scene?
+    options:
+    - A Starbucks coffee cup
+    - A Coca-Cola bottle
+    - A Nike sneaker
+    - A yellow Post-it note
+    correct: 0
+    explanation: David Fincher placed a Starbucks coffee cup in virtually every scene to underscore the film's satire on ubiquitous
+      corporate consumerism.
+  - type: multiple_choice
+    question: Which iconic nightclub entrance is featured in Martin Scorsese's famous uncut 3-minute Steadicam shot in 'Goodfellas'?
+    options:
+    - The Copacabana
+    - Studio 54
+    - The Cotton Club
+    - The Tropicana
+    correct: 0
+    explanation: The legendary continuous tracking shot follows Henry Hill and Karen entering the Copacabana nightclub through
+      the back kitchen.
+  - type: multiple_choice
+    question: Anthony Hopkins won the Best Actor Oscar for 'The Silence of the Lambs' despite appearing on screen for approximately
+      how much total time?
+    options:
+    - About 16 minutes
+    - About 42 minutes
+    - About 65 minutes
+    - About 85 minutes
+    correct: 0
+    explanation: Hopkins is on screen for approximately 16 minutes (less than 15% of the runtime), delivering one of the most
+      hypnotic and efficient Oscar-winning performances in film history.
+  - type: multiple_choice
+    question: Which actor played the volatile mobster Tommy DeVito in 'Goodfellas' and won the Best Supporting Actor Oscar?
+    options:
+    - Joe Pesci
+    - Robert De Niro
+    - Ray Liotta
+    - Paul Sorvino
+    correct: 0
+    explanation: Joe Pesci won the Academy Award for Best Supporting Actor for his electrifying performance as Tommy DeVito.
+  - type: multiple_choice
+    question: Where was the dystopian city exterior and street action of 'The Matrix' primarily filmed?
+    options:
+    - Sydney, Australia
+    - Toronto, Canada
+    - Chicago, USA
+    - London, UK
+    correct: 0
+    explanation: The Wachowskis chose Sydney, Australia to shoot 'The Matrix' because of favorable exchange rates and state-of-the-art
+      Fox Studios sound stages.
+  - type: multiple_choice
+    question: What precious stone or geological tool does Andy Dufresne use over 19 years to dig his escape tunnel in 'The
+      Shawshank Redemption'?
+    options:
+    - A small rock hammer
+    - A rusted railroad spike
+    - A steel dental scraper
+    - A brass pocket knife
+    correct: 0
+    explanation: Andy purchases a small rock hammer through Red under the pretense of carving chess pieces out of soapstone
+      and rocks.
+  - type: multiple_choice
+    question: Which prestigous film festival awarded Quentin Tarantino's 'Pulp Fiction' its top prize, the Palme d'Or, in
+      1994?
+    options:
+    - Cannes Film Festival
+    - Venice Film Festival
+    - Berlin International Film Festival
+    - Sundance Film Festival
+    correct: 0
+    explanation: '''Pulp Fiction'' took the world by storm when it won the prestigious Palme d''Or at the 1994 Cannes Film
+      Festival.'
+- id: modern_epics_2000s
+  title: 2000s Modern Epics & Prestige Cinema (2000–2009)
+  description: The golden age of gritty realism, visionary epics, and genre-defining masterpieces.
+  cards:
+  - title: The Dark Knight (2008)
+    points:
+    - 'IMDb Rating: 9.0/10 | Directed by Christopher Nolan | Co-written with Jonathan Nolan.'
+    - 'Cast & Characters: Christian Bale as Bruce Wayne / Batman, Heath Ledger as The Joker, Aaron Eckhart as Harvey Dent
+      / Two-Face, and Gary Oldman as Jim Gordon.'
+    - 'Storyline & Themes: A gripping crime thriller disguised as a superhero epic, probing escalating chaos, political surveillance,
+      moral compromise, and vigilantism.'
+    - 'Filming Locations: Chicago, Illinois (serving as Gotham City), London, and Hong Kong.'
+    - 'Landmark Feat: The first major Hollywood feature to film select action sequences using full 70mm IMAX cameras; Heath
+      Ledger posthumously won the Best Supporting Actor Oscar.'
+  - title: 'The Lord of the Rings: The Return of the King (2003)'
+    points:
+    - 'IMDb Rating: 9.0/10 | Directed by Peter Jackson | Adapted from J.R.R. Tolkien''s fantasy epic.'
+    - 'Cast & Characters: Elijah Wood (Frodo), Viggo Mortensen (Aragorn), Ian McKellen (Gandalf), and Andy Serkis (Gollum
+      / Sméagol).'
+    - 'Storyline & Themes: The climatic battle for Middle-earth at Minas Tirith while Frodo and Sam journey into the heart
+      of Mount Doom to destroy the One Ring.'
+    - 'Filming Location: Spectacular natural landscapes across the North and South Islands of New Zealand.'
+    - 'Historic Clean Sweep: Won all 11 Academy Awards for which it was nominated, tying ''Ben-Hur'' and ''Titanic'' for the
+      most Oscar wins in history.'
+  - title: Gladiator (2000)
+    points:
+    - 'IMDb Rating: 8.5/10 | Directed by Ridley Scott | Winner of 5 Oscars including Best Picture.'
+    - 'Cast & Characters: Russell Crowe as General Maximus Decimus Meridius and Joaquin Phoenix as the corrupt Emperor Commodus.'
+    - 'Storyline & Themes: A betrayed Roman general is stripped of rank, sold into slavery, and rises through the Colosseum
+      gladiator arena to seek vengeance for his murdered family.'
+    - 'Filming Locations: Bourne Wood in Surrey, England (opening battle), Ouarzazate, Morocco, and Fort Ricasoli, Malta (Colosseum
+      set).'
+    - 'Trivia: Russell Crowe performed many of his own stunts and sustained multiple injuries, including foot numbness and
+      broken bones, during the intense sword fights.'
+  - title: No Country for Old Men (2007)
+    points:
+    - 'IMDb Rating: 8.2/10 | Written and directed by Joel and Ethan Coen | Adapted from Cormac McCarthy''s novel.'
+    - 'Cast & Characters: Javier Bardem as relentless hitman Anton Chigurh, Josh Brolin as Llewelyn Moss, and Tommy Lee Jones
+      as Sheriff Ed Tom Bell.'
+    - 'Storyline & Themes: A hunter stumbles upon a desert drug deal gone wrong and $2 million in cash, sparking a ruthless
+      manhunt exploring chance, fate, and aging in a violent world.'
+    - 'Filming Locations: Marfa, Texas and Las Vegas / Santa Fe, New Mexico.'
+    - 'Acoustic Design: Features almost zero non-diegetic musical score, creating an eerie, pulse-pounding reliance on wind,
+      footsteps, and Foley sounds.'
+  - title: The Departed (2006)
+    points:
+    - 'IMDb Rating: 8.5/10 | Directed by Martin Scorsese | Remake of Hong Kong thriller ''Infernal Affairs'' | Won 4 Oscars
+      including Scorsese''s first Best Director win.'
+    - 'Cast & Characters: Leonardo DiCaprio (undercover cop Billy Costigan), Matt Damon (mob mole Colin Sullivan), and Jack
+      Nicholson (crime boss Frank Costello).'
+    - 'Storyline & Themes: Set in South Boston, the Massachusetts State Police and the Irish Mob simultaneously discover an
+      enemy mole in their ranks, sparking a paranoid race to uncover each other.'
+    - 'Visual Motifs: Scorsese placed subtle ''X'' patterns in the background framing before almost every major character''s
+      impending death.'
+    - 'Filming Location: Filmed primarily in Boston, Massachusetts and New York City sound stages.'
+  - title: Inglourious Basterds (2009)
+    points:
+    - 'IMDb Rating: 8.4/10 | Written and directed by Quentin Tarantino.'
+    - 'Cast & Characters: Christoph Waltz as ruthless SS Colonel Hans Landa (''The Jew Hunter''), Brad Pitt as Lt. Aldo Raine,
+      and Mélanie Laurent as Shosanna Dreyfus.'
+    - 'Storyline & Themes: Alternate-history WWII drama culminating in a daring cinema assassination plot against top Nazi
+      leadership in Paris.'
+    - 'Linguistic Feat: Spoken across English, German, French, and Italian; Christoph Waltz gave an astonishing multilingual
+      performance that launched him to global superstardom.'
+    - 'Filming Locations: Filmed at Studio Babelsberg outside Berlin and on location in Saxony, Germany.'
+  trivia:
+  - type: multiple_choice
+    question: Which actor won a posthumous Academy Award for Best Supporting Actor for portraying The Joker in 'The Dark Knight'
+      (2008)?
+    options:
+    - Heath Ledger
+    - Joaquin Phoenix
+    - Jack Nicholson
+    - Jared Leto
+    correct: 0
+    explanation: Heath Ledger's electrifying performance as The Joker earned him a posthumous Oscar, recognized as one of
+      the greatest acting feats in cinema history.
+  - type: multiple_choice
+    question: 'How many Academy Awards did ''The Lord of the Rings: The Return of the King'' win in 2004, achieving a 100%
+      clean sweep?'
+    options:
+    - 11 Oscars
+    - 9 Oscars
+    - 13 Oscars
+    - 7 Oscars
+    correct: 0
+    explanation: '''The Return of the King'' was nominated for 11 Oscars and won all 11, including Best Picture and Best Director
+      for Peter Jackson.'
+  - type: multiple_choice
+    question: What unusual weapon does the psychopathic hitman Anton Chigurh wield to kill victims and breach door locks in
+      'No Country for Old Men'?
+    options:
+    - A captive bolt stunner with compressed air tank
+    - A silenced crossbow
+    - A custom titanium wire garrote
+    - A high-caliber sniper rifle
+    correct: 0
+    explanation: Anton Chigurh carries a pneumatic captive bolt pistol connected to an air tank, typically used to humanely
+      stun cattle in slaughterhouses.
+  - type: multiple_choice
+    question: What subtle visual symbol did Martin Scorsese embed in frame backgrounds throughout 'The Departed' to foreshadow
+      impending character deaths?
+    options:
+    - The letter 'X'
+    - A broken clock
+    - A red rose
+    - A spilling cup of coffee
+    correct: 0
+    explanation: Scorsese paid homage to Howard Hawks' 1932 classic 'Scarface' by framing subtle 'X' tape marks, architectural
+      crosses, and window beams behind characters about to die.
+  - type: multiple_choice
+    question: Which breakout actor played SS Colonel Hans Landa in 'Inglourious Basterds', winning both Cannes Best Actor
+      and the Academy Award?
+    options:
+    - Christoph Waltz
+    - Daniel Brühl
+    - Michael Fassbender
+    - Til Schweiger
+    correct: 0
+    explanation: Austrian actor Christoph Waltz won international acclaim and his first Oscar for his masterfully multilingual
+      and chilling performance as Hans Landa.
+  - type: multiple_choice
+    question: In Ridley Scott's 'Gladiator', what was General Maximus Decimus Meridius's original homeland in the Roman Empire?
+    options:
+    - Hispania (Spain)
+    - Gaul (France)
+    - Germania (Germany)
+    - Britannia (Britain)
+    correct: 0
+    explanation: Maximus is known in the gladiatorial arenas as 'The Spaniard' because his beloved family villa and fertile
+      farm were located in Trujillo, Hispania (modern-day Spain).
+  - type: multiple_choice
+    question: What is unique about the sound design and soundtrack of the Coen Brothers' Oscar-winning film 'No Country for
+      Old Men'?
+    options:
+    - It features virtually no musical score
+    - It uses exclusively a cappella choral vocals
+    - It consists solely of 1950s rock-and-roll hits
+    - It was recorded in reverse audio playback
+    correct: 0
+    explanation: The film contains almost no musical score throughout its two-hour runtime, relying entirely on natural environmental
+      sounds and ambient silence.
+  - type: multiple_choice
+    question: Which major real-world US metropolis served as the primary filming location for Gotham City in 'The Dark Knight'?
+    options:
+    - Chicago
+    - New York City
+    - Philadelphia
+    - Pittsburgh
+    correct: 0
+    explanation: Christopher Nolan filmed Gotham's iconic sweeping architecture, Lower Wacker Drive truck chase, and downtown
+      explosions across Chicago, Illinois.
+  - type: multiple_choice
+    question: Which Asian action thriller served as the direct source material and inspiration for Martin Scorsese's 'The
+      Departed'?
+    options:
+    - Infernal Affairs (Hong Kong)
+    - Oldboy (South Korea)
+    - A Bittersweet Life (South Korea)
+    - Hard Boiled (Hong Kong)
+    correct: 0
+    explanation: '''The Departed'' is an American adaptation of Andrew Lau and Alan Mak''s critically acclaimed 2002 Hong
+      Kong crime thriller ''Infernal Affairs''.'
+  - type: multiple_choice
+    question: Which country provided the vast natural landscapes and mountain backdrops for Peter Jackson's 'Lord of the Rings'
+      trilogy?
+    options:
+    - New Zealand
+    - Scotland
+    - Norway
+    - Iceland
+    correct: 0
+    explanation: Peter Jackson shot the entire 'Lord of the Rings' trilogy simultaneously across the breathtaking national
+      parks and peaks of his native New Zealand.
+- id: mindbenders_2010s
+  title: 2010s Mind-Benders & Auteur Masterpieces (2010–2019)
+  description: Complex narrative puzzles, jaw-dropping practical action, and intense psychological dramas.
+  cards:
+  - title: Inception (2010)
+    points:
+    - 'IMDb Rating: 8.8/10 | Written and directed by Christopher Nolan | Won 4 Academy Awards.'
+    - 'Cast & Characters: Leonardo DiCaprio (Dom Cobb), Joseph Gordon-Levitt (Arthur), Elliot Page (Ariadne), Tom Hardy (Eames),
+      and Marion Cotillard (Mal).'
+    - 'Storyline & Themes: An extractor who infiltrates targets'' subconscious minds during REM sleep is tasked with planting
+      an idea (''inception'') deep inside a corporate heir''s mind across four nested dream layers.'
+    - 'Technical Wonder: Nolan constructed a full-scale 360-degree rotating hotel hallway gimbal rig in a repurposed airship
+      hangar in Cardington, UK, for Arthur''s zero-gravity fight.'
+    - 'The Ending Debate: The final shot cuts to black as Cobb''s spinning pewter totem wobbles, leaving viewers to decide
+      whether he is truly awake with his children.'
+  - title: Interstellar (2014)
+    points:
+    - 'IMDb Rating: 8.7/10 | Directed by Christopher Nolan | Original score by Hans Zimmer.'
+    - 'Cast & Characters: Matthew McConaughey as Cooper, Anne Hathaway as Dr. Brand, Jessica Chastain as adult Murph, and
+      Michael Caine as Professor Brand.'
+    - 'Storyline & Themes: As Earth''s biosphere collapses from blight, astronauts venture through a wormhole near Saturn
+      to find habitable worlds, navigating extreme gravitational time dilation and higher dimensions.'
+    - 'Scientific Realism: Nobel laureate physicist Kip Thorne consulted on the physics and gravitational lensing algorithms,
+      producing the first scientifically accurate visual model of a supermassive black hole (''Gargantua'').'
+    - 'Filming Locations: Svínafellsjökull glacier in Iceland (representing Mann''s and Miller''s ice and water planets) and
+      vast cornfields in Alberta, Canada.'
+  - title: The Wolf of Wall Street (2013)
+    points:
+    - 'IMDb Rating: 8.2/10 | Directed by Martin Scorsese | Adapted from Jordan Belfort''s memoir.'
+    - 'Cast & Characters: Leonardo DiCaprio as Jordan Belfort, Jonah Hill as Donnie Azoff, and Margot Robbie in her breakout
+      role as Naomi Lapaglia.'
+    - 'Storyline & Themes: A fast-paced, hedonistic dark comedy exploring boiler room pump-and-dump securities fraud, unbridled
+      Wall Street greed, and chaotic excess.'
+    - 'Cinematic Technique: DiCaprio frequently breaks the fourth wall to address the audience directly about trading schemes,
+      accompanied by rapid montage cuts.'
+    - 'Trivia: Holds the record for one of the highest uses of profanity in mainstream cinema history (over 500 F-bombs).'
+  - title: Whiplash (2014)
+    points:
+    - 'IMDb Rating: 8.5/10 | Written and directed by Damien Chazelle | Won 3 Academy Awards.'
+    - 'Cast & Characters: Miles Teller as ambitious jazz drummer Andrew Neiman and J.K. Simmons as the tyrannical, abusive
+      conductor Terence Fletcher.'
+    - 'Storyline & Themes: Set at the prestigious Shaffer Conservatory in New York, the film examines whether ruthless psychological
+      torment is necessary to forge artistic greatness.'
+    - 'Filming Pace: Shot in just 19 days in Los Angeles on a modest $3.3 million budget after Chazelle proved the concept
+      with an award-winning Sundance short.'
+    - 'Physical Performance: Miles Teller, who has played drums since age 15, performed almost all of his drumming scenes,
+      resulting in real blistering and blood on his hands.'
+  - title: 'Mad Max: Fury Road (2015)'
+    points:
+    - 'IMDb Rating: 8.1/10 | Directed and co-written by George Miller | Winner of 6 Academy Awards.'
+    - 'Cast & Characters: Tom Hardy as Max Rockatansky, Charlize Theron as Imperator Furiosa, and Nicholas Hoult as War Boy
+      Nux.'
+    - 'Storyline & Themes: A relentless high-octane desert chase across a post-apocalyptic wasteland where Furiosa rebels
+      against warlord Immortan Joe to rescue his enslaved wives.'
+    - 'Stunt Mastery: Over 80% of the film''s visual stunts and explosive vehicle collisions were performed practically in
+      the Namibian desert with real stunt drivers and pole-cats.'
+    - 'Production Saga: Filming moved from Broken Hill, Australia to Swakopmund, Namibia after unexpected seasonal rainfall
+      turned the Australian red desert into lush wildflower fields.'
+  - title: Parasite (2019)
+    points:
+    - 'IMDb Rating: 8.5/10 | Directed by Bong Joon-ho | Co-written with Han Jin-won.'
+    - 'Cast & Characters: Song Kang-ho (Kim Ki-taek), Choi Woo-shik (Ki-woo), Park So-dam (Ki-jung), and Cho Yeo-jeong (Mrs.
+      Park).'
+    - 'Storyline & Themes: A destitute family schemes to infiltrate a wealthy household as unrelated qualified professionals,
+      unraveling dark class inequalities, systemic symbiosis, and subterranean secrets.'
+    - 'Historic Triumph: First non-English language film in the 92-year history of the Academy Awards to win Best Picture,
+      alongside Best Director, Best Original Screenplay, and Best International Feature.'
+    - 'Architecture: The luxurious modern Park family mansion was not a real home, but an elaborate multi-tiered architectural
+      set constructed on an outdoor lot in Jeonju.'
+  trivia:
+  - type: multiple_choice
+    question: What practical mechanical device did Christopher Nolan build to film Joseph Gordon-Levitt's zero-gravity fight
+      scene in 'Inception'?
+    options:
+    - A full-scale 360-degree rotating hotel hallway gimbal
+    - A submerged underwater soundstage tank
+    - A Boeing 727 parabolic 'vomit comet' flight
+    - A motorized vertical wire-harness crane
+    correct: 0
+    explanation: Nolan and special effects supervisor Chris Corbould constructed a massive 100-foot-long rotating cylindrical
+      steel gimbal that turned 360 degrees inside a hangar.
+  - type: multiple_choice
+    question: Which theoretical astrophysicist and Nobel laureate advised Christopher Nolan on the black hole physics in 'Interstellar'?
+    options:
+    - Kip Thorne
+    - Stephen Hawking
+    - Neil deGrasse Tyson
+    - Roger Penrose
+    correct: 0
+    explanation: Caltech physicist Kip Thorne provided the exact Einstein field equations used by visual effects house Double
+      Negative to render the black hole Gargantua.
+  - type: multiple_choice
+    question: Which actor won the Best Supporting Actor Oscar for his terrifying portrayal of ruthless music instructor Terence
+      Fletcher in 'Whiplash' (2014)?
+    options:
+    - J.K. Simmons
+    - Edward Norton
+    - Mark Ruffalo
+    - Ethan Hawke
+    correct: 0
+    explanation: J.K. Simmons swept the entire awards season, winning the Oscar, BAFTA, and Golden Globe for his fierce performance.
+  - type: multiple_choice
+    question: 'Why was the production of ''Mad Max: Fury Road'' relocated from Australia to the Namib Desert in Namibia?'
+    options:
+    - Unprecedented rainfall turned the Australian desert green with flowers
+    - Australian road transport unions blocked the heavy war rigs
+    - Severe heatwaves damaged the digital camera sensors
+    - Filming permits were revoked by the Australian government
+    correct: 0
+    explanation: Historic rainfall in Broken Hill, Australia caused the red desert to bloom with green vegetation and wildflowers,
+      ruining the barren post-apocalyptic aesthetic.
+  - type: multiple_choice
+    question: What historic milestone did Bong Joon-ho's 'Parasite' achieve at the 92nd Academy Awards in 2020?
+    options:
+    - First non-English film to win Best Picture
+    - First film to win all 4 acting categories
+    - First movie filmed entirely on an iPhone to win an Oscar
+    - First animated movie to be nominated for Best Picture
+    correct: 0
+    explanation: '''Parasite'' made Oscar history as the very first foreign-language film to win the coveted Best Picture
+      Academy Award.'
+  - type: multiple_choice
+    question: In 'Inception', what personal object (totem) does Dom Cobb use to verify whether he is in the waking world or
+      a dream?
+    options:
+    - A weighted brass spinning top
+    - A loaded silver die
+    - A hollow chess bishop
+    - A poker chip with an engraved skull
+    correct: 0
+    explanation: Cobb uses a small pewter spinning top that originally belonged to his late wife Mal; in the dream world,
+      the top spins indefinitely without falling.
+  - type: multiple_choice
+    question: On Miller's ocean planet in 'Interstellar', one hour on the planet's surface corresponds to how many Earth years
+      due to extreme gravitational time dilation?
+    options:
+    - 7 years on Earth
+    - 1 year on Earth
+    - 25 years on Earth
+    - 50 years on Earth
+    correct: 0
+    explanation: Because Miller's planet orbits very close to the supermassive black hole Gargantua, one hour spent on its
+      surface equals seven years of elapsed Earth time.
+  - type: multiple_choice
+    question: Which actress had her major breakout Hollywood performance opposite Leonardo DiCaprio in 'The Wolf of Wall Street'
+      (2013)?
+    options:
+    - Margot Robbie
+    - Emma Stone
+    - Florence Pugh
+    - Ana de Armas
+    correct: 0
+    explanation: Australian actress Margot Robbie catapulted to international stardom with her charismatic performance as
+      Naomi Lapaglia.
+  - type: multiple_choice
+    question: What song does Fletcher instruct Andrew to play to set the grueling tempo in 'Whiplash'?
+    options:
+    - '''Caravan'' and ''Whiplash'''
+    - '''Take Five'' and ''Blue Rondo'''
+    - '''Sing, Sing, Sing'' and ''Moanin'''''
+    - '''Giant Steps'' and ''So What'''
+    correct: 0
+    explanation: Hank Levy's intricate 'Whiplash' (in 7/4 time signature) and Juan Tizol / Duke Ellington's 'Caravan' form
+      the core musical trials of the film.
+  - type: multiple_choice
+    question: 'Who played Imperator Furiosa in George Miller''s 2015 action masterpiece ''Mad Max: Fury Road''?'
+    options:
+    - Charlize Theron
+    - Emily Blunt
+    - Sigourney Weaver
+    - Scarlett Johansson
+    correct: 0
+    explanation: Charlize Theron delivered an iconic, career-defining performance as the one-armed warrior Imperator Furiosa.
+- id: modern_visions_2020s
+  title: 2020s Modern Epics, Sci-Fi & New Visions (2020–Present)
+  description: Technological leaps, 70mm IMAX cinema, and multi-genre triumphs of the current era.
+  cards:
+  - title: Oppenheimer (2023)
+    points:
+    - 'IMDb Rating: 8.9/10 | Written and directed by Christopher Nolan | Winner of 7 Academy Awards including Best Picture
+      and Best Director.'
+    - 'Cast & Characters: Cillian Murphy as J. Robert Oppenheimer, Robert Downey Jr. as Lewis Strauss, and Emily Blunt as
+      Katherine ''Kitty'' Oppenheimer.'
+    - 'Storyline & Themes: The biographical epic of theoretical physicist J. Robert Oppenheimer leading the Manhattan Project
+      to develop the atomic bomb, followed by postwar political betrayal and moral reckoning.'
+    - 'Cinematic Innovation: Nolan convinced Kodak to manufacture the world''s first large-format 65mm black-and-white film
+      stock to shoot Strauss''s objective perspective scenes in 70mm IMAX.'
+    - 'Practical Explosion: The Trinity atomic test was staged practically without computer-generated imagery (CGI), utilizing
+      magnesium, gasoline, black powder, and aluminum shavings.'
+  - title: 'Dune: Part Two (2024)'
+    points:
+    - 'IMDb Rating: 8.6/10 | Directed and co-written by Denis Villeneuve | Adapted from Frank Herbert''s seminal sci-fi novel.'
+    - 'Cast & Characters: Timothée Chalamet (Paul Atreides), Zendaya (Chani), Austin Butler (Feyd-Rautha Harkonnen), and Rebecca
+      Ferguson (Lady Jessica).'
+    - 'Storyline & Themes: Paul unites with the Fremen to wage holy war against the Harkonnens and the Padishah Emperor on
+      the desert planet Arrakis, wrestling with grim prophetic tyranny.'
+    - 'Cinematography & Sound: Greig Fraser shot the monochrome Giedi Prime gladiatorial sequences using infrared cameras;
+      Hans Zimmer composed an otherworldly sonic score.'
+    - 'Filming Locations: Filmed across the desert dunes of Wadi Rum in Jordan, Abu Dhabi''s Liwa Oasis, Budapest sound stages,
+      and the Brion Tomb in San Vito d''Altivole, Italy.'
+  - title: Everything Everywhere All at Once (2022)
+    points:
+    - 'IMDb Rating: 7.8/10 | Written and directed by Daniel Kwan and Daniel Scheinert (''The Daniels'') | Winner of 7 Academy
+      Awards including Best Picture.'
+    - 'Cast & Characters: Michelle Yeoh (Evelyn Wang), Ke Huy Quan (Waymond Wang), Stephanie Hsu (Joy Wang / Jobu Tupaki),
+      and Jamie Lee Curtis (Deirdre).'
+    - 'Storyline & Themes: An overwhelmed Chinese-American laundromat owner audit subject discovers she must connect with
+      parallel universe versions of herself to save the multiverse from cosmic existential dread.'
+    - 'Historic Indie Feat: Produced on a modest $14–25 million budget with a tiny 5-person visual effects team of self-taught
+      artists, becoming A24''s highest-grossing film ever.'
+    - 'Emotional Comeback: Ke Huy Quan won Best Supporting Actor in a triumphant Hollywood return after nearly 30 years away
+      from major acting roles.'
+  - title: Blade Runner 2049 (2017)
+    points:
+    - 'IMDb Rating: 8.0/10 | Directed by Denis Villeneuve | Produced by Ridley Scott | Won 2 Oscars.'
+    - 'Cast & Characters: Ryan Gosling as K (a Nexus-9 replicant blade runner), Harrison Ford reprising Rick Deckard, and
+      Ana de Armas as Joi.'
+    - 'Storyline & Themes: A replicant detective unearths a long-buried secret that threatens to overturn the foundations
+      of human-synthetic society, exploring memory, soul, and artificial yearning.'
+    - 'Visual Mastery: Legendary cinematographer Roger Deakins won his first Academy Award for the film''s spellbinding orange-hued
+      dust storm palettes and high-contrast lighting.'
+    - 'Filming Location: Constructed across sprawling soundstages at Korda Studios and Origo Studios in Budapest, Hungary.'
+  - title: 'John Wick: Chapter 4 (2023)'
+    points:
+    - 'IMDb Rating: 7.7/10 | Directed by Chad Stahelski | Starring Keanu Reeves, Donnie Yen, and Bill Skarsgård.'
+    - 'Storyline & Themes: The legendary hitman battles the High Table across the globe to earn his freedom, featuring jaw-dropping
+      ''gun-fu'' stunt choreography.'
+    - 'Landmark Action Scene: Features a breathtaking continuous top-down overhead tracking shot inside an abandoned Paris
+      apartment using ''Dragon''s Breath'' incendiary shotgun rounds.'
+    - 'Filming Locations: Filmed across real iconic locations in Paris (Eiffel Tower, Arc de Triomphe, Sacré-Cœur 222 steps),
+      Berlin, and Osaka.'
+  trivia:
+  - type: multiple_choice
+    question: What special custom film stock did Kodak manufacture specifically for Christopher Nolan's 'Oppenheimer' (2023)?
+    options:
+    - Large-format 65mm black-and-white IMAX film
+    - Infrared 35mm night-vision film
+    - High-speed 120-frame-per-second 70mm color film
+    - Dual-emulsion 3D stereoscopic 65mm film
+    correct: 0
+    explanation: Kodak created the first-ever 65mm black-and-white film emulsion specifically so Nolan and cinematographer
+      Hoyte van Hoytema could film Strauss's scenes in full IMAX resolution.
+  - type: multiple_choice
+    question: 'How did cinematographer Greig Fraser achieve the eerie, desaturated monochrome look for the Giedi Prime arena
+      scenes in ''Dune: Part Two''?'
+    options:
+    - Shooting with modified digital cameras capturing only infrared light
+    - Using vintage 1920s orthochromatic black-and-white film
+    - Applying post-production green-screen color replacement
+    - Spraying the entire stadium with black chalk and polarized filters
+    correct: 0
+    explanation: Fraser used ARRI digital cameras modified to capture near-infrared spectrum light, making skin look translucent
+      and clothing starkly surreal.
+  - type: multiple_choice
+    question: Which actor made an emotional return to Hollywood after nearly 30 years and won an Oscar for 'Everything Everywhere
+      All at Once'?
+    options:
+    - Ke Huy Quan
+    - Steven Yeun
+    - BD Wong
+    - Hiroyuki Sanada
+    correct: 0
+    explanation: Ke Huy Quan (who starred as Short Round in 'Indiana Jones' as a child) won the Academy Award for Best Supporting
+      Actor for his role as Waymond Wang.
+  - type: multiple_choice
+    question: Which legendary cinematographer won his first long-awaited Academy Award for Denis Villeneuve's 'Blade Runner
+      2049'?
+    options:
+    - Roger Deakins
+    - Emmanuel Lubezki
+    - Hoyte van Hoytema
+    - Robert Richardson
+    correct: 0
+    explanation: After 13 previous nominations without a win, Roger Deakins won the Best Cinematography Oscar for his visual
+      masterpiece in 'Blade Runner 2049'.
+  - type: multiple_choice
+    question: 'In ''John Wick: Chapter 4'', what famous Paris landmark staircase features John Wick battling hitmen up its
+      222 steps?'
+    options:
+    - The steps leading to Sacré-Cœur Basilica in Montmartre
+    - The Eiffel Tower base stairs
+    - The steps of the Palais Garnier Opera House
+    - The Grand Palais entry stairs
+    correct: 0
+    explanation: John Wick fights his way up (and tumbles all the way back down) the famous 222-step Rue Foyatier staircase
+      leading up to Sacré-Cœur in Montmartre.
+  - type: multiple_choice
+    question: Which actor portrayed the antagonistic US Atomic Energy Commission chairman Lewis Strauss in 'Oppenheimer',
+      winning the Best Supporting Actor Oscar?
+    options:
+    - Robert Downey Jr.
+    - Matt Damon
+    - Kenneth Branagh
+    - Josh Hartnett
+    correct: 0
+    explanation: Robert Downey Jr. won his first Academy Award for his brilliant performance as Lewis Strauss in 'Oppenheimer'.
+  - type: multiple_choice
+    question: Which famous real-world desert valley in Jordan served as the primary filming location for the desert planet
+      Arrakis in 'Dune'?
+    options:
+    - Wadi Rum
+    - Death Valley
+    - Atacama Desert
+    - Sahara Dunes of Merzouga
+    correct: 0
+    explanation: Denis Villeneuve filmed the sweeping desert landscapes and sandstone cliffs of Arrakis in Wadi Rum, Jordan
+      (the 'Valley of the Moon').
+  - type: multiple_choice
+    question: 'What video game camera perspective inspired the continuous Parisian apartment shootout with incendiary shotgun
+      shells in ''John Wick: Chapter 4''?'
+    options:
+    - A top-down bird's-eye view (like 'Hong Kong Massacre')
+    - A first-person shooter perspective (like 'Doom')
+    - A side-scrolling platformer view (like 'Street Fighter')
+    - An over-the-shoulder third-person camera (like 'Resident Evil')
+    correct: 0
+    explanation: Director Chad Stahelski utilized a top-down crane rig tracking above rooms in a continuous shot, inspired
+      by top-down shooter games like 'The Hong Kong Massacre'.
+  - type: multiple_choice
+    question: How many Academy Awards did 'Everything Everywhere All at Once' win at the 95th Oscars, including Best Picture
+      and 3 acting wins?
+    options:
+    - 7 Oscars
+    - 4 Oscars
+    - 10 Oscars
+    - 12 Oscars
+    correct: 0
+    explanation: 'The film swept 7 major Oscars: Best Picture, Best Director, Best Actress (Michelle Yeoh), Best Supporting
+      Actor (Ke Huy Quan), Best Supporting Actress (Jamie Lee Curtis), Best Original Screenplay, and Best Film Editing.'
+  - type: multiple_choice
+    question: 'Who directed both ''Blade Runner 2049'' and ''Dune: Part One & Part Two''?'
+    options:
+    - Denis Villeneuve
+    - Christopher Nolan
+    - Ridley Scott
+    - George Miller
+    correct: 0
+    explanation: French-Canadian visionary director Denis Villeneuve directed both landmark sci-fi epics.
+- id: directors_twists_lore
+  title: Master Directors, Legendary Twists & Behind-The-Scenes Lore
+  description: The unscripted accidents, signature auteur styles, and shock endings that redefined cinema history.
+  cards:
+  - title: 'Christopher Nolan & Quentin Tarantino: Auteur Signatures'
+    points:
+    - 'Christopher Nolan: Passionate defender of celluloid 70mm film stock, practical in-camera effects (crashing real Boeing
+      747s, building full-scale rotating sets), and non-linear temporal narrative structures.'
+    - 'Quentin Tarantino: Famous for rapid-fire pop-culture dialogue, chapter-based story structures, encyclopedic film homages,
+      needle-drop soundtracks, and alternate-history climaxes.'
+    - 'David Fincher: Renowned for extreme digital perfectionism, often demanding 50 to 100+ takes per scene to strip actors
+      of artificial performance habits.'
+    - 'Martin Scorsese: Signature use of kinetic moving camera tracking shots, freeze frames, voiceover narration, and deep
+      collaborative partnerships with Robert De Niro and Leonardo DiCaprio.'
+  - title: Legendary Unscripted & Improvised Movie Moments
+    points:
+    - 'Django Unchained (2012): Leonardo DiCaprio accidentally slammed his hand into a glass goblet, cutting his palm open.
+      He stayed fully in character, bleeding profusely across the table throughout his monologue.'
+    - 'The Dark Knight (2008): Heath Ledger''s Joker sarcastically clapping in his GCPD jail cell when Gordon is promoted
+      to Commissioner was entirely improvised on the spot.'
+    - 'The Wolf of Wall Street (2013): Matthew McConaughey''s rhythmic chest-thumping and humming was his personal pre-scene
+      warm-up ritual; DiCaprio suggested putting it directly into the scene.'
+    - 'The Lord of the Rings: The Two Towers (2002): When Aragorn kicks an Uruk-hai helmet in despair, Viggo Mortensen broke
+      two toes and let out an agonized scream that Jackson kept in the final cut.'
+  - title: The Greatest Modern Plot Twists
+    points:
+    - 'The Sixth Sense (1999): Child psychologist Malcolm Crowe (Bruce Willis) realizes at the climax that he has been a ghost
+      the entire time.'
+    - 'The Prestige (2006): Magician Alfred Borden (Christian Bale) reveals he is actually a set of identical twins living
+      one shared life, while Robert Angier (Hugh Jackman) cloned and drowned himself nightly using Tesla''s machine.'
+    - 'Shutter Island (2010): US Marshal Teddy Daniels (Leonardo DiCaprio) discovers he is actually Andrew Laeddis, a traumatized
+      patient at the psychiatric hospital participating in a radical role-playing therapy experiment.'
+    - 'Memento (2000): Leonard Shelby (Guy Pearce) discovers he has been intentionally manipulating his own anterograde amnesia
+      to create an endless quest for vengeance against people who did not murder his wife.'
+  trivia:
+  - type: multiple_choice
+    question: In 'Django Unchained' (2012), what genuine real-life injury occurred during Calvin Candie's intense dining room
+      monologue?
+    options:
+    - Leonardo DiCaprio cut his hand on a shattered glass and kept acting while bleeding
+    - Jamie Foxx dislocated his shoulder during a quick-draw scene
+    - Christoph Waltz fractured his ankle falling off a horse
+    - Samuel L. Jackson burned his hand on a hot cast-iron poker
+    correct: 0
+    explanation: Leonardo DiCaprio accidentally slammed his hand into a crystal glass goblet, slicing his palm. Rather than
+      stopping, he incorporated the bleeding hand into his menacing monologue.
+  - type: multiple_choice
+    question: What real-life warm-up ritual of Matthew McConaughey was incorporated into his famous diner scene in 'The Wolf
+      of Wall Street'?
+    options:
+    - Rhythmically thumping his chest and humming a cadence
+    - Doing rapid pushups while reciting stock ticker symbols
+    - Snapping his fingers in a syncopated jazz rhythm
+    - Drinking a double espresso while staring unblinkingly at the mirror
+    correct: 0
+    explanation: McConaughey regularly thumps his chest and hums to relax his vocal cords before takes. Leonardo DiCaprio
+      noticed it and urged Martin Scorsese to shoot it as part of the scene.
+  - type: multiple_choice
+    question: In 'The Prestige' (2006), how does illusionist Alfred Borden (Christian Bale) achieve his impossible 'Transported
+      Man' teleportation trick?
+    options:
+    - He is actually a pair of identical twin brothers living one single identity
+    - He uses a quantum duplication machine built by Nikola Tesla
+    - He hires a lookalike alcoholic double named Gerald Root
+    - He relies on trapdoors and synchronized mirror optics
+    correct: 0
+    explanation: Alfred and Fallon are identical twin brothers who live one shared life (sacrificing their individual identities)
+      to perform the ultimate illusion.
+  - type: multiple_choice
+    question: What is the climactic revelation about US Marshal Teddy Daniels in Martin Scorsese's 'Shutter Island' (2010)?
+    options:
+    - He is actually a patient at the asylum (Andrew Laeddis) living a role-play delusion
+    - He was secretly hired by the FBI to assassinate the head psychiatrist
+    - He is a German spy attempting to steal mind-control formulas
+    - He hallucinated the entire island while trapped in a Boston blizzard
+    correct: 0
+    explanation: Teddy Daniels is revealed to be Andrew Laeddis, the hospital's most dangerous patient, and the investigation
+      was an elaborate role-playing therapy orchestrated by his doctors.
+  - type: multiple_choice
+    question: 'What injury did Viggo Mortensen suffer when he kicked a heavy steel helmet in ''The Lord of the Rings: The
+      Two Towers''?'
+    options:
+    - He broke two toes
+    - He sprained his ankle
+    - He fractured his kneecap
+    - He tore his Achilles tendon
+    correct: 0
+    explanation: Mortensen kicked the heavy helmet with genuine fury on the fifth take, breaking two of his toes; his agonizing
+      scream was kept in the film because of its raw emotional power.
+  - type: multiple_choice
+    question: Which director is famous for demanding dozens or even hundreds of takes for simple scenes to achieve exact digital
+      precision?
+    options:
+    - David Fincher
+    - Quentin Tarantino
+    - Steven Spielberg
+    - Clint Eastwood
+    correct: 0
+    explanation: David Fincher is famous for his exhaustive 50-to-100+ take methodology (e.g., in 'The Social Network' and
+      'Zodiac') to strip actors of rehearsed mannerisms.
+  - type: multiple_choice
+    question: In Christopher Nolan's breakthrough non-linear film 'Memento' (2000), what condition affects the protagonist
+      Leonard Shelby?
+    options:
+    - Anterograde amnesia (inability to form new short-term memories)
+    - Dissociative fugue identity disorder
+    - Retrograde amnesia (loss of all childhood memories)
+    - Prosopagnosia (inability to recognize human faces)
+    correct: 0
+    explanation: Leonard suffers from anterograde amnesia following head trauma, relying on Polaroid photos, handwritten notes,
+      and tattoos to track his investigation.
+  - type: multiple_choice
+    question: In 'The Dark Knight', Heath Ledger improvised which famous chilling reaction while sitting locked in a jail
+      cell?
+    options:
+    - Slowly and sarcastically clapping for Commissioner Gordon's promotion
+    - Licking his lips while whispering a nursery rhyme
+    - Banging his head against the iron bars in rhythm
+    - Balancing a playing card on the tip of his shoe
+    correct: 0
+    explanation: When the police officers begin applauding Jim Gordon's promotion, Ledger unscriptedly began slowly clapping
+      along with an unsettling smirk.
+  - type: multiple_choice
+    question: What famous plot twist stunned audiences in M. Night Shyamalan's 1999 breakout hit 'The Sixth Sense'?
+    options:
+    - Dr. Malcolm Crowe had been dead the entire time
+    - The young boy Cole was actually hallucinating all the ghosts
+    - Cole's mother was the one poisoning the town's children
+    - The ghosts were physical beings from an alternate dimension
+    correct: 0
+    explanation: Child psychologist Malcolm Crowe (Bruce Willis) realizes in the final moments that he was killed in the opening
+      scene and only exists as a ghost that Cole can see.
+  - type: multiple_choice
+    question: Which iconic actor has starred as the lead in collaborative films with both Martin Scorsese ('The Wolf of Wall
+      Street', 'The Departed') and Quentin Tarantino ('Django Unchained', 'Once Upon a Time in Hollywood')?
+    options:
+    - Leonardo DiCaprio
+    - Brad Pitt
+    - Robert De Niro
+    - Christian Bale
+    correct: 0
+    explanation: Leonardo DiCaprio has played iconic, critically acclaimed leading roles for both Scorsese and Tarantino.
