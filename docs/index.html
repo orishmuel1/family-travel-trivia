@@ -398,6 +398,410 @@
             .academic-topic-card { padding: 14px 16px; gap: 12px; }
             .academic-topic-icon { width: 40px; height: 40px; font-size: 1.8rem; }
         }
+
+        /* ===================== IN-APP FEEDBACK & GITHUB SYNC ===================== */
+        .fab-feedback {
+            position: fixed;
+            bottom: calc(18px + env(safe-area-inset-bottom));
+            inset-inline-end: 18px;
+            z-index: 95;
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--card-border);
+            border-radius: 999px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow);
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .fab-feedback:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+        }
+        .fab-feedback:active { transform: translateY(0); }
+        .fab-icon { font-size: 1.15rem; line-height: 1; }
+        .fab-badge {
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 99px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        /* Modal Structure */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            padding-top: calc(16px + env(safe-area-inset-top));
+            padding-bottom: calc(16px + env(safe-area-inset-bottom));
+            animation: modalFadeIn 0.2s ease-out;
+        }
+        @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-box {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            max-width: 580px;
+            width: 100%;
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            overflow: hidden;
+            animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalSlideUp { from { transform: translateY(16px); opacity: 0.8; } to { transform: translateY(0); opacity: 1; } }
+        .modal-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--surface-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            background: var(--card);
+        }
+        .modal-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+        }
+        .modal-close-btn {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        .modal-close-btn:hover { background: var(--card-border); }
+        .modal-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--surface-border);
+            background: var(--surface);
+        }
+        .modal-tab-btn {
+            flex: 1;
+            padding: 12px 14px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .modal-tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+            background: var(--card);
+        }
+        .modal-body {
+            padding: 18px 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .modal-footer {
+            padding: 14px 20px;
+            border-top: 1px solid var(--surface-border);
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            background: var(--surface);
+        }
+
+        /* Form elements */
+        .feedback-field-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .sentiment-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .sentiment-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 2px solid var(--surface-border);
+            background: var(--surface);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .sentiment-btn:hover { border-color: var(--muted); }
+        .sentiment-btn.active[data-val="negative"] {
+            background: color-mix(in srgb, var(--error) 15%, transparent);
+            border-color: var(--error);
+            color: var(--error);
+        }
+        .sentiment-btn.active[data-val="positive"] {
+            background: color-mix(in srgb, var(--success) 15%, transparent);
+            border-color: var(--success);
+            color: var(--success);
+        }
+        .tags-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .tag-chip {
+            padding: 7px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--surface-border);
+            background: var(--surface);
+            color: var(--text);
+            font-size: 0.84rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+            user-select: none;
+        }
+        .tag-chip:hover { border-color: var(--primary); }
+        .tag-chip.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .feedback-textarea {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-size: 0.92rem;
+            font-family: inherit;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+            margin-bottom: 16px;
+        }
+        .feedback-textarea:focus { border-color: var(--primary); }
+
+        /* Context Accordion */
+        .context-accordion {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 14px;
+            font-size: 0.82rem;
+        }
+        .context-accordion-header {
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            color: var(--muted);
+            font-weight: 600;
+            user-select: none;
+        }
+        .context-accordion-header:hover { color: var(--text); }
+        .context-details {
+            padding: 10px 14px;
+            border-top: 1px solid var(--surface-border);
+            background: rgba(0,0,0,0.03);
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .context-details pre {
+            font-family: monospace;
+            font-size: 0.76rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: var(--text);
+        }
+
+        /* Status and Alerts */
+        .feedback-status-msg {
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .feedback-status-msg.success {
+            background: color-mix(in srgb, var(--success) 16%, transparent);
+            color: var(--success);
+            border: 1px solid color-mix(in srgb, var(--success) 40%, transparent);
+        }
+        .feedback-status-msg.error {
+            background: color-mix(in srgb, var(--error) 16%, transparent);
+            color: var(--error);
+            border: 1px solid color-mix(in srgb, var(--error) 40%, transparent);
+        }
+        .feedback-status-msg.info {
+            background: color-mix(in srgb, var(--primary) 16%, transparent);
+            color: var(--primary);
+            border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+        }
+
+        /* GitHub Config Card */
+        .github-config-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .config-title { font-size: 0.95rem; font-weight: 800; margin-bottom: 6px; color: var(--text); }
+        .config-help { font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; line-height: 1.4; }
+        .field-label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; margin-top: 8px; }
+        .config-input {
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+        }
+        .config-input:focus { border-color: var(--primary); }
+
+        .queue-status-banner {
+            background: color-mix(in srgb, var(--primary) 12%, transparent);
+            border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+            color: var(--primary);
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .queue-actions-row { margin-bottom: 14px; }
+        .fallback-actions-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .btn-sm { padding: 8px 12px; font-size: 0.82rem; border-radius: 10px; }
+        .btn-danger-text { color: var(--error); }
+        .btn-danger-text:hover { border-color: var(--error); background: color-mix(in srgb, var(--error) 10%, transparent); }
+
+        /* Queue Items List */
+        .queue-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        .queue-item-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 0.85rem;
+            position: relative;
+        }
+        .queue-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .queue-item-meta { font-size: 0.75rem; color: var(--muted); }
+        .queue-item-notes { margin: 6px 0; font-size: 0.88rem; line-height: 1.4; color: var(--text); }
+        .queue-item-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+        .queue-tag-badge {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            background: var(--card);
+            border: 1px solid var(--surface-border);
+            border-radius: 6px;
+            color: var(--muted);
+        }
+        .queue-item-del-btn {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+        .queue-item-del-btn:hover { color: var(--error); background: var(--card); }
+
+        /* Inline triggers */
+        .btn-inline-feedback {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .btn-inline-feedback:hover {
+            color: var(--primary);
+            background: var(--surface);
+        }
     </style>
 </head>
 <body>
@@ -422,6 +826,7 @@
             <button class="menu-item" id="menu-academic">🎓 <span id="lbl-academic-switch">Switch to Academic Mode</span></button>
             <button class="menu-item" id="menu-trivia">🚗 <span id="lbl-trivia-switch">Switch to Travel Trivia</span></button>
             <button class="menu-item" id="menu-stats">📊 <span id="lbl-stats">Statistics</span></button>
+            <button class="menu-item" id="menu-feedback">💬 <span id="lbl-feedback-menu">Feedback & GitHub Sync</span> <span id="menu-fb-badge" class="badge badge-done" style="display:none; margin-inline-start:auto;">0</span></button>
             <button class="menu-item" id="menu-reset">↺ <span id="lbl-reset">Reset progress</span></button>
         </div>
     </div>
@@ -437,6 +842,109 @@
         <div id="view-summary" class="view"></div>
         <div id="view-stats" class="view"></div>
     </main>
+
+    <!-- Floating Action Button for Feedback -->
+    <button id="fab-feedback" class="fab-feedback" aria-label="Feedback">
+        <span class="fab-icon">💬</span>
+        <span class="fab-text" id="lbl-fab-text">Feedback</span>
+        <span id="fab-badge" class="fab-badge" style="display:none;">0</span>
+    </button>
+
+    <!-- Feedback Modal Dialog -->
+    <div id="feedback-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span id="modal-title-icon">💡</span>
+                    <span id="lbl-modal-title">Feedback & Bug Report</span>
+                </div>
+                <button id="btn-close-feedback" class="modal-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab-btn active" id="tab-btn-new">✍️ <span id="lbl-tab-new">New Feedback</span></button>
+                <button type="button" class="modal-tab-btn" id="tab-btn-queue">📋 <span id="lbl-tab-queue">Queue & Sync</span> <span id="tab-queue-badge" class="badge badge-done" style="display:none;">0</span></button>
+            </div>
+            
+            <!-- TAB 1: New Feedback Form -->
+            <div id="tab-content-new" class="modal-body">
+                <div class="feedback-field-label" id="lbl-sentiment-title">Feedback Type</div>
+                <div class="sentiment-row">
+                    <button type="button" class="sentiment-btn active" id="btn-sentiment-negative" data-val="negative">
+                        <span class="emoji">👎</span>
+                        <span id="lbl-sentiment-neg">Issue / Bug</span>
+                    </button>
+                    <button type="button" class="sentiment-btn" id="btn-sentiment-positive" data-val="positive">
+                        <span class="emoji">👍</span>
+                        <span id="lbl-sentiment-pos">Idea / Praise</span>
+                    </button>
+                </div>
+
+                <div class="feedback-field-label" id="lbl-tags-title">Category / Check all that apply</div>
+                <div class="tags-grid" id="feedback-tags-grid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <div class="feedback-field-label" id="lbl-notes-title">Notes & Details</div>
+                <textarea id="feedback-notes" class="feedback-textarea" rows="3" placeholder="Tell us what happened, what was wrong, or what you'd like improved..."></textarea>
+
+                <div class="context-accordion">
+                    <div class="context-accordion-header" id="context-toggle">
+                        <span id="lbl-context-summary">📍 Context: Auto-attached</span>
+                        <span class="accordion-arrow">▼</span>
+                    </div>
+                    <div class="context-details" id="context-details-box" style="display:none;">
+                        <pre id="context-json-preview"></pre>
+                    </div>
+                </div>
+
+                <div id="feedback-form-msg" class="feedback-status-msg" style="display:none;"></div>
+            </div>
+
+            <div id="tab-footer-new" class="modal-footer">
+                <button type="button" class="btn btn-ghost" id="btn-save-offline">💾 <span id="lbl-btn-save-offline">Save Offline</span></button>
+                <button type="button" class="btn" id="btn-save-sync">🚀 <span id="lbl-btn-save-sync">Save & Sync to GitHub</span></button>
+            </div>
+
+            <!-- TAB 2: Queue & Sync Manager -->
+            <div id="tab-content-queue" class="modal-body" style="display:none;">
+                <div class="queue-status-banner" id="queue-status-banner">
+                    <span id="lbl-queue-count">0 items waiting in local storage</span>
+                </div>
+
+                <div class="github-config-card">
+                    <div class="config-title">⚙️ <span id="lbl-gh-settings-title">GitHub Sync (Option B)</span></div>
+                    <p class="config-help" id="lbl-gh-help">Pushes feedback directly to <code>feedback/feedback_queue.json</code> in your repository via GitHub API.</p>
+                    
+                    <label class="field-label" id="lbl-gh-token-label">Personal Access Token (PAT):</label>
+                    <input type="password" id="gh-token-input" class="config-input" placeholder="ghp_... or github_pat_..." autocomplete="off">
+                    
+                    <label class="field-label" id="lbl-gh-repo-label">Repository (owner/repo):</label>
+                    <input type="text" id="gh-repo-input" class="config-input" value="orishmuel1/family-travel-trivia">
+                    
+                    <div style="display:flex; gap:8px; margin-top:8px;">
+                        <button type="button" class="btn btn-ghost btn-sm" id="btn-save-gh-config">💾 <span id="lbl-save-gh-config">Save Settings</span></button>
+                        <button type="button" class="btn btn-ghost btn-sm" id="btn-test-gh-config">🔌 <span id="lbl-test-gh-config">Test Connection</span></button>
+                    </div>
+                </div>
+
+                <div id="sync-status-msg" class="feedback-status-msg" style="display:none; margin: 12px 0;"></div>
+
+                <div class="queue-actions-row">
+                    <button type="button" class="btn btn-full" id="btn-sync-all-gh">🚀 <span id="lbl-btn-sync-gh">Sync All Pending to GitHub</span></button>
+                </div>
+
+                <div class="fallback-actions-row">
+                    <button type="button" class="btn btn-ghost btn-sm" id="btn-export-json">📥 <span id="lbl-export-json">Export JSON</span></button>
+                    <button type="button" class="btn btn-ghost btn-sm" id="btn-copy-md">📋 <span id="lbl-copy-md">Copy Markdown</span></button>
+                    <button type="button" class="btn btn-ghost btn-sm btn-danger-text" id="btn-clear-queue">🗑️ <span id="lbl-clear-queue">Clear Queue</span></button>
+                </div>
+
+                <div class="queue-items-list" id="queue-items-list">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         "use strict";
@@ -492,6 +1000,52 @@
                 noAcademicTopics: 'No academic courses in this language yet.',
                 offlineFail: '⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia & courses, then it works offline.',
                 resetConfirm: 'Reset all your local progress and statistics on this device?',
+                feedback: 'Feedback',
+                feedbackBtn: 'Feedback',
+                reportQuestionIssue: 'Report issue with question',
+                feedbackOnLesson: 'Feedback on this lesson',
+                feedbackModalTitle: 'Feedback & Bug Report',
+                tabNewFeedback: 'New Feedback',
+                tabQueueSync: 'Queue & Sync',
+                sentimentTitle: 'Feedback Type',
+                sentimentPositive: 'Idea / Praise',
+                sentimentNegative: 'Issue / Bug',
+                tagsTitle: 'Category (Choose all that apply):',
+                tagFactual: '❌ Factual Error',
+                tagTypo: '✍️ Typo / Spelling',
+                tagConfusing: '❓ Confusing Question / Options',
+                tagWrongAnswer: '🎯 Wrong Answer Marked Correct',
+                tagDifficulty: '⚖️ Too Easy / Too Hard',
+                tagIdea: '💡 New Topic / Feature Idea',
+                tagUIGlitch: '📱 UI / Display Glitch',
+                tagOther: '🔍 Other',
+                notesTitle: 'Notes & Details',
+                notesPlaceholder: "Tell us what happened, what was wrong, or what you'd like improved...",
+                contextAutoAttached: '📍 Context: Auto-attached',
+                btnSaveOffline: 'Save Offline',
+                btnSaveSync: 'Save & Sync to GitHub',
+                savedOfflineMsg: '✓ Saved offline! Will sync when connected.',
+                syncSuccessMsg: '✓ Successfully synced {n} item(s) to GitHub!',
+                syncFailMsg: '⚠️ Sync failed: {err}. Saved locally.',
+                syncNoItems: 'No pending items to sync.',
+                queueItemsWaiting: '{n} item(s) waiting in local storage',
+                queueEmpty: 'No feedback items recorded yet.',
+                ghSettingsTitle: 'GitHub Sync (Option B)',
+                ghHelp: 'Pushes feedback directly to feedback/feedback_queue.json in your repository via GitHub API.',
+                ghTokenLabel: 'Personal Access Token (PAT):',
+                ghRepoLabel: 'Repository (owner/repo):',
+                btnSaveGhConfig: 'Save Settings',
+                btnTestGhConfig: 'Test Connection',
+                btnSyncAllGh: 'Sync All Pending to GitHub',
+                btnExportJson: 'Export JSON',
+                btnCopyMd: 'Copy Markdown',
+                btnClearQueue: 'Clear Queue',
+                clearConfirm: 'Clear all feedback items from this device?',
+                tokenMissingMsg: 'Please enter a GitHub Personal Access Token (PAT) first.',
+                tokenSavedMsg: '✓ GitHub settings saved locally!',
+                tokenTestSuccess: '✓ Connection to GitHub verified successfully!',
+                tokenTestFail: '⚠️ Could not connect to GitHub. Please check your token and repo name.',
+                copiedMarkdownMsg: '✓ Copied feedback to clipboard in Markdown format!',
             },
             he: {
                 appTitle: 'טריוויה ואקדמיה',
@@ -538,6 +1092,52 @@
                 noAcademicTopics: 'אין עדיין קורסים אקדמיים בשפה הזו.',
                 offlineFail: '⚠️ <strong>הטעינה במצב לא מקוון נכשלה.</strong><br>התחברו לאינטרנט פעם אחת כדי להוריד את התוכן, ואז זה יעבוד גם ללא חיבור.',
                 resetConfirm: 'לאפס את כל ההתקדמות והסטטיסטיקה המקומית במכשיר הזה?',
+                feedback: 'משוב',
+                feedbackBtn: 'משוב',
+                reportQuestionIssue: 'דיווח על בעיה בשאלה',
+                feedbackOnLesson: 'משוב על שיעור זה',
+                feedbackModalTitle: 'משוב ודיווח על תקלות',
+                tabNewFeedback: 'משוב חדש',
+                tabQueueSync: 'רשימת משובים וסנכרון',
+                sentimentTitle: 'סוג המשוב',
+                sentimentPositive: 'רעיון / חיזוק חיובי',
+                sentimentNegative: 'תקלה / תיקון נדרש',
+                tagsTitle: 'קטגוריה (ניתן לבחור מספר אפשרויות):',
+                tagFactual: '❌ טעות עובדתית',
+                tagTypo: '✍️ שגיאת כתיב / ניסוח',
+                tagConfusing: '❓ שאלה מבלבלת / אפשרויות לא ברורות',
+                tagWrongAnswer: '🎯 תשובה שגויה סומנה כנכונה',
+                tagDifficulty: '⚖️ קל מדי / קשה מדי',
+                tagIdea: '💡 רעיון לנושא / שיפור',
+                tagUIGlitch: '📱 באג תצוגה / ממשק',
+                tagOther: '🔍 אחר',
+                notesTitle: 'פירוט והערות',
+                notesPlaceholder: 'מה קרה? מה כדאי לשפר, לתקן או להוסיף?',
+                contextAutoAttached: '📍 הקשר שצורף אוטומטית',
+                btnSaveOffline: 'שמירה במכשיר',
+                btnSaveSync: 'שמירה וסנכרון ל-GitHub',
+                savedOfflineMsg: '✓ נשמר במכשיר! יסונכרן כאשר יהיה חיבור.',
+                syncSuccessMsg: '✓ סונכרנו בהצלחה {n} משובים ל-GitHub!',
+                syncFailMsg: '⚠️ הסנכרון נכשל: {err}. המשוב נשמר מקומית.',
+                syncNoItems: 'אין פריטים הממתינים לסנכרון.',
+                queueItemsWaiting: '{n} משובים שמורים במכשיר',
+                queueEmpty: 'אין עדיין משובים שמורים.',
+                ghSettingsTitle: 'סנכרון ל-GitHub (אפשרות ב׳)',
+                ghHelp: 'מעלה את המשובים ישירות לקובץ feedback/feedback_queue.json במאגר שלך באמצעות GitHub API.',
+                ghTokenLabel: 'טוקן גישה אישי ל-GitHub (PAT):',
+                ghRepoLabel: 'מאגר GitHub (owner/repo):',
+                btnSaveGhConfig: 'שמור הגדרות',
+                btnTestGhConfig: 'בדוק חיבור',
+                btnSyncAllGh: 'סנכרן את כל המשובים ל-GitHub',
+                btnExportJson: 'הורד קובץ JSON',
+                btnCopyMd: 'העתק כ-Markdown',
+                btnClearQueue: 'נקה הכל',
+                clearConfirm: 'האם למחוק את כל המשובים מהמכשיר הזה?',
+                tokenMissingMsg: 'נא להזין תחילה טוקן גישה (PAT) של GitHub.',
+                tokenSavedMsg: '✓ הגדרות GitHub נשמרו במכשיר!',
+                tokenTestSuccess: '✓ החיבור ל-GitHub אומת בהצלחה!',
+                tokenTestFail: '⚠️ לא ניתן להתחבר ל-GitHub. נא לוודא את הטוקן ושם המאגר.',
+                copiedMarkdownMsg: '✓ הועתק ללוח בפורמט Markdown!',
             }
         };
 
@@ -730,6 +1330,11 @@
             document.getElementById('lbl-reset').textContent = t('resetProgress');
             document.getElementById('lbl-academic-switch').textContent = t('switchToAcademic');
             document.getElementById('lbl-trivia-switch').textContent = t('switchToTrivia');
+            const fbMenuLbl = document.getElementById('lbl-feedback-menu');
+            if (fbMenuLbl) fbMenuLbl.textContent = t('feedbackBtn') + ' & ' + (LANG === 'he' ? 'סנכרון' : 'Sync');
+            const fabText = document.getElementById('lbl-fab-text');
+            if (fabText) fabText.textContent = t('feedbackBtn');
+            if (typeof updateFeedbackModalLabels === 'function') updateFeedbackModalLabels();
             updateModeBtn();
         }
         function updateModeBtn() {
@@ -1063,6 +1668,19 @@
             head.appendChild(el('span', { class: 'lesson-num', text: `${t('categories')} #${cIdx + 1}` }));
             head.appendChild(el('h2', { class: 'card-title', text: cat.title }));
             if (cat.description) head.appendChild(el('p', { class: 'narrative', html: formatMathAndText(cat.description) }));
+            const afb = el('div', { attrs: { style: 'text-align: end; margin-top: 8px;' } });
+            afb.appendChild(el('button', {
+                class: 'btn-inline-feedback',
+                html: '💬 ' + t('feedbackOnLesson'),
+                onclick: () => openFeedbackModal({
+                    type: 'academic_lesson',
+                    topicId: topic ? topic.id : null,
+                    topicTitle: topic ? topic.title : null,
+                    categoryId: cat ? cat.id : null,
+                    categoryTitle: cat ? cat.title : null
+                })
+            }));
+            head.appendChild(afb);
             root.appendChild(head);
 
             if (Array.isArray(cat.cards) && cat.cards.length > 0) {
@@ -1146,6 +1764,19 @@
                 head.appendChild(el('h3', { class: 'points-title', html: '💡 ' + t('keyPoints') }));
                 (cat.points || []).forEach(pt => head.appendChild(el('div', { class: 'point-item', html: formatMathAndText(pt) })));
             }
+            const lfb = el('div', { attrs: { style: 'text-align: end; margin-top: 8px;' } });
+            lfb.appendChild(el('button', {
+                class: 'btn-inline-feedback',
+                html: '💬 ' + t('feedbackOnLesson'),
+                onclick: () => openFeedbackModal({
+                    type: 'lesson',
+                    topicId: topic ? topic.id : null,
+                    topicTitle: topic ? topic.title : null,
+                    categoryId: cat ? cat.id : null,
+                    categoryTitle: cat ? cat.title : null
+                })
+            }));
+            head.appendChild(lfb);
             root.appendChild(head);
 
             if (hasCards) {
@@ -1251,6 +1882,24 @@
             const card = el('div', { class: 'card' });
             card.appendChild(el('p', { class: 'quiz-question', html: formatMathAndText(q.question) }));
             if (q.type === 'single_qa') renderQA(card, q, cat); else renderMC(card, q, cat);
+            const qfb = el('div', { attrs: { style: 'text-align: end; margin-top: 10px;' } });
+            qfb.appendChild(el('button', {
+                class: 'btn-inline-feedback',
+                html: '💬 ' + t('reportQuestionIssue'),
+                onclick: () => openFeedbackModal({
+                    type: 'quiz_question',
+                    topicId: topic ? topic.id : null,
+                    topicTitle: topic ? topic.title : null,
+                    categoryId: cat ? cat.id : null,
+                    categoryTitle: cat ? cat.title : null,
+                    qIdx: quiz.i,
+                    question: q.question,
+                    options: q.options || null,
+                    correct: q.correct != null ? q.correct : null,
+                    explanation: q.explanation || null
+                })
+            }));
+            card.appendChild(qfb);
             root.appendChild(card);
         }
 
@@ -1457,6 +2106,535 @@
             show('view-stats');
         }
 
+        // ============================ IN-APP FEEDBACK & GITHUB SYNC (OPTION B) ============================
+        const FEEDBACK_TAGS = [
+            { id: 'factual_error', en: '❌ Factual Error', he: '❌ טעות עובדתית' },
+            { id: 'typo', en: '✍️ Typo / Spelling', he: '✍️ שגיאת כתיב / ניסוח' },
+            { id: 'confusing_question', en: '❓ Confusing Question / Options', he: '❓ שאלה מבלבלת / לא ברורה' },
+            { id: 'wrong_correct_answer', en: '🎯 Wrong Answer Marked Correct', he: '🎯 תשובה שגויה סומנה כנכונה' },
+            { id: 'difficulty', en: '⚖️ Too Easy / Too Hard', he: '⚖️ קל מדי / קשה מדי' },
+            { id: 'feature_idea', en: '💡 Feature or Topic Idea', he: '💡 רעיון לפיצ\'ר או נושא' },
+            { id: 'ui_glitch', en: '📱 UI / Visual Glitch', he: '📱 באג תצוגה / ממשק' },
+            { id: 'other', en: '🔍 Other Observation', he: '🔍 הערה אחרת' }
+        ];
+
+        let activeFeedbackContext = null;
+        let selectedSentiment = 'negative'; // 'positive' | 'negative'
+        const selectedTags = new Set();
+
+        const feedbackStore = {
+            STORAGE_KEY: 'trivia_feedback_queue',
+            getQueue() {
+                try {
+                    return JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '[]');
+                } catch (e) {
+                    return [];
+                }
+            },
+            saveQueue(items) {
+                localStorage.setItem(this.STORAGE_KEY, JSON.stringify(items));
+                updateFeedbackBadges();
+            },
+            add(item) {
+                const queue = this.getQueue();
+                queue.unshift(item);
+                this.saveQueue(queue);
+            },
+            remove(id) {
+                const queue = this.getQueue().filter(x => x.id !== id);
+                this.saveQueue(queue);
+                renderQueueTab();
+            },
+            clear() {
+                this.saveQueue([]);
+                renderQueueTab();
+            },
+            markSynced(ids) {
+                const set = new Set(ids);
+                const queue = this.getQueue().map(item => {
+                    if (set.has(item.id)) return { ...item, synced: true };
+                    return item;
+                });
+                this.saveQueue(queue);
+                renderQueueTab();
+            },
+            getUnsyncedCount() {
+                return this.getQueue().filter(x => !x.synced).length;
+            }
+        };
+
+        function updateFeedbackBadges() {
+            const count = feedbackStore.getUnsyncedCount();
+            const fabBadge = document.getElementById('fab-badge');
+            const menuBadge = document.getElementById('menu-fb-badge');
+            const tabBadge = document.getElementById('tab-queue-badge');
+
+            [fabBadge, menuBadge, tabBadge].forEach(b => {
+                if (!b) return;
+                if (count > 0) {
+                    b.textContent = count;
+                    b.style.display = 'inline-block';
+                } else {
+                    b.style.display = 'none';
+                }
+            });
+
+            const queueBanner = document.getElementById('lbl-queue-count');
+            if (queueBanner) {
+                queueBanner.textContent = t('queueItemsWaiting', { n: count });
+            }
+        }
+
+        function captureCurrentContext(overrideContext) {
+            if (overrideContext) return overrideContext;
+            const topic = (currentMode === 'academic')
+                ? (currentAcademicIdx != null && appData && appData.academic_topics ? appData.academic_topics[currentAcademicIdx] : null)
+                : (currentTopicIdx != null && appData && appData.topics ? appData.topics[currentTopicIdx] : null);
+
+            let quizContext = null;
+            if (currentView === 'view-quiz' && typeof quiz !== 'undefined' && quiz && quiz.questions && quiz.questions[quiz.i]) {
+                const curItem = quiz.questions[quiz.i];
+                quizContext = {
+                    questionIdx: quiz.i,
+                    question: curItem.q ? curItem.q.question : null,
+                    options: curItem.q ? curItem.q.options : null,
+                    correctIndex: curItem.q ? curItem.q.correct : null,
+                    explanation: curItem.q ? (curItem.q.explanation || null) : null
+                };
+            }
+
+            return {
+                mode: currentMode,
+                view: currentView,
+                topicId: topic ? topic.id : null,
+                topicTitle: topic ? topic.title : null,
+                quiz: quizContext,
+                lang: LANG,
+                timestamp: new Date().toISOString()
+            };
+        }
+
+        function renderFeedbackTags() {
+            const container = document.getElementById('feedback-tags-grid');
+            if (!container) return;
+            container.innerHTML = '';
+            FEEDBACK_TAGS.forEach(tag => {
+                const isSelected = selectedTags.has(tag.id);
+                const label = (LANG === 'he' ? tag.he : tag.en);
+                const chip = el('button', {
+                    class: 'tag-chip' + (isSelected ? ' active' : ''),
+                    attrs: { type: 'button' },
+                    text: label,
+                    onclick: () => {
+                        if (selectedTags.has(tag.id)) selectedTags.delete(tag.id);
+                        else selectedTags.add(tag.id);
+                        chip.classList.toggle('active', selectedTags.has(tag.id));
+                    }
+                });
+                container.appendChild(chip);
+            });
+        }
+
+        function setFeedbackSentiment(val) {
+            selectedSentiment = val;
+            const negBtn = document.getElementById('btn-sentiment-negative');
+            const posBtn = document.getElementById('btn-sentiment-positive');
+            if (negBtn && posBtn) {
+                negBtn.classList.toggle('active', val === 'negative');
+                posBtn.classList.toggle('active', val === 'positive');
+            }
+        }
+
+        function openFeedbackModal(presetContext) {
+            activeFeedbackContext = captureCurrentContext(presetContext);
+            selectedTags.clear();
+            setFeedbackSentiment('negative');
+            const notesEl = document.getElementById('feedback-notes');
+            if (notesEl) notesEl.value = '';
+
+            const statusMsg = document.getElementById('feedback-form-msg');
+            if (statusMsg) statusMsg.style.display = 'none';
+
+            renderFeedbackTags();
+            updateContextPreview();
+            switchFeedbackTab('new');
+
+            // Load saved GitHub PAT/repo into fields
+            const savedToken = localStorage.getItem('trivia_gh_pat') || '';
+            const savedRepo = localStorage.getItem('trivia_gh_repo') || 'orishmuel1/family-travel-trivia';
+            const tokenInput = document.getElementById('gh-token-input');
+            const repoInput = document.getElementById('gh-repo-input');
+            if (tokenInput) tokenInput.value = savedToken;
+            if (repoInput) repoInput.value = savedRepo;
+
+            updateFeedbackModalLabels();
+            document.getElementById('feedback-modal').style.display = 'flex';
+        }
+
+        function closeFeedbackModal() {
+            document.getElementById('feedback-modal').style.display = 'none';
+        }
+
+        function updateContextPreview() {
+            const summarySpan = document.getElementById('lbl-context-summary');
+            const jsonPreview = document.getElementById('context-json-preview');
+            if (!activeFeedbackContext) return;
+
+            let summary = t('contextAutoAttached');
+            if (activeFeedbackContext.topicTitle) {
+                summary += `: ${activeFeedbackContext.topicTitle}`;
+            }
+            if (activeFeedbackContext.quiz) {
+                summary += ` (Q #${activeFeedbackContext.quiz.questionIdx + 1})`;
+            }
+            if (summarySpan) summarySpan.textContent = summary;
+            if (jsonPreview) jsonPreview.textContent = JSON.stringify(activeFeedbackContext, null, 2);
+        }
+
+        function updateFeedbackModalLabels() {
+            const setTxt = (id, str) => { const node = document.getElementById(id); if (node) node.textContent = str; };
+            setTxt('lbl-modal-title', t('feedbackModalTitle'));
+            setTxt('lbl-tab-new', t('tabNewFeedback'));
+            setTxt('lbl-tab-queue', t('tabQueueSync'));
+            setTxt('lbl-sentiment-title', t('sentimentTitle'));
+            setTxt('lbl-sentiment-neg', t('sentimentNegative'));
+            setTxt('lbl-sentiment-pos', t('sentimentPositive'));
+            setTxt('lbl-tags-title', t('tagsTitle'));
+            setTxt('lbl-notes-title', t('notesTitle'));
+            const notesEl = document.getElementById('feedback-notes');
+            if (notesEl) notesEl.placeholder = t('notesPlaceholder');
+            setTxt('lbl-btn-save-offline', t('btnSaveOffline'));
+            setTxt('lbl-btn-save-sync', t('btnSaveSync'));
+
+            setTxt('lbl-gh-settings-title', t('ghSettingsTitle'));
+            const helpEl = document.getElementById('lbl-gh-help');
+            if (helpEl) helpEl.innerHTML = t('ghHelp');
+            setTxt('lbl-gh-token-label', t('ghTokenLabel'));
+            setTxt('lbl-gh-repo-label', t('ghRepoLabel'));
+            setTxt('lbl-save-gh-config', t('btnSaveGhConfig'));
+            setTxt('lbl-test-gh-config', t('btnTestGhConfig'));
+            setTxt('lbl-btn-sync-gh', t('btnSyncAllGh'));
+            setTxt('lbl-export-json', t('btnExportJson'));
+            setTxt('lbl-copy-md', t('btnCopyMd'));
+            setTxt('lbl-clear-queue', t('btnClearQueue'));
+
+            renderFeedbackTags();
+            updateFeedbackBadges();
+        }
+
+        function switchFeedbackTab(tab) {
+            const btnNew = document.getElementById('tab-btn-new');
+            const btnQueue = document.getElementById('tab-btn-queue');
+            const contentNew = document.getElementById('tab-content-new');
+            const footerNew = document.getElementById('tab-footer-new');
+            const contentQueue = document.getElementById('tab-content-queue');
+
+            if (tab === 'new') {
+                btnNew.classList.add('active');
+                btnQueue.classList.remove('active');
+                contentNew.style.display = 'block';
+                footerNew.style.display = 'flex';
+                contentQueue.style.display = 'none';
+            } else {
+                btnNew.classList.remove('active');
+                btnQueue.classList.add('active');
+                contentNew.style.display = 'none';
+                footerNew.style.display = 'none';
+                contentQueue.style.display = 'block';
+                renderQueueTab();
+            }
+        }
+
+        function renderQueueTab() {
+            const listEl = document.getElementById('queue-items-list');
+            if (!listEl) return;
+            const items = feedbackStore.getQueue();
+            listEl.innerHTML = '';
+
+            if (items.length === 0) {
+                listEl.innerHTML = `<div class="empty">${t('queueEmpty')}</div>`;
+                return;
+            }
+
+            items.forEach(item => {
+                const card = el('div', { class: 'queue-item-card' });
+                const head = el('div', { class: 'queue-item-header' });
+                
+                const meta = el('span', { class: 'queue-item-meta' });
+                const dateStr = item.timestamp ? new Date(item.timestamp).toLocaleString(LANG === 'he' ? 'he-IL' : 'en-US', { dateStyle: 'short', timeStyle: 'short' }) : '';
+                const sentimentIcon = item.sentiment === 'positive' ? '👍' : '👎';
+                meta.textContent = `${sentimentIcon} ${item.context && item.context.topicTitle ? item.context.topicTitle : 'General'} • ${dateStr}`;
+                head.appendChild(meta);
+
+                const statusBadge = el('span', {
+                    class: 'badge ' + (item.synced ? 'badge-done' : 'badge-partial'),
+                    text: item.synced ? '✓ Synced' : 'Pending'
+                });
+                head.appendChild(statusBadge);
+
+                const delBtn = el('button', {
+                    class: 'queue-item-del-btn',
+                    html: '&times;',
+                    attrs: { title: 'Delete' },
+                    onclick: () => feedbackStore.remove(item.id)
+                });
+                head.appendChild(delBtn);
+                card.appendChild(head);
+
+                if (item.notes) {
+                    card.appendChild(el('div', { class: 'queue-item-notes', text: item.notes }));
+                }
+
+                if (item.tags && item.tags.length > 0) {
+                    const tagRow = el('div', { class: 'queue-item-tags' });
+                    item.tags.forEach(tId => {
+                        const tagObj = FEEDBACK_TAGS.find(x => x.id === tId);
+                        const label = tagObj ? (LANG === 'he' ? tagObj.he : tagObj.en) : tId;
+                        tagRow.appendChild(el('span', { class: 'queue-tag-badge', text: label }));
+                    });
+                    card.appendChild(tagRow);
+                }
+
+                listEl.appendChild(card);
+            });
+        }
+
+        async function submitFeedback(shouldSync) {
+            const notes = (document.getElementById('feedback-notes').value || '').trim();
+            const tags = Array.from(selectedTags);
+
+            if (!notes && tags.length === 0) {
+                showFeedbackFormMsg(LANG === 'he' ? 'נא לבחור לפחות תגית אחת או להקליד הערה.' : 'Please choose at least one category tag or write a note.', 'error');
+                return;
+            }
+
+            const feedbackEntry = {
+                id: 'fb_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
+                timestamp: new Date().toISOString(),
+                sentiment: selectedSentiment,
+                tags: tags,
+                notes: notes,
+                context: activeFeedbackContext || captureCurrentContext(),
+                synced: false
+            };
+
+            feedbackStore.add(feedbackEntry);
+
+            if (shouldSync) {
+                showFeedbackFormMsg(LANG === 'he' ? 'מסנכרן ל-GitHub...' : 'Syncing to GitHub...', 'info');
+                try {
+                    await syncFeedbackToGitHub([feedbackEntry]);
+                    feedbackStore.markSynced([feedbackEntry.id]);
+                    showFeedbackFormMsg(t('syncSuccessMsg', { n: 1 }), 'success');
+                    setTimeout(() => { closeFeedbackModal(); }, 1200);
+                } catch (err) {
+                    console.error('GitHub sync error:', err);
+                    showFeedbackFormMsg(t('syncFailMsg', { err: err.message }), 'error');
+                }
+            } else {
+                showFeedbackFormMsg(t('savedOfflineMsg'), 'success');
+                setTimeout(() => { closeFeedbackModal(); }, 1000);
+            }
+        }
+
+        function showFeedbackFormMsg(msg, type) {
+            const elMsg = document.getElementById('feedback-form-msg');
+            if (!elMsg) return;
+            elMsg.textContent = msg;
+            elMsg.className = 'feedback-status-msg ' + type;
+            elMsg.style.display = 'block';
+        }
+
+        function showSyncStatusMsg(msg, type) {
+            const elMsg = document.getElementById('sync-status-msg');
+            if (!elMsg) return;
+            elMsg.textContent = msg;
+            elMsg.className = 'feedback-status-msg ' + type;
+            elMsg.style.display = 'block';
+        }
+
+        // ============================ GITHUB API SYNC (OPTION B) ============================
+        async function syncFeedbackToGitHub(itemsToSync) {
+            const token = (localStorage.getItem('trivia_gh_pat') || '').trim();
+            const repo = (localStorage.getItem('trivia_gh_repo') || 'orishmuel1/family-travel-trivia').trim();
+            const branch = 'main';
+            const filePath = 'feedback/feedback_queue.json';
+
+            if (!token) {
+                throw new Error(t('tokenMissingMsg'));
+            }
+
+            const apiUrl = `https://api.github.com/repos/${repo}/contents/${filePath}`;
+            let sha = null;
+            let existingList = [];
+
+            // 1. Fetch existing queue file
+            const getRes = await fetch(`${apiUrl}?ref=${branch}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (getRes.status === 200) {
+                const fileData = await getRes.json();
+                sha = fileData.sha;
+                try {
+                    const binStr = atob(fileData.content.replace(/\s/g, ''));
+                    const bytes = Uint8Array.from(binStr, c => c.charCodeAt(0));
+                    const decodedStr = new TextDecoder('utf-8').decode(bytes);
+                    existingList = JSON.parse(decodedStr);
+                    if (!Array.isArray(existingList)) existingList = [];
+                } catch (e) {
+                    console.warn('Could not parse existing queue JSON, starting fresh array', e);
+                    existingList = [];
+                }
+            } else if (getRes.status === 404) {
+                sha = null;
+                existingList = [];
+            } else if (getRes.status === 401 || getRes.status === 403) {
+                throw new Error(LANG === 'he'
+                    ? 'טוקן ה-GitHub אינו תקין או שחסרה הרשאת כתיבה'
+                    : 'GitHub token is invalid or missing repo/contents write permission');
+            } else {
+                throw new Error(`GitHub API request failed (${getRes.status})`);
+            }
+
+            // Combine and deduplicate
+            const existingIds = new Set(existingList.map(item => item.id));
+            const newItems = itemsToSync.filter(item => !existingIds.has(item.id));
+            const combined = [...existingList, ...newItems];
+
+            // Modern UTF-8 Base64 encoding
+            const jsonStr = JSON.stringify(combined, null, 2);
+            const utf8Bytes = new TextEncoder().encode(jsonStr);
+            let binary = '';
+            utf8Bytes.forEach(b => binary += String.fromCharCode(b));
+            const encodedContent = btoa(binary);
+
+            // 2. Commit back to GitHub
+            const putRes = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `feat(feedback): add ${newItems.length} user feedback entries from app`,
+                    content: encodedContent,
+                    branch: branch,
+                    ...(sha ? { sha } : {})
+                })
+            });
+
+            if (!putRes.ok) {
+                const errData = await putRes.json().catch(() => ({}));
+                throw new Error(errData.message || `Failed to commit to GitHub (${putRes.status})`);
+            }
+
+            return newItems.length;
+        }
+
+        async function syncAllPendingToGitHub() {
+            const allItems = feedbackStore.getQueue();
+            const unsynced = allItems.filter(x => !x.synced);
+
+            if (unsynced.length === 0) {
+                showSyncStatusMsg(t('syncNoItems'), 'info');
+                return;
+            }
+
+            showSyncStatusMsg(LANG === 'he' ? 'מתחבר ל-GitHub API...' : 'Connecting to GitHub API...', 'info');
+            try {
+                const count = await syncFeedbackToGitHub(unsynced);
+                feedbackStore.markSynced(unsynced.map(x => x.id));
+                showSyncStatusMsg(t('syncSuccessMsg', { n: count }), 'success');
+            } catch (err) {
+                console.error('Sync failed:', err);
+                showSyncStatusMsg(t('syncFailMsg', { err: err.message }), 'error');
+            }
+        }
+
+        async function testGitHubConnection() {
+            const token = (document.getElementById('gh-token-input').value || '').trim();
+            const repo = (document.getElementById('gh-repo-input').value || '').trim();
+
+            if (!token) {
+                showSyncStatusMsg(t('tokenMissingMsg'), 'error');
+                return;
+            }
+
+            showSyncStatusMsg(LANG === 'he' ? 'מאמת טוקן ומאגר ב-GitHub...' : 'Verifying GitHub token & repository...', 'info');
+            try {
+                const res = await fetch(`https://api.github.com/repos/${repo}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                if (res.ok) {
+                    showSyncStatusMsg(t('tokenTestSuccess'), 'success');
+                } else {
+                    showSyncStatusMsg(t('tokenTestFail'), 'error');
+                }
+            } catch (e) {
+                showSyncStatusMsg(t('tokenTestFail'), 'error');
+            }
+        }
+
+        function saveGitHubSettings() {
+            const token = (document.getElementById('gh-token-input').value || '').trim();
+            const repo = (document.getElementById('gh-repo-input').value || 'orishmuel1/family-travel-trivia').trim();
+            localStorage.setItem('trivia_gh_pat', token);
+            localStorage.setItem('trivia_gh_repo', repo);
+            showSyncStatusMsg(t('tokenSavedMsg'), 'success');
+        }
+
+        function exportFeedbackJson() {
+            const queue = feedbackStore.getQueue();
+            const blob = new Blob([JSON.stringify(queue, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `trivia_feedback_${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function copyFeedbackMarkdown() {
+            const queue = feedbackStore.getQueue();
+            if (queue.length === 0) {
+                showSyncStatusMsg(t('queueEmpty'), 'info');
+                return;
+            }
+
+            let md = `# App Feedback Queue (${queue.length} items)\n\n`;
+            queue.forEach((item, idx) => {
+                const sentiment = item.sentiment === 'positive' ? '👍 Positive / Idea' : '👎 Issue / Bug';
+                const dateStr = item.timestamp ? new Date(item.timestamp).toLocaleString() : '';
+                const tagsStr = (item.tags || []).join(', ') || 'None';
+                md += `### ${idx + 1}. [${sentiment}] ${dateStr}\n`;
+                if (item.context && item.context.topicTitle) {
+                    md += `- **Topic:** ${item.context.topicTitle} (${item.context.topicId || ''})\n`;
+                }
+                if (item.context && item.context.quiz) {
+                    md += `- **Question #${item.context.quiz.questionIdx + 1}:** "${item.context.quiz.question}"\n`;
+                }
+                md += `- **Categories / Tags:** ${tagsStr}\n`;
+                md += `- **Notes:** ${item.notes || '(None)'}\n`;
+                md += `- **Status:** ${item.synced ? 'Synced to GitHub' : 'Pending'}\n\n`;
+            });
+
+            navigator.clipboard.writeText(md).then(() => {
+                showSyncStatusMsg(t('copiedMarkdownMsg'), 'success');
+            }).catch(err => {
+                console.error('Clipboard failed', err);
+            });
+        }
+
         // ============================ DATA LOADING ============================
         const DB_NAME = 'FamilyTriviaDB', DB_VERSION = 2, STORE = 'app_data', KEY = 'trivia_json';
         function openDB() {
@@ -1509,6 +2687,7 @@
         document.getElementById('menu-academic').onclick = () => setAppMode('academic');
         document.getElementById('menu-trivia').onclick = () => setAppMode('trivia');
         document.getElementById('menu-stats').onclick = renderStats;
+        document.getElementById('menu-feedback').onclick = () => { closeMenu(); openFeedbackModal(); };
         document.getElementById('menu-reset').onclick = () => {
             if (confirm(t('resetConfirm'))) {
                 stats.reset();
@@ -1517,6 +2696,35 @@
                 else renderHome();
             }
         };
+
+        // Wire up feedback modal interactions
+        document.getElementById('fab-feedback').onclick = () => openFeedbackModal();
+        document.getElementById('btn-close-feedback').onclick = closeFeedbackModal;
+        document.getElementById('tab-btn-new').onclick = () => switchFeedbackTab('new');
+        document.getElementById('tab-btn-queue').onclick = () => switchFeedbackTab('queue');
+        document.getElementById('btn-sentiment-negative').onclick = () => setFeedbackSentiment('negative');
+        document.getElementById('btn-sentiment-positive').onclick = () => setFeedbackSentiment('positive');
+        document.getElementById('btn-save-offline').onclick = () => submitFeedback(false);
+        document.getElementById('btn-save-sync').onclick = () => submitFeedback(true);
+        document.getElementById('btn-save-gh-config').onclick = saveGitHubSettings;
+        document.getElementById('btn-test-gh-config').onclick = testGitHubConnection;
+        document.getElementById('btn-sync-all-gh').onclick = syncAllPendingToGitHub;
+        document.getElementById('btn-export-json').onclick = exportFeedbackJson;
+        document.getElementById('btn-copy-md').onclick = copyFeedbackMarkdown;
+        document.getElementById('btn-clear-queue').onclick = () => {
+            if (confirm(t('clearConfirm'))) feedbackStore.clear();
+        };
+        document.getElementById('context-toggle').onclick = () => {
+            const box = document.getElementById('context-details-box');
+            if (box) box.style.display = box.style.display === 'none' ? 'block' : 'none';
+        };
+
+        // Close modal when clicking outside modal-box
+        document.getElementById('feedback-modal').onclick = (e) => {
+            if (e.target.id === 'feedback-modal') closeFeedbackModal();
+        };
+
+        updateFeedbackBadges();
 
         window.addEventListener('DOMContentLoaded', loadDatabase);
         if ('serviceWorker' in navigator) {
