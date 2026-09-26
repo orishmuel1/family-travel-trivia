@@ -36,3 +36,6 @@ Thumbs.db
 
 # Application Local Database Output
 # (Only docs/data.json is tracked for distribution, local run data can be ignored if needed)
+
+# Temporary scratch and migration scripts
+scratch/
