@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "fb_1790393039983_shg1ba",
+    "timestamp": "2026-09-26T03:23:59.983Z",
+    "sentiment": "negative",
+    "tags": [],
+    "notes": "First test feedback from Ori app",
+    "context": {
+      "mode": "trivia",
+      "view": "view-home",
+      "topicId": null,
+      "topicTitle": null,
+      "quiz": null,
+      "lang": "en",
+      "timestamp": "2026-09-26T03:22:35.923Z"
+    },
+    "status": "resolved",
+    "resolvedAt": "2026-09-26T03:28:00.000Z",
+    "resolution": "Verified end-to-end feedback submission via app, GitHub API sync, git pull, and archival lifecycle."
+  }
+]
