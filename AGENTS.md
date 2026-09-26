@@ -34,26 +34,32 @@ This document is the master instruction set and quality standard for AI agents (
 
 Whenever generating or revising topics in `topics/` or `academic_topics/`, the agent must strictly adhere to these quality standards.
 
-### A. Bilingual Parity (English & Hebrew)
+### A. Bilingual Parity & Language Purity
 1. **Dual Files:** Every topic must be created as a pair:
    - `topics/<slug>_en.yaml` (English version)
    - `topics/<slug>_he.yaml` (Hebrew version)
 2. **Structural Mirroring:**
    - Both files must share identical `id` values for the topic, categories, and cards (all IDs must stay in English lowercase `snake_case`).
    - The number of categories, cards, and trivia questions must match 1:1.
-3. **Natural Hebrew Phrasing:**
+3. **Absolute Language Purity (100% Hebrew in `_he.yaml`):**
+   - In Hebrew files, all visible text (titles, descriptions, questions, options, explanations, card titles, facts) must be written in natural, fluent Hebrew.
+   - Avoid lingering English words or untranslated jargon in options. If an acronym is globally recognized, provide the Hebrew equivalent or Hebrew transliteration with Hebrew gershayim (e.g. `נאס״א (NASA)`).
+4. **Natural Hebrew Phrasing:**
    - Never use literal or machine-translated Hebrew. The tone must be natural, engaging, and grammatically impeccable.
-4. **The Hebrew Quote Rule (Crucial YAML Safety):**
+5. **The Hebrew Quote Rule (Crucial YAML Safety):**
    - In Hebrew YAML strings enclosed in double quotes `"..."`, **NEVER** use standard ASCII double quotes `"` inside the string.
    - For acronyms and quotes, use Hebrew gershayim `״` (e.g., `תנ״ך`, `צה״ל`, `מכ״ם`, `ארה״ב`, `דו״ח`) or single quotes `'`. Raw double quotes break the YAML parser.
 
 ---
 
-### B. Topic & Category Structure
-1. **First Category Rule:** The first category must **always** be `Important Facts` (`id: important_facts`).
-2. **Extra Categories:** Include 2 to 4 thematic categories exploring intriguing angles of the subject.
-3. **Cards per Category:** Provide **8 to 12 cards** per category (each card represents a distinct subcategory entity or milestone).
-4. **Facts per Card:** Exactly **4 to 5 bullet points** per card.
+### B. Topic & Category Structure (The Non-Expert Reader Lens)
+1. **The Non-Expert Car-Listener Lens:**
+   - Write from the perspective of someone reading aloud to family members or someone not familiar with the subject.
+   - Favor vivid storytelling, relatable analogies, and interesting mechanisms over dry encyclopedic dates or obscure academic jargon.
+2. **First Category Rule:** The first category must **always** be `Important Facts` (`id: important_facts`).
+3. **Extra Categories:** Include 2 to 4 thematic categories exploring intriguing angles of the subject.
+4. **Cards per Category:** Provide **8 to 12 cards** per category (each card represents a distinct subcategory entity or milestone).
+5. **Facts per Card:** Exactly **4 to 5 bullet points** per card.
    - Facts must be self-contained, factually verified, and narrative-driven.
    - Avoid dry one-sentence statistics. Explain the *context*, the *mechanism*, or the *surprising story* behind the fact.
 
@@ -67,13 +73,18 @@ Whenever generating or revising topics in `topics/` or `academic_topics/`, the a
    - `correct` is a 0-based integer index (`0`, `1`, `2`, or `3`).
    - Every question must include an `explanation` field that explains why the correct answer is true, adding fun context and reinforcing the learning cards.
 3. **Semantic Homogeneity of Distractors (The Golden Rule):**
-   - All 4 options **must belong to the exact same semantic class**.
+   - All 4 options **must belong to the exact same semantic class and plausibility tier**.
    - *Example (Good):* If the answer is an Apollo astronaut (Neil Armstrong), all 3 distractors must be Apollo astronauts (Buzz Aldrin, Michael Collins, Alan Shepard).
    - *Example (Bad):* Mixing an astronaut with a rocket name, a year, and a politician.
-   - Never include silly, obvious, or throwaway choices ("None of the above", completely unrelated words).
-4. **Fairness & Difficulty:**
+   - Never include silly, obvious, or throwaway choices ("None of the above", completely unrelated words). The answer should not be guessable purely by elimination.
+4. **The "No Clue Leakage" Rule (Stem Independence):**
+   - Questions must never reveal or give away the answer in their own phrasing.
+   - Avoid linguistic or grammatical tells (e.g. in Hebrew, a feminine verb or adjective in the question stem that only matches the feminine answer choice).
+   - Avoid repeating unique words from the question in only the correct answer.
+5. **Fairness & Pragmatic Flexibility:**
    - Avoid trick questions, semantic traps, or ambiguous wording.
    - Questions should be rewarding for someone who listened to the learning cards, yet plausible enough to make listeners think.
+   - **Pragmatic Flexibility Principle:** These guidelines are meant to ensure high quality and delight, not rigid dogma. If the specific context of a subject or question genuinely justifies a slight departure (e.g. a creative format or unavoidable terminology), exercise thoughtful judgment.
 
 ---
 

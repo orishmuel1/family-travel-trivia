@@ -439,88 +439,141 @@ categories:
     - He signed the monumental Infrastructure Investment and Jobs Act to upgrade American roads, bridges,
       and public transit.
   trivia:
-  - type: multiple_choice
-    question: Which president spoke English as a second language, having grown up speaking Dutch?
-    options:
-    - Martin Van Buren
-    - Rutherford B. Hayes
-    - Herbert Hoover
-    - Lou Henry
-    correct: 0
-    explanation: His native language was Dutch, making him the only US president who spoke English as
-      a second language.
-  - type: multiple_choice
-    question: Who was the shortest president in US history, standing at just 5 feet 4 inches?
-    options:
-    - John Quincy Adams
-    - James Madison
-    - Benjamin Harrison
-    - Harry S. Truman
-    correct: 1
-    explanation: James Madison was the shortest US president in history, standing at 5 feet 4 inches and
-      weighing around 100 pounds.
-  - type: multiple_choice
-    question: Which president was an elite wrestler before his political career?
-    explanation: Abraham Lincoln was the tallest US president in history, standing at 6 feet 4 inches
-      without his famous stovepipe hat.
-    options:
-    - Abraham Lincoln
-    - Martin Van Buren
-    - Rutherford B. Hayes
-    - Herbert Hoover
-    correct: 0
-  - type: multiple_choice
-    question: Who is the only person to serve as both US President and Chief Justice of the Supreme Court?
-    explanation: William Howard Taft is the only person in history to serve as both President and Chief
-      Justice of the Supreme Court.
-    options:
-    - William Howard Taft
-    - Martin Van Buren
-    - Rutherford B. Hayes
-    - Herbert Hoover
-    correct: 0
-  - type: multiple_choice
-    question: Which president was too terrified of electrical shocks to touch the newly installed light
-      switches?
-    options:
-    - Chester A. Arthur
-    - Benjamin Harrison
-    - William McKinley
-    - Warren G. Harding
-    correct: 1
-    explanation: He was the first president to have electricity installed in the White House, but he was
-      too terrified of shocks to touch the switches.
-  - type: multiple_choice
-    question: Which president taught his pet parrot how to curse?
-    explanation: He taught his pet parrot how to curse, and the bird reportedly had to be removed from
-      Jackson's funeral for swearing.
-    options:
-    - Andrew Jackson
-    - Martin Van Buren
-    - Rutherford B. Hayes
-    - Herbert Hoover
-    correct: 0
-  - type: multiple_choice
-    question: Who was the only president to be unanimously elected by the Electoral College?
-    explanation: George Washington was the only US president to be unanimously elected by the Electoral
-      College.
-    options:
-    - George Washington
-    - Martin Van Buren
-    - Rutherford B. Hayes
-    - Herbert Hoover
-    correct: 0
-  - type: multiple_choice
-    question: Which president survived a shooting in 1912 and still delivered a 90-minute speech with
-      a bullet in his chest?
-    options:
-    - Andrew Jackson
-    - Theodore Roosevelt
-    - Ronald Reagan
-    - Gerald Ford
-    correct: 1
-    explanation: He survived an assassination attempt in 1912 and finished his 90-minute speech with a
-      bullet lodged in his chest.
+    - type: multiple_choice
+      question: "Which president spoke English as a second language, having grown up speaking Dutch in New York?"
+      options:
+        - "Martin Van Buren"
+        - "Theodore Roosevelt"
+        - "Franklin D. Roosevelt"
+        - "James Monroe"
+      correct: 0
+      explanation: "Martin Van Buren grew up in the Dutch-speaking community of Kinderhook, New York, making him the only president whose native language was not English."
+    - type: multiple_choice
+      question: "Who was the shortest president in US history, standing at just 5 feet 4 inches?"
+      options:
+        - "John Quincy Adams"
+        - "James Madison"
+        - "Benjamin Harrison"
+        - "Harry S. Truman"
+      correct: 1
+      explanation: "James Madison was the shortest US president, measuring 5 feet 4 inches and weighing around 100 pounds."
+    - type: multiple_choice
+      question: "Which president was a renowned wrestler in his youth, competing in hundreds of bouts before his political career?"
+      options:
+        - "Abraham Lincoln"
+        - "Andrew Jackson"
+        - "Ulysses S. Grant"
+        - "Zachary Taylor"
+      correct: 0
+      explanation: "Abraham Lincoln was an elite catch-as-catch-can wrestler in Illinois, losing only a single recorded match out of roughly 300."
+    - type: multiple_choice
+      question: "Who is the only person in American history to serve as both President of the United States and Chief Justice of the Supreme Court?"
+      options:
+        - "William Howard Taft"
+        - "John Quincy Adams"
+        - "William McKinley"
+        - "Woodrow Wilson"
+      correct: 0
+      explanation: "William Howard Taft served as the 27th President (1909–1913) and later as Chief Justice of the Supreme Court (1921–1930)."
+    - type: multiple_choice
+      question: "Which president was reportedly so afraid of electrical shocks that he avoided touching the White House's newly installed light switches?"
+      options:
+        - "Chester A. Arthur"
+        - "Benjamin Harrison"
+        - "Grover Cleveland"
+        - "William McKinley"
+      correct: 1
+      explanation: "Benjamin Harrison oversaw the installation of electricity in the White House in 1891, but he and his family were so fearful of shocks that staff often operated the switches."
+    - type: multiple_choice
+      question: "Which president famously taught his pet parrot to curse, requiring the bird to be removed from his funeral for swearing?"
+      options:
+        - "Andrew Jackson"
+        - "Zachary Taylor"
+        - "James K. Polk"
+        - "Millard Fillmore"
+      correct: 0
+      explanation: "Andrew Jackson's pet African Grey parrot, Poll, shocked attendees at Jackson's funeral in 1845 by shrieking profanities the former general had taught it."
+    - type: multiple_choice
+      question: "Which president was the only one in US history to be elected unanimously by the Electoral College?"
+      options:
+        - "George Washington"
+        - "Thomas Jefferson"
+        - "James Monroe"
+        - "John Adams"
+      correct: 0
+      explanation: "George Washington won every single electoral vote cast in both the 1789 and 1792 presidential elections."
+    - type: multiple_choice
+      question: "Which former president survived an assassination attempt in 1912 and went on to deliver a 90-minute speech with a bullet in his chest?"
+      options:
+        - "Andrew Jackson"
+        - "Theodore Roosevelt"
+        - "Ronald Reagan"
+        - "Gerald Ford"
+      correct: 1
+      explanation: "Theodore Roosevelt was shot while campaigning in Milwaukee in 1912; his eyeglass case and folded speech slowed the bullet, and he finished speaking before going to the hospital."
+    - type: multiple_choice
+      question: "Who was the only US president to resign from office?"
+      options:
+        - "Richard Nixon"
+        - "Andrew Johnson"
+        - "Bill Clinton"
+        - "Gerald Ford"
+      correct: 0
+      explanation: "Richard Nixon resigned on August 9, 1974, following the Watergate scandal and impending impeachment by the House of Representatives."
+    - type: multiple_choice
+      question: "Which president is the only person to serve as both Vice President and President without ever being elected to either office by voters?"
+      options:
+        - "Gerald Ford"
+        - "Nelson Rockefeller"
+        - "Spiro Agnew"
+        - "Chester A. Arthur"
+      correct: 0
+      explanation: "Gerald Ford was appointed Vice President under the 25th Amendment after Spiro Agnew resigned, and assumed the presidency when Richard Nixon resigned."
+    - type: multiple_choice
+      question: "Which president served as the Supreme Allied Commander in Europe during World War II before entering the White House?"
+      options:
+        - "Dwight D. Eisenhower"
+        - "Douglas MacArthur"
+        - "George C. Marshall"
+        - "Ulysses S. Grant"
+      correct: 0
+      explanation: "Dwight D. Eisenhower commanded the Allied expeditionary forces in Europe, planning Operation Overlord (D-Day), before winning the presidency in 1952."
+    - type: multiple_choice
+      question: "Who was the youngest person ever to be elected President of the United States?"
+      options:
+        - "John F. Kennedy"
+        - "Theodore Roosevelt"
+        - "Bill Clinton"
+        - "Barack Obama"
+      correct: 0
+      explanation: "John F. Kennedy was elected at age 43 in 1960. (Theodore Roosevelt succeeded to the presidency at age 42 upon McKinley's death, but was not elected at that age)."
+    - type: multiple_choice
+      question: "Which president was a successful Hollywood film actor and union leader before entering national politics?"
+      options:
+        - "Ronald Reagan"
+        - "Donald Trump"
+        - "Warren G. Harding"
+        - "Jimmy Carter"
+      correct: 0
+      explanation: "Ronald Reagan appeared in over 50 motion pictures and served as president of the Screen Actors Guild before becoming Governor of California and President."
+    - type: multiple_choice
+      question: "Which president co-founded the Department of Homeland Security following the September 11 terrorist attacks?"
+      options:
+        - "George W. Bush"
+        - "Bill Clinton"
+        - "Barack Obama"
+        - "George H.W. Bush"
+      correct: 0
+      explanation: "George W. Bush created the Department of Homeland Security in 2002 to unify federal anti-terrorism and border security agencies after 9/11."
+    - type: multiple_choice
+      question: "Who was the first African American to be elected President of the United States?"
+      options:
+        - "Barack Obama"
+        - "Colin Powell"
+        - "Jesse Jackson"
+        - "Cory Booker"
+      correct: 0
+      explanation: "Barack Obama made history in 2008 when he was elected as the 44th President of the United States."
 - id: wars_and_conflict
   title: Wars and Conflict
   description: 'A deep dive into how these historical leaders managed massive military crises, international
@@ -609,89 +662,141 @@ categories:
     - He ordered a massive surge of 30,000 additional US troops into Afghanistan to combat rising Taliban
       insurgencies.
   trivia:
-  - type: multiple_choice
-    question: Which president led the 'Rough Riders' cavalry unit during the Spanish-American War?
-    options:
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    - John F. Kennedy
-    correct: 1
-    explanation: Roosevelt achieved national fame during the Spanish-American War by leading the volunteer
-      cavalry regiment known as the 'Rough Riders'.
-  - type: multiple_choice
-    question: During which historical crisis did John F. Kennedy order a naval 'quarantine' of an island
-      nation?
-    options:
-    - World War II
-    - The Korean War
-    - The Cuban Missile Crisis
-    - The Vietnam War
-    correct: 2
-    explanation: Kennedy navigated the 1962 Cuban Missile Crisis, widely considered the closest the world
-      has ever come to an all-out nuclear war.
-  - type: multiple_choice
-    question: Which historic document did Abraham Lincoln issue in 1863 to free enslaved individuals in
-      rebellious territory?
-    explanation: He issued the Emancipation Proclamation in 1863 as a vital military measure, freeing
-      enslaved people in Confederate states.
-    options:
-    - The Emancipation Proclamation
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: On Christmas night 1776, George Washington led his troops across which icy river for a surprise
-      attack?
-    explanation: His brilliant surprise crossing of the icy Delaware River on Christmas night 1776 led
-      to a crucial victory at Trenton.
-    options:
-    - The Delaware River
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which president secretly authorized the Manhattan Project to develop atomic weapons?
-    options:
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    - John F. Kennedy
-    - Ronald Reagan
-    correct: 1
-    explanation: He secretly authorized the Manhattan Project, the top-secret scientific program that
-      successfully developed the first atomic weapons.
-  - type: multiple_choice
-    question: What nickname was given to Ronald Reagan's high-tech Strategic Defense Initiative?
-    explanation: He championed the Strategic Defense Initiative, a space-based anti-missile shield project
-      nicknamed 'Star Wars' by the media.
-    options:
-    - Star Wars
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which president ordered the successful military raid that eliminated Osama bin Laden?
-    explanation: Obama authorized the highly secret 2011 Navy SEAL raid in Pakistan that resulted in the
-      death of terrorist leader Osama bin Laden.
-    options:
-    - Barack Obama
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: The First Barbary War fought against North African pirates was authorized by which US president?
-    options:
-    - George Washington
-    - Thomas Jefferson
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    correct: 1
-    explanation: Jefferson authorized the First Barbary War in 1801, marking the first time American forces
-      fought on foreign seas and shores.
+    - type: multiple_choice
+      question: "Which president led the volunteer cavalry regiment nicknamed the 'Rough Riders' during the Spanish-American War?"
+      options:
+        - "Theodore Roosevelt"
+        - "Ulysses S. Grant"
+        - "Zachary Taylor"
+        - "Rutherford B. Hayes"
+      correct: 0
+      explanation: "Theodore Roosevelt resigned as Assistant Secretary of the Navy to lead the 1st US Volunteer Cavalry (the 'Rough Riders') in Cuba in 1898."
+    - type: multiple_choice
+      question: "During which Cold War crisis did John F. Kennedy institute a naval 'quarantine' to prevent offensive weapons from reaching an island nation?"
+      options:
+        - "The Cuban Missile Crisis"
+        - "The Berlin Crisis of 1961"
+        - "The Suez Crisis"
+        - "The Gulf of Tonkin Incident"
+      correct: 0
+      explanation: "In October 1962, President Kennedy ordered a naval blockade around Cuba, avoiding an outright air strike and successfully resolving the Soviet missile standoff."
+    - type: multiple_choice
+      question: "Which executive proclamation did Abraham Lincoln issue in 1863, declaring enslaved people in Confederate states to be permanently free?"
+      options:
+        - "The Emancipation Proclamation"
+        - "The Gettysburg Address"
+        - "The Monroe Doctrine"
+        - "The Northwest Ordinance"
+      correct: 0
+      explanation: "Issued on January 1, 1863, the Emancipation Proclamation applied to rebellious Confederate territories and transformed the Civil War into a moral crusade against slavery."
+    - type: multiple_choice
+      question: "On Christmas night 1776, George Washington led continental forces across which icy river for a surprise raid on Trenton?"
+      options:
+        - "The Delaware River"
+        - "The Potomac River"
+        - "The Hudson River"
+        - "The Ohio River"
+      correct: 0
+      explanation: "Washington crossed the freezing Delaware River in Durham boats on December 25–26, 1776, achieving a stunning surprise victory against Hessian mercenaries in Trenton."
+    - type: multiple_choice
+      question: "Which president authorized the top-secret Manhattan Project to develop the world's first atomic bomb?"
+      options:
+        - "Franklin D. Roosevelt"
+        - "Harry S. Truman"
+        - "Herbert Hoover"
+        - "Dwight D. Eisenhower"
+      correct: 0
+      explanation: "Franklin D. Roosevelt established the Manhattan Project in late 1941 following a warning letter from Albert Einstein and Leo Szilard about German atomic research."
+    - type: multiple_choice
+      question: "What popular nickname was given to Ronald Reagan's proposed space-based Strategic Defense Initiative (SDI)?"
+      options:
+        - "Star Wars"
+        - "Iron Dome"
+        - "Manhattan Project"
+        - "Apollo Shield"
+      correct: 0
+      explanation: "Critics and the media dubbed the space-based missile defense system 'Star Wars' after the famous science-fiction film franchise."
+    - type: multiple_choice
+      question: "Which president authorized the covert Navy SEAL raid in Abbottabad, Pakistan that killed al-Qaeda founder Osama bin Laden?"
+      options:
+        - "Barack Obama"
+        - "George W. Bush"
+        - "Bill Clinton"
+        - "Donald Trump"
+      correct: 0
+      explanation: "President Barack Obama gave the green light for Operation Neptune Spear in May 2011, culminating in the death of Osama bin Laden."
+    - type: multiple_choice
+      question: "Which early US president sent American naval squadrons to North Africa to fight the First Barbary War against pirate extortion?"
+      options:
+        - "Thomas Jefferson"
+        - "George Washington"
+        - "James Madison"
+        - "John Quincy Adams"
+      correct: 0
+      explanation: "Thomas Jefferson refused to pay tribute to the Barbary states of Tripoli, Tunis, and Algiers, sending the young US Navy to protect merchant shipping in the Mediterranean."
+    - type: multiple_choice
+      question: "Which battle on Cuban soil saw Theodore Roosevelt lead a famous uphill charge that propelled him to national heroism?"
+      options:
+        - "The Battle of San Juan Hill"
+        - "The Battle of Manila Bay"
+        - "The Battle of Guantanamo Bay"
+        - "The Battle of Santiago"
+      correct: 0
+      explanation: "Roosevelt led the charge up Kettle Hill and San Juan Heights outside Santiago de Cuba in July 1898, securing an American victory."
+    - type: multiple_choice
+      question: "Which president gave the famous 'Day of Infamy' address to Congress following the attack on Pearl Harbor?"
+      options:
+        - "Franklin D. Roosevelt"
+        - "Harry S. Truman"
+        - "Woodrow Wilson"
+        - "Herbert Hoover"
+      correct: 0
+      explanation: "Franklin D. Roosevelt addressed a joint session of Congress on December 8, 1941, declaring December 7 as 'a date which will live in infamy' and requesting a declaration of war against Japan."
+    - type: multiple_choice
+      question: "What direct emergency communication link was established between Washington and Moscow following the Cuban Missile Crisis?"
+      options:
+        - "The Moscow–Washington hotline"
+        - "The Red Telegraph"
+        - "The North Atlantic Relay"
+        - "The Geneva Wire"
+      correct: 0
+      explanation: "Established in 1963, the hotline allowed direct, secure text communication between the US President and Soviet leaders to prevent accidental nuclear conflict."
+    - type: multiple_choice
+      question: "Which president delivered a famous 1987 speech in West Berlin demanding, 'Mr. Gorbachev, tear down this wall!'?"
+      options:
+        - "Ronald Reagan"
+        - "George H.W. Bush"
+        - "Jimmy Carter"
+        - "Gerald Ford"
+      correct: 0
+      explanation: "Ronald Reagan spoke near the Brandenburg Gate in June 1987, directly challenging the Soviet leader to open the Berlin Wall."
+    - type: multiple_choice
+      question: "What failed 1961 covert amphibious assault by CIA-trained Cuban exiles was authorized early in John F. Kennedy's presidency?"
+      options:
+        - "The Bay of Pigs Invasion"
+        - "Operation Urgent Fury"
+        - "Operation Just Cause"
+        - "Operation Eagle Claw"
+      correct: 0
+      explanation: "The Bay of Pigs invasion collapsed within days in April 1961 when Cuban exile forces were overwhelmed by Fidel Castro's military forces."
+    - type: multiple_choice
+      question: "Which president ordered an early form of mass smallpox inoculation for Continental Army soldiers during the Revolutionary War?"
+      options:
+        - "George Washington"
+        - "Thomas Jefferson"
+        - "John Adams"
+        - "James Madison"
+      correct: 0
+      explanation: "In 1777, General George Washington mandated that all Continental soldiers undergo variolation against smallpox, preventing epidemics from decimating the army."
+    - type: multiple_choice
+      question: "Which Union general was appointed by Abraham Lincoln in 1864 as general-in-chief of all armies to bring the Civil War to an end?"
+      options:
+        - "Ulysses S. Grant"
+        - "George B. McClellan"
+        - "Robert E. Lee"
+        - "William Tecumseh Sherman"
+      correct: 0
+      explanation: "Lincoln promoted Ulysses S. Grant to Lieutenant General and commander of all Union armies in March 1864, pursuing an aggressive strategy that ended the war."
 - id: lasting_legacy
   title: Lasting Legacy
   audience: adult
@@ -780,86 +885,138 @@ categories:
     - He authorized the dynamic American Recovery and Reinvestment Act to successfully reboot the economy
       after the 2008 financial crisis.
   trivia:
-  - type: multiple_choice
-    question: Which of these presidents is NOT featured on Mount Rushmore?
-    options:
-    - George Washington
-    - Thomas Jefferson
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 3
-    explanation: He is sculpted on Mount Rushmore and his image has been featured on the US nickel coin
-      since 1938.
-  - type: multiple_choice
-    question: Who was the first female Supreme Court Justice, appointed by Ronald Reagan?
-    options:
-    - Ruth Bader Ginsburg
-    - Sandra Day O'Connor
-    - Sonia Sotomayor
-    - Elena Kagan
-    correct: 1
-    explanation: He appointed Sandra Day O'Connor in 1981, making her the first woman to ever serve on
-      the Supreme Court.
-  - type: multiple_choice
-    question: Which president officially established Thanksgiving as a national holiday during the Civil
-      War?
-    explanation: He officially established Thanksgiving as a national annual holiday in 1863 to help unite
-      a fractured country.
-    options:
-    - Abraham Lincoln
-    - George Washington
-    - Thomas Jefferson
-    - Theodore Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which president's personal book collection helped rebuild the Library of Congress?
-    explanation: His massive personal library of over 6,000 books was sold to the government to rebuild
-      the Library of Congress after a fire.
-    options:
-    - Thomas Jefferson
-    - George Washington
-    - Theodore Roosevelt
-    - Franklin D. Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which iconic international volunteer organization was established by John F. Kennedy in
-      1961?
-    options:
-    - The Red Cross
-    - The Peace Corps
-    - AmeriCorps
-    - United Nations Children's Fund
-    correct: 1
-    explanation: Kennedy established the Peace Corps in 1961, sending thousands of American volunteers
-      abroad to assist developing nations.
-  - type: multiple_choice
-    question: What is the common name for the Patient Protection and Affordable Care Act signed into law
-      in 2010?
-    explanation: Obama signed the landmark 2010 Patient Protection and Affordable Care Act, universally
-      known as 'Obamacare'.
-    options:
-    - Obamacare
-    - George Washington
-    - Thomas Jefferson
-    - Theodore Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which president is honored on the US dime coin due to his work fighting polio?
-    explanation: His legacy is honored on the US dime coin, recognizing his work founding the March of
-      Dimes organization to combat polio.
-    options:
-    - Franklin D. Roosevelt
-    - George Washington
-    - Thomas Jefferson
-    - Theodore Roosevelt
-    correct: 0
-  - type: multiple_choice
-    question: Which president was known as the 'Trust Buster' for breaking up corporate monopolies?
-    options:
-    - George Washington
-    - Abraham Lincoln
-    - Theodore Roosevelt
-    - Ronald Reagan
-    correct: 2
-    explanation: He fiercely broke up corporate monopolies, earning the enduring historical nickname of
-      the 'Trust Buster'.
+    - type: multiple_choice
+      question: "Which of the following presidents is NOT carved into Mount Rushmore in South Dakota?"
+      options:
+        - "Franklin D. Roosevelt"
+        - "George Washington"
+        - "Thomas Jefferson"
+        - "Theodore Roosevelt"
+      correct: 0
+      explanation: "Mount Rushmore depicts George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln. Franklin D. Roosevelt is not carved on the monument."
+    - type: multiple_choice
+      question: "Who was the first woman appointed to the US Supreme Court, nominated by President Ronald Reagan in 1981?"
+      options:
+        - "Sandra Day O'Connor"
+        - "Ruth Bader Ginsburg"
+        - "Sonia Sotomayor"
+        - "Elena Kagan"
+      correct: 0
+      explanation: "Ronald Reagan fulfilled a campaign promise by nominating Sandra Day O'Connor in 1981, making her the first female justice in Supreme Court history."
+    - type: multiple_choice
+      question: "Which president issued the 1863 proclamation establishing Thanksgiving as a regular national annual holiday?"
+      options:
+        - "Abraham Lincoln"
+        - "George Washington"
+        - "Thomas Jefferson"
+        - "Theodore Roosevelt"
+      correct: 0
+      explanation: "Abraham Lincoln proclaimed a national day of Thanksgiving in October 1863 to foster national unity during the American Civil War."
+    - type: multiple_choice
+      question: "Whose extensive personal collection of more than 6,000 books was purchased by Congress in 1815 to restart the Library of Congress?"
+      options:
+        - "Thomas Jefferson"
+        - "George Washington"
+        - "John Adams"
+        - "Benjamin Franklin"
+      correct: 0
+      explanation: "After the British burned the Capitol and congressional library during the War of 1812, Thomas Jefferson sold his personal library to rebuild the collection."
+    - type: multiple_choice
+      question: "Which international humanitarian service agency was established by an executive order of President John F. Kennedy in 1961?"
+      options:
+        - "The Peace Corps"
+        - "AmeriCorps"
+        - "The Red Cross"
+        - "USAID"
+      correct: 0
+      explanation: "John F. Kennedy established the Peace Corps in March 1961 to send trained American volunteers to support education and development worldwide."
+    - type: multiple_choice
+      question: "What popular informal name is given to the Patient Protection and Affordable Care Act signed into law in 2010?"
+      options:
+        - "Obamacare"
+        - "Medicare"
+        - "Medicaid"
+        - "The New Deal"
+      correct: 0
+      explanation: "Signed by President Barack Obama in March 2010, the historic healthcare reform law is widely known across the country as Obamacare."
+    - type: multiple_choice
+      question: "Which president is commemorated on the United States dime coin, honoring his founding of the March of Dimes to eradicate polio?"
+      options:
+        - "Franklin D. Roosevelt"
+        - "Theodore Roosevelt"
+        - "Woodrow Wilson"
+        - "Harry S. Truman"
+      correct: 0
+      explanation: "FDR, who was paralyzed by polio in 1921, founded the March of Dimes organization; the US Mint placed his portrait on the dime in 1946."
+    - type: multiple_choice
+      question: "Which president earned the nickname 'The Trust Buster' for aggressively filing federal antitrust lawsuits against corporate monopolies?"
+      options:
+        - "Theodore Roosevelt"
+        - "William Howard Taft"
+        - "Woodrow Wilson"
+        - "Grover Cleveland"
+      correct: 0
+      explanation: "Theodore Roosevelt used the Sherman Antitrust Act to break up powerful corporate monopolies like the Northern Securities railroad trust and Standard Oil."
+    - type: multiple_choice
+      question: "Which president established the Interstate Highway System in 1956, revolutionizing American logistics and travel?"
+      options:
+        - "Dwight D. Eisenhower"
+        - "Harry S. Truman"
+        - "Franklin D. Roosevelt"
+        - "Lyndon B. Johnson"
+      correct: 0
+      explanation: "Inspired by Germany's Autobahn during WWII, Dwight D. Eisenhower signed the Federal-Aid Highway Act of 1956, constructing over 40,000 miles of interstate roads."
+    - type: multiple_choice
+      question: "Which legislation signed by President Abraham Lincoln in 1862 allowed citizens to claim 160 acres of surveyed public land in the West?"
+      options:
+        - "The Homestead Act"
+        - "The Antiquities Act"
+        - "The Pacific Railway Act"
+        - "The Morrill Land-Grant Act"
+      correct: 0
+      explanation: "The Homestead Act of 1862 accelerated westward settlement by granting 160 acres of public land to settlers who improved the plot over five years."
+    - type: multiple_choice
+      question: "Which president established the United States Forest Service and protected over 230 million acres of public lands and national parks?"
+      options:
+        - "Theodore Roosevelt"
+        - "Abraham Lincoln"
+        - "Woodrow Wilson"
+        - "Franklin D. Roosevelt"
+      correct: 0
+      explanation: "Theodore Roosevelt championed American conservation, setting aside 150 national forests, 51 bird reserves, and 5 national parks under federal protection."
+    - type: multiple_choice
+      question: "Which landmark social welfare system, providing monthly financial benefits to retired American workers, was created under Franklin D. Roosevelt in 1935?"
+      options:
+        - "Social Security"
+        - "Medicare"
+        - "Medicaid"
+        - "The GI Bill"
+      correct: 0
+      explanation: "The Social Security Act of 1935 was a centerpiece of FDR's New Deal, establishing old-age pensions and unemployment insurance."
+    - type: multiple_choice
+      question: "In 2009, which jurist was appointed by Barack Obama to become the first Hispanic Justice on the US Supreme Court?"
+      options:
+        - "Sonia Sotomayor"
+        - "Elena Kagan"
+        - "Sandra Day O'Connor"
+        - "Ketanji Brown Jackson"
+      correct: 0
+      explanation: "Barack Obama nominated Federal Appeals Judge Sonia Sotomayor in 2009, making her the Supreme Court's first Hispanic and third female justice."
+    - type: multiple_choice
+      question: "Which president established the advisory group known as the Cabinet by appointing secretaries to head executive departments like State and Treasury?"
+      options:
+        - "George Washington"
+        - "John Adams"
+        - "Thomas Jefferson"
+        - "James Madison"
+      correct: 0
+      explanation: "George Washington created the first presidential cabinet in 1789, appointing Thomas Jefferson, Alexander Hamilton, Henry Knox, and Edmund Randolph."
+    - type: multiple_choice
+      question: "Which president signed the landmark Americans with Disabilities Act (ADA) in 1990, prohibiting discrimination based on disability?"
+      options:
+        - "George H.W. Bush"
+        - "Ronald Reagan"
+        - "Bill Clinton"
+        - "Jimmy Carter"
+      correct: 0
+      explanation: "George H.W. Bush signed the bipartisan Americans with Disabilities Act in July 1990, transforming accessibility across employment, transit, and public spaces."
