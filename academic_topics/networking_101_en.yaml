@@ -1,0 +1,1383 @@
+id: networking_101_en
+type: academic
+icon: 🌐
+title: Computer Networking & Internet Architecture (Networking 101)
+description: A comprehensive, first-principles engineering guide exploring how optical
+  pulses and radio waves carry global data, how IP routing and BGP scale to billions
+  of nodes, how TCP guarantees reliability, and how HTTP/3 and TLS encrypt the modern
+  web.
+lang: en
+audience: family
+categories:
+- id: physical_datalink_ethernet
+  title: '1. Physical & Data Link Layers: Photons to Frames'
+  description: From voltage transitions and fiber-optic pulses to Ethernet framing,
+    MAC addresses, CSMA/CD, and hardware switching.
+  cards:
+  - id: signals_modulation_copper_fiber
+    title: 'Physical Media: Bandwidth, Modulation & Noise'
+    figure:
+      title: NRZ vs. Manchester Digital Signal Encoding
+      svg: "<svg viewBox=\"0 0 500 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:140px;\">\n  <line x1=\"20\" y1=\"50\" x2=\"480\" y2=\"\
+        50\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <line\
+        \ x1=\"20\" y1=\"110\" x2=\"480\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"\
+        1\" opacity=\"0.3\"/>\n  <text x=\"30\" y=\"42\" font-size=\"11\" font-weight=\"\
+        bold\" fill=\"#3b82f6\">NRZ (Non-Return-to-Zero)</text>\n  <path d=\"M 60\
+        \ 50 L 110 50 L 110 20 L 210 20 L 210 50 L 260 50 L 260 20 L 360 20 L 360\
+        \ 50 L 460 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n\
+        \  <text x=\"30\" y=\"102\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #10b981\">Manchester (Clock Transitions)</text>\n  <path d=\"M 60 125 L 85\
+        \ 125 L 85 95 L 110 95 L 110 125 L 135 125 L 135 95 L 185 95 L 185 125 L 210\
+        \ 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2.5\"/>\n  <text x=\"\
+        85\" y=\"15\" font-size=\"10\" fill=\"currentColor\" text-anchor=\"middle\"\
+        >Bit 0</text>\n  <text x=\"160\" y=\"15\" font-size=\"10\" fill=\"currentColor\"\
+        \ text-anchor=\"middle\">Bit 1</text>\n  <text x=\"235\" y=\"15\" font-size=\"\
+        10\" fill=\"currentColor\" text-anchor=\"middle\">Bit 0</text>\n  <text x=\"\
+        310\" y=\"15\" font-size=\"10\" fill=\"currentColor\" text-anchor=\"middle\"\
+        >Bit 1</text>\n</svg>"
+      caption: Digital bits are encoded onto physical copper wires using voltage shifts.
+        Manchester encoding embeds clock timing directly into the middle of every
+        bit cell.
+    points:
+    - 'All computer communication fundamentally relies on physical disturbances: alternating
+      voltages on copper twisted-pair cables (Cat6), infrared laser pulses along glass
+      fiber optics, or electromagnetic radio waves in Wi-Fi and 5G.'
+    - 'The theoretical upper bound on channel capacity is governed by the Shannon-Hartley
+      Theorem: $C = B \log_2(1 + \text{SNR})$, where bandwidth $B$ (in Hertz) and
+      the Signal-to-Noise Ratio (SNR) set the maximum error-free data rate regardless
+      of clever engineering.'
+    - Fiber-optic cables achieve terabit-per-second throughput by guiding light through
+      thin silica glass cores via Total Internal Reflection, experiencing virtually
+      zero electromagnetic interference.
+    - To pack more bits per second over a fixed analog frequency band, advanced transceivers
+      employ Quadrature Amplitude Modulation (QAM), simultaneously varying both the
+      carrier wave amplitude and phase.
+  - id: ethernet_mac_switching
+    title: Ethernet Frames, MAC Addresses & Switching
+    figure:
+      title: Standard Ethernet II Frame Layout
+      svg: "<svg viewBox=\"0 0 520 120\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:120px;\">\n  <rect x=\"10\" y=\"40\" width=\"70\" height=\"\
+        50\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"\
+        2\"/>\n  <text x=\"45\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #3b82f6\" text-anchor=\"middle\">Preamble</text>\n  <text x=\"45\" y=\"80\"\
+        \ font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\"\
+        >8 Bytes</text>\n  <rect x=\"85\" y=\"40\" width=\"85\" height=\"50\" rx=\"\
+        6\" fill=\"#6366f1\" fill-opacity=\"0.15\" stroke=\"#6366f1\" stroke-width=\"\
+        2\"/>\n  <text x=\"127\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #6366f1\" text-anchor=\"middle\">Dest MAC</text>\n  <text x=\"127\" y=\"80\"\
+        \ font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\"\
+        >6 Bytes</text>\n  <rect x=\"175\" y=\"40\" width=\"85\" height=\"50\" rx=\"\
+        6\" fill=\"#8b5cf6\" fill-opacity=\"0.15\" stroke=\"#8b5cf6\" stroke-width=\"\
+        2\"/>\n  <text x=\"217\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #8b5cf6\" text-anchor=\"middle\">Src MAC</text>\n  <text x=\"217\" y=\"80\"\
+        \ font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\"\
+        >6 Bytes</text>\n  <rect x=\"265\" y=\"40\" width=\"70\" height=\"50\" rx=\"\
+        6\" fill=\"#ec4899\" fill-opacity=\"0.15\" stroke=\"#ec4899\" stroke-width=\"\
+        2\"/>\n  <text x=\"300\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #ec4899\" text-anchor=\"middle\">EtherType</text>\n  <text x=\"300\" y=\"\
+        80\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"\
+        middle\">2 Bytes</text>\n  <rect x=\"340\" y=\"40\" width=\"110\" height=\"\
+        50\" rx=\"6\" fill=\"#10b981\" fill-opacity=\"0.15\" stroke=\"#10b981\" stroke-width=\"\
+        2\"/>\n  <text x=\"395\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #10b981\" text-anchor=\"middle\">Payload (IP)</text>\n  <text x=\"395\" y=\"\
+        80\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"\
+        middle\">46-1500 B</text>\n  <rect x=\"455\" y=\"40\" width=\"55\" height=\"\
+        50\" rx=\"6\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"\
+        2\"/>\n  <text x=\"482\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #f59e0b\" text-anchor=\"middle\">FCS/CRC</text>\n  <text x=\"482\" y=\"80\"\
+        \ font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\"\
+        >4 Bytes</text>\n</svg>"
+      caption: An Ethernet frame wraps network-layer packets with 48-bit hardware
+        MAC addresses and terminates with a Cyclic Redundancy Check (CRC-32) to discard
+        corrupted frames.
+    points:
+    - Every network interface card (NIC) possesses a globally unique 48-bit Media
+      Access Control (MAC) address burned into hardware (e.g., 00:1A:2B:3C:4D:5E),
+      with the first 24 bits designating the manufacturer (OUI).
+    - Early Ethernet operated as a shared bus using CSMA/CD (Carrier Sense Multiple
+      Access with Collision Detection); when two computers transmitted simultaneously,
+      voltages collided, prompting a random exponential backoff delay before retransmitting.
+    - Modern networks replaced hubs with Layer-2 Network Switches. A switch inspects
+      incoming source MAC addresses to dynamically build a Content Addressable Memory
+      (CAM) forwarding table, transmitting frames exclusively to the specific recipient
+      port.
+    - To partition a single physical switch into isolated broadcast domains, network
+      engineers configure Virtual LANs (VLANs, IEEE 802.1Q), appending a 4-byte VLAN
+      tag into the Ethernet header.
+  - id: arp_network_discovery
+    title: Address Resolution Protocol (ARP) & The Local Subnet
+    points:
+    - 'When a computer knows the target logical IP address (e.g., 192.168.1.50) on
+      its local network but lacks the physical hardware destination, it broadcasts
+      an ARP Request: ''Who has 192.168.1.50? Tell 192.168.1.10''.'
+    - The device owning that IP unicasts an ARP Reply providing its MAC address. Both
+      hosts cache this mapping in an internal ARP Table with an expiration timer to
+      prevent continuous broadcasting.
+    - The maximum payload that can fit inside a standard Ethernet frame without fragmentation
+      is known as the Maximum Transmission Unit (MTU), conventionally set to 1500
+      bytes (or up to 9000 bytes for Jumbo Frames in data centers).
+    - Because basic ARP lacks authentication, malicious actors on local networks can
+      execute ARP Spoofing/Poisoning, broadcasting forged ARP replies to trick neighboring
+      machines into routing all local traffic through an attacker's machine (Man-in-the-Middle).
+  trivia:
+  - type: multiple_choice
+    question: Which fundamental information theory theorem calculates the absolute
+      maximum data capacity of an analog communication channel in the presence of
+      noise?
+    options:
+    - The Shannon-Hartley Theorem
+    - The Nyquist-Shannon Sampling Theorem
+    - The Central Limit Theorem
+    - Little's Law
+    correct: 0
+    explanation: Formulated by Claude Shannon, the formula $C = B \log_2(1 + \text{SNR})$
+      establishes the theoretical ceiling for data transmission across noisy physical
+      channels.
+  - type: multiple_choice
+    question: What optical physics principle allows fiber-optic cables to guide laser
+      light pulses across thousands of miles of glass with minimal signal loss?
+    options:
+    - Total Internal Reflection
+    - Wave Diffraction
+    - Quantum Tunneling
+    - Photoelectric Emission
+    correct: 0
+    explanation: Light hitting the boundary between the high-index glass core and
+      lower-index cladding at an angle greater than the critical angle undergoes 100%
+      reflection with zero light leakage.
+  - type: multiple_choice
+    question: How many bits are in a standard hardware Media Access Control (MAC)
+      address?
+    options:
+    - 48 bits (6 bytes)
+    - 32 bits (4 bytes)
+    - 64 bits (8 bytes)
+    - 128 bits (16 bytes)
+    correct: 0
+    explanation: A standard MAC address comprises 48 bits (6 hexadecimal octets),
+      where the first 24 bits identify the manufacturer (OUI) and the last 24 bits
+      are a unique device serial number.
+  - type: multiple_choice
+    question: What arbitration protocol did legacy shared-bus Ethernet employ to detect
+      and recover from electrical collisions?
+    options:
+    - CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+    - Token Ring Passing
+    - ALOHA Slotted Broadcasting
+    - Time Division Multiple Access (TDMA)
+    correct: 0
+    explanation: In shared hubs, devices listened to the line before sending (Carrier
+      Sense) and monitored voltage spikes during transmission to abort and back off
+      upon collision.
+  - type: multiple_choice
+    question: What is the primary function of the 4-byte Frame Check Sequence (FCS)
+      at the very end of an Ethernet frame?
+    options:
+    - To detect bit errors using a Cyclic Redundancy Check (CRC-32)
+    - To encrypt the frame payload with AES-128
+    - To store the sender's default gateway IP address
+    - To specify the priority queue of the packet in the switch
+    correct: 0
+    explanation: The receiving network card recalculates the CRC-32 checksum; if the
+      result does not match the FCS, the frame suffered physical corruption and is
+      silently discarded.
+  - type: multiple_choice
+    question: What internal forwarding table does a network switch build dynamically
+      by inspecting the source MAC addresses of incoming frames?
+    options:
+    - CAM Table (Content Addressable Memory)
+    - BGP Routing Table
+    - DNS Zone Table
+    - OSPF Link-State Database
+    correct: 0
+    explanation: The switch learns which MAC address resides on which physical port
+      and stores the mapping in its CAM table, enabling targeted point-to-point forwarding.
+  - type: multiple_choice
+    question: What protocol resolves a known local IP address into a corresponding
+      physical MAC address on a local area network?
+    options:
+    - ARP (Address Resolution Protocol)
+    - DNS (Domain Name System)
+    - DHCP (Dynamic Host Configuration Protocol)
+    - BGP (Border Gateway Protocol)
+    correct: 0
+    explanation: ARP broadcasts a Layer-2 query asking which device owns a specific
+      IP address; the target machine replies with its hardware MAC address.
+  - type: multiple_choice
+    question: What is the standard Maximum Transmission Unit (MTU) size for payload
+      data inside a standard Ethernet II frame?
+    options:
+    - 1500 bytes
+    - 512 bytes
+    - 4096 bytes
+    - 64 bytes
+    correct: 0
+    explanation: The standard Ethernet MTU is 1500 bytes. Datagrams exceeding this
+      size must be fragmented by the network layer or transmitted over networks supporting
+      Jumbo Frames.
+  - type: multiple_choice
+    question: Which IEEE standard defines Virtual LAN (VLAN) tagging by inserting
+      a 4-byte tag into Ethernet frame headers?
+    options:
+    - IEEE 802.1Q
+    - IEEE 802.11ac
+    - IEEE 802.3u
+    - IEEE 802.15.4
+    correct: 0
+    explanation: IEEE 802.1Q defines the 32-bit VLAN tag inserted between the Source
+      MAC and EtherType fields, containing a 12-bit VLAN ID allowing up to 4,094 virtual
+      networks.
+  - type: multiple_choice
+    question: What malicious security attack involves transmitting spoofed ARP messages
+      to bind an attacker's MAC address with the default gateway's IP?
+    options:
+    - ARP Poisoning / Spoofing
+    - SYN Flood Attack
+    - DNS Amplification
+    - SQL Injection
+    correct: 0
+    explanation: Because basic ARP is stateless and unauthenticated, forged replies
+      trick local hosts into sending outbound traffic through the attacker's machine.
+  - type: multiple_choice
+    question: What is the purpose of the 8-byte Preamble and Start Frame Delimiter
+      (SFD) that precedes every Ethernet transmission?
+    options:
+    - To synchronize physical clock timing between the transmitter and receiver
+    - To store the operating system version of the sender
+    - To authenticate the hardware manufacturer serial key
+    - To negotiate encryption cipher suites
+    correct: 0
+    explanation: The preamble is an alternating sequence of 1s and 0s (10101010...)
+      that allows the receiving circuitry to lock its clock frequency onto the incoming
+      bitstream.
+  - type: multiple_choice
+    question: What broadcast MAC address is used when an Ethernet frame must be received
+      and processed by every single host on the local subnet?
+    options:
+    - FF:FF:FF:FF:FF:FF
+    - 00:00:00:00:00:00
+    - 127.0.0.1
+    - FE80::1
+    correct: 0
+    explanation: A frame addressed to FF:FF:FF:FF:FF:FF (all 48 bits set to 1) instructs
+      switches to flood the frame out of every active port on that VLAN.
+  - type: multiple_choice
+    question: What network device operates strictly at Layer 1 (Physical), blindly
+      repeating electrical signals to all connected cables without inspecting frames?
+    options:
+    - A Hub
+    - A Switch
+    - A Router
+    - A Firewall
+    correct: 0
+    explanation: Hubs are purely electrical repeaters that lack MAC address awareness,
+      creating a single shared collision domain across all connected devices.
+  - type: multiple_choice
+    question: What modulation technique encodes multiple bits per symbol by varying
+      both the amplitude and the phase of the carrier wave simultaneously?
+    options:
+    - QAM (Quadrature Amplitude Modulation)
+    - FSK (Frequency Shift Keying)
+    - BPSK (Binary Phase Shift Keying)
+    - AM (Amplitude Modulation)
+    correct: 0
+    explanation: Modern Wi-Fi 6 (1024-QAM) and cable modems modulate two orthogonal
+      carrier waves to pack up to 10 bits into a single transmitted radio symbol.
+  - type: multiple_choice
+    question: What spanning tree algorithm protocol prevents catastrophic broadcast
+      storms caused by accidental physical loops in switched Ethernet networks?
+    options:
+    - STP (Spanning Tree Protocol - IEEE 802.1D)
+    - BGP (Border Gateway Protocol)
+    - OSPF (Open Shortest Path First)
+    - RIP (Routing Information Protocol)
+    correct: 0
+    explanation: STP detects loops in switch topology and automatically disables redundant
+      forwarding links, unblocking them only if an active link fails.
+- id: network_layer_ip_routing
+  title: '2. The Network Layer: IP Addressing & Packet Routing'
+  description: Hierarchical logical addressing, CIDR subnets, Time-To-Live loop prevention,
+    and global internetwork routing via OSPF and BGP.
+  cards:
+  - id: ipv4_ipv6_subnetting_cidr
+    title: 'IP Addressing: CIDR Subnets & Address Exhaustion'
+    figure:
+      title: IPv4 CIDR Prefix Subnet Decomposition
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <rect x=\"20\" y=\"40\" width=\"300\" height=\"\
+        50\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"\
+        2\"/>\n  <text x=\"170\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"\
+        #3b82f6\" text-anchor=\"middle\">Network Prefix (/24)</text>\n  <text x=\"\
+        170\" y=\"80\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"\
+        middle\">24 Bits (192.168.1.0)</text>\n  <rect x=\"325\" y=\"40\" width=\"\
+        155\" height=\"50\" rx=\"6\" fill=\"#10b981\" fill-opacity=\"0.15\" stroke=\"\
+        #10b981\" stroke-width=\"2\"/>\n  <text x=\"402\" y=\"65\" font-size=\"12\"\
+        \ font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">Host Identifier</text>\n\
+        \  <text x=\"402\" y=\"80\" font-size=\"9\" fill=\"currentColor\" opacity=\"\
+        0.8\" text-anchor=\"middle\">8 Bits (254 Usable Hosts)</text>\n  <line x1=\"\
+        20\" y1=\"105\" x2=\"480\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"\
+        1.5\" stroke-dasharray=\"4,4\" opacity=\"0.4\"/>\n  <text x=\"250\" y=\"122\"\
+        \ font-size=\"10\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\"\
+        >Total Address Space = 32 Bits (4,294,967,296 Addresses)</text>\n</svg>"
+      caption: Classless Inter-Domain Routing (CIDR) uses bitmask prefixes to partition
+        32-bit IPv4 addresses into routing network IDs and local host IDs.
+    points:
+    - IPv4 allocates 32-bit numerical addresses ($2^{32} \approx 4.29\text{ billion}$),
+      written in dotted-decimal format (e.g., 172.217.16.206). Classless Inter-Domain
+      Routing (CIDR) notation (e.g., /24) defines how many leading bits identify the
+      network prefix, leaving remaining bits for local host IDs.
+    - 'To stave off global IPv4 address exhaustion, Network Address Translation (NAT)
+      allows thousands of internal hosts in private address spaces (RFC 1918: 10.0.0.0/8,
+      172.16.0.0/12, 192.168.0.0/16) to share a single public IP by tracking ephemeral
+      Layer-4 port numbers.'
+    - IPv6 solves address scarcity permanently with 128-bit addresses ($2^{128} \approx
+      3.4 \times 10^{38}$), written as eight groups of four hexadecimal digits (e.g.,
+      2001:0db8:85a3::8a2e:0370:7334), eliminating the need for NAT while natively
+      supporting auto-configuration (SLAAC).
+    - 'Routers forward packets using Longest Prefix Match: when an IP packet arrives,
+      the router matches the destination IP against its routing table and selects
+      the most specific (longest bitmask) route.'
+  - id: packet_structure_ttl_fragmentation
+    title: IP Packet Headers, TTL & Path MTU Discovery
+    points:
+    - An IPv4 packet header spans 20 bytes (without options), containing Version,
+      Header Length (IHL), Total Length, Identification, Flags, Fragment Offset, Time
+      to Live (TTL), Protocol, Header Checksum, and Source/Destination IPs.
+    - The Time to Live (TTL) field prevents packets from circulating eternally in
+      routing loops. Every router decrements the TTL by at least 1; if TTL reaches
+      0, the router discards the packet and transmits an ICMP Time Exceeded message
+      back to the sender.
+    - 'The classic `traceroute` utility leverages this TTL behavior: it emits UDP
+      or ICMP probes with incrementing TTLs (TTL=1, 2, 3...) to elicit ICMP Time Exceeded
+      replies from each successive router along the geographic path.'
+    - If a packet exceeds a transit link's MTU and the 'Don't Fragment' (DF) flag
+      is set, the router drops the packet and sends an ICMP 'Fragmentation Needed'
+      reply. Path MTU Discovery (PMTUD) utilizes these replies to dynamically detect
+      the maximum packet size supported across an entire internet route.
+  - id: routing_protocols_bgp_ospf
+    title: 'Interior vs. Exterior Routing: OSPF & BGP'
+    figure:
+      title: Autonomous Systems (AS) & BGP Peering Topology
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <circle cx=\"100\" cy=\"65\" r=\"45\" fill=\"\
+        #3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n\
+        \  <text x=\"100\" y=\"62\" font-size=\"11\" font-weight=\"bold\" fill=\"\
+        #3b82f6\" text-anchor=\"middle\">AS 15169</text>\n  <text x=\"100\" y=\"76\"\
+        \ font-size=\"9\" fill=\"currentColor\" text-anchor=\"middle\">(Google)</text>\n\
+        \  <circle cx=\"400\" cy=\"65\" r=\"45\" fill=\"#10b981\" fill-opacity=\"\
+        0.15\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"400\" y=\"62\"\
+        \ font-size=\"11\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\"\
+        >AS 13335</text>\n  <text x=\"400\" y=\"76\" font-size=\"9\" fill=\"currentColor\"\
+        \ text-anchor=\"middle\">(Cloudflare)</text>\n  <path d=\"M 148 65 L 352 65\"\
+        \ stroke=\"#ec4899\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/>\n  <text\
+        \ x=\"250\" y=\"55\" font-size=\"11\" font-weight=\"bold\" fill=\"#ec4899\"\
+        \ text-anchor=\"middle\">eBGP Peering Session</text>\n  <text x=\"250\" y=\"\
+        75\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"\
+        middle\">TCP Port 179 (Path Vector)</text>\n  <text x=\"100\" y=\"122\" font-size=\"\
+        9\" fill=\"currentColor\" opacity=\"0.8\" text-anchor=\"middle\">Internal\
+        \ IGP: OSPF</text>\n  <text x=\"400\" y=\"122\" font-size=\"9\" fill=\"currentColor\"\
+        \ opacity=\"0.8\" text-anchor=\"middle\">Internal IGP: IS-IS</text>\n</svg>"
+      caption: The global Internet is glued together by Autonomous Systems (AS) exchanging
+        network reachability over external BGP (Border Gateway Protocol) peering sessions.
+    points:
+    - The global Internet is partitioned into thousands of independently operated
+      networks known as Autonomous Systems (AS), such as ISPs, university backbones,
+      and tech giants, identified by unique Autonomous System Numbers (ASNs).
+    - Within an individual enterprise or datacenter, Interior Gateway Protocols (IGPs)
+      like OSPF (Open Shortest Path First) distribute link-state information, allowing
+      routers to run Dijkstra's shortest-path algorithm over local network graphs.
+    - Between distinct Autonomous Systems, the Border Gateway Protocol (BGP-4) acts
+      as the routing glue of the entire planet. BGP is a Path-Vector protocol that
+      operates over reliable TCP connections (port 179), exchanging lists of ASNs
+      (AS-PATH) to prevent inter-domain loops.
+    - BGP routing decisions are driven not simply by lowest physical latency, but
+      by commercial peering agreements and geopolitical policies (e.g., favoring cheap
+      settlement-free peering over expensive upstream transit links).
+  trivia:
+  - type: multiple_choice
+    question: How many total unique IP addresses are mathematically possible in the
+      32-bit IPv4 address space?
+    options:
+    - Approximately 4.29 billion ($2^{32}$)
+    - Approximately 18.4 quintillion ($2^{64}$)
+    - Approximately 1 trillion
+    - Approximately 340 undecillion ($2^{128}$)
+    correct: 0
+    explanation: Because IPv4 uses 32-bit unsigned integers for addressing, the theoretical
+      maximum limit is $2^{32} = 4,294,967,296$ addresses.
+  - type: multiple_choice
+    question: What is the primary function of the Time to Live (TTL) field in an IPv4
+      packet header?
+    options:
+    - To prevent packets from looping endlessly across misconfigured routers
+    - To record the local time when the packet was created
+    - To specify the duration of the TLS encryption session
+    - To measure the hardware temperature of network switches
+    correct: 0
+    explanation: Every router decrements the TTL field by 1; if TTL drops to zero,
+      the packet is discarded, breaking routing loops.
+  - type: multiple_choice
+    question: How many usable host IP addresses can be assigned on a local subnet
+      with a /24 CIDR prefix (such as 192.168.1.0/24)?
+    options:
+    - 254 usable hosts
+    - 256 usable hosts
+    - 128 usable hosts
+    - 512 usable hosts
+    correct: 0
+    explanation: A /24 subnet has $32 - 24 = 8$ host bits ($2^8 = 256$ addresses).
+      Subtracting the reserved network address (.0) and broadcast address (.255) leaves
+      254 usable hosts.
+  - type: multiple_choice
+    question: Which RFC standard establishes the designated private IP address ranges
+      (such as 10.0.0.0/8 and 192.168.0.0/16) that are non-routable on the public
+      internet?
+    options:
+    - RFC 1918
+    - RFC 791
+    - RFC 2616
+    - RFC 1035
+    correct: 0
+    explanation: RFC 1918 defines private address blocks reserved for internal enterprise
+      and home networks, connected to the internet via Network Address Translation
+      (NAT).
+  - type: multiple_choice
+    question: What diagnostic network utility deliberately sends packets with incrementing
+      TTL values (TTL=1, 2, 3...) to discover each intermediate hop?
+    options:
+    - traceroute
+    - ping
+    - netstat
+    - nslookup
+    correct: 0
+    explanation: By eliciting ICMP Time Exceeded error messages from each sequential
+      router along the transit path, `traceroute` maps intermediate hops and latencies.
+  - type: multiple_choice
+    question: What algorithm principle do IP routers use to choose between multiple
+      matching entries in a routing table?
+    options:
+    - Longest Prefix Match
+    - Round Robin Balancing
+    - First In, First Out (FIFO)
+    - Smallest Subnet Address
+    correct: 0
+    explanation: Routers forward packets using the routing entry with the most specific
+      match—meaning the longest subnet mask bitmask (/28 takes precedence over /24
+      or /16).
+  - type: multiple_choice
+    question: What exterior routing protocol manages reachability and route exchange
+      between distinct Autonomous Systems (AS) across the global Internet?
+    options:
+    - BGP (Border Gateway Protocol)
+    - OSPF (Open Shortest Path First)
+    - RIP (Routing Information Protocol)
+    - IS-IS (Intermediate System to Intermediate System)
+    correct: 0
+    explanation: BGP-4 is the de facto inter-domain routing protocol of the global
+      Internet, exchanging network prefix paths between independent autonomous networks.
+  - type: multiple_choice
+    question: What shortest-path graph algorithm does the OSPF (Open Shortest Path
+      First) protocol execute to compute loop-free interior routes?
+    options:
+    - Dijkstra's Algorithm
+    - Bellman-Ford Algorithm
+    - Floyd-Warshall Algorithm
+    - A* Search Algorithm
+    correct: 0
+    explanation: OSPF routers flood link-state advertisements (LSAs) so every router
+      maintains an identical map of the network, subsequently running Dijkstra's algorithm
+      to calculate the shortest path tree.
+  - type: multiple_choice
+    question: What transport-layer protocol and port does Border Gateway Protocol
+      (BGP) use to establish reliable peering sessions?
+    options:
+    - TCP Port 179
+    - UDP Port 53
+    - TCP Port 80
+    - ICMP Protocol 1
+    correct: 0
+    explanation: Unlike interior protocols like OSPF that sit directly over raw IP,
+      BGP establishes stateful, reliable TCP connections over port 179 to exchange
+      route attributes.
+  - type: multiple_choice
+    question: How many total address bits are used in an IPv6 address?
+    options:
+    - 128 bits
+    - 32 bits
+    - 64 bits
+    - 256 bits
+    correct: 0
+    explanation: IPv6 addresses are 128 bits in length (represented as eight hexadecimal
+      quartets), yielding $3.4 \times 10^{38}$ distinct addresses to eliminate IP
+      exhaustion.
+  - type: multiple_choice
+    question: What mechanism dynamically discovers the maximum MTU supported along
+      an entire path without IP fragmentation by using the DF (Don't Fragment) bit?
+    options:
+    - Path MTU Discovery (PMTUD)
+    - Address Resolution Protocol (ARP)
+    - Dynamic Host Configuration Protocol (DHCP)
+    - Fast Retransmit
+    correct: 0
+    explanation: PMTUD sets the DF bit on outgoing packets; if a packet encounters
+      an MTU choke point, the router drops it and returns an ICMP 'Fragmentation Needed'
+      message with the hop's MTU.
+  - type: multiple_choice
+    question: What BGP route attribute lists all the Autonomous System numbers that
+      an advertisement has traversed, serving to detect and prevent routing loops?
+    options:
+    - AS-PATH
+    - MULTI-EXIT-DISC (MED)
+    - LOCAL-PREF
+    - COMMUNITY
+    correct: 0
+    explanation: Whenever a router receives a BGP advertisement containing its own
+      AS number in the AS-PATH attribute, it detects a loop and immediately rejects
+      the route.
+  - type: multiple_choice
+    question: What IP loopback address is reserved for software to communicate internally
+      with services running on the same local host machine?
+    options:
+    - 127.0.0.1 (or ::1 in IPv6)
+    - 192.168.1.1
+    - 255.255.255.255
+    - 10.0.0.1
+    correct: 0
+    explanation: The 127.0.0.0/8 block is reserved for loopback traffic. Packets routed
+      to 127.0.0.1 never leave the local operating system's network stack.
+  - type: multiple_choice
+    question: What protocol allows IPv6 hosts to automatically generate a globally
+      unique IP address without needing a stateful DHCPv6 server?
+    options:
+    - SLAAC (Stateless Address Autoconfiguration)
+    - NAPT (Network Address Port Translation)
+    - BGP Anycast
+    - Static Route Injection
+    correct: 0
+    explanation: Using SLAAC, an IPv6 host listens to Router Advertisements (RAs)
+      to discover the network prefix, appending its own interface identifier to configure
+      its IP autonomously.
+  - type: multiple_choice
+    question: What is the size of the standard base header of an IPv4 packet without
+      optional headers?
+    options:
+    - 20 bytes
+    - 40 bytes
+    - 14 bytes
+    - 8 bytes
+    correct: 0
+    explanation: A standard IPv4 header is 20 bytes (consisting of five 32-bit words).
+      In contrast, IPv6 features a streamlined fixed 40-byte base header.
+- id: transport_layer_tcp_udp
+  title: '3. The Transport Layer: TCP Reliability & UDP Speed'
+  description: Port multiplexing, the TCP three-way handshake, sliding-window flow
+    control, congestion avoidance, and stateless UDP.
+  cards:
+  - id: tcp_three_way_handshake_state_machine
+    title: 'TCP Connection Lifecycle: Handshake & TIME_WAIT'
+    figure:
+      title: TCP 3-Way Handshake Connection Establishment
+      svg: "<svg viewBox=\"0 0 500 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:140px;\">\n  <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"\
+        130\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"100\" y=\"15\"\
+        \ font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\"\
+        >Client</text>\n  <line x1=\"400\" y1=\"20\" x2=\"400\" y2=\"130\" stroke=\"\
+        #10b981\" stroke-width=\"2\"/>\n  <text x=\"400\" y=\"15\" font-size=\"11\"\
+        \ font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">Server</text>\n\
+        \  <path d=\"M 100 35 L 395 55\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"\
+        url(#arr)\"/>\n  <text x=\"250\" y=\"40\" font-size=\"10\" fill=\"#3b82f6\"\
+        \ text-anchor=\"middle\">1. SYN (seq=x)</text>\n  <path d=\"M 400 65 L 105\
+        \ 85\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"70\"\
+        \ font-size=\"10\" fill=\"#10b981\" text-anchor=\"middle\">2. SYN-ACK (seq=y,\
+        \ ack=x+1)</text>\n  <path d=\"M 100 95 L 395 115\" stroke=\"#8b5cf6\" stroke-width=\"\
+        2\"/>\n  <text x=\"250\" y=\"100\" font-size=\"10\" fill=\"#8b5cf6\" text-anchor=\"\
+        middle\">3. ACK (ack=y+1)</text>\n</svg>"
+      caption: TCP establishes a stateful, full-duplex byte stream via a 3-way handshake,
+        synchronizing initial sequence numbers (ISNs) to guarantee in-order delivery.
+    points:
+    - The Transmission Control Protocol (TCP) provides an abstraction of a reliable,
+      bi-directional, in-order byte stream over an unreliable, packet-dropping IP
+      substrate.
+    - 'To establish a connection, client and server execute the 3-Way Handshake: (1)
+      Client sends SYN with random sequence number $x$, (2) Server replies with SYN-ACK
+      with sequence $y$ and ACK $x+1$, (3) Client returns ACK $y+1$. Both sides now
+      agree on sequence synchronization.'
+    - 'Closing a connection involves a 4-Way Handshake: each endpoint independently
+      transmits a FIN flag to close its outbound stream, remaining open to receive
+      until the opposite side sends FIN.'
+    - The initiator terminates in the `TIME_WAIT` state, lingering for $2 \times \text{MSL}$
+      (Maximum Segment Lifetime, typically 60–120 seconds). This prevents delayed,
+      stale duplicate packets from an old session from corrupting a newly spawned
+      connection reusing the same port pair.
+  - id: flow_control_congestion_control
+    title: 'Flow Control vs. Congestion Control: AIMD & BBR'
+    figure:
+      title: TCP Congestion Window (cwnd) Sawtooth Profile
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <line x1=\"40\" y1=\"105\" x2=\"480\" y2=\"\
+        105\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"0.4\"/>\n  <line\
+        \ x1=\"40\" y1=\"15\" x2=\"40\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"\
+        1.5\" opacity=\"0.4\"/>\n  <path d=\"M 40 105 Q 80 100, 110 50 L 170 25 L\
+        \ 170 65 L 250 25 L 250 65 L 330 25 L 330 65 L 410 25 L 410 65 L 470 35\"\
+        \ fill=\"none\" stroke=\"#6366f1\" stroke-width=\"2.5\"/>\n  <text x=\"75\"\
+        \ y=\"80\" font-size=\"9\" fill=\"#6366f1\">Slow Start</text>\n  <text x=\"\
+        210\" y=\"18\" font-size=\"9\" fill=\"#6366f1\">Additive Increase</text>\n\
+        \  <text x=\"250\" y=\"80\" font-size=\"9\" fill=\"#ef4444\">Multiplicative\
+        \ Decrease (Loss)</text>\n  <text x=\"470\" y=\"120\" font-size=\"9\" fill=\"\
+        currentColor\" text-anchor=\"end\">Time</text>\n  <text x=\"35\" y=\"20\"\
+        \ font-size=\"9\" fill=\"currentColor\">cwnd</text>\n</svg>"
+      caption: TCP Congestion Control probes network capacity by doubling cwnd during
+        Slow Start, then enters linear Additive Increase until packet loss triggers
+        Multiplicative Decrease.
+    points:
+    - 'Flow Control protects the receiving host from buffer exhaustion: the receiver
+      advertises its available buffer space in every TCP ACK using the Receive Window
+      (`rwnd`) field. The sender never transmits more unacknowledged bytes than `rwnd`.'
+    - 'Congestion Control protects intermediate network routers: senders dynamically
+      adjust a Congestion Window (`cwnd`). The effective sending window is the minimum
+      of both constraints: $\text{Window} = \min(\text{rwnd}, \text{cwnd})$.'
+    - 'Classic algorithms (TCP Reno) rely on Additive Increase / Multiplicative Decrease
+      (AIMD): when ACKs arrive cleanly, `cwnd` expands linearly by 1 MSS per RTT.
+      When packet loss occurs, `cwnd` is instantly halved.'
+    - Modern high-speed algorithms like Google's BBR (Bottleneck Bandwidth and RTT)
+      move away from packet loss signals, directly measuring actual pipe delivery
+      rates and minimum RTT to maximize bandwidth without causing bufferbloat queues.
+  - id: udp_vs_tcp_multiplexing
+    title: UDP, Port Multiplexing & Head-of-Line Blocking
+    points:
+    - 'The User Datagram Protocol (UDP) is a connectionless, bare-bones transport
+      protocol featuring an 8-byte header: Source Port, Destination Port, Length,
+      and optional Checksum.'
+    - 'UDP offers zero guarantees: packets may arrive out of order, be duplicated,
+      or drop completely without retransmission. This makes UDP ideal for real-time
+      workloads where low latency trumps perfection (VoIP, DNS, online gaming, and
+      video streaming).'
+    - 'Both TCP and UDP enable Port Multiplexing: 16-bit port numbers (0 to 65535)
+      direct network traffic to specific software processes. A network connection
+      is uniquely defined by a 5-Tuple: (Source IP, Source Port, Dest IP, Dest Port,
+      Protocol).'
+    - 'A core architectural flaw of TCP is Head-of-Line (HoL) Blocking: because TCP
+      guarantees in-order stream delivery, if Packet #2 is dropped in transit, Packets
+      #3, #4, and #5 must sit idle in operating system buffers and cannot be read
+      by the application until Packet #2 is retransmitted.'
+  trivia:
+  - type: multiple_choice
+    question: What three packets are exchanged between a client and server to establish
+      a TCP connection?
+    options:
+    - SYN, SYN-ACK, ACK
+    - PING, PONG, ACK
+    - HELO, EHLO, READY
+    - REQUEST, CHALLENGE, RESPONSE
+    correct: 0
+    explanation: The client initiates with SYN, the server responds with SYN-ACK,
+      and the client finishes with ACK, establishing synchronized sequence numbers.
+  - type: multiple_choice
+    question: Why does a TCP connection endpoint enter the `TIME_WAIT` state for two
+      Maximum Segment Lifetimes ($2 \times \text{MSL}$) upon closing?
+    options:
+    - To ensure late, delayed duplicate packets from the closed session expire and
+      do not corrupt a new connection reusing the same ports
+    - To cool down the hardware temperature of the network interface card
+    - To wait for DNS records to update their TTL
+    - To recalculate the CRC-32 checksum of all received files
+    correct: 0
+    explanation: Linger in `TIME_WAIT` prevents stray internet packets from a previous
+      connection from being misinterpreted as valid data in a newly opened connection.
+  - type: multiple_choice
+    question: What is the difference between TCP Flow Control and TCP Congestion Control?
+    options:
+    - Flow Control protects the receiving endpoint buffer; Congestion Control protects
+      intermediate network routers
+    - Flow Control manages packet encryption; Congestion Control manages IP routing
+    - Flow Control is used only on fiber optics; Congestion Control is used only on
+      copper cables
+    - Flow Control operates at Layer 2; Congestion Control operates at Layer 7
+    correct: 0
+    explanation: Flow control uses `rwnd` to prevent buffer overflow on the receiving
+      host, while congestion control dynamically regulates `cwnd` to prevent router
+      queue collapse.
+  - type: multiple_choice
+    question: What is the size of the minimal, lightweight header of a User Datagram
+      Protocol (UDP) packet?
+    options:
+    - 8 bytes
+    - 20 bytes
+    - 40 bytes
+    - 14 bytes
+    correct: 0
+    explanation: A UDP header contains just 4 fields of 2 bytes each (Source Port,
+      Dest Port, Length, Checksum), totaling 8 bytes.
+  - type: multiple_choice
+    question: What TCP mechanism triggers immediate retransmission of a lost segment
+      after receiving three identical duplicate ACKs without waiting for a retransmission
+      timer to expire?
+    options:
+    - Fast Retransmit
+    - Slow Start
+    - Nagle's Algorithm
+    - Path MTU Discovery
+    correct: 0
+    explanation: When three duplicate ACKs arrive for the same sequence number, the
+      sender infers packet loss and immediately retransmits the missing segment (Fast
+      Retransmit).
+  - type: multiple_choice
+    question: What mathematical law governs the steady-state probing behavior of classic
+      TCP Reno congestion avoidance?
+    options:
+    - AIMD (Additive Increase / Multiplicative Decrease)
+    - MIMD (Multiplicative Increase / Multiplicative Decrease)
+    - FIFO Queue Balancing
+    - Exponential Decay
+    correct: 0
+    explanation: Under AIMD, `cwnd` grows linearly by 1 MSS each round trip time when
+      no loss occurs, but is cut in half (multiplicatively) upon packet loss.
+  - type: multiple_choice
+    question: What network phenomenon describes high buffer latency where routers
+      maintain massive memory queues, delaying packet delivery without dropping packets?
+    options:
+    - Bufferbloat
+    - Jitter Spike
+    - Packet Duplication
+    - SYN Flooding
+    correct: 0
+    explanation: Oversized router buffers hold excessive packets instead of dropping
+      them, destroying real-time responsiveness by adding seconds of latency.
+  - type: multiple_choice
+    question: What fundamental problem occurs in TCP when a single dropped packet
+      stalls the delivery of subsequent, successfully received packets to the application?
+    options:
+    - Head-of-Line (HoL) Blocking
+    - Routing Black Hole
+    - Broadcast Storm
+    - ARP Cache Poisoning
+    correct: 0
+    explanation: Because TCP guarantees strictly in-order stream delivery, any missing
+      segment prevents all following data in the buffer from being read by the application.
+  - type: multiple_choice
+    question: Which modern congestion control algorithm developed by Google models
+      the physical bottleneck bandwidth and minimum RTT of the network rather than
+      relying on packet loss?
+    options:
+    - BBR (Bottleneck Bandwidth and RTT)
+    - TCP Reno
+    - TCP Tahoe
+    - Cubic
+    correct: 0
+    explanation: BBR measures the real delivery rate and round-trip propagation time,
+      avoiding bufferbloat and performing exceptionally well over lossy cellular networks.
+  - type: multiple_choice
+    question: How many bits are used to represent a TCP or UDP port number, setting
+      the theoretical maximum port number to 65,535?
+    options:
+    - 16 bits
+    - 8 bits
+    - 32 bits
+    - 24 bits
+    correct: 0
+    explanation: Ports are 16-bit unsigned integers ($2^{16} = 65,536$), ranging from
+      port 0 to 65535.
+  - type: multiple_choice
+    question: What TCP flag is sent to forcefully and immediately terminate a connection
+      without executing a multi-step handshake?
+    options:
+    - RST (Reset)
+    - FIN (Finish)
+    - URG (Urgent)
+    - PSH (Push)
+    correct: 0
+    explanation: The RST flag aborts an active connection immediately, used when a
+      packet arrives for a port where no listening socket is bound.
+  - type: multiple_choice
+    question: What algorithm groups small outgoing data packets together into a single
+      TCP segment to prevent flooding networks with tiny 1-byte payloads?
+    options:
+    - Nagle's Algorithm
+    - Dijkstra's Algorithm
+    - Karn's Algorithm
+    - Jacobson's Algorithm
+    correct: 0
+    explanation: Nagle's algorithm delays transmission of small messages until previous
+      data is acknowledged or enough bytes accumulate to fill a full MSS.
+  - type: multiple_choice
+    question: What constitutes the standard 5-Tuple uniquely identifying an active
+      network connection on an operating system?
+    options:
+    - Source IP, Source Port, Destination IP, Destination Port, Protocol
+    - MAC Address, IP Address, Subnet Mask, Default Gateway, DNS Server
+    - Domain Name, URL Path, HTTP Method, User Agent, Cookie
+    - Interface ID, VLAN ID, TTL, Checksum, Sequence Number
+    correct: 0
+    explanation: Operating system kernels distinguish distinct network connections
+      by matching Source IP, Source Port, Destination IP, Destination Port, and Protocol.
+  - type: multiple_choice
+    question: Which port range (0 to 1023) is designated for Well-Known system services
+      such as HTTP (80), HTTPS (443), and SSH (22)?
+    options:
+    - Well-Known Ports (System Ports)
+    - Registered Ports (1024-49151)
+    - Ephemeral Dynamic Ports (49152-65535)
+    - Multicast Ports
+    correct: 0
+    explanation: Ports 0 to 1023 are reserved for well-known core internet services,
+      typically requiring administrator (root) privileges to bind.
+  - type: multiple_choice
+    question: Why is UDP preferred over TCP for competitive multiplayer gaming and
+      live audio streaming?
+    options:
+    - It eliminates latency delays caused by retransmitting dropped, out-of-date packets
+    - It automatically encrypts game coordinates with military-grade security
+    - It increases bandwidth speeds by compressing data with Huffman coding
+    - It allows game servers to run without IP addresses
+    correct: 0
+    explanation: In real-time multiplayer games, receiving an old player position
+      from half a second ago is useless; dropping it immediately is superior to stalling
+      gameplay.
+- id: dns_and_tls_cryptography
+  title: '4. Internet Services & Security: DNS & TLS Encryption'
+  description: The hierarchical Domain Name System, Public Key Infrastructure (PKI),
+    TLS 1.3 cryptographic handshakes, and stateful firewalls.
+  cards:
+  - id: dns_hierarchy_resolution
+    title: The Domain Name System (DNS) & Recursive Resolution
+    figure:
+      title: Hierarchical Iterative DNS Resolution Flow
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <rect x=\"15\" y=\"45\" width=\"80\" height=\"\
+        45\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"\
+        2\"/>\n  <text x=\"55\" y=\"68\" font-size=\"10\" font-weight=\"bold\" fill=\"\
+        #3b82f6\" text-anchor=\"middle\">Client</text>\n  <text x=\"55\" y=\"80\"\
+        \ font-size=\"8\" fill=\"currentColor\" text-anchor=\"middle\">Browser</text>\n\
+        \  <rect x=\"125\" y=\"45\" width=\"90\" height=\"45\" rx=\"6\" fill=\"#10b981\"\
+        \ fill-opacity=\"0.15\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"\
+        170\" y=\"68\" font-size=\"10\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"\
+        middle\">Recursive</text>\n  <text x=\"170\" y=\"80\" font-size=\"8\" fill=\"\
+        currentColor\" text-anchor=\"middle\">(1.1.1.1 / 8.8.8.8)</text>\n  <rect\
+        \ x=\"250\" y=\"15\" width=\"80\" height=\"35\" rx=\"5\" fill=\"#8b5cf6\"\
+        \ fill-opacity=\"0.15\" stroke=\"#8b5cf6\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"290\" y=\"36\" font-size=\"9\" font-weight=\"bold\" fill=\"#8b5cf6\"\
+        \ text-anchor=\"middle\">1. Root (.)</text>\n  <rect x=\"360\" y=\"45\" width=\"\
+        80\" height=\"35\" rx=\"5\" fill=\"#ec4899\" fill-opacity=\"0.15\" stroke=\"\
+        #ec4899\" stroke-width=\"1.5\"/>\n  <text x=\"400\" y=\"66\" font-size=\"\
+        9\" font-weight=\"bold\" fill=\"#ec4899\" text-anchor=\"middle\">2. TLD (.com)</text>\n\
+        \  <rect x=\"250\" y=\"75\" width=\"100\" height=\"35\" rx=\"5\" fill=\"#f59e0b\"\
+        \ fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"300\" y=\"96\" font-size=\"9\" font-weight=\"bold\" fill=\"#f59e0b\"\
+        \ text-anchor=\"middle\">3. Authoritative</text>\n  <path d=\"M 95 65 L 125\
+        \ 65\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <path d=\"M 215 55 L 250\
+        \ 35\" stroke=\"#8b5cf6\" stroke-width=\"1.5\"/>\n  <path d=\"M 215 65 L 360\
+        \ 65\" stroke=\"#ec4899\" stroke-width=\"1.5\"/>\n  <path d=\"M 215 75 L 250\
+        \ 90\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n</svg>"
+      caption: 'A recursive DNS resolver traverses the inverted domain tree: querying
+        root nameservers, then TLD nameservers, and finally authoritative nameservers
+        to resolve an IP.'
+    points:
+    - The Domain Name System (DNS) is a globally distributed, hierarchical database
+      mapping human-readable hostnames (e.g., example.com) to machine-routable IP
+      addresses.
+    - The resolution hierarchy begins at 13 logical Root Server clusters (a.root-servers.net
+      through m.root-servers.net, replicated worldwide via BGP Anycast). The root
+      directs queries to Top-Level Domain (TLD) servers (.com, .org, .edu), which
+      delegate to the domain's Authoritative Nameserver.
+    - 'Core DNS resource records include: `A` (IPv4 mapping), `AAAA` (IPv6 mapping),
+      `CNAME` (canonical alias pointing to another domain), `MX` (mail exchange priority
+      routing), and `TXT` (arbitrary text used for domain verification, SPF, and DKIM).'
+    - Because legacy DNS queries travel in unencrypted plaintext over UDP port 53,
+      modern operating systems adopt DNS over HTTPS (DoH) and DNS over TLS (DoT) to
+      prevent ISP surveillance, eavesdropping, and man-in-the-middle DNS spoofing.
+  - id: tls_handshake_public_key_crypto
+    title: TLS 1.3 Cryptography & Public Key Infrastructure
+    figure:
+      title: Streamlined TLS 1.3 1-RTT Cryptographic Handshake
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"\
+        120\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"100\" y=\"15\"\
+        \ font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\"\
+        >Client</text>\n  <line x1=\"400\" y1=\"20\" x2=\"400\" y2=\"120\" stroke=\"\
+        #10b981\" stroke-width=\"2\"/>\n  <text x=\"400\" y=\"15\" font-size=\"11\"\
+        \ font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">Server</text>\n\
+        \  <path d=\"M 100 40 L 395 60\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n\
+        \  <text x=\"250\" y=\"45\" font-size=\"10\" fill=\"#3b82f6\" text-anchor=\"\
+        middle\">ClientHello + KeyShare (ECDHE)</text>\n  <path d=\"M 400 75 L 105\
+        \ 95\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"80\"\
+        \ font-size=\"10\" fill=\"#10b981\" text-anchor=\"middle\">ServerHello + Certificate\
+        \ + Finished</text>\n  <path d=\"M 100 105 L 395 105\" stroke=\"#ec4899\"\
+        \ stroke-width=\"2.5\" stroke-dasharray=\"4,4\"/>\n  <text x=\"250\" y=\"\
+        120\" font-size=\"10\" font-weight=\"bold\" fill=\"#ec4899\" text-anchor=\"\
+        middle\">Encrypted Application Data (AES-GCM)</text>\n</svg>"
+      caption: TLS 1.3 completes the cryptographic handshake in a single round trip
+        (1-RTT), establishing symmetric session keys via ephemeral Diffie-Hellman.
+    points:
+    - Transport Layer Security (TLS) combines asymmetric cryptography (slow, mathematically
+      complex) to safely negotiate a shared secret, and symmetric cryptography (fast,
+      hardware-accelerated AES-GCM or ChaCha20) to encrypt actual data payloads.
+    - Public Key Infrastructure (PKI) binds a server's identity to its public key
+      using digital X.509 certificates. Trusted Certificate Authorities (CAs) digitally
+      sign certificates; browsers verify the cryptographic chain of trust down to
+      pre-installed root certificates.
+    - TLS 1.3 eliminates obsolete, insecure algorithms and reduces connection overhead
+      to a single round-trip (1-RTT). The client speculatively transmits its Diffie-Hellman
+      key share in the very first `ClientHello` packet.
+    - 'Modern TLS mandates Perfect Forward Secrecy (PFS) via Ephemeral Diffie-Hellman
+      (ECDHE): unique session keys are generated for each connection and discarded.
+      Even if an attacker steals the server''s private certificate key in the future,
+      past recorded network sessions can never be decrypted.'
+  - id: firewalls_nat_middleboxes
+    title: Firewalls, Stateful Inspection & NAT Traversal
+    points:
+    - Stateless packet filtering firewalls evaluate each packet in isolation against
+      static rules (IP addresses and ports). In contrast, Stateful Inspection Firewalls
+      track active connections in a state table (e.g., Linux `conntrack`), automatically
+      permitting incoming packets belonging to established outbound sessions.
+    - Network Address Port Translation (NAPT) maps internal private IP/port tuples
+      to public IP/port tuples. When a reply arrives, the router rewrites the destination
+      IP/port back to the original internal host.
+    - Direct peer-to-peer protocols (such as WebRTC voice/video calls) encounter NAT
+      barriers. Hosts employ STUN (Session Traversal Utilities for NAT) servers to
+      discover their public-facing IP and port mappings, falling back to TURN (Traversal
+      Using Relays around NAT) proxy relays if symmetric NAT prevents direct P2P connections.
+    - 'To mitigate Distributed Denial of Service (DDoS) SYN floods, servers deploy
+      SYN Cookies: instead of allocating memory for half-open connections, the server
+      encodes connection state cryptographically into the initial sequence number
+      of the SYN-ACK.'
+  trivia:
+  - type: multiple_choice
+    question: How many logical Root Nameserver cluster identities exist at the apex
+      of the global Domain Name System?
+    options:
+    - 13 root server clusters (named a through m)
+    - 256 root server clusters
+    - 1 root server cluster
+    - 1024 root server clusters
+    correct: 0
+    explanation: Because original DNS responses over UDP had a 512-byte limit, exactly
+      13 logical root server identities (a.root-servers.net to m.root-servers.net)
+      were created, now replicated across hundreds of Anycast nodes.
+  - type: multiple_choice
+    question: Which DNS resource record maps a human-readable domain name directly
+      to a 32-bit IPv4 address?
+    options:
+    - A Record
+    - AAAA Record
+    - CNAME Record
+    - MX Record
+    correct: 0
+    explanation: An 'A' (Address) record maps to an IPv4 address, while an 'AAAA'
+      (Quad-A) record maps to a 128-bit IPv6 address.
+  - type: multiple_choice
+    question: What is the role of a CNAME (Canonical Name) record in the Domain Name
+      System?
+    options:
+    - To create an alias pointing one domain name to another domain name
+    - To designate the priority of email receiving servers
+    - To define cryptographic public keys for DKIM email signing
+    - To specify the reverse lookup PTR address
+    correct: 0
+    explanation: A CNAME record creates an alias, allowing hostnames like www.example.com
+      to resolve to another canonical domain like example.com.
+  - type: multiple_choice
+    question: What security mechanism guarantees that past recorded TLS sessions cannot
+      be retroactively decrypted even if the server's long-term private key is stolen
+      later?
+    options:
+    - Perfect Forward Secrecy (PFS)
+    - Certificate Revocation (CRL)
+    - DNSSEC Validation
+    - HTTP Strict Transport Security (HSTS)
+    correct: 0
+    explanation: PFS uses ephemeral Diffie-Hellman (ECDHE) to generate temporary session
+      keys that are erased from memory immediately after the connection closes.
+  - type: multiple_choice
+    question: How many network round-trips (RTT) are required to complete a cryptographic
+      handshake in TLS 1.3 under standard conditions?
+    options:
+    - 1-RTT
+    - 2-RTT
+    - 3-RTT
+    - 0.5-RTT
+    correct: 0
+    explanation: TLS 1.3 streamlined the handshake from 2-RTT down to a single round
+      trip (1-RTT) by sending client key shares speculatively in the ClientHello.
+  - type: multiple_choice
+    question: What cryptographic primitive does TLS use to efficiently encrypt bulk
+      application data after the initial key negotiation?
+    options:
+    - Symmetric-key encryption (e.g. AES-GCM, ChaCha20)
+    - Asymmetric-key encryption (e.g. RSA-4096)
+    - Elliptic-curve digital signatures (ECDSA)
+    - One-way hash functions (SHA-256)
+    correct: 0
+    explanation: Asymmetric crypto is too computationally expensive for high-speed
+      traffic; it is used only to exchange keys, after which fast symmetric ciphers
+      encrypt the payload.
+  - type: multiple_choice
+    question: What is the primary role of a Certificate Authority (CA) in Public Key
+      Infrastructure (PKI)?
+    options:
+    - To digitally sign public-key certificates validating that a domain truly belongs
+      to the certificate holder
+    - To route encrypted IP packets across global fiber optics
+    - To act as the default gateway for local subnets
+    - To store browser session cookies on disk
+    correct: 0
+    explanation: CAs act as trusted third parties, signing digital X.509 certificates
+      to prevent attackers from impersonating websites via forged public keys.
+  - type: multiple_choice
+    question: What security protocol encrypts plaintext DNS queries over port 443
+      to prevent network eavesdropping and ISP manipulation?
+    options:
+    - DoH (DNS over HTTPS)
+    - SNMP (Simple Network Management Protocol)
+    - BGPsec
+    - NTP (Network Time Protocol)
+    correct: 0
+    explanation: DNS over HTTPS wraps DNS lookups inside standard encrypted HTTPS
+      sessions, hiding queries from local Wi-Fi sniffers and telecom surveillance.
+  - type: multiple_choice
+    question: What is the difference between a stateless packet filter and a stateful
+      inspection firewall?
+    options:
+    - Stateful firewalls track connection state tables and allow return packets belonging
+      to established sessions; stateless filters evaluate rules blindly per packet
+    - Stateless firewalls require hardware accelerators; stateful firewalls run only
+      in user space
+    - Stateful firewalls operate exclusively on fiber-optic cables
+    - Stateless firewalls decrypt HTTPS payloads automatically
+    correct: 0
+    explanation: Stateful firewalls monitor TCP sequence numbers and flags, automatically
+      permitting inbound return traffic that corresponds to an existing outbound connection.
+  - type: multiple_choice
+    question: What protocol allows a device behind a NAT to discover its public external
+      IP address and port mapping for peer-to-peer media communication?
+    options:
+    - STUN (Session Traversal Utilities for NAT)
+    - RIP (Routing Information Protocol)
+    - SNMP (Simple Network Management Protocol)
+    - IMAP (Internet Message Access Protocol)
+    correct: 0
+    explanation: STUN allows clients behind NAT to ping a public server and inspect
+      the response to learn their external public-facing IP and port.
+  - type: multiple_choice
+    question: What defensive server technique encodes connection state into the initial
+      sequence number of a SYN-ACK to neutralize SYN flood DDoS attacks without allocating
+      memory?
+    options:
+    - SYN Cookies
+    - Packet Shredding
+    - DNS Amplification
+    - TCP Segmentation Offload
+    correct: 0
+    explanation: SYN Cookies compute a cryptographic hash of client IP/port and timestamp
+      as the initial sequence number, delaying memory allocation until the client
+      returns a valid ACK.
+  - type: multiple_choice
+    question: What security header instructs web browsers to strictly communicate
+      with a domain exclusively over HTTPS for a specified duration?
+    options:
+    - HSTS (HTTP Strict Transport Security)
+    - Content-Security-Policy (CSP)
+    - X-Frame-Options
+    - Access-Control-Allow-Origin (CORS)
+    correct: 0
+    explanation: HSTS instructs the browser to automatically convert all insecure
+      `http://` links into `https://` before sending any request, preventing SSL stripping
+      attacks.
+  - type: multiple_choice
+    question: What extension in the TLS handshake allows a client to specify the target
+      domain hostname in the initial ClientHello, enabling a server to host multiple
+      secure domains on a single IP?
+    options:
+    - SNI (Server Name Indication)
+    - ALPN (Application-Layer Protocol Negotiation)
+    - OCSP Stapling
+    - PFS (Perfect Forward Secrecy)
+    correct: 0
+    explanation: SNI sends the hostname in the opening handshake, allowing the server
+      to select and present the correct digital certificate before establishing encryption.
+  - type: multiple_choice
+    question: What protocol extension uses cryptographic digital signatures to verify
+      that DNS query responses originated from the authentic authoritative zone and
+      were not forged in transit?
+    options:
+    - DNSSEC (Domain Name System Security Extensions)
+    - BGP Anycast
+    - DHCP Snooping
+    - SPF (Sender Policy Framework)
+    correct: 0
+    explanation: DNSSEC signs DNS records with cryptographic keys, allowing resolvers
+      to verify data authenticity and reject tampered or spoofed DNS responses.
+  - type: multiple_choice
+    question: What relay protocol is used in WebRTC when symmetric NAT or strict enterprise
+      firewalls completely block direct peer-to-peer UDP connections?
+    options:
+    - TURN (Traversal Using Relays around NAT)
+    - STUN (Session Traversal Utilities for NAT)
+    - SIP (Session Initiation Protocol)
+    - RTSP (Real-Time Streaming Protocol)
+    correct: 0
+    explanation: When direct P2P connections cannot be established through NAT traversal,
+      TURN acts as an intermediary relay server routing all audio/video media.
+- id: application_layer_web_protocols
+  title: '5. The Application Layer: HTTP/1.1 to HTTP/3 & QUIC'
+  description: Stateless HTTP semantics, HTTP/2 binary stream multiplexing, HPACK
+    header compression, and HTTP/3 over UDP-based QUIC.
+  cards:
+  - id: http11_statelessness_cookies
+    title: 'HTTP/1.1: Request Methods, Status Codes & Keep-Alive'
+    points:
+    - 'The Hypertext Transfer Protocol (HTTP) is an application-layer, stateless request-response
+      protocol powering the World Wide Web. Standard methods express intent: `GET`
+      (idempotent resource retrieval), `POST` (submitting payload bodies), `PUT` (complete
+      resource replacement), and `DELETE`.'
+    - 'HTTP responses return standardized 3-digit status codes: `2xx` Success (200
+      OK, 201 Created), `3xx` Redirection (301 Moved Permanently, 304 Not Modified),
+      `4xx` Client Errors (400 Bad Request, 401 Unauthorized, 404 Not Found), and
+      `5xx` Server Errors (500 Internal Error, 502 Bad Gateway, 503 Service Unavailable).'
+    - 'HTTP/1.1 introduced persistent connections (`Connection: keep-alive`) as default
+      behavior, allowing multiple sequential requests and responses to reuse a single
+      open TCP connection rather than incurring expensive 3-way handshakes for every
+      image and script.'
+    - Because HTTP is inherently stateless, servers manage user sessions using the
+      `Set-Cookie` header. Browsers store these key-value cookies and attach them
+      automatically to subsequent requests to maintain authenticated logins and shopping
+      cart states.
+  - id: http2_multiplexing_binary_framing
+    title: 'HTTP/2: Binary Framing & Stream Multiplexing'
+    figure:
+      title: HTTP/1.1 Head-of-Line Blocking vs. HTTP/2 Interleaved Streams
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"\
+        width:100%;max-height:130px;\">\n  <rect x=\"20\" y=\"30\" width=\"100\" height=\"\
+        35\" rx=\"5\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"\
+        1.5\"/>\n  <text x=\"70\" y=\"52\" font-size=\"10\" font-weight=\"bold\" fill=\"\
+        #3b82f6\" text-anchor=\"middle\">HTML</text>\n  <rect x=\"130\" y=\"30\" width=\"\
+        100\" height=\"35\" rx=\"5\" fill=\"#6366f1\" fill-opacity=\"0.15\" stroke=\"\
+        #6366f1\" stroke-width=\"1.5\"/>\n  <text x=\"180\" y=\"52\" font-size=\"\
+        10\" font-weight=\"bold\" fill=\"#6366f1\" text-anchor=\"middle\">CSS (Blocked)</text>\n\
+        \  <rect x=\"240\" y=\"30\" width=\"100\" height=\"35\" rx=\"5\" fill=\"#8b5cf6\"\
+        \ fill-opacity=\"0.15\" stroke=\"#8b5cf6\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"290\" y=\"52\" font-size=\"10\" font-weight=\"bold\" fill=\"#8b5cf6\"\
+        \ text-anchor=\"middle\">JS (Blocked)</text>\n  <text x=\"470\" y=\"52\" font-size=\"\
+        10\" fill=\"#ef4444\" text-anchor=\"end\">HTTP/1.1 (Sequential)</text>\n \
+        \ <rect x=\"20\" y=\"75\" width=\"60\" height=\"35\" rx=\"5\" fill=\"#3b82f6\"\
+        \ fill-opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"50\" y=\"96\" font-size=\"9\" font-weight=\"bold\" fill=\"#3b82f6\"\
+        \ text-anchor=\"middle\">HTML 1</text>\n  <rect x=\"85\" y=\"75\" width=\"\
+        60\" height=\"35\" rx=\"5\" fill=\"#10b981\" fill-opacity=\"0.2\" stroke=\"\
+        #10b981\" stroke-width=\"1.5\"/>\n  <text x=\"115\" y=\"96\" font-size=\"\
+        9\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">CSS 1</text>\n\
+        \  <rect x=\"150\" y=\"75\" width=\"60\" height=\"35\" rx=\"5\" fill=\"#ec4899\"\
+        \ fill-opacity=\"0.2\" stroke=\"#ec4899\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"180\" y=\"96\" font-size=\"9\" font-weight=\"bold\" fill=\"#ec4899\"\
+        \ text-anchor=\"middle\">JS 1</text>\n  <rect x=\"215\" y=\"75\" width=\"\
+        60\" height=\"35\" rx=\"5\" fill=\"#3b82f6\" fill-opacity=\"0.2\" stroke=\"\
+        #3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"245\" y=\"96\" font-size=\"\
+        9\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">HTML 2</text>\n\
+        \  <rect x=\"280\" y=\"75\" width=\"60\" height=\"35\" rx=\"5\" fill=\"#10b981\"\
+        \ fill-opacity=\"0.2\" stroke=\"#10b981\" stroke-width=\"1.5\"/>\n  <text\
+        \ x=\"310\" y=\"96\" font-size=\"9\" font-weight=\"bold\" fill=\"#10b981\"\
+        \ text-anchor=\"middle\">CSS 2</text>\n  <text x=\"470\" y=\"96\" font-size=\"\
+        10\" fill=\"#10b981\" text-anchor=\"end\">HTTP/2 (Multiplexed)</text>\n</svg>"
+      caption: HTTP/2 splits requests into binary frames across concurrent logical
+        streams, interleaving assets over a single TCP connection.
+    points:
+    - HTTP/2 replaced human-readable ASCII newline protocols with a high-performance
+      Binary Framing Layer. Every message is parsed into small binary frames (such
+      as `HEADERS`, `DATA`, `SETTINGS`, and `RST_STREAM`).
+    - 'It enables true Stream Multiplexing: multiple bi-directional streams are interleaved
+      concurrently over a single TCP connection. A slow or massive image response
+      no longer blocks an adjacent lightweight CSS file at Layer 7.'
+    - 'To eliminate massive bandwidth waste from repetitive headers (like User-Agent
+      and cookies sent with every asset), HTTP/2 introduced HPACK: an algorithm compressing
+      headers using static and dynamic look-up tables.'
+    - 'However, HTTP/2 exposed an underlying transport flaw: TCP Head-of-Line Blocking.
+      Because TCP enforces byte-level ordering, a single dropped packet stalls all
+      multiplexed HTTP/2 streams on that connection until retransmitted.'
+  - id: http3_quic_future_protocols
+    title: 'HTTP/3 & QUIC: The UDP Revolution'
+    points:
+    - HTTP/3 redesigns the transport foundation of the web by completely replacing
+      TCP with QUIC (Quick UDP Internet Connections), a modern protocol implemented
+      directly over user-space UDP.
+    - 'QUIC eliminates Head-of-Line Blocking at Layer 4: individual streams inside
+      a QUIC connection are truly independent. If a packet belonging to Stream #1
+      is dropped, Streams #2 and #3 continue streaming without experiencing any pause.'
+    - QUIC integrates the TLS 1.3 cryptographic handshake directly into its initial
+      connection setup, achieving 0-RTT (Zero Round-Trip Time) connection resumption
+      for returning visitors, allowing encrypted data to flow on the very first packet.
+    - 'QUIC introduces Connection Migration: sessions are tracked by a 64-bit Connection
+      ID rather than the client''s IP:port 4-tuple. When a user steps outside their
+      house and their smartphone transitions from home Wi-Fi to cellular 5G, video
+      calls and file downloads continue seamlessly without dropping the connection.'
+  trivia:
+  - type: multiple_choice
+    question: Which HTTP request method is specified by RFC standards to be idempotent
+      and safe, intended solely for retrieving resources without mutating server state?
+    options:
+    - GET
+    - POST
+    - PATCH
+    - CONNECT
+    correct: 0
+    explanation: '`GET` requests are designed to be safe and idempotent, meaning making
+      the request multiple times produces identical outcomes without side effects.'
+  - type: multiple_choice
+    question: What 3-digit HTTP status code category represents server-side failures
+      (such as 500 Internal Server Error and 502 Bad Gateway)?
+    options:
+    - 5xx (Server Error)
+    - 4xx (Client Error)
+    - 3xx (Redirection)
+    - 2xx (Success)
+    correct: 0
+    explanation: HTTP status codes beginning with 5 indicate that the server encountered
+      an unexpected condition preventing it from fulfilling a valid request.
+  - type: multiple_choice
+    question: What HTTP/1.1 header enables persistent connections, allowing multiple
+      requests to reuse an existing TCP connection?
+    options:
+    - 'Connection: keep-alive'
+    - 'Cache-Control: no-cache'
+    - 'Transfer-Encoding: chunked'
+    - 'Upgrade: websocket'
+    correct: 0
+    explanation: '`keep-alive` instructs the server to leave the underlying TCP socket
+      open after serving a response, avoiding the latency of repeated handshakes.'
+  - type: multiple_choice
+    question: What architectural enhancement in HTTP/2 allows multiple concurrent
+      requests and responses to interleave simultaneously across a single TCP connection?
+    options:
+    - Stream Multiplexing via Binary Framing
+    - Domain Sharding
+    - CSS Spriting
+    - Chunked Base64 Transfer
+    correct: 0
+    explanation: HTTP/2 breaks requests into binary frames tagged with a stream ID,
+      allowing browsers to send hundreds of requests over a single shared connection.
+  - type: multiple_choice
+    question: What specialized header compression algorithm does HTTP/2 use to compress
+      repetitive header fields using static and dynamic lookup tables?
+    options:
+    - HPACK
+    - Gzip
+    - Brotli
+    - LZMA
+    correct: 0
+    explanation: HPACK was specifically engineered for HTTP/2 to eliminate duplicate
+      header strings and protect against CRIME-style compression attacks.
+  - type: multiple_choice
+    question: What underlying transport protocol does the next-generation HTTP/3 protocol
+      use instead of TCP?
+    options:
+    - QUIC (running over UDP)
+    - SCTP
+    - Raw IP Packets
+    - RSVP
+    correct: 0
+    explanation: HTTP/3 replaces TCP with QUIC, an encrypted transport protocol built
+      over UDP to solve Head-of-Line blocking and accelerate connection setup.
+  - type: multiple_choice
+    question: Why does HTTP/3 over QUIC eliminate transport-layer Head-of-Line (HoL)
+      blocking when a packet drops?
+    options:
+    - QUIC streams are completely independent; loss on one stream does not pause processing
+      of other streams
+    - QUIC prevents physical packet loss by increasing fiber-optic laser power
+    - QUIC duplicates every single packet across multiple internet routes
+    - QUIC disables packet sequencing entirely
+    correct: 0
+    explanation: In QUIC, streams are tracked independently; dropped packets only
+      pause the specific stream they belong to, allowing all other streams to continue
+      uninterrupted.
+  - type: multiple_choice
+    question: What QUIC feature allows a mobile phone to switch from Wi-Fi to cellular
+      5G without terminating an active video stream or download?
+    options:
+    - Connection Migration (via Connection IDs)
+    - BGP Anycast Routing
+    - Subnet Bridging
+    - Dynamic ARP Tunneling
+    correct: 0
+    explanation: QUIC identifies connections with a random 64-bit Connection ID; when
+      the client IP changes due to network switching, the session survives.
+  - type: multiple_choice
+    question: What HTTP feature allows returning clients in TLS 1.3 / QUIC to transmit
+      encrypted application requests on the very first round trip?
+    options:
+    - 0-RTT Connection Resumption
+    - TCP Fast Open (TFO)
+    - Keep-Alive Pipelining
+    - HTTP Push Messaging
+    correct: 0
+    explanation: 0-RTT allows clients that previously connected to a server to derive
+      encryption keys from cached session tickets and send data immediately.
+  - type: multiple_choice
+    question: What HTTP response header instructs the browser to cache a resource
+      locally and specifies its expiration lifetime in seconds?
+    options:
+    - 'Cache-Control: max-age=3600'
+    - 'Content-Encoding: gzip'
+    - 'Accept-Ranges: bytes'
+    - 'X-Content-Type-Options: nosniff'
+    correct: 0
+    explanation: The `Cache-Control` header directs browsers and intermediate CDN
+      edge caches how long a response can be served fresh without revalidation.
+  - type: multiple_choice
+    question: What HTTP status code is returned when a client attempts to access a
+      protected URL without valid authentication credentials?
+    options:
+    - 401 Unauthorized
+    - 403 Forbidden
+    - 404 Not Found
+    - 302 Found
+    correct: 0
+    explanation: '`401 Unauthorized` indicates that authentication is required and
+      has failed or not been provided, whereas 403 Forbidden indicates the server
+      refuses authorization.'
+  - type: multiple_choice
+    question: What browser mechanism restricts web pages from making cross-origin
+      XMLHttpRequest or fetch calls to a different domain unless permitted by headers?
+    options:
+    - Same-Origin Policy (SOP) & CORS
+    - Content Delivery Network (CDN)
+    - Subresource Integrity (SRI)
+    - Transport Layer Security (TLS)
+    correct: 0
+    explanation: The Same-Origin Policy isolates distinct origins (scheme, host, port),
+      while Cross-Origin Resource Sharing (CORS) headers allow servers to whitelist
+      cross-origin access.
+  - type: multiple_choice
+    question: What HTTP request method is designed to apply partial modifications
+      to an existing resource without replacing the entire entity?
+    options:
+    - PATCH
+    - PUT
+    - POST
+    - OPTIONS
+    correct: 0
+    explanation: '`PUT` replaces the entire target resource with the uploaded representation,
+      whereas `PATCH` specifies a set of differential instructions to modify fields.'
+  - type: multiple_choice
+    question: What modern web protocol upgrades an existing HTTP connection into a
+      full-duplex, bi-directional persistent TCP stream over a single port?
+    options:
+    - WebSocket
+    - Server-Sent Events (SSE)
+    - Long Polling
+    - WebRTC DataChannel
+    correct: 0
+    explanation: 'Via an `Upgrade: websocket` header, client and server switch from
+      request-response HTTP to a continuous bi-directional frame stream over port
+      80/443.'
+  - type: multiple_choice
+    question: What HTTP status code is used for Permanent Redirection, instructing
+      search engines and browsers to permanently update their bookmark links?
+    options:
+    - 301 Moved Permanently
+    - 302 Found
+    - 304 Not Modified
+    - 307 Temporary Redirect
+    correct: 0
+    explanation: '`301 Moved Permanently` informs clients that the requested resource
+      has been assigned a new permanent URI, caching the redirection.'
