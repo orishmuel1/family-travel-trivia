@@ -1,0 +1,839 @@
+id: prob_stats_101_en
+type: academic
+icon: 🎲
+title: Probability & Statistics for Software Engineers (Prob & Stats 101)
+description: A comprehensive, first-principles engineering guide covering combinatorics, discrete and continuous random variables, Bayes' theorem, the Central Limit Theorem, hypothesis testing, A/B experimentation, and Markov chains.
+lang: en
+audience: family
+categories:
+- id: combinatorics_sample_spaces
+  title: '1. Foundations: Combinatorics, Events & Sample Spaces'
+  description: Kolmogorov's probability axioms, counting principles, permutations vs. combinations, conditional probability, and statistical independence.
+  cards:
+  - id: axioms_of_probability_kolmogorov
+    title: The Axioms of Probability & Set Operations
+    figure:
+      title: 'Venn Diagrams: Union, Intersection & Mutual Exclusivity'
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:130px;\">\n  <rect x=\"20\" y=\"15\" width=\"210\" height=\"100\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"0.3\"/>\n  <text x=\"30\" y=\"32\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">Sample Space Ω</text>\n  <circle cx=\"95\" cy=\"70\" r=\"35\" fill=\"#3b82f6\" fill-opacity=\"0.3\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"73\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\">A</text>\n  <circle cx=\"145\" cy=\"70\" r=\"35\" fill=\"#10b981\" fill-opacity=\"0.3\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"160\" y=\"73\" font-size=\"11\" font-weight=\"bold\" fill=\"#10b981\">B</text>\n  <text x=\"120\" y=\"73\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\">A ∩ B</text>\n  <rect x=\"260\" y=\"15\" width=\"220\" height=\"100\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"\
+        1.5\" opacity=\"0.3\"/>\n  <text x=\"270\" y=\"32\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">Disjoint (Mutually Exclusive)</text>\n  <circle cx=\"320\" cy=\"70\" r=\"30\" fill=\"#8b5cf6\" fill-opacity=\"0.3\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n  <text x=\"320\" y=\"73\" font-size=\"11\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">A</text>\n  <circle cx=\"420\" cy=\"70\" r=\"30\" fill=\"#ec4899\" fill-opacity=\"0.3\" stroke=\"#ec4899\" stroke-width=\"2\"/>\n  <text x=\"420\" y=\"73\" font-size=\"11\" font-weight=\"bold\" fill=\"#ec4899\" text-anchor=\"middle\">B</text>\n  <text x=\"370\" y=\"73\" font-size=\"9\" fill=\"currentColor\" text-anchor=\"middle\">P(A ∩ B) = 0</text>\n</svg>"
+      caption: 'Kolmogorov''s axioms formalize probability over a sample space $\Omega$: probabilities are non-negative, the total space sums to 1.0, and disjoint sets add directly.'
+    points:
+    - 'Probability is mathematically grounded on three Kolmogorov Axioms: (1) Non-negativity: $P(E) \ge 0$ for every event $E$; (2) Normalization: $P(\Omega) = 1.0$ for the entire sample space $\Omega$; (3) Countable Additivity: for any sequence of mutually disjoint events, $P(\bigcup E_i) = \sum P(E_i)$.'
+    - The Complement Rule states that $P(A^c) = 1 - P(A)$. In software reliability engineering, it is often far easier to calculate the probability of 'at least one system failure' by computing 1 minus the probability that every component succeeds.
+    - For any two arbitrary events, the Inclusion-Exclusion Principle dictates that $P(A \cup B) = P(A) + P(B) - P(A \cap B)$, subtracting the overlapping intersection to prevent double-counting.
+    - Boole's Inequality (the Union Bound) proves that $P(\bigcup A_i) \le \sum P(A_i)$ for any arbitrary collection of events, providing an invaluable conservative ceiling in algorithm complexity analysis and randomized data structures.
+  - id: combinatorics_permutations_combinations
+    title: 'Combinatorics: Permutations, Combinations & The Birthday Paradox'
+    points:
+    - The Fundamental Counting Principle establishes that if task 1 can be done in $n_1$ ways and task 2 in $n_2$ ways, both independent tasks can be performed in $n_1 \times n_2$ distinct ways.
+    - 'Permutations measure ordered arrangements of $k$ items drawn from $n$ distinct elements: $P(n, k) = \frac{n!}{(n-k)!}$. When order does not matter (such as drawing a hand of cards or selecting cache keys), we compute Combinations: $\binom{n}{k} = \frac{n!}{k!(n-k)!}$.'
+    - The Stars and Bars theorem establishes that the number of ways to distribute $k$ indistinguishable tasks across $n$ distinguishable server buckets is $\binom{k + n - 1}{n - 1}$, a vital metric in queueing theory and load balancing.
+    - The Birthday Paradox reveals that in a group of merely 23 people, there is an over 50% probability that at least two share a birthday. In computer science, this principle dictates hash table collision rates and crypto hash function security against birthday attacks ($O(\sqrt{N})$ complexity to find collisions).
+  - id: conditional_probability_independence
+    title: Conditional Probability, Independence & Simpson's Paradox
+    points:
+    - 'Conditional Probability measures the likelihood of event $A$ given that event $B$ has already occurred: $P(A|B) = \frac{P(A \cap B)}{P(B)}$, effectively restricting the universe from the global sample space $\Omega$ down to the sub-space $B$.'
+    - 'The Multiplication Rule rephrases this definition as $P(A \cap B) = P(B) \times P(A|B)$. Extending across multiple sequential events yields the Chain Rule: $P(A_1 \cap \dots \cap A_n) = P(A_1)P(A_2|A_1)\dots P(A_n|A_1 \dots A_{n-1})$.'
+    - Two events $A$ and $B$ are statistically Independent if and only if $P(A \cap B) = P(A)P(B)$, or equivalently $P(A|B) = P(A)$. Knowing that $B$ happened imparts zero information about the likelihood of $A$.
+    - Simpson's Paradox is a deceptive statistical phenomenon where a trend or correlation that appears in multiple separate groups completely reverses or disappears when the groups are aggregated together, caused by confounding lurking variables.
+  trivia:
+  - type: multiple_choice
+    question: Which mathematician formulated the three foundational axioms that form the rigorous basis of modern probability theory in 1933?
+    options:
+    - Andrey Kolmogorov
+    - Pierre-Simon Laplace
+    - Blaise Pascal
+    - Carl Friedrich Gauss
+    correct: 0
+    explanation: Andrey Kolmogorov established measure-theoretic probability theory based on non-negativity, unit measure of the sample space, and countable additivity.
+  - type: multiple_choice
+    question: What is the formula for the number of Combinations (subsets of size $k$ chosen from $n$ distinct items where order does NOT matter)?
+    options:
+    - $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+    - $P(n, k) = \frac{n!}{(n-k)!}$
+    - $n^k$
+    - $\frac{n!}{k!}$
+    correct: 0
+    explanation: Combinations divide the permutations $\frac{n!}{(n-k)!}$ by $k!$ to eliminate the count of redundant internal orderings.
+  - type: multiple_choice
+    question: What is the minimum group size needed for the probability of at least two people sharing a birthday to exceed 50% (assuming 365 equally likely days)?
+    options:
+    - 23 people
+    - 183 people
+    - 75 people
+    - 50 people
+    correct: 0
+    explanation: With 23 people, there are $\binom{23}{2} = 253$ distinct pairs of people. The probability of zero collisions is $(1 - 1/365) \dots (1 - 22/365) \approx 49.3\%$, so a shared birthday exceeds 50.7%.
+  - type: multiple_choice
+    question: If two events $A$ and $B$ are mutually exclusive (disjoint) with non-zero probabilities, what is their joint probability $P(A \cap B)$?
+    options:
+    - $0$
+    - $P(A) \times P(B)$
+    - $1.0$
+    - $P(A) + P(B)$
+    correct: 0
+    explanation: Mutually exclusive events cannot occur simultaneously by definition, meaning their intersection is the empty set with probability zero.
+  - type: multiple_choice
+    question: What inequality states that the probability of the union of events is less than or equal to the sum of their individual probabilities ($P(\bigcup A_i) \le \sum P(A_i)$)?
+    options:
+    - Boole's Inequality (The Union Bound)
+    - Markov's Inequality
+    - Chebyshev's Inequality
+    - Jensen's Inequality
+    correct: 0
+    explanation: Boole's inequality (Union Bound) provides a simple upper bound on the probability that at least one of several events occurs, without requiring independence.
+  - type: multiple_choice
+    question: What statistical paradox describes a scenario where an apparent correlation across individual demographic sub-groups reverses when the groups are aggregated?
+    options:
+    - Simpson's Paradox
+    - The St. Petersburg Paradox
+    - Bertrand's Paradox
+    - The Monty Hall Paradox
+    correct: 0
+    explanation: Simpson's Paradox occurs when an unobserved confounding variable skews group proportions, reversing aggregated statistical conclusions.
+  - type: multiple_choice
+    question: What is the mathematical condition required for two events $A$ and $B$ to be statistically independent?
+    options:
+    - $P(A \cap B) = P(A) \times P(B)$
+    - $P(A \cap B) = 0$
+    - $P(A \cup B) = 1$
+    - $P(A) = P(B)$
+    correct: 0
+    explanation: Statistical independence implies that the occurrence of $B$ does not alter the probability of $A$, meaning $P(A|B) = P(A)$, which yields $P(A \cap B) = P(A)P(B)$.
+  - type: multiple_choice
+    question: How many distinct ways can 8 worker threads be assigned to 8 distinct CPU affinity cores with exactly one thread per core?
+    options:
+    - $8! = 40,320$ ways
+    - $8^8 = 16,777,216$ ways
+    - $\binom{8}{2} = 28$ ways
+    - $64$ ways
+    correct: 0
+    explanation: 'Assigning 8 unique objects to 8 unique positions is a full permutation problem: $8! = 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 40,320$.'
+  - type: multiple_choice
+    question: What is the probability of obtaining at least one 'Heads' when flipping a fair coin 4 times independently?
+    options:
+    - $15/16$ (93.75%)
+    - $1/2$ (50%)
+    - $1/16$ (6.25%)
+    - $7/8$ (87.5%)
+    correct: 0
+    explanation: Using the complement rule, $P(\text{at least one H}) = 1 - P(\text{all Tails}) = 1 - (1/2)^4 = 1 - 1/16 = 15/16$.
+  - type: multiple_choice
+    question: What combinatorial formula represents the number of ways to distribute $k$ identical items into $n$ distinct buckets (Stars and Bars)?
+    options:
+    - $\binom{k + n - 1}{n - 1}$
+    - $n^k$
+    - $\frac{n!}{(n-k)!}$
+    - $\binom{n}{k}$
+    correct: 0
+    explanation: The stars and bars technique places $n-1$ dividers among $k$ items, yielding $\binom{k + n - 1}{n - 1}$ configurations.
+  - type: multiple_choice
+    question: In a hash function with an output space of $N = 2^{64}$ possible values, approximately how many random hashes must be generated to have a 50% chance of a collision?
+    options:
+    - $\approx 2^{32}$ hashes ($O(\sqrt{N})$)
+    - $\approx 2^{63}$ hashes
+    - $\approx 2^{16}$ hashes
+    - $\approx 2^{64}$ hashes
+    correct: 0
+    explanation: Due to the Birthday Paradox, the expected number of samples needed to find a collision in a uniform hash space of size $N$ scales as $\sqrt{N} = \sqrt{2^{64}} = 2^{32}$.
+  - type: multiple_choice
+    question: What does the Inclusion-Exclusion Principle state for the union of two arbitrary events $P(A \cup B)$?
+    options:
+    - $P(A) + P(B) - P(A \cap B)$
+    - $P(A) + P(B)$
+    - $P(A) \times P(B)$
+    - $\frac{P(A \cap B)}{P(B)}$
+    correct: 0
+    explanation: To find $P(A \cup B)$, adding $P(A) + P(B)$ counts the joint intersection twice; subtracting $P(A \cap B)$ corrects the sum.
+  - type: multiple_choice
+    question: If $P(A) = 0.4$, $P(B) = 0.5$, and $A$ and $B$ are independent, what is $P(A \cap B)$?
+    options:
+    - $0.20$
+    - $0.90$
+    - $0.10$
+    - $0.0$
+    correct: 0
+    explanation: By definition of statistical independence, $P(A \cap B) = P(A) \times P(B) = 0.4 \times 0.5 = 0.20$.
+  - type: multiple_choice
+    question: What is the conditional probability $P(A|B)$ if event $B$ is a subset of event $A$ (meaning $B \subset A$ and $P(B) > 0$)?
+    options:
+    - $1.0$
+    - $P(A)$
+    - $0.0$
+    - $P(B)$
+    correct: 0
+    explanation: If $B \subset A$, then whenever $B$ happens, $A$ must necessarily happen ($A \cap B = B$). Hence $P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B)}{P(B)} = 1.0$.
+  - type: multiple_choice
+    question: In software testing, if a test suite has 5 independent tests each with a 99% probability of passing on healthy code, what is the probability that all 5 tests pass?
+    options:
+    - $\approx 95.1\%$ ($(0.99)^5$)
+    - $99.0\%$
+    - $90.0\%$
+    - $99.5\%$
+    correct: 0
+    explanation: 'Under independence, the joint probability is the product of individual probabilities: $(0.99)^5 \approx 0.95099$ or roughly 95.1%.'
+- id: random_variables_distributions
+  title: 2. Random Variables, Expectation & Probability Distributions
+  description: Discrete vs. continuous random variables, PMF/PDF/CDF, Expectation and Variance, Bernoulli, Binomial, Poisson, Normal, and Exponential distributions.
+  cards:
+  - id: pmf_pdf_cdf_expectation
+    title: PMF, PDF, CDF, Expectation & Variance
+    figure:
+      title: 'Normal (Gaussian) Distribution: 68-95-99.7 Empirical Rule'
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:130px;\">\n  <line x1=\"30\" y1=\"105\" x2=\"470\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"1.5\" opacity=\"0.4\"/>\n  <!-- Bell curve fill -->\n  <path d=\"M 50 105 Q 150 105 200 65 Q 230 25 250 20 Q 270 25 300 65 Q 350 105 450 105 Z\" fill=\"#3b82f6\" fill-opacity=\"0.15\"/>\n  <!-- Bell curve outline -->\n  <path d=\"M 50 105 Q 150 105 200 65 Q 230 25 250 20 Q 270 25 300 65 Q 350 105 450 105\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <!-- Mean line -->\n  <line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"105\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/>\n  <text x=\"250\" y=\"118\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\" text-anchor=\"middle\">μ (Mean)</text>\n  <!-- 1 sigma -->\n  <line x1=\"200\" y1=\"65\" x2=\"200\" y2=\"105\" stroke=\"#10b981\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n  <line x1=\"300\" y1=\"65\"\
+        \ x2=\"300\" y2=\"105\" stroke=\"#10b981\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n  <text x=\"200\" y=\"118\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.7\" text-anchor=\"middle\">-1σ</text>\n  <text x=\"300\" y=\"118\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.7\" text-anchor=\"middle\">+1σ</text>\n  <text x=\"250\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">68.2% within ±1σ</text>\n</svg>"
+      caption: 'The Normal distribution bell curve: probability density is greatest at the mean $\mu$, with 68.27% of mass within $\pm 1\sigma$ and 95.45% within $\pm 2\sigma$.'
+    points:
+    - A Random Variable $X$ maps sample space outcomes to real numbers. Discrete variables use a Probability Mass Function (PMF, $P(X=x)$) where $\sum p(x) = 1$, while continuous variables use a Probability Density Function (PDF, $f(x)$) where $P(a \le X \le b) = \int_a^b f(x)dx$ and the probability of any exact single point is 0.
+    - 'The Cumulative Distribution Function (CDF) is defined as $F(x) = P(X \le x)$, monotonically increasing from 0 to 1. For continuous variables, the PDF is the derivative of the CDF: $f(x) = \frac{d}{dx}F(x)$.'
+    - 'Expectation $E[X]$ measures the probability-weighted central tendency: $\sum x p(x)$ (discrete) or $\int x f(x) dx$ (continuous). Linearity of Expectation states that $E[aX + bY] = aE[X] + bE[Y]$, holding unconditionally even if $X$ and $Y$ are highly correlated or dependent.'
+    - 'Variance measures dispersion around the mean: $\text{Var}(X) = E[(X - E[X])^2] = E[X^2] - (E[X])^2$. Standard deviation $\sigma = \sqrt{\text{Var}(X)}$ restores the original unit of measurement.'
+  - id: discrete_distributions_bernoulli_binomial_poisson
+    title: 'Discrete Families: Bernoulli, Binomial & Poisson'
+    points:
+    - A Bernoulli trial models a single boolean success/failure outcome with probability $p$, having mean $p$ and variance $p(1-p)$.
+    - 'The Binomial Distribution $\text{Bin}(n, p)$ models the total number of successes in $n$ independent Bernoulli trials: $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$, with mean $E[X] = np$ and variance $\text{Var}(X) = np(1-p)$.'
+    - 'The Geometric Distribution models the number of trials needed to achieve the first success: $P(X=k) = (1-p)^{k-1}p$, exhibiting the memoryless property among discrete distributions.'
+    - 'The Poisson Distribution $\text{Pois}(\lambda)$ models the count of rare, independent events occurring in a fixed interval of time or space at an average rate $\lambda$: $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$, with the unique property that $E[X] = \text{Var}(X) = \lambda$. It models server request arrivals, network packet bursts, and hardware bit flips.'
+  - id: continuous_distributions_normal_exponential
+    title: 'Continuous Families: Uniform, Exponential & Normal (Gaussian)'
+    points:
+    - The Continuous Uniform Distribution $U(a, b)$ assigns equal probability density across an interval, serving as the universal primitive behind computer pseudo-random number generators (PRNGs).
+    - 'The Exponential Distribution $\text{Exp}(\lambda)$ models the continuous waiting time between Poisson arrivals: $f(x) = \lambda e^{-\lambda x}$ with mean $1/\lambda$. It is the only continuous distribution with the memoryless property: $P(X > s + t | X > s) = P(X > t)$, making it foundational in mean time between failures (MTBF).'
+    - The Normal (Gaussian) Distribution $\mathcal{N}(\mu, \sigma^2)$ is the symmetric bell curve defined by $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$. By the 68-95-99.7 empirical rule, 68.27% of observations fall within $\pm 1\sigma$, 95.45% within $\pm 2\sigma$, and 99.73% within $\pm 3\sigma$.
+    - Heavy-Tailed & Power-Law Distributions (such as Pareto) model real-world Internet traffic, file sizes, and API latency where extreme outliers occur with vastly higher probability than a Gaussian predicts, defying standard standard-deviation heuristics.
+  trivia:
+  - type: multiple_choice
+    question: What fundamental property of mathematical expectation states that $E[aX + bY] = aE[X] + bE[Y]$ regardless of whether $X$ and $Y$ are independent?
+    options:
+    - Linearity of Expectation
+    - The Law of Large Numbers
+    - Markov's Inequality
+    - Jensen's Inequality
+    correct: 0
+    explanation: Linearity of expectation holds unconditionally for any random variables, even if they are heavily dependent or negatively correlated.
+  - type: multiple_choice
+    question: For any continuous random variable with probability density function $f(x)$, what is the exact probability that $X$ equals any single specific real number $c$ ($P(X = c)$)?
+    options:
+    - $0$
+    - $f(c)$
+    - $1.0$
+    - $1 / \infty$
+    correct: 0
+    explanation: Because a single real number has an interval width of zero, the integral $\int_c^c f(x)dx = 0$, meaning individual points have zero probability mass.
+  - type: multiple_choice
+    question: In a Poisson distribution with parameter $\lambda = 4$, what is both its expected value $E[X]$ and its variance $\text{Var}(X)$?
+    options:
+    - Both are equal to 4 ($E[X] = \text{Var}(X) = 4$)
+    - $E[X] = 4$ and $\text{Var}(X) = 16$
+    - $E[X] = 4$ and $\text{Var}(X) = 2$
+    - $E[X] = 2$ and $\text{Var}(X) = 4$
+    correct: 0
+    explanation: A defining hallmark of the Poisson distribution is that its mean and its variance are mathematically identical and equal to $\lambda$.
+  - type: multiple_choice
+    question: Under the empirical rule (68-95-99.7) for a normal distribution, approximately what percentage of observations fall within $\pm 2$ standard deviations from the mean?
+    options:
+    - $\approx 95.4\%$
+    - $\approx 68.3\%$
+    - $\approx 99.7\%$
+    - $\approx 50.0\%$
+    correct: 0
+    explanation: A Gaussian distribution contains roughly 68.27% within $\pm 1\sigma$, 95.45% within $\pm 2\sigma$, and 99.73% within $\pm 3\sigma$.
+  - type: multiple_choice
+    question: What unique mathematical property is possessed exclusively by the Exponential distribution (continuous) and Geometric distribution (discrete)?
+    options:
+    - Memorylessness ($P(X > s + t | X > s) = P(X > t)$)
+    - Zero Skewness
+    - Finite Support
+    - Equal Mean and Median
+    correct: 0
+    explanation: Memorylessness means that the remaining waiting time until an event occurs does not depend on how much time has already elapsed.
+  - type: multiple_choice
+    question: If a random variable $X$ has expected value $E[X] = 10$ and second moment $E[X^2] = 109$, what is its variance $\text{Var}(X)$?
+    options:
+    - $9$
+    - $109$
+    - $19$
+    - $81$
+    correct: 0
+    explanation: Using the variance formula $\text{Var}(X) = E[X^2] - (E[X])^2 = 109 - 10^2 = 109 - 100 = 9$.
+  - type: multiple_choice
+    question: Which probability distribution models the total number of successes in $n$ independent boolean trials, each with success probability $p$?
+    options:
+    - Binomial distribution
+    - Poisson distribution
+    - Hypergeometric distribution
+    - Exponential distribution
+    correct: 0
+    explanation: The Binomial distribution $\text{Bin}(n, p)$ models the sum of $n$ independent and identically distributed Bernoulli trials.
+  - type: multiple_choice
+    question: If incoming API requests follow a Poisson process at rate $\lambda = 5$ requests/sec, what distribution models the continuous time between consecutive requests?
+    options:
+    - Exponential distribution with parameter $\lambda = 5$
+    - Normal distribution with mean $5$
+    - Uniform distribution between $0$ and $5$
+    - Geometric distribution with $p = 0.2$
+    correct: 0
+    explanation: The inter-arrival times between consecutive events in a Poisson process with rate $\lambda$ are exponentially distributed with rate $\lambda$.
+  - type: multiple_choice
+    question: What is the mathematical relationship between the Cumulative Distribution Function $F(x)$ and Probability Density Function $f(x)$ for a continuous random variable?
+    options:
+    - $f(x) = \frac{d}{dx} F(x)$ (PDF is the derivative of CDF)
+    - $F(x) = \frac{d}{dx} f(x)$
+    - $F(x) = 1 - f(x)$
+    - $f(x) = F(x)^2$
+    correct: 0
+    explanation: 'By the Fundamental Theorem of Calculus, the PDF is the first derivative of the CDF: $f(x) = F''(x)$.'
+  - type: multiple_choice
+    question: If an unreliable network socket has a failure probability of $p = 0.05$ per call, what is the expected number of calls until the first failure occurs?
+    options:
+    - $20$ calls ($1/p$)
+    - $5$ calls
+    - $100$ calls
+    - $50$ calls
+    correct: 0
+    explanation: The expected value of a Geometric distribution modeling trials until the first success/failure is $E[X] = 1/p = 1 / 0.05 = 20$.
+  - type: multiple_choice
+    question: What is the variance of a single Bernoulli trial with success probability $p$?
+    options:
+    - $p(1 - p)$
+    - $p^2$
+    - $1 - p$
+    - $\sqrt{p(1 - p)}$
+    correct: 0
+    explanation: For a Bernoulli trial, $E[X] = p$ and $E[X^2] = p$, so $\text{Var}(X) = E[X^2] - (E[X])^2 = p - p^2 = p(1 - p)$.
+  - type: multiple_choice
+    question: Why is assuming a Gaussian distribution dangerous when monitoring high-percentile software latencies (like p99 or p99.9)?
+    options:
+    - Production latency exhibits heavy tails where extreme spikes occur orders of magnitude more frequently than a Gaussian predicts
+    - Gaussian distributions cannot have non-negative values
+    - Gaussian distributions cannot model discrete millisecond values
+    - The mean of a Gaussian is always zero
+    correct: 0
+    explanation: Real computer networks and storage systems follow heavy-tailed power-law distributions; treating tail latency as Gaussian severely underestimates outages.
+  - type: multiple_choice
+    question: If $X$ and $Y$ are independent random variables, what is the variance of their sum $\text{Var}(X + Y)$?
+    options:
+    - $\text{Var}(X) + \text{Var}(Y)$
+    - $\text{Var}(X) \times \text{Var}(Y)$
+    - $(\text{Var}(X) + \text{Var}(Y))^2$
+    - $\sqrt{\text{Var}(X)} + \sqrt{\text{Var}(Y)}$
+    correct: 0
+    explanation: When variables are independent, their covariance is zero, which means the variance of the sum is simply the sum of their individual variances.
+  - type: multiple_choice
+    question: What must the total integral of any valid Probability Density Function $f(x)$ over $(-\infty, \infty)$ equal?
+    options:
+    - Exactly $1.0$
+    - $\infty$
+    - $0.0$
+    - $\pi$
+    correct: 0
+    explanation: By Kolmogorov's normalization axiom, the total probability across the entire continuous sample space must equal 1.0.
+  - type: multiple_choice
+    question: If a biased coin has a 70% probability of heads ($p = 0.7$) and is flipped 100 times independently, what is the expected number of heads?
+    options:
+    - $70$ heads ($np$)
+    - $50$ heads
+    - $35$ heads
+    - $7$ heads
+    correct: 0
+    explanation: For a Binomial distribution $\text{Bin}(n, p)$, the expectation is $E[X] = np = 100 \times 0.7 = 70$.
+- id: bayes_theorem_bayesian_inference
+  title: 3. Bayes' Theorem, Priors & Bayesian Inference
+  description: Law of Total Probability, Bayes' theorem, Base Rate Fallacy, Prior vs. Posterior distributions, Conjugate priors, and Naive Bayes text classification.
+  cards:
+  - id: bayes_theorem_and_total_probability
+    title: The Law of Total Probability & Bayes' Rule
+    figure:
+      title: 'Bayes'' Rule: Updating Prior to Posterior through Evidence'
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:130px;\">\n  <!-- Prior Box -->\n  <rect x=\"25\" y=\"40\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"75\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">Prior P(H)</text>\n  <text x=\"75\" y=\"75\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.7\" text-anchor=\"middle\">Initial Belief</text>\n  <!-- Arrow 1 -->\n  <line x1=\"125\" y1=\"65\" x2=\"185\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <!-- Likelihood Box -->\n  <rect x=\"185\" y=\"40\" width=\"130\" height=\"50\" rx=\"8\" fill=\"#10b981\" fill-opacity=\"0.15\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">Likelihood P(E|H)</text>\n  <text x=\"250\" y=\"75\"\
+        \ font-size=\"9\" fill=\"currentColor\" opacity=\"0.7\" text-anchor=\"middle\">Observed Evidence</text>\n  <!-- Arrow 2 -->\n  <line x1=\"315\" y1=\"65\" x2=\"375\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <!-- Posterior Box -->\n  <rect x=\"375\" y=\"40\" width=\"105\" height=\"50\" rx=\"8\" fill=\"#8b5cf6\" fill-opacity=\"0.15\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n  <text x=\"427\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">Posterior P(H|E)</text>\n  <text x=\"427\" y=\"75\" font-size=\"9\" fill=\"currentColor\" opacity=\"0.7\" text-anchor=\"middle\">Updated Belief</text>\n  <!-- Formula below -->\n  <text x=\"250\" y=\"115\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"middle\">P(H|E) = [P(E|H) · P(H)] / P(E)</text>\n</svg>"
+      caption: Bayes' theorem updates subjective prior beliefs $P(H)$ into a posterior distribution $P(H|E)$ upon observing new evidence $E$ via likelihood $P(E|H)$.
+    points:
+    - The Law of Total Probability states that if $\{B_1, B_2, \dots, B_n\}$ partition the sample space into disjoint events, the probability of any event $A$ is $P(A) = \sum_{i=1}^n P(A|B_i)P(B_i)$.
+    - 'Bayes'' Theorem mathematically updates beliefs upon observing new evidence: $P(H|E) = \frac{P(E|H) P(H)}{P(E)}$, where $P(H)$ is the Prior, $P(E|H)$ is the Likelihood, $P(E)$ is the Marginal Evidence, and $P(H|E)$ is the Posterior.'
+    - 'Expanding the denominator with the Law of Total Probability yields the complete operational formula: $P(H|E) = \frac{P(E|H)P(H)}{P(E|H)P(H) + P(E|\neg H)P(\neg H)}$.'
+    - 'Odds Form of Bayes: $\text{Posterior Odds} = \text{Prior Odds} \times \text{Bayes Factor}$ (Likelihood Ratio $\frac{P(E|H)}{P(E|\neg H)}$), providing a computationally linear framework for sequential evidence accumulation.'
+  - id: base_rate_fallacy_and_medical_testing
+    title: The Base Rate Fallacy & False Positive Paradox
+    points:
+    - The Base Rate Fallacy occurs when people evaluate the probability of a condition given a positive test without accounting for the prior prevalence (base rate) of the condition in the population.
+    - Suppose a rare disease affects 1 in 1,000 people (0.1%), and a diagnostic test is 99% accurate (1% false positive, 1% false negative). If a random person tests positive, their actual probability of having the disease is only $\approx 9\%$ ($1 / 11$).
+    - In cybersecurity intrusion detection systems (IDS), an alert algorithm with 99.9% precision still generates massive false alarm rates if malicious packets constitute only 0.001% of all network traffic.
+    - 'Counteracting the fallacy requires anchoring analysis to absolute counts rather than relative percentages: out of 100,000 items, 100 are defective and 99 test positive, while 99,900 are healthy and ~999 falsely test positive.'
+  - id: bayesian_inference_conjugate_priors_naive_bayes
+    title: Conjugate Priors, Maximum A Posteriori & Naive Bayes
+    points:
+    - 'Frequentist vs. Bayesian: Frequentists treat probabilities as long-run frequencies of repeatable events with fixed, unknown parameters; Bayesians treat probability as a subjective degree of belief over parameter distributions.'
+    - 'Conjugate Priors: When the posterior distribution belongs to the same family as the prior, they are conjugate. The Beta distribution is conjugate to the Binomial likelihood, enabling closed-form Bayesian updates: $\text{Beta}(\alpha + k, \beta + n - k)$ where $\alpha, \beta$ represent pseudo-observations.'
+    - 'Maximum A Posteriori (MAP) selects the parameter value that maximizes the posterior: $\hat{\theta}_{MAP} = \arg\max_\theta P(\theta|D) = \arg\max_\theta P(D|\theta)P(\theta)$, acting as L2/L1 regularization over Maximum Likelihood Estimation (MLE).'
+    - 'The Naive Bayes Classifier assumes that all feature attributes are conditionally independent given the class label: $P(C|x_1, \dots, x_n) \propto P(C) \prod_{i=1}^n P(x_i|C)$. Despite this ''naive'' oversimplification, it is astonishingly fast and effective in email spam filtering and document triage.'
+  trivia:
+  - type: multiple_choice
+    question: In Bayes' theorem $P(H|E) = \frac{P(E|H) P(H)}{P(E)}$, what is the initial probability $P(H)$ called before observing new evidence?
+    options:
+    - Prior probability
+    - Likelihood
+    - Posterior probability
+    - Marginal likelihood
+    correct: 0
+    explanation: The prior probability $P(H)$ represents the background degree of belief in hypothesis $H$ before new evidence $E$ is incorporated.
+  - type: multiple_choice
+    question: What is the conditional probability $P(E|H)$ called in Bayesian statistics?
+    options:
+    - Likelihood
+    - Prior
+    - Posterior
+    - Evidence factor
+    correct: 0
+    explanation: The likelihood $P(E|H)$ measures the probability of observing the evidence given that the hypothesis $H$ is true.
+  - type: multiple_choice
+    question: What cognitive and statistical error occurs when an observer severely overestimates the probability of a condition by ignoring its rarity in the overall population?
+    options:
+    - Base Rate Fallacy
+    - Gambler's Fallacy
+    - Hot Hand Fallacy
+    - Berkson's Fallacy
+    correct: 0
+    explanation: The Base Rate Fallacy occurs when people evaluate diagnostic tests while ignoring the low underlying prevalence of the condition.
+  - type: multiple_choice
+    question: If a disease affects 1 in 1,000 people and a test has 99% sensitivity with a 1% false positive rate, what is the chance that a person who tests positive actually has the disease?
+    options:
+    - $\approx 9\%$ (roughly 1 in 11)
+    - $\approx 99\%$
+    - $\approx 50\%$
+    - $\approx 0.1\%$
+    correct: 0
+    explanation: In 100,000 people, 100 are sick (99 test positive) and 99,900 are healthy (999 test positive). True positives are $99 / (99 + 999) \approx 9\%$.
+  - type: multiple_choice
+    question: What simplifying assumption makes the 'Naive Bayes' classifier 'naive'?
+    options:
+    - All input features are conditionally independent given the class label
+    - All prior probabilities are uniformly equal to 0.5
+    - The training set contains zero labeling errors
+    - All continuous features follow a uniform distribution
+    correct: 0
+    explanation: Naive Bayes naively assumes features are conditionally independent given the class ($P(x_1, x_2|C) = P(x_1|C)P(x_2|C)$), drastically simplifying computation.
+  - type: multiple_choice
+    question: What probability distribution serves as the conjugate prior for the parameter $p$ of a Binomial likelihood?
+    options:
+    - Beta distribution
+    - Gaussian distribution
+    - Gamma distribution
+    - Poisson distribution
+    correct: 0
+    explanation: The Beta distribution is the conjugate prior for Bernoulli and Binomial likelihoods; observing $k$ successes and $n-k$ failures simply updates parameters to $\text{Beta}(\alpha + k, \beta + n - k)$.
+  - type: multiple_choice
+    question: How does Maximum A Posteriori (MAP) estimation differ fundamentally from Maximum Likelihood Estimation (MLE)?
+    options:
+    - MAP incorporates a prior probability distribution $P(\theta)$ over the parameters
+    - MAP does not use observed training data
+    - MAP produces a point estimate while MLE produces an entire distribution
+    - MAP only works with discrete boolean outcomes
+    correct: 0
+    explanation: MLE maximizes $P(D|\theta)$, whereas MAP maximizes $P(D|\theta)P(\theta)$, effectively adding prior regularization to avoid overfitting.
+  - type: multiple_choice
+    question: What mathematical theorem expresses the marginal probability $P(A)$ as the weighted sum $\sum P(A|B_i)P(B_i)$ across disjoint partitions?
+    options:
+    - The Law of Total Probability
+    - The Central Limit Theorem
+    - Kolmogorov's Extension Theorem
+    - Fubini's Theorem
+    correct: 0
+    explanation: The Law of Total Probability breaks down $P(A)$ into conditional components over an exhaustive partition of the sample space.
+  - type: multiple_choice
+    question: In an email spam filter, if a word appears in 80% of spam emails and only 2% of non-spam emails, what is its Bayes Factor (likelihood ratio)?
+    options:
+    - $40$ ($0.80 / 0.02$)
+    - $78$
+    - $1.6$
+    - $0.025$
+    correct: 0
+    explanation: 'The Bayes Factor is the ratio of likelihoods: $P(\text{word}|\text{spam}) / P(\text{word}|\text{ham}) = 0.80 / 0.02 = 40$.'
+  - type: multiple_choice
+    question: In Bayesian inference, what is the term for the updated probability distribution obtained after combining the prior distribution with observed data?
+    options:
+    - Posterior distribution
+    - Likelihood distribution
+    - Empirical distribution
+    - Sampling distribution
+    correct: 0
+    explanation: The posterior distribution $P(\theta|D)$ represents the revised state of belief after observing experimental data $D$.
+  - type: multiple_choice
+    question: If your prior belief is modeled as $\text{Beta}(2, 2)$ and you observe 3 successes and 1 failure in a new trial, what is the updated posterior distribution?
+    options:
+    - $\text{Beta}(5, 3)$
+    - $\text{Beta}(6, 2)$
+    - $\text{Beta}(3, 2)$
+    - $\text{Beta}(5, 5)$
+    correct: 0
+    explanation: 'Beta-Binomial conjugate updating adds successes to $\alpha$ and failures to $\beta$: $\alpha'' = 2 + 3 = 5$ and $\beta'' = 2 + 1 = 3$.'
+  - type: multiple_choice
+    question: Why do security intrusion detection systems (IDS) with 99.9% accuracy still generate excessive false alarms?
+    options:
+    - Because actual intrusion attacks comprise a tiny fraction (e.g. 0.001%) of total traffic, causing false positives to dominate
+    - Because network firewalls reject Bayesian calculations
+    - Because 99.9% accuracy means 10% of alerts are always wrong
+    - Because network packets do not follow Bernoulli distributions
+    correct: 0
+    explanation: By the Base Rate Fallacy, if legitimate traffic accounts for 99.999% of packets, even a 0.1% false alarm rate produces hundreds of false alerts for every genuine attack.
+  - type: multiple_choice
+    question: In the odds formulation of Bayes' theorem, what factor multiplies the Prior Odds to produce the Posterior Odds?
+    options:
+    - The Bayes Factor (Likelihood Ratio)
+    - The Marginal Probability $P(E)$
+    - The Standard Deviation $\sigma$
+    - The Correlation Coefficient $r$
+    correct: 0
+    explanation: 'The odds form states: $\text{Posterior Odds} = \text{Prior Odds} \times \text{Bayes Factor}$, where the Bayes factor is $\frac{P(E|H_1)}{P(E|H_2)}$.'
+  - type: multiple_choice
+    question: Which philosophical interpretation of probability treats probability as an epistemic degree of belief rather than infinite repeatable trials?
+    options:
+    - Bayesian interpretation
+    - Frequentist interpretation
+    - Classical Laplace interpretation
+    - Propensity interpretation
+    correct: 0
+    explanation: Bayesian probability interprets probability as a quantify of subjective belief given available evidence, applicable even to one-time non-repeatable events.
+  - type: multiple_choice
+    question: If hypothesis $H$ has prior $P(H) = 0.5$, $P(E|H) = 0.8$, and $P(E|\neg H) = 0.2$, what is the total probability of observing evidence $E$ ($P(E)$)?
+    options:
+    - $0.50$
+    - $1.00$
+    - $0.16$
+    - $0.80$
+    correct: 0
+    explanation: 'Using Total Probability: $P(E) = P(E|H)P(H) + P(E|\neg H)P(\neg H) = (0.8)(0.5) + (0.2)(0.5) = 0.4 + 0.1 = 0.50$.'
+- id: sampling_clt_hypothesis_testing
+  title: 4. Sampling, Central Limit Theorem & A/B Testing
+  description: Law of Large Numbers, Central Limit Theorem (CLT), confidence intervals, p-values, Type I and II errors, and rigorous A/B experiment design.
+  cards:
+  - id: law_of_large_numbers_and_clt
+    title: Law of Large Numbers & The Central Limit Theorem
+    figure:
+      title: 'Central Limit Theorem: Distribution Convergence with Sample Size n'
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:130px;\">\n  <!-- n=1 Uniform -->\n  <rect x=\"30\" y=\"45\" width=\"90\" height=\"60\" fill=\"#3b82f6\" fill-opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"75\" y=\"40\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">n = 1 (Uniform)</text>\n  <!-- Arrow -->\n  <line x1=\"135\" y1=\"75\" x2=\"165\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <!-- n=4 Triangular -->\n  <polygon points=\"180,105 230,45 280,105\" fill=\"#10b981\" fill-opacity=\"0.2\" stroke=\"#10b981\" stroke-width=\"1.5\"/>\n  <text x=\"230\" y=\"40\" font-size=\"10\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">n = 4 (Smoothed)</text>\n  <!-- Arrow -->\n  <line x1=\"295\" y1=\"75\" x2=\"325\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <!-- n=30 Bell Curve -->\n  <path d=\"M 340 105 Q 380 105 400 65 Q 410 40 420 38\
+        \ Q 430 40 440 65 Q 460 105 480 105\" fill=\"#8b5cf6\" fill-opacity=\"0.2\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n  <text x=\"410\" y=\"32\" font-size=\"10\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">n ≥ 30 (Gaussian)</text>\n  <line x1=\"20\" y1=\"105\" x2=\"485\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.4\"/>\n</svg>"
+      caption: The Central Limit Theorem demonstrates that the sum or average of $n$ independent variables converges to a Gaussian bell curve regardless of the original population distribution.
+    points:
+    - The Weak Law of Large Numbers (LLN) proves that the sample mean $\bar{X}_n = \frac{1}{n} \sum X_i$ of independent, identically distributed (i.i.d.) variables converges in probability to the true population mean $\mu$ as $n \to \infty$.
+    - 'The Central Limit Theorem (CLT) is the crown jewel of probability: regardless of the underlying population distribution (uniform, skewed, bimodal), the normalized sum of $n$ independent random variables approaches a Gaussian distribution $\mathcal{N}(\mu, \sigma^2/n)$ as $n$ grows large (typically $n \ge 30$).'
+    - The Standard Error of the Mean (SEM) is $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$. To cut measurement uncertainty or margin of error in half, one must quadruple ($4\times$) the sample size.
+    - 'Practical application: CLT explains why noise in physical sensors, audio ADC signals, and aggregated user metrics naturally follows a normal distribution: macro behavior emerges from the sum of millions of micro atomic collisions.'
+  - id: hypothesis_testing_pvalues_errors
+    title: Hypothesis Testing, P-Values, and Decision Errors
+    points:
+    - 'Statistical hypothesis testing pits the Null Hypothesis ($H_0$: no effect, status quo) against the Alternative Hypothesis ($H_1$: an actual effect or performance difference exists).'
+    - Type I Error ($\alpha$, False Positive) occurs when rejecting a true null hypothesis (e.g., claiming a new algorithm is faster when it isn't). Type II Error ($\beta$, False Negative) occurs when failing to reject a false null hypothesis.
+    - Statistical Power ($1 - \beta$) is the probability of correctly detecting a real effect when one exists; standard industrial experiments aim for $\ge 80\%$ power at $\alpha = 0.05$.
+    - The p-value is the probability of obtaining test results at least as extreme as observed, assuming the null hypothesis is true. A p-value is NOT the probability that $H_0$ is true, nor is it the probability that the result occurred by chance.
+  - id: ab_testing_confidence_intervals_pitfalls
+    title: 'A/B Testing in Production: Confidence Intervals & Peeking Pitfalls'
+    points:
+    - A 95% Confidence Interval for a parameter $\mu$ means that across repeated samplings, 95% of constructed intervals $[\bar{X} - 1.96 \frac{\sigma}{\sqrt{n}}, \bar{X} + 1.96 \frac{\sigma}{\sqrt{n}}]$ will bracket the true population parameter.
+    - 'Minimum Detectable Effect (MDE) dictates required sample size: detecting a tiny 0.5% conversion lift requires vastly larger sample sizes ($O(1/\text{MDE}^2)$) than detecting a 10% performance jump.'
+    - 'The Peeking Problem (Optional Stopping): Repeatedly checking p-values during an ongoing A/B test and stopping early the moment $p < 0.05$ inflates the true Type I error rate from 5% to over 30%, producing rampant false positives.'
+    - 'Multiple Hypothesis Testing: Testing 20 metric variations simultaneously at $\alpha = 0.05$ yields a $1 - (0.95)^{20} \approx 64\%$ chance of at least one spurious false discovery, necessitating Bonferroni correction or False Discovery Rate (FDR/Benjamini-Hochberg) control.'
+  trivia:
+  - type: multiple_choice
+    question: What does the Central Limit Theorem guarantee about the sampling distribution of the mean for independent samples as sample size $n$ increases?
+    options:
+    - It converges toward a normal (Gaussian) distribution regardless of the underlying population shape
+    - It converges toward a uniform distribution
+    - It causes the population variance to collapse to zero
+    - It guarantees zero error in every individual sample
+    correct: 0
+    explanation: The CLT guarantees that the distribution of sample averages approaches a Gaussian bell curve $\mathcal{N}(\mu, \sigma^2/n)$ as $n$ grows.
+  - type: multiple_choice
+    question: To reduce the Standard Error of the Mean (SEM) by a factor of 2 (halving the margin of error), by what factor must the sample size $n$ be increased?
+    options:
+    - By a factor of 4 ($4\times$)
+    - By a factor of 2 ($2\times$)
+    - By a factor of 8 ($8\times$)
+    - By a factor of 16 ($16\times$)
+    correct: 0
+    explanation: Because SEM $= \sigma / \sqrt{n}$, halving the denominator requires $\sqrt{n'} = 2\sqrt{n}$, meaning $n' = 4n$.
+  - type: multiple_choice
+    question: What type of statistical error is committed when a test rejects a true null hypothesis (a False Positive)?
+    options:
+    - Type I Error ($\alpha$)
+    - Type II Error ($\beta$)
+    - Sampling Bias
+    - Confounding Error
+    correct: 0
+    explanation: A Type I error (significance level $\alpha$) occurs when concluding that an effect exists when the null hypothesis is actually true.
+  - type: multiple_choice
+    question: What is the statistical power of an experimental test defined as?
+    options:
+    - $1 - \beta$ (probability of correctly rejecting a false null hypothesis)
+    - $1 - \alpha$
+    - $\alpha / \beta$
+    - The sample size $n$
+    correct: 0
+    explanation: Statistical power ($1 - \beta$) is the probability that an experiment will correctly detect a genuine effect of a given magnitude.
+  - type: multiple_choice
+    question: What is the exact definition of a p-value in statistical hypothesis testing?
+    options:
+    - The probability of obtaining test results at least as extreme as observed, assuming the null hypothesis is true
+    - The probability that the null hypothesis is true
+    - The probability that the alternative hypothesis is false
+    - The proportion of bad data points in the sample
+    correct: 0
+    explanation: The p-value calculates $P(\text{data as extreme or more extreme} | H_0 \text{ is true})$, NOT $P(H_0 | \text{data})$.
+  - type: multiple_choice
+    question: What dangerous pitfall occurs when software engineers continuously inspect an ongoing A/B test dashboard and terminate the test the instant $p < 0.05$?
+    options:
+    - The Peeking Problem (Optional Stopping)
+    - Simpson's Paradox
+    - Overfitting
+    - Survivorship Bias
+    correct: 0
+    explanation: Continuous peeking inflates the Type I error rate dramatically (often exceeding 30%) because random fluctuations trigger premature termination.
+  - type: multiple_choice
+    question: If an experimenter evaluates 20 independent product metrics simultaneously at $\alpha = 0.05$ where no real effect exists, what is the chance of at least one false positive?
+    options:
+    - $\approx 64\%$ ($1 - (0.95)^{20}$)
+    - Exactly $5\%$
+    - Exactly $100\%$
+    - $\approx 1\%$
+    correct: 0
+    explanation: The probability of at least one false discovery across $m=20$ tests is $1 - (1 - 0.05)^{20} = 1 - (0.95)^{20} \approx 0.6415$ (64.15%).
+  - type: multiple_choice
+    question: What classical statistical adjustment divides the target significance level by the number of tests ($\alpha / m$) to prevent false discoveries?
+    options:
+    - Bonferroni correction
+    - Laplace smoothing
+    - Tukey's range test
+    - Yates' correction
+    correct: 0
+    explanation: The Bonferroni correction sets the per-hypothesis significance threshold to $\alpha / m$ to bound the family-wise error rate at $\alpha$.
+  - type: multiple_choice
+    question: Which fundamental mathematical law guarantees that the sample average of i.i.d. random variables converges to the population expectation as sample size grows?
+    options:
+    - The Law of Large Numbers
+    - The Law of Total Probability
+    - The Law of Diminishing Returns
+    - Moore's Law
+    correct: 0
+    explanation: The Law of Large Numbers (LLN) proves that sample means converge in probability (weak law) and almost surely (strong law) to the population mean.
+  - type: multiple_choice
+    question: In a standard two-sided 95% confidence interval for a normal distribution, what critical z-score multiplier is used?
+    options:
+    - $1.96$
+    - $2.58$
+    - $1.645$
+    - $3.00$
+    correct: 0
+    explanation: In a standard normal distribution, exactly 95% of the area lies between $z = -1.96$ and $z = +1.96$ ($2.5\%$ in each tail).
+  - type: multiple_choice
+    question: What is the typical Null Hypothesis ($H_0$) in a standard web checkout conversion A/B experiment?
+    options:
+    - There is no difference in conversion rate between variant A and variant B
+    - Variant B is strictly superior to variant A
+    - Variant A has zero total conversions
+    - Users prefer variant B by at least 10%
+    correct: 0
+    explanation: 'The null hypothesis represents the baseline assumption of no effect or equal performance: $\mu_A = \mu_B$.'
+  - type: multiple_choice
+    question: What metric defines the smallest relative performance difference that an A/B test has sufficient statistical power to detect?
+    options:
+    - Minimum Detectable Effect (MDE)
+    - Standard Error of the Mean (SEM)
+    - False Discovery Rate (FDR)
+    - Bayes Factor
+    correct: 0
+    explanation: MDE is the minimum effect size that an experiment can reliably detect given its sample size, significance level $\alpha$, and power $1-\beta$.
+  - type: multiple_choice
+    question: If an experimenter reduces the significance threshold $\alpha$ from $0.05$ to $0.01$, what happens to the risk of committing a Type I error?
+    options:
+    - It decreases from 5% to 1%
+    - It increases from 1% to 5%
+    - It remains unchanged
+    - It doubles
+    correct: 0
+    explanation: Significance level $\alpha$ is by definition the probability of committing a Type I error; reducing it lowers the false positive rate.
+  - type: multiple_choice
+    question: What is the formula for the Standard Error of the sample mean with sample size $n$ drawn from a population with standard deviation $\sigma$?
+    options:
+    - $\sigma / \sqrt{n}$
+    - $\sigma \times \sqrt{n}$
+    - $\sigma^2 / n$
+    - $\sqrt{\sigma / n}$
+    correct: 0
+    explanation: The standard deviation of the sample mean distribution is $\text{SEM} = \sigma / \sqrt{n}$.
+  - type: multiple_choice
+    question: If an A/B test has an established statistical power of 80% ($1 - \beta = 0.80$), what is its probability of committing a Type II error ($\beta$)?
+    options:
+    - $20\%$ ($\beta = 0.20$)
+    - $80\%$
+    - $5\%$
+    - $10\%$
+    correct: 0
+    explanation: 'Type II error $\beta$ and power are complementary: $\beta = 1 - \text{Power} = 1 - 0.80 = 0.20$ (20%).'
+- id: markov_chains_stochastic_processes
+  title: 5. Markov Chains & Stochastic Processes in Computing
+  description: The Markov property, transition probability matrices, stationary distributions, PageRank random walk, and Markov Chain Monte Carlo (MCMC).
+  cards:
+  - id: markov_property_and_transition_matrices
+    title: The Markov Property & Transition Matrices
+    figure:
+      title: Three-State Discrete Markov Chain State Machine
+      svg: "<svg viewBox=\"0 0 500 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-height:130px;\">\n  <!-- State A -->\n  <circle cx=\"80\" cy=\"70\" r=\"28\" fill=\"#3b82f6\" fill-opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"74\" font-size=\"12\" font-weight=\"bold\" fill=\"#3b82f6\" text-anchor=\"middle\">S₁</text>\n  <!-- State B -->\n  <circle cx=\"250\" cy=\"70\" r=\"28\" fill=\"#10b981\" fill-opacity=\"0.2\" stroke=\"#10b981\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"74\" font-size=\"12\" font-weight=\"bold\" fill=\"#10b981\" text-anchor=\"middle\">S₂</text>\n  <!-- State C -->\n  <circle cx=\"420\" cy=\"70\" r=\"28\" fill=\"#8b5cf6\" fill-opacity=\"0.2\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n  <text x=\"420\" y=\"74\" font-size=\"12\" font-weight=\"bold\" fill=\"#8b5cf6\" text-anchor=\"middle\">S₃</text>\n  <!-- Transitions -->\n  <path d=\"M 108 60 Q 165 40 222 60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"\
+        />\n  <text x=\"165\" y=\"45\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"middle\">0.7</text>\n  <path d=\"M 222 80 Q 165 100 108 80\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <text x=\"165\" y=\"100\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"middle\">0.4</text>\n  <path d=\"M 278 60 Q 335 40 392 60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <text x=\"335\" y=\"45\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"middle\">0.6</text>\n  <path d=\"M 392 80 Q 335 100 278 80\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <text x=\"335\" y=\"100\" font-size=\"10\" font-weight=\"bold\" fill=\"currentColor\" text-anchor=\"middle\">0.3</text>\n  <!-- Self loop on S1 -->\n  <path d=\"M 60 50 C 40 20 100 20 90 45\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"22\" font-size=\"9\" font-weight=\"bold\"\
+        \ fill=\"currentColor\">0.3</text>\n</svg>"
+      caption: 'A discrete-time Markov chain: state transitions depend solely on the current state. Each row of transition matrix $P$ sums to exactly 1.0.'
+    points:
+    - 'A stochastic process satisfies the Markov Property (memorylessness) if the future state depends only on the current state and not on the preceding sequence of historical states: $P(X_{t+1} = s | X_t, X_{t-1}, \dots, X_0) = P(X_{t+1} = s | X_t)$.'
+    - A discrete-time Markov chain is characterized by a state space $S$ and a Transition Matrix $P$, where element $P_{ij} = P(X_{t+1} = j | X_t = i)$. Each row of $P$ forms a valid probability distribution summing to exactly 1.0 (a stochastic matrix).
+    - 'Multi-step state transitions follow the Chapman-Kolmogorov equations, which computationally equate to matrix multiplication: the probability of transitioning from state $i$ to state $j$ in $n$ steps is given by the $(i, j)$-th entry of matrix power $P^n$.'
+    - In systems modeling, Markov chains simulate cache replacement policies (LRU/LFU), TCP Reno congestion control windows (Additive Increase / Multiplicative Decrease), and server failure recovery cycles.
+  - id: stationary_distributions_and_pagerank
+    title: Stationary Distributions, Ergodicity & PageRank
+    points:
+    - 'A Stationary Distribution (steady-state vector) $\pi$ is a probability distribution that remains invariant under transition: $\pi P = \pi$, meaning $\pi$ is a left eigenvector of $P$ with eigenvalue $\lambda = 1$.'
+    - If a Markov chain is irreducible (every state is reachable from every other state) and aperiodic (no periodic cycles), it is Ergodic. The Perron-Frobenius theorem guarantees that such a chain possesses a unique stationary distribution to which it converges regardless of initial starting state.
+    - 'Google''s PageRank models the web as a giant directed graph traversed by a ''random surfer''. To prevent dead ends (absorbing sinks) and spider traps, PageRank introduces a damping factor $d \approx 0.85$: the surfer follows a link with probability $d$, or teleports to a completely random web page with probability $(1-d)$.'
+    - Computing PageRank corresponds to computing the stationary distribution of the modified transition matrix using the Power Iteration method ($\pi_{k+1} = \pi_k P$).
+  - id: mcmc_metropolis_hastings_simulated_annealing
+    title: MCMC, Metropolis-Hastings & Simulated Annealing
+    points:
+    - In high-dimensional probability spaces (Bayesian posteriors, physics lattices), calculating normalizing integrals is intractable. Markov Chain Monte Carlo (MCMC) bypasses integration by constructing a Markov chain whose stationary distribution is exactly the target distribution.
+    - The Metropolis-Hastings Algorithm proposes a candidate transition $x \to x'$ and accepts it with probability $\alpha = \min\left(1, \frac{P(x') q(x|x')}{P(x) q(x'|x)}\right)$. Unfavorable moves are sometimes accepted, preventing the sampler from getting trapped in local maxima.
+    - Detailed Balance is the reversible condition $P(x) T(x \to x') = P(x') T(x' \to x)$ which guarantees that the target distribution $P(x)$ is indeed a stationary distribution of the chain.
+    - Simulated Annealing adapts MCMC for combinatorial optimization (e.g., traveling salesman, chip floorplanning) by introducing a temperature parameter $T$ that decreases over time, transitioning from broad exploratory random walks to greedy local exploitation.
+  trivia:
+  - type: multiple_choice
+    question: What fundamental condition defines the Markov Property in a discrete stochastic process?
+    options:
+    - The next state depends only on the current state, completely independent of past history
+    - All future states have strictly equal probability
+    - The process cannot transition into an absorbing state
+    - The matrix of transitions must be symmetric ($P = P^T$)
+    correct: 0
+    explanation: The Markov property (memorylessness) states that $P(X_{t+1} | X_t, X_{t-1}, \dots) = P(X_{t+1} | X_t)$.
+  - type: multiple_choice
+    question: In any valid transition probability matrix $P$ of a Markov chain, what must the elements of every single row sum up to?
+    options:
+    - Exactly $1.0$
+    - $0.0$
+    - The number of states $|S|$
+    - The stationary eigenvalue $\lambda$
+    correct: 0
+    explanation: Because each row represents a complete probability distribution over all possible next states, each row must sum to 1.0 (stochastic matrix).
+  - type: multiple_choice
+    question: What is a probability vector $\pi$ called if it satisfies the invariant matrix equation $\pi P = \pi$?
+    options:
+    - Stationary (or steady-state) distribution
+    - Transient distribution
+    - Orthogonal basis vector
+    - Characteristic polynomial
+    correct: 0
+    explanation: A stationary distribution $\pi$ satisfies $\pi P = \pi$, meaning the state distribution remains unchanged as time steps advance.
+  - type: multiple_choice
+    question: How is the probability of transitioning from state $i$ to state $j$ in exactly $n$ discrete steps calculated from single-step transition matrix $P$?
+    options:
+    - By computing the $(i, j)$-th entry of matrix power $P^n$
+    - By multiplying the entry $P_{ij}$ by $n$
+    - By computing $P / n$
+    - By taking the matrix inverse $P^{-n}$
+    correct: 0
+    explanation: By the Chapman-Kolmogorov equations, the $n$-step transition probabilities correspond directly to the matrix power $P^n$.
+  - type: multiple_choice
+    question: In Google's PageRank algorithm, what mechanism prevents the random surfer from getting trapped in dead-end pages or circular loops?
+    options:
+    - A damping factor ($d \approx 0.85$) with random teleportation to any web page
+    - Removing all pages with fewer than 10 links
+    - Sorting links alphabetically
+    - Forcing all directed graphs to be symmetric
+    correct: 0
+    explanation: The damping factor ($1-d \approx 0.15$) allows the random surfer to teleport to a uniformly chosen page, ensuring the Markov chain remains irreducible and aperiodic.
+  - type: multiple_choice
+    question: What algorithmic family samples from complex high-dimensional posterior distributions by constructing a Markov chain whose stationary distribution equals the target?
+    options:
+    - Markov Chain Monte Carlo (MCMC)
+    - Fast Fourier Transform (FFT)
+    - Gradient Boosted Trees
+    - K-Means Clustering
+    correct: 0
+    explanation: MCMC methods (like Metropolis-Hastings and Gibbs sampling) generate representative samples from complex probability distributions without computing normalizing constants.
+  - type: multiple_choice
+    question: In Markov chain theory, what condition ($P(x) T(x \to x') = P(x') T(x' \to x)$) guarantees that distribution $P(x)$ is stationary?
+    options:
+    - Detailed Balance
+    - Ergodic Limit
+    - Central Limit
+    - Kolmogorov Additivity
+    correct: 0
+    explanation: Detailed balance requires that the probability flux between every pair of states is equal in both directions, guaranteeing stationarity.
+  - type: multiple_choice
+    question: What property does a Markov chain possess if it is possible to transition from any state to any other state in a finite number of steps?
+    options:
+    - Irreducibility
+    - Aperiodicity
+    - Absorbing
+    - Orthogonality
+    correct: 0
+    explanation: A Markov chain is irreducible if its state graph consists of a single communicating class where every state is reachable from every other state.
+  - type: multiple_choice
+    question: What heuristic optimization algorithm uses stochastic Markov moves and a decreasing temperature schedule to avoid getting trapped in local optima?
+    options:
+    - Simulated Annealing
+    - Dijkstra's Algorithm
+    - Quicksort
+    - Binary Search
+    correct: 0
+    explanation: Simulated Annealing mimics the metallurgical process of heating and controlled cooling, accepting uphill worse moves with probability $e^{-\Delta E / T}$ to escape local minima.
+  - type: multiple_choice
+    question: In a 2-state discrete Markov chain, if the probability of transitioning from state 1 to state 2 is $0.2$, what is the probability of remaining in state 1?
+    options:
+    - $0.8$ ($1 - 0.2$)
+    - $0.2$
+    - $0.5$
+    - $0.04$
+    correct: 0
+    explanation: 'Because row probabilities must sum to 1.0: $P_{11} = 1 - P_{12} = 1 - 0.2 = 0.8$.'
+  - type: multiple_choice
+    question: Which fundamental mathematical theorem guarantees that any irreducible, aperiodic finite Markov chain has a unique positive stationary distribution?
+    options:
+    - The Perron-Frobenius Theorem
+    - The Fundamental Theorem of Calculus
+    - Euler's Totient Theorem
+    - Gödel's Incompleteness Theorem
+    correct: 0
+    explanation: The Perron-Frobenius theorem guarantees that the transition matrix of an ergodic chain has a unique maximal eigenvalue $\lambda = 1$ with a strictly positive eigenvector.
+  - type: multiple_choice
+    question: What iterative numerical method multiplies an initial probability vector repeatedly by the transition matrix ($\pi_{k+1} = \pi_k P$) to find PageRank?
+    options:
+    - The Power Iteration Method
+    - Newton-Raphson Method
+    - Gaussian Elimination
+    - Runge-Kutta Method
+    correct: 0
+    explanation: Power iteration repeatedly applies matrix multiplication until the probability vector converges to the stationary distribution $\pi$.
+  - type: multiple_choice
+    question: In queueing theory modeling cloud servers, what distribution describes event arrivals in an M/M/1 queue?
+    options:
+    - Poisson arrival process (with exponential inter-arrival times)
+    - Uniform arrival process
+    - Gaussian arrival process
+    - Binomial arrival process
+    correct: 0
+    explanation: In Kendall's notation, 'M' stands for Memoryless/Markovian, denoting a Poisson arrival process with exponentially distributed service and arrival times.
+  - type: multiple_choice
+    question: In an ergodic Markov chain, what happens to the state distribution as the number of time steps $t \to \infty$?
+    options:
+    - It converges to the unique stationary distribution $\pi$ regardless of initial starting state
+    - It oscillates wildly between extreme states
+    - It collapses into state 0
+    - All probabilities decay to zero
+    correct: 0
+    explanation: An ergodic Markov chain converges asymptotically to its unique stationary distribution $\pi$ from any arbitrary starting state.
+  - type: multiple_choice
+    question: In computer architecture, why are Markov chains used to model CPU cache replacement policies like Least Recently Used (LRU)?
+    options:
+    - They capture probabilistic state transitions between memory reference localities and stack depth positions
+    - They compress cache lines to save silicon die area
+    - They eliminate cache misses completely
+    - They make DRAM access as fast as SRAM registers
+    correct: 0
+    explanation: Markov chains model cache stack dynamics and memory reference locality to analytically predict cache miss rates under various replacement policies.
