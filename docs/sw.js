@@ -13,7 +13,7 @@
  * so any content OR shell change bumps the version and evicts stale caches.
  */
 
-const CACHE_NAME = 'trivia-cache-v-b1c1b009';
+const CACHE_NAME = 'trivia-cache-v-0b37c057';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -23,7 +23,9 @@ const ASSETS_TO_CACHE = [
   './icon-192.png',
   './icon-512.png',
   './icon-roadtrip-192.png',
-  './icon-roadtrip-512.png'
+  './icon-roadtrip-512.png',
+  './icon-academy-192.png',
+  './icon-academy-512.png'
 ];
 
 self.addEventListener('install', (event) => {

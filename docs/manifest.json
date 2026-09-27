@@ -1,22 +1,22 @@
 {
-  "id": "family-travel-trivia-app-v2",
+  "id": "family-travel-trivia-app-v3",
   "short_name": "TravelTrivia",
   "name": "Family Road Trip Travel Trivia App",
   "icons": [
     {
-      "src": "icon-roadtrip-192.png",
+      "src": "icon-academy-192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "icon-roadtrip-512.png",
+      "src": "icon-academy-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "icon-roadtrip-512.png",
+      "src": "icon-academy-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
