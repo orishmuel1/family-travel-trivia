@@ -590,7 +590,10 @@ def update_service_worker_version():
     # Hash the shell + data so ANY change (content OR app shell) bumps the cache
     # version and forces installed devices to pull the update.
     hasher = hashlib.md5()
-    for name in ("data.json", "index.html", "manifest.json", "icon-192.png", "icon-512.png"):
+    shell_names = ["data.json", "index.html", "manifest.json"] + [
+        f for f in sorted(os.listdir(DOCS_DIR)) if f.startswith("icon-") and f.endswith(".png")
+    ]
+    for name in shell_names:
         p = os.path.join(DOCS_DIR, name)
         if os.path.exists(p):
             with open(p, "rb") as f:
