@@ -10,8 +10,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Trivia & Academy">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-roadtrip-192.png">
-    <link rel="apple-touch-icon" href="icon-roadtrip-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-roadtrip-192.png?v=3">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-roadtrip-512.png?v=3">
+    <link rel="icon" type="image/png" href="icon-roadtrip-192.png?v=3">
+    <link rel="shortcut icon" href="icon-roadtrip-192.png?v=3">
+    <link rel="apple-touch-icon" href="icon-roadtrip-192.png?v=3">
 
     <style>
         /* ===================== THEME PALETTES ===================== */
@@ -866,6 +869,7 @@
             <button class="menu-item" id="menu-stats">📊 <span id="lbl-stats">Statistics</span></button>
             <button class="menu-item" id="menu-feedback">💬 <span id="lbl-feedback-menu">Feedback & GitHub Sync</span> <span id="menu-fb-badge" class="badge badge-done" style="display:none; margin-inline-start:auto;">0</span></button>
             <button class="menu-item" id="menu-reset">↺ <span id="lbl-reset">Reset progress</span></button>
+            <button class="menu-item" id="menu-force-update">🔄 <span id="lbl-force-update">Update & Reload App</span></button>
         </div>
     </div>
 
@@ -1038,6 +1042,8 @@
                 noAcademicTopics: 'No academic courses in this language yet.',
                 offlineFail: '⚠️ <strong>Offline loading failed.</strong><br>Connect to the internet once to download the trivia & courses, then it works offline.',
                 resetConfirm: 'Reset all your local progress and statistics on this device?',
+                updateReload: 'Update & Reload App',
+                updateReloadConfirm: 'Check for latest updates, clear cache, and reload?',
                 feedback: 'Feedback',
                 feedbackBtn: 'Feedback',
                 reportQuestionIssue: 'Report issue with question',
@@ -1130,6 +1136,8 @@
                 noAcademicTopics: 'אין עדיין קורסים אקדמיים בשפה הזו.',
                 offlineFail: '⚠️ <strong>הטעינה במצב לא מקוון נכשלה.</strong><br>התחברו לאינטרנט פעם אחת כדי להוריד את התוכן, ואז זה יעבוד גם ללא חיבור.',
                 resetConfirm: 'לאפס את כל ההתקדמות והסטטיסטיקה המקומית במכשיר הזה?',
+                updateReload: 'עדכן וטען מחדש',
+                updateReloadConfirm: 'לבדוק עדכונים, לנקות זיכרון מטמון ולטעון מחדש?',
                 feedback: 'משוב',
                 feedbackBtn: 'משוב',
                 reportQuestionIssue: 'דיווח על בעיה בשאלה',
@@ -1366,6 +1374,8 @@
             document.getElementById('lbl-appearance').textContent = t('appearance');
             document.getElementById('lbl-stats').textContent = t('statistics');
             document.getElementById('lbl-reset').textContent = t('resetProgress');
+            const updateLbl = document.getElementById('lbl-force-update');
+            if (updateLbl) updateLbl.textContent = t('updateReload');
             document.getElementById('lbl-academic-switch').textContent = t('switchToAcademic');
             document.getElementById('lbl-trivia-switch').textContent = t('switchToTrivia');
             const fbMenuLbl = document.getElementById('lbl-feedback-menu');
@@ -2896,6 +2906,24 @@
                 closeMenu();
                 if (currentMode === 'academic') renderAcademicHome();
                 else renderHome();
+            }
+        };
+        document.getElementById('menu-force-update').onclick = async () => {
+            if (confirm(t('updateReloadConfirm'))) {
+                closeMenu();
+                if ('serviceWorker' in navigator) {
+                    try {
+                        const regs = await navigator.serviceWorker.getRegistrations();
+                        for (let reg of regs) await reg.unregister();
+                    } catch (e) {}
+                }
+                if ('caches' in window) {
+                    try {
+                        const keys = await caches.keys();
+                        for (let key of keys) await caches.delete(key);
+                    } catch (e) {}
+                }
+                window.location.reload(true);
             }
         };
 

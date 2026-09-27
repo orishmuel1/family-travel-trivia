@@ -13,7 +13,7 @@
  * so any content OR shell change bumps the version and evicts stale caches.
  */
 
-const CACHE_NAME = 'trivia-cache-v-8a0b0d9e';
+const CACHE_NAME = 'trivia-cache-v-b1c1b009';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -77,7 +77,7 @@ self.addEventListener('fetch', (event) => {
 
   // Static assets: cache-first, then network.
   event.respondWith(
-    caches.match(req).then((cached) => {
+    caches.match(req, { ignoreSearch: true }).then((cached) => {
       if (cached) return cached;
       return fetch(req);
     })
