@@ -17,5 +17,24 @@
     "status": "resolved",
     "resolvedAt": "2026-09-26T03:28:00.000Z",
     "resolution": "Verified end-to-end feedback submission via app, GitHub API sync, git pull, and archival lifecycle."
+  },
+  {
+    "id": "fb_1790463561690_nt45f4",
+    "timestamp": "2026-09-26T22:59:21.690Z",
+    "sentiment": "negative",
+    "tags": ["ui", "layout", "mobile"],
+    "notes": "כדאי לצמצם את המקום שיהיו יותר כרטיסיות נושאים במסך. להוריד את הטקסט תיאור ולהוריד את לחצן הלחקור ופשוט בעת לחיצת הכרטיסיה זה במקום הלחקור",
+    "context": {
+      "mode": "trivia",
+      "view": "view-home",
+      "topicId": null,
+      "topicTitle": null,
+      "quiz": null,
+      "lang": "he",
+      "timestamp": "2026-09-26T22:58:01.437Z"
+    },
+    "status": "resolved",
+    "resolvedAt": "2026-09-27T01:33:00.000Z",
+    "resolution": "Compacted home view topic cards: removed description preview paragraph and Explore button, made entire card directly clickable with hover/focus states, metadata badges, and directional arrow indicator."
   }
 ]

@@ -187,6 +187,40 @@
         .card-title { font-size: 1.22rem; font-weight: 700; margin-bottom: 6px; }
         .card-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
 
+        /* Travel Trivia Compact Card (Home View) */
+        .topic-card-compact {
+            display: flex; align-items: center; gap: 14px; padding: 14px 18px;
+            background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+            margin-bottom: 10px; box-shadow: var(--shadow); cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .topic-card-compact:hover {
+            transform: translateY(-2px); border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .topic-card-compact:focus-visible {
+            outline: 2px solid var(--primary); outline-offset: 2px;
+        }
+        .topic-card-icon {
+            font-size: 1.8rem; line-height: 1; flex-shrink: 0;
+            width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+            background: var(--surface); border-radius: 12px;
+        }
+        .topic-card-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+        .topic-card-title {
+            font-size: 1.08rem; font-weight: 700; color: var(--text); margin: 0;
+            line-height: 1.35;
+        }
+        .topic-card-meta {
+            font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+        }
+        .topic-card-arrow {
+            color: var(--muted); font-size: 1.3rem; font-weight: bold; flex-shrink: 0;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .topic-card-compact:hover .topic-card-arrow { color: var(--primary); transform: translateX(3px); }
+        [dir="rtl"] .topic-card-compact:hover .topic-card-arrow { transform: translateX(-3px); }
+
         /* Academic Single-Card (Icon + Title only, compact) */
         .academic-topic-card {
             display: flex; align-items: center; gap: 16px; padding: 18px 20px;
@@ -397,6 +431,9 @@
             .btn-row { flex-direction: column; }
             .academic-topic-card { padding: 14px 16px; gap: 12px; }
             .academic-topic-icon { width: 40px; height: 40px; font-size: 1.8rem; }
+            .topic-card-compact { padding: 12px 14px; gap: 10px; margin-bottom: 8px; }
+            .topic-card-icon { width: 36px; height: 36px; font-size: 1.5rem; }
+            .topic-card-title { font-size: 1rem; }
         }
 
         /* ===================== IN-APP FEEDBACK & GITHUB SYNC ===================== */
@@ -1532,16 +1569,40 @@
                 return;
             }
             list.forEach(({ t: topic, i: tIdx }) => {
-                const card = el('div', { class: 'card' });
-                const headRow = el('div', { class: 'card-head-row' });
-                headRow.appendChild(el('h3', { class: 'card-title', text: topic.title }));
-                const badges = el('div', { attrs: { style: 'display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end' } });
-                topicAudiences(topic).forEach(a => badges.appendChild(audienceBadge(a)));
-                badges.appendChild(progressBadge(topic));
-                headRow.appendChild(badges);
-                card.appendChild(headRow);
-                card.appendChild(el('p', { class: 'card-desc', text: topic.description || '' }));
-                card.appendChild(el('button', { class: 'btn', text: t('explore'), onclick: () => openTopic(tIdx) }));
+                const card = el('div', {
+                    class: 'topic-card-compact',
+                    onclick: () => openTopic(tIdx),
+                    attrs: { role: 'button', tabindex: '0' }
+                });
+                card.onkeydown = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openTopic(tIdx);
+                    }
+                };
+
+                if (topic.icon) {
+                    card.appendChild(el('div', { class: 'topic-card-icon', text: topic.icon }));
+                }
+
+                const content = el('div', { class: 'topic-card-main' });
+                content.appendChild(el('div', { class: 'topic-card-title', text: topic.title }));
+
+                const cats = visibleCats(topic);
+                const totalQ = cats.reduce((n, c) => n + (c.trivia ? c.trivia.length : 0), 0);
+
+                const meta = el('div', { class: 'topic-card-meta' });
+                meta.appendChild(el('span', { text: `${cats.length} ${t('categories')}` }));
+                if (totalQ > 0) {
+                    meta.appendChild(el('span', { text: '•' }));
+                    meta.appendChild(el('span', { text: `${totalQ} Qs` }));
+                }
+                topicAudiences(topic).forEach(a => meta.appendChild(audienceBadge(a)));
+                meta.appendChild(progressBadge(topic));
+                content.appendChild(meta);
+
+                card.appendChild(content);
+                card.appendChild(el('div', { class: 'topic-card-arrow', text: isRTLLang(LANG) ? '←' : '→' }));
                 container.appendChild(card);
             });
         }
