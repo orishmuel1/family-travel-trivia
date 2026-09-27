@@ -1,0 +1,953 @@
+id: economics_101_en
+type: academic
+icon: "📊"
+title: "Economics & Decision Theory for Engineers (Economics 101)"
+description: >
+  A first-principles exploration of microeconomics, market dynamics, cost structures,
+  macroeconomic monetary systems, game theory, and behavioral decision-making designed
+  for analytical thinkers and engineers.
+lang: en
+audience: family
+categories:
+  - id: scarcity_markets_supply_demand
+    title: "1. Scarcity, Opportunity Cost & Supply and Demand Dynamics"
+    description: >
+      Unpack the fundamental mechanics of resource allocation: opportunity cost, diminishing marginal utility,
+      price discovery through supply and demand equilibrium, and market elasticity.
+    cards:
+      - title: "Scarcity, Opportunity Cost & The Production Frontier"
+        figure:
+          title: "Production Possibilities Frontier (PPF)"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <line x1="60" y1="125" x2="480" y2="125" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="125" x2="60" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <text x="470" y="140" font-size="10" fill="currentColor" text-anchor="end">Consumer Goods (Food/Software) →</text>
+              <text x="35" y="25" font-size="10" fill="currentColor" transform="rotate(-90 35 25)">Capital Goods (Machines) →</text>
+
+              <!-- PPF Curve -->
+              <path d="M 60 25 Q 260 35 430 125" stroke="#3b82f6" stroke-width="3" fill="none"/>
+
+              <!-- Points on PPF -->
+              <circle cx="160" cy="45" r="5" fill="#10b981"/>
+              <text x="175" y="42" font-size="10" font-weight="bold" fill="#10b981">Point A (Efficient)</text>
+
+              <circle cx="340" cy="85" r="5" fill="#10b981"/>
+              <text x="355" y="82" font-size="10" font-weight="bold" fill="#10b981">Point B (Efficient)</text>
+
+              <!-- Inefficient & Unattainable -->
+              <circle cx="180" cy="95" r="5" fill="#f59e0b"/>
+              <text x="195" y="98" font-size="9" fill="#f59e0b">Point C (Underutilized)</text>
+
+              <circle cx="380" cy="35" r="5" fill="#ef4444"/>
+              <text x="395" y="38" font-size="9" fill="#ef4444">Point D (Unattainable)</text>
+            </svg>
+          caption: "The Production Possibilities Frontier (PPF) illustrates trade-offs: producing more consumer goods requires sacrificing capital goods, defining Opportunity Cost."
+        points:
+          - "Economics is the study of choice under scarcity. Scarcity means human desires for goods, compute, and services are practically boundless, while physical resources (time, raw materials, energy, labor) are strictly finite."
+          - "Opportunity Cost is the fundamental concept in economic decision-making: the true cost of choosing any action is the value of the next best alternative forgone ($C_{\\text{opp}} = \\text{Value of Best Alternative}$). If an engineer spends 2 hours debugging rather than shipping a feature, the opportunity cost is that unbuilt feature."
+          - "The Production Possibilities Frontier (PPF) graphs the maximum combinations of two outputs an economy or firm can produce with full technological efficiency. The curve is bowed outward (concave) due to the Law of Increasing Opportunity Cost—resources are specialized and not equally adaptable across all tasks."
+          - "Marginal Analysis drives rational decision-making: agents optimize by comparing Marginal Benefit ($MB$) with Marginal Cost ($MC$). A rational agent continues an activity as long as $MB \\ge MC$, stopping at the exact margin where $MB = MC$. Sunk Costs (unrecoverable past expenditures) are strictly irrelevant to forward-looking marginal choices."
+      - title: "The Law of Supply & Demand and Market Equilibrium"
+        points:
+          - "The Law of Demand states that, ceteris paribus (all else being equal), as the price of a good falls, consumers demand a higher quantity ($P \\downarrow \\implies Q_d \\uparrow$). The downward slope reflects diminishing marginal utility—each additional unit consumed provides less incremental satisfaction than the preceding one."
+          - "The Law of Supply states that as price rises, profit-maximizing producers are willing to supply a greater quantity ($P \\uparrow \\implies Q_s \\uparrow$). The upward slope reflects increasing marginal costs of production as output expands."
+          - "Market Equilibrium occurs at the price ($P^*$) where quantity demanded equals quantity supplied ($Q_d = Q_s$). If the price is above equilibrium, an excess supply (Surplus) creates downward competitive price pressure; if price is below equilibrium, an excess demand (Shortage) bids prices up."
+          - "A crucial distinction exists between a movement along a curve (caused strictly by a change in the good's own price) and a shift of the entire curve (caused by exogenous factors such as changes in consumer income, preferences, technology, input prices, or expectations)."
+      - title: "Elasticity, Consumer Surplus & Market Interventions"
+        points:
+          - "Price Elasticity of Demand ($\\epsilon_d$) measures consumer price sensitivity: $\\epsilon_d = \\frac{\\% \\Delta Q_d}{\\% \\Delta P}$. If $|\\epsilon_d| > 1$, demand is Elastic (small price spikes cause large sales drops); if $|\\epsilon_d| < 1$, demand is Inelastic (essential goods like insulin or gasoline where demand barely changes with price)."
+          - "Consumer Surplus is the monetary difference between the maximum price consumers were willing to pay and the actual market price they paid. Producer Surplus is the difference between the market price and the minimum cost suppliers required to produce the good."
+          - "At competitive equilibrium, the sum of Consumer Surplus and Producer Surplus (Total Social Surplus) is maximized, achieving Pareto efficiency where no party can be made better off without making another worse off."
+          - "Government interventions disrupt equilibrium: a Price Ceiling (legal maximum price, like rent control) set below equilibrium generates persistent shortages, black markets, and Deadweight Loss (lost total welfare). A Price Floor (legal minimum price, like minimum wage) set above equilibrium generates persistent surpluses."
+    trivia:
+      - type: multiple_choice
+        question: "In economics, what is the precise definition of 'Opportunity Cost'?"
+        options:
+          - "The value of the next best alternative forgone when a choice is made"
+          - "The total monetary amount spent on an investment"
+          - "The sunk historical cost of equipment that cannot be recovered"
+          - "The accounting tax paid on corporate capital gains"
+        correct: 0
+        explanation: "Opportunity cost measures the true economic cost of any decision as the net benefit that could have been realized from the best forgone alternative."
+      - type: multiple_choice
+        question: "Why does the Law of Demand state that consumers purchase more of a good when its price drops (downward-sloping demand curve)?"
+        options:
+          - "Each additional unit of consumption yields diminishing marginal utility, so buyers only purchase extra units at lower prices"
+          - "Producers automatically shut down factories when prices fall"
+          - "Supply curves shift outward spontaneously whenever demand curves shift"
+          - "Consumer income quadruples automatically whenever prices decline"
+        correct: 0
+        explanation: "Diminishing marginal utility means the second or third unit of a good provides less incremental satisfaction than the first, so consumers will only buy more if the price decreases."
+      - type: multiple_choice
+        question: "What occurs in a free competitive market when the prevailing market price is set ABOVE the equilibrium price?"
+        options:
+          - "A market surplus (excess supply) emerges, putting downward competitive pressure on prices"
+          - "A severe shortage occurs because consumers buy out all inventory"
+          - "The demand curve shifts permanently to the right"
+          - "Quantity supplied instantly drops to zero"
+        correct: 0
+        explanation: "When price exceeds equilibrium, producers supply more goods than consumers wish to purchase ($Q_s > Q_d$), generating a surplus that forces sellers to cut prices to clear inventory."
+      - type: multiple_choice
+        question: "What is the Price Elasticity of Demand for a life-saving medication (such as insulin) that patients must consume regardless of cost?"
+        options:
+          - "Highly Inelastic (|ε| near 0)"
+          - "Perfectlys Elastic (|ε| = ∞)"
+          - "Unit Elastic (|ε| = 1)"
+          - "Negative Infinity"
+        correct: 0
+        explanation: "When consumers cannot substitute a good and must have it for survival, demand is inelastic ($|\\epsilon_d| < 1$, approaching 0), meaning price increases cause almost zero decline in quantity demanded."
+      - type: multiple_choice
+        question: "What economic term describes unrecoverable past expenditures that rational decision-makers should completely ignore when making forward-looking choices?"
+        options:
+          - "Sunk Costs"
+          - "Marginal Costs"
+          - "Variable Costs"
+          - "Implicit Costs"
+        correct: 0
+        explanation: "Sunk costs are historical expenditures that cannot be recovered regardless of future actions; rational marginal optimization evaluates only future incremental benefits and costs."
+      - type: multiple_choice
+        question: "What happens to the market equilibrium price and quantity of electric cars if battery manufacturing costs drop dramatically due to technological innovation?"
+        options:
+          - "The supply curve shifts right, lowering equilibrium price and increasing equilibrium quantity"
+          - "The supply curve shifts left, increasing equilibrium price"
+          - "The demand curve shifts left, reducing sales volume"
+          - "Equilibrium price rises while quantity stays constant"
+        correct: 0
+        explanation: "Lower input costs allow producers to supply more cars at every price point (supply shifts right), causing the equilibrium price to fall and the quantity sold to rise."
+      - type: multiple_choice
+        question: "What geometric area on a supply and demand graph represents Deadweight Loss caused by market distortions like price controls or taxes?"
+        options:
+          - "The lost social surplus (combined consumer and producer surplus) that is gained by no one"
+          - "The total revenue collected by government tax authorities"
+          - "The total monetary profit earned by monopolistic corporations"
+          - "The area beneath the supply curve representing total variable production costs"
+        correct: 0
+        explanation: "Deadweight loss is the reduction in total economic efficiency and welfare that occurs when the market quantity is prevented from reaching its competitive equilibrium."
+      - type: multiple_choice
+        question: "What is the key difference between a 'change in demand' and a 'change in quantity demanded'?"
+        options:
+          - "A change in demand shifts the entire curve due to external factors; a change in quantity demanded is a movement along the curve caused by price"
+          - "Change in demand applies only to luxury goods, while quantity demanded applies to necessities"
+          - "A change in demand is caused exclusively by changes in corporate income tax rates"
+          - "There is no difference; the terms are completely interchangeable in microeconomics"
+        correct: 0
+        explanation: "A change in the good's own price causes movement along the existing demand curve (quantity demanded). Changes in income, tastes, or substitute prices shift the entire curve (demand)."
+      - type: multiple_choice
+        question: "What does the outward bowed (concave) shape of the Production Possibilities Frontier (PPF) reflect?"
+        options:
+          - "The Law of Increasing Opportunity Cost, as specialized resources are shifted between disparate sectors"
+          - "Infinite productive capacity within automated robotic manufacturing"
+          - "Zero opportunity costs when producing consumer commodities"
+          - "Constant marginal rates of technical substitution across all inputs"
+        correct: 0
+        explanation: "Resources (land, labor, capital) are not equally suited for producing everything. Shifting specialized resources to alternative goods causes opportunity costs to rise progressively."
+      - type: multiple_choice
+        question: "If the government sets a binding Price Ceiling on apartment rentals below the market-clearing equilibrium rate, what is the predictable result?"
+        options:
+          - "A chronic housing shortage, reduced maintenance quality, and underground black markets"
+          - "A massive surplus of vacant apartments that landlords cannot rent"
+          - "An immediate increase in the construction of new affordable housing units"
+          - "A rise in overall market efficiency and total social surplus"
+        correct: 0
+        explanation: "Setting rent below equilibrium increases quantity demanded while discouraging landlords from supplying or maintaining units, producing persistent shortages and queues."
+      - type: multiple_choice
+        question: "If the cross-price elasticity of demand between two goods (e.g., hot dogs and hot dog buns) is negative, what relationship exists between them?"
+        options:
+          - "They are Complementary Goods (an increase in the price of one reduces demand for the other)"
+          - "They are Substitute Goods (an increase in the price of one increases demand for the other)"
+          - "They are Giffen Goods"
+          - "They are completely independent, unrelated commodities"
+        correct: 0
+        explanation: "When goods are complements ($E_{xy} < 0$), consumers use them together; a price hike in hot dogs reduces consumption of hot dogs, which in turn reduces demand for buns."
+      - type: multiple_choice
+        question: "At what point does a rational decision-maker maximize net economic benefit when deciding how many units of an activity to undertake?"
+        options:
+          - "Where Marginal Benefit equals Marginal Cost (MB = MC)"
+          - "Where Total Benefit equals Total Cost"
+          - "Where Marginal Cost is minimized to zero"
+          - "Where Total Cost reaches its maximum threshold"
+        correct: 0
+        explanation: "Net benefit is maximized when the marginal benefit of the last unit exactly equals its marginal cost ($MB = MC$). Undertaking more units would cost more than they add ($MC > MB$)."
+      - type: multiple_choice
+        question: "What term describes a good whose demand increases as consumer income rises (positive income elasticity of demand)?"
+        options:
+          - "Normal Good"
+          - "Inferior Good"
+          - "Veblen Good"
+          - "Public Good"
+        correct: 0
+        explanation: "A Normal Good has positive income elasticity ($E_I > 0$). In contrast, an Inferior Good (like instant noodles or low-cost transit) sees demand drop as income rises."
+      - type: multiple_choice
+        question: "What is 'Consumer Surplus'?"
+        options:
+          - "The difference between the maximum amount a consumer is willing to pay and the market price actually paid"
+          - "The leftover unsold merchandise at retail stores after seasonal discounts"
+          - "The net profit margin earned by producers after paying retail sales taxes"
+          - "The excess cash reserves held in household checking accounts"
+        correct: 0
+        explanation: "Consumer surplus measures the buyer's net economic gain: the area below the demand curve and above the equilibrium market price."
+      - type: multiple_choice
+        question: "How does the availability of close substitutes affect the price elasticity of demand for a product?"
+        options:
+          - "It makes demand more elastic, because buyers can easily switch to alternatives if the price rises"
+          - "It makes demand completely inelastic"
+          - "It has zero impact on consumer price responsiveness"
+          - "It forces the demand curve to become perfectly vertical"
+        correct: 0
+        explanation: "When close substitutes exist (e.g., butter vs. margarine, competing airline tickets), consumers can switch effortlessly upon a price hike, making demand highly elastic."
+
+  - id: firms_costs_market_structures
+    title: "2. Production, Cost Structures & Market Competition"
+    description: >
+      Analyze how enterprises optimize production: fixed and marginal costs, economies of scale,
+      competitive pricing ($P = MC$), monopolies, oligopolies, and two-sided platform network effects.
+    cards:
+      - title: "Cost Structures: Fixed, Variable, Marginal & Average Costs"
+        figure:
+          title: "Microeconomic Cost Curves: MC, ATC & AVC"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <line x1="60" y1="125" x2="480" y2="125" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="125" x2="60" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <text x="470" y="140" font-size="10" fill="currentColor" text-anchor="end">Quantity of Output (Q) →</text>
+              <text x="35" y="25" font-size="10" fill="currentColor" transform="rotate(-90 35 25)">Cost ($) →</text>
+
+              <!-- ATC Curve (U-shaped) -->
+              <path d="M 90 35 Q 260 110 430 50" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+              <text x="435" y="55" font-size="11" font-weight="bold" fill="#3b82f6">ATC</text>
+
+              <!-- AVC Curve (U-shaped below ATC) -->
+              <path d="M 90 75 Q 250 120 430 80" stroke="#10b981" stroke-width="2" fill="none"/>
+              <text x="435" y="85" font-size="11" font-weight="bold" fill="#10b981">AVC</text>
+
+              <!-- MC Curve (Swoosh cutting through minimum of AVC and ATC) -->
+              <path d="M 90 115 Q 160 115 250 80 L 380 20" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+              <text x="385" y="25" font-size="11" font-weight="bold" fill="#ef4444">MC</text>
+
+              <!-- Minimum ATC point -->
+              <circle cx="260" cy="80" r="4" fill="#ef4444"/>
+              <text x="260" y="98" font-size="9" fill="currentColor" text-anchor="middle">Min ATC (Efficient Scale)</text>
+            </svg>
+          caption: "Marginal Cost ($MC$) intersects Average Total Cost ($ATC$) and Average Variable Cost ($AVC$) at their respective minimum points."
+        points:
+          - "A firm's Total Cost ($TC$) divides into Fixed Costs ($FC$, independent of output, like upfront R&D or factory leases) and Variable Costs ($VC$, scaling with output, like raw materials or cloud compute): $TC = FC + VC$."
+          - "Marginal Cost ($MC = \\frac{\\Delta TC}{\\Delta Q}$) is the cost of manufacturing one additional unit. Due to the Law of Diminishing Marginal Returns, as variable inputs (labor) are added to fixed capital, marginal productivity eventually declines, driving $MC$ upward."
+          - "Average Total Cost ($ATC = \\frac{TC}{Q}$) is typically U-shaped: at low output, high fixed costs are spread over few units (high average cost); at high output, diminishing returns inflate marginal costs. $MC$ always intersects $ATC$ at its lowest point (Minimum Efficient Scale)."
+          - "Economies of Scale occur when expanding long-run production lowers average unit cost (through bulk purchasing, specialized robotics, or amortized software engineering). Diseconomies of Scale arise when organizational bureaucracy, communication lag, and coordination friction outweigh size advantages."
+      - title: "Perfect Competition vs. Monopoly Power"
+        points:
+          - "In Perfect Competition, many small firms produce identical (homogeneous) goods with zero barriers to entry. Firms are 'price takers' facing horizontal demand ($P = MR$). In long-run equilibrium, free entry and exit drive economic profits to zero ($P = MC = \\min(ATC)$), achieving allocative and productive efficiency."
+          - "A Monopoly is a sole supplier protected by high barriers to entry (patents, exclusive access, government licenses, or extreme capital requirements). A monopolist faces the entire downward-sloping market demand curve, meaning Marginal Revenue ($MR$) is strictly below price ($MR < P$)."
+          - "Profit Maximization for all firms follows the universal Golden Rule: produce at the output where Marginal Revenue equals Marginal Cost ($MR = MC$). While competitive firms charge $P = MC$, monopolists charge a markup ($P > MC$) based on demand elasticity."
+          - "Monopoly Deadweight Loss: Monopolists restrict output and charge higher prices than competitive markets, transferring surplus from consumers to the firm while destroying a slice of social welfare entirely. A Natural Monopoly arises when $ATC$ declines over the entire market demand range (like electrical grids or water pipes), making a single provider the most cost-effective arrangement."
+      - title: "Oligopoly, Monopolistic Competition & Network Effects"
+        points:
+          - "Monopolistic Competition features many competing firms offering differentiated products (e.g., restaurants, running shoes, indie software apps). Firms possess modest pricing power in the short run, but low barriers to entry eliminate excess profits in the long run."
+          - "An Oligopoly is an industry dominated by a small handful of large enterprises (e.g., commercial aircraft manufacturing, smartphone operating systems, telecommunications). Because actions of one firm directly impact rivals, oligopolists must operate strategically (anticipating competitors' reactions)."
+          - "Cartels (like OPEC) are formal agreements among oligopolists to restrict total production and elevate prices like a monopoly. Cartels are inherently unstable because each individual member faces a strong private incentive to secretly cheat and produce beyond its assigned quota."
+          - "Network Effects (Externalities) occur when the value of a platform or product to any user increases as more people join (governed by Metcalfe's Law: network value $V \\propto n^2$). Platforms like iOS, Windows, and payment networks benefit from powerful two-sided network effects and high switching costs, naturally yielding 'winner-take-most' market dynamics."
+    trivia:
+      - type: multiple_choice
+        question: "What is the universal profit-maximizing output condition for any firm, regardless of market structure?"
+        options:
+          - "Marginal Revenue equals Marginal Cost (MR = MC)"
+          - "Price equals Total Fixed Cost"
+          - "Average Total Cost is maximized"
+          - "Total Revenue equals Sunk Costs"
+        correct: 0
+        explanation: "If $MR > MC$, producing an extra unit adds more revenue than cost, increasing profit. If $MR < MC$, the last unit lost money. Profit peaks precisely where $MR = MC$."
+      - type: multiple_choice
+        question: "Why does the Marginal Cost (MC) curve always intersect the Average Total Cost (ATC) curve at its lowest (minimum) point?"
+        options:
+          - "If the cost of the next unit (MC) is lower than the average, it pulls the average down; when MC exceeds the average, it pulls the average up"
+          - "Fixed costs drop to zero at that exact intersection point"
+          - "Total revenue is mathematically guaranteed to equal zero at that quantity"
+          - "Government antitrust regulations mandate that intersection coordinate"
+        correct: 0
+        explanation: "Like your grade point average: if your grade on the next exam (marginal) is higher than your current GPA (average), your GPA rises. Thus, ATC bottoms out exactly where $MC = ATC$."
+      - type: multiple_choice
+        question: "What characterizes long-run economic profit for firms operating in a purely competitive market with free entry and exit?"
+        options:
+          - "Economic profit is driven to zero, as new entrants expand industry supply whenever excess profits exist"
+          - "Firms earn permanent, compounding supernormal profits"
+          - "Firms operate at persistent economic losses subsidized by the state"
+          - "Price is maintained permanently above average total cost"
+        correct: 0
+        explanation: "Positive economic profit attracts new competitors, shifting supply right and lowering market price until price equals minimum ATC, reducing economic profit to zero."
+      - type: multiple_choice
+        question: "What distinguishes an accounting profit from an economic profit?"
+        options:
+          - "Economic profit subtracts both explicit monetary costs and implicit opportunity costs, whereas accounting profit ignores opportunity costs"
+          - "Accounting profit includes tax write-offs while economic profit does not"
+          - "Economic profit applies exclusively to government non-profit entities"
+          - "Accounting profit is always strictly smaller than economic profit"
+        correct: 0
+        explanation: "Accounting profit = Revenue - Explicit costs. Economic profit = Revenue - (Explicit costs + Implicit opportunity costs). A business can have positive accounting profit but zero economic profit."
+      - type: multiple_choice
+        question: "What is a 'Natural Monopoly'?"
+        options:
+          - "An industry where a single firm can supply the entire market at a lower average cost than two or more firms could due to massive economies of scale"
+          - "A monopoly created through the exclusive control of a rare natural gem or mineral"
+          - "A company that acquires all rivals through illegal corporate espionage"
+          - "A market where the government outlaws all private commercial enterprise"
+        correct: 0
+        explanation: "In industries with enormous infrastructure CapEx (water distribution, power grids), $ATC$ continuously declines across relevant demand, making a single regulated supplier most efficient."
+      - type: multiple_choice
+        question: "According to Metcalfe's Law, how does the systemic value of a communications or social network scale with the number of participating nodes (n)?"
+        options:
+          - "Value scales proportional to the square of the users (V ∝ n²)"
+          - "Value scales linearly with the number of users (V ∝ n)"
+          - "Value scales logarithmically (V ∝ log n)"
+          - "Value is completely invariant to network size"
+        correct: 0
+        explanation: "Metcalfe's Law notes that in a network of $n$ nodes, the number of potential unique peer connections is $\\frac{n(n-1)}{2}$, scaling roughly with $n^2$."
+      - type: multiple_choice
+        question: "Why do collusive cartels (such as international commodity price-fixing pacts) tend to suffer from chronic internal instability?"
+        options:
+          - "Each individual member faces a private economic incentive to secretly cheat and produce beyond its assigned quota to maximize profit"
+          - "Cartels are legally mandated to donate all surplus revenues to charity"
+          - "Cartel members have identical marginal cost curves that prevent price discovery"
+          - "Member nations are physically incapable of storing excess output"
+        correct: 0
+        explanation: "While collective restriction keeps prices high, any single firm can boost its own profit even further by quietly producing extra units at the elevated cartel price, triggering cartel collapse."
+      - type: multiple_choice
+        question: "What is the primary condition under which a firm should immediately shut down operations in the short run?"
+        options:
+          - "When market price falls below Average Variable Cost (P < AVC)"
+          - "When market price falls below Average Total Cost (P < ATC)"
+          - "When the firm incurs any positive fixed debt cost"
+          - "When accounting profit is equal to zero"
+        correct: 0
+        explanation: "If $P < AVC$, continuing to produce fails to cover even day-to-day operating expenses (labor, materials), so the firm minimizes losses by shutting down immediately."
+      - type: multiple_choice
+        question: "In which market structure do many sellers offer differentiated products and engage in heavy advertising, while facing low barriers to entry?"
+        options:
+          - "Monopolistic Competition"
+          - "Pure Monopoly"
+          - "Perfect Competition"
+          - "Duopoly"
+        correct: 0
+        explanation: "Monopolistic competition (e.g., coffee shops, clothing brands) combines product differentiation with low entry barriers, giving firms slight pricing power without long-run economic profits."
+      - type: multiple_choice
+        question: "What term describes the phenomenon where expanding the scale of operations leads to higher per-unit average costs due to organizational bloat and communication friction?"
+        options:
+          - "Diseconomies of Scale"
+          - "Diminishing Marginal Utility"
+          - "Economies of Scope"
+          - "Comparative Advantage"
+        correct: 0
+        explanation: "Diseconomies of scale occur when an organization grows so large that bureaucracy, communication overhead, and coordination bottlenecks cause long-run average costs to rise."
+      - type: multiple_choice
+        question: "Why does a single-price monopolist produce a lower quantity and charge a higher price than a competitive industry with the same cost structure?"
+        options:
+          - "To sell an additional unit, the monopolist must lower the price on ALL units sold, driving MR below price (MR < P)"
+          - "Monopolists operate with zero fixed capital equipment"
+          - "Monopolists are prohibited by law from calculating marginal costs"
+          - "Consumer demand becomes perfectly elastic under monopoly conditions"
+        correct: 0
+        explanation: "Because the monopolist faces downward-sloping market demand, expanding output requires discounting all infra-marginal units, making $MR < P$. Setting $MR = MC$ restricts output below competitive levels."
+      - type: multiple_choice
+        question: "What is 'First-Degree Price Discrimination' (Perfect Price Discrimination)?"
+        options:
+          - "Charging each individual customer the exact maximum price they are willing to pay, capturing 100% of consumer surplus"
+          - "Charging different prices based on purchasing volume (bulk discounts)"
+          - "Charging students and seniors discounted admission rates"
+          - "Selling products at a price strictly below average variable cost"
+        correct: 0
+        explanation: "In perfect price discrimination, the seller knows each buyer's reservation price and charges it exactly, eliminating consumer surplus and converting it all into producer profit with zero deadweight loss."
+      - type: multiple_choice
+        question: "What characterizes an 'Oligopoly' market structure?"
+        options:
+          - "Domination by a small number of interdependent firms whose strategic decisions directly affect one another"
+          - "Thousands of tiny agricultural producers selling identical wheat"
+          - "A single state-mandated postal utility with zero competitors"
+          - "A market with no legal property rights or contract enforcement"
+        correct: 0
+        explanation: "Oligopolies (e.g., Boeing vs. Airbus, mobile network carriers) feature high concentration where mutual interdependence requires strategic game-theoretic forecasting of competitors' actions."
+      - type: multiple_choice
+        question: "What happens to a software company's Average Total Cost (ATC) as the number of digital downloads increases from 1,000 to 1,000,000?"
+        options:
+          - "ATC drops dramatically toward zero, because massive initial development fixed costs are amortized over a near-zero marginal cost per copy"
+          - "ATC increases exponentially due to the Law of Diminishing Returns"
+          - "ATC remains completely flat and invariant"
+          - "ATC converts entirely into fixed capital liabilities"
+        correct: 0
+        explanation: "Digital goods have massive upfront fixed costs ($FC$) but near-zero marginal costs ($MC \\approx 0$), resulting in extreme economies of scale where $ATC = FC/Q$ plunges toward zero."
+      - type: multiple_choice
+        question: "What is 'Allocative Efficiency' in microeconomic welfare analysis?"
+        options:
+          - "Producing the exact mix of goods most desired by society, where Price equals Marginal Cost (P = MC)"
+          - "Producing goods at the lowest possible point on the Average Total Cost curve"
+          - "Distributing all wealth equally among every citizen regardless of productivity"
+          - "Maximizing government tariff collections on imported goods"
+        correct: 0
+        explanation: "Allocative efficiency occurs when $P = MC$, meaning the price society is willing to pay for the marginal unit matches the marginal cost of the resources required to build it."
+
+  - id: macroeconomics_money_banking
+    title: "3. Macroeconomics, Monetary Systems & Fiscal Policy"
+    description: >
+      Understand the macro-engine of national economies: GDP measurement, inflation dynamics,
+      central bank interest rate control, fractional-reserve money creation, and Keynesian fiscal multipliers.
+    cards:
+      - title: "GDP, Inflation & The Macroeconomic Business Cycle"
+        figure:
+          title: "The Macroeconomic Circular Flow of Income & Expenditure"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Households Box -->
+              <rect x="30" y="45" width="110" height="60" rx="8" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="2"/>
+              <text x="85" y="72" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Households</text>
+              <text x="85" y="88" font-size="9" fill="currentColor" text-anchor="middle">(Consumers/Labor)</text>
+
+              <!-- Firms Box -->
+              <rect x="380" y="45" width="110" height="60" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/>
+              <text x="435" y="72" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle">Firms</text>
+              <text x="435" y="88" font-size="9" fill="currentColor" text-anchor="middle">(Producers)</text>
+
+              <!-- Top Arrow: Consumer Spending -->
+              <path d="M 140 55 L 380 55" stroke="#ec4899" stroke-width="2"/>
+              <polygon points="375,51 385,55 375,59" fill="#ec4899"/>
+              <text x="260" y="48" font-size="10" font-weight="bold" fill="#ec4899" text-anchor="middle">Consumer Spending ($C) →</text>
+
+              <!-- Bottom Arrow: Wages & Dividends -->
+              <path d="M 380 95 L 140 95" stroke="#8b5cf6" stroke-width="2"/>
+              <polygon points="145,91 135,95 145,99" fill="#8b5cf6"/>
+              <text x="260" y="112" font-size="10" font-weight="bold" fill="#8b5cf6" text-anchor="middle">← Wages, Rent &amp; Profit ($Y)</text>
+
+              <!-- Center Hub: Financial & Govt -->
+              <circle cx="260" cy="75" r="16" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+              <text x="260" y="79" font-size="9" font-weight="bold" fill="#f59e0b" text-anchor="middle">Gov/Fin</text>
+            </svg>
+          caption: "The Circular Flow models economic activity: household spending is revenue for firms, which in turn becomes household income (wages and profits)."
+        points:
+          - "Gross Domestic Product (GDP) is the total monetary value of all finished goods and services produced within a nation's borders in a specific time period. Under the expenditure approach: $Y = C + I + G + (X - M)$, representing Consumption ($C$), Private Investment ($I$), Government Purchases ($G$), and Net Exports ($X - M$)."
+          - "Real GDP adjusts nominal GDP for inflation using a price deflator ($P_{\\text{deflator}} = \\frac{\\text{Nominal GDP}}{\\text{Real GDP}} \\times 100$), isolating true physical growth in output from cosmetic price inflation."
+          - "Inflation is the sustained increase in the general price level, eroding currency purchasing power. It is driven by Demand-Pull forces ('too much money chasing too few goods') or Cost-Push supply shocks (such as sudden global oil spikes or supply-chain bottlenecks)."
+          - "The Business Cycle features recurrent, non-periodic fluctuations between expansions (rising GDP, falling unemployment) and contractions/recessions (typically defined as two consecutive quarters of negative real GDP growth accompanied by rising unemployment and idle factory capacity)."
+      - title: "Central Banks, Money Creation & Fractional-Reserve Banking"
+        points:
+          - "Money serves three distinct functions: a Medium of Exchange (eliminating the double coincidence of wants inherent in barter), a Unit of Account (standardizing prices), and a Store of Value (transferring purchasing power into the future)."
+          - "Modern commercial banking operates under Fractional-Reserve Banking: banks hold only a required fraction of customer deposits as cash reserves ($R$), lending out the remaining surplus. This process generates new bank deposits through the Money Multiplier: $M_{\\text{max}} = \\frac{1}{R} \\times \\text{Initial Deposit}$."
+          - "Central Banks (like the Federal Reserve or the European Central Bank) manage the money supply and credit conditions through Monetary Policy. Their primary tools include setting the policy target interest rate (Federal Funds Rate), adjusting reserve requirements, and conducting Open Market Operations."
+          - "The Quantity Theory of Money expresses the classical relationship: $M \\times V = P \\times Y$, where $M$ is money supply, $V$ is velocity of money (how many times a currency unit changes hands per year), $P$ is price level, and $Y$ is real output. If velocity and real output are stable, excessive expansion of the money supply translates directly into inflation."
+      - title: "Fiscal Policy, Government Debt & The Keynesian Multiplier"
+        points:
+          - "Fiscal Policy refers to government taxation ($T$) and public expenditure ($G$) decisions to manage macroeconomic aggregate demand, pioneered by British economist John Maynard Keynes during the Great Depression."
+          - "During severe recessions, Keynesian economics advocates Counter-Cyclical Expansionary Fiscal Policy: boosting public spending and cutting taxes to stimulate aggregate demand. The initial government spending propagates through the economy via the Fiscal Multiplier: $M_{\\text{fiscal}} = \\frac{1}{1 - MPC}$, where $MPC$ is the Marginal Propensity to Consume."
+          - "Automatic Stabilizers (such as progressive income tax brackets and unemployment insurance) automatically cushion shocks without legislative delay: during downturns, tax collections decline while social safety net payouts rise, sustaining purchasing power."
+          - "Crowding-Out Effect: When governments run large budget deficits to fund spending, they issue Treasury bonds. Increased borrowing in loanable funds markets can drive up real interest rates, potentially 'crowding out' private corporate investment in new machinery and infrastructure."
+    trivia:
+      - type: multiple_choice
+        question: "What is the standard macroeconomic expenditure formula used to calculate Gross Domestic Product (GDP)?"
+        options:
+          - "Y = C + I + G + (X - M)"
+          - "Y = C + S + T"
+          - "Y = M × V / P"
+          - "Y = P × Q - ATC"
+        correct: 0
+        explanation: "GDP ($Y$) represents the sum of Consumer Spending ($C$), Gross Private Investment ($I$), Government Purchases ($G$), and Net Exports ($X - M$)."
+      - type: multiple_choice
+        question: "How does 'Real GDP' differ from 'Nominal GDP'?"
+        options:
+          - "Real GDP is adjusted for inflation to reflect true physical changes in output, while Nominal GDP uses current raw prices"
+          - "Real GDP includes black market activity, while Nominal GDP only tracks legal commerce"
+          - "Real GDP is measured exclusively in ounces of physical gold bullion"
+          - "Nominal GDP tracks household income while Real GDP tracks corporate profits"
+        correct: 0
+        explanation: "Nominal GDP can rise simply because prices inflated, even if fewer goods were produced. Real GDP holds prices constant using a base year to measure true volume growth."
+      - type: multiple_choice
+        question: "In fractional-reserve banking, what is the theoretical maximum money multiplier if the required reserve ratio (R) set by the central bank is 10% (0.10)?"
+        options:
+          - "10 (Multiplier = 1 / 0.10)"
+          - "1"
+          - "100"
+          - "0.10"
+        correct: 0
+        explanation: "The theoretical money multiplier equals $1 / R$. With a 10% reserve requirement, $1 / 0.10 = 10$, meaning each dollar of new bank reserves can support up to $10 in total deposits."
+      - type: multiple_choice
+        question: "What is the primary policy rate that the U.S. Federal Reserve adjusts to influence macroeconomic borrowing costs across the economy?"
+        options:
+          - "Federal Funds Rate"
+          - "Corporate Bond Yield"
+          - "30-Year Mortgage Rate"
+          - "Consumer Price Index"
+        correct: 0
+        explanation: "The Federal Funds Rate is the overnight interest rate at which commercial depository institutions lend reserve balances to each other, anchoring the entire interest rate structure."
+      - type: multiple_choice
+        question: "What classical relationship is described by the Equation of Exchange: M × V = P × Y?"
+        options:
+          - "Money supply times velocity of money equals the general price level times real output"
+          - "Marginal revenue times volume equals profit times yield"
+          - "Monetary base times velocity equals total public debt"
+          - "Imports times velocity equals exports times exchange rate"
+        correct: 0
+        explanation: "The Quantity Theory of Money identity shows that total spending ($M \\times V$) must equal total nominal output ($P \\times Y$)."
+      - type: multiple_choice
+        question: "What type of inflation is triggered when an unexpected geopolitical shock drastically curtails the global supply of key raw materials like crude oil?"
+        options:
+          - "Cost-Push Inflation"
+          - "Demand-Pull Inflation"
+          - "Hyper-Monetary Inflation"
+          - "Cyclical Deflation"
+        correct: 0
+        explanation: "Cost-push inflation occurs when aggregate supply is constrained by rising input costs or supply bottlenecks, shifting the short-run aggregate supply curve left."
+      - type: multiple_choice
+        question: "What is the 'Crowding-Out Effect' associated with large government budget deficits?"
+        options:
+          - "Increased government borrowing raises real interest rates, reducing private business capital investment"
+          - "High taxes force consumers to hoard physical cash under mattresses"
+          - "Commercial banks run out of physical space to store paper currency"
+          - "Foreign tourists crowd domestic hotels, driving up consumer prices"
+        correct: 0
+        explanation: "Heavy government borrowing competes for finite loanable funds, pushing up real interest rates and crowding out private sector investment in factories and tech."
+      - type: multiple_choice
+        question: "If households have a Marginal Propensity to Consume (MPC) of 0.80, what is the simple Keynesian fiscal multiplier (1 / (1 - MPC))?"
+        options:
+          - "5.0 (Multiplier = 1 / 0.20)"
+          - "1.25"
+          - "0.80"
+          - "10.0"
+        correct: 0
+        explanation: "With $MPC = 0.80$, the marginal propensity to save is $1 - 0.80 = 0.20$. The fiscal multiplier is $1 / 0.20 = 5.0$, meaning $1 of government spending could yield $5 in total GDP."
+      - type: multiple_choice
+        question: "What policy action would a central bank typically take to combat high and accelerating inflation during an economic expansion?"
+        options:
+          - "Raise policy interest rates and sell bonds to reduce the money supply (Contractionary Monetary Policy)"
+          - "Slash interest rates to zero and print more physical currency"
+          - "Lower reserve requirements for commercial lending institutions"
+          - "Subsidize corporate stock buybacks through treasury grants"
+        correct: 0
+        explanation: "Raising interest rates makes borrowing more expensive for mortgages and capital projects, dampening consumer spending and business investment to cool down price pressures."
+      - type: multiple_choice
+        question: "What economic condition is characterized by stagnant economic growth, high unemployment, and high inflation occurring simultaneously?"
+        options:
+          - "Stagflation"
+          - "Hyper-Expansion"
+          - "Liquidity Trap"
+          - "Deflationary Spiral"
+        correct: 0
+        explanation: "Stagflation (famously experienced in the 1970s) combines economic stagnation (recession, unemployment) with persistent price inflation, posing a difficult dilemma for central banks."
+      - type: multiple_choice
+        question: "How do 'Automatic Stabilizers' function during an economic recession without requiring new legislative action by Congress?"
+        options:
+          - "Tax revenues automatically fall while government transfer payments (unemployment benefits) automatically rise, cushioning the downturn"
+          - "The central bank automatically resets all consumer debts to zero"
+          - "Commercial interest rates automatically lock at negative five percent"
+          - "Corporate bankruptcies are automatically prohibited by federal statute"
+        correct: 0
+        explanation: "As incomes drop, progressive tax brackets collect less, and unemployment outlays automatically rise, injecting liquidity into the economy without legislative delays."
+      - type: multiple_choice
+        question: "What is a 'Liquidity Trap' in monetary economics?"
+        options:
+          - "A situation where interest rates fall near zero, and injecting further money supply fails to stimulate spending because people hoard cash"
+          - "A condition where commercial banks are physically unable to dispense ATM cash"
+          - "A market where the government prohibits all cross-border financial wire transfers"
+          - "A rapid depreciation of foreign exchange reserves caused by fixed pegs"
+        correct: 0
+        explanation: "In a liquidity trap (Keynesian phenomenon), nominal interest rates approach zero; demand for money becomes perfectly elastic, rendering conventional rate cuts ineffective."
+      - type: multiple_choice
+        question: "What index measures the average change over time in the prices paid by urban consumers for a fixed representative basket of consumer goods and services?"
+        options:
+          - "Consumer Price Index (CPI)"
+          - "Dow Jones Industrial Average"
+          - "Purchasing Managers' Index (PMI)"
+          - "Gini Coefficient"
+        correct: 0
+        explanation: "The Consumer Price Index (CPI) tracks monthly changes in the price of a weighted basket of household goods (groceries, energy, shelter, healthcare) to gauge consumer inflation."
+      - type: multiple_choice
+        question: "What is the primary objective of Quantitative Easing (QE) enacted by central banks when short-term interest rates are already pinned at zero?"
+        options:
+          - "Purchasing long-term government bonds and mortgage-backed securities to lower long-term interest rates and expand bank liquidity"
+          - "Printing physical paper currency and dropping it from helicopters into urban centers"
+          - "Directly purchasing consumer retail products to clear warehouse inventories"
+          - "Fixing the nation's foreign exchange rate to a basket of precious metals"
+        correct: 0
+        explanation: "When short-term rates hit zero, central banks launch QE: buying long-term bonds from financial markets with newly created electronic reserves to push down long-term yields and spur lending."
+      - type: multiple_choice
+        question: "What macroeconomic curve historically models the short-run inverse empirical trade-off between unemployment and wage inflation?"
+        options:
+          - "Phillips Curve"
+          - "Laffer Curve"
+          - "Lorenz Curve"
+          - "Kuznets Curve"
+        correct: 0
+        explanation: "The short-run Phillips Curve suggested that lower unemployment correlates with higher wage inflation, though this trade-off breaks down when inflation expectations adjust (as in stagflation)."
+
+  - id: game_theory_strategic_interactions
+    title: "4. Game Theory, Nash Equilibria & Mechanism Design"
+    description: >
+      Master the mathematics of strategic decision-making: payoff matrices, dominant strategies,
+      Nash equilibria, backward induction, information asymmetry, and incentive-compatible mechanism design.
+    cards:
+      - title: "Simultaneous Games, Payoff Matrices & The Prisoner's Dilemma"
+        figure:
+          title: "The Classic Prisoner's Dilemma Payoff Matrix"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Matrix Box -->
+              <rect x="140" y="25" width="280" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="140" y1="75" x2="420" y2="75" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="280" y1="25" x2="280" y2="125" stroke="currentColor" stroke-width="1.5"/>
+
+              <!-- Headers -->
+              <text x="210" y="18" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Player B: Cooperate</text>
+              <text x="350" y="18" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">Player B: Defect</text>
+              <text x="50" y="55" font-size="11" font-weight="bold" fill="#3b82f6">Player A: Cooperate</text>
+              <text x="65" y="105" font-size="11" font-weight="bold" fill="#ef4444">Player A: Defect</text>
+
+              <!-- Cell (C, C) -->
+              <text x="210" y="55" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle">-1, -1 (Pareto)</text>
+
+              <!-- Cell (C, D) -->
+              <text x="350" y="55" font-size="12" font-weight="bold" fill="currentColor" text-anchor="middle">-3, 0</text>
+
+              <!-- Cell (D, C) -->
+              <text x="210" y="105" font-size="12" font-weight="bold" fill="currentColor" text-anchor="middle">0, -3</text>
+
+              <!-- Cell (D, D) -->
+              <rect x="282" y="77" width="136" height="46" fill="#ef4444" fill-opacity="0.2"/>
+              <text x="350" y="105" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">-2, -2 (Nash Eq)</text>
+            </svg>
+          caption: "In the Prisoner's Dilemma, 'Defect' is a dominant strategy for both players, leading to a suboptimal Nash Equilibrium (-2, -2) despite mutual cooperation (-1, -1) being superior."
+        points:
+          - "Game Theory models situations where the outcome for each participant (player) depends not only on their own choice, but on the strategic choices made by all other independent actors."
+          - "A Dominant Strategy is an action that yields the highest payoff for a player regardless of what strategy opponents choose. If a player has a strictly dominant strategy, a rational actor will always play it."
+          - "A Nash Equilibrium is a profile of strategies where NO player has an incentive to unilaterally deviate to a different action, given the chosen strategies of all other players ($u_i(s_i^*, s_{-i}^*) \\ge u_i(s_i, s_{-i}^*)$). John Nash proved that every finite game has at least one equilibrium (in pure or mixed randomized strategies)."
+          - "The Prisoner's Dilemma reveals the tragedy of decentralized rational choices: both suspects have a dominant strategy to 'Defect' (confess), landing the system in a Nash Equilibrium with harsh sentences ($-2, -2$). Mutual cooperation (remaining silent, $-1, -1$) is Pareto superior, but unstable without binding enforcement contracts."
+      - title: "Sequential Games, Backward Induction & Commitment"
+        points:
+          - "While simultaneous games use matrix tables, Sequential Games unfold step-by-step over time and are represented as Game Trees (Extensive-Form Games) consisting of decision nodes, branches, and terminal payoffs."
+          - "Backward Induction solves sequential games by working backwards from terminal outcomes: analyze what the last player will rationally choose at the final nodes, prune inferior branches, and deduce optimal earlier moves. This identifies the Subgame Perfect Nash Equilibrium (SPNE)."
+          - "First-Mover Advantage occurs when committing early forces rivals to accommodate (like opening a large factory first). Second-Mover Advantage occurs when observing the leader's mistakes or learning customer demand eliminates costly uncertainty (common in software technology adoption)."
+          - "Credible Commitments: In strategic negotiations and deterrence, a threat or promise is only effective if rivals believe you will genuinely carry it out when tested. 'Burning your boats' or automating retaliation makes commitments credible by deliberately eliminating your own ability to back down."
+      - title: "Information Asymmetry, Adverse Selection & Auction Design"
+        points:
+          - "Standard market models assume perfect information, but real economies are rife with Asymmetric Information (one party knows critical facts the other does not)."
+          - "Adverse Selection (Pre-Contractual Asymmetry): George Akerlof's 'Market for Lemons' showed that when buyers cannot verify the quality of used cars, they will only offer average prices. High-quality sellers withdraw from the market, degrading average quality in a death spiral until only defective 'lemons' remain."
+          - "Moral Hazard (Post-Contractual Asymmetry): Occurs when an insured or protected agent takes greater reckless risks because another party bears the negative consequences (e.g., insured drivers driving less cautiously, or banks engaging in speculative trading under implicit government bailouts)."
+          - "Auction Theory & Mechanism Design: Mechanism design engineer rules of a game so self-interested participants reveal truthful information. In a Second-Price Sealed-Bid Auction (Vickrey Auction), the highest bidder wins but pays only the second-highest bid; bidding your true valuation is a mathematically Dominant Strategy."
+    trivia:
+      - type: multiple_choice
+        question: "What is the defining condition of a 'Nash Equilibrium' in game theory?"
+        options:
+          - "A state where no player can improve their individual payoff by unilaterally changing their strategy"
+          - "A state where all players receive equal monetary rewards"
+          - "A state where the sum of all payoffs is maximized for society"
+          - "A state where every player plays a completely random strategy"
+        correct: 0
+        explanation: "In a Nash Equilibrium, each player's chosen strategy is an optimal best response to the strategies chosen by everyone else, leaving no incentive to deviate alone."
+      - type: multiple_choice
+        question: "Why do both rational players defect in a classic one-shot Prisoner's Dilemma, leading to a suboptimal outcome?"
+        options:
+          - "Defection is a strictly dominant strategy that yields a better individual outcome regardless of the rival's move"
+          - "Both players are legally prohibited from communicating before the game"
+          - "The rules mandate that whoever defects first wins all the money"
+          - "Players are attempting to maximize the collective social payoff"
+        correct: 0
+        explanation: "Whether the other player cooperates or defects, an individual player always secures a better personal sentence by defecting, making defecting the dominant strategy."
+      - type: multiple_choice
+        question: "What mathematical technique is used to solve extensive-form sequential game trees by reasoning from the final decision nodes back to the root?"
+        options:
+          - "Backward Induction"
+          - "Linear Regression"
+          - "Monte Carlo Sampling"
+          - "Gradient Descent"
+        correct: 0
+        explanation: "Backward induction works from the end of a sequential game tree backwards to determine what rational players will do at each subgame, establishing subgame perfection."
+      - type: multiple_choice
+        question: "In auction theory, why is a Vickrey Auction (Second-Price Sealed-Bid Auction) considered incentive-compatible?"
+        options:
+          - "Bidding your exact truthful valuation is a dominant strategy, because your bid affects whether you win, but NOT the price you pay"
+          - "The auctioneer pays every participant a flat appearance fee"
+          - "All bidders are required to announce their maximum budgets publicly"
+          - "The item is awarded to the lowest bidder at the highest submitted price"
+        correct: 0
+        explanation: "Because the winning bidder pays the second-highest bid, underbidding risks losing a profitable item, while overbidding risks winning at an unprofitable price; truthful bidding is dominant."
+      - type: multiple_choice
+        question: "What economic phenomenon was demonstrated in George Akerlof's Nobel Prize-winning paper 'The Market for Lemons'?"
+        options:
+          - "Asymmetric information about product quality causes good products to exit the market, leading to adverse selection and market collapse"
+          - "Agricultural fruit cartels artificially inflate citrus prices"
+          - "Used car dealerships always earn zero economic profit in competitive equilibrium"
+          - "Monopolies produce higher quality goods than competitive firms"
+        correct: 0
+        explanation: "When buyers cannot distinguish quality, they offer average prices. High-quality sellers refuse to sell at average prices, leaving only poor-quality 'lemons' in an adverse selection spiral."
+      - type: multiple_choice
+        question: "What is 'Moral Hazard' in economics and insurance contracts?"
+        options:
+          - "An agent engages in riskier behavior after obtaining protection because another party bears the financial burden of bad outcomes"
+          - "A buyer withholds payment after receiving goods"
+          - "A consumer refuses to purchase insurance due to religious convictions"
+          - "An insurer charges elderly patients higher health premiums"
+        correct: 0
+        explanation: "Moral hazard occurs when having insurance or a guarantee (like a government bailout) changes the agent's incentives, encouraging them to take on greater risks."
+      - type: multiple_choice
+        question: "What does it mean for an outcome to be 'Pareto Efficient'?"
+        options:
+          - "No individual can be made better off without making at least one other individual worse off"
+          - "All resources are distributed completely equally among every participant"
+          - "Every player achieves their highest possible theoretical payoff"
+          - "The government extracts maximum tax revenue from the transaction"
+        correct: 0
+        explanation: "Pareto efficiency means there is no wasted opportunity: all possible mutual gains from trade or reallocation have already been fully exhausted."
+      - type: multiple_choice
+        question: "How can a military or corporate leader make a strategic threat 'credible' in sequential games?"
+        options:
+          - "By binding their own hands or eliminating their own option to retreat (e.g., 'burning the bridges')"
+          - "By sending a politely worded memorandum of intent"
+          - "By keeping their true plans completely secret from all adversaries"
+          - "By promising to submit all disputes to an impartial arbitration panel"
+        correct: 0
+        explanation: "A threat is only credible if the adversary knows you must carry it out. Deliberately removing your own option to retreat makes the commitment binding and believable."
+      - type: multiple_choice
+        question: "In the famous 'Tit-for-Tat' strategy for the Infinitely Repeated Prisoner's Dilemma, what does a player do?"
+        options:
+          - "Start by cooperating on the first round, and subsequently copy whatever action the opponent took in the preceding round"
+          - "Always defect unconditionally on every single round"
+          - "Always cooperate regardless of how many times the opponent defects"
+          - "Randomly flip a coin on every turn to determine whether to cooperate"
+        correct: 0
+        explanation: "Robert Axelrod's tournaments showed that Tit-for-Tat—cooperate initially, punish defection immediately, and forgive as soon as the rival cooperates—promotes enduring cooperation."
+      - type: multiple_choice
+        question: "What is 'Signaling' in the presence of asymmetric information, as formalized by Michael Spence?"
+        options:
+          - "An informed party takes a costly, observable action to credibly reveal private information (e.g., earning a difficult degree)"
+          - "A firm broadcasts commercial television advertisements"
+          - "A government uses tariffs to signal displeasure with trade partners"
+          - "A consumer requests a written warranty before purchasing electronics"
+        correct: 0
+        explanation: "To be credible, a signal must be harder or more expensive for a low-quality agent to send than for a high-quality agent (e.g., rigorous university degrees signaling talent)."
+      - type: multiple_choice
+        question: "What is a 'Zero-Sum Game' in game theory?"
+        options:
+          - "A game in which one player's gain is exactly equal to another player's loss (total payoffs sum to zero)"
+          - "A game where all players walk away with zero earnings"
+          - "A market where firms make zero accounting profit"
+          - "A game that has no possible Nash equilibrium"
+        correct: 0
+        explanation: "In zero-sum games (like chess, poker, or territorial conquest), wealth or points cannot be created or destroyed; any advantage gained by one player directly costs rivals an equal amount."
+      - type: multiple_choice
+        question: "What type of strategy involves a player intentionally randomizing between two or more pure actions according to specific probability distributions?"
+        options:
+          - "Mixed Strategy"
+          - "Dominant Strategy"
+          - "Pareto Strategy"
+          - "Collusive Strategy"
+        correct: 0
+        explanation: "A mixed strategy (like throwing Rock, Paper, or Scissors with equal 1/3 probability) keeps opponents indifferent and unable to exploit predictable patterns."
+      - type: multiple_choice
+        question: "What is 'Screening' when dealing with asymmetric information in markets?"
+        options:
+          - "An uninformed party designs a menu of choices that induces informed parties to self-select and reveal their true type"
+          - "A firm performs background credit checks on all job applicants"
+          - "A government filters internet traffic to prevent corporate fraud"
+          - "An auctioneer rejects bids that fall below a reserve price"
+        correct: 0
+        explanation: "Screening occurs when an uninformed party sets up mechanisms (like insurance deductibles: high-risk buyers pick low deductibles, low-risk buyers pick high deductibles) to induce self-selection."
+      - type: multiple_choice
+        question: "In mechanism design, what property ensures that participants cannot achieve a higher payoff by lying about their private preferences?"
+        options:
+          - "Incentive Compatibility"
+          - "Monopolistic Equilibrium"
+          - "Dynamic Inconsistency"
+          - "Adverse Valuation"
+        correct: 0
+        explanation: "A mechanism is Incentive-Compatible (Strategy-Proof) if truthful revelation of private preferences is a dominant strategy for all participants."
+      - type: multiple_choice
+        question: "What classic game models an arms race or game of 'Chicken' where mutual escalation leads to catastrophic mutual destruction?"
+        options:
+          - "Hawk-Dove (or Chicken) Game"
+          - "Battle of the Sexes"
+          - "Matching Pennies"
+          - "Cournot Duopoly"
+        correct: 0
+        explanation: "In Hawk-Dove / Chicken, yielding while the rival attacks is humiliating, but mutual aggressive collision (both playing Hawk) yields the worst possible catastrophe."
+
+  - id: behavioral_economics_public_goods
+    title: "5. Behavioral Economics, Externalities & Public Goods"
+    description: >
+      Explore market failures and real human psychology: negative externalities, Pigouvian corrective taxes,
+      common-pool tragedies, Prospect Theory, loss aversion, and behavioral nudge theory.
+    cards:
+      - title: "Externalities, Market Failures & Pigouvian Solutions"
+        figure:
+          title: "Negative Externality & Pigouvian Tax Correction"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <line x1="60" y1="125" x2="480" y2="125" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="125" x2="60" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <text x="470" y="140" font-size="10" fill="currentColor" text-anchor="end">Quantity (Q) →</text>
+              <text x="35" y="25" font-size="10" fill="currentColor" transform="rotate(-90 35 25)">Price/Cost ($) →</text>
+
+              <!-- Demand / Marginal Social Benefit -->
+              <line x1="90" y1="30" x2="420" y2="115" stroke="#3b82f6" stroke-width="2.5"/>
+              <text x="425" y="115" font-size="10" font-weight="bold" fill="#3b82f6">Demand (MSB)</text>
+
+              <!-- Private Marginal Cost (PMC) -->
+              <line x1="90" y1="110" x2="420" y2="35" stroke="#10b981" stroke-width="2"/>
+              <text x="425" y="40" font-size="10" font-weight="bold" fill="#10b981">PMC (Private Supply)</text>
+
+              <!-- Social Marginal Cost (SMC = PMC + External Damage) -->
+              <line x1="90" y1="75" x2="420" y2="10" stroke="#ef4444" stroke-width="2"/>
+              <text x="425" y="15" font-size="10" font-weight="bold" fill="#ef4444">SMC (Social Cost)</text>
+
+              <!-- Deadweight Loss Triangle -->
+              <polygon points="230,55 290,65 290,40" fill="#ef4444" fill-opacity="0.25"/>
+              <text x="295" y="55" font-size="9" fill="#ef4444">Deadweight Loss</text>
+            </svg>
+          caption: "A negative externality (like carbon pollution) causes private markets to overproduce ($Q_{\\text{market}} > Q_{\\text{social}}$). A Pigouvian tax aligns private costs with social costs."
+        points:
+          - "An Externality occurs when the production or consumption of a good imposes an uncompensated cost or benefit on uninvolved third parties. Negative externalities (carbon emissions, noise, factory pollution) impose external social damage; Positive externalities (education, vaccination, open-source software libraries) create spillover social benefits."
+          - "In the presence of negative externalities, private markets overproduce relative to the socially optimal quantity ($Q_{\\text{market}} > Q_{\\text{optimal}}$) because firms ignore external damage, creating deadweight loss. With positive externalities, private markets underproduce ($Q_{\\text{market}} < Q_{\\text{optimal}}$)."
+          - "A Pigouvian Tax levies a per-unit fee on polluting producers equal to the marginal external damage ($t = \\text{External Damage}$), internalizing the externality and aligning private incentives with the social optimum. Conversely, Pigouvian subsidies encourage positive externalities."
+          - "The Coase Theorem posits that if property rights are clearly defined and Transaction Costs are zero, private parties can negotiate directly to reach an efficient allocation without government regulation, regardless of who was originally assigned the legal rights."
+      - title: "Public Goods, Common Resources & The Tragedy of the Commons"
+        points:
+          - "Goods are categorized across two economic dimensions: Excludability (can people be prevented from using it?) and Rivalry (does one person's consumption reduce availability for others?)."
+          - "A 4-Way Typology of Goods: (1) Private Goods (rival & excludable: an apple, laptop), (2) Club Goods (non-rival & excludable: Netflix streaming, satellite TV), (3) Common-Pool Resources (rival & non-excludable: ocean fisheries, timber, shared compute clusters), (4) Public Goods (non-rival & non-excludable: national defense, GPS constellation, basic scientific theorems)."
+          - "The Free-Rider Problem prevents private competitive markets from funding Public Goods: because non-payers cannot be excluded from enjoying the benefit, rational individuals have an incentive to let others foot the bill, resulting in market failure and severe under-provision unless funded via public taxation."
+          - "The Tragedy of the Commons (Elinor Ostrom & Garrett Hardin) arises with Common-Pool Resources: because individuals capture 100% of the private benefit of harvesting while distributing the cost of resource depletion across all users, self-interested exploitation inevitably depletes the shared resource unless governed by community norms, quotas, or tradeable property permits."
+      - title: "Behavioral Economics, Prospect Theory & Nudge Design"
+        points:
+          - "Classical economics models humans as 'Homo Economicus'—hyper-rational agents with unlimited computational power, perfect willpower, and stable preferences. Behavioral Economics integrates cognitive psychology to explain real, systematic human departures from rationality."
+          - "Prospect Theory (developed by Daniel Kahneman and Amos Tversky) demonstrates that humans evaluate outcomes as changes relative to a Reference Point rather than absolute wealth levels. The value function is S-shaped: concave for gains (risk-averse) and convex for losses (risk-seeking)."
+          - "Loss Aversion: The psychological pain of losing $100 is roughly twice as intense as the pleasure of gaining $100 ($\\lambda \\approx 2$). This explains the Endowment Effect (valuing goods higher merely because you own them) and the Sunk Cost Fallacy."
+          - "Heuristics and Biases: Humans rely on mental shortcuts that create predictable errors: Anchoring (over-relying on the first number presented), Availability (overestimating the likelihood of vivid, memorable events like plane crashes), and Hyperbolic Discounting / Present Bias (heavily overvaluing immediate rewards over distant future payoffs)."
+          - "Nudge Theory (Richard Thaler & Cass Sunstein): By modifying Choice Architecture without restricting freedom of choice or altering economic incentives, policymakers can nudge people toward welfare-maximizing decisions (e.g., making 401(k) retirement savings automatic opt-in rather than opt-out, dramatically increasing participation)."
+    trivia:
+      - type: multiple_choice
+        question: "What are the two defining economic characteristics of a pure 'Public Good' (such as national defense or the GPS satellite constellation)?"
+        options:
+          - "Non-excludable and non-rivalrous in consumption"
+          - "Excludable and rivalrous in consumption"
+          - "Subsidized by corporate venture capital and patented"
+          - "Sold exclusively through competitive online auctions"
+        correct: 0
+        explanation: "Public goods are non-excludable (non-payers cannot be prevented from benefiting) and non-rivalrous (one person's use does not diminish another's use)."
+      - type: multiple_choice
+        question: "What is the 'Free-Rider Problem' that causes private markets to under-provide public goods?"
+        options:
+          - "Individuals consume non-excludable benefits without paying, expecting others to cover the cost"
+          - "Commuters sneak onto municipal subway trains without buying tickets"
+          - "Software developers use open-source code without citing the original author"
+          - "Firms dump toxic industrial waste into public rivers without paying fees"
+        correct: 0
+        explanation: "Because non-payers cannot be excluded from enjoying public goods, individuals have a private incentive to 'free-ride' on the payments of others, leading to market failure."
+      - type: multiple_choice
+        question: "According to Kahneman and Tversky's Prospect Theory, what is 'Loss Aversion'?"
+        options:
+          - "The psychological pain of losing an amount of money is roughly twice as intense as the pleasure of gaining that exact same amount"
+          - "Investors always prefer holding high-volatility speculative tech equities"
+          - "Consumers refuse to buy insurance policies that carry deductibles"
+          - "Corporate executives only accept projects with guaranteed positive returns"
+        correct: 0
+        explanation: "Loss aversion shows that human psychology feels losses much more acutely than equivalent gains (loss aversion coefficient $\\lambda \\approx 2$), distorting risk preferences."
+      - type: multiple_choice
+        question: "What is a 'Pigouvian Tax'?"
+        options:
+          - "A corrective tax levied on market activities that generate negative externalities to align private costs with social costs"
+          - "An income tax levied on high-net-worth real estate investors"
+          - "A universal tariff placed on all imported electronic devices"
+          - "A penalty tax paid by companies that fail to meet corporate diversity quotas"
+        correct: 0
+        explanation: "Named after Arthur Pigou, a Pigouvian tax (like a carbon tax) charges polluters for external damages, restoring allocative efficiency to distorted markets."
+      - type: multiple_choice
+        question: "Under the Coase Theorem, what condition allows private parties to negotiate an efficient solution to an externality without government intervention?"
+        options:
+          - "Property rights are clearly assigned and transaction costs are zero or negligible"
+          - "The government mandates a strict statutory price ceiling"
+          - "The industry must be structured as a pure monopoly"
+          - "All participating businesses must be owned by the state"
+        correct: 0
+        explanation: "Ronald Coase proved that if property rights are well-defined and bargaining/transaction costs are zero, private bargaining will internalize the externality efficiently."
+      - type: multiple_choice
+        question: "What economic problem describes the over-exploitation and degradation of rivalrous but non-excludable shared resources (such as ocean fisheries or public grazing land)?"
+        options:
+          - "Tragedy of the Commons"
+          - "Deadweight Monopoly Loss"
+          - "Veblen Conspicuous Paradox"
+          - "Liquidity Trap"
+        correct: 0
+        explanation: "The Tragedy of the Commons arises when individuals harvest shared resources for private gain while socializing the depletion cost, leading to over-exploitation."
+      - type: multiple_choice
+        question: "What is the 'Endowment Effect' observed in behavioral economics?"
+        options:
+          - "People value an item more highly simply because they already own it compared to what they would pay to acquire it"
+          - "University endowments consistently beat passive index stock funds"
+          - "Inherited wealth causes heirs to work fewer weekly hours"
+          - "Consumers spend windfall cash prizes faster than earned wages"
+        correct: 0
+        explanation: "The endowment effect (rooted in loss aversion) causes people to demand a much higher price to sell an item they own than they would be willing to pay to buy it."
+      - type: multiple_choice
+        question: "What is an example of a 'Nudge' in choice architecture, as championed by Richard Thaler and Cass Sunstein?"
+        options:
+          - "Making retirement plan enrollment the default opt-in, while allowing workers full freedom to opt out"
+          - "Passing a federal law sending non-compliant citizens to prison"
+          - "Imposing a 100% excise tax on sugary carbonated drinks"
+          - "Banning the commercial sale of incandescent lightbulbs nationwide"
+        correct: 0
+        explanation: "A nudge alters the choice architecture (like making enrollment the default option) to encourage better decisions without forbidding choices or altering economic incentives."
+      - type: multiple_choice
+        question: "What cognitive bias describes the human tendency to over-rely on the first piece of numerical information encountered when estimating value?"
+        options:
+          - "Anchoring Bias"
+          - "Confirmation Bias"
+          - "Availability Heuristic"
+          - "Hindsight Bias"
+        correct: 0
+        explanation: "Anchoring occurs when an initial reference number (even an arbitrary retail list price) disproportionately pulls subsequent numerical estimates and negotiations toward it."
+      - type: multiple_choice
+        question: "How does 'Hyperbolic Discounting' (Present Bias) explain why people frequently fail to stick to diets or save for retirement?"
+        options:
+          - "People place disproportionately high value on immediate current gratification over future benefits, exhibiting time-inconsistent preferences"
+          - "People are mathematically incapable of compounding exponential interest rates"
+          - "Future money is heavily depreciated by official government exchange rates"
+          - "Consumers operate with infinite time horizons like immortal dynasties"
+        correct: 0
+        explanation: "Present bias causes people to prefer immediate rewards over future rewards in the short term, leading to self-control failures even when they intend to save long term."
+      - type: multiple_choice
+        question: "Which of the following is classified as a 'Club Good' (artificially scarce good)?"
+        options:
+          - "Subscription video streaming service (Excludable via password, Non-Rival in consumption)"
+          - "Wild fish swimming in international ocean waters"
+          - "A slice of pizza purchased at a local cafeteria"
+          - "National missile defense system"
+        correct: 0
+        explanation: "Club goods are excludable (access requires subscription payment or password) but non-rival (one person streaming a movie does not degrade another's stream)."
+      - type: multiple_choice
+        question: "Why does a positive externality (such as childhood immunization or fundamental scientific research) result in private market under-provision?"
+        options:
+          - "The private marginal benefit to the individual buyer is lower than the total marginal social benefit to society"
+          - "Patents completely prevent consumers from buying medicines"
+          - "The marginal cost of producing vaccines rises to infinity"
+          - "Producers earn excessive monopoly profits that crowd out buyers"
+        correct: 0
+        explanation: "Because individuals capture only private benefits and ignore the positive spillover benefits conferred upon society ($MSB > MPB$), private demand sits below the social optimum."
+      - type: multiple_choice
+        question: "What cognitive heuristic causes people to dramatically overestimate the danger of shark attacks or plane crashes after seeing sensational news reports?"
+        options:
+          - "Availability Heuristic"
+          - "Gambler's Fallacy"
+          - "Representativeness Bias"
+          - "Status Quo Bias"
+        correct: 0
+        explanation: "The availability heuristic leads people to evaluate the frequency or risk of an event based on how readily vivid and emotional examples come to mind."
+      - type: multiple_choice
+        question: "What did political scientist Elinor Ostrom demonstrate regarding common-pool natural resources, for which she was awarded the Nobel Prize in Economics?"
+        options:
+          - "Local communities can successfully manage shared common resources through informal self-governing institutions and norms without state control or privatization"
+          - "All common resources must be privatized and auctioned to corporations"
+          - "Government central planning is the only viable method to prevent fisheries depletion"
+          - "Common resources have zero economic value in modern financial markets"
+        correct: 0
+        explanation: "Ostrom proved through extensive field research that local user communities often establish robust, enduring self-organized governance rules to sustain common resources."
+      - type: multiple_choice
+        question: "What behavioral phenomenon explains why a gambler who has lost five consecutive coin flips believes a win is 'due' on the next flip?"
+        options:
+          - "Gambler's Fallacy"
+          - "Confirmation Bias"
+          - "Sunk Cost Fallacy"
+          - "Endowment Bias"
+        correct: 0
+        explanation: "The Gambler's Fallacy is the mistaken belief that independent random trials are self-correcting, expecting a 'fair balance' in small sample sizes."

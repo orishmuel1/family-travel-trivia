@@ -1,0 +1,1049 @@
+id: world_atlas_nations_en
+icon: "🗺️"
+title: "World Atlas: Giant Nations & Global Capitals"
+description: >
+  Embark on an epic geographical voyage through planet Earth's largest sovereign nations,
+  sorted systematically by land area, exploring their historic capitals, extreme biomes,
+  and geopolitical landmarks.
+lang: en
+audience: family
+categories:
+  - id: important_facts
+    title: "Important Facts: Global Geography & Capital Extremes"
+    description: >
+      Essential geographical milestones, record-breaking capitals, continental boundaries,
+      and planetary land records that define how nations partition the globe.
+    cards:
+      - title: "Planetary Land Surface & Sovereign Boundaries"
+        points:
+          - "Planet Earth has a total surface area of roughly 510 million square kilometers, but only about 29% (149 million km²) is land, divided among 195 sovereign nations recognized by the United Nations."
+          - "The ten largest countries alone encompass nearly half (49%) of the entire land surface of the Earth, spanning vast tundra, deserts, rain forests, and mountain ranges."
+          - "Russia is the largest country on Earth by a wide margin; spanning over 17 million square kilometers across 11 time zones, it covers one-eighth of the planet's inhabited land area."
+          - "There are 44 landlocked countries in the world that have no direct access to the open ocean, with Kazakhstan being the world's largest landlocked nation by land area."
+          - "Only two countries in the world are 'doubly landlocked'—meaning they are surrounded entirely by countries that are themselves landlocked: Liechtenstein in Europe and Uzbekistan in Central Asia."
+      - title: "Capital City Altitude & Temperature Records"
+        points:
+          - "La Paz, Bolivia, is the highest administrative capital city in the world, perched on the Andean Altiplano at approximately 3,640 meters (11,940 feet) above sea level."
+          - "Ulaanbaatar, the capital of Mongolia, holds the official title of the coldest national capital on Earth, with an annual mean temperature of around -1.3°C (29.7°F) and winter lows plunging below -40°C."
+          - "Baku, the capital of Azerbaijan, is the lowest-lying national capital on Earth, sitting 28 meters (92 feet) below global sea level on the coast of the Caspian Sea."
+          - "Reykjavik, Iceland, is the northernmost capital of any sovereign state (at 64°08' N), while Wellington, New Zealand, is the southernmost sovereign capital (at 41°17' S)."
+          - "Kuwait City and Riyadh, Saudi Arabia, frequently vie for the hottest sovereign capitals on the planet, where summer afternoon temperatures routinely surpass 50°C (122°F)."
+      - title: "Multiple Capitals & Purpose-Built Planned Cities"
+        points:
+          - "South Africa is the only sovereign country in the world with three official capital cities: Pretoria (administrative/executive), Cape Town (legislative), and Bloemfontein (judicial)."
+          - "Several countries have deliberately relocated their seats of government to newly designed planned cities, including Brazil (Rio de Janeiro to Brasília in 1960), Nigeria (Lagos to Abuja in 1991), and Myanmar (Yangon to Naypyidaw in 2005)."
+          - "Canberra was selected as Australia's capital in 1908 as a deliberate compromise to resolve fierce geopolitical rivalry between the nation's two largest cities, Sydney and Melbourne."
+          - "Switzerland has no legally designated capital city by constitution; Bern functions as the 'Federal City' (de facto capital) to preserve equilibrium among cantons."
+          - "Nauru, a tiny Pacific island nation, has no official capital city at all; government offices are concentrated in the Yaren District."
+      - title: "Extreme Borders & Geographic Oddities"
+        points:
+          - "The Canada-United States border is the longest international land border in the world, stretching 8,891 kilometers (5,525 miles) across plains, lakes, and forests without military fortifications."
+          - "The shortest international land border between two sovereign nations belongs to Botswana and Zambia, which meet at a confluence of the Zambezi River along a border measuring just 150 meters (490 feet)."
+          - "Mount Everest's peak at 8,848 meters sits directly on the international border separating Nepal and China, making it the highest international border on Earth."
+          - "Only three sovereign nations in the world are completely enclaved inside another single country: San Marino and Vatican City (both enclaved within Italy), and Lesotho (enclaved entirely within South Africa)."
+          - "France shares its longest international land border not with any European neighbor, but with Brazil, thanks to the 730-kilometer border of French Guiana in South America."
+      - title: "Continent Spans & Transcontinental Nations"
+        points:
+          - "Transcontinental countries span more than one geographical continent; prominent examples include Russia, Turkey, Kazakhstan, Azerbaijan, and Georgia (spanning Europe and Asia), as well as Egypt (spanning Africa and Asia across the Sinai Peninsula)."
+          - "Istanbul, Turkey, is the only historic metropolis in the world located across two continents, split down the middle by the Bosphorus Strait connecting the Black Sea to the Sea of Marmara."
+          - "Indonesia spans both Southeast Asia and Oceania, with western New Guinea (Papua) sitting geologically on the Australian continental plate."
+          - "Greenland is the world's largest island that is not a continent, covering 2.16 million square kilometers; geographically it is part of North America, but politically it is an autonomous territory of Denmark."
+          - "Antarctica is the only continent with no sovereign nations, no permanent indigenous human population, and no capital city, governed peacefully under the Antarctic Treaty of 1959."
+      - title: "Coastline Records & Maritime Borders"
+        points:
+          - "Canada possesses the longest coastline in the world by far, measuring an astonishing 243,042 kilometers (151,019 miles)—long enough to encircle the Earth at the equator six times."
+          - "Monaco has the shortest coastline of any nation with ocean access, possessing just 4.1 kilometers (2.5 miles) of Mediterranean shore."
+          - "The Exclusive Economic Zone (EEZ) grants coastal nations maritime resource rights extending up to 200 nautical miles (370 km) from their shores, giving island-rich countries like France and the US massive ocean footprints."
+          - "The Caspian Sea is the world's largest enclosed inland body of water by both area (371,000 km²) and volume, bordered by Russia, Kazakhstan, Turkmenistan, Iran, and Azerbaijan."
+          - "The Dead Sea, bordered by Israel, Jordan, and the West Bank, is the lowest exposed land surface on Earth, sitting roughly 430 meters (1,410 feet) below sea level."
+      - title: "Time Zone Extremes & Solar Anomalies"
+        points:
+          - "France holds the world record for the highest number of time zones belonging to a single sovereign nation (12 time zones, or 13 including Antarctic claims), due to its overseas territories scattered across all major oceans."
+          - "Russia spans 11 contiguous time zones across northern Eurasia, meaning when residents in Kaliningrad are having breakfast, citizens in Kamchatka are preparing for bed."
+          - "China spans five geographical time zones from the Pamir Mountains to the Pacific, but uses a single mandatory nationwide time zone (Beijing Time, UTC+8), creating bizarre solar noon anomalies in western Xinjiang."
+          - "India also observes a single uniform time zone (Indian Standard Time, UTC+5:30), featuring a half-hour offset from Coordinated Universal Time."
+          - "The International Date Line zigzags through the Pacific Ocean around Kiribati so that the island nation's eastern Line Islands can be the first populated places on Earth to welcome the new calendar year (UTC+14)."
+      - title: "Population Concentration vs. Vast Wilderness"
+        points:
+          - "Monaco is the most densely populated sovereign nation on Earth, packing over 38,000 people per square kilometer into an area smaller than New York's Central Park."
+          - "Mongolia is the least densely populated sovereign nation on Earth, with approximately 2.1 people per square kilometer across its vast steppe and Gobi desert."
+          - "Australia has 90% of its population living in urban centers along its temperate southeastern coastline, leaving the arid interior Outback virtually uninhabited."
+          - "Over 50% of the world's population lives within an imaginary circle centered over Southeast Asia, encompassing India, China, Indonesia, and surrounding nations."
+          - "Russia's Siberian federal district encompasses 77% of the nation's total land area, but houses only 27% of its total human population due to sub-arctic permafrost and harsh continental climates."
+    trivia:
+      - type: multiple_choice
+        question: "Which sovereign nation is the largest country on Earth by land area, spanning 11 time zones?"
+        options:
+          - "Russia"
+          - "Canada"
+          - "China"
+          - "United States"
+        correct: 0
+        explanation: "Russia covers over 17.1 million square kilometers across Europe and Asia, making it the largest sovereign nation on Earth by a vast margin."
+      - type: multiple_choice
+        question: "Which city holds the official record as the coldest national capital on Earth based on annual mean temperature?"
+        options:
+          - "Ulaanbaatar, Mongolia"
+          - "Reykjavik, Iceland"
+          - "Ottawa, Canada"
+          - "Astana, Kazakhstan"
+        correct: 0
+        explanation: "Ulaanbaatar experiences an annual mean temperature of approximately -1.3°C (29.7°F), with winter temperatures routinely plunging below -40°C."
+      - type: multiple_choice
+        question: "Which sovereign nation is the only country in the world with three official designated capital cities?"
+        options:
+          - "South Africa"
+          - "Switzerland"
+          - "Bolivia"
+          - "Malaysia"
+        correct: 0
+        explanation: "South Africa divides power across three capitals: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
+      - type: multiple_choice
+        question: "What is the longest unfortified international land border in the world, measuring 8,891 kilometers?"
+        options:
+          - "Canada–United States border"
+          - "Russia–China border"
+          - "Argentina–Chile border"
+          - "Mongolia–China border"
+        correct: 0
+        explanation: "The Canada–United States border spans 8,891 kilometers (5,525 miles) across North America, making it the longest international land boundary."
+      - type: multiple_choice
+        question: "Which country holds the world record for the most time zones under its sovereign jurisdiction (12 time zones) due to its overseas territories?"
+        options:
+          - "France"
+          - "Russia"
+          - "United States"
+          - "United Kingdom"
+        correct: 0
+        explanation: "Thanks to its scattered overseas departments and collectivities across the Pacific, Atlantic, and Indian Oceans, France spans 12 official time zones."
+      - type: multiple_choice
+        question: "What is the lowest-lying national capital city on Earth, situated 28 meters below global sea level?"
+        options:
+          - "Baku, Azerbaijan"
+          - "Amsterdam, Netherlands"
+          - "Copenhagen, Denmark"
+          - "Georgetown, Guyana"
+        correct: 0
+        explanation: "Baku is located on the shoreline of the Caspian Sea, which itself sits 28 meters below world ocean sea level."
+      - type: multiple_choice
+        question: "Which sovereign nation is the largest landlocked country in the world by land area?"
+        options:
+          - "Kazakhstan"
+          - "Mongolia"
+          - "Chad"
+          - "Bolivia"
+        correct: 0
+        explanation: "Covering 2.72 million square kilometers in Central Asia, Kazakhstan is the largest country on Earth without direct access to the world ocean."
+      - type: multiple_choice
+        question: "Which city is the highest administrative national capital on Earth, perched at approximately 3,640 meters altitude?"
+        options:
+          - "La Paz, Bolivia"
+          - "Quito, Ecuador"
+          - "Bogotá, Colombia"
+          - "Thimphu, Bhutan"
+        correct: 0
+        explanation: "La Paz sits in an Andean canyon on the Altiplano plateau at roughly 3,640 meters (11,940 feet) above sea level."
+      - type: multiple_choice
+        question: "Which nation possesses the longest total coastline of any country on Earth, measuring over 243,000 kilometers?"
+        options:
+          - "Canada"
+          - "Indonesia"
+          - "Norway"
+          - "Australia"
+        correct: 0
+        explanation: "Canada's vast Arctic archipelago and indented shorelines create a coastline of 243,042 km, long enough to encircle the globe six times."
+      - type: multiple_choice
+        question: "Which country has no legally declared constitutional capital city, with Bern acting as its de facto 'Federal City'?"
+        options:
+          - "Switzerland"
+          - "Monaco"
+          - "San Marino"
+          - "Iceland"
+        correct: 0
+        explanation: "Switzerland deliberately avoided designating an official capital in its federal constitution to maintain parity among its German, French, and Italian cantons."
+      - type: multiple_choice
+        question: "Which two countries in the world are classified as 'doubly landlocked', surrounded entirely by other landlocked nations?"
+        options:
+          - "Liechtenstein and Uzbekistan"
+          - "Bolivia and Paraguay"
+          - "Mongolia and Nepal"
+          - "Switzerland and Austria"
+        correct: 0
+        explanation: "Liechtenstein (surrounded by Switzerland and Austria) and Uzbekistan (surrounded by Central Asian stans) are the world's only doubly landlocked states."
+      - type: multiple_choice
+        question: "France shares its longest international land border with which South American country?"
+        options:
+          - "Brazil"
+          - "Suriname"
+          - "Colombia"
+          - "Venezuela"
+        correct: 0
+        explanation: "French Guiana is an overseas department of France that borders Brazil for 730 kilometers, surpassing any of France's European borders."
+      - type: multiple_choice
+        question: "Which sovereign nation is the least densely populated on Earth, with only around 2 people per square kilometer?"
+        options:
+          - "Mongolia"
+          - "Namibia"
+          - "Australia"
+          - "Iceland"
+        correct: 0
+        explanation: "Mongolia's 3.4 million citizens are spread across 1.56 million square kilometers of steppe and desert, yielding the lowest sovereign population density."
+      - type: multiple_choice
+        question: "What is the southernmost national capital city of a sovereign state on Earth?"
+        options:
+          - "Wellington, New Zealand"
+          - "Canberra, Australia"
+          - "Buenos Aires, Argentina"
+          - "Cape Town, South Africa"
+        correct: 0
+        explanation: "Wellington is situated at 41°17' South latitude on New Zealand's North Island, making it the southernmost sovereign capital."
+      - type: multiple_choice
+        question: "Which historic metropolis is the only city in the world built across two separate continents, divided by the Bosphorus Strait?"
+        options:
+          - "Istanbul, Turkey"
+          - "Cairo, Egypt"
+          - "Baku, Azerbaijan"
+          - "Tbilisi, Georgia"
+        correct: 0
+        explanation: "Istanbul straddles the Bosphorus Strait, with its historic heart located in Europe and its eastern districts extending into Asia."
+      - type: multiple_choice
+        question: "What unique time zone policy does China enforce across its entire vast territory spanning five geographic time zones?"
+        options:
+          - "A single uniform time zone (Beijing Time, UTC+8) for the whole nation"
+          - "Five separate regional time zones matching solar coordinates"
+          - "Daylight saving adjustments that shift every month"
+          - "Two time zones split strictly between north and south"
+        correct: 0
+        explanation: "In 1949, China unified its clocks to a single national time zone (Beijing Time, UTC+8), causing the sun to rise as late as 10:00 AM in western Xinjiang."
+
+  - id: giant_nations_top_tier
+    title: "The Mega-Nations: Largest Countries by Land Area (Ranks 1–8)"
+    description: >
+      Detailed geographical and cultural profiles of the world's eight largest sovereign nations,
+      spanning from the Russian taiga and Canadian tundra to the Australian Outback and Argentine pampas.
+    cards:
+      - title: "Rank 1: Russia (17,098,242 km² | Capital: Moscow)"
+        points:
+          - "Russia is the undisputed giant of world geography, covering over 17 million square kilometers across both Eastern Europe and Northern Asia, bordering 14 sovereign nations by land."
+          - "Its historic capital, Moscow, is Europe's most populous metropolitan city, centered around the medieval Red Square, Saint Basil's Cathedral, and the fortified Kremlin complex."
+          - "Russia contains Lake Baikal in Siberia, the world's deepest (1,642 meters) and oldest freshwater lake, containing over 20% of the planet's unfrozen surface freshwater."
+          - "The Trans-Siberian Railway connects Moscow to the Pacific port of Vladivostok across 9,289 kilometers (5,772 miles), spanning eight time zones as the longest railway line on Earth."
+          - "Its Ural Mountains form the traditional physical boundary dividing the European and Asian continents."
+      - title: "Rank 2: Canada (9,984,670 km² | Capital: Ottawa)"
+        points:
+          - "Canada is the second largest country in the world and the largest in the Western Hemisphere, encompassing six time zones and holding more freshwater lakes than all other countries combined."
+          - "Its federal capital, Ottawa, was chosen by Queen Victoria in 1857 as a strategic compromise midway between the English-speaking Ontario and French-speaking Quebec regions."
+          - "Despite its immense territory, roughly 90% of Canada's 40 million residents live within 160 kilometers (100 miles) of the southern border with the United States."
+          - "Canada contains the magnetic North Pole within its northern Arctic territories, along with the magnificent Canadian Rockies and vast boreal forests."
+          - "Its iconic Maple Leaf flag was officially adopted in 1965, symbolizing the nation's immense natural wilderness and indigenous heritage."
+      - title: "Rank 3: China (9,596,960 km² | Capital: Beijing)"
+        points:
+          - "China is the largest country entirely within Asia, sharing international land borders with 14 neighboring countries—tied with Russia for the world record."
+          - "Its capital, Beijing, is an ancient cultural citadel housing the Forbidden City—the world's largest imperial palace complex with 980 surviving buildings and nearly 9,000 rooms."
+          - "China encompasses dramatic geographical contrasts, from the frozen Tibetan Plateau (the 'Roof of the World') to the arid Gobi Desert and the fertile Yangtze River valley."
+          - "The Great Wall of China, stretching over 21,000 kilometers in total historical segments, was constructed over two millennia to guard the northern imperial frontier."
+          - "With over 1.4 billion citizens, China is connected by the world's largest high-speed rail network, operating over two-thirds of the planet's high-speed track."
+      - title: "Rank 4: United States (9,525,067 km² | Capital: Washington, D.C.)"
+        points:
+          - "The United States spans across 50 states from the Atlantic to the Pacific, plus the Arctic wilderness of Alaska (the nation's largest state by area) and volcanic Hawaii."
+          - "Its federal capital, Washington, D.C., was established along the Potomac River in 1790 as an independent district, laid out with grand neoclassical monuments by Pierre L'Enfant."
+          - "The U.S. contains the world's oldest national park, Yellowstone (established in 1872), sitting atop a massive volcanic caldera with over 500 active geysers."
+          - "Its landscape spans the Great Plains, the Mississippi River basin, the Grand Canyon, the Sierra Nevada, and Death Valley (the hottest recorded spot on Earth at 56.7°C)."
+          - "The U.S. dollar is the primary global reserve currency, and the nation generates the world's largest nominal GDP."
+      - title: "Rank 5: Brazil (8,515,767 km² | Capital: Brasília)"
+        points:
+          - "Brazil is the largest sovereign nation in South America and the Southern Hemisphere, occupying nearly half of the entire South American continent."
+          - "Its federal capital, Brasília, was built entirely from scratch in just 41 months in the inland savanna, famously laid out by urban planner Lúcio Costa in the shape of a giant airplane."
+          - "Brazil is home to over 60% of the Amazon Rainforest—the greatest reservoir of biological diversity on Earth—and the Amazon River, which discharges more water than the next seven largest rivers combined."
+          - "Brazil is the only Portuguese-speaking nation in the Americas, shaped by vibrant Afro-Brazilian rhythms, samba, and the iconic Carnival of Rio de Janeiro."
+          - "It has won five FIFA World Cup championships, producing legendary footballers like Pelé and defining international football culture."
+      - title: "Rank 6: Australia (7,692,024 km² | Capital: Canberra)"
+        points:
+          - "Australia is the only sovereign country in the world that governs an entire continent, completely surrounded by the Indian and Pacific Oceans."
+          - "Its purpose-built bush capital, Canberra, was designed by American architects Walter Burley Griffin and Marion Mahony Griffin around an artificial lake in 1913."
+          - "The Great Barrier Reef, stretching over 2,300 kilometers off the Queensland coast, is the world's largest coral reef system and can be seen from Earth orbit."
+          - "Over 70% of Australia's landmass is arid or semi-arid Outback, home to unique marsupial wildlife including kangaroos, koalas, wombats, and platypuses."
+          - "Uluru (Ayers Rock), a giant 348-meter-tall sandstone monolith in the central Red Centre desert, is a sacred spiritual site for Anangu Aboriginal people."
+      - title: "Rank 7: India (3,287,263 km² | Capital: New Delhi)"
+        points:
+          - "India is the seventh largest country by area and the most populous nation on Earth, home to over 1.4 billion people speaking hundreds of languages and dialects."
+          - "Its capital, New Delhi, designed by British architect Edwin Lutyens, is renowned for wide tree-lined boulevards, the Rashtrapati Bhavan presidential palace, and the India Gate."
+          - "India's northern frontier is crowned by the towering Himalayas, while its fertile Indo-Gangetic Plain is nourished by the sacred Ganges and Yamuna rivers."
+          - "The Taj Mahal in Agra, a sublime white marble mausoleum built by Mughal Emperor Shah Jahan for his wife Mumtaz Mahal, is celebrated worldwide as a pinnacle of architecture."
+          - "India is the birthplace of four major world religions: Hinduism, Buddhism, Jainism, and Sikhism, and gave the world the mathematical concept of zero."
+      - title: "Rank 8: Argentina (2,780,400 km² | Capital: Buenos Aires)"
+        points:
+          - "Argentina is the second largest nation in South America, stretching from sub-tropical waterfalls in the north to glaciers and sub-Antarctic islands in the south."
+          - "Its cosmopolitan capital, Buenos Aires, is nicknamed the 'Paris of South America' for its grand European architecture, cafe culture, and birth of the tango dance."
+          - "Mount Aconcagua in the Argentine Andes rises to 6,961 meters (22,838 feet), standing as the highest mountain in both the Western and Southern Hemispheres."
+          - "The vast, fertile grasslands of the Pampas form the historic heart of Argentine agriculture, cattle ranching, and legendary gaucho horseman culture."
+          - "In the far south, Ushuaia on the island of Tierra del Fuego is celebrated as the southernmost city on Earth ('Fin del Mundo')."
+    trivia:
+      - type: multiple_choice
+        question: "What is the capital city of Canada, chosen by Queen Victoria in 1857 as a strategic compromise?"
+        options:
+          - "Ottawa"
+          - "Toronto"
+          - "Montreal"
+          - "Vancouver"
+        correct: 0
+        explanation: "Ottawa was selected as Canada's capital because of its location on the border between Ontario and Quebec and its defensive distance from the U.S. border."
+      - type: multiple_choice
+        question: "Which country contains Lake Baikal, the deepest and oldest freshwater lake on Earth holding 20% of unfrozen freshwater?"
+        options:
+          - "Russia"
+          - "Canada"
+          - "China"
+          - "Kazakhstan"
+        correct: 0
+        explanation: "Lake Baikal in Siberia, Russia, plunges to a depth of 1,642 meters (5,387 feet) and holds roughly 23,600 cubic kilometers of fresh water."
+      - type: multiple_choice
+        question: "What distinctive geometric shape was used by urban planner Lúcio Costa to design Brazil's planned capital city, Brasília?"
+        options:
+          - "An airplane"
+          - "A perfect circle"
+          - "A five-pointed star"
+          - "A chess grid"
+        correct: 0
+        explanation: "Brasília was designed in 1956 in the Plano Piloto layout, resembling the silhouette of an airplane with fuselage and wings."
+      - type: multiple_choice
+        question: "What is the capital city of Australia, designed by Walter Burley Griffin and Marion Mahony Griffin?"
+        options:
+          - "Canberra"
+          - "Sydney"
+          - "Melbourne"
+          - "Brisbane"
+        correct: 0
+        explanation: "Canberra was founded in 1913 as an inland planned capital to resolve the intense rivalry between Sydney and Melbourne."
+      - type: multiple_choice
+        question: "Which mountain in the Argentine Andes is the highest peak in both the Western and Southern Hemispheres at 6,961 meters?"
+        options:
+          - "Mount Aconcagua"
+          - "Mount Denali"
+          - "Mount Kilimanjaro"
+          - "Mount Elbrus"
+        correct: 0
+        explanation: "Mount Aconcagua in Mendoza Province, Argentina, rises to 6,961 meters, making it the tallest mountain outside of Asia."
+      - type: multiple_choice
+        question: "What is the historic imperial palace complex in the heart of Beijing, China, containing 980 surviving buildings?"
+        options:
+          - "The Forbidden City"
+          - "The Summer Palace"
+          - "The Potala Palace"
+          - "The Topkapi Palace"
+        correct: 0
+        explanation: "The Forbidden City served as the ceremonial and political seat of Chinese emperors from the Ming dynasty to the end of the Qing dynasty."
+      - type: multiple_choice
+        question: "Which city is globally celebrated as the southernmost city on planet Earth, located on Argentina's Tierra del Fuego?"
+        options:
+          - "Ushuaia"
+          - "Punta Arenas"
+          - "Puerto Williams"
+          - "Comodoro Rivadavia"
+        correct: 0
+        explanation: "Ushuaia, Argentina, is famously known as the 'City at the End of the World' (Fin del Mundo) on the shores of the Beagle Channel."
+      - type: multiple_choice
+        question: "Which U.S. national park, established in 1872, is the world's oldest national park and sits atop a volcanic supervolcano?"
+        options:
+          - "Yellowstone National Park"
+          - "Yosemite National Park"
+          - "Grand Canyon National Park"
+          - "Glacier National Park"
+        correct: 0
+        explanation: "Yellowstone was signed into law by President Ulysses S. Grant in 1872, creating the world's first national park."
+      - type: multiple_choice
+        question: "What is the capital city of India, renowned for the Rashtrapati Bhavan and India Gate designed by Edwin Lutyens?"
+        options:
+          - "New Delhi"
+          - "Mumbai"
+          - "Kolkata"
+          - "Bengaluru"
+        correct: 0
+        explanation: "New Delhi was inaugurated in 1931 as the new capital of India, replacing Calcutta (Kolkata)."
+      - type: multiple_choice
+        question: "The vast tropical grasslands of South America that form the agricultural heart of Argentina are known as what?"
+        options:
+          - "The Pampas"
+          - "The Llanos"
+          - "The Cerrado"
+          - "The Steppes"
+        correct: 0
+        explanation: "The fertile Pampas cover over 750,000 square kilometers across central Argentina, famous for cattle ranches and gaucho culture."
+      - type: multiple_choice
+        question: "What is the longest continuous railway line in the world, spanning 9,289 kilometers from Moscow to Vladivostok?"
+        options:
+          - "The Trans-Siberian Railway"
+          - "The Orient Express"
+          - "The Indian Pacific Railway"
+          - "The Canadian Pacific Railway"
+        correct: 0
+        explanation: "The Trans-Siberian Railway connects Moscow across Siberia to the Pacific Ocean, crossing eight time zones."
+      - type: multiple_choice
+        question: "Which coral reef system off the northeastern coast of Australia is the largest living structure on Earth?"
+        options:
+          - "The Great Barrier Reef"
+          - "The Belize Barrier Reef"
+          - "The Red Sea Coral Reef"
+          - "The Mesoamerican Reef"
+        correct: 0
+        explanation: "The Great Barrier Reef comprises over 2,900 individual reefs and stretches across 2,300 kilometers off the Queensland coast."
+      - type: multiple_choice
+        question: "What river basin in Brazil contains the largest drainage system and discharge volume of any river in the world?"
+        options:
+          - "The Amazon River Basin"
+          - "The Congo River Basin"
+          - "The Paraná River Basin"
+          - "The Orinoco River Basin"
+        correct: 0
+        explanation: "The Amazon River accounts for approximately 20% of the world's total river flow into oceans, fed by the Amazon rainforest."
+      - type: multiple_choice
+        question: "Roughly what percentage of Canada's total human population lives within 160 kilometers (100 miles) of the U.S. border?"
+        options:
+          - "90%"
+          - "50%"
+          - "30%"
+          - "70%"
+        correct: 0
+        explanation: "Due to cold sub-Arctic climates to the north, about 90% of Canadians live in a narrow strip along the southern frontier."
+      - type: multiple_choice
+        question: "Which two countries share the world record for the highest number of sovereign international land borders (14 neighbors each)?"
+        options:
+          - "Russia and China"
+          - "Brazil and Germany"
+          - "India and France"
+          - "DR Congo and Sudan"
+        correct: 0
+        explanation: "Both Russia and China border 14 recognized sovereign states along their massive land frontiers."
+      - type: multiple_choice
+        question: "What is the federal capital of the United States, established as an independent district in 1790?"
+        options:
+          - "Washington, D.C."
+          - "New York City"
+          - "Philadelphia"
+          - "Boston"
+        correct: 0
+        explanation: "Washington, District of Columbia, was created by the U.S. Constitution to ensure the national capital remained independent of any state."
+
+  - id: major_continental_powers
+    title: "Continental Powerhouses: Ranks 9–16 by Land Area"
+    description: >
+      Explore the mid-tier territorial giants of Central Asia, Africa, the Middle East, and North America,
+      from Kazakhstan and Algeria to Indonesia and the Arabian desert.
+    cards:
+      - title: "Rank 9: Kazakhstan (2,724,900 km² | Capital: Astana)"
+        points:
+          - "Kazakhstan is the ninth largest country in the world and the single largest landlocked nation on Earth, stretching from the Caspian Sea to the Altai Mountains."
+          - "Its futuristic capital, Astana (briefly named Nur-Sultan), is renowned for striking avant-garde architecture designed by Norman Foster, including the glass Pyramid of Peace and Khan Shatyr entertainment tent."
+          - "Kazakhstan is home to the Baikonur Cosmodrome, the world's first and largest space launch facility, from which Sputnik 1 and Yuri Gagarin blasted into orbit."
+          - "The vast Eurasian Steppe dominates the northern two-thirds of the country, historically inhabited by nomadic horse-breeding Turkic peoples."
+          - "It is the world's leading producer and exporter of uranium, holding roughly 40% of the planet's uranium extraction."
+      - title: "Rank 10: Algeria (2,381,741 km² | Capital: Algiers)"
+        points:
+          - "Algeria is the largest sovereign country in Africa, the Arab world, and the Mediterranean basin, having taken the top spot in Africa following the partition of Sudan in 2011."
+          - "Its historic Mediterranean capital, Algiers ('Algiers the White'), is celebrated for whitewashed colonial buildings, seaside boulevards, and the ancient hillside Kasbah."
+          - "Over 80% of Algeria's landmass is covered by the Sahara Desert, featuring dramatic dunes, volcanic plateaus in the Hoggar Mountains, and ancient rock art in Tassili n'Ajjer."
+          - "Algeria possesses major natural gas and petroleum reserves, serving as a primary pipeline energy supplier to southern Europe."
+          - "The nation fought a monumental war of independence against French colonial rule from 1954 to 1962, inspiring anti-colonial movements across Africa."
+      - title: "Rank 11: DR Congo (2,344,858 km² | Capital: Kinshasa)"
+        points:
+          - "The Democratic Republic of the Congo (DRC) is the second largest country in Africa and is centered on the massive Congo River basin, the deepest river system on Earth (over 220 meters deep)."
+          - "Its sprawling megacity capital, Kinshasa, is located directly across the Congo River from Brazzaville (capital of the Republic of the Congo), forming the closest pair of capital cities on Earth after Rome and Vatican City."
+          - "The DRC encompasses the Congo Basin rainforest, the second largest tropical rainforest on Earth after the Amazon, often called the 'second green lung' of the planet."
+          - "The country holds immense mineral wealth, containing over 70% of the world's known reserves of cobalt, essential for electric vehicle batteries and smartphones."
+          - "Virunga National Park in eastern DRC is Africa's oldest national park and a critical refuge for endangered mountain gorillas."
+      - title: "Rank 12: Saudi Arabia (2,149,690 km² | Capital: Riyadh)"
+        points:
+          - "Saudi Arabia occupies roughly 80% of the Arabian Peninsula, bounded by the Red Sea to the west and the Persian Gulf to the east."
+          - "Its capital, Riyadh, has transformed from a walled desert outpost into an ultra-modern metropolis of over 7 million people, dominated by the 302-meter Kingdom Centre skyscraper."
+          - "It is the birthplace of Islam and home to the two holiest cities in the Islamic faith: Mecca (site of the Kaaba and annual Hajj pilgrimage) and Medina."
+          - "The Rub' al Khali (the 'Empty Quarter') in southern Saudi Arabia is the largest continuous sand desert in the world, covering 650,000 square kilometers."
+          - "Saudi Arabia is the world's leading crude oil exporter, holding the second largest proven petroleum reserves on Earth (centered around the massive Ghawar oilfield)."
+      - title: "Rank 13: Mexico (1,964,375 km² | Capital: Mexico City)"
+        points:
+          - "Mexico is the fifth largest country in the Americas and the most populous Spanish-speaking nation on Earth, with over 130 million residents."
+          - "Its vibrant capital, Mexico City, was built atop the ruins of Tenochtitlan, the ancient island capital of the Aztec Empire, situated in a high mountain valley at 2,240 meters altitude."
+          - "Mexico gave the world cacao (chocolate), corn (maize), avocados, vanilla, and chili peppers, domesticated thousands of years ago by Mesoamerican civilizations."
+          - "It is home to breathtaking pre-Columbian archaeological wonders, including Teotihuacan's Pyramid of the Sun and the Mayan step-pyramid El Castillo at Chichen Itza."
+          - "The Sierra Madre mountain ranges flank the country on east and west, surrounding the central Mexican Plateau and volcanic peaks like Popocatepetl."
+      - title: "Rank 14: Indonesia (1,904,569 km² | Capital: Jakarta / Nusantara)"
+        points:
+          - "Indonesia is the largest island country on Earth, comprising over 17,500 islands spanning 5,100 kilometers along the equator between the Indian and Pacific Oceans."
+          - "Its historic capital, Jakarta, on the island of Java, is sinking rapidly due to groundwater extraction, prompting the construction of a brand-new planned capital, Nusantara, in the jungles of East Kalimantan on Borneo."
+          - "Indonesia is the fourth most populous nation on Earth (275 million people) and the world's most populous Muslim-majority country."
+          - "Straddling the Pacific 'Ring of Fire', Indonesia contains over 130 active volcanoes, including Krakatoa and Mount Tambora (whose 1815 eruption caused the 'Year Without a Summer')."
+          - "Komodo National Park is the only place on Earth where wild Komodo dragons—the world's largest living lizards, growing up to 3 meters in length—survive naturally."
+      - title: "Rank 15: Sudan (1,861,484 km² | Capital: Khartoum)"
+        points:
+          - "Sudan is situated in northeastern Africa at the historic crossroads between sub-Saharan Africa and the Arab world."
+          - "Its capital, Khartoum, is famously located at the confluence of the White Nile (flowing from Lake Victoria) and the Blue Nile (flowing from the Ethiopian highlands), joining to form the main Nile River."
+          - "Sudan actually contains more ancient pyramids than Egypt: over 250 Nubian pyramids were constructed by the Kingdom of Kush at royal necropolises like Meroë."
+          - "Before South Sudan declared independence in 2011, Sudan was the largest country in Africa by land area."
+          - "The country encompasses the Red Sea Hills, the fertile Nile river valley, and vast arid savanna transitioning into the Nubian Desert."
+      - title: "Rank 16: Libya (1,759,540 km² | Capital: Tripoli)"
+        points:
+          - "Libya occupies a vast territory in North Africa with a long 1,770-kilometer coastline on the Mediterranean Sea, but over 90% of its land is barren Sahara Desert."
+          - "Its historic coastal capital, Tripoli ('The Bride of the Mediterranean'), was founded by the Phoenicians in the 7th century BCE as the trade post of Oea."
+          - "Libya possesses the largest proven crude oil reserves in Africa, producing high-grade 'sweet light' crude with low sulfur content."
+          - "The ancient Greco-Roman ruins of Leptis Magna and Cyrene along the Libyan coast are among the most impeccably preserved classical monuments in the Mediterranean basin."
+          - "In 1922, the Libyan desert town of El Azizia recorded a world-record air temperature of 58°C (136.4°F), though the measurement was later decertified by meteorological authorities."
+    trivia:
+      - type: multiple_choice
+        question: "What is the capital city of Kazakhstan, renowned for its futuristic Norman Foster architecture?"
+        options:
+          - "Astana"
+          - "Almaty"
+          - "Tashkent"
+          - "Bishkek"
+        correct: 0
+        explanation: "Astana (formerly known as Akmola and Nur-Sultan) was designated Kazakhstan's capital in 1997, replacing Almaty."
+      - type: multiple_choice
+        question: "Following the independence of South Sudan in 2011, which country became the largest nation in Africa by land area?"
+        options:
+          - "Algeria"
+          - "DR Congo"
+          - "Sudan"
+          - "Libya"
+        correct: 0
+        explanation: "Algeria covers 2.38 million square kilometers, making it the largest sovereign nation in both Africa and the Arab world."
+      - type: multiple_choice
+        question: "Which two African capital cities face each other directly across the Congo River, forming the closest capitals on Earth?"
+        options:
+          - "Kinshasa and Brazzaville"
+          - "Khartoum and Omdurman"
+          - "Cairo and Giza"
+          - "Pretoria and Johannesburg"
+        correct: 0
+        explanation: "Kinshasa (DRC) and Brazzaville (Republic of the Congo) sit on opposite banks of the Congo River, just a few kilometers apart."
+      - type: multiple_choice
+        question: "What is the capital city of Saudi Arabia, home to over 7 million people and the iconic Kingdom Centre tower?"
+        options:
+          - "Riyadh"
+          - "Jeddah"
+          - "Mecca"
+          - "Medina"
+        correct: 0
+        explanation: "Riyadh is the political and administrative capital of Saudi Arabia, located on the central desert plateau of the Nejd."
+      - type: multiple_choice
+        question: "Which island country is currently building a new green planned capital city named Nusantara on the island of Borneo?"
+        options:
+          - "Indonesia"
+          - "Philippines"
+          - "Malaysia"
+          - "Papua New Guinea"
+        correct: 0
+        explanation: "Indonesia is constructing Nusantara in East Kalimantan to relieve overcrowding, traffic, and land subsidence in sinking Jakarta."
+      - type: multiple_choice
+        question: "What historic confluence occurs at Khartoum, the capital city of Sudan?"
+        options:
+          - "The meeting of the White Nile and the Blue Nile"
+          - "The meeting of the Tigris and Euphrates"
+          - "The confluence of the Niger and Benue rivers"
+          - "The meeting of the Zambezi and Limpopo"
+        correct: 0
+        explanation: "At Khartoum, the White Nile flowing from central Africa meets the Blue Nile flowing from Lake Tana in Ethiopia to form the main Nile River."
+      - type: multiple_choice
+        question: "Which ancient Mesoamerican civilization's island capital of Tenochtitlan lies beneath modern Mexico City?"
+        options:
+          - "The Aztec Empire"
+          - "The Maya Civilization"
+          - "The Inca Empire"
+          - "The Toltec Empire"
+        correct: 0
+        explanation: "Hernán Cortés captured the Aztec capital of Tenochtitlan in 1521, and Spanish authorities built Mexico City directly on top of its drained lake bed."
+      - type: multiple_choice
+        question: "Which country contains more ancient stone pyramids than Egypt, with over 250 royal Nubian pyramids built at Meroë?"
+        options:
+          - "Sudan"
+          - "Algeria"
+          - "Libya"
+          - "Ethiopia"
+        correct: 0
+        explanation: "The Kingdom of Kush in ancient Nubia (modern Sudan) built over 250 steep pyramids as royal tombs, outnumbering those in Egypt."
+      - type: multiple_choice
+        question: "What is the name of the vast continuous sand desert in southern Saudi Arabia known as the 'Empty Quarter'?"
+        options:
+          - "Rub' al Khali"
+          - "An Nafud"
+          - "Kalahari"
+          - "Atacama"
+        correct: 0
+        explanation: "The Rub' al Khali covers 650,000 square kilometers across Saudi Arabia, Oman, UAE, and Yemen as the world's largest contiguous sand desert."
+      - type: multiple_choice
+        question: "Which country contains the world's first and largest operational space launch facility, the Baikonur Cosmodrome?"
+        options:
+          - "Kazakhstan"
+          - "Russia"
+          - "Uzbekistan"
+          - "China"
+        correct: 0
+        explanation: "The Baikonur Cosmodrome is located in Kazakhstan's desert steppe and is leased to the Russian space agency Roscosmos."
+      - type: multiple_choice
+        question: "Which mineral resource, crucial for electric vehicle batteries, does the Democratic Republic of the Congo supply over 70% of globally?"
+        options:
+          - "Cobalt"
+          - "Lithium"
+          - "Platinum"
+          - "Uranium"
+        correct: 0
+        explanation: "The DRC dominates global cobalt mining, extracting over 70% of the world's supply from its rich Katanga copperbelt."
+      - type: multiple_choice
+        question: "What is the capital city of Mexico, located in a high valley at 2,240 meters above sea level?"
+        options:
+          - "Mexico City"
+          - "Guadalajara"
+          - "Monterrey"
+          - "Cancun"
+        correct: 0
+        explanation: "Mexico City is the country's capital, serving as the political, economic, and cultural hub of Mexico."
+      - type: multiple_choice
+        question: "Which Indonesian national park is the only wild sanctuary for the world's largest living lizard species?"
+        options:
+          - "Komodo National Park"
+          - "Ujung Kulon National Park"
+          - "Gunung Leuser National Park"
+          - "Tanjung Puting National Park"
+        correct: 0
+        explanation: "Komodo dragons survive in the wild exclusively across the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang."
+      - type: multiple_choice
+        question: "What is the historic coastal capital of Algeria, nicknamed 'Algiers the White' (Alger la Blanche)?"
+        options:
+          - "Algiers"
+          - "Oran"
+          - "Constantine"
+          - "Annaba"
+        correct: 0
+        explanation: "Algiers is the capital and largest city of Algeria, known for its whitewashed hillside buildings overlooking the Bay of Algiers."
+      - type: multiple_choice
+        question: "Which North African nation possesses the largest proven crude oil reserves on the African continent?"
+        options:
+          - "Libya"
+          - "Nigeria"
+          - "Angola"
+          - "Algeria"
+        correct: 0
+        explanation: "Libya holds approximately 48 billion barrels of proven crude oil reserves, the largest endowment in Africa."
+      - type: multiple_choice
+        question: "What is the capital city of Libya, founded by the Phoenicians in the 7th century BCE?"
+        options:
+          - "Tripoli"
+          - "Benghazi"
+          - "Misrata"
+          - "Tobruk"
+        correct: 0
+        explanation: "Tripoli is the capital and chief seaport of Libya, situated along the northwest Mediterranean coast."
+
+  - id: regional_leaders_middle_tier
+    title: "Regional Giants & Cultural Hubs: Ranks 17–24 by Land Area"
+    description: >
+      Journey through prominent mid-sized regional powerhouses: Persian plateaus, Mongolian steppes,
+      Andean heights, and trans-Saharan trading nations.
+    cards:
+      - title: "Rank 17: Iran (1,648,195 km² | Capital: Tehran)"
+        points:
+          - "Iran (historically Persia) is a mountainous crossroads bridging the Middle East, Central Asia, and the Caucasus, bordered by the Caspian Sea and the Persian Gulf."
+          - "Its bustling capital, Tehran, sits at the foot of the snow-capped Alborz Mountains, home to the sprawling Grand Bazaar, the Golestan Palace, and over 9 million residents."
+          - "Mount Damavand, an active stratovolcano rising to 5,610 meters (18,406 feet), is the highest peak in Iran and the tallest volcano in all of Asia."
+          - "Persian civilization is one of the world's oldest, boasting ancient archaeological wonders like Persepolis (the ceremonial capital of the Achaemenid Empire under Darius the Great)."
+          - "Iran is the world's leading producer of saffron ('red gold'), cultivating over 90% of the world's commercial harvest."
+      - title: "Rank 18: Mongolia (1,564,116 km² | Capital: Ulaanbaatar)"
+        points:
+          - "Mongolia is a landlocked East Asian nation situated between Russia and China, famous as the home of Genghis Khan and the 13th-century Mongol Empire."
+          - "Its capital, Ulaanbaatar ('Red Hero'), houses nearly half the country's population, surrounded by four sacred mountains and known for intense sub-zero continental winters."
+          - "The Gobi Desert covers southern Mongolia and is celebrated for rich dinosaur fossil discoveries, including the first verified dinosaur eggs found by Roy Chapman Andrews in 1923."
+          - "A significant portion of Mongolians still practice semi-nomadic pastoralism, living in portable felt tents known as Gers (Yurts) and herding horses, sheep, and camels."
+          - "Mongolia's traditional Naadam festival celebrates the 'Three Manly Games': archery, long-distance horse racing, and traditional wrestling."
+      - title: "Rank 19: Peru (1,285,216 km² | Capital: Lima)"
+        points:
+          - "Peru is a biologically mega-diverse South American nation encompassing three distinct geographic zones: the arid Pacific coast, the Andes mountains, and the Amazon basin."
+          - "Its Pacific capital, Lima, founded in 1535 by Spanish conquistador Francisco Pizarro as the 'City of the Kings', is celebrated today as the gastronomic capital of the Americas."
+          - "Machu Picchu, a 15th-century Inca citadel perched 2,430 meters high on an Andean mountain ridge above the Urubamba River, was named one of the New Seven Wonders of the World."
+          - "Lake Titicaca, shared between Peru and Bolivia at 3,812 meters altitude, is the world's highest navigable lake for commercial vessels."
+          - "Peru is the historic birthplace of the potato, where indigenous Andean farmers domesticated over 4,000 distinct varieties."
+      - title: "Rank 20: Chad (1,284,000 km² | Capital: N'Djamena)"
+        points:
+          - "Chad is a large, landlocked nation in north-central Africa, often termed the 'Dead Heart of Africa' due to its distance from any ocean coastline."
+          - "Its capital, N'Djamena, sits on the Chari River near the border with Cameroon, serving as the commercial and administrative center of the country."
+          - "Lake Chad, historically one of the largest freshwater bodies in Africa, has dramatically shrunk by over 90% since the 1960s due to climate change and irrigation demands."
+          - "Northern Chad is dominated by the volcanic Tibesti Mountains in the Sahara Desert, including Emi Koussi (3,415 meters), the highest peak in the Sahara."
+          - "The country is home to Zakouma National Park, a renowned conservation success story in central Africa where elephant and giraffe populations have recovered."
+      - title: "Rank 21: Niger (1,267,000 km² | Capital: Niamey)"
+        points:
+          - "Niger is a landlocked West African nation named after the Niger River, with over 80% of its land covered by the Sahara Desert."
+          - "Its capital, Niamey, is located in the fertile southwestern corner of the country along the banks of the Niger River, home to the Grand Mosque and National Museum."
+          - "The historic desert city of Agadez was a premier hub of the trans-Saharan caravan trade and features the famous 27-meter-tall Agadez mudbrick minaret."
+          - "Niger is home to nomadic Tuareg pastoralists ('the blue men of the desert'), renowned for indigo robes, silver jewelry, and desert navigation."
+          - "The country possesses substantial uranium deposits in the Aïr Mountains, historically supplying nuclear power stations across France and Europe."
+      - title: "Rank 22: Angola (1,246,700 km² | Capital: Luanda)"
+        points:
+          - "Angola is a major South Atlantic nation in southwestern Africa, blessed with a long coastline, tropical rainforests, and arid southern plains."
+          - "Its bustling capital and seaport, Luanda, founded by the Portuguese in 1575, is one of the oldest European-founded settlements in sub-Saharan Africa."
+          - "The Cabinda exclave, separated from mainland Angola by a narrow strip of DR Congo territory, is a major offshore petroleum production hub."
+          - "Kalandula Falls on the Lucala River is one of the largest and most spectacular waterfalls in Africa, dropping 105 meters across a 400-meter crescent."
+          - "Following a 27-year civil war ending in 2002, Angola has emerged as one of Africa's leading crude oil and diamond producers."
+      - title: "Rank 23: Mali (1,240,192 km² | Capital: Bamako)"
+        points:
+          - "Mali is a landlocked West African nation with a rich historical heritage, encompassing the Sahara Desert in the north and the fertile Niger River basin in the south."
+          - "Its fast-growing capital, Bamako, is situated on the navigable upper Niger River, renowned for vibrant West African music traditions and bustling artisan markets."
+          - "The historic desert city of Timbuktu was an intellectual and commercial capital during the medieval Mali Empire, home to the University of Sankore and priceless manuscripts."
+          - "The Great Mosque of Djenné, originally built in the 13th century and reconstructed in 1907, is the largest mudbrick architectural structure on Earth."
+          - "Mansa Musa, ruler of the Mali Empire in the 14th century, is widely considered the wealthiest individual in human history due to Mali's vast gold trade."
+      - title: "Rank 24: South Africa (1,221,037 km² | 3 Capitals: Pretoria, Cape Town, Bloemfontein)"
+        points:
+          - "South Africa occupies the southern tip of the African continent, flanked by the cold Atlantic Ocean on the west and the warm Indian Ocean on the east."
+          - "It divides national power across three official capitals: Pretoria (executive government), Cape Town (parliament), and Bloemfontein (supreme court)."
+          - "Kruger National Park is one of the world's premier game reserves, home to Africa's 'Big Five' (lion, leopard, elephant, rhinoceros, and Cape buffalo)."
+          - "Table Mountain, a flat-topped sandstone landmark overlooking Cape Town, is one of the oldest mountains on Earth and home to the ultra-diverse Cape Floral Kingdom."
+          - "Known as the 'Rainbow Nation', South Africa recognizes 12 official languages, including Zulu, Xhosa, Afrikaans, English, and South African Sign Language."
+    trivia:
+      - type: multiple_choice
+        question: "What is the capital city of Iran, situated at the base of the Alborz mountain range?"
+        options:
+          - "Tehran"
+          - "Isfahan"
+          - "Shiraz"
+          - "Tabriz"
+        correct: 0
+        explanation: "Tehran became the capital of Persia under the Qajar dynasty in 1786 and is the largest city in Iran."
+      - type: multiple_choice
+        question: "What famous 15th-century Inca mountain citadel is located on an Andean ridge above the Urubamba Valley in Peru?"
+        options:
+          - "Machu Picchu"
+          - "Cusco"
+          - "Tiahuanaco"
+          - "Chan Chan"
+        correct: 0
+        explanation: "Machu Picchu was built during the reign of Inca emperor Pachacuti and was rediscovered by American explorer Hiram Bingham in 1911."
+      - type: multiple_choice
+        question: "What is the mudbrick architectural landmark in Mali recognized as the largest earth-built structure in the world?"
+        options:
+          - "The Great Mosque of Djenné"
+          - "The Sankore Mosque of Timbuktu"
+          - "The Kasbah of Algiers"
+          - "The Larabanga Mosque"
+        correct: 0
+        explanation: "The Great Mosque of Djenné is constructed from sun-dried mud bricks and river plaster, rebuilt collectively by the local community each year."
+      - type: multiple_choice
+        question: "What is the capital city of Mongolia, home to almost half of the country's population?"
+        options:
+          - "Ulaanbaatar"
+          - "Erdenet"
+          - "Darkhan"
+          - "Hovd"
+        correct: 0
+        explanation: "Ulaanbaatar is the political, economic, and cultural capital of Mongolia, situated in the Tuul River valley."
+      - type: multiple_choice
+        question: "What is the legislative capital of South Africa, where the national Parliament convenes beneath Table Mountain?"
+        options:
+          - "Cape Town"
+          - "Pretoria"
+          - "Bloemfontein"
+          - "Johannesburg"
+        correct: 0
+        explanation: "Cape Town serves as South Africa's legislative capital, while Pretoria serves as executive and Bloemfontein as judicial."
+      - type: multiple_choice
+        question: "What ancient desert trading hub in northern Niger is famous for its 27-meter mudbrick minaret?"
+        options:
+          - "Agadez"
+          - "Zinder"
+          - "Maradi"
+          - "Tahoua"
+        correct: 0
+        explanation: "Agadez was a prominent caravan crossroads on the trans-Saharan salt trade route, renowned for its camel markets and mud architecture."
+      - type: multiple_choice
+        question: "Which high-altitude lake shared by Peru and Bolivia is celebrated as the highest commercially navigable lake in the world?"
+        options:
+          - "Lake Titicaca"
+          - "Lake Junin"
+          - "Lake Poopo"
+          - "Lake Maracaibo"
+        correct: 0
+        explanation: "Lake Titicaca sits at 3,812 meters (12,507 feet) above sea level in the Andes, revered as the mythical birthplace of the Incas."
+      - type: multiple_choice
+        question: "What is the capital and largest city of Angola, located on the Atlantic coast?"
+        options:
+          - "Luanda"
+          - "Benguela"
+          - "Huambo"
+          - "Lobito"
+        correct: 0
+        explanation: "Luanda is the capital of Angola, founded in 1575 and serving as the political and financial heartbeat of the nation."
+      - type: multiple_choice
+        question: "Which 14th-century ruler of the Mali Empire is widely considered the wealthiest individual in recorded human history?"
+        options:
+          - "Mansa Musa"
+          - "Sundiata Keita"
+          - "Askia the Great"
+          - "Sonni Ali"
+        correct: 0
+        explanation: "Mansa Musa's famous 1324 pilgrimage to Mecca distributed so much gold that it devalued the metal in Cairo for over a decade."
+      - type: multiple_choice
+        question: "What is the capital city of Chad, situated on the Chari River near the Cameroonian border?"
+        options:
+          - "N'Djamena"
+          - "Moundou"
+          - "Sarh"
+          - "Abeche"
+        correct: 0
+        explanation: "N'Djamena is the capital and largest city of Chad, formerly called Fort-Lamy during French colonial rule."
+      - type: multiple_choice
+        question: "What is the capital city of Niger, situated along the southwestern banks of the Niger River?"
+        options:
+          - "Niamey"
+          - "Agadez"
+          - "Zinder"
+          - "Dosso"
+        correct: 0
+        explanation: "Niamey is the capital of Niger, serving as the commercial and political hub of the country."
+      - type: multiple_choice
+        question: "What is the capital city of Mali, located on the upper Niger River?"
+        options:
+          - "Bamako"
+          - "Timbuktu"
+          - "Gao"
+          - "Mopti"
+        correct: 0
+        explanation: "Bamako is the capital and chief economic center of Mali, known as one of the fastest-growing urban areas in Africa."
+      - type: multiple_choice
+        question: "What is the highest volcano in Asia and tallest mountain peak in Iran at 5,610 meters?"
+        options:
+          - "Mount Damavand"
+          - "Mount Ararat"
+          - "Mount Kazbek"
+          - "Mount Sabalan"
+        correct: 0
+        explanation: "Mount Damavand in the Alborz range is a dormant stratovolcano holds a prominent place in Persian mythology and poetry."
+      - type: multiple_choice
+        question: "What is the capital city of Peru, founded by Francisco Pizarro in 1535 on the Pacific coast?"
+        options:
+          - "Lima"
+          - "Cusco"
+          - "Arequipa"
+          - "Trujillo"
+        correct: 0
+        explanation: "Lima is the capital and largest metropolis of Peru, established as the 'City of the Kings' by Spanish colonizers."
+      - type: multiple_choice
+        question: "Which desert covering southern Mongolia is renowned for the 1923 discovery of the first fossilized dinosaur eggs?"
+        options:
+          - "The Gobi Desert"
+          - "The Taklamakan Desert"
+          - "The Karakum Desert"
+          - "The Kyzylkum Desert"
+        correct: 0
+        explanation: "The Gobi Desert yielded pioneering dinosaur discoveries at the Flaming Cliffs by naturalist Roy Chapman Andrews."
+      - type: multiple_choice
+        question: "Which separated coastal exclave of Angola produces the majority of the nation's offshore petroleum?"
+        options:
+          - "Cabinda"
+          - "Walvis Bay"
+          - "Zanzibar"
+          - "Bioko"
+        correct: 0
+        explanation: "Cabinda is an Angolan exclave separated from the rest of the country by a 60-kilometer strip of DR Congo territory."
+
+  - id: fascinating_geopolitical_territories
+    title: "Unique Geography: Enclaves, Peninsulas & Island Nations"
+    description: >
+      Explore nations with extraordinary territorial geometry: narrow ribbons, transcontinental bridges,
+      archipelagos, and peninsular kingdoms.
+    cards:
+      - title: "Chile: The Long Ribbon of the Pacific (Capital: Santiago)"
+        points:
+          - "Chile is the longest and narrowest nation in the world, stretching over 4,300 kilometers north to south, while averaging just 177 kilometers in east-west width."
+          - "Its capital, Santiago, is situated in a central Mediterranean valley framed by the snow-capped Andes mountains and the Chilean Coastal Range."
+          - "The Atacama Desert in northern Chile is the driest non-polar desert on Earth, with some weather stations recording zero rainfall in recorded history, making it a premier site for astronomical observatories."
+          - "Chile includes Easter Island (Rapa Nui) in the southeastern Pacific, world-famous for its nearly 1,000 monumental stone statues known as Moai."
+          - "In the south, Chilean Patagonia features the iconic granite spires of Torres del Paine National Park, dramatic fjords, and the Strait of Magellan."
+      - title: "Egypt: The Cradle on the Nile (Capital: Cairo)"
+        points:
+          - "Egypt is a transcontinental nation linking North Africa with Southwest Asia via the Sinai Peninsula, and linking the Mediterranean Sea to the Red Sea via the Suez Canal."
+          - "Its sprawling capital, Cairo, is the largest metropolitan area in the Arab world, home to the Great Pyramids of Giza and the Grand Egyptian Museum."
+          - "Over 95% of Egypt's population of 105 million lives within a narrow green ribbon along the Nile River and its delta, representing only 4% of the country's total land area."
+          - "The Suez Canal, opened in 1869, handles roughly 12% of all international maritime trade, allowing ships to bypass the 7,000-kilometer voyage around Africa's Cape of Good Hope."
+          - "Ancient Egypt's monumental civilization flourished for over 3,000 years, pioneering hieroglyphic writing, irrigation engineering, and monumental stone architecture."
+      - title: "Turkey: Bridge Between East & West (Capital: Ankara)"
+        points:
+          - "Turkey (Türkiye) is a transcontinental nation spanning the Anatolian peninsula in Western Asia and Eastern Thrace in Southeastern Europe."
+          - "While Istanbul is the nation's largest cultural and economic metropolis, Ankara was designated the official capital in 1923 by Mustafa Kemal Atatürk during the founding of the modern republic."
+          - "The Turkish Straits (the Bosphorus and Dardanelles) control maritime passage between the Black Sea and the Mediterranean, governed internationally by the Montreux Convention."
+          - "Cappadocia in central Turkey is famous for surreal volcanic 'fairy chimney' rock formations, subterranean cities, and cave churches."
+          - "Mount Ararat in eastern Turkey, a dormant volcanic cone rising to 5,137 meters, is traditionally associated with the biblical resting place of Noah's Ark."
+      - title: "Japan: The Volcanic Archipelago (Capital: Tokyo)"
+        points:
+          - "Japan is an East Asian island nation comprising an archipelago of over 14,000 islands, anchored by four main islands: Honshu, Hokkaido, Kyushu, and Shikoku."
+          - "Its capital, Tokyo, is the most populous metropolitan area on Earth, with over 37 million inhabitants across the Greater Tokyo Area."
+          - "Mount Fuji, a sacred and perfectly symmetrical active stratovolcano rising to 3,776 meters, is Japan's tallest peak and a cultural emblem celebrated in woodblock prints."
+          - "Over 70% of Japan's land is rugged and forested mountainous terrain, leaving its dense population concentrated in narrow coastal plains."
+          - "Japan is a global leader in bullet train technology (Shinkansen), operating trains at speeds up to 320 km/h with average delays measured in seconds."
+      - title: "United Kingdom: The Island Kingdom (Capital: London)"
+        points:
+          - "The United Kingdom of Great Britain and Northern Ireland comprises the island of Great Britain, northeastern Ireland, and numerous small offshore islands."
+          - "Its capital, London, was founded by the Romans as Londinium nearly 2,000 years ago along the River Thames, serving as a global financial and diplomatic powerhouse."
+          - "The UK consists of four constituent nations: England, Scotland, Wales, and Northern Ireland, each with distinct cultural traditions and devolved parliaments."
+          - "Greenwich in London marks the Prime Meridian (0° Longitude), establishing the universal reference line for Coordinated Universal Time (UTC/GMT)."
+          - "The Industrial Revolution originated in 18th-century Britain, transforming global manufacturing, steam power, rail transport, and urban society."
+      - title: "Italy: The Mediterranean Boot (Capital: Rome)"
+        points:
+          - "Italy is a boot-shaped peninsula extending into the central Mediterranean Sea, crowned by the Alps in the north and including the large islands of Sicily and Sardinia."
+          - "Its ancient capital, Rome ('The Eternal City'), completely surrounds the independent sovereign enclave of Vatican City, the spiritual heart of the Roman Catholic Church."
+          - "Italy is home to more UNESCO World Heritage Sites (59) than any other nation on Earth, reflecting Roman imperial history and Renaissance artistry."
+          - "Southern Italy contains active volcanoes including Mount Vesuvius (which famously buried Pompeii in 79 CE) and Mount Etna on Sicily, Europe's most active volcano."
+          - "Italy's culinary heritage, from Neapolitan pizza and espresso to pasta and parmesan cheese, has become the world's most ubiquitous global cuisine."
+      - title: "Norway & Sweden: The Scandinavian Giants (Capitals: Oslo & Stockholm)"
+        points:
+          - "Norway and Sweden dominate the Scandinavian Peninsula in Northern Europe, sharing a 1,630-kilometer mountainous border along the Scandinavian Mountains."
+          - "Norway's capital, Oslo, and Sweden's capital, Stockholm (built across 14 islands on Lake Mälaren), are global leaders in sustainability, design, and green energy."
+          - "Norway's western coastline is carved by thousands of dramatic glacial Fjords, including the UNESCO-listed Geirangerfjord and Nærøyfjord."
+          - "Both nations experience the 'Midnight Sun' in summer, where the sun remains above the horizon for weeks north of the Arctic Circle, and vibrant winter Aurora Borealis displays."
+          - "Sweden is the home of the Nobel Prizes (awarded annually in Stockholm, except for the Nobel Peace Prize which is awarded in Oslo, Norway)."
+      - title: "New Zealand: The Shaky Isles of Aotearoa (Capital: Wellington)"
+        points:
+          - "New Zealand (Aotearoa in Māori) is an island nation in the southwestern Pacific Ocean consisting of two main landmasses: the North Island and the South Island."
+          - "Its capital, Wellington, located at the southern tip of the North Island, is celebrated as the windiest city in the world due to Cook Strait wind channeling."
+          - "Straddling the boundary between the Pacific and Indo-Australian tectonic plates, New Zealand features active geothermal geysers in Rotorua and glaciated Southern Alps."
+          - "It was the last major habitable landmass settled by humans, colonized by Polynesian voyagers who developed distinct Māori culture in the late 13th century."
+          - "In 1893, New Zealand became the first self-governing country in world history to grant all women the right to vote in parliamentary elections."
+    trivia:
+      - type: multiple_choice
+        question: "What is the capital city of Chile, nestled in a central valley with the towering Andes mountains as its backdrop?"
+        options:
+          - "Santiago"
+          - "Valparaíso"
+          - "Concepción"
+          - "Antofagasta"
+        correct: 0
+        explanation: "Santiago is the capital and largest city of Chile, founded in 1541 by Spanish conquistador Pedro de Valdivia."
+      - type: multiple_choice
+        question: "Which artificial waterway in Egypt connects the Mediterranean Sea directly to the Red Sea, handling 12% of global trade?"
+        options:
+          - "The Suez Canal"
+          - "The Panama Canal"
+          - "The Corinth Canal"
+          - "The Kiel Canal"
+        correct: 0
+        explanation: "The Suez Canal was opened in November 1869, eliminating the need for ships to sail around Africa."
+      - type: multiple_choice
+        question: "What is the capital city of Turkey, designated in 1923 by Atatürk to replace Istanbul?"
+        options:
+          - "Ankara"
+          - "Istanbul"
+          - "Izmir"
+          - "Bursa"
+        correct: 0
+        explanation: "Ankara was chosen as the new capital of the Republic of Turkey due to its central strategic location in Anatolia."
+      - type: multiple_choice
+        question: "What is the capital city of Japan, which anchors the most populous metropolitan area on planet Earth?"
+        options:
+          - "Tokyo"
+          - "Kyoto"
+          - "Osaka"
+          - "Yokohama"
+        correct: 0
+        explanation: "Tokyo (formerly Edo) is the capital of Japan, home to over 37 million people in its metropolitan region."
+      - type: multiple_choice
+        question: "Which district in London marks the Prime Meridian of the world (0° Longitude)?"
+        options:
+          - "Greenwich"
+          - "Westminster"
+          - "Camden"
+          - "Kensington"
+        correct: 0
+        explanation: "The Royal Observatory in Greenwich was established in 1884 as the international prime meridian benchmark for longitude and time."
+      - type: multiple_choice
+        question: "Which independent sovereign enclave is completely encircled inside the Italian capital of Rome?"
+        options:
+          - "Vatican City"
+          - "San Marino"
+          - "Monaco"
+          - "Liechtenstein"
+        correct: 0
+        explanation: "Vatican City is an independent city-state and the seat of the Pope, completely surrounded by the city of Rome."
+      - type: multiple_choice
+        question: "What is the capital of New Zealand, known as the windiest city in the world?"
+        options:
+          - "Wellington"
+          - "Auckland"
+          - "Christchurch"
+          - "Queenstown"
+        correct: 0
+        explanation: "Wellington sits on the Cook Strait at the southern tip of the North Island, serving as the nation's capital."
+      - type: multiple_choice
+        question: "Which country in 1893 became the first self-governing nation in world history to grant all women the right to vote?"
+        options:
+          - "New Zealand"
+          - "Australia"
+          - "United Kingdom"
+          - "United States"
+        correct: 0
+        explanation: "New Zealand passed the Electoral Act in September 1893, leading the world in universal women's suffrage."
+      - type: multiple_choice
+        question: "Which Chilean Pacific island is world-famous for its nearly 1,000 monumental stone statues called Moai?"
+        options:
+          - "Easter Island (Rapa Nui)"
+          - "Galapagos Islands"
+          - "Chiloé Island"
+          - "Robinson Crusoe Island"
+        correct: 0
+        explanation: "Easter Island is a remote volcanic territory of Chile famous for monumental stone figures carved by early Rapa Nui sculptors."
+      - type: multiple_choice
+        question: "What is the capital city of Norway, located at the head of the Oslofjord?"
+        options:
+          - "Oslo"
+          - "Bergen"
+          - "Trondheim"
+          - "Stavanger"
+        correct: 0
+        explanation: "Oslo is the capital and largest city of Norway, serving as the governmental hub and site of the Nobel Peace Prize."
+      - type: multiple_choice
+        question: "What is the capital city of Sweden, famously built across 14 islands connected by over 50 bridges?"
+        options:
+          - "Stockholm"
+          - "Gothenburg"
+          - "Malmö"
+          - "Uppsala"
+        correct: 0
+        explanation: "Stockholm is the capital of Sweden, located at the junction of Lake Mälaren and the Baltic Sea."
+      - type: multiple_choice
+        question: "Which volcano near Naples, Italy, famously erupted in 79 CE, completely burying the Roman city of Pompeii?"
+        options:
+          - "Mount Vesuvius"
+          - "Mount Etna"
+          - "Stromboli"
+          - "Vulcano"
+        correct: 0
+        explanation: "Mount Vesuvius buried Pompeii and Herculaneum under meters of volcanic ash and pumice in 79 CE."
+      - type: multiple_choice
+        question: "Which four constituent nations make up the sovereign United Kingdom?"
+        options:
+          - "England, Scotland, Wales, and Northern Ireland"
+          - "England, Scotland, Ireland, and Wales"
+          - "Britain, Scotland, Ireland, and Brittany"
+          - "England, Cornwall, Wales, and Scotland"
+        correct: 0
+        explanation: "The UK is a unitary state comprised of four nations: England, Scotland, Wales, and Northern Ireland."
+      - type: multiple_choice
+        question: "What is the tallest mountain peak in Japan, rising as an iconic symmetrical volcanic cone to 3,776 meters?"
+        options:
+          - "Mount Fuji"
+          - "Mount Kita"
+          - "Mount Hotaka"
+          - "Mount Aso"
+        correct: 0
+        explanation: "Mount Fuji is an active stratovolcano southwest of Tokyo that last erupted in 1707 and is considered a sacred national symbol."
+      - type: multiple_choice
+        question: "What percentage of Egypt's total land area is occupied by the narrow fertile green strip of the Nile valley and delta?"
+        options:
+          - "Roughly 4%"
+          - "Roughly 25%"
+          - "Roughly 50%"
+          - "Roughly 75%"
+        correct: 0
+        explanation: "Over 95% of Egyptians live on just 4% of the nation's land, concentrated tightly along the life-giving Nile River."
+      - type: multiple_choice
+        question: "What is the driest non-polar desert on Earth, located across northern Chile?"
+        options:
+          - "The Atacama Desert"
+          - "The Gobi Desert"
+          - "The Kalahari Desert"
+          - "The Mojave Desert"
+        correct: 0
+        explanation: "The Atacama Desert is shielded from moisture by the Andes and the cold Humboldt Current, making it the driest non-polar desert."

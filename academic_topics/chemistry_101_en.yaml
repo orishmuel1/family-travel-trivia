@@ -1,0 +1,944 @@
+id: chemistry_101_en
+type: academic
+icon: "⚗️"
+title: "General & Physical Chemistry for Engineers (Chemistry 101)"
+description: >
+  A rigorous, first-principles exploration of molecular behavior, atomic orbitals,
+  chemical thermodynamics, reaction kinetics, and electrochemical energy systems designed
+  for curious engineers and developers.
+lang: en
+audience: family
+categories:
+  - id: atomic_structure_periodic_table
+    title: "1. Atomic Structure, Quantum Orbitals & The Periodic Table"
+    description: >
+      Unpack the subatomic architecture of matter: how quantum numbers shape electron
+      orbitals, why elements organize into periodic families, and how valence shells govern all chemical reactivity.
+    cards:
+      - title: "Subatomic Particles, Energy Levels & The Quantum Atom"
+        figure:
+          title: "Atomic Shells & Electron Energy Quantization"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <circle cx="100" cy="75" r="14" fill="#ef4444" opacity="0.85"/>
+              <text x="100" y="79" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Nucleus</text>
+              <circle cx="100" cy="75" r="32" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <circle cx="100" cy="75" r="52" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <circle cx="100" cy="75" r="70" fill="none" stroke="#ec4899" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <circle cx="122" cy="52" r="4" fill="#3b82f6"/>
+              <circle cx="145" cy="50" r="4" fill="#8b5cf6"/>
+              <circle cx="168" cy="55" r="4" fill="#ec4899"/>
+              <text x="210" y="45" font-size="11" font-weight="bold" fill="#3b82f6">n = 1 (K shell, max 2 e⁻)</text>
+              <text x="210" y="75" font-size="11" font-weight="bold" fill="#8b5cf6">n = 2 (L shell, max 8 e⁻: 2s + 2p)</text>
+              <text x="210" y="105" font-size="11" font-weight="bold" fill="#ec4899">n = 3 (M shell, max 18 e⁻: 3s + 3p + 3d)</text>
+              <text x="210" y="130" font-size="10" fill="currentColor" opacity="0.8">Energy: E_n = -13.6 eV / n²</text>
+            </svg>
+          caption: "Electrons occupy discrete quantized energy shells ($n=1,2,3$). Transitions between levels absorb or emit photons of exact wavelengths."
+        points:
+          - "At the center of every atom lies an ultra-dense nucleus containing positively charged protons and neutral neutrons, packing over 99.9% of the atom's total mass into a volume 100,000 times smaller than the atom itself."
+          - "Surrounding the nucleus is an electron cloud governed by quantum mechanics. Rather than orbiting like planets on planar tracks, electrons occupy quantized three-dimensional probability distributions described by wavefunctions $\\psi$."
+          - "The Principal Quantum Number ($n = 1, 2, 3, \\dots$) determines the shell's average distance from the nucleus and baseline energy level. According to Bohr and Rydberg formulas, electron energy is quantized as $E_n = -\\frac{13.6\\text{ eV}}{n^2}$ for hydrogen-like systems."
+          - "The Pauli Exclusion Principle states that no two electrons in an atom can possess identical quantum numbers. Because an orbital can hold at most two electrons of opposite spin ($+\\frac{1}{2}$ and $-\\frac{1}{2}$), electrons stack into progressively higher energy shells, preventing matter from collapsing into infinite density."
+      - title: "Orbitals (s, p, d, f) & Electron Configurations"
+        points:
+          - "Orbitals are grouped by angular momentum quantum numbers: spherical $s$ orbitals (1 per shell, holding 2 electrons), dumbbell-shaped $p$ orbitals (3 per shell, holding 6 electrons), complex $d$ orbitals (5 per shell, holding 10 electrons), and $f$ orbitals (7 per shell, holding 14 electrons)."
+          - "The Aufbau Principle (from German for 'building up') dictates that electrons fill the lowest available energy subshells first: $1s \\to 2s \\to 2p \\to 3s \\to 3p \\to 4s \\to 3d$. Notice that the $4s$ orbital fills before $3d$ due to electron shielding and penetration effects."
+          - "Hund's Rule states that when degenerate orbitals of equal energy are available (like the three $2p$ sub-orbitals $p_x, p_y, p_z$), electrons occupy separate orbitals with parallel spins before pairing up, minimizing mutual electrostatic repulsion."
+          - "The outermost electrons—known as Valence Electrons—form the chemical 'API' of the element. Core electrons are shielded deep within electrostatic potentials, but valence electrons interact with adjacent atoms to drive chemical bonding and conductivity."
+      - title: "Periodic Trends: Electronegativity, Ionization & Radius"
+        points:
+          - "The Periodic Table is arranged by Atomic Number $Z$ (number of protons). Elements in the same vertical column (Group) share identical valence shell configurations, resulting in analogous chemical behaviors (e.g., Alkali metals in Group 1 have 1 valence electron; Halogens in Group 17 have 7)."
+          - "Atomic Radius decreases across a period from left to right because the increasing nuclear positive charge pulls the electron cloud tighter, while electron shielding stays roughly constant. Down a column, radius increases sharply as new outer shells ($n$) are added."
+          - "Ionization Energy—the energy required to remove an electron from a gaseous atom—increases across a period from left to right and decreases down a group. Noble gases have exceptionally high ionization energies due to closed, stable octet shells."
+          - "Electronegativity measures an atom's relative pulling power on shared electrons in a bond. Fluorine is the most electronegative element (3.98 on the Pauling scale), while Francium and Cesium are the least electronegative (around 0.7), dictating whether bonds become non-polar, polar, or ionic."
+    trivia:
+      - type: multiple_choice
+        question: "Which fundamental quantum rule states that no two electrons in an atom can share the identical set of four quantum numbers?"
+        options:
+          - "Pauli Exclusion Principle"
+          - "Heisenberg Uncertainty Principle"
+          - "Aufbau Principle"
+          - "Hund's Multiplicity Rule"
+        correct: 0
+        explanation: "The Pauli Exclusion Principle dictates that each orbital can hold at most two electrons, and they must have opposing spins (+1/2 and -1/2)."
+      - type: multiple_choice
+        question: "Why do atomic radii generally decrease as you move from left to right across a single period of the Periodic Table?"
+        options:
+          - "Increasing nuclear proton charge pulls the valence electron cloud inward with greater electrostatic force"
+          - "Atoms lose outer electron shells as atomic number increases"
+          - "Neutrons in the nucleus cancel out the negative charge of outer electrons"
+          - "Gravitational attraction between nucleons compresses the electron cloud"
+        correct: 0
+        explanation: "Across a period, protons are added to the nucleus while electrons enter the same principal energy shell. The higher effective nuclear charge ($Z_{\\text{eff}}$) pulls the electrons closer."
+      - type: multiple_choice
+        question: "What is the maximum number of electrons that can occupy a set of p orbitals in any single energy level?"
+        options:
+          - "6 electrons"
+          - "2 electrons"
+          - "10 electrons"
+          - "14 electrons"
+        correct: 0
+        explanation: "There are three p sub-orbitals ($p_x, p_y, p_z$), and each can hold a maximum of 2 electrons with opposite spins, yielding a total capacity of 6."
+      - type: multiple_choice
+        question: "Which element holds the highest electronegativity value on the Pauling scale?"
+        options:
+          - "Fluorine"
+          - "Oxygen"
+          - "Chlorine"
+          - "Helium"
+        correct: 0
+        explanation: "Fluorine has the highest Pauling electronegativity at approximately 3.98, exerting an exceptionally strong pull on shared bonding electrons."
+      - type: multiple_choice
+        question: "According to Hund's Rule, how do electrons fill degenerate (equal-energy) orbitals such as the 2p subshell?"
+        options:
+          - "They occupy each degenerate orbital singly with parallel spins before any pairing occurs"
+          - "They completely fill each orbital with paired opposite spins before moving to the next"
+          - "They collapse directly into the lowest principal quantum shell"
+          - "They distribute randomly without regard to electron spin orientation"
+        correct: 0
+        explanation: "Hund's Rule minimizes electron-electron Coulomb repulsion by placing one electron in each equal-energy orbital with parallel spin before pairing begins."
+      - type: multiple_choice
+        question: "Why does the 4s subshell fill with electrons before the 3d subshell in neutral transition metal atoms?"
+        options:
+          - "The 4s orbital penetrates closer to the nucleus, giving it a lower average energy than the 3d orbital"
+          - "The 4s orbital has a higher angular momentum quantum number than 3d"
+          - "The 3d orbital can hold fewer total electrons than the 4s orbital"
+          - "The Aufbau principle dictates that higher principal quantum numbers always fill first"
+        correct: 0
+        explanation: "Although $n=4$ is a higher principal shell, the spherical 4s orbital has substantial electron density near the nucleus (penetration), lowering its energy below the unshielded 3d subshell."
+      - type: multiple_choice
+        question: "What term describes the amount of energy required to remove the most loosely bound valence electron from an isolated gaseous atom?"
+        options:
+          - "First Ionization Energy"
+          - "Electron Affinity"
+          - "Electronegativity"
+          - "Lattice Enthalpy"
+        correct: 0
+        explanation: "First Ionization Energy measures the minimum energy needed to remove one mole of electrons from one mole of neutral gaseous atoms."
+      - type: multiple_choice
+        question: "How many total valence electrons do neutral halogen atoms (Group 17, such as Chlorine and Bromine) possess?"
+        options:
+          - "7"
+          - "1"
+          - "5"
+          - "8"
+        correct: 0
+        explanation: "Halogens possess the valence shell configuration $ns^2 np^5$, giving them 7 valence electrons and making them eager to gain one electron to achieve an octet."
+      - type: multiple_choice
+        question: "What defines two atoms as being isotopes of the same chemical element?"
+        options:
+          - "Identical number of protons, but different numbers of neutrons"
+          - "Identical number of neutrons, but different numbers of protons"
+          - "Identical mass number, but different atomic numbers"
+          - "Identical number of electrons, but different nuclear charges"
+        correct: 0
+        explanation: "Isotopes share the exact same atomic number $Z$ (same element, identical proton count and chemical properties) but differ in neutron count $N$ and atomic mass."
+      - type: multiple_choice
+        question: "Which quantum number describes the three-dimensional geometric shape of an atomic orbital?"
+        options:
+          - "Angular Momentum (Azimuthal) Quantum Number (l)"
+          - "Principal Quantum Number (n)"
+          - "Magnetic Quantum Number (m_l)"
+          - "Spin Quantum Number (m_s)"
+        correct: 0
+        explanation: "The angular momentum quantum number $l$ defines the orbital shape: $l=0$ is spherical ($s$), $l=1$ is polar/dumbbell ($p$), $l=2$ is cloverleaf ($d$), and $l=3$ is fundamental ($f$)."
+      - type: multiple_choice
+        question: "Why do noble gases (such as Neon and Argon) exhibit almost zero chemical reactivity under standard conditions?"
+        options:
+          - "Their valence electron shells are completely filled with a stable octet (s²p⁶)"
+          - "Their atomic nuclei lack protons to attract additional electrons"
+          - "Their electronegativity values are the highest in their respective periods"
+          - "Their valence electrons possess zero quantum angular momentum"
+        correct: 0
+        explanation: "Noble gases have completely filled outer $s$ and $p$ subshells ($ns^2 np^6$, or $1s^2$ for He), representing an exceptionally stable, low-energy electronic configuration."
+      - type: multiple_choice
+        question: "What is the phenomenon called where inner-shell electrons diminish the full positive nuclear pull felt by outer valence electrons?"
+        options:
+          - "Electron Shielding (Screening)"
+          - "Photoelectric Effect"
+          - "Quantum Tunneling"
+          - "Zeeman Splitting"
+        correct: 0
+        explanation: "Inner core electrons repel valence electrons, partially shielding them from the full positive nuclear charge $Z$, resulting in an effective nuclear charge $Z_{\\text{eff}} = Z - S$."
+      - type: multiple_choice
+        question: "What is the total electron capacity of the third principal energy shell (n = 3)?"
+        options:
+          - "18 electrons"
+          - "8 electrons"
+          - "32 electrons"
+          - "10 electrons"
+        correct: 0
+        explanation: "The total capacity of shell $n$ is given by $2n^2$. For $n=3$, $2(3^2) = 18$ electrons (holding $3s^2$, $3p^6$, and $3d^{10}$)."
+      - type: multiple_choice
+        question: "Which group of elements on the Periodic Table has exactly one valence electron in its outermost s orbital?"
+        options:
+          - "Alkali Metals (Group 1)"
+          - "Alkaline Earth Metals (Group 2)"
+          - "Transition Metals (Groups 3-12)"
+          - "Chalcogens (Group 16)"
+        correct: 0
+        explanation: "Alkali metals (Li, Na, K, Rb, Cs, Fr) have an $ns^1$ valence configuration, making them soft, highly reactive metals that readily lose one electron to form $+1$ cations."
+      - type: multiple_choice
+        question: "When an electron transitions from a higher energy level (e.g., n = 3) to a lower energy level (e.g., n = 2), what occurs?"
+        options:
+          - "A photon with energy equal to the energy gap ΔE is emitted"
+          - "A photon with energy equal to the energy gap ΔE is absorbed"
+          - "A neutron is ejected from the atomic nucleus"
+          - "The atom's net electrical charge changes from neutral to negative"
+        correct: 0
+        explanation: "Energy conservation dictates that when an electron drops to a lower quantized orbital, the excess energy $\\Delta E = E_{\\text{high}} - E_{\\text{low}}$ is emitted as a photon of light with frequency $\\nu = \\Delta E / h$."
+
+  - id: chemical_bonds_molecular_geometry
+    title: "2. Chemical Bonds, Molecular Geometry & Intermolecular Forces"
+    description: >
+      Explore how atoms share, donate, and pool electrons to form molecules, how electron repulsions dictate 3D molecular shapes, and how subtle intermolecular forces govern liquid and solid matter.
+    cards:
+      - title: "Ionic, Covalent & Metallic Bonding Mechanisms"
+        figure:
+          title: "The Three Primary Chemical Bonding Paradigms"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <rect x="15" y="20" width="150" height="110" rx="8" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="1.5"/>
+              <text x="90" y="42" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Ionic Bonding</text>
+              <circle cx="55" cy="75" r="16" fill="#3b82f6"/>
+              <text x="55" y="80" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Na⁺</text>
+              <circle cx="120" cy="75" r="22" fill="#10b981"/>
+              <text x="120" y="80" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Cl⁻</text>
+              <text x="90" y="118" font-size="9" fill="currentColor" text-anchor="middle">Electron Transfer</text>
+
+              <rect x="185" y="20" width="150" height="110" rx="8" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-width="1.5"/>
+              <text x="260" y="42" font-size="12" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Covalent Bonding</text>
+              <circle cx="235" cy="75" r="18" fill="#8b5cf6" fill-opacity="0.6"/>
+              <circle cx="285" cy="75" r="18" fill="#8b5cf6" fill-opacity="0.6"/>
+              <circle cx="255" cy="70" r="3" fill="#fbbf24"/>
+              <circle cx="265" cy="78" r="3" fill="#fbbf24"/>
+              <text x="260" y="118" font-size="9" fill="currentColor" text-anchor="middle">Shared Electron Pair</text>
+
+              <rect x="355" y="20" width="150" height="110" rx="8" fill="#ec4899" fill-opacity="0.1" stroke="#ec4899" stroke-width="1.5"/>
+              <text x="430" y="42" font-size="12" font-weight="bold" fill="#ec4899" text-anchor="middle">Metallic Bonding</text>
+              <circle cx="385" cy="65" r="10" fill="#ec4899"/><text x="385" y="69" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">+</text>
+              <circle cx="430" cy="65" r="10" fill="#ec4899"/><text x="430" y="69" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">+</text>
+              <circle cx="475" cy="65" r="10" fill="#ec4899"/><text x="475" y="69" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">+</text>
+              <circle cx="405" cy="90" r="10" fill="#ec4899"/><text x="405" y="94" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">+</text>
+              <circle cx="455" cy="90" r="10" fill="#ec4899"/><text x="455" y="94" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">+</text>
+              <text x="430" y="118" font-size="9" fill="currentColor" text-anchor="middle">Delocalized 'Sea of e⁻'</text>
+            </svg>
+          caption: "Ionic bonds transfer electrons to form crystal lattices, covalent bonds share localized electron pairs, and metallic bonds share delocalized electron seas."
+        points:
+          - "Atoms bond to minimize electrostatic potential energy and attain noble gas stability (the Octet Rule: 8 valence electrons filling $s$ and $p$ orbitals)."
+          - "Covalent Bonds form between atoms of similar electronegativities through electron sharing. A single bond shares 2 electrons ($\\sigma$ bond), a double bond shares 4 (one $\\sigma$ and one $\\pi$ bond), and a triple bond shares 6 (one $\\sigma$ and two $\\pi$ bonds), with higher bond orders yielding shorter lengths and higher bond dissociation energies."
+          - "Ionic Bonds occur when the electronegativity difference between atoms is large (typically $\\Delta\\chi > 2.0$), causing complete electron transfer. The resulting cations and anions organize into three-dimensional crystalline lattices held together by nondirectional Coulombic forces (Lattice Energy)."
+          - "Metallic Bonding involves positive metal ion cores arranged in a rigid crystal grid submerged in a delocalized 'sea of conduction electrons.' Because these electrons flow freely without directional constraint, metals exhibit outstanding electrical conductivity, thermal conductivity, malleability, and ductility."
+      - title: "VSEPR Theory, Hybridization & 3D Molecular Geometry"
+        points:
+          - "Valence Shell Electron Pair Repulsion (VSEPR) theory posits that valence electron domains (bonding pairs and lone pairs) repel each other electrostatically, arranging themselves in 3D space to maximize separation distance and minimize energy."
+          - "Lone pairs (non-bonding electron pairs) exert greater repulsive force than bonding pairs because their electron density is concentrated closer to the central atomic nucleus. For instance, methane ($CH_4$), ammonia ($NH_3$), and water ($H_2O$) all have 4 electron domains, but their bond angles compress from $109.5^\\circ$ (tetrahedral) to $107^\\circ$ (trigonal pyramidal) to $104.5^\\circ$ (bent)."
+          - "Orbital Hybridization explains how atomic orbitals mix to form degenerate bonding orbitals: combining one $2s$ and three $2p$ orbitals produces four identical $sp^3$ hybrid orbitals directed at $109.5^\\circ$ angles, while $sp^2$ mixing yields planar $120^\\circ$ geometry and $sp$ mixing yields linear $180^\\circ$ geometry."
+          - "Molecular Polarity arises when a molecule contains polar bonds AND asymmetric geometry. If bond dipole moments cancel out through geometric symmetry (like linear $CO_2$ or tetrahedral $CCl_4$), the net dipole moment is zero. Asymmetric shapes (like bent $H_2O$) retain strong net dipoles."
+      - title: "Intermolecular Forces: Hydrogen Bonds, Dipoles & Dispersion"
+        points:
+          - "Intermolecular forces (IMFs) act BETWEEN separate molecules and are substantially weaker than intramolecular chemical bonds, yet they dictate bulk physical properties such as boiling points, vapor pressure, surface tension, and viscosity."
+          - "London Dispersion Forces (van der Waals) exist between all molecules due to transient, instantaneous fluctuations in electron density that induce complementary temporary dipoles in adjacent atoms. Larger atoms and molecules with more polarizable electron clouds have stronger dispersion forces."
+          - "Dipole-Dipole Attractions occur between permanent molecular dipoles, where the partially positive pole of one polar molecule aligns with the partially negative pole of another."
+          - "Hydrogen Bonding is an exceptionally strong subclass of dipole-dipole attraction occurring when hydrogen is covalently bonded to small, highly electronegative atoms (Nitrogen, Oxygen, or Fluorine). Hydrogen bonds give water its anomalously high boiling point, unique liquid density maximum at $4^\\circ\\text{C}$, surface tension, and stabilize the double-helix geometry of DNA."
+    trivia:
+      - type: multiple_choice
+        question: "Why does a water molecule (H2O) have a bent geometry with a bond angle of 104.5° instead of a linear 180° shape?"
+        options:
+          - "The oxygen atom has two non-bonding lone pairs that exert strong electrostatic repulsion, pushing the H-O bonds closer together"
+          - "Hydrogen atoms carry positive charges that attract each other across the molecule"
+          - "Oxygen forms an ionic bond with one hydrogen and a covalent bond with the other"
+          - "The gravitational pull of the heavy oxygen nucleus bends the lighter hydrogen atoms"
+        correct: 0
+        explanation: "Oxygen has 4 electron domains (2 single bonds and 2 lone pairs). In VSEPR theory, lone pairs occupy more angular space and repel bonding pairs downward, compressing the ideal 109.5° tetrahedral angle to 104.5°."
+      - type: multiple_choice
+        question: "What orbital hybridization is present in the carbon atoms of methane (CH4), giving it a symmetric tetrahedral shape?"
+        options:
+          - "sp³ hybridization"
+          - "sp² hybridization"
+          - "sp hybridization"
+          - "sp³d hybridization"
+        correct: 0
+        explanation: "Carbon mixes one 2s orbital and three 2p orbitals to form four equivalent sp³ hybrid orbitals oriented towards the corners of a regular tetrahedron at 109.5° angles."
+      - type: multiple_choice
+        question: "Why do metals exhibit high electrical conductivity and malleability compared to brittle ionic salts?"
+        options:
+          - "Valence electrons are delocalized into a shared 'electron sea', allowing atoms to slide past each other without breaking directional bonds"
+          - "Metal atoms contain no protons in their outer electronic shells"
+          - "Metals form rigid triple covalent networks between neighboring atoms"
+          - "Metals possess permanent electrostatic dipole moments aligned with external magnetic fields"
+        correct: 0
+        explanation: "In metallic bonding, cations sit in a mobile pool of delocalized electrons. Mechanical deformation shifts positive ions without causing like-charge repulsion, making metals malleable and conductive."
+      - type: multiple_choice
+        question: "Which of the following molecules has polar covalent bonds but possesses a net molecular dipole moment of zero due to spatial symmetry?"
+        options:
+          - "Carbon dioxide (CO2)"
+          - "Water (H2O)"
+          - "Ammonia (NH3)"
+          - "Sulfur dioxide (SO2)"
+        correct: 0
+        explanation: "Carbon dioxide is linear ($O=C=O$). Although each $C=O$ bond is highly polar, the two equal bond dipole vectors point in exactly opposite directions ($180^\\circ$), canceling each other out to yield a net dipole of zero."
+      - type: multiple_choice
+        question: "Which specific intermolecular force is responsible for water's unusually high boiling point and the base-pair pairing in DNA?"
+        options:
+          - "Hydrogen bonding"
+          - "London dispersion forces"
+          - "Metallic attraction"
+          - "Ion-induced dipole forces"
+        correct: 0
+        explanation: "Hydrogen bonding occurs when H is bonded to high-electronegativity atoms (N, O, F), generating strong electrostatic attractions that elevate boiling points and hold DNA strands together."
+      - type: multiple_choice
+        question: "What type of chemical bond involves the direct end-to-end overlap of atomic or hybrid orbitals along the internuclear axis?"
+        options:
+          - "Sigma (σ) bond"
+          - "Pi (π) bond"
+          - "Ionic lattice bond"
+          - "Hydrogen bridge"
+        correct: 0
+        explanation: "A sigma ($\\\\sigma$) bond is formed by coaxial, head-on overlap of orbitals along the internuclear line of centers, and it constitutes the primary bond in every single, double, or triple bond."
+      - type: multiple_choice
+        question: "What happens when an ionic crystal (such as sodium chloride, NaCl) is struck with a sharp mechanical blow?"
+        options:
+          - "It cleaves and fractures because like-charged ions are forced next to each other, causing massive electrostatic repulsion"
+          - "It bends smoothly into a thin sheet due to delocalized valence electron flow"
+          - "It immediately vaporizes into individual gaseous ions"
+          - "It undergoes spontaneous nuclear fission"
+        correct: 0
+        explanation: "In an ionic lattice, shifting one layer by a single atomic distance aligns like charges ($Na^+$ next to $Na^+$, $Cl^-$ next to $Cl^-$). The resulting repulsive forces cause the crystal to shatter along cleavage planes."
+      - type: multiple_choice
+        question: "Which intermolecular force is present in ALL atoms and molecules, including non-polar species like Argon gas and liquid Nitrogen?"
+        options:
+          - "London Dispersion Forces"
+          - "Hydrogen Bonding"
+          - "Dipole-Dipole Attractions"
+          - "Ionic Interactions"
+        correct: 0
+        explanation: "London dispersion forces arise from instantaneous quantum fluctuations in electron clouds, creating temporary induced dipoles in all matter regardless of polarity."
+      - type: multiple_choice
+        question: "How does the bond dissociation energy and bond length of a triple bond (e.g., N≡N) compare to a single bond (e.g., N-N) between the same elements?"
+        options:
+          - "The triple bond is shorter and significantly stronger (higher dissociation energy)"
+          - "The triple bond is longer and weaker"
+          - "The triple bond is identical in both length and strength"
+          - "The triple bond is longer but has higher dissociation energy"
+        correct: 0
+        explanation: "Sharing three electron pairs pulls the atomic nuclei closer together (shorter bond length) and requires much more energy to break (higher bond dissociation energy)."
+      - type: multiple_choice
+        question: "What is the idealized bond angle in a molecule with trigonal planar electron geometry, such as Boron trifluoride (BF3)?"
+        options:
+          - "120°"
+          - "109.5°"
+          - "90°"
+          - "180°"
+        correct: 0
+        explanation: "Three electron domains in a flat two-dimensional plane maximize their separation distance at exactly $360^\\circ / 3 = 120^\\circ$."
+      - type: multiple_choice
+        question: "What condition must be met for a chemical bond between two atoms to be classified as non-polar covalent?"
+        options:
+          - "The electronegativity difference between the two bonded atoms is zero or near zero (Δχ < 0.4)"
+          - "One atom completely strips an electron from the other atom"
+          - "The bond must involve a transition metal and a nonmetal"
+          - "The atoms must share four pairs of electrons simultaneously"
+        correct: 0
+        explanation: "When electronegativities are nearly identical (like $C-H$ or diatomic $N_2$), the shared bonding electrons are distributed symmetrically, resulting in a non-polar bond."
+      - type: multiple_choice
+        question: "Why is solid ice less dense than liquid water, allowing icebergs to float on oceans and lakes?"
+        options:
+          - "Hydrogen bonds lock water molecules into an open, hexagonal crystal lattice that takes up more volume than liquid water"
+          - "Liquid water contains dissolved trapped air that increases its density"
+          - "Ice molecules lose valence electrons, decreasing their atomic mass"
+          - "Thermal expansion causes solid molecules to repel each other via magnetic dipole repulsion"
+        correct: 0
+        explanation: "As water freezes below $4^\\circ\\text{C}$, extensive hydrogen bonding locks $H_2O$ molecules into an open hexagonal cage structure with vacant internal volume, making ice approximately 9% less dense than cold liquid water."
+      - type: multiple_choice
+        question: "What is the formal electronic geometry of a molecule with five electron domains around its central atom, such as PCl5?"
+        options:
+          - "Trigonal bipyramidal"
+          - "Octahedral"
+          - "Tetrahedral"
+          - "Square planar"
+        correct: 0
+        explanation: "Five electron domains arrange themselves in a trigonal bipyramidal geometry, featuring three equatorial positions at 120° and two axial positions at 90°."
+      - type: multiple_choice
+        question: "What is the general name for the electrostatic energy released when gaseous ions condense to form one mole of a solid ionic crystalline compound?"
+        options:
+          - "Lattice Energy"
+          - "Electronegativity"
+          - "Activation Energy"
+          - "Gibbs Free Energy"
+        correct: 0
+        explanation: "Lattice Energy is the measure of ionic bond strength, representing the energy released when gaseous cations and anions bind into a crystalline lattice."
+      - type: multiple_choice
+        question: "In organic chemistry, which type of covalent bond consists of parallel overlapping unhybridized p orbitals positioned above and below the bonding axis?"
+        options:
+          - "Pi (π) bond"
+          - "Sigma (σ) bond"
+          - "Delta (δ) bond"
+          - "Hydrogen bond"
+        correct: 0
+        explanation: "A pi (\\\\pi) bond results from the side-by-side lateral overlap of two parallel p orbitals located above and below the internuclear axis."
+
+  - id: stoichiometry_states_of_matter
+    title: "3. Stoichiometry, The Mole Concept & States of Matter"
+    description: >
+      Bridge microscopic atoms to macroscopic engineering systems through molar mass, chemical equations, gas laws, and thermodynamic phase transitions.
+    cards:
+      - title: "The Mole Concept, Molar Mass & Balancing Equations"
+        figure:
+          title: "Phase Diagram: Pressure vs. Temperature"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <line x1="60" y1="125" x2="480" y2="125" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="125" x2="60" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <text x="470" y="140" font-size="10" fill="currentColor" text-anchor="end">Temperature (T) →</text>
+              <text x="35" y="25" font-size="10" fill="currentColor" transform="rotate(-90 35 25)">Pressure (P) →</text>
+
+              <!-- Phase boundaries -->
+              <path d="M 60 120 Q 140 100 180 80" stroke="#3b82f6" stroke-width="2" fill="none"/>
+              <path d="M 180 80 Q 200 40 210 20" stroke="#10b981" stroke-width="2" fill="none"/>
+              <path d="M 180 80 Q 280 65 370 45" stroke="#ec4899" stroke-width="2" fill="none"/>
+
+              <!-- Triple Point & Critical Point -->
+              <circle cx="180" cy="80" r="5" fill="#f59e0b"/>
+              <text x="175" y="97" font-size="9" font-weight="bold" fill="#f59e0b">Triple Point</text>
+
+              <circle cx="370" cy="45" r="5" fill="#ef4444"/>
+              <text x="375" y="40" font-size="9" font-weight="bold" fill="#ef4444">Critical Point</text>
+
+              <text x="110" y="55" font-size="12" font-weight="bold" fill="#3b82f6">SOLID</text>
+              <text x="240" y="45" font-size="12" font-weight="bold" fill="#10b981">LIQUID</text>
+              <text x="320" y="105" font-size="12" font-weight="bold" fill="#ec4899">GAS</text>
+              <text x="430" y="30" font-size="10" font-weight="bold" fill="#8b5cf6">Supercritical</text>
+            </svg>
+          caption: "Phase diagrams map physical states across Temperature and Pressure. At the Triple Point, solid, liquid, and gas co-exist in simultaneous equilibrium."
+        points:
+          - "Chemistry operates on a scale too vast for counting individual particles. The Mole ($1\\text{ mol}$) is defined by Avogadro's Number: $N_A \\approx 6.02214076 \\times 10^{23}$ particles, serving as the universal unit conversion factor between atomic mass units (amu) and grams."
+          - "Molar Mass ($M$, in $\\text{g/mol}$) connects particle counts to physical weight. Carbon-12 has an exact molar mass of $12\\text{ g/mol}$. One mole of water ($H_2O$) weighs approximately $2(1.008) + 16.00 = 18.016\\text{ grams}$ and contains $6.022 \\times 10^{23}$ molecules."
+          - "The Law of Conservation of Mass dictates that atoms are neither created nor destroyed in chemical reactions. Balancing a chemical reaction requires equal counts of every element on reactant and product sides: $CH_4 + 2O_2 \\to CO_2 + 2H_2O$."
+          - "Stoichiometry uses molar ratios from balanced equations to calculate yields. The Limiting Reagent is the reactant that is entirely consumed first, strictly capping the maximum theoretical yield of product."
+      - title: "Kinetic Molecular Theory & The Ideal Gas Law"
+        points:
+          - "Kinetic Molecular Theory (KMT) models gases as vast numbers of microscopic point particles in constant, random, straight-line motion. The particles occupy zero volume relative to the container, experience no intermolecular forces, and undergo perfectly elastic collisions."
+          - "Temperature is directly proportional to average molecular kinetic energy: $\\text{KE}_{\\text{avg}} = \\frac{3}{2} k_B T$. At higher temperatures, molecules move with greater average velocity, colliding more frequently and forcefully against container walls."
+          - "The Ideal Gas Law synthesizes Boyle's, Charles's, and Avogadro's empirical discoveries into a single equation of state: $PV = nRT$, where $P$ is pressure, $V$ is volume, $n$ is moles, $T$ is absolute temperature in Kelvin ($K = ^\\circ\\text{C} + 273.15$), and $R \\approx 8.314\\text{ J/(mol}\\cdot\\text{K)}$ (or $0.08206\\text{ L}\\cdot\\text{atm/(mol}\\cdot\\text{K)}$)."
+          - "Real Gases deviate from ideal behavior at high pressures (where particle volume is no longer negligible) and low temperatures (where intermolecular attractions pull molecules together). The Van der Waals Equation adjusts for these non-idealities: $\\left(P + \\frac{a n^2}{V^2}\\right)(V - nb) = nRT$."
+      - title: "Phase Transitions, Latent Heat & Phase Diagrams"
+        points:
+          - "Matter transitions between solid, liquid, gas, and plasma based on the competition between thermal kinetic energy (pushing particles apart) and intermolecular forces (holding particles together)."
+          - "During a phase transition (such as ice melting or water boiling), temperature remains completely constant despite continuous heat input. The added energy—known as Latent Heat ($\\Delta H_{\\text{fusion}}$ or $\\Delta H_{\\text{vaporization}}$)—is consumed breaking intermolecular bonds rather than increasing molecular kinetic energy."
+          - "Phase Diagrams plot pressure vs. temperature to reveal thermodynamic boundaries: Sublimation (solid to gas), Melting/Freezing (solid to liquid), and Vaporization/Condensation (liquid to gas)."
+          - "The Triple Point is the unique temperature and pressure where all three phases coexist in dynamic equilibrium. Beyond the Critical Point ($T_c, P_c$), liquid and gas densities merge into a single Supercritical Fluid that diffuses like a gas while dissolving solutes like a liquid (widely used in decaffeinating coffee and industrial extraction)."
+    trivia:
+      - type: multiple_choice
+        question: "What is the numerical value of Avogadro's constant, defining the number of particles in exactly one mole of a substance?"
+        options:
+          - "6.022 × 10²³"
+          - "3.00 × 10⁸"
+          - "1.602 × 10⁻¹⁹"
+          - "6.626 × 10⁻³⁴"
+        correct: 0
+        explanation: "Avogadro's constant ($N_A \\approx 6.022 \\times 10^{23} \\text{ mol}^{-1}$) is the exact count of constituent particles contained within one mole."
+      - type: multiple_choice
+        question: "In the Ideal Gas Law equation PV = nRT, what temperature scale must ALWAYS be used for T?"
+        options:
+          - "Kelvin (absolute temperature)"
+          - "Celsius"
+          - "Fahrenheit"
+          - "Rankine"
+        correct: 0
+        explanation: "Gas laws require absolute temperature in Kelvin ($K = ^\\circ C + 273.15$) because zero on the Kelvin scale corresponds to absolute zero, where molecular kinetic energy approaches its quantum ground state."
+      - type: multiple_choice
+        question: "What thermodynamic feature represents the specific temperature and pressure at which solid, liquid, and gas phases coexist in simultaneous thermodynamic equilibrium?"
+        options:
+          - "Triple Point"
+          - "Critical Point"
+          - "Eutectic Point"
+          - "Boiling Point"
+        correct: 0
+        explanation: "The Triple Point is the unique invariant state on a phase diagram where solid, liquid, and vapor phases are in simultaneous dynamic equilibrium."
+      - type: multiple_choice
+        question: "Why does the temperature of boiling water stay at exactly 100°C at 1 atm even as heat continues to be aggressively supplied by a stove?"
+        options:
+          - "The thermal energy is consumed as latent heat of vaporization to overcome intermolecular hydrogen bonds"
+          - "Excess heat is converted directly into nuclear binding energy"
+          - "The steam absorbs all kinetic energy from the remaining liquid"
+          - "Water molecules expand, which cools the liquid back down to 100°C"
+        correct: 0
+        explanation: "During a first-order phase change, absorbed thermal energy (latent heat) is utilized to break intermolecular bonds separating liquid molecules into vapor, rather than raising molecular kinetic energy (temperature)."
+      - type: multiple_choice
+        question: "If a gas in a sealed rigid container with fixed volume is heated from 300 K to 600 K, what happens to its internal pressure according to Gay-Lussac's Law?"
+        options:
+          - "The pressure doubles"
+          - "The pressure is halved"
+          - "The pressure quadruples"
+          - "The pressure remains constant"
+        correct: 0
+        explanation: "For an ideal gas at constant volume ($V$), pressure is directly proportional to absolute temperature ($P \\propto T$). Doubling the Kelvin temperature doubles the average kinetic energy and wall collisions, doubling pressure."
+      - type: multiple_choice
+        question: "In the combustion of methane: CH4 + 2 O2 → CO2 + 2 H2O, how many moles of oxygen gas (O2) are required to react completely with 3 moles of methane?"
+        options:
+          - "6 moles"
+          - "3 moles"
+          - "2 moles"
+          - "12 moles"
+        correct: 0
+        explanation: "The stoichiometric molar ratio of $CH_4$ to $O_2$ is 1:2. Thus, 3 moles of methane require $3 \\times 2 = 6$ moles of $O_2$ for complete stoichiometric combustion."
+      - type: multiple_choice
+        question: "What is a Supercritical Fluid, which forms at temperatures and pressures beyond the Critical Point?"
+        options:
+          - "A distinct state of matter possessing gas-like diffusivity and liquid-like density and solvent power"
+          - "A plasma state where all electrons have been stripped from atomic nuclei"
+          - "A solid that flows through containers with zero friction"
+          - "A gas that condenses spontaneously into liquid regardless of temperature"
+        correct: 0
+        explanation: "Above the critical temperature and pressure ($T_c, P_c$), phase boundaries vanish; the substance becomes a supercritical fluid with high density like a liquid and effusive penetration like a gas."
+      - type: multiple_choice
+        question: "Which empirical gas law demonstrates that at constant temperature, the pressure and volume of an ideal gas are inversely proportional (P1V1 = P2V2)?"
+        options:
+          - "Boyle's Law"
+          - "Charles's Law"
+          - "Avogadro's Law"
+          - "Henry's Law"
+        correct: 0
+        explanation: "Robert Boyle established in 1662 that compressing a gas into half its volume doubles its pressure, assuming constant temperature ($P \\propto 1/V$)."
+      - type: multiple_choice
+        question: "What is the molar mass of molecular oxygen (O2), given that the atomic weight of elemental oxygen is approximately 16.00 g/mol?"
+        options:
+          - "32.00 g/mol"
+          - "16.00 g/mol"
+          - "8.00 g/mol"
+          - "64.00 g/mol"
+        correct: 0
+        explanation: "Diatomic oxygen contains two oxygen atoms per molecule ($2 \\times 16.00\\text{ g/mol} = 32.00\\text{ g/mol}$)."
+      - type: multiple_choice
+        question: "What phase transition occurs when dry ice (solid CO2) converts directly into carbon dioxide gas without passing through a liquid phase at atmospheric pressure?"
+        options:
+          - "Sublimation"
+          - "Deposition"
+          - "Evaporation"
+          - "Condensation"
+        correct: 0
+        explanation: "Sublimation is the direct phase transition from solid to gas without entering the liquid phase, occurring when atmospheric pressure is below the substance's triple point pressure."
+      - type: multiple_choice
+        question: "What term describes the reactant that is entirely consumed first in a chemical reaction, thereby limiting the maximum amount of product that can be generated?"
+        options:
+          - "Limiting Reagent (Limiting Reactant)"
+          - "Excess Reagent"
+          - "Catalytic Intermediate"
+          - "Inert Carrier"
+        correct: 0
+        explanation: "The limiting reagent is present in the smallest stoichiometric quantity; once consumed, reaction progress halts and sets the theoretical yield."
+      - type: multiple_choice
+        question: "Under which physical conditions do real gases deviate most significantly from ideal gas behavior?"
+        options:
+          - "Very high pressure and very low temperature"
+          - "Very low pressure and very high temperature"
+          - "Moderate room temperature and standard atmospheric pressure"
+          - "Zero Kelvin and zero pressure"
+        correct: 0
+        explanation: "At high pressure, particle volumes become significant relative to container volume, and at low temperature, intermolecular attractions draw particles together, breaking KMT assumptions."
+      - type: multiple_choice
+        question: "According to Dalton's Law of Partial Pressures, what is the total pressure exerted by a mixture of non-reacting gases?"
+        options:
+          - "The sum of the individual partial pressures exerted by each constituent gas"
+          - "The product of the partial pressures divided by total volume"
+          - "The pressure of the heaviest gas in the mixture"
+          - "The difference between atmospheric pressure and vapor pressure"
+        correct: 0
+        explanation: "Dalton's Law states that total pressure equals the sum of the partial pressures: $P_{\\text{total}} = P_1 + P_2 + P_3 + \\dots$."
+      - type: multiple_choice
+        question: "How many liters of volume does exactly one mole of an ideal gas occupy at Standard Temperature and Pressure (STP: 0°C and 1 atm)?"
+        options:
+          - "22.4 Liters"
+          - "1.0 Liter"
+          - "44.8 Liters"
+          - "11.2 Liters"
+        correct: 0
+        explanation: "Under STP conditions ($273.15\\text{ K}$ and $1\\text{ atm}$), applying $V = \\frac{nRT}{P}$ yields standard molar volume of approximately $22.414\\text{ L}$."
+      - type: multiple_choice
+        question: "What happens to the vapor pressure of a liquid as its temperature is increased?"
+        options:
+          - "Vapor pressure increases exponentially according to the Clausius-Clapeyron relation"
+          - "Vapor pressure decreases because gas molecules escape"
+          - "Vapor pressure remains constant until boiling occurs"
+          - "Vapor pressure drops to zero at the critical point"
+        correct: 0
+        explanation: "As temperature rises, an exponentially greater fraction of liquid molecules possess sufficient kinetic energy to overcome intermolecular bonds and escape into the vapor phase."
+
+  - id: thermodynamics_equilibrium_kinetics
+    title: "4. Chemical Thermodynamics, Kinetics & Equilibrium"
+    description: >
+      Master the driving forces of chemical change: reaction enthalpy, entropy, Gibbs Free Energy spontaneity, reaction rates, catalysts, and dynamic equilibrium.
+    cards:
+      - title: "Enthalpy (ΔH), Entropy (ΔS) & Gibbs Free Energy (ΔG)"
+        figure:
+          title: "Reaction Coordinate Diagram: Catalyzed vs. Uncatalyzed"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <line x1="50" y1="125" x2="480" y2="125" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="50" y1="125" x2="50" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <text x="470" y="140" font-size="10" fill="currentColor" text-anchor="end">Reaction Progress →</text>
+              <text x="35" y="25" font-size="10" fill="currentColor" transform="rotate(-90 35 25)">Potential Energy →</text>
+
+              <!-- Reactant level -->
+              <line x1="50" y1="90" x2="120" y2="90" stroke="#3b82f6" stroke-width="3"/>
+              <text x="80" y="82" font-size="11" font-weight="bold" fill="#3b82f6">Reactants</text>
+
+              <!-- Uncatalyzed curve -->
+              <path d="M 120 90 Q 220 10 320 115" stroke="#ef4444" stroke-width="2" fill="none"/>
+              <text x="220" y="22" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">Uncatalyzed Ea</text>
+
+              <!-- Catalyzed curve -->
+              <path d="M 120 90 Q 220 50 320 115" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+              <text x="220" y="62" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">Catalyzed Ea</text>
+
+              <!-- Product level -->
+              <line x1="320" y1="115" x2="420" y2="115" stroke="#8b5cf6" stroke-width="3"/>
+              <text x="370" y="110" font-size="11" font-weight="bold" fill="#8b5cf6">Products</text>
+
+              <!-- Delta H arrow -->
+              <line x1="440" y1="90" x2="440" y2="115" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr)"/>
+              <text x="450" y="105" font-size="10" font-weight="bold" fill="#f59e0b">ΔH &lt; 0 (Exothermic)</text>
+            </svg>
+          caption: "Catalysts accelerate reactions by lowering the activation energy barrier ($E_a$) without altering the initial and final thermodynamic states ($\\Delta H$, $\\Delta G$)."
+        points:
+          - "Chemical reactions are governed by two thermodynamic principles: the drive toward minimum potential energy (Enthalpy, $H$) and the drive toward maximum molecular disorder and microstates (Entropy, $S$)."
+          - "Enthalpy Change ($\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$): Exothermic reactions ($\\Delta H < 0$) release heat to surroundings because newly formed bonds are stronger than broken bonds. Endothermic reactions ($\\Delta H > 0$) absorb heat."
+          - "Entropy Change ($\\Delta S$): The Second Law of Thermodynamics dictates that total entropy of the universe must increase in any spontaneous process ($\\Delta S_{\\text{univ}} > 0$). Reactions that produce more gas moles or disperse heat increase entropy."
+          - "Gibbs Free Energy determines reaction Spontaneity at constant temperature and pressure: $\\Delta G = \\Delta H - T\\Delta S$. If $\\Delta G < 0$, the reaction is Exergonic and spontaneous; if $\\Delta G > 0$, it is Endergonic and non-spontaneous; if $\\Delta G = 0$, the system is in thermodynamic equilibrium."
+      - title: "Reaction Kinetics, Collision Theory & Catalysis"
+        points:
+          - "Thermodynamics tells you IF a reaction can happen; Chemical Kinetics tells you HOW FAST it occurs. A reaction can be thermodynamically favored (large negative $\\Delta G$, like diamonds turning into graphite) yet kinetically trapped for billions of years due to a massive Activation Energy ($E_a$) barrier."
+          - "Collision Theory states that for molecules to react, they must collide with two non-negotiable criteria: (1) kinetic energy exceeding the activation energy threshold ($E \\ge E_a$), and (2) proper spatial orientation to allow orbital overlap."
+          - "The Arrhenius Equation mathematically models the reaction rate constant: $k = A e^{-E_a / (RT)}$. Increasing temperature raises the fraction of molecules with $E \\ge E_a$ exponentially, dramatically speeding up reactions."
+          - "Catalysts (including industrial platinum beds and biological enzymes) provide an alternative reaction pathway with a significantly lower activation energy barrier. Catalysts accelerate both forward and reverse rates equally without being consumed, and they DO NOT alter $\\Delta H$, $\\Delta G$, or the final equilibrium constant $K_{\\text{eq}}$."
+      - title: "Dynamic Chemical Equilibrium & Le Chatelier's Principle"
+        points:
+          - "Most chemical reactions are reversible. Dynamic Equilibrium is reached when the rate of the forward reaction equals the rate of the reverse reaction ($r_{\\text{forward}} = r_{\\text{reverse}}$). At equilibrium, macroscopic concentrations of reactants and products remain constant, even though microscopic molecular transformations continue ceaselessly."
+          - "The Equilibrium Constant ($K_{\\text{eq}}$) for reaction $aA + bB \\rightleftharpoons cC + dD$ is given by the Law of Mass Action: $K_{\\text{eq}} = \\frac{[C]^c [D]^d}{[A]^a [B]^b}$. If $K_{\\text{eq}} \\gg 1$, products dominate at equilibrium; if $K_{\\text{eq}} \\ll 1$, reactants dominate."
+          - "The connection between thermodynamics and equilibrium is expressed by the fundamental equation: $\\Delta G^\\circ = -RT \\ln(K_{\\text{eq}})$. A strongly negative $\\Delta G^\\circ$ drives $K_{\\text{eq}}$ to massive values."
+          - "Le Chatelier's Principle states that if an external stress (change in concentration, pressure, or temperature) is applied to a system at equilibrium, the system will shift its equilibrium position to counteract the applied disturbance. In the Haber-Bosch ammonia synthesis ($N_2 + 3H_2 \\rightleftharpoons 2NH_3 + \\text{heat}$), high pressure favors the right side (fewer gas moles) while cooling shifts equilibrium to the exothermic product side."
+    trivia:
+      - type: multiple_choice
+        question: "Under what thermodynamic condition is a chemical reaction guaranteed to be spontaneous at ALL temperatures?"
+        options:
+          - "Negative enthalpy change (ΔH < 0, exothermic) and positive entropy change (ΔS > 0)"
+          - "Positive enthalpy change (ΔH > 0) and negative entropy change (ΔS < 0)"
+          - "Both enthalpy and entropy changes are zero"
+          - "The reaction is carried out at absolute zero"
+        correct: 0
+        explanation: "In $\\Delta G = \\Delta H - T\\Delta S$, if $\\Delta H$ is negative and $\\Delta S$ is positive, $-T\\Delta S$ is always negative, guaranteeing that $\\Delta G < 0$ at every temperature."
+      - type: multiple_choice
+        question: "How does an enzyme or chemical catalyst accelerate a chemical reaction without being consumed?"
+        options:
+          - "It provides an alternative reaction mechanism with a lower activation energy (Ea)"
+          - "It increases the total free energy difference (ΔG) between reactants and products"
+          - "It raises the temperature of individual colliding reactant molecules"
+          - "It permanently shifts the equilibrium constant K_eq towards the products"
+        correct: 0
+        explanation: "Catalysts reduce the activation energy barrier $E_a$, allowing a larger fraction of collisions to succeed per second. They do not alter thermodynamic state functions ($\\Delta H, \\Delta G$) or $K_{\\text{eq}}$."
+      - type: multiple_choice
+        question: "What is true about the forward and reverse reaction rates when a chemical system reaches dynamic equilibrium?"
+        options:
+          - "The forward reaction rate equals the reverse reaction rate"
+          - "All chemical reactions have completely ceased"
+          - "The concentrations of reactants and products must be exactly equal"
+          - "The forward reaction rate becomes zero while the reverse rate accelerates"
+        correct: 0
+        explanation: "Dynamic equilibrium means reactions continue in both directions at equal rates ($r_{\\text{forward}} = r_{\\text{reverse}}$), keeping reactant and product concentrations steady over time."
+      - type: multiple_choice
+        question: "According to Le Chatelier's Principle, how will increasing the pressure of the system affect the equilibrium: N2(g) + 3 H2(g) ⇌ 2 NH3(g)?"
+        options:
+          - "Equilibrium shifts to the right (toward NH3) because there are fewer gas moles on the product side"
+          - "Equilibrium shifts to the left because nitrogen is heavier than ammonia"
+          - "The reaction rate drops to zero as molecules compress"
+          - "The equilibrium constant K_eq decreases by a factor of 4"
+        correct: 0
+        explanation: "The reactant side has 4 moles of gas ($1 + 3$) while the product side has 2 moles. Increasing pressure drives the system toward the side with fewer gas moles (NH3) to alleviate pressure."
+      - type: multiple_choice
+        question: "What does the Arrhenius equation (k = A e^(-Ea/RT)) demonstrate about reaction rates?"
+        options:
+          - "Reaction rate constants increase exponentially as temperature rises"
+          - "Activation energy drops to zero at high temperatures"
+          - "Reaction rates depend exclusively on container volume"
+          - "Chemical reactions become slower as thermal kinetic energy increases"
+        correct: 0
+        explanation: "Because temperature $T$ is in the denominator of a negative exponent, increasing $T$ exponentially increases the fraction of molecular collisions that exceed the activation barrier $E_a$."
+      - type: multiple_choice
+        question: "What does a negative value of ΔH (enthalpy change) signify for a chemical reaction?"
+        options:
+          - "The reaction is exothermic, releasing heat energy into the surrounding environment"
+          - "The reaction is endothermic, absorbing heat from the surroundings"
+          - "The reaction creates new molecular degrees of freedom"
+          - "The reaction proceeds at constant entropy"
+        correct: 0
+        explanation: "A negative enthalpy change ($\\Delta H < 0$) indicates that products have lower chemical potential energy than reactants, releasing heat into the surroundings (exothermic)."
+      - type: multiple_choice
+        question: "What fundamental equation connects the standard Gibbs Free Energy change (ΔG°) to the equilibrium constant (K_eq) of a reaction?"
+        options:
+          - "ΔG° = -RT ln(K_eq)"
+          - "ΔG° = K_eq / (RT)"
+          - "ΔG° = ΔH° + T ln(K_eq)"
+          - "ΔG° = -n F E°_cell / K_eq"
+        correct: 0
+        explanation: "The thermodynamic link between spontaneity and chemical equilibrium is given by $\\Delta G^\\circ = -RT \\ln(K_{\\text{eq}})$. If $\\Delta G^\\circ < 0$, then $K_{\\text{eq}} > 1$, favoring products."
+      - type: multiple_choice
+        question: "What is the physical significance of the 'activated complex' or 'transition state' on a reaction energy diagram?"
+        options:
+          - "The highest-energy, highly unstable geometric configuration along the reaction pathway where old bonds break and new bonds form"
+          - "The lowest-energy intermediate state where molecules rest indefinitely"
+          - "The point where the catalyst binds permanently to the container wall"
+          - "The state where all electrons have been transferred to the solvent"
+        correct: 0
+        explanation: "The transition state corresponds to the maximum potential energy peak along the reaction coordinate, representing a transient, high-energy arrangement of partially broken and forming bonds."
+      - type: multiple_choice
+        question: "Why do exothermic reversible reactions produce LOWER product yields at high temperatures according to Le Chatelier's Principle?"
+        options:
+          - "Adding heat acts as a product in exothermic reactions, shifting equilibrium back toward the reactants"
+          - "High temperatures destroy the electronic structure of the reactants"
+          - "Activation energy increases linearly with temperature"
+          - "Exothermic reactions become endothermic at elevated temperatures"
+        correct: 0
+        explanation: "In an exothermic reaction ($A \\rightleftharpoons B + \\text{heat}$), heat is treated as a product. Raising temperature adds stress, causing the system to shift left toward reactants, lowering $K_{\\text{eq}}$."
+      - type: multiple_choice
+        question: "What is the primary factor that prevents diamond from spontaneously decomposing into graphite at room temperature, despite graphite having lower Gibbs Free Energy (ΔG < 0)?"
+        options:
+          - "An enormous activation energy (Ea) barrier, making the transition kinetically imperceptible"
+          - "The diamond crystal lattice is completely electrostatically neutral"
+          - "Carbon atoms in diamond lack valence electrons to re-hybridize"
+          - "Atmospheric pressure stabilizes diamond over graphite"
+        correct: 0
+        explanation: "The diamond-to-graphite conversion is thermodynamically spontaneous ($\\Delta G < 0$), but breaking diamond's rigid covalent tetrahedral network requires immense activation energy ($E_a$), trapping it kinetically."
+      - type: multiple_choice
+        question: "In chemical kinetics, what determines the overall reaction rate in a multi-step reaction mechanism?"
+        options:
+          - "The slowest elementary step, known as the Rate-Determining Step (RDS)"
+          - "The fastest elementary step in the reaction pathway"
+          - "The average speed of all reaction steps combined"
+          - "The elementary step with the lowest activation energy"
+        correct: 0
+        explanation: "The overall speed of any multi-step process is strictly constrained by its slowest step, termed the Rate-Determining Step (RDS), analogous to a pipeline bottleneck."
+      - type: multiple_choice
+        question: "What is the mathematical form of the equilibrium constant expression K_c for the synthesis reaction: 2 SO2(g) + O2(g) ⇌ 2 SO3(g)?"
+        options:
+          - "K_c = [SO3]² / ([SO2]² [O2])"
+          - "K_c = ([SO2]² [O2]) / [SO3]²"
+          - "K_c = [SO3] / ([SO2] [O2])"
+          - "K_c = 2 [SO3] / (2 [SO2] + [O2])"
+        correct: 0
+        explanation: "By the Law of Mass Action, the concentrations of products are raised to their stoichiometric coefficients and placed in the numerator, divided by reactants in the denominator: $K_c = \\frac{[SO_3]^2}{[SO_2]^2 [O_2]}$."
+      - type: multiple_choice
+        question: "What does the Second Law of Thermodynamics state regarding isolated systems and spontaneous processes?"
+        options:
+          - "The total entropy of the universe increases in any spontaneous process"
+          - "Energy cannot be converted between thermal and mechanical forms"
+          - "The internal energy of an isolated system drops to zero over time"
+          - "Entropy reaches a maximum value only at absolute zero"
+        correct: 0
+        explanation: "The Second Law dictates that spontaneous transformations disperse energy and increase the total entropy of the universe: $\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0$."
+      - type: multiple_choice
+        question: "How does increasing the surface area of a solid reactant (e.g., crushing a solid tablet into fine powder) increase its reaction rate?"
+        options:
+          - "It exposes more reactant particles to collisions per unit time"
+          - "It lowers the activation energy of the chemical reaction"
+          - "It increases the temperature of the reaction mixture"
+          - "It alters the orbital hybridization of the surface atoms"
+        correct: 0
+        explanation: "Heterogeneous reactions occur at phase interfaces. Crushing a solid expands the exposed surface area, increasing collision frequency between reactant molecules."
+      - type: multiple_choice
+        question: "What happens to the numerical value of the equilibrium constant K_eq when a catalyst is added to a reversible reaction?"
+        options:
+          - "K_eq remains completely unchanged"
+          - "K_eq increases significantly"
+          - "K_eq decreases to promote reactant stability"
+          - "K_eq oscillates between forward and reverse states"
+        correct: 0
+        explanation: "A catalyst speeds up both forward and reverse reaction rates by the exact same proportion by lowering $E_a$. Therefore, the ratio of rate constants and $K_{\\text{eq}}$ remain unaffected."
+
+  - id: organic_chemistry_materials_energy
+    title: "5. Organic Chemistry, Polymers & Electrochemical Energy"
+    description: >
+      Explore the molecular architecture of carbon, synthetic polymers, redox thermodynamics, galvanic cells, and modern lithium-ion battery chemistry.
+    cards:
+      - title: "The Unique Chemistry of Carbon & Functional Groups"
+        figure:
+          title: "Galvanic Electrochemical Cell Architecture"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Anode Beaker -->
+              <rect x="50" y="50" width="130" height="85" rx="4" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="1.5"/>
+              <rect x="75" y="35" width="20" height="80" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+              <text x="85" y="28" font-size="10" font-weight="bold" fill="#3b82f6" text-anchor="middle">Zn Anode (-)</text>
+              <text x="115" y="115" font-size="9" fill="currentColor">Zn → Zn²⁺ + 2e⁻</text>
+
+              <!-- Cathode Beaker -->
+              <rect x="340" y="50" width="130" height="85" rx="4" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="1.5"/>
+              <rect x="425" y="35" width="20" height="80" fill="#f97316" stroke="#c2410c" stroke-width="1.5"/>
+              <text x="435" y="28" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">Cu Cathode (+)</text>
+              <text x="405" y="115" font-size="9" fill="currentColor">Cu²⁺ + 2e⁻ → Cu</text>
+
+              <!-- External wire -->
+              <path d="M 85 35 L 85 15 L 435 15 L 435 35" fill="none" stroke="#eab308" stroke-width="2"/>
+              <circle cx="260" cy="15" r="10" fill="#1e293b" stroke="#eab308" stroke-width="1.5"/>
+              <text x="260" y="19" font-size="9" font-weight="bold" fill="#eab308" text-anchor="middle">V</text>
+              <text x="260" y="32" font-size="9" fill="#eab308" text-anchor="middle">e⁻ flow →</text>
+
+              <!-- Salt Bridge -->
+              <path d="M 140 70 Q 260 40 380 70" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+              <text x="260" y="60" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">Salt Bridge (Ion Flow)</text>
+            </svg>
+          caption: "A Galvanic cell generates electrical current from spontaneous redox reactions: oxidation at the anode produces electrons that power external loads toward the cathode."
+        points:
+          - "Carbon is the foundation of organic chemistry and biochemistry due to its unique Catenation ability: with 4 valence electrons and intermediate electronegativity (2.55), carbon forms exceptionally stable covalent bonds with itself and diverse elements ($H, O, N, P, S$), generating linear, branched, and cyclic architectures."
+          - "Hydrocarbons form the primary organic scaffolds: Alkanes ($C_n H_{2n+2}$) contain exclusively single $\\sigma$ bonds; Alkenes contain reactive $C=C$ double bonds; Alkynes contain $C\\equiv C$ triple bonds; and Aromatic rings (like benzene, $C_6H_6$) feature delocalized $\\pi$ electron clouds with exceptional resonance stabilization."
+          - "Functional Groups act as modular reactive centers that dictate chemical properties: Hydroxyl ($-OH$, alcohols), Carbonyl ($C=O$, aldehydes/ketones), Carboxyl ($-COOH$, organic acids), and Amino ($-NH_2$, basic amines)."
+          - "Isomerism allows identical molecular formulas to exhibit wildly different properties. Structural Isomers differ in atomic connectivity, while Stereoisomers (including Enantiomers, non-superimposable mirror images) have identical connectivity but distinct 3D spatial orientations—a critical factor in pharmaceutical receptor binding."
+      - title: "Polymers, Macromolecules & Modern Materials"
+        points:
+          - "Polymers are high-molecular-weight macromolecules constructed by repeatedly linking small chemical subunits called Monomers. Natural polymers include DNA (nucleotide monomers), proteins (amino acid monomers), and cellulose (glucose monomers)."
+          - "Addition (Chain-Growth) Polymerization occurs when monomers containing carbon-carbon double bonds (such as ethylene, $CH_2=CH_2$) open their $\\pi$ bonds to link into continuous carbon backbones (forming Polyethylene, Polypropylene, and Polystyrene) without generating any byproducts."
+          - "Condensation (Step-Growth) Polymerization occurs when bi-functional monomers react to form new covalent linkages (such as esters or amides) while expelling a small byproduct molecule (typically water, $H_2O$), producing materials like Nylon, Kevlar, and PET plastic."
+          - "Material properties are engineered through molecular architecture: high-density polyethylene (HDPE) features unbranched, tightly packed linear chains yielding rigid plastics, while low-density polyethylene (LDPE) has extensive branching preventing tight packing, creating flexible films."
+      - title: "Redox Chemistry, Galvanic Cells & Batteries"
+        points:
+          - "Oxidation-Reduction (Redox) reactions involve electron transfer between chemical species. Oxidation is the loss of electrons (increase in oxidation state); Reduction is the gain of electrons (decrease in oxidation state). Remember the mnemonic OIL RIG: Oxidation Is Loss, Reduction Is Gain."
+          - "A Galvanic (Voltaic) Cell harnesses a spontaneous redox reaction to generate electrical current through an external circuit. Oxidation occurs at the Anode (negative terminal); Reduction occurs at the Cathode (positive terminal): 'An Ox and a Red Cat'."
+          - "A Salt Bridge (or porous separator) maintains electrical neutrality by allowing counter-ions to migrate between half-cells, preventing charge buildup that would otherwise instantly halt current flow."
+          - "Cell Potential ($E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$) measures the thermodynamic driving force. According to the Nernst-Faraday equation, $\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$, where $n$ is electron moles and $F \\approx 96,485\\text{ C/mol}$ is Faraday's constant. A positive cell potential corresponds to a spontaneous process ($\\Delta G < 0$)."
+          - "Lithium-Ion Batteries operate as 'rocking-chair' cells: during discharge, $Li^+$ ions spontaneously de-intercalate from the graphite anode and migrate through an organic electrolyte to intercalate into a transition metal oxide cathode ($LiCoO_2$), driving electrons through the external circuit."
+    trivia:
+      - type: multiple_choice
+        question: "In electrochemistry, what reaction takes place at the Anode of any electrochemical cell?"
+        options:
+          - "Oxidation (loss of electrons)"
+          - "Reduction (gain of electrons)"
+          - "Proton synthesis"
+          - "Precipitation of neutral salts"
+        correct: 0
+        explanation: "By universal definition, oxidation occurs at the Anode (remember: 'An Ox' = Anode Oxidation), while reduction occurs at the Cathode ('Red Cat' = Reduction Cathode)."
+      - type: multiple_choice
+        question: "What key characteristic allows carbon to form millions of diverse organic compounds, from DNA to synthetic polymers?"
+        options:
+          - "Its ability to form up to four stable covalent bonds and chain to other carbon atoms (catenation)"
+          - "Its exceptionally high atomic mass compared to other nonmetals"
+          - "Its ability to act as an alkali metal under standard conditions"
+          - "Its zero electronegativity, preventing electron attraction"
+        correct: 0
+        explanation: "Carbon has 4 valence electrons ($2s^2 2p^2$), allowing it to form stable single, double, and triple bonds with itself (catenation) and many other elements in 3D networks."
+      - type: multiple_choice
+        question: "What mnemonic is universally taught to remember the definitions of Oxidation and Reduction?"
+        options:
+          - "OIL RIG: Oxidation Is Loss, Reduction Is Gain (of electrons)"
+          - "CAT DOG: Cations Are Tiny, Delocalized Orbital Gases"
+          - "LEO GER: Loss of Energy is Oxidation, Gain of Energy is Reduction"
+          - "MASS LAW: Matter Always Stays Spatially Localized"
+        correct: 0
+        explanation: "OIL RIG stands for: Oxidation Is Loss (of electrons), Reduction Is Gain (of electrons)."
+      - type: multiple_choice
+        question: "What is the primary function of a salt bridge in a galvanic (voltaic) electrochemical cell?"
+        options:
+          - "To allow counter-ions to flow between half-cells, maintaining electrical neutrality without mixing solutions"
+          - "To provide a low-resistance path for electron conduction between electrodes"
+          - "To increase the activation energy of the redox reaction"
+          - "To cool the electrolyte solutions during high-current operation"
+        correct: 0
+        explanation: "Without a salt bridge, positive charge builds up in the oxidation beaker and negative charge in the reduction beaker, shutting down current flow within microseconds."
+      - type: multiple_choice
+        question: "What functional group characterizes organic carboxylic acids, such as acetic acid (found in vinegar)?"
+        options:
+          - "-COOH (a carbonyl bonded to a hydroxyl group)"
+          - "-OH (hydroxyl group bonded to an alkane)"
+          - "-NH2 (amino group)"
+          - "-CHO (terminal aldehyde group)"
+        correct: 0
+        explanation: "Carboxylic acids feature the carboxyl group ($-COOH$), which can dissociate to release a proton ($H^+$), yielding acidic properties."
+      - type: multiple_choice
+        question: "How do lithium ions (Li+) move inside a rechargeable lithium-ion battery during DISCHARGE to power a device?"
+        options:
+          - "They migrate through the internal electrolyte from the negative anode to the positive cathode"
+          - "They flow through the external copper wiring alongside electrons"
+          - "They are converted into gaseous lithium metal and expand against the casing"
+          - "They fuse into helium nuclei inside the graphite lattice"
+        correct: 0
+        explanation: "During discharge, lithium ions de-intercalate from the graphite anode and travel through the liquid electrolyte to the cathode, while electrons travel via the external circuit."
+      - type: multiple_choice
+        question: "What is the fundamental difference between addition polymerization and condensation polymerization?"
+        options:
+          - "Condensation polymerization eliminates a small byproduct molecule (like water) during each bond formation, whereas addition does not"
+          - "Addition polymerization requires an electrical battery, while condensation occurs spontaneously"
+          - "Condensation produces exclusively inorganic glass matrices"
+          - "Addition polymerization breaks triple bonds exclusively"
+        correct: 0
+        explanation: "Addition polymerization opens alkene double bonds without losing atoms. Condensation polymerization links functional monomers while releasing small byproducts like $H_2O$ or $HCl$."
+      - type: multiple_choice
+        question: "What term describes molecules that have identical molecular formulas and atomic connectivity, but are non-superimposable mirror images of each other?"
+        options:
+          - "Enantiomers (Optical Isomers)"
+          - "Structural Isomers"
+          - "Conformational Rotamers"
+          - "Allotropes"
+        correct: 0
+        explanation: "Enantiomers are chiral stereoisomers that mirror each other (like left and right hands), rotating plane-polarized light in opposite directions and interacting differently with biological enzymes."
+      - type: multiple_choice
+        question: "What fundamental relationship links standard cell potential (E°_cell) to the standard Gibbs Free Energy change (ΔG°)?"
+        options:
+          - "ΔG° = -n F E°_cell"
+          - "ΔG° = n F / E°_cell"
+          - "ΔG° = E°_cell / (R T)"
+          - "ΔG° = -R T ln(E°_cell)"
+        correct: 0
+        explanation: "The equation $\\Delta G^\\circ = -n F E^\\circ_{\\text{cell}}$ (where $n$ is electron moles and $F$ is Faraday's constant) shows that a positive cell potential ($E^\\circ > 0$) guarantees a thermodynamically spontaneous reaction ($\\Delta G^\\circ < 0$)."
+      - type: multiple_choice
+        question: "What is the oxidation state of sulfur in the sulfate ion (SO4²⁻)?"
+        options:
+          - "+6"
+          - "+4"
+          - "-2"
+          - "+2"
+        correct: 0
+        explanation: "Each oxygen atom has an oxidation state of $-2$ ($4 \\times -2 = -8$). The overall ion charge is $-2$. Thus, $S + (-8) = -2 \\implies S = +6$."
+      - type: multiple_choice
+        question: "Why is benzene (C6H6) exceptionally stable compared to typical open-chain alkenes?"
+        options:
+          - "Its six pi electrons are completely delocalized across a planar conjugated ring (aromatic resonance stabilization)"
+          - "It contains ionic bonds between alternating carbon atoms"
+          - "All carbon-carbon bonds are triple bonds"
+          - "It forms an open tetrahedral diamond lattice"
+        correct: 0
+        explanation: "Benzene fulfills Hückel's rule ($4n + 2 = 6\\ \\pi$ electrons in a planar ring). The continuous cyclic overlap of $p$ orbitals delocalizes electron density, imparting remarkable thermodynamic stability."
+      - type: multiple_choice
+        question: "What happens when an electrolytic cell is operated, in contrast to a spontaneous galvanic cell?"
+        options:
+          - "Electrical energy is supplied from an external power source to drive a non-spontaneous chemical reaction (ΔG > 0)"
+          - "Chemical reactions produce electricity without any external power"
+          - "Electrons flow exclusively from the cathode to the anode through the solution"
+          - "The cell potential becomes infinitely positive"
+        correct: 0
+        explanation: "An electrolytic cell consumes external electrical voltage to force a non-spontaneous redox process ($\\Delta G > 0$), such as water splitting ($2H_2O \\to 2H_2 + O_2$) or electroplating."
+      - type: multiple_choice
+        question: "Which synthetic polymer, widely used in milk jugs and water pipes, is produced by the addition polymerization of ethylene (C2H4)?"
+        options:
+          - "Polyethylene (PE)"
+          - "Polystyrene (PS)"
+          - "Polyvinyl Chloride (PVC)"
+          - "Polyethylene Terephthalate (PET)"
+        correct: 0
+        explanation: "Polyethylene is synthesized by chain-growth addition polymerization of ethylene monomers ($n\\ CH_2=CH_2 \\to -[CH_2-CH_2]_n-$), forming the world's most widely manufactured plastic."
+      - type: multiple_choice
+        question: "What is the standard reduction potential of the Standard Hydrogen Electrode (SHE), which serves as the universal reference benchmark for all half-cell potentials?"
+        options:
+          - "0.00 Volts"
+          - "1.00 Volt"
+          - "-1.00 Volt"
+          - "1.23 Volts"
+        correct: 0
+        explanation: "By international convention, the reduction of hydrogen ions on platinum ($2H^+ + 2e^- \\to H_2$) is assigned a standard reduction potential of exactly $0.00\\text{ V}$ at all temperatures."
+      - type: multiple_choice
+        question: "What structural feature distinguishes High-Density Polyethylene (HDPE) from Low-Density Polyethylene (LDPE)?"
+        options:
+          - "HDPE has predominantly linear, unbranched polymer chains that pack tightly together into dense crystalline regions"
+          - "HDPE contains aromatic benzene rings in every repeating unit"
+          - "LDPE contains metallic cross-links between polymer backbones"
+          - "HDPE is produced exclusively through condensation polymerization"
+        correct: 0
+        explanation: "Linear chains in HDPE allow close, efficient packing and high crystallinity, yielding a stiffer, stronger plastic than branched LDPE."

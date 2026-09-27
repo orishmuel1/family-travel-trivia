@@ -1,0 +1,943 @@
+id: biology_101_en
+type: academic
+icon: "🧬"
+title: "Molecular Biology & Genetics for Engineers (Biology 101)"
+description: >
+  A first-principles engineering exploration of cellular operating systems, molecular machines,
+  genetic information storage, metabolic bioenergetics, evolutionary algorithms, and modern CRISPR synthetic biotechnology.
+lang: en
+audience: family
+categories:
+  - id: cellular_architecture_bioenergetics
+    title: "1. Cellular Architecture, Cell Membranes & Bioenergetics"
+    description: >
+      Explore the microscopic hardware of life: organelle compartmentalization, phospholipid bilayer membrane transport,
+      and ATP bioenergetics powered by molecular rotary engines.
+    cards:
+      - title: "Cellular Compartmentalization: Organelles as Micro-Factories"
+        figure:
+          title: "Eukaryotic Cell Compartmental Architecture"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Outer Cell Membrane -->
+              <ellipse cx="260" cy="75" rx="240" ry="65" fill="#3b82f6" fill-opacity="0.08" stroke="#3b82f6" stroke-width="2.5"/>
+              <text x="70" y="35" font-size="10" font-weight="bold" fill="#3b82f6">Plasma Membrane</text>
+
+              <!-- Nucleus -->
+              <circle cx="160" cy="75" r="38" fill="#8b5cf6" fill-opacity="0.25" stroke="#8b5cf6" stroke-width="2"/>
+              <circle cx="160" cy="75" r="14" fill="#8b5cf6" fill-opacity="0.6"/>
+              <text x="160" y="78" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">Nucleus</text>
+              <text x="160" y="125" font-size="9" fill="currentColor" text-anchor="middle">DNA Genomic Core</text>
+
+              <!-- Mitochondria -->
+              <ellipse cx="360" cy="55" rx="35" ry="18" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+              <path d="M 335 55 Q 345 45 355 55 T 375 55" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+              <text x="360" y="58" font-size="9" font-weight="bold" fill="#ef4444" text-anchor="middle">Mitochondria</text>
+              <text x="430" y="58" font-size="9" fill="currentColor">ATP Generator</text>
+
+              <!-- Ribosomes / ER -->
+              <ellipse cx="340" cy="105" rx="40" ry="16" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5"/>
+              <text x="340" y="109" font-size="9" font-weight="bold" fill="#10b981" text-anchor="middle">Endoplasmic Reticulum</text>
+              <text x="435" y="109" font-size="9" fill="currentColor">Protein Synthesis</text>
+            </svg>
+          caption: "Eukaryotic cells use membrane-bound organelles to compartmentalize incompatible biochemical reactions: the nucleus stores code while mitochondria generate energy."
+        points:
+          - "All living organisms are composed of cells—the fundamental atomic units of biology. Life partitions into two primary architectural paradigms: Prokaryotes (single-celled bacteria and archaea lacking internal membrane-bound compartments) and Eukaryotes (complex cells with distinct specialized organelles, comprising all plants, animals, and fungi)."
+          - "The Nucleus serves as the cell's secured central server room, encapsulating the organism's double-stranded DNA genome behind a double-membrane nuclear envelope perforated by selective nuclear pore complexes."
+          - "Specialized organelle sub-systems execute coordinated tasks: the Endoplasmic Reticulum (ER) synthesizes lipids and processes folding polypeptides; the Golgi Apparatus acts as the cellular logistics and shipping hub, tagging and packaging proteins into vesicles; and Lysosomes function as recycling incinerators filled with acid hydrolases."
+          - "The Endosymbiotic Theory (championed by Lynn Margulis) proves that mitochondria and chloroplasts originated as independent ancient prokaryotic bacteria that were engulfed by ancestral host cells over 1.5 billion years ago, retaining their own circular DNA genomes and bacterial ribosomes."
+      - title: "The Lipid Bilayer Membrane & Active Transport Pumps"
+        points:
+          - "Every cell is enclosed by a Plasma Membrane structured as an Amphipathic Phospholipid Bilayer: water-soluble polar phosphate heads face external and internal aqueous environments, while hydrophobic fatty acid tails shield themselves in the interior, creating an impermeable barrier to polar ions and large molecules."
+          - "The Fluid Mosaic Model conceptualizes the membrane as a 2D liquid matrix where transmembrane proteins, glycoproteins, and cholesterol molecules drift laterally, maintaining optimal mechanical fluidity across temperature variations."
+          - "Passive Transport occurs down electrochemical gradients without energy expenditure: simple diffusion of small non-polar gases ($O_2, CO_2$) directly through the lipid bilayer, and facilitated diffusion of polar water molecules through specialized aquaporin channels."
+          - "Active Transport pumps ions against their concentration gradients using chemical energy. The sodium-potassium pump ($Na^+/K^+$ ATPase) consumes one molecule of ATP to pump 3 $Na^+$ ions out of the cell while pulling 2 $K^+$ ions in, generating the transmembrane electrical resting potential ($-70\\text{ mV}$) that powers nerve signals and secondary nutrient transport."
+      - title: "Bioenergetics: ATP Synthesis & The Mitochondrial Rotary Engine"
+        points:
+          - "Adenosine Triphosphate (ATP) is the universal rechargeable chemical battery of all living organisms. Hydrolyzing ATP into Adenosine Diphosphate (ADP) and inorganic phosphate releases approximately $-30.5\\text{ kJ/mol}$ of Gibbs free energy ($\\Delta G^\\circ$), which cells couple directly to drive otherwise non-spontaneous endergonic reactions."
+          - "Cellular Respiration extracts energy from glucose ($C_6H_{12}O_6 + 6O_2 \\to 6CO_2 + 6H_2O + \\sim 32\\text{ ATP}$) across three sequential stages: (1) Glycolysis in the cytosol (anaerobic, breaking 6-carbon glucose into two 3-carbon pyruvates), (2) The Citric Acid Cycle (Krebs Cycle) in the mitochondrial matrix, stripping high-energy electrons into carrier cofactors $NADH$ and $FADH_2$."
+          - "The Electron Transport Chain (ETC): In the inner mitochondrial membrane, electrons from $NADH$ and $FADH_2$ pass through four protein complexes to terminal oxygen ($O_2$), powering proton pumps that pump $H^+$ ions across into the intermembrane space, creating a steep electrochemical proton gradient (Proton-Motive Force)."
+          - "Chemiosmosis & The $F_0F_1$-ATP Synthase Rotary Motor: Protons rush back into the mitochondrial matrix through ATP Synthase, an actual biological nanomotor. The proton flow physically spins the $F_0$ rotor shaft at up to 6,000 RPM, mechanically compressing ADP and $P_i$ together into ATP at near 100% thermodynamic efficiency."
+    trivia:
+      - type: multiple_choice
+        question: "What is the universal high-energy chemical currency used by all living cells to power metabolic reactions?"
+        options:
+          - "Adenosine Triphosphate (ATP)"
+          - "Deoxyribonucleic Acid (DNA)"
+          - "Glucose-6-Phosphate"
+          - "Cholesterol Ester"
+        correct: 0
+        explanation: "ATP acts as the cell's rechargeable energy currency, releasing energy when its terminal phosphoanhydride bond is hydrolyzed to ADP."
+      - type: multiple_choice
+        question: "According to the Endosymbiotic Theory, what was the evolutionary origin of mitochondria inside complex eukaryotic cells?"
+        options:
+          - "Free-living aerobic bacteria engulfed by an ancestral host cell over a billion years ago"
+          - "Spontaneous crystallization of cytosolic lipid droplets"
+          - "Budding off of the cell's nuclear membrane during viral infection"
+          - "Fossilized protein precipitates formed in volcanic hydrothermal vents"
+        correct: 0
+        explanation: "Mitochondria evolved from engulfed alpha-proteobacteria, as evidenced by their own separate circular DNA, bacterial ribosomes, and double membranes."
+      - type: multiple_choice
+        question: "How many sodium (Na+) and potassium (K+) ions does the Na+/K+ ATPase pump move across the membrane per ATP molecule consumed?"
+        options:
+          - "3 Na⁺ pumped out, 2 K⁺ pumped in"
+          - "2 Na⁺ pumped out, 3 K⁺ pumped in"
+          - "1 Na⁺ pumped out, 1 K⁺ pumped in"
+          - "4 Na⁺ pumped in, 2 K⁺ pumped out"
+        correct: 0
+        explanation: "The Na⁺/K⁺ pump exports 3 Na⁺ ions and imports 2 K⁺ ions against their gradients, establishing the negative resting membrane potential."
+      - type: multiple_choice
+        question: "What organelle acts as the cellular logistics, modification, and shipping center for proteins synthesized in the rough ER?"
+        options:
+          - "Golgi Apparatus"
+          - "Lysosome"
+          - "Peroxisome"
+          - "Centrosome"
+        correct: 0
+        explanation: "The Golgi apparatus receives proteins from the endoplasmic reticulum, glycosylates and modifies them, and packages them into target-bound vesicles."
+      - type: multiple_choice
+        question: "What physical mechanism drives the generation of ATP by the F₀F₁-ATP Synthase enzyme complex in mitochondria?"
+        options:
+          - "Protons rushing down an electrochemical gradient physically rotate a molecular rotor shaft"
+          - "Direct burning of glucose molecules inside the catalytic cleft"
+          - "Nuclear fission of phosphorus isotopes inside the matrix"
+          - "Absorption of ambient sunlight by mitochondrial chlorophyll pigments"
+        correct: 0
+        explanation: "ATP synthase operates as a rotary engine: proton flow through the F₀ subunit turns the central rotor stalk, mechanically synthesizing ATP in the F₁ catalytic domain."
+      - type: multiple_choice
+        question: "What structural feature characterizes the plasma membrane's phospholipid molecules, allowing them to form spontaneous bilayers in water?"
+        options:
+          - "Amphipathic nature: hydrophilic phosphate heads and hydrophobic fatty acid tails"
+          - "They consist exclusively of non-polar hydrocarbon waxes"
+          - "They are held together by covalent metallic bonds"
+          - "They carry a permanent net positive nuclear charge"
+        correct: 0
+        explanation: "Phospholipids have hydrophilic polar heads that interact with water and hydrophobic non-polar tails that cluster inward to avoid water, forming a stable bilayer."
+      - type: multiple_choice
+        question: "Which metabolic pathway breaks down glucose into pyruvate in the cytoplasm without requiring any oxygen (anaerobic)?"
+        options:
+          - "Glycolysis"
+          - "Krebs Cycle"
+          - "Oxidative Phosphorylation"
+          - "Calvin Cycle"
+        correct: 0
+        explanation: "Glycolysis is an ancient anaerobic cytosolic pathway that splits 6-carbon glucose into two 3-carbon pyruvates, netting 2 ATP and 2 NADH."
+      - type: multiple_choice
+        question: "What is the primary function of lysosomes within animal cells?"
+        options:
+          - "Degrading waste, worn-out organelles, and engulfed pathogens using acidic digestive enzymes"
+          - "Replicating nuclear genomic DNA prior to cell division"
+          - "Generating glucose via photosynthetic carbon fixation"
+          - "Pumping calcium ions into the extracellular space"
+        correct: 0
+        explanation: "Lysosomes contain acid hydrolases (active at pH ~4.5) to digest macromolecules, debris, and foreign matter in a process called autophagy or phagocytosis."
+      - type: multiple_choice
+        question: "What serves as the final terminal electron acceptor at the end of the mitochondrial electron transport chain during aerobic respiration?"
+        options:
+          - "Molecular Oxygen (O2)"
+          - "Carbon Dioxide (CO2)"
+          - "Nitrate (NO3⁻)"
+          - "Glucose"
+        correct: 0
+        explanation: "At Complex IV (cytochrome c oxidase), electrons combine with molecular oxygen and protons to form benign water ($O_2 + 4H^+ + 4e^- \\to 2H_2O$)."
+      - type: multiple_choice
+        question: "What specialized protein channels allow the rapid, selective passive diffusion of water molecules across cell membranes?"
+        options:
+          - "Aquaporins"
+          - "Voltage-gated sodium channels"
+          - "Gap junctions"
+          - "Nuclear pores"
+        correct: 0
+        explanation: "Peter Agre discovered aquaporins (earning the 2003 Nobel Prize), specialized membrane pores that allow water to cross at billions of molecules per second."
+      - type: multiple_choice
+        question: "What primary structural difference distinguishes prokaryotic cells (like E. coli) from eukaryotic cells (like human cells)?"
+        options:
+          - "Prokaryotes lack a membrane-enclosed nucleus and membrane-bound organelles"
+          - "Prokaryotes contain no genetic material or DNA"
+          - "Prokaryotes are always visible to the naked human eye"
+          - "Eukaryotes lack a lipid bilayer plasma membrane"
+        correct: 0
+        explanation: "Prokaryotes maintain their circular DNA in an unenclosed nucleoid region and lack membrane-bound internal compartments like mitochondria or ER."
+      - type: multiple_choice
+        question: "Which component embedded within the lipid bilayer regulates cell membrane fluidity across changing temperatures in animal cells?"
+        options:
+          - "Cholesterol"
+          - "Cellulose"
+          - "Glycogen"
+          - "Starch"
+        correct: 0
+        explanation: "Cholesterol intercalates between phospholipids: at high temperatures it restricts lipid movement, and at low temperatures it prevents rigid packing."
+      - type: multiple_choice
+        question: "Where in eukaryotic cells does the Citric Acid Cycle (Krebs Cycle) take place?"
+        options:
+          - "Mitochondrial Matrix"
+          - "Cytosol"
+          - "Nucleolus"
+          - "Endoplasmic Reticulum Lumen"
+        correct: 0
+        explanation: "After pyruvate is imported into the mitochondria and converted to Acetyl-CoA, the Krebs Cycle runs inside the fluid-filled mitochondrial matrix."
+      - type: multiple_choice
+        question: "What cellular organelle is responsible for synthesizing ribosomal RNA (rRNA) and assembling ribosome subunits inside the nucleus?"
+        options:
+          - "Nucleolus"
+          - "Centrosome"
+          - "Peroxisome"
+          - "Vacuole"
+        correct: 0
+        explanation: "The nucleolus is a dense, non-membrane-bound subnuclear structure dedicated to transcribing rRNA and assembling ribosomal precursor complexes."
+      - type: multiple_choice
+        question: "What is the thermodynamic driving force behind passive simple diffusion of solutes across a permeable boundary?"
+        options:
+          - "The drive to maximize entropy by moving from regions of high concentration to low concentration"
+          - "Hydrolysis of cellular ATP molecules at the membrane surface"
+          - "Gravitational attraction between dissolved solute particles"
+          - "Electrostatic repulsion by the nucleus"
+        correct: 0
+        explanation: "Diffusion is governed by the Second Law of Thermodynamics: random Brownian motion disperses particles from high concentration to low, increasing entropy."
+
+  - id: dna_rna_central_dogma
+    title: "2. DNA Structure, Replication & The Central Dogma"
+    description: >
+      Master the digital code of biology: antiparallel double-helix geometry, high-fidelity DNA replication machinery,
+      transcription to messenger RNA, and ribosomal translation of the universal genetic code.
+    cards:
+      - title: "DNA Architecture: The Double Helix & Base Pairing Rules"
+        figure:
+          title: "The Central Dogma of Molecular Biology"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- DNA Block -->
+              <rect x="25" y="45" width="100" height="60" rx="8" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="2"/>
+              <text x="75" y="72" font-size="13" font-weight="bold" fill="#3b82f6" text-anchor="middle">DNA</text>
+              <text x="75" y="88" font-size="9" fill="currentColor" text-anchor="middle">A, T, G, C (Storage)</text>
+
+              <!-- Arrow 1: Transcription -->
+              <path d="M 130 75 L 205 75" stroke="#ec4899" stroke-width="2.5"/>
+              <polygon points="200,70 210,75 200,80" fill="#ec4899"/>
+              <text x="170" y="65" font-size="9" font-weight="bold" fill="#ec4899" text-anchor="middle">Transcription</text>
+
+              <!-- mRNA Block -->
+              <rect x="210" y="45" width="100" height="60" rx="8" fill="#ec4899" fill-opacity="0.15" stroke="#ec4899" stroke-width="2"/>
+              <text x="260" y="72" font-size="13" font-weight="bold" fill="#ec4899" text-anchor="middle">mRNA</text>
+              <text x="260" y="88" font-size="9" fill="currentColor" text-anchor="middle">A, U, G, C (Message)</text>
+
+              <!-- Arrow 2: Translation -->
+              <path d="M 315 75 L 390 75" stroke="#10b981" stroke-width="2.5"/>
+              <polygon points="385,70 395,75 385,80" fill="#10b981"/>
+              <text x="355" y="65" font-size="9" font-weight="bold" fill="#10b981" text-anchor="middle">Translation</text>
+
+              <!-- Protein Block -->
+              <rect x="395" y="45" width="100" height="60" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/>
+              <text x="445" y="72" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">Protein</text>
+              <text x="445" y="88" font-size="9" fill="currentColor" text-anchor="middle">20 Amino Acids</text>
+            </svg>
+          caption: "The Central Dogma describes biological information transfer: permanent DNA storage is transcribed into transient mRNA messages, then translated into functional catalytic proteins."
+        points:
+          - "Deoxyribonucleic Acid (DNA) is the biological data storage polymer. Each nucleotide consists of three modular parts: a deoxyribose 5-carbon sugar, a negatively charged phosphate group, and one of four nitrogenous bases: Adenine ($A$), Thymine ($T$), Guanine ($G$), or Cytosine ($C$)."
+          - "Watson, Crick, and Rosalind Franklin revealed that DNA is a Double Helix formed by two Antiparallel strands running in opposite directions ($5'\\to 3'$ and $3'\\to 5'$). The sugar-phosphate backbones form an outer structural skeleton, while the bases point inward like ladder rungs."
+          - "Complementary Base Pairing (Chargaff's Rules): Adenine pairs exclusively with Thymine via 2 hydrogen bonds ($A=T$), while Guanine pairs exclusively with Cytosine via 3 hydrogen bonds ($G\\equiv C$). Because $G\\equiv C$ base pairs have 3 hydrogen bonds, DNA with high GC content has higher thermal stability (higher melting temperature $T_m$)."
+          - "The helical geometry creates alternating Major and Minor Grooves along the exterior. Sequence-specific regulatory proteins (transcription factors, zinc fingers) inspect base-pair chemical signatures primarily through the wider major groove without unwinding the helix."
+      - title: "High-Fidelity DNA Replication Machinery"
+        points:
+          - "DNA replication is Semi-Conservative (proven by Meselson and Stahl): each daughter double helix contains one preserved template strand from the parent molecule and one newly synthesized daughter strand."
+          - "Replication initiates at defined genomic coordinates called Origins of Replication. The molecular enzyme DNA Helicase unwinds the double helix, while Single-Strand DNA-Binding Proteins (SSBs) prevent the exposed single strands from re-annealing."
+          - "The Asymmetry Problem: DNA Polymerase can ONLY synthesize DNA in the $5'\\to 3'$ direction, requiring a free $3'\\text{-OH}$ primer provided by RNA Primase. The Leading Strand is synthesized continuously toward the replication fork, while the Lagging Strand is synthesized discontinuously away from the fork in short segments called Okazaki Fragments."
+          - "DNA Polymerase possesses an intrinsic $3'\\to 5'$ proofreading exonuclease domain that detects and excises mismatched bases during synthesis, reducing the error rate to less than 1 mistake per 100 million base pairs ($10^{-8}$), with post-replication Mismatch Repair fixing remaining errors."
+      - title: "Transcription, RNA Processing & Ribosomal Translation"
+        points:
+          - "Transcription: In the nucleus, RNA Polymerase binds gene promoter sequences (like the TATA box) to copy the template DNA strand into a complementary single-stranded Messenger RNA (mRNA) transcript. RNA replaces Thymine ($T$) with Uracil ($U$) and utilizes ribose sugar ($2'\\text{-OH}$ present)."
+          - "Eukaryotic mRNA Processing: Before leaving the nucleus, pre-mRNA undergoes three modifications: (1) addition of a protective $5'$-methylguanosine cap, (2) addition of a stabilizing $3'$ Poly-A tail, and (3) RNA Splicing by the Spliceosome, which excises non-coding Introns and stitches together coding Exons."
+          - "The Genetic Code is a degenerate, non-overlapping triplet code: each sequence of 3 nucleotides forms a Codon coding for one of 20 standard amino acids. There are $4^3 = 64$ possible codons: 61 specify amino acids (AUG serves as the universal Start codon for Methionine) and 3 specify Stop codons (UAA, UAG, UGA)."
+          - "Translation occurs on Ribosomes in the cytoplasm: Transfer RNA (tRNA) molecules carry specific amino acids and match their 3-base Anticodon to the mRNA codon. The ribosome's peptidyl transferase center (a ribozyme composed of catalytic rRNA) catalyzes peptide bond formation, assembling a growing polypeptide chain."
+    trivia:
+      - type: multiple_choice
+        question: "In double-stranded DNA, what base pair combination is held together by three hydrogen bonds, conferring higher thermal stability?"
+        options:
+          - "Guanine and Cytosine (G ≡ C)"
+          - "Adenine and Thymine (A = T)"
+          - "Adenine and Uracil (A = U)"
+          - "Cytosine and Thymine (C = T)"
+        correct: 0
+        explanation: "Guanine and Cytosine form 3 hydrogen bonds, whereas Adenine and Thymine form only 2. DNA with higher GC content requires higher temperatures to denature."
+      - type: multiple_choice
+        question: "In which biochemical direction can DNA Polymerase exclusively synthesize a new daughter DNA strand?"
+        options:
+          - "5' to 3' direction only"
+          - "3' to 5' direction only"
+          - "Bidirectionally without restriction"
+          - "From the centromere to the telomere exclusively"
+        correct: 0
+        explanation: "DNA Polymerase can only add new nucleotides to the free 3'-OH group of an existing chain, meaning synthesis proceeds strictly from 5' to 3'."
+      - type: multiple_choice
+        question: "What universal start codon initiates protein translation in ribosomes, coding for the amino acid Methionine?"
+        options:
+          - "AUG"
+          - "UAA"
+          - "UAG"
+          - "UGA"
+        correct: 0
+        explanation: "AUG is the universal start codon in almost all mRNA transcripts, specifying the insertion of Methionine (or fMet in bacteria)."
+      - type: multiple_choice
+        question: "What are Okazaki fragments produced during DNA replication?"
+        options:
+          - "Short, discontinuous segments of newly synthesized DNA formed on the lagging template strand"
+          - "Enzymes that seal breaks in the sugar-phosphate backbone"
+          - "Non-coding sequences spliced out of mature messenger RNA"
+          - "Protein caps that protect the ends of eukaryotic chromosomes"
+        correct: 0
+        explanation: "Because the lagging strand runs opposite to the replication fork direction, DNA polymerase must synthesize it discontinuously in Okazaki fragments."
+      - type: multiple_choice
+        question: "What nitrogenous base is found in RNA molecules in place of Thymine (T) found in DNA?"
+        options:
+          - "Uracil (U)"
+          - "Adenine (A)"
+          - "Cytosine (C)"
+          - "Guanine (G)"
+        correct: 0
+        explanation: "RNA incorporates Uracil (U) instead of Thymine (T). Uracil pairs with Adenine through two complementary hydrogen bonds."
+      - type: multiple_choice
+        question: "What is the primary function of the molecular enzyme DNA Ligase during DNA replication and repair?"
+        options:
+          - "Catalyzing the formation of covalent phosphodiester bonds to seal nicks in the sugar-phosphate backbone"
+          - "Unwinding the double-stranded DNA helix ahead of the replication fork"
+          - "Synthesizing short RNA primers to initiate synthesis"
+          - "Exposing major grooves for transcription factor binding"
+        correct: 0
+        explanation: "DNA Ligase acts as molecular glue, joining Okazaki fragments on the lagging strand by reforming covalent phosphodiester bonds."
+      - type: multiple_choice
+        question: "What biological macromolecule complex carries out RNA Splicing, removing non-coding introns from eukaryotic pre-mRNA?"
+        options:
+          - "Spliceosome"
+          - "Ribosome"
+          - "Proteasome"
+          - "DNA Polymerase I"
+        correct: 0
+        explanation: "The spliceosome (a large complex of snRNAs and proteins) recognizes intron-exon boundaries, excises introns, and ligates exons into mature mRNA."
+      - type: multiple_choice
+        question: "What term describes the biological phenomenon where multiple different 3-letter mRNA codons specify the exact same amino acid?"
+        options:
+          - "Degeneracy (Redundancy) of the Genetic Code"
+          - "Universal Mutation Bias"
+          - "Antiparallel Invariance"
+          - "Allosteric Feedback"
+        correct: 0
+        explanation: "With 64 possible triplet codons and only 20 standard amino acids, the genetic code is degenerate (redundant), protecting against point mutations."
+      - type: multiple_choice
+        question: "What experimental breakthrough proved that DNA replication is Semi-Conservative rather than conservative or dispersive?"
+        options:
+          - "Meselson-Stahl Experiment using nitrogen-15 isotope labeling"
+          - "Hershey-Chase bacteriophage blender experiment"
+          - "Griffith transformation experiment with pneumonia bacteria"
+          - "Miller-Urey primordial soup synthesis"
+        correct: 0
+        explanation: "Meselson and Stahl grew bacteria in heavy ¹⁵N and shifted to ¹⁴N; density centrifugation proved daughter DNA molecules retain one parental strand."
+      - type: multiple_choice
+        question: "What enzyme synthesizes the complementary pre-mRNA transcript from a DNA template during transcription?"
+        options:
+          - "RNA Polymerase"
+          - "DNA Polymerase III"
+          - "Topoisomerase"
+          - "Reverse Transcriptase"
+        correct: 0
+        explanation: "RNA Polymerase reads the template DNA strand from 3' to 5' and synthesizes a complementary single-stranded RNA transcript from 5' to 3'."
+      - type: multiple_choice
+        question: "What molecular adapter carries a specific amino acid at one end and a complementary 3-base anticodon at the other during translation?"
+        options:
+          - "Transfer RNA (tRNA)"
+          - "Ribosomal RNA (rRNA)"
+          - "MicroRNA (miRNA)"
+          - "Small interfering RNA (siRNA)"
+        correct: 0
+        explanation: "Transfer RNA (tRNA) acts as the physical translator: its anticodon matches the mRNA codon, delivering the correct amino acid to the ribosome."
+      - type: multiple_choice
+        question: "What are the protective repeating DNA sequences capping the ends of eukaryotic linear chromosomes called?"
+        options:
+          - "Telomeres"
+          - "Centromeres"
+          - "Plasmids"
+          - "Transposons"
+        correct: 0
+        explanation: "Telomeres (repeats of TTAGGG in humans) protect chromosome ends from degradation; they shorten with each division unless maintained by telomerase."
+      - type: multiple_choice
+        question: "Which enzyme relieves torsional supercoiling strain ahead of the advancing DNA replication fork?"
+        options:
+          - "Topoisomerase (Gyrase)"
+          - "Helicase"
+          - "Primase"
+          - "Exonuclease"
+        correct: 0
+        explanation: "As helicase unwinds the double helix, topoisomerase cuts, swivels, and re-ligates DNA strands to release downstream overwinding tension."
+      - type: multiple_choice
+        question: "What three modifications are added to eukaryotic pre-mRNA before it can be exported to the cytoplasm for translation?"
+        options:
+          - "5' Cap addition, 3' Poly-A tail addition, and intron splicing"
+          - "Lipid phosphorylation, DNA methylation, and histone deacetylation"
+          - "Telomere synthesis, ribosome binding, and plasmid excision"
+          - "Anticodon charging, peptide cleavage, and ubiquitin tagging"
+        correct: 0
+        explanation: "Mature mRNA requires a 5' 7-methylguanosine cap for ribosome recognition, a 3' poly-A tail for stability, and spliceosome removal of non-coding introns."
+      - type: multiple_choice
+        question: "How many total possible 3-nucleotide codons can be generated from the four RNA bases (A, U, G, C)?"
+        options:
+          - "64 codons (4³)"
+          - "20 codons"
+          - "16 codons (4²)"
+          - "128 codons"
+        correct: 0
+        explanation: "A triplet code formed by 4 bases yields $4 \\times 4 \\times 4 = 64$ unique codons, sufficient to code for 20 amino acids plus punctuation (start and stop)."
+
+  - id: genetics_inheritance_gene_regulation
+    title: "3. Mendelian Genetics, Chromosomes & Gene Regulation"
+    description: >
+      Understand how genetic traits transmit across generations: Mendelian segregation, homologous recombination in meiosis,
+      and genetic logic gates controlling gene expression.
+    cards:
+      - title: "Mendelian Genetics, Alleles & Punnett Square Probabilities"
+        figure:
+          title: "Monohybrid Heterozygous Cross (Aa × Aa)"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Matrix Box -->
+              <rect x="160" y="25" width="200" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="160" y1="75" x2="360" y2="75" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="260" y1="25" x2="260" y2="125" stroke="currentColor" stroke-width="1.5"/>
+
+              <!-- Headers -->
+              <text x="210" y="18" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">A (0.5)</text>
+              <text x="310" y="18" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">a (0.5)</text>
+              <text x="140" y="55" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">A</text>
+              <text x="140" y="105" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">a</text>
+
+              <!-- Cells -->
+              <text x="210" y="55" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">AA (25%)</text>
+              <text x="310" y="55" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle">Aa (25%)</text>
+              <text x="210" y="105" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle">Aa (25%)</text>
+              <text x="310" y="105" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">aa (25%)</text>
+
+              <!-- Legend -->
+              <text x="430" y="55" font-size="10" font-weight="bold" fill="#10b981">Phenotype: 3 : 1</text>
+              <text x="430" y="80" font-size="9" fill="currentColor">75% Dominant</text>
+              <text x="430" y="98" font-size="9" fill="currentColor">25% Recessive</text>
+            </svg>
+          caption: "A Punnett square calculates probabilistic genetic combinations: crossing two heterozygous carriers ($Aa$) yields a 1:2:1 genotypic ratio and a 3:1 dominant phenotype ratio."
+        points:
+          - "Gregor Mendel founded modern genetics by cross-breeding pea plants, demonstrating that traits are inherited as discrete physical units (Genes) rather than through continuous blending."
+          - "An Allele is a specific sequence variant of a gene. Diploid organisms possess two alleles for each gene locus: Homozygous individuals carry two identical alleles ($AA$ or $aa$), while Heterozygous individuals carry two different alleles ($Aa$)."
+          - "The Law of Segregation states that during gamete formation (sperm and egg production), the two alleles for each gene segregate so that each gamete carries only one allele. The Law of Independent Assortment states that genes located on different chromosomes sort independently into gametes."
+          - "Genotype represents the underlying genetic blueprint (e.g., $Aa$), while Phenotype represents the observable physical trait (e.g., brown eyes). In complete dominance, heterozygous carriers ($Aa$) express only the dominant phenotype."
+      - title: "Meiosis, Chromosomal Crossing-Over & Sex-Linked Traits"
+        points:
+          - "While Mitosis clones diploid parent cells into two identical diploid daughter cells ($2n \\to 2n$) for tissue repair and growth, Meiosis reduces the chromosome count by half ($2n \\to 1n$) across two successive divisions to produce four genetically unique haploid gametes."
+          - "Homologous Recombination (Crossing-Over): During Prophase I of meiosis, paired homologous maternal and paternal chromosomes physically align and exchange reciprocal segments of chromatid arms at sites called Chiasmata, shuffling millions of gene combinations."
+          - "Human karyotypes contain 23 pairs of chromosomes (46 total): 22 pairs of Autosomes and 1 pair of Sex Chromosomes ($XX$ for biological females, $XY$ for biological males)."
+          - "Sex-Linked Inheritance: The $X$ chromosome is large and carries over 1,000 essential genes, whereas the diminutive $Y$ chromosome carries primarily male-determining factors (SRY gene). Because males have only one $X$ chromosome ($XY$, hemizygous), recessive X-linked conditions like red-green color blindness and hemophilia manifest far more frequently in males."
+      - title: "Gene Regulation, Epigenetics & The Lac Operon Logic Gate"
+        points:
+          - "Every somatic cell in a multicellular human body contains the exact same complete 3-billion-base-pair genome, yet a neuron looks and operates completely differently from a liver hepatocyte. Cellular differentiation is driven entirely by differential Gene Expression."
+          - "The Bacterial Lac Operon (discovered by Jacob and Monod) acts as a physical genetic logic gate: E. coli bacteria only transcribe enzymes to digest lactose when two conditions are met: Lactose is PRESENT (lactose metabolite binds and removes the Lac Repressor protein from the operator), AND Glucose is ABSENT (elevated cAMP activates the CAP activator)."
+          - "Eukaryotic Transcriptional Regulation: Transcription Factors bind specific DNA promoter and distal Enhancer sequences. DNA looping brings distant enhancers into contact with the core transcriptional machinery via Mediator protein complexes."
+          - "Epigenetics: Heritable changes in gene expression that do not alter the underlying nucleotide sequence. DNA Methylation (adding $-CH_3$ groups to cytosine bases in CpG islands) generally condenses chromatin into tightly packed heterochromatin, silencing gene transcription. Histone Acetylation loosens chromatin into open euchromatin, enabling transcription."
+    trivia:
+      - type: multiple_choice
+        question: "When two heterozygous individuals (Aa × Aa) with a simple dominant-recessive trait mate, what is the expected phenotypic ratio among their offspring?"
+        options:
+          - "3 dominant to 1 recessive (3:1)"
+          - "1 dominant to 1 recessive (1:1)"
+          - "9:3:3:1 ratio"
+          - "All offspring express the recessive trait"
+        correct: 0
+        explanation: "The cross produces 1 AA, 2 Aa, and 1 aa. Because AA and Aa express the dominant phenotype, the physical ratio is 3 dominant to 1 recessive."
+      - type: multiple_choice
+        question: "During which phase of Meiosis does homologous genetic crossing-over occur, generating new combinations of maternal and paternal alleles?"
+        options:
+          - "Prophase I"
+          - "Metaphase II"
+          - "Anaphase I"
+          - "Telophase II"
+        correct: 0
+        explanation: "Crossing-over occurs during Prophase I, where homologous chromosome pairs form tetrads and physically swap DNA segments at chiasmata."
+      - type: multiple_choice
+        question: "Why do X-linked recessive genetic conditions (such as red-green color blindness or hemophilia) affect human males far more frequently than females?"
+        options:
+          - "Males have only one X chromosome (XY), so a single defective allele on the X chromosome has no backup copy to mask it"
+          - "The Y chromosome actively promotes color blindness mutations"
+          - "Males lack DNA repair enzymes on their sex chromosomes"
+          - "X chromosomes are inactivated in all male somatic tissues"
+        correct: 0
+        explanation: "Females (XX) require two defective alleles to express an X-linked recessive trait, while males (XY) express it whenever their single X chromosome carries the mutation."
+      - type: multiple_choice
+        question: "How does the bacterial Lac Operon function as an economic logic gate in E. coli?"
+        options:
+          - "It transcribes lactose-digesting enzymes only when lactose is present AND glucose is absent"
+          - "It produces insulin whenever blood sugar drops"
+          - "It continuously transcribes lactase at maximum speed regardless of nutrient supply"
+          - "It destroys bacterial cell walls when exposed to dairy products"
+        correct: 0
+        explanation: "The Lac Operon is an inducible system: the repressor releases when lactose is present, and CAP activates transcription when glucose is exhausted."
+      - type: multiple_choice
+        question: "What epigenetic modification typically compacts chromatin and silences gene transcription without altering the DNA sequence?"
+        options:
+          - "DNA Methylation (addition of methyl groups to cytosine bases)"
+          - "Histone Phosphorylation"
+          - "Alternative Splicing of Exons"
+          - "Ribosomal Subunit Cleavage"
+        correct: 0
+        explanation: "Methylating cytosine bases (often at CpG islands) attracts chromatin-condensing proteins, locking genes into an inactive, repressed state."
+      - type: multiple_choice
+        question: "What term describes an individual who possesses two identical alleles for a specific gene locus (e.g., AA or aa)?"
+        options:
+          - "Homozygous"
+          - "Heterozygous"
+          - "Hemizygous"
+          - "Polygenic"
+        correct: 0
+        explanation: "Homozygous means having identical alleles at a locus ($AA$ homozygous dominant, or $aa$ homozygous recessive). Heterozygous means having two different alleles ($Aa$)."
+      - type: multiple_choice
+        question: "How many total chromosomes are found in the nucleus of a normal human somatic (body) cell?"
+        options:
+          - "46 chromosomes (23 pairs)"
+          - "23 chromosomes total"
+          - "92 chromosomes (46 pairs)"
+          - "48 chromosomes (24 pairs)"
+        correct: 0
+        explanation: "Human somatic cells are diploid ($2n = 46$), containing 22 pairs of homologous autosomes and 1 pair of sex chromosomes."
+      - type: multiple_choice
+        question: "What is Mendel's Law of Independent Assortment?"
+        options:
+          - "Alleles of two or more different genes sort into gametes completely independently of one another, provided they are on separate chromosomes"
+          - "Dominant alleles always physically destroy recessive alleles during gamete formation"
+          - "All offspring inherit mitochondria exclusively from their paternal lineage"
+          - "Chromosomes clone themselves infinitely during somatic cell mitosis"
+        correct: 0
+        explanation: "Independent assortment states that the maternal/paternal segregation of one chromosome pair does not influence the segregation of other unlinked pairs."
+      - type: multiple_choice
+        question: "What master sex-determining gene located on the human Y chromosome triggers the development of male anatomical characteristics?"
+        options:
+          - "SRY gene (Sex-determining Region Y)"
+          - "FOXP2 gene"
+          - "BRCA1 gene"
+          - "p53 tumor suppressor gene"
+        correct: 0
+        explanation: "The SRY gene on the short arm of the Y chromosome encodes a transcription factor that directs the bipotential embryonic gonads to develop into testes."
+      - type: multiple_choice
+        question: "What cellular process reduces a diploid cell (2n) into four genetically distinct haploid gametes (1n)?"
+        options:
+          - "Meiosis"
+          - "Mitosis"
+          - "Binary Fission"
+          - "Budding"
+        correct: 0
+        explanation: "Meiosis consists of one round of DNA replication followed by two nuclear divisions, reducing chromosome number by half to generate eggs and sperm."
+      - type: multiple_choice
+        question: "What term describes the complete, physical observable traits of an organism resulting from the interaction of its genetic makeup with the environment?"
+        options:
+          - "Phenotype"
+          - "Genotype"
+          - "Karyotype"
+          - "Haplotype"
+        correct: 0
+        explanation: "Phenotype refers to observable structural, physiological, and behavioral traits, whereas Genotype refers to the underlying DNA sequence."
+      - type: multiple_choice
+        question: "What is an 'Enhancer' in eukaryotic gene expression regulation?"
+        options:
+          - "A distal DNA sequence that binds activator transcription factors to dramatically increase transcription of a target gene"
+          - "A ribosomal subunit that accelerates protein folding"
+          - "A mitochondrial enzyme that converts lactic acid into ATP"
+          - "A chemical dye used to visualize DNA bands on agarose gels"
+        correct: 0
+        explanation: "Enhancers are regulatory DNA regions located thousands of base pairs away that loop across 3D nuclear space to boost promoter activity."
+      - type: multiple_choice
+        question: "What is the phenomenon called where a single gene influences multiple, seemingly unrelated phenotypic traits?"
+        options:
+          - "Pleiotropy"
+          - "Polygenic Inheritance"
+          - "Codominance"
+          - "Incomplete Penetrance"
+        correct: 0
+        explanation: "Pleiotropy occurs when one gene mutation impacts diverse body systems (e.g., the Marfan syndrome mutation in fibrillin affecting eyes, bones, and heart)."
+      - type: multiple_choice
+        question: "What is the result of non-disjunction during human meiosis, where homologous chromosomes fail to separate properly?"
+        options:
+          - "Aneuploidy, where daughter gametes end up with an abnormal number of chromosomes (such as Trisomy 21 / Down syndrome)"
+          - "Instant cloning of the parent organism"
+          - "Doubling of mitochondrial ATP output"
+          - "Complete reversal of DNA base pairing"
+        correct: 0
+        explanation: "Non-disjunction leads to gametes missing a chromosome (monosomy) or possessing an extra copy (trisomy), as seen in Trisomy 21."
+      - type: multiple_choice
+        question: "What are Histones around which genomic DNA is wrapped in eukaryotic cell nuclei to form nucleosomes?"
+        options:
+          - "Basic proteins that organize DNA into compact, regulated chromatin fibers"
+          - "Lipid droplets that store excess metabolic calories"
+          - "Polysaccharides that reinforce plant cell walls"
+          - "RNA primers synthesized during lagging strand replication"
+        correct: 0
+        explanation: "Histones are positively charged proteins; DNA wraps around octamers of core histones to form the fundamental 'beads-on-a-string' nucleosome units."
+
+  - id: evolutionary_mechanisms_population_genetics
+    title: "4. Natural Selection, Evolutionary Dynamics & Phylogenetics"
+    description: >
+      Master evolutionary algorithms in living systems: Darwinian selection, genetic drift,
+      Hardy-Weinberg equilibrium, speciation dynamics, and tracing the Tree of Life.
+    cards:
+      - title: "Natural Selection as an Algorithm & The 4 Evolutionary Forces"
+        figure:
+          title: "Three Modes of Natural Selection on Phenotype Distribution"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Stabilizing Selection -->
+              <rect x="20" y="20" width="145" height="110" rx="6" fill="#3b82f6" fill-opacity="0.08" stroke="#3b82f6" stroke-width="1.5"/>
+              <text x="92" y="38" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Stabilizing</text>
+              <path d="M 35 110 Q 92 20 150 110" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+              <text x="92" y="122" font-size="8" fill="currentColor" text-anchor="middle">Narrows Variance</text>
+
+              <!-- Directional Selection -->
+              <rect x="185" y="20" width="145" height="110" rx="6" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1.5"/>
+              <text x="257" y="38" font-size="11" font-weight="bold" fill="#10b981" text-anchor="middle">Directional</text>
+              <path d="M 200 110 Q 285 30 315 110" fill="none" stroke="#10b981" stroke-width="2.5"/>
+              <text x="257" y="122" font-size="8" fill="currentColor" text-anchor="middle">Shifts Mean Phenotype</text>
+
+              <!-- Disruptive Selection -->
+              <rect x="350" y="20" width="150" height="110" rx="6" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-width="1.5"/>
+              <text x="425" y="38" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">Disruptive</text>
+              <path d="M 365 110 Q 390 40 425 90 Q 460 40 485 110" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+              <text x="425" y="122" font-size="8" fill="currentColor" text-anchor="middle">Favors Both Extremes</text>
+            </svg>
+          caption: "Natural selection reshapes phenotypic bell curves: stabilizing selection preserves intermediate traits, directional selection shifts the mean, and disruptive selection splits populations."
+        points:
+          - "Evolution by Natural Selection is a deterministic algorithmic process. If an entity possesses: (1) Phenotypic Variation, (2) Heritability (traits encoded in replicable code), and (3) Differential Reproductive Success (certain variants survive and reproduce at higher rates), adaptive evolution is mathematically inevitable."
+          - "Biological Fitness ($\\omega$) is strictly defined as an organism's relative reproductive success: the contribution of an individual's genotype to the gene pool of the next generation, rather than mere physical strength or longevity."
+          - "Four Fundamental Evolutionary Forces drive all genomic change: (1) Natural Selection (non-random survival of adaptive alleles), (2) Genetic Drift (random stochastic fluctuations in allele frequencies), (3) Gene Flow (migration of alleles between populations), and (4) Mutation (the ultimate source of all novel genetic information)."
+          - "Three Modes of Selection: Stabilizing Selection favors intermediate phenotypes (e.g., human infant birth weight); Directional Selection shifts the population mean toward one extreme (e.g., antibiotic resistance in bacteria); Disruptive Selection favors both extremes over the median (e.g., small and large bird beaks)."
+      - title: "Population Genetics & The Hardy-Weinberg Equilibrium"
+        points:
+          - "Population Genetics models the distribution and temporal change of allele frequencies within interbreeding populations. The total collection of all alleles across all individuals is the Gene Pool."
+          - "The Hardy-Weinberg Principle states that allele and genotype frequencies in a sexually reproducing diploid population remain constant (in equilibrium) from generation to generation in the absence of evolutionary forces: $p + q = 1$ (allele frequencies), and $p^2 + 2pq + q^2 = 1$ (genotype frequencies, where $p^2$ is homozygous dominant, $2pq$ is heterozygous, and $q^2$ is homozygous recessive)."
+          - "Conditions for Hardy-Weinberg Equilibrium serve as a null hypothesis: (1) No natural selection, (2) No mutations, (3) No migration (gene flow), (4) Infinitely large population size, and (5) Completely random mating. When real populations deviate from $p^2 + 2pq + q^2$, evolution is occurring."
+          - "Genetic Drift exerts dominant effects in small populations: Genetic Bottlenecks (catastrophic population collapses like the cheetah) and Founder Effects (small pioneering groups colonizing new islands) randomly fix or eliminate alleles regardless of whether they are beneficial or harmful."
+      - title: "Speciation Dynamics & The Molecular Tree of Life"
+        points:
+          - "The Biological Species Concept (Ernst Mayr) defines a species as groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups."
+          - "Allopatric Speciation occurs when a physical geographic barrier (mountain range, canyon, ocean) physically divides a population, allowing isolated gene pools to diverge through independent mutations, drift, and selection until reproductive compatibility is lost."
+          - "Sympatric Speciation occurs without geographic separation, driven by ecological niche differentiation, sexual selection, or Polyploidy (instant chromosome duplication, common in flowering plants and agriculture)."
+          - "Phylogenetic Trees map evolutionary kinship using shared derived characteristics (synapomorphies). Molecular Clocks use baseline mutation rates in conserved genes (such as 16S/18S ribosomal RNA) to calculate chronological divergence times between taxa."
+          - "The Three Domains of Life (Carl Woese, 1977): Sequencing ribosomal RNA shattered the old plant-animal dichotomy, revealing three fundamental branches of life: Bacteria, Archaea (single-celled extremophiles sharing deep molecular machinery with eukaryotes), and Eukarya."
+    trivia:
+      - type: multiple_choice
+        question: "What are the three mandatory algorithmic conditions required for Darwinian evolution by natural selection to occur?"
+        options:
+          - "Phenotypic variation, heritability of traits, and differential reproductive success"
+          - "Warm tropical climate, high mutation rates, and complete genetic isolation"
+          - "Conscious intent of the organism, divine intervention, and physical strength"
+          - "Predominance of asexual cloning, zero mortality, and constant population size"
+        correct: 0
+        explanation: "Whenever individuals vary, traits are inherited, and some variants leave more offspring than others, allele frequencies change adaptively over time."
+      - type: multiple_choice
+        question: "In the Hardy-Weinberg equation (p² + 2pq + q² = 1), what genotype frequency is represented by the term 2pq?"
+        options:
+          - "Heterozygous individuals (Aa)"
+          - "Homozygous dominant individuals (AA)"
+          - "Homozygous recessive individuals (aa)"
+          - "The frequency of lethal mutations"
+        correct: 0
+        explanation: "In a two-allele system where p and q are allele frequencies, $p^2$ represents $AA$, $2pq$ represents $Aa$, and $q^2$ represents $aa$."
+      - type: multiple_choice
+        question: "What evolutionary force describes random, stochastic changes in allele frequencies that have the most dramatic impact on small populations?"
+        options:
+          - "Genetic Drift"
+          - "Natural Selection"
+          - "Directional Assortment"
+          - "Artificial Selection"
+        correct: 0
+        explanation: "Genetic drift is the random sampling error that alters allele frequencies across generations, capable of fixing or eliminating alleles purely by chance in small groups."
+      - type: multiple_choice
+        question: "What type of speciation occurs when a geographic physical barrier (such as a rising mountain range or continental rift) divides a population?"
+        options:
+          - "Allopatric Speciation"
+          - "Sympatric Speciation"
+          - "Artificial Hybridization"
+          - "Polyploid Speciation"
+        correct: 0
+        explanation: "Allopatric speciation (from Greek 'other fatherland') begins with physical geographic separation preventing gene flow, leading to independent divergence."
+      - type: multiple_choice
+        question: "What are the Three Domains of Life established by Carl Woese in 1977 based on ribosomal RNA sequence analysis?"
+        options:
+          - "Bacteria, Archaea, and Eukarya"
+          - "Plants, Animals, and Fungi"
+          - "Vertebrates, Invertebrates, and Microbes"
+          - "Prokaryotes, Viruses, and Mammals"
+        correct: 0
+        explanation: "Carl Woese revolutionized biology by demonstrating that life partitions into three deep domains: Bacteria, Archaea, and Eukarya."
+      - type: multiple_choice
+        question: "What is the ultimate biological source of all novel genetic alleles and variation in living systems?"
+        options:
+          - "DNA Mutations"
+          - "Mitotic Cell Division"
+          - "Natural Selection"
+          - "Heterozygous Mating"
+        correct: 0
+        explanation: "Selection, drift, and gene flow shuffle existing variation, but random DNA mutations are the only source of brand-new nucleotide sequences."
+      - type: multiple_choice
+        question: "What mode of natural selection acts against phenotypic extremes, favoring intermediate individuals (e.g., human infant birth weight)?"
+        options:
+          - "Stabilizing Selection"
+          - "Directional Selection"
+          - "Disruptive Selection"
+          - "Sexual Selection"
+        correct: 0
+        explanation: "Stabilizing selection culls extreme phenotypes from both ends of the distribution, narrowing variance around the optimal mean."
+      - type: multiple_choice
+        question: "What phenomenon occurs when a small group of pioneering individuals splits from a larger population to establish a new colony with reduced genetic diversity?"
+        options:
+          - "Founder Effect"
+          - "Sympatric Radiation"
+          - "Balanced Polymorphism"
+          - "Epistatic Shock"
+        correct: 0
+        explanation: "The founder effect is a special case of genetic drift where a tiny founding population carries only a fraction of the parental gene pool's diversity."
+      - type: multiple_choice
+        question: "How do molecular biologists use 'Molecular Clocks' to estimate the historical divergence times between evolutionary species?"
+        options:
+          - "By measuring the accumulated number of neutral nucleotide substitutions in conserved genes over geological time"
+          - "By counting carbon-14 isotopes inside living ribosomes"
+          - "By recording the pulse rate of prehistoric organisms"
+          - "By tracking the rate of continental drift with satellite radar"
+        correct: 0
+        explanation: "Assuming neutral mutations accumulate at a roughly constant rate over millions of years, the genetic distance between species reflects time since their common ancestor."
+      - type: multiple_choice
+        question: "What defines 'Biological Fitness' in evolutionary biology?"
+        options:
+          - "An individual's relative reproductive success and contribution of offspring to the future gene pool"
+          - "Physical muscle mass, sprint speed, and fighting ability"
+          - "Lifespan duration regardless of whether offspring are produced"
+          - "Total daily metabolic calorie expenditure"
+        correct: 0
+        explanation: "Fitness ($\\\\omega$) in evolutionary theory measures the proportion of genes passed to the next generation relative to peers."
+      - type: multiple_choice
+        question: "What rapid evolutionary phenomenon occurs when a single ancestral species diversifies into many ecologically specialized descendant forms (e.g., Darwin's finches)?"
+        options:
+          - "Adaptive Radiation"
+          - "Genetic Bottleneck"
+          - "Convergent Evolution"
+          - "Hardy-Weinberg Stasis"
+        correct: 0
+        explanation: "Adaptive radiation happens when an ancestral lineage enters an environment with abundant vacant ecological niches, diversifying rapidly."
+      - type: multiple_choice
+        question: "What is 'Convergent Evolution'?"
+        options:
+          - "Independent evolution of similar anatomical traits in unrelated lineages due to similar environmental selection pressures (e.g., shark and dolphin body shapes)"
+          - "Merging of two distinct species into a single interbreeding population"
+          - "Inactivation of both copies of a homologous gene locus"
+          - "Doubling of chromosomal numbers during meiotic division"
+        correct: 0
+        explanation: "Convergent evolution demonstrates the power of natural selection: distinct organisms independently evolve analogous solutions (wings in bats, birds, and insects) to common challenges."
+      - type: multiple_choice
+        question: "What is the primary condition that defines two populations as distinct biological species under Ernst Mayr's Biological Species Concept?"
+        options:
+          - "Reproductive isolation, preventing the production of fertile, viable offspring in nature"
+          - "A difference in adult body weight greater than 50%"
+          - "Living on different continents"
+          - "Different coloration of outer skin or plumage"
+        correct: 0
+        explanation: "The biological species concept defines species boundaries by reproductive isolation: if two populations cannot interbreed and produce fertile offspring, they are separate species."
+      - type: multiple_choice
+        question: "What happens to a population's gene pool during a 'Population Bottleneck'?"
+        options:
+          - "A severe reduction in population size randomly wipes out a large fraction of alleles, dramatically reducing genetic diversity"
+          - "The mutation rate increases exponentially by 1,000-fold"
+          - "All individuals immediately become polyploid"
+          - "Harmful recessive traits are permanently eliminated from the genome"
+        correct: 0
+        explanation: "Catastrophes (famine, disease, hunting) that decimate population size leave survivors with an impoverished subset of original genetic diversity."
+      - type: multiple_choice
+        question: "What is an anatomical structure called that has lost most or all of its ancestral ancestral function through evolutionary reduction (e.g., the human tailbone)?"
+        options:
+          - "Vestigial Structure"
+          - "Homologous Organ"
+          - "Analogous Trait"
+          - "Sympatric Adaptation"
+        correct: 0
+        explanation: "Vestigial structures (like the human appendix, wisdom teeth, or whale pelvic bones) are historical evolutionary remnants reduced when selective pressures diminish."
+
+  - id: biotechnology_crispr_synthetic_biology
+    title: "5. Genetic Engineering, CRISPR-Cas9 & Synthetic Biology"
+    description: >
+      Explore the bio-digital frontier: molecular scissors and ligases, PCR exponential amplification,
+      programmable CRISPR gene editing, mRNA lipid vaccines, and engineered synthetic biology circuits.
+    cards:
+      - title: "Recombinant DNA Tools: Restriction Enzymes, Plasmids & PCR"
+        figure:
+          title: "The CRISPR-Cas9 Precision Molecular Scissors"
+          svg: >
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
+              <!-- Cas9 Protein Body -->
+              <ellipse cx="260" cy="75" rx="140" ry="55" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+              <text x="260" y="38" font-size="11" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Cas9 Endonuclease Protein</text>
+
+              <!-- Target DNA Strands -->
+              <line x1="80" y1="70" x2="440" y2="70" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="80" y1="85" x2="440" y2="85" stroke="#3b82f6" stroke-width="3"/>
+              <text x="100" y="60" font-size="9" font-weight="bold" fill="#3b82f6">Target Genomic DNA</text>
+
+              <!-- Guide RNA -->
+              <path d="M 180 115 Q 260 115 280 70" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-dasharray="3,3"/>
+              <text x="210" y="130" font-size="9" font-weight="bold" fill="#ec4899">Single-Guide RNA (sgRNA)</text>
+
+              <!-- Cleavage Scissors Cut -->
+              <line x1="300" y1="55" x2="300" y2="100" stroke="#ef4444" stroke-width="2.5"/>
+              <text x="340" y="105" font-size="9" font-weight="bold" fill="#ef4444">Double-Strand Cut (DSB)</text>
+            </svg>
+          caption: "CRISPR-Cas9 acts as a programmable search-and-cut editor: synthetic guide RNA steers the Cas9 endonuclease to exact genomic coordinates to create double-stranded DNA cuts."
+        points:
+          - "Recombinant DNA technology allows scientists to cut, modify, and recombine DNA fragments from disparate organisms. Restriction Endonucleases ('molecular scissors' discovered in bacteria) recognize and cleave specific palindromic DNA sequences (e.g., EcoRI cutting $5'\\text{-GAATTC-}3'$), leaving cohesive 'sticky ends' that can be covalently joined by DNA Ligase."
+          - "Plasmids are small, circular, self-replicating extrachromosomal DNA loops in bacteria. Biologists engineer plasmids as Cloning Vectors by inserting foreign genes, an antibiotic resistance selection marker, and a promoter to mass-produce human therapeutic proteins (like human insulin in E. coli)."
+          - "The Polymerase Chain Reaction (PCR, invented by Kary Mullis in 1983) is the fundamental copy machine of molecular biology, capable of amplifying a single targeted DNA molecule into billions of identical copies through thermal cycling: (1) Denaturation ($95^\\circ\\text{C}$ unwinds DNA), (2) Annealing ($55^\\circ\\text{C}$ binds primers), and (3) Extension ($72^\\circ\\text{C}$ where heat-stable Taq Polymerase synthesizes new strands), doubling DNA exponentially ($2^n$ in $n$ cycles)."
+          - "Gel Electrophoresis separates DNA fragments based on molecular size: an electric field pulls negatively charged DNA phosphate backbones through an agarose polymer mesh toward the positive anode ($+$), with smaller fragments navigating the sieve faster and traveling farther."
+      - title: "CRISPR-Cas9: Programmable Genomic Editing"
+        points:
+          - "CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) originated as an adaptive immune system in bacteria, which store short viral DNA spacers in their genome to recognize and destroy returning bacteriophages."
+          - "Jennifer Doudna and Emmanuelle Charpentier (2020 Nobel Prize in Chemistry) reprogrammed this bacterial system into a universal gene-editing tool by fusing crRNA and tracrRNA into a synthetic Single-Guide RNA (sgRNA). By changing a 20-nucleotide sequence on the sgRNA, scientists can direct the Cas9 endonuclease to cut ANY targeted gene locus adjacent to a Protospacer Adjacent Motif (PAM: 5'-NGG-3')."
+          - "Cellular DNA Repair Outcomes: Once Cas9 creates a double-strand break (DSB), the cell repairs it via one of two pathways: (1) Non-Homologous End Joining (NHEJ)—an error-prone mechanism that introduces insertions/deletions (indels) to Knock Out and disable targeted genes; or (2) Homology-Directed Repair (HDR)—a high-fidelity pathway that uses a supplied repair template to Knock In and insert customized new genetic code."
+          - "Next-Generation CRISPR Frontiers: Base Editors chemically convert single base pairs (e.g., $C\\to T$ or $A\\to G$) without double-strand cuts, and Prime Editing operates as a molecular word processor, writing new genetic sequences directly into targeted genomic DNA."
+      - title: "Synthetic Biology, mRNA Vaccines & The Bio-Digital Interface"
+        points:
+          - "Synthetic Biology shifts genetics from descriptive analysis to systematic engineering: constructing artificial genetic circuits (promoters, logic gates, repressors, inverters) using standardized, interchangeable biological parts (BioBricks) to engineer microbes that synthesize biofuels, antimalarial drugs (artemisinin), or biodegradable plastics."
+          - "mRNA Therapeutics & Vaccines: Rather than injecting weakened pathogens or purified proteins, mRNA vaccines deliver synthetic messenger RNA encoding the viral antigen (such as the SARS-CoV-2 spike protein). Encapsulated in Lipid Nanoparticles (LNPs) to facilitate cellular entry, host ribosomes translate the mRNA to produce harmless antigens, training the immune system with exceptional speed and safety."
+          - "DNA as Digital Data Storage: DNA possesses extraordinary information density—theoretically storing 215 petabytes ($2.15 \\times 10^{17}$ bytes) of data in a single gram of DNA—with a retention lifespan measured in millennia when kept dry and cold, encoding binary bits (00, 01, 10, 11) into nucleotide bases (A, C, G, T)."
+          - "Bioethics & Biosafety: Powerful gene editing raises profound ethical challenges: Gene Drives can force engineered traits through 100% of wild mosquito populations to eradicate malaria but risk unforeseen ecological cascades; and Heritable Human Germline Editing alters the gene pool of future generations, requiring rigorous international governance."
+    trivia:
+      - type: multiple_choice
+        question: "How does the CRISPR-Cas9 molecular gene editing system locate its specific genomic DNA target sequence?"
+        options:
+          - "A programmable 20-nucleotide single-guide RNA (sgRNA) matches the complementary DNA sequence"
+          - "The Cas9 protein relies entirely on random electrostatic collisions"
+          - "Magnetic nanoparticles guide the complex using Earth's magnetic field"
+          - "Antibodies bind to cell surface receptors and inject restriction enzymes"
+        correct: 0
+        explanation: "The sgRNA contains a 20-nucleotide sequence designed by researchers that base-pairs with the targeted genomic DNA, directing Cas9 to cleave at that precise location."
+      - type: multiple_choice
+        question: "What heat-tolerant enzyme, isolated from hydrothermal vent bacterium Thermus aquaticus, made automated PCR possible?"
+        options:
+          - "Taq Polymerase"
+          - "EcoRI Endonuclease"
+          - "T4 DNA Ligase"
+          - "Human RNA Polymerase II"
+        correct: 0
+        explanation: "Taq Polymerase withstands the repeated 95°C denaturation temperatures of PCR without denaturing, allowing automated thermocycling."
+      - type: multiple_choice
+        question: "How many cycles of PCR are required to amplify a single template DNA molecule into approximately one billion copies (2³⁰)?"
+        options:
+          - "30 cycles"
+          - "10 cycles"
+          - "1,000 cycles"
+          - "100 cycles"
+        correct: 0
+        explanation: "Because PCR doubles DNA exponentially on every cycle ($2^n$), $2^{30} \\approx 1,073,741,824$ copies (over 1 billion) after just 30 cycles."
+      - type: multiple_choice
+        question: "What protective vehicle is used in modern mRNA vaccines to deliver fragile mRNA strands across human cell membranes?"
+        options:
+          - "Lipid Nanoparticles (LNPs)"
+          - "Inactivated bacterial spores"
+          - "Gold micro-projectiles"
+          - "Cellulose fiber capsules"
+        correct: 0
+        explanation: "Lipid Nanoparticles shield negatively charged mRNA from immediate enzymatic degradation and fuse with host cell membranes to release the RNA."
+      - type: multiple_choice
+        question: "What are Restriction Endonucleases, commonly used as 'molecular scissors' in recombinant DNA technology?"
+        options:
+          - "Bacterial enzymes that recognize and cleave specific palindromic DNA sequences"
+          - "Proteins that synthesize amino acid chains on ribosomes"
+          - "Hormones that stimulate cellular glucose uptake"
+          - "Lipids that form the structural matrix of viral envelopes"
+        correct: 0
+        explanation: "Restriction enzymes evolved in bacteria as defense systems against phages, recognizing specific palindromic sequences (like GAATTC) and cutting them."
+      - type: multiple_choice
+        question: "In gel electrophoresis, in which direction do DNA fragments migrate through the agarose gel matrix?"
+        options:
+          - "Toward the positive electrode (anode), because the DNA phosphate backbone carries a net negative electrical charge"
+          - "Toward the negative electrode (cathode), because nitrogenous bases are positively charged"
+          - "Toward the top of the gel due to gravitational buoyancy"
+          - "Randomly in all directions according to thermal Brownian motion"
+        correct: 0
+        explanation: "DNA's sugar-phosphate backbone is uniformly negatively charged ($PO_4^{3-}$), causing it to migrate toward the positive anode when an electric field is applied."
+      - type: multiple_choice
+        question: "What is an autonomous circular piece of double-stranded DNA commonly used as a vector in bacterial gene cloning called?"
+        options:
+          - "Plasmid"
+          - "Transposon"
+          - "Centromere"
+          - "Kinetochore"
+        correct: 0
+        explanation: "Plasmids are extrachromosomal circular DNA molecules found in bacteria that replicate independently, widely used as cloning vectors."
+      - type: multiple_choice
+        question: "What cellular DNA repair mechanism is typically engaged after Cas9 creates a double-strand break to insert a customized donor gene sequence (Knock-in)?"
+        options:
+          - "Homology-Directed Repair (HDR)"
+          - "Non-Homologous End Joining (NHEJ)"
+          - "Mismatch Repair"
+          - "Photoreactivation"
+        correct: 0
+        explanation: "Homology-Directed Repair (HDR) uses a homologous DNA repair template supplied by the researcher to accurately integrate new genetic sequences at the cut site."
+      - type: multiple_choice
+        question: "What short 3-nucleotide sequence adjacent to the target site is required for Cas9 to bind and cleave genomic DNA?"
+        options:
+          - "Protospacer Adjacent Motif (PAM: 5'-NGG-3')"
+          - "TATA Box promoter"
+          - "Poly-A signal"
+          - "Shine-Dalgarno sequence"
+        correct: 0
+        explanation: "Cas9 requires a Protospacer Adjacent Motif (PAM, typically 5'-NGG-3' for SpCas9) immediately downstream of the target to initiate binding and unwinding."
+      - type: multiple_choice
+        question: "What is the three-step temperature sequence executed during every standard thermal cycle of a Polymerase Chain Reaction (PCR)?"
+        options:
+          - "Denaturation (~95°C), Annealing (~55°C), and Extension (~72°C)"
+          - "Freezing (-20°C), Boiling (100°C), and Centrifugation"
+          - "Incubation (37°C), Electroporation (4°C), and Lysis"
+          - "Ligation (16°C), Transcription (42°C), and Translation"
+        correct: 0
+        explanation: "PCR cycles through: Denaturation at ~95°C (unwind DNA), Annealing at ~55°C (bind primers), and Extension at ~72°C (Taq polymerizes new strand)."
+      - type: multiple_choice
+        question: "What is a 'Gene Drive' engineered using CRISPR technology?"
+        options:
+          - "A genetic modification system that biases inheritance to spread an engineered trait to nearly 100% of offspring across wild populations"
+          - "A software program that simulates genome sequencing algorithms"
+          - "A mechanical centrifuge used to separate viral particles"
+          - "A high-speed needle used to inject genes into plant stems"
+        correct: 0
+        explanation: "Gene drives override standard Mendelian 50% inheritance, ensuring that nearly all progeny inherit the modified allele (explored to eradicate malaria-bearing mosquitoes)."
+      - type: multiple_choice
+        question: "What technology allows the chemical conversion of a single DNA base (such as C to T) without cutting the double-stranded DNA backbone?"
+        options:
+          - "Base Editing"
+          - "Gel Electrophoresis"
+          - "Southern Blotting"
+          - "Karyotyping"
+        correct: 0
+        explanation: "Base editors fuse a catalytically impaired Cas9 to a deaminase enzyme, enabling precise single-nucleotide conversions without double-stranded DNA breaks."
+      - type: multiple_choice
+        question: "What natural biological function does the CRISPR system serve inside wild bacteria and archaea?"
+        options:
+          - "An adaptive immune defense system against invading bacteriophage viruses and foreign plasmids"
+          - "A photosynthetic apparatus to produce glucose in deep soil"
+          - "A locomotion flagellum motor for aquatic swimming"
+          - "A mechanism to repair damaged cell walls during freezing"
+        correct: 0
+        explanation: "Bacteria use CRISPR arrays to archive snippets of viral genomes, utilizing Cas endonucleases to destroy complementary viral DNA upon reinfection."
+      - type: multiple_choice
+        question: "Roughly how much digital data can theoretically be stored within a single physical gram of synthesized DNA?"
+        options:
+          - "Over 200 Petabytes (millions of gigabytes)"
+          - "Approximately 1.44 Megabytes"
+          - "Exactly 1 Terabyte"
+          - "16 Gigabytes"
+        correct: 0
+        explanation: "Due to its microscopic molecular density (4 bases representing 2 bits of data each), a single gram of DNA can store an estimated 215 petabytes of digital data."
+      - type: multiple_choice
+        question: "Which of the following was the first recombinant human protein ever produced commercially in engineered E. coli bacteria for clinical medicine (1982)?"
+        options:
+          - "Human Insulin"
+          - "Human Growth Hormone"
+          - "Erythropoietin (EPO)"
+          - "Monoclonal Antibodies"
+        correct: 0
+        explanation: "Genentech synthesized recombinant human insulin in bacteria in 1978 (approved by the FDA in 1982), eliminating reliance on animal-harvested insulin."
